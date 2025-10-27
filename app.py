@@ -244,14 +244,15 @@ def load_latest_briefing() -> Optional[Dict[str, Any]]:
     if not reports_dir.exists():
         return None
 
-    markdown_files = sorted(reports_dir.glob("briefing_*.md"), reverse=True)
+    # Look for both briefing_*.md and ai_briefing_*.md patterns
+    markdown_files = sorted(reports_dir.glob("*briefing_*.md"), reverse=True)
     if not markdown_files:
         return None
 
     latest_file = markdown_files[0]
 
     # Try to find corresponding JSON file
-    json_file = reports_dir / latest_file.stem.replace("briefing_", "briefing_") / ".json"
+    json_file = reports_dir / latest_file.stem / "data.json"
 
     # If JSON doesn't exist, look for data.json
     data_files = list(reports_dir.glob("**/data.json"))
@@ -261,7 +262,7 @@ def load_latest_briefing() -> Optional[Dict[str, Any]]:
 
     # Fallback: create minimal structure from markdown
     return {
-        "date": latest_file.stem.replace("briefing_", ""),
+        "date": latest_file.stem.replace("ai_briefing_", "").replace("briefing_", ""),
         "title": "AI Industry Weekly Briefing",
         "content": latest_file.read_text(encoding='utf-8'),
         "articles": []
