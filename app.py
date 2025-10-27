@@ -446,8 +446,8 @@ if briefing is None:
     st.warning("No briefing data available. Please generate a briefing first.")
     st.stop()
 
-# Main content: 30% briefing + 70% chat interface
-left_col, right_col = st.columns([0.30, 0.70], gap="medium")
+# Main content: 70% briefing + 30% chat interface
+left_col, right_col = st.columns([0.70, 0.30], gap="medium")
 
 # ============================================================================
 # LEFT COLUMN: BRIEFING DISPLAY
