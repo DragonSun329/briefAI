@@ -10,6 +10,7 @@ import os
 import sys
 import json
 import argparse
+import subprocess
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any
@@ -693,6 +694,86 @@ class BriefingAgent:
             return {'error': str(e)}
 
 
+def push_to_github(report_path: str = None) -> bool:
+    """
+    Push updates to GitHub after report generation
+
+    Args:
+        report_path: Path to the generated report (optional)
+
+    Returns:
+        True if push successful, False otherwise
+    """
+    try:
+        project_dir = Path(__file__).parent
+
+        logger.info("\n" + "=" * 60)
+        logger.info("📤 Pushing updates to GitHub...")
+        logger.info("=" * 60)
+
+        # Stage changes (reports and cache)
+        logger.info("📝 Staging files...")
+        subprocess.run(
+            ["git", "add", "data/reports/", "data/cache/"],
+            cwd=project_dir,
+            check=True,
+            capture_output=True,
+            timeout=30
+        )
+
+        # Create commit
+        commit_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        commit_msg = f"Update reports and cache: {commit_date}"
+
+        logger.info(f"💾 Creating commit: {commit_msg}")
+        result = subprocess.run(
+            ["git", "commit", "-m", commit_msg],
+            cwd=project_dir,
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
+
+        # Check if there was anything to commit
+        if result.returncode != 0:
+            if "nothing to commit" in result.stdout or "nothing to commit" in result.stderr:
+                logger.info("✓ No changes to commit (reports unchanged)")
+                return True
+            else:
+                logger.error(f"❌ Commit failed: {result.stderr}")
+                return False
+
+        # Push to remote
+        logger.info("🚀 Pushing to remote repository...")
+        result = subprocess.run(
+            ["git", "push", "origin", "main"],
+            cwd=project_dir,
+            capture_output=True,
+            text=True,
+            timeout=60
+        )
+
+        if result.returncode == 0:
+            logger.info("✅ Successfully pushed to GitHub!")
+            logger.info("=" * 60)
+            return True
+        else:
+            logger.error(f"❌ Push failed: {result.stderr}")
+            logger.info("=" * 60)
+            return False
+
+    except subprocess.TimeoutExpired:
+        logger.error("❌ Git operation timed out")
+        return False
+    except FileNotFoundError:
+        logger.warning("⚠️  Git not found - skipping GitHub push")
+        logger.info("Install Git or configure SSH keys if you want auto-push enabled")
+        return False
+    except Exception as e:
+        logger.error(f"❌ Error pushing to GitHub: {e}")
+        return False
+
+
 def interactive_mode():
     """Run in interactive mode, prompting user for preferences"""
     print("\n" + "=" * 60)
@@ -964,6 +1045,9 @@ Examples:
             logger.error(f"Collection failed: {result['error']}")
             sys.exit(1)
 
+        # Push updates to GitHub (checkpoint files)
+        push_to_github()
+
     elif args.finalize:
         # Finalization mode: Daily, Weekly, or Early Report
         if not args.defaults and not args.input:
@@ -1007,6 +1091,10 @@ Examples:
             logger.error(f"Finalization failed: {result['error']}")
             sys.exit(1)
 
+        # Push updates to GitHub
+        report_path = result.get('report_path')
+        push_to_github(report_path)
+
     else:
         # Default mode: Full workflow (all 3 tiers)
         if not args.defaults and not args.input:
@@ -1026,6 +1114,9 @@ Examples:
 
         if not report_path:
             sys.exit(1)
+
+        # Push updates to GitHub
+        push_to_github(report_path)
 
 
 if __name__ == "__main__":
