@@ -1,0 +1,74 @@
+{
+  "categories": [
+    {
+      "id": "fintech_ai",
+      "name": "Fintech AI Applications",
+      "aliases": ["fintech", "finance", "banking", "payments", "lending", "credit", "fraud", "fraud detection", "risk management", "credit scoring", "underwriting", "loan", "investment", "trading", "portfolio"],
+      "priority": 10,
+      "description": "AI applications in fintech: fraud detection, credit scoring, risk management, lending decisions, payment systems, trading algorithms"
+    },
+    {
+      "id": "data_analytics",
+      "name": "Data Analytics & ML",
+      "aliases": ["data analytics", "data science", "analytics", "machine learning", "ml", "data engineering", "big data", "analytics platform", "data platform", "data warehouse", "prediction", "predictive", "analytics tools", "dataset", "datasets"],
+      "priority": 10,
+      "description": "Data analytics technologies, tools, and methods. Machine learning applications for data analysis. Data engineering and analytics platforms."
+    },
+    {
+      "id": "marketing_ai",
+      "name": "Marketing & Growth AI",
+      "aliases": ["marketing", "advertising", "ad tech", "growth", "conversion", "optimization", "personalization", "recommendation", "customer segmentation", "audience targeting", "campaign", "user acquisition", "marketing automation", "cro"],
+      "priority": 9,
+      "description": "AI-driven marketing strategies, advertising optimization, user growth, conversion rate optimization, personalization, and customer analytics"
+    },
+    {
+      "id": "emerging_products",
+      "name": "AI Products & Tools",
+      "aliases": ["product", "tool", "app", "saas", "software", "platform", "startup", "new product", "launch", "feature", "update", "beta", "release", "application", "solutions"],
+      "priority": 9,
+      "description": "New AI products, tools, platforms, and SaaS solutions. AI application launches and features."
+    },
+    {
+      "id": "llm_tech",
+      "name": "LLM & Language Models",
+      "aliases": ["llm", "language model", "gpt", "claude", "chatgpt", "ai model", "foundation model", "generative ai", "transformer", "bert", "prompt", "fine-tuning", "alignment", "reasoning", "reasoning model"],
+      "priority": 8,
+      "description": "Large language models, foundation models, generative AI, prompt engineering, model training and alignment, API applications"
+    },
+    {
+      "id": "ai_companies",
+      "name": "Major AI Companies & Updates",
+      "aliases": ["openai", "anthropic", "nvidia", "google", "meta", "microsoft", "deepseek", "qwen", "alibaba", "grok", "xai", "doubao", "bytedance", "tesla", "cohere", "inflection", "mistral", "llama", "claude", "gemini", "gpt", "chatgpt", "bard", "perplexity", "company", "startup", "acquisition", "merger", "funding", "ipo", "partnership", "collaboration", "announcement"],
+      "priority": 9,
+      "description": "News about major AI companies: OpenAI, Anthropic, NVIDIA, Google, Meta, Microsoft, Deepseek, Alibaba, Qwen, Doubao, Grok/XAI, Tesla, Mistral, Cohere, and other leading AI firms. Includes company announcements, funding, partnerships, and strategic moves."
+    },
+    {
+      "id": "industry_cases",
+      "name": "Industry Applications & ROI",
+      "aliases": ["case study", "implementation", "deployment", "use case", "real-world", "production", "roi", "impact", "results", "performance", "metrics", "success", "adoption", "enterprise"],
+      "priority": 8,
+      "description": "Real-world AI applications across industries. Case studies, ROI measurements, deployment strategies, and business impact"
+    },
+    {
+      "id": "compliance_policy",
+      "name": "AI Policy & Regulation",
+      "aliases": ["regulation", "regulatory", "policy", "compliance", "governance", "privacy", "security", "data protection", "gdpr", "compliance", "ethics", "responsible ai", "trustworthy", "safe ai"],
+      "priority": 7,
+      "description": "AI policy, regulation, compliance requirements, data privacy, security, ethical AI, and responsible AI practices"
+    },
+    {
+      "id": "tech_stack",
+      "name": "AI Tech Stack & Infrastructure",
+      "aliases": ["technology", "framework", "library", "open source", "gpu", "infrastructure", "cloud", "api", "sdk", "model serving", "mlops", "devops", "deployment", "architecture", "backend"],
+      "priority": 6,
+      "description": "AI technology stack, open source frameworks, APIs, SDKs, infrastructure, MLOps, model deployment, and development tools"
+    }
+  ],
+  "default_categories": ["fintech_ai", "data_analytics", "marketing_ai", "emerging_products", "llm_tech", "ai_companies"],
+  "company_context": {
+    "business": "Fintech & AI Products",
+    "industry": "Financial Technology / AI",
+    "focus_areas": ["Risk Management", "Credit Decisions", "Data Analytics", "Marketing & Growth", "AI Products"],
+    "relevance_keywords": ["fintech", "fraud detection", "risk", "lending", "data analytics", "machine learning", "marketing", "ai product", "saas", "payments"]
+  }
+}

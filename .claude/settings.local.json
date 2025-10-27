@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(chmod:*)",
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(pip3 install:*)",
+      "Read(//Applications/**)",
+      "Bash(/Applications/Python\\ 3.9/Install\\ Certificates.command:*)",
+      "Bash(__NEW_LINE__ echo \"IMPLEMENTATION COMPLETE - FILES CREATED/MODIFIED:\" echo \"\" echo \"📁 NEW FILES (3 Python + 1 Config + 1 Shell + 1 Markdown):\" ls -lh utils/scoring_engine.py utils/report_archiver.py config/user_profile.md setup_cron.sh 5D_SCORING_IMPLEMENTATION.md)",
+      "Bash(awk '{print \"\"\"\"  \"\"\"\" $9 \"\"\"\" (\"\"\"\" $5 \"\"\"\")\"\"\"\"}' echo \"\" echo \"📝 MODIFIED FILES (3):\" echo \"  modules/news_evaluator.py (+40 lines)\" echo \"  modules/report_formatter.py (+120 lines)\" echo \"  .env (+30 lines)\" echo \"\" echo \"📊 STATISTICS:\" echo \"  Total new code: ~670 lines (Python utilities)\" echo \"  Total modified: ~190 lines (existing modules)\" echo \"  Total documentation: ~500+ lines (markdown)\" echo \"\" echo \"✅ All Python files compile successfully\" echo \"✅ All files ready for production use\")",
+      "Bash(__NEW_LINE__ echo \"IMPLEMENTATION COMPLETE - FILES CREATED/MODIFIED:\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

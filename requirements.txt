@@ -1,0 +1,31 @@
+# Core Dependencies
+openai>=1.0.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Web Scraping
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+feedparser>=6.0.10
+playwright>=1.40.0
+
+# Data Processing
+python-dateutil>=2.8.2
+pyyaml>=6.0
+
+# NLP - Entity Extraction
+spacy>=3.7.0
+spacy-lookups-data>=1.0.0
+
+# Report Generation
+jinja2>=3.1.2
+markdown>=3.5.0
+
+# Utilities
+tenacity>=8.2.3
+loguru>=0.7.0
+
+# Deduplication & Semantic Search
+rapidfuzz>=3.0.0
+sentence-transformers>=2.2.0
+chromadb>=0.4.0

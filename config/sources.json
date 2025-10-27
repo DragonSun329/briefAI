@@ -1,0 +1,932 @@
+{
+  "sources": [
+    {
+      "id": "arxiv_ai",
+      "name": "ArXiv AI (Test Source)",
+      "url": "http://arxiv.org/list/cs.AI/recent",
+      "type": "rss",
+      "rss_url": "http://arxiv.org/rss/cs.AI",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "tech_stack",
+        "data_analytics"
+      ],
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "id": "36kr_fintech",
+      "name": "36氪 金融科技",
+      "url": "https://36kr.com/information/fintech",
+      "type": "web",
+      "enabled": true,
+      "categories": [
+        "fintech_ai",
+        "emerging_products",
+        "industry_cases"
+      ],
+      "language": "zh-CN",
+      "credibility_score": 8,
+      "relevance_weight": 10,
+      "focus_tags": [
+        "fintech",
+        "风控",
+        "信贷",
+        "数据分析"
+      ]
+    },
+    {
+      "id": "leiphone_fintech",
+      "name": "雷锋网 金融科技",
+      "url": "https://www.leiphone.com/category/fintech",
+      "type": "rss",
+      "rss_url": "https://www.leiphone.com/category/fintech/feed",
+      "enabled": true,
+      "categories": [
+        "fintech_ai",
+        "data_analytics",
+        "industry_cases"
+      ],
+      "language": "zh-CN",
+      "credibility_score": 8,
+      "relevance_weight": 10,
+      "focus_tags": [
+        "AI风控",
+        "智能信贷",
+        "反欺诈"
+      ]
+    },
+    {
+      "id": "jiqizhixin_data",
+      "name": "机器之心 数据科学",
+      "url": "https://www.jiqizhixin.com",
+      "type": "rss",
+      "rss_url": "https://www.jiqizhixin.com/rss",
+      "enabled": true,
+      "categories": [
+        "data_analytics",
+        "llm_tech",
+        "tech_stack"
+      ],
+      "language": "zh-CN",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "机器学习",
+        "数据分析",
+        "预测模型"
+      ]
+    },
+    {
+      "id": "martech_china",
+      "name": "Martech中国",
+      "url": "https://martech.com.cn",
+      "type": "web",
+      "enabled": true,
+      "categories": [
+        "marketing_ai",
+        "data_analytics",
+        "emerging_products"
+      ],
+      "language": "zh-CN",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "广告投放",
+        "营销自动化",
+        "用户增长",
+        "数据驱动"
+      ]
+    },
+    {
+      "id": "producthunt",
+      "name": "Product Hunt",
+      "url": "https://www.producthunt.com",
+      "type": "rss",
+      "rss_url": "https://www.producthunt.com/feed",
+      "enabled": true,
+      "categories": [
+        "emerging_products",
+        "tech_stack"
+      ],
+      "language": "en",
+      "credibility_score": 7,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "新产品",
+        "SaaS",
+        "数据工具",
+        "分析平台"
+      ]
+    },
+    {
+      "id": "kdnuggets",
+      "name": "KDnuggets",
+      "url": "https://www.kdnuggets.com",
+      "type": "rss",
+      "rss_url": "https://www.kdnuggets.com/feed",
+      "enabled": true,
+      "categories": [
+        "data_analytics",
+        "tech_stack",
+        "industry_cases"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "分析工具",
+        "实战案例"
+      ]
+    },
+    {
+      "id": "towards_data_science",
+      "name": "Towards Data Science",
+      "url": "https://towardsdatascience.com",
+      "type": "rss",
+      "rss_url": "https://towardsdatascience.com/feed",
+      "enabled": true,
+      "categories": [
+        "data_analytics",
+        "tech_stack"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "Python",
+        "分析方法",
+        "可视化"
+      ]
+    },
+    {
+      "id": "analyticsvidhya",
+      "name": "Analytics Vidhya",
+      "url": "https://www.analyticsvidhya.com",
+      "type": "rss",
+      "rss_url": "https://www.analyticsvidhya.com/feed/",
+      "enabled": true,
+      "categories": [
+        "data_analytics",
+        "tech_stack",
+        "industry_cases"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    },
+    {
+      "id": "yiou_fintech",
+      "name": "亿欧 金融科技",
+      "url": "https://www.iyiou.com/fintech",
+      "type": "web",
+      "enabled": true,
+      "categories": [
+        "fintech_ai",
+        "industry_cases",
+        "compliance_policy"
+      ],
+      "language": "zh-CN",
+      "credibility_score": 7,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "金融AI",
+        "监管科技",
+        "行业报告"
+      ]
+    },
+    {
+      "id": "infoq_ai",
+      "name": "InfoQ AI前线",
+      "url": "https://www.infoq.cn/topic/ai",
+      "type": "rss",
+      "rss_url": "https://www.infoq.cn/topic/ai/feed",
+      "enabled": true,
+      "categories": [
+        "tech_stack",
+        "industry_cases",
+        "llm_tech"
+      ],
+      "language": "zh-CN",
+      "credibility_score": 8,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "技术实践",
+        "架构",
+        "工程化"
+      ]
+    },
+    {
+      "id": "adexchanger",
+      "name": "AdExchanger",
+      "url": "https://www.adexchanger.com",
+      "type": "rss",
+      "rss_url": "https://www.adexchanger.com/feed/",
+      "enabled": true,
+      "categories": [
+        "marketing_ai",
+        "data_analytics"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "程序化广告",
+        "数据驱动营销",
+        "广告技术"
+      ]
+    },
+    {
+      "id": "marketing_ai_institute",
+      "name": "Marketing AI Institute",
+      "url": "https://www.marketingaiinstitute.com",
+      "type": "rss",
+      "rss_url": "https://www.marketingaiinstitute.com/blog/rss.xml",
+      "enabled": true,
+      "categories": [
+        "marketing_ai",
+        "emerging_products",
+        "industry_cases"
+      ],
+      "language": "en",
+      "credibility_score": 7,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "AI营销",
+        "自动化",
+        "ROI优化"
+      ]
+    },
+    {
+      "id": "newsletter_super_human",
+      "name": "Super Human - AI Newsletter",
+      "url": "https://www.superhuman.ai",
+      "type": "rss",
+      "rss_url": "https://www.superhuman.ai/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "emerging_products",
+        "tech_stack"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 10,
+      "focus_tags": [
+        "AI新闻",
+        "每日简报",
+        "工具发现",
+        "3分钟读物"
+      ]
+    },
+    {
+      "id": "newsletter_death_to_humans",
+      "name": "Death to Humans - Daily AI Briefing",
+      "url": "https://deathtohumans.beehiiv.com",
+      "type": "rss",
+      "rss_url": "https://deathtohumans.beehiiv.com/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "日报",
+        "AI新闻",
+        "简洁总结"
+      ]
+    },
+    {
+      "id": "newsletter_big_brain",
+      "name": "Big Brain - AI News Daily",
+      "url": "https://www.bigbraindaily.com",
+      "type": "rss",
+      "rss_url": "https://www.bigbraindaily.com/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "emerging_products",
+        "industry_cases"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "AI新闻",
+        "工作机会",
+        "AI工具"
+      ]
+    },
+    {
+      "id": "newsletter_ai_breakfast",
+      "name": "AI Breakfast - Weekly Analysis",
+      "url": "https://aibreakfast.beehiiv.com",
+      "type": "rss",
+      "rss_url": "https://aibreakfast.beehiiv.com/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "emerging_products",
+        "industry_cases"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "周刊",
+        "AI项目分析",
+        "产品新闻"
+      ]
+    },
+    {
+      "id": "newsletter_not_a_bot",
+      "name": "Not A Bot - Human-Written AI News",
+      "url": "https://www.notabot.tech",
+      "type": "rss",
+      "rss_url": "https://www.notabot.tech/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "industry_cases"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 10,
+      "focus_tags": [
+        "每日新闻",
+        "人工撰写",
+        "精选内容"
+      ]
+    },
+    {
+      "id": "newsletter_product_hunt",
+      "name": "Product Hunt - AI Products",
+      "url": "https://www.producthunt.com",
+      "type": "rss",
+      "rss_url": "https://www.producthunt.com/feed",
+      "enabled": true,
+      "categories": [
+        "emerging_products",
+        "tech_stack"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "新产品发布",
+        "SaaS工具",
+        "创业产品"
+      ]
+    },
+    {
+      "id": "newsletter_future_tools",
+      "name": "FutureTools Weekly",
+      "url": "https://futuretools.beehiiv.com",
+      "type": "rss",
+      "rss_url": "https://futuretools.beehiiv.com/feed",
+      "enabled": true,
+      "categories": [
+        "emerging_products",
+        "tech_stack"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "AI工具",
+        "周报",
+        "变现策略"
+      ]
+    },
+    {
+      "id": "newsletter_the_loz_letter",
+      "name": "The Loz Letter - AI Insights",
+      "url": "https://www.loz.ai",
+      "type": "rss",
+      "rss_url": "https://www.loz.ai/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "industry_cases"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "洞察分析",
+        "AI新闻",
+        "行业动态"
+      ]
+    },
+    {
+      "id": "newsletter_import_ai",
+      "name": "Import AI - Breakthroughs & Applications",
+      "url": "https://importai.substack.com",
+      "type": "rss",
+      "rss_url": "https://importai.substack.com/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "tech_stack",
+        "industry_cases"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "突破发现",
+        "应用案例",
+        "研究进展"
+      ]
+    },
+    {
+      "id": "newsletter_inside_ai",
+      "name": "Inside AI - Weekly AI News",
+      "url": "https://inside.com/ai",
+      "type": "rss",
+      "rss_url": "https://inside.com/ai/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "industry_cases"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "周刊",
+        "AI新闻",
+        "机器人"
+      ]
+    },
+    {
+      "id": "newsletter_buzz_robot",
+      "name": "BuzzRobot - AI Research Talks",
+      "url": "https://buzzrobot.substack.com",
+      "type": "rss",
+      "rss_url": "https://buzzrobot.substack.com/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "tech_stack"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "研究论文",
+        "专家访谈",
+        "前沿技术"
+      ]
+    },
+    {
+      "id": "newsletter_llms_research",
+      "name": "LLMs Research - Research Papers",
+      "url": "https://www.llmsresearch.com",
+      "type": "rss",
+      "rss_url": "https://www.llmsresearch.com/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "tech_stack"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "研究论文",
+        "大语言模型",
+        "学术论文"
+      ]
+    },
+    {
+      "id": "newsletter_data_elixir",
+      "name": "Data Elixir - Data Science News",
+      "url": "https://dataelixir.com",
+      "type": "rss",
+      "rss_url": "https://dataelixir.com/feed",
+      "enabled": true,
+      "categories": [
+        "data_analytics",
+        "tech_stack",
+        "industry_cases"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "周刊",
+        "精选资源"
+      ]
+    },
+    {
+      "id": "newsletter_machine_learnings",
+      "name": "Machine Learnings - Weekly Roundup",
+      "url": "http://subscribe.machinelearnings.co",
+      "type": "rss",
+      "rss_url": "http://subscribe.machinelearnings.co/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "data_analytics"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "周刊",
+        "机器学习",
+        "AI新闻"
+      ]
+    },
+    {
+      "id": "newsletter_true_positive",
+      "name": "True Positive Weekly - AI/ML Links",
+      "url": "https://aiweekly.substack.com",
+      "type": "rss",
+      "rss_url": "https://aiweekly.substack.com/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "data_analytics",
+        "industry_cases"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "周刊",
+        "精选链接",
+        "最重要内容"
+      ]
+    },
+    {
+      "id": "newsletter_syntha_ai",
+      "name": "Syntha AI - Weekly AI Digest",
+      "url": "https://syntha.ai",
+      "type": "rss",
+      "rss_url": "https://syntha.ai/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "tech_stack",
+        "industry_cases"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "生成AI",
+        "前沿技术",
+        "创业公司"
+      ]
+    },
+    {
+      "id": "hacker_news",
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com",
+      "type": "rss",
+      "rss_url": "https://news.ycombinator.com/rss",
+      "enabled": true,
+      "categories": [
+        "ai_products",
+        "llm_tech",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "创业企业",
+        "新产品",
+        "技术讨论",
+        "AI创新"
+      ]
+    },
+    {
+      "id": "indie_hackers",
+      "name": "Indie Hackers",
+      "url": "https://www.indiehackers.com",
+      "type": "rss",
+      "rss_url": "https://www.indiehackers.com/feed.rss",
+      "enabled": true,
+      "categories": [
+        "ai_products",
+        "daily_use",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "独立开发者",
+        "AI工具",
+        "产品创新",
+        "创业经验"
+      ]
+    },
+    {
+      "id": "betalist",
+      "name": "BetaList",
+      "url": "https://betalist.com",
+      "type": "rss",
+      "rss_url": "https://betalist.com/rss",
+      "enabled": true,
+      "categories": [
+        "ai_products",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "产品发布",
+        "测试版",
+        "新创意",
+        "AI应用"
+      ]
+    },
+    {
+      "id": "theres_an_ai_for_that",
+      "name": "There's An AI For That",
+      "url": "https://theresanaiforthat.com",
+      "type": "rss",
+      "rss_url": "https://theresanaiforthat.com/feed",
+      "enabled": true,
+      "categories": [
+        "ai_products",
+        "daily_use",
+        "tech_stack"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 10,
+      "focus_tags": [
+        "AI工具库",
+        "日常使用",
+        "应用场景",
+        "效率提升"
+      ]
+    },
+    {
+      "id": "futuretools",
+      "name": "FutureTools",
+      "url": "https://www.futuretools.io",
+      "type": "rss",
+      "rss_url": "https://www.futuretools.io/feed.rss",
+      "enabled": true,
+      "categories": [
+        "ai_products",
+        "daily_use"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "AI工具",
+        "精选推荐",
+        "新兴技术",
+        "生产力"
+      ]
+    },
+    {
+      "id": "venturebeat",
+      "name": "VentureBeat",
+      "url": "https://venturebeat.com",
+      "type": "rss",
+      "rss_url": "https://venturebeat.com/feed/",
+      "enabled": true,
+      "categories": [
+        "fintech_ai",
+        "llm_tech",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "创业融资",
+        "金融科技",
+        "AI应用",
+        "市场洞察"
+      ]
+    },
+    {
+      "id": "cb_insights",
+      "name": "CB Insights",
+      "url": "https://www.cbinsights.com",
+      "type": "rss",
+      "rss_url": "https://www.cbinsights.com/research/feed",
+      "enabled": true,
+      "categories": [
+        "fintech_ai",
+        "strategic_insights"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "金融研究",
+        "市场分析",
+        "投资趋势",
+        "金融创新"
+      ]
+    },
+    {
+      "id": "fintech_weekly",
+      "name": "Fintech Weekly",
+      "url": "https://fintechweekly.com",
+      "type": "rss",
+      "rss_url": "https://fintechweekly.com/feed",
+      "enabled": true,
+      "categories": [
+        "fintech_ai",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "银行科技",
+        "支付创新",
+        "借贷科技",
+        "保险科技"
+      ]
+    },
+    {
+      "id": "the_block",
+      "name": "The Block",
+      "url": "https://theblock.co",
+      "type": "rss",
+      "rss_url": "https://theblock.co/rss",
+      "enabled": true,
+      "categories": [
+        "fintech_ai",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "区块链",
+        "加密货币",
+        "Web3",
+        "金融创新"
+      ]
+    },
+    {
+      "id": "bankless",
+      "name": "Bankless",
+      "url": "https://bankless.com",
+      "type": "rss",
+      "rss_url": "https://bankless.com/feed.xml",
+      "enabled": true,
+      "categories": [
+        "fintech_ai",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "金融科技",
+        "DeFi",
+        "支付创新",
+        "金融未来"
+      ]
+    },
+    {
+      "id": "yc_blog",
+      "name": "Y Combinator Blog",
+      "url": "https://blog.ycombinator.com",
+      "type": "rss",
+      "rss_url": "https://blog.ycombinator.com/feed.rss",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "llm_tech",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "创业指南",
+        "创业公司",
+        "硅谷洞察",
+        "AI创新"
+      ]
+    },
+    {
+      "id": "stratechery",
+      "name": "Stratechery",
+      "url": "https://stratechery.com",
+      "type": "rss",
+      "rss_url": "https://stratechery.com/feed/",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "llm_tech"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "技术分析",
+        "战略思考",
+        "平台动态",
+        "商业模式"
+      ]
+    },
+    {
+      "id": "recode",
+      "name": "Recode",
+      "url": "https://www.recode.net",
+      "type": "rss",
+      "rss_url": "https://www.recode.net/rss/index.xml",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "llm_tech",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "科技商业",
+        "CEO采访",
+        "市场分析",
+        "AI影响"
+      ]
+    },
+    {
+      "id": "techmeme",
+      "name": "Techmeme",
+      "url": "https://www.techmeme.com",
+      "type": "rss",
+      "rss_url": "https://www.techmeme.com/feed.xml",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "llm_tech"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "实时聚合",
+        "趋势追踪",
+        "新闻热点",
+        "技术讨论"
+      ]
+    },
+    {
+      "id": "techcrunch_main",
+      "name": "TechCrunch (Main)",
+      "url": "https://techcrunch.com",
+      "type": "rss",
+      "rss_url": "https://techcrunch.com/feed/",
+      "enabled": true,
+      "categories": [
+        "emerging_products",
+        "strategic_insights"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "创业融资",
+        "产品发布",
+        "技术趋势",
+        "市场洞察"
+      ]
+    }
+  ],
+  "weighting_config": {
+    "enabled": true,
+    "relevance_weight_multiplier": 1.5,
+    "credibility_score_multiplier": 1.0,
+    "description": "relevance_weight (1-10) 反映来源与公司业务的相关性，会在评分时乘以 multiplier"
+  }
+}
