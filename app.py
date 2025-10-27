@@ -144,6 +144,8 @@ if "search_query" not in st.session_state:
     st.session_state.search_query = ""
 if "search_results" not in st.session_state:
     st.session_state.search_results = None
+if "selected_briefing" not in st.session_state:
+    st.session_state.selected_briefing = None
 if "provider_switcher" not in st.session_state:
     try:
         st.session_state.provider_switcher = ProviderSwitcher()
@@ -238,6 +240,50 @@ st.markdown("""
 # LOAD BRIEFING DATA
 # ============================================================================
 
+def parse_articles_from_markdown(content: str) -> List[Dict[str, str]]:
+    """Parse articles from markdown briefing content"""
+    articles = []
+    lines = content.split('\n')
+    i = 0
+
+    while i < len(lines):
+        line = lines[i]
+        # Look for article titles (numbered like "**1. Title**" or "**1. AI投资分析系统")
+        if line.startswith('**') and ('.' in line[:5]) and (')' in line or '**' in line[5:]):
+            # Extract title
+            title_match = line.strip('*')
+            title = title_match
+
+            # Get next few lines for summary and URL
+            summary = ""
+            url = ""
+            source = ""
+
+            i += 1
+            # Collect lines until we hit metadata or next article
+            while i < len(lines) and not lines[i].startswith('**'):
+                if lines[i].startswith('**来源**:') or lines[i].startswith('**Source**:'):
+                    source = lines[i].split(':', 1)[1].strip() if ':' in lines[i] else ""
+                elif lines[i].startswith('**URL**:') or lines[i].lower().startswith('url:'):
+                    url = lines[i].split(':', 1)[1].strip() if ':' in lines[i] else ""
+                elif lines[i].startswith('**来源') or not lines[i].startswith('**'):
+                    if summary == "" and lines[i].strip() and not lines[i].startswith('**'):
+                        summary = lines[i].strip()
+                i += 1
+
+            if title.strip():
+                articles.append({
+                    "title": title.strip('*').split('. ', 1)[-1] if '. ' in title else title,
+                    "summary": summary[:200] if summary else "No summary available",
+                    "url": url if url else "#",
+                    "source": source if source else "Unknown"
+                })
+            continue
+
+        i += 1
+
+    return articles
+
 def load_latest_briefing() -> Optional[Dict[str, Any]]:
     """Load the latest briefing from data/reports directory"""
     reports_dir = Path("./data/reports")
@@ -260,13 +306,36 @@ def load_latest_briefing() -> Optional[Dict[str, Any]]:
         with open(data_files[0], 'r', encoding='utf-8') as f:
             return json.load(f)
 
-    # Fallback: create minimal structure from markdown
+    # Load markdown and parse articles
+    content = latest_file.read_text(encoding='utf-8')
+    articles = parse_articles_from_markdown(content)
+
+    # Fallback: create structure from markdown
     return {
         "date": latest_file.stem.replace("ai_briefing_", "").replace("briefing_", ""),
         "title": "AI Industry Weekly Briefing",
-        "content": latest_file.read_text(encoding='utf-8'),
-        "articles": []
+        "content": content,
+        "articles": articles
     }
+
+def get_available_briefings() -> List[Dict[str, Any]]:
+    """Get list of all available briefings (for archive)"""
+    reports_dir = Path("./data/reports")
+    if not reports_dir.exists():
+        return []
+
+    briefings = []
+    markdown_files = sorted(reports_dir.glob("*briefing_*.md"), reverse=True)
+
+    for file in markdown_files:
+        date_str = file.stem.replace("ai_briefing_", "").replace("briefing_", "")
+        briefings.append({
+            "date": date_str,
+            "filename": file.name,
+            "path": file
+        })
+
+    return briefings
 
 def search_articles_with_llm(query: str, briefing_content: str, lang: str = "en") -> str:
     """Use LLM to search and return matching articles"""
@@ -341,8 +410,38 @@ with col_lang:
         label_visibility="collapsed"
     )
 
-# Load briefing data
-briefing = load_latest_briefing()
+# Archive section in sidebar
+with st.sidebar:
+    st.markdown("### 📚 Archive / 存档")
+    available = get_available_briefings()
+
+    if available:
+        briefing_options = {b['date']: b['path'] for b in available}
+        selected_date = st.selectbox(
+            "Select briefing / 选择简报",
+            options=list(briefing_options.keys()),
+            index=0,
+            label_visibility="collapsed"
+        )
+
+        if selected_date:
+            st.session_state.selected_briefing = briefing_options[selected_date]
+
+# Load briefing data - either from archive selection or latest
+if st.session_state.selected_briefing:
+    briefing_file = st.session_state.selected_briefing
+    content = briefing_file.read_text(encoding='utf-8')
+    articles = parse_articles_from_markdown(content)
+    date_str = briefing_file.stem.replace("ai_briefing_", "").replace("briefing_", "")
+    briefing = {
+        "date": date_str,
+        "title": "AI Industry Weekly Briefing",
+        "content": content,
+        "articles": articles
+    }
+else:
+    briefing = load_latest_briefing()
+
 if briefing is None:
     st.warning("No briefing data available. Please generate a briefing first.")
     st.stop()

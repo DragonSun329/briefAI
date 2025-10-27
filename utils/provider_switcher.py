@@ -415,12 +415,14 @@ class ProviderSwitcher:
         """
         def _query_callback(provider: BaseLLMProvider) -> str:
             """Callback to execute query on current provider"""
-            return provider.query(
-                prompt=prompt,
-                system_prompt=system_prompt,
+            system = system_prompt or "You are a helpful AI assistant."
+            response, usage = provider.chat(
+                system_prompt=system,
+                user_message=prompt,
                 max_tokens=max_tokens,
                 temperature=temperature
             )
+            return response
 
         # Execute with automatic fallback
         result, provider_used = self.retry_with_fallback(
