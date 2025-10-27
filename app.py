@@ -249,34 +249,56 @@ def parse_articles_from_markdown(content: str) -> List[Dict[str, str]]:
     while i < len(lines):
         line = lines[i]
         # Look for article titles (numbered like "**1. Title**" or "**1. AI投资分析系统")
-        if line.startswith('**') and ('.' in line[:5]) and (')' in line or '**' in line[5:]):
-            # Extract title
-            title_match = line.strip('*')
-            title = title_match
+        if line.startswith('**') and line[2].isdigit() and '. ' in line:
+            # Extract title - remove asterisks and number prefix
+            title_raw = line.strip('*').strip()
+            # Remove the number and dot prefix (e.g., "1. " or "10. ")
+            if '. ' in title_raw:
+                title = title_raw.split('. ', 1)[1]
+            else:
+                title = title_raw
 
-            # Get next few lines for summary and URL
             summary = ""
             url = ""
             source = ""
 
             i += 1
-            # Collect lines until we hit metadata or next article
-            while i < len(lines) and not lines[i].startswith('**'):
-                if lines[i].startswith('**来源**:') or lines[i].startswith('**Source**:'):
-                    source = lines[i].split(':', 1)[1].strip() if ':' in lines[i] else ""
-                elif lines[i].startswith('**URL**:') or lines[i].lower().startswith('url:'):
-                    url = lines[i].split(':', 1)[1].strip() if ':' in lines[i] else ""
-                elif lines[i].startswith('**来源') or not lines[i].startswith('**'):
-                    if summary == "" and lines[i].strip() and not lines[i].startswith('**'):
-                        summary = lines[i].strip()
+            # Collect lines until we hit next article or end
+            while i < len(lines):
+                current_line = lines[i].strip()
+
+                # Stop if we hit the next article
+                if current_line.startswith('**') and len(current_line) > 2 and current_line[2].isdigit():
+                    break
+
+                # Extract source - look for "**来源**: value" or "**来源**:" patterns
+                if '**来源**' in current_line and ':' in current_line:
+                    # Extract everything after the colon
+                    source = current_line.split(':', 1)[1].strip()
+                elif current_line.startswith('**来源'):
+                    # Fallback pattern
+                    parts = current_line.split(':', 1)
+                    if len(parts) > 1:
+                        source = parts[1].strip()
+
+                # Extract URL - look for "**URL**: value" patterns
+                elif '**URL**' in current_line and ':' in current_line:
+                    url = current_line.split(':', 1)[1].strip()
+                elif 'URL:' in current_line:
+                    url = current_line.split(':', 1)[1].strip()
+
+                # First non-empty non-metadata line is the summary
+                elif summary == "" and current_line and not current_line.startswith('**'):
+                    summary = current_line
+
                 i += 1
 
             if title.strip():
                 articles.append({
-                    "title": title.strip('*').split('. ', 1)[-1] if '. ' in title else title,
-                    "summary": summary[:200] if summary else "No summary available",
-                    "url": url if url else "#",
-                    "source": source if source else "Unknown"
+                    "title": title.strip(),
+                    "summary": summary[:200] if summary else "无摘要",
+                    "url": url if url else "",
+                    "source": source if source else ""
                 })
             continue
 
@@ -474,20 +496,24 @@ with left_col:
 
     if briefing.get("articles"):
         for idx, article in enumerate(briefing["articles"], 1):
-            with st.container():
-                st.markdown(f"<div class='article-card'>", unsafe_allow_html=True)
-                st.markdown(f"**{idx}. {article.get('title', 'Untitled')}**")
+            # Article title
+            st.markdown(f"**{idx}. {article.get('title', 'Untitled')}**")
 
-                if article.get('source'):
-                    st.caption(f"📌 {article['source']}")
+            # Article summary
+            if article.get('summary'):
+                st.markdown(article['summary'])
 
-                if article.get('summary'):
-                    st.markdown(article['summary'])
+            # Source and URL in one line
+            meta_info = []
+            if article.get('source'):
+                meta_info.append(f"来源: {article['source']}")
+            if article.get('url'):
+                meta_info.append(f"[{article['url']}]({article['url']})")
 
-                if article.get('url'):
-                    st.markdown(f"[🔗 Read more]({article['url']})")
+            if meta_info:
+                st.caption(" | ".join(meta_info))
 
-                st.markdown(f"</div>", unsafe_allow_html=True)
+            st.divider()
     else:
         st.info("No articles in this briefing")
 
