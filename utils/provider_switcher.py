@@ -390,3 +390,41 @@ class ProviderSwitcher:
         logger.info("\n" + "=" * 60)
         logger.info(f"TOTAL: {total_calls} calls, Cost: ¥{total_cost:.4f}")
         logger.info("=" * 60)
+
+    def query(
+        self,
+        prompt: str,
+        system_prompt: Optional[str] = None,
+        max_tokens: int = 1024,
+        temperature: float = 0.7
+    ) -> str:
+        """
+        Execute a query with automatic fallback on rate limits.
+
+        Args:
+            prompt: The user's input prompt
+            system_prompt: Optional system prompt for context
+            max_tokens: Maximum tokens in response
+            temperature: Temperature for response generation (0-1)
+
+        Returns:
+            The LLM response as a string
+
+        Raises:
+            RuntimeError: If all providers are exhausted
+        """
+        def _query_callback(provider: BaseLLMProvider) -> str:
+            """Callback to execute query on current provider"""
+            return provider.query(
+                prompt=prompt,
+                system_prompt=system_prompt,
+                max_tokens=max_tokens,
+                temperature=temperature
+            )
+
+        # Execute with automatic fallback
+        result, provider_used = self.retry_with_fallback(
+            task_name="LLM Query",
+            callback=_query_callback
+        )
+        return result
