@@ -20,9 +20,21 @@ Every week, this agent will:
 ### Critical Output Requirements
 - ✅ All content must be in **Mandarin Chinese** (except technical terms like "GPT", "Claude")
 - ✅ Article summaries must be in **paragraph format** (流畅的段落), NOT bullet points
-- ✅ Length: 150-250 Chinese characters per article
+- ✅ Length: **500-600 Chinese characters per article** (enhanced analysis format)
 - ✅ Professional, executive-level tone
 - ✅ Factually accurate - no hallucinations
+
+### New Report Generation Requirements (Updated Oct 2025)
+- ✅ **5D Scoring System**: Articles ranked by weighted scores (Market Impact 25%, Competitive Impact 20%, Strategic Relevance 20%, Operational Relevance 15%, Credibility 10%)
+- ✅ **Semantic Article Merging**: Similar/duplicate articles automatically merged via 0.85+ cosine similarity detection
+- ✅ **Deep Analysis Format** (500-600 chars, 3-4 paragraphs):
+  - **中心论点** (Central Argument): Core insight or breakthrough + key supporting data
+  - **数据和证据** (Data & Evidence): Quantified impact, performance metrics, market data with context
+  - **机制和对比** (Mechanism & Differentiation): How it works, why it's different from alternatives
+  - **实际影响和应用** (Practical Impact): Specific use cases, affected stakeholders, business improvements
+  - **市场意义与风险** (Market Significance & Risks): Industry implications, strategic insights, limitations/challenges
+- ✅ **No Ranking Display**: 5D scores used internally for sorting, not shown in final report
+- ✅ **Analytical-Inspiring Tone**: Balance between insights and critical thinking, avoid marketing language
 
 ### Technical Requirements
 - Python 3.10+

@@ -36,24 +36,28 @@ class EntityExtractor:
             llm_client: LLM client instance (creates new if None)
             checkpoint_manager: Optional checkpoint manager for saving results
         """
+        global SPACY_AVAILABLE
+
         self.llm_client = llm_client or LLMClient()
         self.checkpoint_manager = checkpoint_manager
 
         # Initialize spaCy if available
         self.nlp = None
-        if SPACY_AVAILABLE:
+        self.spacy_available = SPACY_AVAILABLE
+
+        if self.spacy_available:
             try:
                 self.nlp = spacy.load("en_core_web_md")
                 logger.info("spaCy NER model loaded (en_core_web_md)")
             except OSError:
                 logger.warning("spaCy model not found. Download with:")
                 logger.warning("python -m spacy download en_core_web_md")
-                SPACY_AVAILABLE = False
+                self.spacy_available = False
 
         # Build normalization maps for common entities
         self._build_normalization_maps()
 
-        logger.info(f"Entity extractor initialized (spaCy: {SPACY_AVAILABLE})")
+        logger.info(f"Entity extractor initialized (spaCy: {self.spacy_available})")
 
     def _build_normalization_maps(self):
         """Build maps for entity normalization (aliases)"""
@@ -165,7 +169,7 @@ class EntityExtractor:
         Returns:
             Tuple of (entities_dict, confidence_score)
         """
-        if not SPACY_AVAILABLE or not self.nlp:
+        if not self.spacy_available or not self.nlp:
             return self._empty_entities(), 0.0
 
         try:
