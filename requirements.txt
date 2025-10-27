@@ -2,6 +2,7 @@
 openai>=1.0.0
 requests>=2.31.0
 python-dotenv>=1.0.0
+anthropic>=0.25.0
 
 # Web UI (Streamlit Cloud)
 streamlit>=1.28.0
@@ -23,6 +24,7 @@ spacy-lookups-data>=1.0.0
 # Report Generation
 jinja2>=3.1.2
 markdown>=3.5.0
+fpdf2>=2.7.0
 
 # Utilities
 tenacity>=8.2.3

@@ -1,0 +1,170 @@
+{
+  "report_date": "2025-10-25",
+  "generation_time": "2025-10-25T12:06:03.404706",
+  "articles": [
+    {
+      "id": "001",
+      "title": "AI PB: A Grounded Generative Agent for Personalized Investment Insights",
+      "url": "https://arxiv.org/abs/2510.20099",
+      "source": "ArXiv AI (Test Source)",
+      "published_date": "2025-10-24T04:00:00",
+      "full_content": "arXiv:2510.20099v1 Announce Type: new \nAbstract: We present AI PB, a production-scale generative agent deployed in real retail finance. Unlike reactive chatbots that answer queries passively, AI PB proactively generates grounded, compliant, and user-specific investment insights. It integrates (i) a component-based orchestration layer that deterministically routes between internal and external LLMs based on data sensitivity, (ii) a hybrid retrieval pipeline using OpenSearch and the finance-domain embedding model, and (iii) a multi-stage recommendation mechanism combining rule heuristics, sequential behavioral modeling, and contextual bandits. Operating fully on-premises under Korean financial regulations, the system employs Docker Swarm and vLLM across 24 X NVIDIA H100 GPUs. Through human QA and system metrics, we demonstrate that grounded generation with explicit routing and layered safety can deliver trustworthy AI insights in high-stakes finance.",
+      "credibility_score": 10,
+      "relevance_score": 0,
+      "entities": {
+        "companies": [],
+        "models": [
+          "AI PB",
+          "LLMs",
+          "OpenSearch",
+          "finance-domain embedding model",
+          "vLLM"
+        ],
+        "people": [],
+        "locations": [
+          "Korean"
+        ],
+        "other": [
+          "arXiv",
+          "Docker Swarm",
+          "NVIDIA H100 GPUs",
+          "Korean financial regulations"
+        ]
+      },
+      "evaluation": {
+        "scores": {
+          "impact": 8,
+          "relevance": 9,
+          "recency": 9,
+          "credibility": 10
+        },
+        "rationale": "这篇文章介绍了一个名为AI PB的生产规模生成代理，它在零售金融中主动生成个性化的投资洞察，这与公司关注的智能风控信贷和精准营销领域高度相关。文章来自ArXiv AI，可信度极高，且内容为最新的研究论文，时效性强。",
+        "key_takeaway": "AI PB在零售金融中主动生成个性化投资洞察",
+        "recommended_category": "金融科技AI应用",
+        "average_score": 9.0
+      }
+    },
+    {
+      "id": "002",
+      "title": "Human-Centered LLM-Agent System for Detecting Anomalous Digital Asset Transactions",
+      "url": "https://arxiv.org/abs/2510.20102",
+      "source": "ArXiv AI (Test Source)",
+      "published_date": "2025-10-24T04:00:00",
+      "full_content": "arXiv:2510.20102v1 Announce Type: new \nAbstract: We present HCLA, a human-centered multi-agent system for anomaly detection in digital asset transactions. The system links three roles: Parsing, Detection, and Explanation, into a conversational workflow that lets non-experts ask questions in natural language, inspect structured analytics, and obtain context-aware rationales. Implemented with an open-source web UI, HCLA translates user intents into a schema for a classical detector (XGBoost in our prototype) and returns narrative explanations grounded in the underlying features. On a labeled Bitcoin mixing dataset (Wasabi Wallet, 2020-2024), the baseline detector reaches strong accuracy, while HCLA adds interpretability and interactive refinement. We describe the architecture, interaction loop, dataset, evaluation protocol, and limitations, and discuss how a human-in-the-loop design improves transparency and trust in financial forensics.",
+      "credibility_score": 10,
+      "relevance_score": 0,
+      "entities": {
+        "companies": [],
+        "models": [
+          "HCLA",
+          "XGBoost"
+        ],
+        "people": [],
+        "locations": [],
+        "other": [
+          "arXiv",
+          "Wasabi Wallet"
+        ]
+      },
+      "evaluation": {
+        "scores": {
+          "impact": 7,
+          "relevance": 9,
+          "recency": 8,
+          "credibility": 10
+        },
+        "rationale": "这篇文章介绍了一个结合人工智能和人类交互的多代理系统，用于检测数字资产交易中的异常行为。这对于金融科技领域，特别是在智能风控和信贷决策方面具有重要意义。文章的发布时间很近，且来源ArXiv AI是学术界公认的可靠来源。",
+        "key_takeaway": "提出了一个结合人工智能和人类交互的系统，用于提高金融交易异常检测的透明度和信任度。",
+        "recommended_category": "金融科技AI应用",
+        "average_score": 8.5
+      }
+    },
+    {
+      "id": "003",
+      "title": "Agentic AI in Finance: Opportunities and Challenges for Indonesia",
+      "url": "https://towardsdatascience.com/agentic-ai-in-finance-opportunities-and-challenges-for-indonesia/",
+      "source": "Towards Data Science",
+      "published_date": "2025-10-22T12:30:00",
+      "full_content": "The rise of AI has touched nearly every industry — including finance. In fact, the financial sector has long been an adopter of what we now call “traditional machine learning,” using it for predictive modeling, credit scoring, and risk analytics. But with the current hype around Large Language Models (LLMs) and Agentic AI, I start […]\nThe post Agentic AI in Finance: Opportunities and Challenges for Indonesia appeared first on Towards Data Science.",
+      "credibility_score": 8,
+      "relevance_score": 0,
+      "entities": {
+        "companies": [],
+        "models": [],
+        "people": [],
+        "locations": [],
+        "other": []
+      },
+      "evaluation": {
+        "scores": {
+          "impact": 7,
+          "relevance": 8,
+          "recency": 8,
+          "credibility": 8
+        },
+        "rationale": "文章讨论了AI在金融领域的应用，尤其是印尼市场，这对金融科技行业具有一定影响力。内容涉及预测建模、信用评分和风险分析，与公司业务高度相关。文章发布于最近，来源为知名科技博客，具有较好的时效性和可信度。",
+        "key_takeaway": "AI在金融领域的应用正扩展到印尼市场，带来新的机遇和挑战。",
+        "recommended_category": "金融科技AI应用",
+        "average_score": 7.75
+      }
+    },
+    {
+      "id": "004",
+      "title": "The Hidden Curriculum of Data Science Interviews: What Companies Really Test",
+      "url": "https://www.kdnuggets.com/the-hidden-curriculum-of-data-science-interviews-what-companies-really-test",
+      "source": "KDnuggets",
+      "published_date": "2025-10-23T15:55:25",
+      "full_content": "Technical screening is not only about technical knowledge. Here’s what companies really test in technical interviews.",
+      "credibility_score": 9,
+      "relevance_score": 0,
+      "entities": {
+        "companies": [],
+        "models": [],
+        "people": [],
+        "locations": [],
+        "other": []
+      },
+      "evaluation": {
+        "scores": {
+          "impact": 6,
+          "relevance": 7,
+          "recency": 8,
+          "credibility": 9
+        },
+        "rationale": "这篇文章讨论了数据科学面试中公司真正测试的内容，对于金融科技行业来说，数据科学和机器学习是核心技能，因此具有一定的影响力和相关性。文章发布时间较新，来自KDnuggets，一个在数据科学领域具有较高可信度的平台。",
+        "key_takeaway": "金融科技行业需要关注数据科学面试中公司真正测试的技能",
+        "recommended_category": "数据分析",
+        "average_score": 7.5
+      }
+    },
+    {
+      "id": "005",
+      "title": "The Psychology of Bad Data Storytelling: Why People Misread Your Data",
+      "url": "https://www.kdnuggets.com/the-psychology-of-bad-data-storytelling-why-people-misread-your-data",
+      "source": "KDnuggets",
+      "published_date": "2025-10-22T16:06:37",
+      "full_content": "Here are some tips on how to avoid the typical traps of the human mind and help people get your data storytelling.",
+      "credibility_score": 9,
+      "relevance_score": 0,
+      "entities": {
+        "companies": [],
+        "models": [],
+        "people": [],
+        "locations": [],
+        "other": []
+      },
+      "evaluation": {
+        "scores": {
+          "impact": 6,
+          "relevance": 7,
+          "recency": 8,
+          "credibility": 9
+        },
+        "rationale": "这篇文章讨论了人们如何误解数据故事，对于金融科技行业来说，理解数据的准确传达和解读至关重要，尤其是在风险控制和信贷决策中。文章的发布时间较近，内容来自一个信誉良好的数据科学社区，因此具有较高的可信度。",
+        "key_takeaway": "理解数据故事的心理学可以帮助金融科技行业更有效地利用数据。",
+        "recommended_category": "数据分析",
+        "average_score": 7.5
+      }
+    }
+  ]
+}

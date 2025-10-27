@@ -1,0 +1,166 @@
+{
+  "timestamp": "2025-10-26T14:14:19.475919",
+  "key": "source_analyticsvidhya_7days",
+  "value": [
+    {
+      "title": "Less Syntax, More Insights: LLMs as SQL Copilots",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/llms-as-sql-copilots/",
+      "content": "SQL is the language of data; however, anyone who has spent some time writing queries knows the pain. Remembering exact syntax for window functions, multi-table joins, and debugging cryptic SQL errors can be tedious and time-consuming. For non-technical users, getting simple answers often requires calling in a data analyst. Large Language Models (LLMs) are starting […]\nThe post Less Syntax, More Insights: LLMs as SQL Copilots appeared first on Analytics Vidhya.",
+      "published_date": "2025-10-25T10:45:23",
+      "source": "Analytics Vidhya",
+      "source_id": "analyticsvidhya",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    },
+    {
+      "title": "Claude Haiku 4.5 is Here… and it’s BETTER than Sonnet 4.5?",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/claude-haiku-4-5/",
+      "content": "Claude Haiku 4.5 is Anthropic’s latest small model, released on 15th October to all users. It’s a strong reminder that speed and intelligence don’t have to come at a high price. Just five months ago, Claude Sonnet 4 was considered the benchmark for balanced performance. Now, Haiku 4.5 delivers nearly the same coding and reasoning […]\nThe post Claude Haiku 4.5 is Here… and it’s BETTER than Sonnet 4.5? appeared first on Analytics Vidhya.",
+      "published_date": "2025-10-24T13:25:40",
+      "source": "Analytics Vidhya",
+      "source_id": "analyticsvidhya",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    },
+    {
+      "title": "Guardrails in LLMs: Building Reliable AI Systems with Guardrails",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/guardrails-in-llm/",
+      "content": "Guardrails are the building blocks of LLM applications, helping turn experimental LLM apps into reliable, enterprise-grade solutions. How? While LLM-powered AI applications may look effortless in Proof of Concept (POC), scaling them reliably is a hard task. While LLMs excel at open-ended reasoning, they struggle with control and consistency when adapted for specific, mission-critical use […]\nThe post Guardrails in LLMs: Building Reliable AI Systems with Guardrails appeared first on Analytics Vidhya.",
+      "published_date": "2025-10-24T09:59:00",
+      "source": "Analytics Vidhya",
+      "source_id": "analyticsvidhya",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    },
+    {
+      "title": "Poisoning Attacks on LLMs: A Direct Attack on LLMs with Less than 250 Samples",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/llm-data-poisoning/",
+      "content": "Anthropic, in collaboration with the United Kingdom’s Artificial Intelligence Security Institute and the Alan Turing Institute, recently published an intriguing paper showing that as few as 250 malicious documents can create a “backdoor” vulnerability in a large language model, regardless of the model’s size or the volume of training data! We’ll explore these results in […]\nThe post Poisoning Attacks on LLMs: A Direct Attack on LLMs with Less than 250 Samples appeared first on Analytics Vidhya.",
+      "published_date": "2025-10-24T08:13:02",
+      "source": "Analytics Vidhya",
+      "source_id": "analyticsvidhya",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    },
+    {
+      "title": "Less is More: Recursive Reasoning with Tiny Networks",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/trm-recursive-reasoning/",
+      "content": "Do you think that a small neural network (like TRM) can outperform models many times larger in reasoning tasks? How is it possible for billions of LLM parameters to have such a small number of modest million-parameter iterations solving puzzles? “Currently, we live in a scale-obsessed world: More data. More GPUs mean bigger and better […]\nThe post Less is More: Recursive Reasoning with Tiny Networks appeared first on Analytics Vidhya.",
+      "published_date": "2025-10-23T04:24:00",
+      "source": "Analytics Vidhya",
+      "source_id": "analyticsvidhya",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    },
+    {
+      "title": "RIP Prompt Engineering? Why Verbalized Sampling Changes Everything!",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/verbalized-sampling/",
+      "content": "Over the last few years, Prompt engineering has been the secret handshake of the AI world. The right phrasing could make a model sound poetic, funny, or insightful; the wrong one turned it flat and robotic. But a new Stanford-led paper argues that most of this “craft” has been compensating for something deeper, a hidden […]\nThe post RIP Prompt Engineering? Why Verbalized Sampling Changes Everything! appeared first on Analytics Vidhya.",
+      "published_date": "2025-10-22T04:46:00",
+      "source": "Analytics Vidhya",
+      "source_id": "analyticsvidhya",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    },
+    {
+      "title": "5 Ways to Run LLMs Locally With Enhanced Privacy and Security",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/run-llms-locally-with-privacy-and-security/",
+      "content": "A few weeks ago, my friend Vasu asked me a simple but tricky question: “Is there a way I can run private LLMs locally on my laptop?” I immediately went hunting blog posts, YouTube tutorials, anything and came up empty-handed. Nothing I could find really explained it for non-engineers, for someone who just wanted to […]\nThe post 5 Ways to Run LLMs Locally With Enhanced Privacy and Security  appeared first on Analytics Vidhya.",
+      "published_date": "2025-10-22T02:58:00",
+      "source": "Analytics Vidhya",
+      "source_id": "analyticsvidhya",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    },
+    {
+      "title": "Grokipedia: Wikipedia 2.0?",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/grokipedia/",
+      "content": "We’ve all used Wikipedia. Whether it was to settle an argument about who invented the internet or to write a last-minute essay at 2 AM. Wikipedia has been the internet’s trusty old library since 2001. But lately, people have been saying it’s “too woke,” “too biased,” or “too controlled by anonymous people with an agenda.” […]\nThe post Grokipedia: Wikipedia 2.0?  appeared first on Analytics Vidhya.",
+      "published_date": "2025-10-21T13:50:54",
+      "source": "Analytics Vidhya",
+      "source_id": "analyticsvidhya",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    },
+    {
+      "title": "No Job Apocalypse Coming: 10 AGI Myths Busted by Andrej Karapathy",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/agi-myths-busted-by-andrej-karapathy/",
+      "content": "Everyone loves a good hype train. And when it comes to AGI myths, the train has no brakes. Every few weeks, someone declares, “This is it!” They say agents will take over jobs, economies will explode, and education will magically fix itself. The guy sitting at the helm of this transition – Andrej Karpathy, has […]\nThe post No Job Apocalypse Coming: 10 AGI Myths Busted by Andrej Karapathy appeared first on Analytics Vidhya.",
+      "published_date": "2025-10-21T13:47:34",
+      "source": "Analytics Vidhya",
+      "source_id": "analyticsvidhya",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    },
+    {
+      "title": "DeepSeek’s New OCR Compresses Documents By 10x",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/deepseeks-ocr/",
+      "content": "Yesterday DeepSeek community launched its latest and most advanced text-2-visual modal known as: Deepseek-OCR and it is changing the way we used to extract text from images. Till now we are dependent on the traditional OCR models that struggle with accuracy and layout understanding while extracting text from PDF’s, images or messy hand written notes.   […]\nThe post DeepSeek’s New OCR Compresses Documents By 10x appeared first on Analytics Vidhya.",
+      "published_date": "2025-10-21T13:34:24",
+      "source": "Analytics Vidhya",
+      "source_id": "analyticsvidhya",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    }
+  ]
+}
