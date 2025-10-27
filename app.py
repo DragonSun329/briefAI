@@ -13,10 +13,11 @@ Runs on Streamlit Cloud with automatic provider switching and rate limit handlin
 import streamlit as st
 import json
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional
 import os
 from utils.provider_switcher import ProviderSwitcher
+from utils.context_retriever import ContextRetriever
 
 # ============================================================================
 # TRANSLATIONS - UI TEXT IN ENGLISH AND MANDARIN CHINESE
@@ -114,6 +115,38 @@ TRANSLATIONS = {
     "ai_assistant": {
         "en": "Assistant",
         "zh": "助手"
+    },
+    "multi_week_search": {
+        "en": "Multi-Week Search",
+        "zh": "多周搜索"
+    },
+    "entity_search": {
+        "en": "Entity Search",
+        "zh": "实体搜索"
+    },
+    "date_range": {
+        "en": "Date Range",
+        "zh": "日期范围"
+    },
+    "entity_type": {
+        "en": "Entity Type",
+        "zh": "实体类型"
+    },
+    "companies": {
+        "en": "Companies/Models",
+        "zh": "公司/模型"
+    },
+    "people": {
+        "en": "People",
+        "zh": "人物"
+    },
+    "locations": {
+        "en": "Locations",
+        "zh": "地点"
+    },
+    "other": {
+        "en": "Other",
+        "zh": "其他"
     },
 }
 
@@ -342,6 +375,115 @@ def create_enriched_briefing_context(articles: List[Dict[str, str]]) -> str:
     context_lines.append("- 如果用户要求，可以从URL获取完整文章进行更深入分析")
 
     return "\n".join(context_lines)
+
+def search_multi_week_with_context_retriever(
+    keyword: str,
+    date_from: Optional[str] = None,
+    date_to: Optional[str] = None
+) -> List[Dict[str, Any]]:
+    """
+    Search articles across multiple weeks using ContextRetriever
+
+    Args:
+        keyword: Search term
+        date_from: Start date (YYYY-MM-DD) - optional
+        date_to: End date (YYYY-MM-DD) - optional
+
+    Returns:
+        List of matching articles with report metadata
+    """
+    try:
+        retriever = ContextRetriever()
+        results = retriever.search_by_keyword(
+            keyword=keyword,
+            date_from=date_from,
+            date_to=date_to,
+            search_fields=["title", "full_content"]
+        )
+        return results
+    except Exception as e:
+        return []
+
+def search_by_entity_with_context_retriever(
+    entity_name: str,
+    entity_type: Optional[str] = None,
+    date_from: Optional[str] = None,
+    date_to: Optional[str] = None
+) -> List[Dict[str, Any]]:
+    """
+    Search articles by entity (company, model, person, location)
+    across multiple weeks using ContextRetriever
+
+    Args:
+        entity_name: Name of entity to search for
+        entity_type: Type of entity (companies, models, people, locations, other)
+        date_from: Start date (YYYY-MM-DD) - optional
+        date_to: End date (YYYY-MM-DD) - optional
+
+    Returns:
+        List of articles mentioning the entity with report metadata
+    """
+    try:
+        retriever = ContextRetriever()
+        results = retriever.search_by_entity(
+            entity_name=entity_name,
+            entity_type=entity_type,
+            date_from=date_from,
+            date_to=date_to
+        )
+        return results
+    except Exception as e:
+        return []
+
+def format_multi_week_results(results: List[Dict[str, Any]], lang: str = "zh") -> str:
+    """
+    Format multi-week search results for display
+
+    Args:
+        results: List of articles from ContextRetriever
+        lang: Language for display (zh/en)
+
+    Returns:
+        Formatted markdown string
+    """
+    if not results:
+        return "没有找到匹配的文章。" if lang == "zh" else "No articles found."
+
+    output_lines = []
+    output_lines.append(f"## 找到 {len(results)} 篇相关文章\n" if lang == "zh" else f"## Found {len(results)} relevant articles\n")
+
+    # Group by date
+    by_date = {}
+    for article in results:
+        date = article.get("report_date", "Unknown")
+        if date not in by_date:
+            by_date[date] = []
+        by_date[date].append(article)
+
+    # Display grouped by date
+    for date in sorted(by_date.keys(), reverse=True):
+        output_lines.append(f"### 📅 {date}")
+        output_lines.append("")
+
+        for article in by_date[date]:
+            output_lines.append(f"**{article.get('title', 'Untitled')}**")
+
+            meta_parts = []
+            if article.get('source'):
+                meta_parts.append(f"来源: {article['source']}" if lang == "zh" else f"Source: {article['source']}")
+            if article.get('url'):
+                meta_parts.append(f"[URL]({article['url']})")
+
+            if meta_parts:
+                output_lines.append(" | ".join(meta_parts))
+
+            if article.get('credibility_score'):
+                score = article.get('credibility_score')
+                output_lines.append(f"可信度: {score}/10" if lang == "zh" else f"Credibility: {score}/10")
+
+            output_lines.append("")
+
+    return "\n".join(output_lines)
 
 def load_latest_briefing() -> Optional[Dict[str, Any]]:
     """Load the latest briefing from data/reports directory"""
@@ -596,20 +738,30 @@ with left_col:
 with right_col:
     st.markdown("### 🤖 AI Assistant")
 
-    # Mode selector as radio buttons
+    # Mode selector with support for three search types + ask
     st.markdown(f"<div class='mode-selector'>", unsafe_allow_html=True)
+    mode_options = {
+        "this_week": t('mode_search', st.session_state.language),
+        "multi_week": t('multi_week_search', st.session_state.language),
+        "entity": t('entity_search', st.session_state.language),
+        "ask": t('mode_ask', st.session_state.language)
+    }
+
     st.session_state.current_mode = st.radio(
         "Mode / 模式",
-        ["search", "ask"],
-        format_func=lambda x: t('mode_search', st.session_state.language) if x == "search" else t('mode_ask', st.session_state.language),
+        list(mode_options.keys()),
+        format_func=lambda x: mode_options[x],
         horizontal=True,
         label_visibility="collapsed",
         key="mode_selector"
     )
     st.markdown(f"</div>", unsafe_allow_html=True)
 
-    # Input section
-    if st.session_state.current_mode == "search":
+    # Additional inputs based on selected mode
+    user_input = None
+    search_params = {}
+
+    if st.session_state.current_mode == "this_week":
         user_input = st.text_input(
             "Search / 搜索",
             placeholder=t('unified_input_search', st.session_state.language),
@@ -617,7 +769,80 @@ with right_col:
             label_visibility="collapsed"
         )
         st.caption(t('search_help', st.session_state.language))
-    else:
+
+    elif st.session_state.current_mode == "multi_week":
+        col1, col2 = st.columns(2)
+        with col1:
+            # Default to last 4 weeks
+            default_from = datetime.now() - timedelta(days=28)
+            date_from = st.date_input(
+                f"{t('date_range', st.session_state.language)} - {t('mode_search', st.session_state.language).split()[0]}",
+                value=default_from,
+                key="date_from",
+                label_visibility="collapsed"
+            )
+        with col2:
+            date_to = st.date_input(
+                f"{t('date_range', st.session_state.language)} - {t('mode_ask', st.session_state.language)}",
+                value=datetime.now(),
+                key="date_to",
+                label_visibility="collapsed"
+            )
+
+        user_input = st.text_input(
+            "Multi-Week Search / 多周搜索",
+            placeholder=t('unified_input_search', st.session_state.language),
+            key="multiweek_search_input",
+            label_visibility="collapsed"
+        )
+        st.caption(f"🔍 {t('search_help', st.session_state.language)}")
+        search_params['date_from'] = date_from
+        search_params['date_to'] = date_to
+
+    elif st.session_state.current_mode == "entity":
+        col1, col2 = st.columns(2)
+        with col1:
+            entity_type = st.selectbox(
+                t('entity_type', st.session_state.language),
+                ["companies", "models", "people", "locations", "other"],
+                format_func=lambda x: {
+                    "companies": t('companies', st.session_state.language),
+                    "models": "Models",
+                    "people": t('people', st.session_state.language),
+                    "locations": t('locations', st.session_state.language),
+                    "other": t('other', st.session_state.language)
+                }[x],
+                key="entity_type_selector",
+                label_visibility="collapsed"
+            )
+        with col2:
+            default_from = datetime.now() - timedelta(days=28)
+            date_from = st.date_input(
+                f"{t('date_range', st.session_state.language)} - From",
+                value=default_from,
+                key="entity_date_from",
+                label_visibility="collapsed"
+            )
+
+        date_to = st.date_input(
+            f"{t('date_range', st.session_state.language)} - To",
+            value=datetime.now(),
+            key="entity_date_to",
+            label_visibility="collapsed"
+        )
+
+        user_input = st.text_input(
+            "Entity Search / 实体搜索",
+            placeholder="e.g., OpenAI, GPT-4, Yann LeCun / 例如：OpenAI、GPT-4、Yann LeCun",
+            key="entity_search_input",
+            label_visibility="collapsed"
+        )
+        st.caption(f"🔍 {t('search_help', st.session_state.language)}")
+        search_params['entity_type'] = entity_type
+        search_params['date_from'] = date_from
+        search_params['date_to'] = date_to
+
+    else:  # Ask mode
         user_input = st.text_input(
             "Ask / 提问",
             placeholder=t('unified_input_ask', st.session_state.language),
@@ -629,20 +854,9 @@ with right_col:
 
     # Process user input and display results
     if user_input:
-        # Create enriched context with full article details
-        enriched_context = create_enriched_briefing_context(briefing.get("articles", []))
-
-        if st.session_state.current_mode == "search":
-            with st.spinner(f"🔍 {t('mode_search', st.session_state.language)}..." if st.session_state.language == "zh" else "Searching..."):
-                response = search_articles_with_llm(user_input, enriched_context, st.session_state.language)
-
-            st.markdown(f"**{t('search_results_title', st.session_state.language)}**")
-            if response and "Error" not in response:
-                st.markdown(response)
-            else:
-                st.warning(t('no_results', st.session_state.language))
-
-        else:  # Ask mode
+        if st.session_state.current_mode == "ask":
+            # Ask mode: Question answering using current briefing
+            enriched_context = create_enriched_briefing_context(briefing.get("articles", []))
             with st.spinner(f"💭 {t('mode_ask', st.session_state.language)}..." if st.session_state.language == "zh" else "Thinking..."):
                 response = answer_question_about_briefing(user_input, enriched_context, st.session_state.language)
 
@@ -651,6 +865,53 @@ with right_col:
                 st.markdown(response)
             else:
                 st.error(response)
+
+        elif st.session_state.current_mode == "this_week":
+            # This week search: Current implementation (Phase A)
+            enriched_context = create_enriched_briefing_context(briefing.get("articles", []))
+            with st.spinner(f"🔍 {t('mode_search', st.session_state.language)}..."):
+                response = search_articles_with_llm(user_input, enriched_context, st.session_state.language)
+
+            st.markdown(f"**{t('search_results_title', st.session_state.language)}**")
+            if response and "Error" not in response:
+                st.markdown(response)
+            else:
+                st.warning(t('no_results', st.session_state.language))
+
+        elif st.session_state.current_mode == "multi_week":
+            # Multi-week search: Search across multiple briefings using ContextRetriever (Phase B)
+            with st.spinner(f"🔍 {t('multi_week_search', st.session_state.language)}..."):
+                results = search_multi_week_with_context_retriever(
+                    keyword=user_input,
+                    date_from=search_params['date_from'].strftime("%Y-%m-%d"),
+                    date_to=search_params['date_to'].strftime("%Y-%m-%d")
+                )
+
+            st.markdown(f"**{t('search_results_title', st.session_state.language)}**")
+            if results:
+                # Format and display results grouped by date
+                formatted_results = format_multi_week_results(results, st.session_state.language)
+                st.markdown(formatted_results)
+            else:
+                st.warning(t('no_results', st.session_state.language))
+
+        elif st.session_state.current_mode == "entity":
+            # Entity search: Search for specific companies, people, models, locations (Phase B)
+            with st.spinner(f"🔍 {t('entity_search', st.session_state.language)}..."):
+                results = search_by_entity_with_context_retriever(
+                    entity_name=user_input,
+                    entity_type=search_params['entity_type'],
+                    date_from=search_params['date_from'].strftime("%Y-%m-%d"),
+                    date_to=search_params['date_to'].strftime("%Y-%m-%d")
+                )
+
+            st.markdown(f"**{t('entity_search', st.session_state.language)}: {user_input}**")
+            if results:
+                # Format and display results grouped by date
+                formatted_results = format_multi_week_results(results, st.session_state.language)
+                st.markdown(formatted_results)
+            else:
+                st.warning(t('no_results', st.session_state.language))
 
 # ============================================================================
 # FOOTER
