@@ -1,16 +1,14 @@
 """
-BriefAI Streamlit Web Application - Enhanced Version
+BriefAI Streamlit Web Application - Enhanced Version v2
 
 Provides a beautiful, bilingual (Chinese/English) interface for CEO to:
 - View latest AI industry weekly briefings
-- Ask questions about the briefing using AI chatbox
-- Search articles by entities (companies, models, topics)
-- Read detailed article paraphrases
-- Download reports (Markdown or PDF)
+- Search articles (with results in main area)
+- Ask questions about the briefing using LLM chatbox (Kimi provider)
 - All in Mandarin Chinese or English
 
-Runs on Streamlit Cloud - no installation needed.
-API key securely stored in Streamlit Secrets.
+Runs on Streamlit Cloud with automatic provider switching and rate limit handling.
+Uses Kimi/Moonshot as primary LLM provider with OpenRouter fallback.
 """
 
 import streamlit as st
@@ -19,14 +17,8 @@ from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Any, Optional
 import os
-from anthropic import Anthropic
-
-# Try to import PDF library for export
-try:
-    from fpdf import FPDF
-    PDF_AVAILABLE = True
-except ImportError:
-    PDF_AVAILABLE = False
+from utils.provider_switcher import ProviderSwitcher
+from utils.llm_client_enhanced import LLMClient
 
 # ============================================================================
 # TRANSLATIONS - UI TEXT IN ENGLISH AND MANDARIN CHINESE
@@ -66,7 +58,7 @@ TRANSLATIONS = {
         "zh": "输入搜索词:"
     },
     "placeholder_search": {
-        "en": "e.g., Claude, reasoning, pricing",
+        "en": "e.g., OpenAI, reasoning, pricing",
         "zh": "例如：推理、定价、API"
     },
     "leave_empty": {
@@ -109,10 +101,6 @@ TRANSLATIONS = {
         "en": "📰 Briefing",
         "zh": "📰 简报"
     },
-    "search": {
-        "en": "🔎 Search",
-        "zh": "🔎 搜索"
-    },
     "download": {
         "en": "📥 Download",
         "zh": "📥 下载"
@@ -148,10 +136,6 @@ TRANSLATIONS = {
     "download_markdown": {
         "en": "📥 Download as Markdown",
         "zh": "📥 下载为 Markdown"
-    },
-    "download_pdf": {
-        "en": "📄 Download as PDF",
-        "zh": "📄 下载为 PDF"
     },
     "download_note": {
         "en": "The report is also available at: {}",
@@ -213,6 +197,14 @@ TRANSLATIONS = {
         "en": "Error answering question. Please try again.",
         "zh": "回答问题时出错。请重试。"
     },
+    "search_results": {
+        "en": "📄 Search Results",
+        "zh": "📄 搜索结果"
+    },
+    "chat_results": {
+        "en": "💬 Chat Response",
+        "zh": "💬 聊天回复"
+    },
 }
 
 def t(key: str, lang: str = "en", **kwargs) -> str:
@@ -236,12 +228,16 @@ if "language" not in st.session_state:
     st.session_state.language = "zh"  # Default to Chinese since CEO can't read English
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
-if "client" not in st.session_state:
-    api_key = st.secrets.get("ANTHROPIC_API_KEY", os.getenv("ANTHROPIC_API_KEY"))
-    if api_key:
-        st.session_state.client = Anthropic(api_key=api_key)
-    else:
-        st.session_state.client = None
+if "search_results" not in st.session_state:
+    st.session_state.search_results = None
+if "chat_response" not in st.session_state:
+    st.session_state.chat_response = None
+if "provider_switcher" not in st.session_state:
+    try:
+        st.session_state.provider_switcher = ProviderSwitcher()
+    except Exception as e:
+        st.error(f"Failed to initialize LLM provider: {e}")
+        st.session_state.provider_switcher = None
 
 # ============================================================================
 # CUSTOM STYLING
@@ -303,6 +299,13 @@ st.markdown("""
     .chat-ai {
         background-color: #f0f2f6;
         margin-right: 1em;
+    }
+    .chat-response-box {
+        background-color: #f0f2f6;
+        padding: 1.5em;
+        border-radius: 0.5em;
+        margin: 1em 0;
+        border-left: 4px solid #1f77b4;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -482,46 +485,14 @@ def search_articles(articles: List[Dict[str, Any]], search_term: str, search_typ
     return results
 
 
-def generate_pdf(report_content: str, filename: str) -> bytes:
-    """Generate PDF from report content"""
-    if not PDF_AVAILABLE:
-        return None
-
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.set_font("Helvetica", size=12)
-
-    # Add title
-    pdf.set_font("Helvetica", "B", size=16)
-    pdf.cell(0, 10, "AI Industry Weekly Briefing", ln=True, align="C")
-    pdf.ln(5)
-
-    # Add content
-    pdf.set_font("Helvetica", size=10)
-    for line in report_content.split('\n'):
-        if line.strip():
-            # Handle markdown-style headers
-            if line.startswith('##'):
-                pdf.set_font("Helvetica", "B", size=12)
-                pdf.multi_cell(0, 5, line.replace('##', '').strip())
-                pdf.set_font("Helvetica", size=10)
-            elif line.startswith('#'):
-                pdf.set_font("Helvetica", "B", size=14)
-                pdf.multi_cell(0, 5, line.replace('#', '').strip())
-                pdf.set_font("Helvetica", size=10)
-            else:
-                pdf.multi_cell(0, 5, line)
-        pdf.ln(2)
-
-    return pdf.output()
-
-
 def answer_question_about_briefing(question: str, briefing_content: str, lang: str = "en") -> str:
-    """Use Claude to answer a question about the briefing"""
-    if not st.session_state.client:
+    """Use Kimi/ProviderSwitcher to answer a question about the briefing"""
+
+    if not st.session_state.provider_switcher:
         return t("chat_error", lang)
 
     try:
+        # Prepare the system prompt
         system_prompt = f"""You are a helpful assistant that answers questions about an AI industry briefing report.
 The user will ask you questions about the briefing content provided below.
 Always answer in the user's language. The briefing is in Chinese.
@@ -532,15 +503,15 @@ BRIEFING CONTENT:
 
 Always answer in {'Chinese' if lang == 'zh' else 'English'}."""
 
-        response = st.session_state.client.messages.create(
-            model="claude-3-5-sonnet-20241022",
+        # Use provider switcher to get response (with fallback)
+        response = st.session_state.provider_switcher.query(
+            prompt=question,
+            system_prompt=system_prompt,
             max_tokens=1024,
-            system=system_prompt,
-            messages=[
-                {"role": "user", "content": question}
-            ]
+            temperature=0.7
         )
-        return response.content[0].text
+
+        return response
     except Exception as e:
         return f"{t('chat_error', lang)}: {str(e)}"
 
@@ -604,30 +575,27 @@ else:
         search_type = st.selectbox(
             t('search_by', st.session_state.language),
             [t('entity', st.session_state.language), t('topic', st.session_state.language), t('keyword', st.session_state.language)],
-            help=t('search_help', st.session_state.language)
+            help=t('search_help', st.session_state.language),
+            key="search_type"
         )
 
         search_term = st.text_input(
             t('enter_search_term', st.session_state.language),
             placeholder=t('placeholder_search', st.session_state.language),
-            help=t('leave_empty', st.session_state.language)
+            help=t('leave_empty', st.session_state.language),
+            key="search_term"
         )
+
+        # Execute search and store in session state
+        if search_term and articles_json:
+            st.session_state.search_results = search_articles(articles_json, search_term, search_type)
+        elif not search_term:
+            st.session_state.search_results = None
 
         st.divider()
 
         # Chat section
         st.subheader(t('ask_question', st.session_state.language))
-
-        # Display chat history
-        if st.session_state.chat_history:
-            for msg in st.session_state.chat_history:
-                role_class = "chat-user" if msg["role"] == "user" else "chat-ai"
-                st.markdown(
-                    f"<div class='chat-message {role_class}'>"
-                    f"<strong>{'You' if msg['role'] == 'user' else 'Assistant'}:</strong> {msg['content']}"
-                    f"</div>",
-                    unsafe_allow_html=True
-                )
 
         # Chat input
         question = st.chat_input(t('chat_placeholder', st.session_state.language))
@@ -642,8 +610,23 @@ else:
             # Add assistant message to history
             st.session_state.chat_history.append({"role": "assistant", "content": response})
 
+            # Store the latest response for display
+            st.session_state.chat_response = response
+
             # Rerun to display new messages
             st.rerun()
+
+        # Display chat history (collapsible)
+        if st.session_state.chat_history:
+            with st.expander(t('chat_results', st.session_state.language)):
+                for msg in st.session_state.chat_history:
+                    role_class = "chat-user" if msg["role"] == "user" else "chat-ai"
+                    st.markdown(
+                        f"<div class='chat-message {role_class}'>"
+                        f"<strong>{'You' if msg['role'] == 'user' else 'Assistant'}:</strong> {msg['content']}"
+                        f"</div>",
+                        unsafe_allow_html=True
+                    )
 
         st.divider()
 
@@ -652,9 +635,8 @@ else:
         st.info(t('about_description', st.session_state.language))
 
     # Main content tabs
-    tab1, tab2, tab3 = st.tabs([
+    tab1, tab2 = st.tabs([
         t('briefing', st.session_state.language),
-        t('search', st.session_state.language),
         t('download', st.session_state.language)
     ])
 
@@ -667,7 +649,26 @@ else:
 
         st.divider()
 
-        # Then articles
+        # Display search results if available
+        if st.session_state.search_results is not None:
+            st.subheader(f"{t('search_results', st.session_state.language)} ({len(st.session_state.search_results)})")
+
+            if st.session_state.search_results:
+                for i, article in enumerate(st.session_state.search_results, 1):
+                    st.markdown(f"#### {t('article_n_of_m', st.session_state.language).format(i, len(st.session_state.search_results))}")
+                    display_article_card(article, st.session_state.language, show_entities=True)
+            else:
+                st.warning(t('no_articles_found', st.session_state.language).format(st.session_state.search_term))
+
+            st.divider()
+
+        # Display chat response if available
+        if st.session_state.chat_response:
+            st.subheader(t('chat_results', st.session_state.language))
+            st.markdown(f"<div class='chat-response-box'>{st.session_state.chat_response}</div>", unsafe_allow_html=True)
+            st.divider()
+
+        # All articles
         st.subheader(t('articles', st.session_state.language))
         if articles_json:
             st.success(t('found_articles', st.session_state.language).format(len(articles_json)))
@@ -678,23 +679,6 @@ else:
             st.info(t('articles_unavailable', st.session_state.language))
 
     with tab2:
-        st.header(t('search_articles', st.session_state.language))
-
-        if articles_json:
-            displayed_articles = search_articles(articles_json, search_term, search_type)
-
-            if displayed_articles:
-                st.success(t('found_articles', st.session_state.language).format(len(displayed_articles)))
-
-                for i, article in enumerate(displayed_articles, 1):
-                    st.markdown(f"#### {t('article_n_of_m', st.session_state.language).format(i, len(displayed_articles))}")
-                    display_article_card(article, st.session_state.language, show_entities=True)
-            else:
-                st.warning(t('no_articles_found', st.session_state.language).format(search_term))
-        else:
-            st.info(t('articles_unavailable', st.session_state.language))
-
-    with tab3:
         st.header(t('download_report', st.session_state.language))
 
         # Markdown download
@@ -705,20 +689,6 @@ else:
             file_name=f"briefing_{report['modified'].strftime('%Y%m%d')}.md",
             mime="text/markdown"
         )
-
-        # PDF download (if available)
-        if PDF_AVAILABLE:
-            st.markdown("### PDF")
-            pdf_data = generate_pdf(report['content'], f"briefing_{report['modified'].strftime('%Y%m%d')}.pdf")
-            if pdf_data:
-                st.download_button(
-                    label=t('download_pdf', st.session_state.language),
-                    data=pdf_data,
-                    file_name=f"briefing_{report['modified'].strftime('%Y%m%d')}.pdf",
-                    mime="application/pdf"
-                )
-        else:
-            st.info("PDF export requires: pip install fpdf2")
 
         st.divider()
         st.info(
