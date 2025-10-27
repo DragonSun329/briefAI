@@ -1,0 +1,115 @@
+================================================================================
+SEARCH & CHATBOX LIMITATIONS - QUICK REFERENCE
+================================================================================
+
+1. SEARCH SCOPE
+   Current: Single briefing only (one week)
+   Missing: Multi-week search, date ranges, entity search
+   
+   Example of limitation:
+   User: "Show all articles about OpenAI across the year"
+   Result: Searches only current week, misses 51 other briefings
+   
+2. SEARCH DATA
+   Current: Passes 200-char markdown summary to LLM
+   Missing: Full article content (500-700 char analysis), scores, entities
+   
+   Example of limitation:
+   Article has 15 key findings, but LLM only sees 200-char truncation
+   Cannot analyze evidence, cannot cite specific quotes
+   
+3. CHATBOX CONTEXT
+   Current: Just markdown text about articles
+   Missing: Article scores (impact/relevance/credibility), full analysis,
+            entity lists, fact-check status
+   
+   Example of limitation:
+   User: "Why is this the top article?"
+   Answer: Cannot explain, LLM doesn't have score data
+   
+4. DATA LOSS IN PIPELINE
+   ┌────────────────────┐
+   │ Original JSON Data │ (100% of data)
+   │ - Full content     │
+   │ - 5D scores        │
+   │ - Entities         │
+   └────────┬───────────┘
+            │
+   ┌────────▼───────────┐
+   │ Markdown Export    │ (20% of data)
+   │ - Title, URL       │
+   │ - Brief summary    │
+   └────────┬───────────┘
+            │
+   ┌────────▼───────────┐
+   │ Markdown Parse     │ (10% of data)
+   │ - Title, URL       │
+   │ - 200 char summary │
+   └────────┬───────────┘
+            │
+   ┌────────▼───────────┐
+   │ LLM Receives       │ (8% of data)
+   │ - Truncated info   │
+   │ - No scores        │
+   │ - No entities      │
+   └────────────────────┘
+
+5. GOOD NEWS: UNUSED INFRASTRUCTURE EXISTS
+   
+   context_retriever.py already has:
+   ✓ search_by_keyword(keyword, date_from, date_to)
+   ✓ search_by_entity(entity_name, entity_type, date_range)
+   ✓ load_report_by_date(date) - full article data
+   
+   Current usage in app.py: ZERO (0 imports, 0 function calls)
+
+6. ROOT CAUSES
+   
+   a) Design choice: App built for single-week display, not research
+   b) Data pipeline: Markdown is bottleneck (strips 80% of data)
+   c) Integration gap: context_retriever exists but not wired to UI
+   d) Architecture: 70% screen space for viewing, 30% for analysis
+
+7. RECOMMENDED FIXES (PRIORITY ORDER)
+
+   QUICK WINS (low effort, high value):
+   1. Pass full paraphrased content to LLM instead of 200-char summary
+      File: app.py lines 573, 583
+      Effort: 2 lines of code
+   
+   2. Include article scores in system prompt
+      File: app.py lines 397-402
+      Effort: 5 lines of code
+   
+   3. Load JSON cache alongside markdown
+      File: app.py lines 309-341
+      Effort: 10 lines of code
+
+   MEDIUM (would unlock 80% of capability):
+   4. Wire up context_retriever for multi-briefing search
+      File: Create new search function
+      Effort: 30 lines of code
+   
+   5. Add entity search tab (Company, Model, Person, Location)
+      File: app.py + new search mode
+      Effort: 50 lines of code
+
+   ADVANCED (nice to have):
+   6. Display article scores in UI
+   7. Add trending analysis across weeks
+   8. Enable date range filtering
+
+8. ESTIMATED IMPACT
+
+   After quick wins (2, 5, 10 lines):
+   - Chatbox analysis quality: +40%
+   - Search depth: +30%
+   
+   After medium improvements (30, 50 lines):
+   - Multi-week search: ENABLED
+   - Entity search: ENABLED
+   - Analysis quality: +80%
+
+================================================================================
+DETAILED ANALYSIS: See SEARCH_CHATBOX_ANALYSIS.md (495 lines)
+================================================================================

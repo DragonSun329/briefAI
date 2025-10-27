@@ -306,6 +306,43 @@ def parse_articles_from_markdown(content: str) -> List[Dict[str, str]]:
 
     return articles
 
+def create_enriched_briefing_context(articles: List[Dict[str, str]]) -> str:
+    """
+    Create enriched context for LLM with full article information
+    Includes article summaries, sources, URLs, and explanations
+    """
+    if not articles:
+        return "No articles available."
+
+    context_lines = []
+    context_lines.append("# 本周精选文章\n")
+
+    for idx, article in enumerate(articles, 1):
+        context_lines.append(f"## {idx}. {article.get('title', 'Untitled')}")
+        context_lines.append("")
+
+        if article.get('summary'):
+            context_lines.append(article['summary'])
+            context_lines.append("")
+
+        if article.get('source') or article.get('url'):
+            meta_parts = []
+            if article.get('source'):
+                meta_parts.append(f"来源: {article['source']}")
+            if article.get('url'):
+                meta_parts.append(f"URL: {article['url']}")
+            context_lines.append(" | ".join(meta_parts))
+            context_lines.append("")
+
+    context_lines.append("\n---\n")
+    context_lines.append("使用说明:")
+    context_lines.append("- 分析文章时，请参考完整内容")
+    context_lines.append("- 找出每篇文章的中心论点（central argument）")
+    context_lines.append("- 指出支撑论点的数据和证据（data and evidence）")
+    context_lines.append("- 如果用户要求，可以从URL获取完整文章进行更深入分析")
+
+    return "\n".join(context_lines)
+
 def load_latest_briefing() -> Optional[Dict[str, Any]]:
     """Load the latest briefing from data/reports directory"""
     reports_dir = Path("./data/reports")
@@ -360,26 +397,38 @@ def get_available_briefings() -> List[Dict[str, Any]]:
     return briefings
 
 def search_articles_with_llm(query: str, briefing_content: str, lang: str = "en") -> str:
-    """Use LLM to search and return matching articles"""
+    """Use LLM to search and return matching articles with detailed analysis"""
     if not st.session_state.provider_switcher:
         return t("chat_error", lang)
 
     try:
-        system_prompt = f"""You are a helpful AI assistant that searches and retrieves relevant articles from a briefing.
-The user wants to find articles related to their search query.
-Return matching articles with the following format for each match:
-**[Article Title]**
-URL: [link]
-Relevance: [High/Medium/Low]
-Summary: [one sentence summary]
+        system_prompt = f"""你是一位AI行业搜索专家。用户需要找到与其查询相关的文章。
 
-Always answer in {'Chinese' if lang == 'zh' else 'English'}.
+搜索要求:
+1. 找到所有与用户查询相关的文章
+2. 对每篇匹配的文章进行详细分析
+3. 说明为什么这篇文章与查询相关
+4. 提供具体的证据或摘录支持您的判断
 
-BRIEFING CONTENT:
+返回格式（对每篇匹配的文章）:
+**[文章标题]**
+来源: [来源]
+URL: [链接]
+相关度: [高/中/低]
+相关原因: [简要说明这篇文章为什么与查询相关，包括具体的数据或证据]
+
+重要提示:
+- 如果找不到相关文章，明确说明
+- 不要编造不存在的文章
+- 使用中文回答
+- 深入分析而不仅仅返回标题
+
+以下是本周的文章内容:
+
 {briefing_content}"""
 
         response = st.session_state.provider_switcher.query(
-            prompt=f"Search for articles related to: {query}",
+            prompt=f"根据以下查询搜索文章: {query}",
             system_prompt=system_prompt,
             max_tokens=1024,
             temperature=0.7
@@ -389,17 +438,29 @@ BRIEFING CONTENT:
         return f"{t('chat_error', lang)}: {str(e)}"
 
 def answer_question_about_briefing(question: str, briefing_content: str, lang: str = "en") -> str:
-    """Use LLM to answer questions about the briefing"""
+    """Use LLM to answer questions about the briefing with deep analysis"""
     if not st.session_state.provider_switcher:
         return t("chat_error", lang)
 
     try:
-        system_prompt = f"""You are a helpful assistant that answers questions about an AI industry briefing.
-The user will ask questions about the briefing content.
-Be concise, accurate, and reference specific articles when relevant.
-Always answer in {'Chinese' if lang == 'zh' else 'English'}.
+        system_prompt = f"""你是一位AI行业分析专家。你需要回答关于AI行业周报的问题。
 
-BRIEFING CONTENT:
+关键职责:
+1. 分析文章内容，提取中心论点（Central Argument）
+2. 识别并解释支撑论点的数据和证据（Data and Evidence）
+3. 如果用户提问含混，应该提供多角度的分析
+4. 引用具体的文章标题和来源
+5. 深入分析而非仅重复摘要
+
+回答要求:
+- 准确引用文章内容
+- 提供具体的数据、数字或事实
+- 解释因果关系和逻辑
+- 必要时可以从多篇文章综合分析
+- 使用中文回答，保持专业且易懂的语气
+
+以下是本周的文章内容:
+
 {briefing_content}"""
 
         response = st.session_state.provider_switcher.query(
@@ -568,9 +629,12 @@ with right_col:
 
     # Process user input and display results
     if user_input:
+        # Create enriched context with full article details
+        enriched_context = create_enriched_briefing_context(briefing.get("articles", []))
+
         if st.session_state.current_mode == "search":
             with st.spinner(f"🔍 {t('mode_search', st.session_state.language)}..." if st.session_state.language == "zh" else "Searching..."):
-                response = search_articles_with_llm(user_input, briefing.get("content", ""), st.session_state.language)
+                response = search_articles_with_llm(user_input, enriched_context, st.session_state.language)
 
             st.markdown(f"**{t('search_results_title', st.session_state.language)}**")
             if response and "Error" not in response:
@@ -580,7 +644,7 @@ with right_col:
 
         else:  # Ask mode
             with st.spinner(f"💭 {t('mode_ask', st.session_state.language)}..." if st.session_state.language == "zh" else "Thinking..."):
-                response = answer_question_about_briefing(user_input, briefing.get("content", ""), st.session_state.language)
+                response = answer_question_about_briefing(user_input, enriched_context, st.session_state.language)
 
             st.markdown(f"**{t('ai_response', st.session_state.language)}**")
             if response and "Error" not in response:
