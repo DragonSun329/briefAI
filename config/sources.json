@@ -23,90 +23,6 @@
       ]
     },
     {
-      "id": "36kr_fintech",
-      "name": "36氪 金融科技",
-      "url": "https://36kr.com/information/fintech",
-      "type": "web",
-      "enabled": true,
-      "categories": [
-        "fintech_ai",
-        "emerging_products",
-        "industry_cases"
-      ],
-      "language": "zh-CN",
-      "credibility_score": 8,
-      "relevance_weight": 10,
-      "focus_tags": [
-        "fintech",
-        "风控",
-        "信贷",
-        "数据分析"
-      ]
-    },
-    {
-      "id": "leiphone_fintech",
-      "name": "雷锋网 金融科技",
-      "url": "https://www.leiphone.com/category/fintech",
-      "type": "rss",
-      "rss_url": "https://www.leiphone.com/category/fintech/feed",
-      "enabled": true,
-      "categories": [
-        "fintech_ai",
-        "data_analytics",
-        "industry_cases"
-      ],
-      "language": "zh-CN",
-      "credibility_score": 8,
-      "relevance_weight": 10,
-      "focus_tags": [
-        "AI风控",
-        "智能信贷",
-        "反欺诈"
-      ]
-    },
-    {
-      "id": "jiqizhixin_data",
-      "name": "机器之心 数据科学",
-      "url": "https://www.jiqizhixin.com",
-      "type": "rss",
-      "rss_url": "https://www.jiqizhixin.com/rss",
-      "enabled": true,
-      "categories": [
-        "data_analytics",
-        "llm_tech",
-        "tech_stack"
-      ],
-      "language": "zh-CN",
-      "credibility_score": 9,
-      "relevance_weight": 8,
-      "focus_tags": [
-        "机器学习",
-        "数据分析",
-        "预测模型"
-      ]
-    },
-    {
-      "id": "martech_china",
-      "name": "Martech中国",
-      "url": "https://martech.com.cn",
-      "type": "web",
-      "enabled": true,
-      "categories": [
-        "marketing_ai",
-        "data_analytics",
-        "emerging_products"
-      ],
-      "language": "zh-CN",
-      "credibility_score": 8,
-      "relevance_weight": 9,
-      "focus_tags": [
-        "广告投放",
-        "营销自动化",
-        "用户增长",
-        "数据驱动"
-      ]
-    },
-    {
       "id": "producthunt",
       "name": "Product Hunt",
       "url": "https://www.producthunt.com",
@@ -189,47 +105,6 @@
         "数据科学",
         "机器学习",
         "实战教程"
-      ]
-    },
-    {
-      "id": "yiou_fintech",
-      "name": "亿欧 金融科技",
-      "url": "https://www.iyiou.com/fintech",
-      "type": "web",
-      "enabled": true,
-      "categories": [
-        "fintech_ai",
-        "industry_cases",
-        "compliance_policy"
-      ],
-      "language": "zh-CN",
-      "credibility_score": 7,
-      "relevance_weight": 9,
-      "focus_tags": [
-        "金融AI",
-        "监管科技",
-        "行业报告"
-      ]
-    },
-    {
-      "id": "infoq_ai",
-      "name": "InfoQ AI前线",
-      "url": "https://www.infoq.cn/topic/ai",
-      "type": "rss",
-      "rss_url": "https://www.infoq.cn/topic/ai/feed",
-      "enabled": true,
-      "categories": [
-        "tech_stack",
-        "industry_cases",
-        "llm_tech"
-      ],
-      "language": "zh-CN",
-      "credibility_score": 8,
-      "relevance_weight": 7,
-      "focus_tags": [
-        "技术实践",
-        "架构",
-        "工程化"
       ]
     },
     {
@@ -920,6 +795,510 @@
         "产品发布",
         "技术趋势",
         "市场洞察"
+      ]
+    },
+    {
+      "id": "openai_blog",
+      "name": "OpenAI Blog",
+      "url": "https://openai.com/blog",
+      "type": "rss",
+      "rss_url": "https://openai.com/feed.xml",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "strategic_insights",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 10,
+      "focus_tags": [
+        "GPT",
+        "官方发布",
+        "技术突破",
+        "产品更新"
+      ]
+    },
+    {
+      "id": "anthropic_blog",
+      "name": "Anthropic Blog",
+      "url": "https://www.anthropic.com/news",
+      "type": "rss",
+      "rss_url": "https://www.anthropic.com/feed.xml",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "strategic_insights",
+        "tech_stack"
+      ],
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 10,
+      "focus_tags": [
+        "Claude",
+        "官方发布",
+        "研究论文",
+        "安全AI"
+      ]
+    },
+    {
+      "id": "deepmind_blog",
+      "name": "Google DeepMind Blog",
+      "url": "https://deepmind.google/blog",
+      "type": "rss",
+      "rss_url": "https://www.deepmind.com/feed.xml",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "strategic_insights",
+        "tech_stack"
+      ],
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "Gemini",
+        "研究论文",
+        "官方发布",
+        "AI突破"
+      ]
+    },
+    {
+      "id": "meta_ai_blog",
+      "name": "Meta AI Blog",
+      "url": "https://ai.meta.com",
+      "type": "rss",
+      "rss_url": "https://ai.meta.com/blog/feed/",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "strategic_insights",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "Llama",
+        "官方发布",
+        "开源模型",
+        "AI研究"
+      ]
+    },
+    {
+      "id": "microsoft_ai_blog",
+      "name": "Microsoft AI Blog",
+      "url": "https://www.microsoft.com/en-us/ai/ai-for-good-blog",
+      "type": "rss",
+      "rss_url": "https://blogs.microsoft.com/feed/",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "strategic_insights",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "Copilot",
+        "官方发布",
+        "企业AI",
+        "产品集成"
+      ]
+    },
+    {
+      "id": "huggingface_blog",
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog",
+      "type": "rss",
+      "rss_url": "https://huggingface.co/feed.xml",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "tech_stack",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "开源模型",
+        "技术教程",
+        "社区项目",
+        "模型中心"
+      ]
+    },
+    {
+      "id": "mckinsey_ai",
+      "name": "McKinsey AI & Analytics",
+      "url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/artificial-intelligence",
+      "type": "rss",
+      "rss_url": "https://www.mckinsey.com/feed",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "llm_tech",
+        "fintech_ai"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "战略分析",
+        "企业应用",
+        "市场报告",
+        "行业洞察"
+      ]
+    },
+    {
+      "id": "bcg_ai",
+      "name": "BCG AI & Analytics",
+      "url": "https://www.bcg.com/capabilities/artificial-intelligence",
+      "type": "rss",
+      "rss_url": "https://www.bcg.com/feed",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "llm_tech",
+        "fintech_ai"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "咨询报告",
+        "企业应用",
+        "战略规划",
+        "市场分析"
+      ]
+    },
+    {
+      "id": "deloitte_ai",
+      "name": "Deloitte AI Insights",
+      "url": "https://www2.deloitte.com/us/en/pages/technology-media-and-telecommunications/topics/artificial-intelligence.html",
+      "type": "rss",
+      "rss_url": "https://www2.deloitte.com/feed",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "llm_tech",
+        "fintech_ai"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "咨询服务",
+        "企业应用",
+        "行业报告",
+        "最佳实践"
+      ]
+    },
+    {
+      "id": "ey_ai",
+      "name": "EY AI & Analytics",
+      "url": "https://www.ey.com/en_gl/artificial-intelligence",
+      "type": "rss",
+      "rss_url": "https://www.ey.com/en_gl/feed",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "llm_tech",
+        "fintech_ai"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "企业转型",
+        "AI战略",
+        "行业案例",
+        "咨询观点"
+      ]
+    },
+    {
+      "id": "pwc_ai",
+      "name": "PwC AI Research",
+      "url": "https://www.pwc.com/us/en/services/consulting/artificial-intelligence.html",
+      "type": "rss",
+      "rss_url": "https://www.pwc.com/feed",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "llm_tech",
+        "fintech_ai"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "研究报告",
+        "企业应用",
+        "成熟度评估",
+        "实施路线"
+      ]
+    },
+    {
+      "id": "accenture_ai",
+      "name": "Accenture AI Blog",
+      "url": "https://www.accenture.com/us-en/insights/artificial-intelligence",
+      "type": "rss",
+      "rss_url": "https://www.accenture.com/feed",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "llm_tech",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "企业案例",
+        "实施方案",
+        "行业洞察",
+        "转型咨询"
+      ]
+    },
+    {
+      "id": "techinasia_main",
+      "name": "TechInAsia",
+      "url": "https://www.techinasia.com",
+      "type": "rss",
+      "rss_url": "https://www.techinasia.com/feed",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "emerging_products",
+        "fintech_ai"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "东南亚科技",
+        "创业动态",
+        "区域新闻",
+        "投资趋势"
+      ]
+    },
+    {
+      "id": "rest_of_world",
+      "name": "Rest of World",
+      "url": "https://restofworld.org",
+      "type": "rss",
+      "rss_url": "https://restofworld.org/feed",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "新兴市场",
+        "全球科技",
+        "区域趋势",
+        "国际新闻"
+      ]
+    },
+    {
+      "id": "dealstreetasia",
+      "name": "DealStreetAsia",
+      "url": "https://www.dealstreetasia.com",
+      "type": "rss",
+      "rss_url": "https://www.dealstreetasia.com/feed",
+      "enabled": true,
+      "categories": [
+        "fintech_ai",
+        "emerging_products",
+        "strategic_insights"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "东南亚",
+        "融资动态",
+        "创业公司",
+        "投资信息"
+      ]
+    },
+    {
+      "id": "e27",
+      "name": "e27 - Southeast Asia Tech Hub",
+      "url": "https://e27.co",
+      "type": "rss",
+      "rss_url": "https://e27.co/feed",
+      "enabled": true,
+      "categories": [
+        "emerging_products",
+        "strategic_insights",
+        "fintech_ai"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "东南亚创业",
+        "融资新闻",
+        "企业报道",
+        "科技政策"
+      ]
+    },
+    {
+      "id": "nikkei_asia",
+      "name": "Nikkei Asia",
+      "url": "https://asia.nikkei.com",
+      "type": "rss",
+      "rss_url": "https://asia.nikkei.com/feed",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "fintech_ai",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "亚太地区",
+        "企业新闻",
+        "经济动态",
+        "科技政策"
+      ]
+    },
+    {
+      "id": "scmp_tech",
+      "name": "SCMP Technology",
+      "url": "https://www.scmp.com/tech",
+      "type": "rss",
+      "rss_url": "https://www.scmp.com/feed/technology",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "llm_tech",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "中国科技",
+        "亚太动态",
+        "政策监管",
+        "企业报道"
+      ]
+    },
+    {
+      "id": "xataka",
+      "name": "Xataka",
+      "url": "https://www.xataka.com",
+      "type": "rss",
+      "rss_url": "https://www.xataka.com/rss",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "emerging_products",
+        "tech_stack"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "西班牙科技",
+        "产品评测",
+        "技术新闻",
+        "创新应用"
+      ]
+    },
+    {
+      "id": "la_vanguardia_tech",
+      "name": "La Vanguardia Technology",
+      "url": "https://www.lavanguardia.com/tecnologia",
+      "type": "rss",
+      "rss_url": "https://www.lavanguardia.com/rss/tecnologia",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "西班牙新闻",
+        "科技报道",
+        "企业动态",
+        "创新趋势"
+      ]
+    },
+    {
+      "id": "mbusiness_mexico",
+      "name": "México Business News - Technology",
+      "url": "https://mexicobusinessnews.com/technology",
+      "type": "rss",
+      "rss_url": "https://mexicobusinessnews.com/feed",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "emerging_products",
+        "fintech_ai"
+      ],
+      "language": "en",
+      "credibility_score": 7,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "墨西哥技术",
+        "商业新闻",
+        "企业报道",
+        "经济动态"
+      ]
+    },
+    {
+      "id": "america_economia_tech",
+      "name": "América Economía - Tecnología",
+      "url": "https://www.americaeconomia.com/negocios-industrias/tecnologia",
+      "type": "rss",
+      "rss_url": "https://www.americaeconomia.com/feed",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "fintech_ai",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "拉美地区",
+        "经济报道",
+        "企业新闻",
+        "技术趋势"
+      ]
+    },
+    {
+      "id": "entrepreneur_latam",
+      "name": "Entrepreneur Latin America",
+      "url": "https://www.entrepreneur.com/es",
+      "type": "rss",
+      "rss_url": "https://www.entrepreneur.com/feed",
+      "enabled": true,
+      "categories": [
+        "emerging_products",
+        "strategic_insights",
+        "fintech_ai"
+      ],
+      "language": "en",
+      "credibility_score": 7,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "创业指南",
+        "企业管理",
+        "行业洞察",
+        "创新案例"
       ]
     }
   ],
