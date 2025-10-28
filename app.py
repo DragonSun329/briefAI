@@ -274,15 +274,94 @@ st.markdown("""
 # ============================================================================
 
 def parse_articles_from_markdown(content: str) -> List[Dict[str, str]]:
-    """Parse articles from markdown briefing content"""
+    """Parse articles from markdown briefing content
+    Supports two formats:
+    1. Old format: **1. Title** with numbered articles
+    2. New format: ### 【Category】Title with section headers
+    """
     articles = []
     lines = content.split('\n')
     i = 0
 
     while i < len(lines):
         line = lines[i]
-        # Look for article titles (numbered like "**1. Title**" or "**1. AI投资分析系统")
-        if line.startswith('**') and line[2].isdigit() and '. ' in line:
+
+        # NEW FORMAT: Look for "### 【Category】Title" pattern
+        if line.startswith('###') and '】' in line:
+            # Extract title - everything after the 】
+            if '】' in line:
+                title = line.split('】', 1)[1].strip()
+            else:
+                title = line.replace('###', '').strip()
+
+            summary = ""
+            url = ""
+            source = ""
+
+            i += 1
+            # Collect lines until we hit next article or end
+            while i < len(lines):
+                current_line = lines[i].strip()
+
+                # Stop if we hit the next article (### marker)
+                if current_line.startswith('###'):
+                    break
+
+                # Stop if we hit major sections like "## 🔍", "## 📈"
+                if current_line.startswith('##'):
+                    break
+
+                # Extract source - look for "**来源**: value" or "**来源**:" patterns
+                if '**来源**' in current_line and ':' in current_line:
+                    # Extract everything after the colon
+                    parts = current_line.split(':', 1)
+                    if len(parts) > 1:
+                        source = parts[1].strip()
+                        # Clean up markdown formatting
+                        source = source.split('|')[0].strip()
+                elif current_line.startswith('**来源'):
+                    # Fallback pattern
+                    parts = current_line.split(':', 1)
+                    if len(parts) > 1:
+                        source = parts[1].strip()
+
+                # Extract URL - look for patterns like "**来源链接**: [text](url)"
+                elif '**来源链接**' in current_line or 'URL:' in current_line:
+                    if '[' in current_line and '](http' in current_line:
+                        # Extract URL from markdown link
+                        try:
+                            url = current_line.split('](')[1].split(')')[0]
+                        except:
+                            pass
+                    else:
+                        parts = current_line.split(':', 1)
+                        if len(parts) > 1:
+                            url = parts[1].strip()
+
+                # Extract score/rating if present
+                elif '**评分**' in current_line:
+                    # Line like "**评分**: ⭐⭐⭐⭐⭐ **7.3/10** | ..."
+                    pass  # Just skip for now
+
+                # First non-empty non-metadata line is the summary
+                elif summary == "" and current_line and not current_line.startswith('**') and not current_line.startswith('【'):
+                    # Skip lines that are just emojis or metadata
+                    if current_line and not current_line.startswith('⭐') and len(current_line) > 10:
+                        summary = current_line[:200]  # Truncate to 200 chars
+
+                i += 1
+
+            if title.strip():
+                articles.append({
+                    "title": title.strip(),
+                    "summary": summary if summary else "无摘要",
+                    "url": url if url else "",
+                    "source": source if source else ""
+                })
+            continue
+
+        # OLD FORMAT: Look for article titles (numbered like "**1. Title**")
+        elif line.startswith('**') and len(line) > 2 and line[2].isdigit() and '. ' in line:
             # Extract title - remove asterisks and number prefix
             title_raw = line.strip('*').strip()
             # Remove the number and dot prefix (e.g., "1. " or "10. ")
@@ -304,17 +383,15 @@ def parse_articles_from_markdown(content: str) -> List[Dict[str, str]]:
                 if current_line.startswith('**') and len(current_line) > 2 and current_line[2].isdigit():
                     break
 
-                # Extract source - look for "**来源**: value" or "**来源**:" patterns
+                # Extract source
                 if '**来源**' in current_line and ':' in current_line:
-                    # Extract everything after the colon
                     source = current_line.split(':', 1)[1].strip()
                 elif current_line.startswith('**来源'):
-                    # Fallback pattern
                     parts = current_line.split(':', 1)
                     if len(parts) > 1:
                         source = parts[1].strip()
 
-                # Extract URL - look for "**URL**: value" patterns
+                # Extract URL
                 elif '**URL**' in current_line and ':' in current_line:
                     url = current_line.split(':', 1)[1].strip()
                 elif 'URL:' in current_line:
