@@ -21,6 +21,7 @@ from utils.context_retriever import ContextRetriever
 from utils.semantic_search import SemanticSearch
 from utils.cache_manager import CacheManager
 from utils.topic_trending import TopicTrending
+from utils.user_search_profile import UserSearchProfile
 
 # ============================================================================
 # TRANSLATIONS - UI TEXT IN ENGLISH AND MANDARIN CHINESE
