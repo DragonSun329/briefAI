@@ -297,6 +297,7 @@ def parse_articles_from_markdown(content: str) -> List[Dict[str, str]]:
             summary = ""
             url = ""
             source = ""
+            in_deep_analysis = False
 
             i += 1
             # Collect lines until we hit next article or end
@@ -311,45 +312,57 @@ def parse_articles_from_markdown(content: str) -> List[Dict[str, str]]:
                 if current_line.startswith('##'):
                     break
 
-                # Extract source - look for "**来源**: value" or "**来源**:" patterns
+                # Extract source - look for "**来源**: value" pattern (appears BEFORE deep analysis)
                 if '**来源**' in current_line and ':' in current_line:
-                    # Extract everything after the colon
-                    parts = current_line.split(':', 1)
-                    if len(parts) > 1:
-                        source = parts[1].strip()
-                        # Clean up markdown formatting
-                        source = source.split('|')[0].strip()
-                elif current_line.startswith('**来源'):
-                    # Fallback pattern
-                    parts = current_line.split(':', 1)
-                    if len(parts) > 1:
-                        source = parts[1].strip()
+                    # Extract everything after "**来源**: "
+                    if '**来源**:' in current_line:
+                        parts = current_line.split('**来源**:', 1)
+                        if len(parts) > 1:
+                            source = parts[1].strip()
+                            # Clean up - take text before pipe or other markers
+                            source = source.split('|')[0].strip()
+
+                # Check if we're entering the deep analysis section
+                elif '**深度分析**' in current_line or '**深度分析**:' in current_line:
+                    in_deep_analysis = True
+                    i += 1
+                    continue
 
                 # Extract URL - look for patterns like "**来源链接**: [text](url)"
-                elif '**来源链接**' in current_line or 'URL:' in current_line:
-                    if '[' in current_line and '](http' in current_line:
-                        # Extract URL from markdown link
+                elif '**来源链接**' in current_line:
+                    if '[' in current_line and '](' in current_line:
+                        # Extract URL from markdown link format [text](url)
                         try:
                             url = current_line.split('](')[1].split(')')[0]
                         except:
                             pass
-                    else:
-                        parts = current_line.split(':', 1)
-                        if len(parts) > 1:
-                            url = parts[1].strip()
+                    # Stop collecting deep analysis when we hit the URL line
+                    in_deep_analysis = False
 
                 # Extract score/rating if present
                 elif '**评分**' in current_line:
                     # Line like "**评分**: ⭐⭐⭐⭐⭐ **7.3/10** | ..."
                     pass  # Just skip for now
 
-                # First non-empty non-metadata line is the summary
-                elif summary == "" and current_line and not current_line.startswith('**') and not current_line.startswith('【'):
-                    # Skip lines that are just emojis or metadata
+                # Collect deep analysis content if we're in that section
+                elif in_deep_analysis:
+                    # Include all non-empty lines (including **subsection headers** which are part of analysis)
+                    # Only stop if we hit metadata like 评分, 来源, 来源链接
+                    if current_line and not current_line.startswith('【'):
+                        # Skip metadata lines (评分 will be caught by earlier elif)
+                        if '**来源**' not in current_line and '**来源链接**' not in current_line:
+                            summary += current_line + " "
+
+                # Fallback: First non-empty non-metadata line is the summary (if no deep analysis found)
+                elif not in_deep_analysis and summary == "" and current_line and not current_line.startswith('**') and not current_line.startswith('【'):
+                    # Skip lines that are just emojis or short metadata
                     if current_line and not current_line.startswith('⭐') and len(current_line) > 10:
-                        summary = current_line[:200]  # Truncate to 200 chars
+                        summary = current_line
 
                 i += 1
+
+            # Clean up summary (remove extra spaces)
+            summary = " ".join(summary.split())
 
             if title.strip():
                 articles.append({
