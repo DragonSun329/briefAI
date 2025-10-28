@@ -266,6 +266,126 @@ st.markdown("""
         font-size: 0.85em;
         margin-top: 0.5em;
     }
+
+    /* Phase 2: Enhanced Searchbox Styling */
+
+    /* This Week Search - Prominent Primary Style */
+    .search-this-week {
+        margin: 1.5em 0;
+        padding: 1.2em;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 0.8em;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-this-week input {
+        font-size: 1.1em !important;
+        padding: 0.8em !important;
+        border: 2px solid #fff !important;
+        border-radius: 0.5em !important;
+        background-color: rgba(255, 255, 255, 0.95) !important;
+    }
+
+    .search-this-week input:focus {
+        border-color: #ffd700 !important;
+        box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3) !important;
+    }
+
+    .search-icon {
+        font-size: 1.5em;
+        color: #fff;
+        margin-right: 0.5em;
+    }
+
+    /* Advanced Search - Secondary Style with Color Coding */
+    .search-advanced {
+        margin: 1.5em 0;
+        padding: 1em;
+        background-color: #f8f9fa;
+        border: 2px solid #dee2e6;
+        border-radius: 0.6em;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .search-advanced input {
+        font-size: 1em !important;
+        padding: 0.6em !important;
+        border: 1px solid #ced4da !important;
+        border-radius: 0.4em !important;
+    }
+
+    .filter-section {
+        margin-top: 1em;
+        padding: 1em;
+        background-color: #fff;
+        border-left: 4px solid #28a745;
+        border-radius: 0.4em;
+    }
+
+    .filter-entity {
+        border-left-color: #007bff;
+    }
+
+    .filter-date {
+        border-left-color: #ffc107;
+    }
+
+    .filter-badge {
+        display: inline-block;
+        background-color: #28a745;
+        color: white;
+        padding: 0.3em 0.6em;
+        border-radius: 0.3em;
+        font-size: 0.85em;
+        margin-right: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    .filter-badge-entity {
+        background-color: #007bff;
+    }
+
+    .filter-badge-date {
+        background-color: #ffc107;
+        color: #000;
+    }
+
+    /* Ask Mode - Conversational Style */
+    .search-ask {
+        margin: 1.5em 0;
+        padding: 1em;
+        background-color: #fff3cd;
+        border: 2px solid #ffc107;
+        border-radius: 0.6em;
+    }
+
+    .search-ask input {
+        font-size: 1em !important;
+        padding: 0.7em !important;
+        border: 1px solid #ffc107 !important;
+        border-radius: 0.4em !important;
+    }
+
+    /* Mode selector enhancement */
+    .mode-selector {
+        margin: 1em 0;
+        padding: 1.2em;
+        background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        border-radius: 0.6em;
+        border: 1px solid #dee2e6;
+    }
+
+    /* Streamlit expander styling override */
+    .streamlit-expanderHeader {
+        font-weight: 600;
+        color: #495057;
+        background-color: #f8f9fa !important;
+        border-radius: 0.4em;
+    }
+
+    .streamlit-expanderHeader:hover {
+        background-color: #e9ecef !important;
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -1221,7 +1341,9 @@ with right_col:
     search_params = {}
 
     if st.session_state.current_mode == "this_week":
-        # This Week Search: Simple, single searchbox
+        # This Week Search: Simple, prominent primary searchbox
+        st.markdown('<div class="search-this-week">', unsafe_allow_html=True)
+        st.markdown('<span class="search-icon">🔍</span>', unsafe_allow_html=True)
         user_input = st.text_input(
             "Search / 搜索",
             placeholder=t('unified_input_search', st.session_state.language),
@@ -1229,9 +1351,11 @@ with right_col:
             label_visibility="collapsed"
         )
         st.caption(t('search_help', st.session_state.language))
+        st.markdown('</div>', unsafe_allow_html=True)
 
     elif st.session_state.current_mode == "advanced_search":
-        # Advanced Search: Unified multi-week + entity search with all filter options
+        # Advanced Search: Unified multi-week + entity search with styled filters
+        st.markdown('<div class="search-advanced">', unsafe_allow_html=True)
 
         # Main search input
         user_input = st.text_input(
@@ -1244,6 +1368,7 @@ with right_col:
         # Optional filters in expander
         with st.expander("🔧 " + ("高级过滤器" if st.session_state.language == "zh" else "Advanced Filters"), expanded=False):
             # Entity type filter (optional)
+            st.markdown('<div class="filter-section filter-entity">', unsafe_allow_html=True)
             entity_type = st.selectbox(
                 t('entity_type', st.session_state.language),
                 ["any", "companies", "models", "people", "locations", "other"],
@@ -1258,8 +1383,10 @@ with right_col:
                 key="advanced_entity_type",
                 help="Filter by entity type (optional) / 按实体类型过滤（可选）"
             )
+            st.markdown('</div>', unsafe_allow_html=True)
 
             # Date range filter
+            st.markdown('<div class="filter-section filter-date">', unsafe_allow_html=True)
             col1, col2 = st.columns(2)
             with col1:
                 default_from = datetime.now() - timedelta(days=28)
@@ -1274,6 +1401,27 @@ with right_col:
                     value=datetime.now(),
                     key="advanced_date_to"
                 )
+            st.markdown('</div>', unsafe_allow_html=True)
+
+        # Show active filter badges
+        active_filters = []
+        if entity_type != "any":
+            entity_label = {
+                "companies": t('companies', st.session_state.language),
+                "models": "Models",
+                "people": t('people', st.session_state.language),
+                "locations": t('locations', st.session_state.language),
+                "other": t('other', st.session_state.language)
+            }.get(entity_type, entity_type)
+            active_filters.append(f'<span class="filter-badge filter-badge-entity">📍 {entity_label}</span>')
+
+        # Check if date range is not default (28 days)
+        days_diff = (date_to - date_from).days
+        if days_diff != 28:
+            active_filters.append(f'<span class="filter-badge filter-badge-date">📅 {date_from.strftime("%Y-%m-%d")} → {date_to.strftime("%Y-%m-%d")}</span>')
+
+        if active_filters:
+            st.markdown("".join(active_filters), unsafe_allow_html=True)
 
         # Store search parameters
         search_params['entity_type'] = None if entity_type == "any" else entity_type
@@ -1281,14 +1429,18 @@ with right_col:
         search_params['date_to'] = date_to
 
         st.caption(f"🔍 {t('search_help', st.session_state.language)}")
+        st.markdown('</div>', unsafe_allow_html=True)
 
     else:  # Ask mode
+        st.markdown('<div class="search-ask">', unsafe_allow_html=True)
+        st.markdown('💬 ', unsafe_allow_html=True)
         user_input = st.text_input(
             "Ask / 提问",
             placeholder=t('unified_input_ask', st.session_state.language),
             key="ask_input",
             label_visibility="collapsed"
         )
+        st.markdown('</div>', unsafe_allow_html=True)
 
     st.divider()
 
