@@ -822,40 +822,144 @@ def cluster_search_results(
     }
 
 
-# Legacy function names - kept for backward compatibility
-def search_multi_week_with_context_retriever(
-    keyword: str,
-    date_from: Optional[str] = None,
-    date_to: Optional[str] = None
-) -> List[Dict[str, Any]]:
+# ============================================================================
+# SEARCHBOX RENDERING HELPERS (Phase 3 Refactoring)
+# ============================================================================
+
+def render_this_week_searchbox(lang: str) -> Optional[str]:
     """
-    DEPRECATED: Use search_archive() instead.
-    Search articles across multiple weeks using ContextRetriever
+    Render the 'This Week' search mode UI with prominent purple gradient styling.
+
+    Args:
+        lang: Language code (zh/en)
+
+    Returns:
+        User input string or None
     """
-    return search_archive(
-        query=keyword,
-        date_from=date_from,
-        date_to=date_to,
-        weeks=None if (date_from or date_to) else 4
+    st.markdown('<div class="search-this-week">', unsafe_allow_html=True)
+    st.markdown('<span class="search-icon">🔍</span>', unsafe_allow_html=True)
+    user_input = st.text_input(
+        "Search / 搜索",
+        placeholder=t('unified_input_search', lang),
+        key="search_input",
+        label_visibility="collapsed"
+    )
+    st.caption(t('search_help', lang))
+    st.markdown('</div>', unsafe_allow_html=True)
+    return user_input
+
+
+def render_advanced_search_box(lang: str) -> tuple[Optional[str], Dict[str, Any]]:
+    """
+    Render the 'Advanced Search' mode UI with collapsible filters and active badges.
+
+    Args:
+        lang: Language code (zh/en)
+
+    Returns:
+        Tuple of (user_input, search_params dict)
+    """
+    search_params = {}
+
+    st.markdown('<div class="search-advanced">', unsafe_allow_html=True)
+
+    # Main search input
+    user_input = st.text_input(
+        "Search / 搜索",
+        placeholder="Keyword, Company, Model, Person / 关键词、公司、模型、人物",
+        key="advanced_search_input",
+        label_visibility="collapsed"
     )
 
-def search_by_entity_with_context_retriever(
-    entity_name: str,
-    entity_type: Optional[str] = None,
-    date_from: Optional[str] = None,
-    date_to: Optional[str] = None
-) -> List[Dict[str, Any]]:
+    # Optional filters in expander
+    with st.expander("🔧 " + ("高级过滤器" if lang == "zh" else "Advanced Filters"), expanded=False):
+        # Entity type filter (optional)
+        st.markdown('<div class="filter-section filter-entity">', unsafe_allow_html=True)
+        entity_type = st.selectbox(
+            t('entity_type', lang),
+            ["any", "companies", "models", "people", "locations", "other"],
+            format_func=lambda x: {
+                "any": "Any / 任何" if lang == "zh" else "Any",
+                "companies": t('companies', lang),
+                "models": "Models / 模型" if lang == "zh" else "Models",
+                "people": t('people', lang),
+                "locations": t('locations', lang),
+                "other": t('other', lang)
+            }[x],
+            key="advanced_entity_type",
+            help="Filter by entity type (optional) / 按实体类型过滤（可选）"
+        )
+        st.markdown('</div>', unsafe_allow_html=True)
+
+        # Date range filter
+        st.markdown('<div class="filter-section filter-date">', unsafe_allow_html=True)
+        col1, col2 = st.columns(2)
+        with col1:
+            default_from = datetime.now() - timedelta(days=28)
+            date_from = st.date_input(
+                "From / 从",
+                value=default_from,
+                key="advanced_date_from"
+            )
+        with col2:
+            date_to = st.date_input(
+                "To / 至",
+                value=datetime.now(),
+                key="advanced_date_to"
+            )
+        st.markdown('</div>', unsafe_allow_html=True)
+
+    # Show active filter badges
+    active_filters = []
+    if entity_type != "any":
+        entity_label = {
+            "companies": t('companies', lang),
+            "models": "Models",
+            "people": t('people', lang),
+            "locations": t('locations', lang),
+            "other": t('other', lang)
+        }.get(entity_type, entity_type)
+        active_filters.append(f'<span class="filter-badge filter-badge-entity">📍 {entity_label}</span>')
+
+    # Check if date range is not default (28 days)
+    days_diff = (date_to - date_from).days
+    if days_diff != 28:
+        active_filters.append(f'<span class="filter-badge filter-badge-date">📅 {date_from.strftime("%Y-%m-%d")} → {date_to.strftime("%Y-%m-%d")}</span>')
+
+    if active_filters:
+        st.markdown("".join(active_filters), unsafe_allow_html=True)
+
+    # Store search parameters
+    search_params['entity_type'] = None if entity_type == "any" else entity_type
+    search_params['date_from'] = date_from
+    search_params['date_to'] = date_to
+
+    st.caption(f"🔍 {t('search_help', lang)}")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    return user_input, search_params
+
+
+def render_ask_question_box(lang: str) -> Optional[str]:
     """
-    DEPRECATED: Use search_archive() instead.
-    Search articles by entity (company, model, person, location)
+    Render the 'Ask Question' mode UI with conversational yellow styling.
+
+    Args:
+        lang: Language code (zh/en)
+
+    Returns:
+        User input string or None
     """
-    return search_archive(
-        query=entity_name,
-        entity_type=entity_type,
-        date_from=date_from,
-        date_to=date_to,
-        weeks=None if (date_from or date_to) else 4
+    st.markdown('<div class="search-ask">', unsafe_allow_html=True)
+    st.markdown('💬 ', unsafe_allow_html=True)
+    user_input = st.text_input(
+        "Ask / 提问",
+        placeholder=t('unified_input_ask', lang),
+        key="ask_input",
+        label_visibility="collapsed"
     )
+    st.markdown('</div>', unsafe_allow_html=True)
+    return user_input
 
 def filter_and_facet_results(
     results: List[Dict[str, Any]],
@@ -1336,111 +1440,18 @@ with right_col:
     )
     st.markdown(f"</div>", unsafe_allow_html=True)
 
-    # Additional inputs based on selected mode
+    # Render searchbox UI based on selected mode (using helper functions)
     user_input = None
     search_params = {}
 
     if st.session_state.current_mode == "this_week":
-        # This Week Search: Simple, prominent primary searchbox
-        st.markdown('<div class="search-this-week">', unsafe_allow_html=True)
-        st.markdown('<span class="search-icon">🔍</span>', unsafe_allow_html=True)
-        user_input = st.text_input(
-            "Search / 搜索",
-            placeholder=t('unified_input_search', st.session_state.language),
-            key="search_input",
-            label_visibility="collapsed"
-        )
-        st.caption(t('search_help', st.session_state.language))
-        st.markdown('</div>', unsafe_allow_html=True)
+        user_input = render_this_week_searchbox(st.session_state.language)
 
     elif st.session_state.current_mode == "advanced_search":
-        # Advanced Search: Unified multi-week + entity search with styled filters
-        st.markdown('<div class="search-advanced">', unsafe_allow_html=True)
-
-        # Main search input
-        user_input = st.text_input(
-            "Search / 搜索",
-            placeholder="Keyword, Company, Model, Person / 关键词、公司、模型、人物",
-            key="advanced_search_input",
-            label_visibility="collapsed"
-        )
-
-        # Optional filters in expander
-        with st.expander("🔧 " + ("高级过滤器" if st.session_state.language == "zh" else "Advanced Filters"), expanded=False):
-            # Entity type filter (optional)
-            st.markdown('<div class="filter-section filter-entity">', unsafe_allow_html=True)
-            entity_type = st.selectbox(
-                t('entity_type', st.session_state.language),
-                ["any", "companies", "models", "people", "locations", "other"],
-                format_func=lambda x: {
-                    "any": "Any / 任何" if st.session_state.language == "zh" else "Any",
-                    "companies": t('companies', st.session_state.language),
-                    "models": "Models / 模型" if st.session_state.language == "zh" else "Models",
-                    "people": t('people', st.session_state.language),
-                    "locations": t('locations', st.session_state.language),
-                    "other": t('other', st.session_state.language)
-                }[x],
-                key="advanced_entity_type",
-                help="Filter by entity type (optional) / 按实体类型过滤（可选）"
-            )
-            st.markdown('</div>', unsafe_allow_html=True)
-
-            # Date range filter
-            st.markdown('<div class="filter-section filter-date">', unsafe_allow_html=True)
-            col1, col2 = st.columns(2)
-            with col1:
-                default_from = datetime.now() - timedelta(days=28)
-                date_from = st.date_input(
-                    "From / 从",
-                    value=default_from,
-                    key="advanced_date_from"
-                )
-            with col2:
-                date_to = st.date_input(
-                    "To / 至",
-                    value=datetime.now(),
-                    key="advanced_date_to"
-                )
-            st.markdown('</div>', unsafe_allow_html=True)
-
-        # Show active filter badges
-        active_filters = []
-        if entity_type != "any":
-            entity_label = {
-                "companies": t('companies', st.session_state.language),
-                "models": "Models",
-                "people": t('people', st.session_state.language),
-                "locations": t('locations', st.session_state.language),
-                "other": t('other', st.session_state.language)
-            }.get(entity_type, entity_type)
-            active_filters.append(f'<span class="filter-badge filter-badge-entity">📍 {entity_label}</span>')
-
-        # Check if date range is not default (28 days)
-        days_diff = (date_to - date_from).days
-        if days_diff != 28:
-            active_filters.append(f'<span class="filter-badge filter-badge-date">📅 {date_from.strftime("%Y-%m-%d")} → {date_to.strftime("%Y-%m-%d")}</span>')
-
-        if active_filters:
-            st.markdown("".join(active_filters), unsafe_allow_html=True)
-
-        # Store search parameters
-        search_params['entity_type'] = None if entity_type == "any" else entity_type
-        search_params['date_from'] = date_from
-        search_params['date_to'] = date_to
-
-        st.caption(f"🔍 {t('search_help', st.session_state.language)}")
-        st.markdown('</div>', unsafe_allow_html=True)
+        user_input, search_params = render_advanced_search_box(st.session_state.language)
 
     else:  # Ask mode
-        st.markdown('<div class="search-ask">', unsafe_allow_html=True)
-        st.markdown('💬 ', unsafe_allow_html=True)
-        user_input = st.text_input(
-            "Ask / 提问",
-            placeholder=t('unified_input_ask', st.session_state.language),
-            key="ask_input",
-            label_visibility="collapsed"
-        )
-        st.markdown('</div>', unsafe_allow_html=True)
+        user_input = render_ask_question_box(st.session_state.language)
 
     st.divider()
 
