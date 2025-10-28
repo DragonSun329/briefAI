@@ -20,6 +20,7 @@ from utils.provider_switcher import ProviderSwitcher
 from utils.context_retriever import ContextRetriever
 from utils.semantic_search import SemanticSearch
 from utils.cache_manager import CacheManager
+from utils.topic_trending import TopicTrending
 
 # ============================================================================
 # TRANSLATIONS - UI TEXT IN ENGLISH AND MANDARIN CHINESE
