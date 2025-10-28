@@ -1,0 +1,346 @@
+{
+  "timestamp": "2025-10-28T09:25:44.381606",
+  "key": "source_arxiv_ai_7days",
+  "value": [
+    {
+      "title": "Sketch2BIM: A Multi-Agent Human-AI Collaborative Pipeline to Convert Hand-Drawn Floor Plans to 3D BIM",
+      "url": "https://arxiv.org/abs/2510.20838",
+      "content": "arXiv:2510.20838v1 Announce Type: new \nAbstract: This study introduces a human-in-the-loop pipeline that converts unscaled, hand-drawn floor plan sketches into semantically consistent 3D BIM models. The workflow leverages multimodal large language models (MLLMs) within a multi-agent framework, combining perceptual extraction, human feedback, schema validation, and automated BIM scripting. Initially, sketches are iteratively refined into a structured JSON layout of walls, doors, and windows. Later, these layouts are transformed into executable scripts that generate 3D BIM models. Experiments on ten diverse floor plans demonstrate strong convergence: openings (doors, windows) are captured with high reliability in the initial pass, while wall detection begins around 83% and achieves near-perfect alignment after a few feedback iterations. Across all categories, precision, recall, and F1 scores remain above 0.83, and geometric errors (RMSE, MAE) progressively decrease to zero through feedback corrections. This study demonstrates how MLLM-driven multi-agent reasoning can make BIM creation accessible to both experts and non-experts using only freehand sketches.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Cultural Alien Sampler: Open-ended art generation balancing originality and coherence",
+      "url": "https://arxiv.org/abs/2510.20849",
+      "content": "arXiv:2510.20849v1 Announce Type: new \nAbstract: In open-ended domains like art, autonomous agents must generate ideas that are both original and internally coherent, yet current Large Language Models (LLMs) either default to familiar cultural patterns or sacrifice coherence when pushed toward novelty. We address this by introducing the Cultural Alien Sampler (CAS), a concept-selection method that explicitly separates compositional fit from cultural typicality. CAS uses two GPT-2 models fine-tuned on WikiArt concepts: a Concept Coherence Model that scores whether concepts plausibly co-occur within artworks, and a Cultural Context Model that estimates how typical those combinations are within individual artists' bodies of work. CAS targets combinations that are high in coherence and low in typicality, yielding ideas that maintain internal consistency while deviating from learned conventions and embedded cultural context. In a human evaluation (N = 100), our approach outperforms random selection and GPT-4o baselines and achieves performance comparable to human art students in both perceived originality and harmony. Additionally, a quantitative study shows that our method produces more diverse outputs and explores a broader conceptual space than its GPT-4o counterpart, demonstrating that artificial cultural alienness can unlock creative potential in autonomous agents.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Fuzzy numbers revisited: operations on extensional fuzzy numbers",
+      "url": "https://arxiv.org/abs/2510.20861",
+      "content": "arXiv:2510.20861v1 Announce Type: new \nAbstract: Fuzzy numbers are commonly represented with fuzzy sets. Their objective is to better represent imprecise data. However, operations on fuzzy numbers are not as straightforward as maths on crisp numbers. Commonly, the Zadeh's extension rule is applied to elaborate a result. This can produce two problems: (1) high computational complexity and (2) for some fuzzy sets and some operations the results is not a fuzzy set with the same features (eg. multiplication of two triangular fuzzy sets does not produce a triangular fuzzy set). One more problem is the fuzzy spread -- fuzziness of the result increases with the number of operations. These facts can severely limit the application field of fuzzy numbers. In this paper we would like to revisite this problem with a different kind of fuzzy numbers -- extensional fuzzy numbers. The paper defines operations on extensional fuzzy numbers and relational operators (=, >, >=, <, <=) for them. The proposed approach is illustrated with several applicational examples. The C++ implementation is available from a public GitHub repository.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Customizing Open Source LLMs for Quantitative Medication Attribute Extraction across Heterogeneous EHR Systems",
+      "url": "https://arxiv.org/abs/2510.21027",
+      "content": "arXiv:2510.21027v1 Announce Type: new \nAbstract: Harmonizing medication data across Electronic Health Record (EHR) systems is a persistent barrier to monitoring medications for opioid use disorder (MOUD). In heterogeneous EHR systems, key prescription attributes are scattered across differently formatted fields and freetext notes. We present a practical framework that customizes open source large language models (LLMs), including Llama, Qwen, Gemma, and MedGemma, to extract a unified set of MOUD prescription attributes (prescription date, drug name, duration, total quantity, daily quantity, and refills) from heterogeneous, site specific data and compute a standardized metric of medication coverage, \\emph{MOUD days}, per patient. Our pipeline processes records directly in a fixed JSON schema, followed by lightweight normalization and cross-field consistency checks. We evaluate the system on prescription level EHR data from five clinics in a national OUD study (25{,}605 records from 1{,}257 patients), using a previously annotated benchmark of 10{,}369 records (776 patients) as the ground truth. Performance is reported as coverage (share of records with a valid, matchable output) and record-level exact-match accuracy. Larger models perform best overall: Qwen2.5-32B achieves \\textbf{93.4\\%} coverage with \\textbf{93.0\\%} exact-match accuracy across clinics, and MedGemma-27B attains \\textbf{93.1\\%}/\\textbf{92.2\\%}. A brief error review highlights three common issues and fixes: imputing missing dosage fields using within-drug norms, handling monthly/weekly injectables (e.g., Vivitrol) by setting duration from the documented schedule, and adding unit checks to prevent mass units (e.g., ``250 g'') from being misread as daily counts. By removing brittle, site-specific ETL and supporting local, privacy-preserving deployment, this approach enables consistent cross-site analyses of MOUD exposure, adherence, and retention in real-world settings.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Epistemic Deference to AI",
+      "url": "https://arxiv.org/abs/2510.21043",
+      "content": "arXiv:2510.21043v1 Announce Type: new \nAbstract: When should we defer to AI outputs over human expert judgment? Drawing on recent work in social epistemology, I motivate the idea that some AI systems qualify as Artificial Epistemic Authorities (AEAs) due to their demonstrated reliability and epistemic superiority. I then introduce AI Preemptionism, the view that AEA outputs should replace rather than supplement a user's independent epistemic reasons. I show that classic objections to preemptionism - such as uncritical deference, epistemic entrenchment, and unhinging epistemic bases - apply in amplified form to AEAs, given their opacity, self-reinforcing authority, and lack of epistemic failure markers. Against this, I develop a more promising alternative: a total evidence view of AI deference. According to this view, AEA outputs should function as contributory reasons rather than outright replacements for a user's independent epistemic considerations. This approach has three key advantages: (i) it mitigates expertise atrophy by keeping human users engaged, (ii) it provides an epistemic case for meaningful human oversight and control, and (iii) it explains the justified mistrust of AI when reliability conditions are unmet. While demanding in practice, this account offers a principled way to determine when AI deference is justified, particularly in high-stakes contexts requiring rigorous reliability.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "From Questions to Queries: An AI-powered Multi-Agent Framework for Spatial Text-to-SQL",
+      "url": "https://arxiv.org/abs/2510.21045",
+      "content": "arXiv:2510.21045v1 Announce Type: new \nAbstract: The complexity of Structured Query Language (SQL) and the specialized nature of geospatial functions in tools like PostGIS present significant barriers to non-experts seeking to analyze spatial data. While Large Language Models (LLMs) offer promise for translating natural language into SQL (Text-to-SQL), single-agent approaches often struggle with the semantic and syntactic complexities of spatial queries. To address this, we propose a multi-agent framework designed to accurately translate natural language questions into spatial SQL queries. The framework integrates several innovative components, including a knowledge base with programmatic schema profiling and semantic enrichment, embeddings for context retrieval, and a collaborative multi-agent pipeline as its core. This pipeline comprises specialized agents for entity extraction, metadata retrieval, query logic formulation, SQL generation, and a review agent that performs programmatic and semantic validation of the generated SQL to ensure correctness (self-verification). We evaluate our system using both the non-spatial KaggleDBQA benchmark and a new, comprehensive SpatialQueryQA benchmark that includes diverse geometry types, predicates, and three levels of query complexity. On KaggleDBQA, the system achieved an overall accuracy of 81.2% (221 out of 272 questions) after the review agent's review and corrections. For spatial queries, the system achieved an overall accuracy of 87.7% (79 out of 90 questions), compared with 76.7% without the review agent. Beyond accuracy, results also show that in some instances the system generates queries that are more semantically aligned with user intent than those in the benchmarks. This work makes spatial analysis more accessible, and provides a robust, generalizable foundation for spatial Text-to-SQL systems, advancing the development of autonomous GIS.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "MedAlign: A Synergistic Framework of Multimodal Preference Optimization and Federated Meta-Cognitive Reasoning",
+      "url": "https://arxiv.org/abs/2510.21093",
+      "content": "arXiv:2510.21093v1 Announce Type: new \nAbstract: Recently, large models have shown significant potential for smart healthcare. However, the deployment of Large Vision-Language Models (LVLMs) for clinical services is currently hindered by three critical challenges: a tendency to hallucinate answers not grounded in visual evidence, the inefficiency of fixed-depth reasoning, and the difficulty of multi-institutional collaboration. To address these challenges, in this paper, we develop MedAlign, a novel framework to ensure visually accurate LVLM responses for Medical Visual Question Answering (Med-VQA). Specifically, we first propose a multimodal Direct Preference Optimization (mDPO) objective to explicitly align preference learning with visual context. We then design a Retrieval-Aware Mixture-of-Experts (RA-MoE) architecture that utilizes image and text similarity to route queries to a specialized and context-augmented LVLM (i.e., an expert), thereby mitigating hallucinations in LVLMs. To achieve adaptive reasoning and facilitate multi-institutional collaboration, we propose a federated governance mechanism, where the selected expert, fine-tuned on clinical datasets based on mDPO, locally performs iterative Chain-of-Thought (CoT) reasoning via the local meta-cognitive uncertainty estimator. Extensive experiments on three representative Med-VQA datasets demonstrate that MedAlign achieves state-of-the-art performance, outperforming strong retrieval-augmented baselines by up to $11.85\\%$ in F1-score, and simultaneously reducing the average reasoning length by $51.60\\%$ compared with fixed-depth CoT approaches.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Confounding Robust Deep Reinforcement Learning: A Causal Approach",
+      "url": "https://arxiv.org/abs/2510.21110",
+      "content": "arXiv:2510.21110v1 Announce Type: new \nAbstract: A key task in Artificial Intelligence is learning effective policies for controlling agents in unknown environments to optimize performance measures. Off-policy learning methods, like Q-learning, allow learners to make optimal decisions based on past experiences. This paper studies off-policy learning from biased data in complex and high-dimensional domains where \\emph{unobserved confounding} cannot be ruled out a priori. Building on the well-celebrated Deep Q-Network (DQN), we propose a novel deep reinforcement learning algorithm robust to confounding biases in observed data. Specifically, our algorithm attempts to find a safe policy for the worst-case environment compatible with the observations. We apply our method to twelve confounded Atari games, and find that it consistently dominates the standard DQN in all games where the observed input to the behavioral and target policies mismatch and unobserved confounders exist.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "DAO-AI: Evaluating Collective Decision-Making through Agentic AI in Decentralized Governance",
+      "url": "https://arxiv.org/abs/2510.21117",
+      "content": "arXiv:2510.21117v1 Announce Type: new \nAbstract: This paper presents a first empirical study of agentic AI as autonomous decision-makers in decentralized governance. Using more than 3K proposals from major protocols, we build an agentic AI voter that interprets proposal contexts, retrieves historical deliberation data, and independently determines its voting position. The agent operates within a realistic financial simulation environment grounded in verifiable blockchain data, implemented through a modular composable program (MCP) workflow that defines data flow and tool usage via Agentics framework. We evaluate how closely the agent's decisions align with the human and token-weighted outcomes, uncovering strong alignments measured by carefully designed evaluation metrics. Our findings demonstrate that agentic AI can augment collective decision-making by producing interpretable, auditable, and empirically grounded signals in realistic DAO governance settings. The study contributes to the design of explainable and economically rigorous AI agents for decentralized financial systems.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "PanicToCalm: A Proactive Counseling Agent for Panic Attacks",
+      "url": "https://arxiv.org/abs/2510.21143",
+      "content": "arXiv:2510.21143v1 Announce Type: new \nAbstract: Panic attacks are acute episodes of fear and distress, in which timely, appropriate intervention can significantly help individuals regain stability. However, suitable datasets for training such models remain scarce due to ethical and logistical issues. To address this, we introduce PACE, which is a dataset that includes high-distress episodes constructed from first-person narratives, and structured around the principles of Psychological First Aid (PFA). Using this data, we train PACER, a counseling model designed to provide both empathetic and directive support, which is optimized through supervised learning and simulated preference alignment. To assess its effectiveness, we propose PanicEval, a multi-dimensional framework covering general counseling quality and crisis-specific strategies. Experimental results show that PACER outperforms strong baselines in both counselor-side metrics and client affect improvement. Human evaluations further confirm its practical value, with PACER consistently preferred over general, CBT-based, and GPT-4-powered models in panic scenarios (Code is available at https://github.com/JihyunLee1/PanicToCalm ).",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "NeuroGenPoisoning: Neuron-Guided Attacks on Retrieval-Augmented Generation of LLM via Genetic Optimization of External Knowledge",
+      "url": "https://arxiv.org/abs/2510.21144",
+      "content": "arXiv:2510.21144v1 Announce Type: new \nAbstract: Retrieval-Augmented Generation (RAG) empowers Large Language Models (LLMs) to dynamically integrate external knowledge during inference, improving their factual accuracy and adaptability. However, adversaries can inject poisoned external knowledge to override the model's internal memory. While existing attacks iteratively manipulate retrieval content or prompt structure of RAG, they largely ignore the model's internal representation dynamics and neuron-level sensitivities. The underlying mechanism of RAG poisoning has not been fully studied and the effect of knowledge conflict with strong parametric knowledge in RAG is not considered. In this work, we propose NeuroGenPoisoning, a novel attack framework that generates adversarial external knowledge in RAG guided by LLM internal neuron attribution and genetic optimization. Our method first identifies a set of Poison-Responsive Neurons whose activation strongly correlates with contextual poisoning knowledge. We then employ a genetic algorithm to evolve adversarial passages that maximally activate these neurons. Crucially, our framework enables massive-scale generation of effective poisoned RAG knowledge by identifying and reusing promising but initially unsuccessful external knowledge variants via observed attribution signals. At the same time, Poison-Responsive Neurons guided poisoning can effectively resolves knowledge conflict. Experimental results across models and datasets demonstrate consistently achieving high Population Overwrite Success Rate (POSR) of over 90% while preserving fluency. Empirical evidence shows that our method effectively resolves knowledge conflict.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "How to Auto-optimize Prompts for Domain Tasks? Adaptive Prompting and Reasoning through Evolutionary Domain Knowledge Adaptation",
+      "url": "https://arxiv.org/abs/2510.21148",
+      "content": "arXiv:2510.21148v1 Announce Type: new \nAbstract: Designing optimal prompts and reasoning processes for large language models (LLMs) on domain-specific tasks is both necessary and challenging in real-world applications. Determining how to integrate domain knowledge, enhance reasoning efficiency, and even provide domain experts with refined knowledge integration hints are particularly crucial yet unresolved tasks. In this research, we propose Evolutionary Graph Optimization for Prompting (EGO-Prompt), an automated framework to designing better prompts, efficient reasoning processes and providing enhanced causal-informed process. EGO-Prompt begins with a general prompt and fault-tolerant initial Semantic Causal Graph (SCG) descriptions, constructed by human experts, which is then automatically refined and optimized to guide LLM reasoning. Recognizing that expert-defined SCGs may be partial or imperfect and that their optimal integration varies across LLMs, EGO-Prompt integrates a novel causal-guided textual gradient process in two steps: first, generating nearly deterministic reasoning guidance from the SCG for each instance, and second, adapting the LLM to effectively utilize the guidance alongside the original input. The iterative optimization algorithm further refines both the SCG and the reasoning mechanism using textual gradients with ground-truth. We tested the framework on real-world public health, transportation and human behavior tasks. EGO-Prompt achieves 7.32%-12.61% higher F1 than cutting-edge methods, and allows small models to reach the performence of larger models at under 20% of the original cost. It also outputs a refined, domain-specific SCG that improves interpretability.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "String Seed of Thought: Prompting LLMs for Distribution-Faithful and Diverse Generation",
+      "url": "https://arxiv.org/abs/2510.21150",
+      "content": "arXiv:2510.21150v1 Announce Type: new \nAbstract: We introduce String Seed of Thought (SSoT), a novel prompting method for LLMs that improves Probabilistic Instruction Following (PIF). We define PIF as a task requiring an LLM to select its answer from a predefined set of options, each associated with a specific probability, such that the empirical distribution of the generated answers aligns with the target distribution when prompted multiple times. While LLMs excel at tasks with single, deterministic answers, they often fail at PIF, exhibiting biases problematic for applications requiring non-deterministic behaviors, such as human-behavior simulation, content diversification, and multiplayer games. It also harms the diversity of generated responses, a crucial factor in test-time scaling, by causing the outputs to collapse into a limited set of answers. To address this, we propose SSoT, a simple prompting method that instructs an LLM to first output a random string to generate sufficient entropy. SSoT also instructs the LLM to extract randomness by manipulating this string to derive a final answer, thereby preserving diversity while adhering to specific constraints. We demonstrate that SSoT significantly improves the PIF performance of LLMs, approaching the ideal performance of a pseudo-random number generator. Furthermore, our experiments on NoveltyBench show SSoT's benefits extend beyond closed-set tasks to open-ended tasks by enhancing response diversity.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Memory-Free Continual Learning with Null Space Adaptation for Zero-Shot Vision-Language Models",
+      "url": "https://arxiv.org/abs/2510.21175",
+      "content": "arXiv:2510.21175v1 Announce Type: new \nAbstract: Pre-trained vision-language models (VLMs), such as CLIP, have demonstrated remarkable zero-shot generalization, enabling deployment in a wide range of real-world tasks without additional task-specific training. However, in real deployment scenarios with evolving environments or emerging classes, these models inevitably face distributional shifts and novel tasks. In such contexts, static zero-shot capabilities are insufficient, and there is a growing need for continual learning methods that allow models to adapt over time while avoiding catastrophic forgetting. We introduce NuSA-CL (Null Space Adaptation for Continual Learning), a lightweight memory-free continual learning framework designed to address this challenge. NuSA-CL employs low-rank adaptation and constrains task-specific weight updates to lie within an approximate null space of the model's current parameters. This strategy minimizes interference with previously acquired knowledge, effectively preserving the zero-shot capabilities of the original model. Unlike methods relying on replay buffers or costly distillation, NuSA-CL imposes minimal computational and memory overhead, making it practical for deployment in resource-constrained, real-world continual learning environments. Experiments show that our framework not only effectively preserves zero-shot transfer capabilities but also achieves highly competitive performance on continual learning benchmarks. These results position NuSA-CL as a practical and scalable solution for continually evolving zero-shot VLMs in real-world applications.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Shylock: Causal Discovery in Multivariate Time Series based on Hybrid Constraints",
+      "url": "https://arxiv.org/abs/2510.21181",
+      "content": "arXiv:2510.21181v1 Announce Type: new \nAbstract: Causal relationship discovery has been drawing increasing attention due to its prevalent application. Existing methods rely on human experience, statistical methods, or graphical criteria methods which are error-prone, stuck at the idealized assumption, and rely on a huge amount of data. And there is also a serious data gap in accessing Multivariate time series(MTS) in many areas, adding difficulty in finding their causal relationship. Existing methods are easy to be over-fitting on them. To fill the gap we mentioned above, in this paper, we propose Shylock, a novel method that can work well in both few-shot and normal MTS to find the causal relationship. Shylock can reduce the number of parameters exponentially by using group dilated convolution and a sharing kernel, but still learn a better representation of variables with time delay. By combing the global constraint and the local constraint, Shylock achieves information sharing among networks to help improve the accuracy. To evaluate the performance of Shylock, we also design a data generation method to generate MTS with time delay. We evaluate it on commonly used benchmarks and generated datasets. Extensive experiments show that Shylock outperforms two existing state-of-art methods on both few-shot and normal MTS. We also developed Tcausal, a library for easy use and deployed it on the EarthDataMiner platform",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "OutboundEval: A Dual-Dimensional Benchmark for Expert-Level Intelligent Outbound Evaluation of Xbench's Professional-Aligned Series",
+      "url": "https://arxiv.org/abs/2510.21244",
+      "content": "arXiv:2510.21244v1 Announce Type: new \nAbstract: We propose OutboundEval, a comprehensive benchmark for evaluating large language models (LLMs) in expert-level intelligent outbound calling scenarios. Unlike existing methods that suffer from three key limitations - insufficient dataset diversity and category coverage, unrealistic user simulation, and inaccurate evaluation metrics - OutboundEval addresses these issues through a structured framework. First, we design a benchmark spanning six major business domains and 30 representative sub-scenarios, each with scenario-specific process decomposition, weighted scoring, and domain-adaptive metrics. Second, we develop a large-model-driven User Simulator that generates diverse, persona-rich virtual users with realistic behaviors, emotional variability, and communication styles, providing a controlled yet authentic testing environment. Third, we introduce a dynamic evaluation method that adapts to task variations, integrating automated and human-in-the-loop assessment to measure task execution accuracy, professional knowledge application, adaptability, and user experience quality. Experiments on 12 state-of-the-art LLMs reveal distinct trade-offs between expert-level task completion and interaction fluency, offering practical insights for building reliable, human-like outbound AI systems. OutboundEval establishes a practical, extensible, and domain-oriented standard for benchmarking LLMs in professional applications.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Out-of-Distribution Detection for Safety Assurance of AI and Autonomous Systems",
+      "url": "https://arxiv.org/abs/2510.21254",
+      "content": "arXiv:2510.21254v1 Announce Type: new \nAbstract: The operational capabilities and application domains of AI-enabled autonomous systems have expanded significantly in recent years due to advances in robotics and machine learning (ML). Demonstrating the safety of autonomous systems rigorously is critical for their responsible adoption but it is challenging as it requires robust methodologies that can handle novel and uncertain situations throughout the system lifecycle, including detecting out-of-distribution (OoD) data. Thus, OOD detection is receiving increased attention from the research, development and safety engineering communities. This comprehensive review analyses OOD detection techniques within the context of safety assurance for autonomous systems, in particular in safety-critical domains. We begin by defining the relevant concepts, investigating what causes OOD and exploring the factors which make the safety assurance of autonomous systems and OOD detection challenging. Our review identifies a range of techniques which can be used throughout the ML development lifecycle and we suggest areas within the lifecycle in which they may be used to support safety assurance arguments. We discuss a number of caveats that system and safety engineers must be aware of when integrating OOD detection into system lifecycles. We conclude by outlining the challenges and future work necessary for the safe development and operation of autonomous systems across a range of domains and applications.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Investigating Scale Independent UCT Exploration Factor Strategies",
+      "url": "https://arxiv.org/abs/2510.21275",
+      "content": "arXiv:2510.21275v1 Announce Type: new \nAbstract: The Upper Confidence Bounds For Trees (UCT) algorithm is not agnostic to the reward scale of the game it is applied to. For zero-sum games with the sparse rewards of $\\{-1,0,1\\}$ at the end of the game, this is not a problem, but many games often feature dense rewards with hand-picked reward scales, causing a node's Q-value to span different magnitudes across different games. In this paper, we evaluate various strategies for adaptively choosing the UCT exploration constant $\\lambda$, called $\\lambda$-strategies, that are agnostic to the game's reward scale. These $\\lambda$-strategies include those proposed in the literature as well as five new strategies. Given our experimental results, we recommend using one of our newly suggested $\\lambda$-strategies, which is to choose $\\lambda$ as $2 \\cdot \\sigma$ where $\\sigma$ is the empirical standard deviation of all state-action pairs' Q-values of the search tree. This method outperforms existing $\\lambda$-strategies across a wide range of tasks both in terms of a single parameter value and the peak performances obtained by optimizing all available parameters.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "When Models Outthink Their Safety: Mitigating Self-Jailbreak in Large Reasoning Models with Chain-of-Guardrails",
+      "url": "https://arxiv.org/abs/2510.21285",
+      "content": "arXiv:2510.21285v1 Announce Type: new \nAbstract: Large Reasoning Models (LRMs) demonstrate remarkable capabilities on complex reasoning tasks but remain vulnerable to severe safety risks, including harmful content generation and jailbreak attacks. Existing mitigation strategies rely on injecting heuristic safety signals during training, which often suppress reasoning ability and fail to resolve the safety-reasoning trade-off. To systematically investigate this issue, we analyze the reasoning trajectories of diverse LRMs and uncover a phenomenon we term Self-Jailbreak, where models override their own risk assessments and justify responding to unsafe prompts. This finding reveals that LRMs inherently possess the ability to reject unsafe queries, but this ability is compromised, resulting in harmful outputs. Building on these insights, we propose the Chain-of-Guardrail (CoG), a training framework that recomposes or backtracks unsafe reasoning steps, steering the model back onto safe trajectories while preserving valid reasoning chains. Extensive experiments across multiple reasoning and safety benchmarks demonstrate that CoG substantially improves the safety of current LRMs while preserving comparable reasoning ability, significantly outperforming prior methods that suffer from severe safety-reasoning trade-offs.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Understanding AI Trustworthiness: A Scoping Review of AIES & FAccT Articles",
+      "url": "https://arxiv.org/abs/2510.21293",
+      "content": "arXiv:2510.21293v1 Announce Type: new \nAbstract: Background: Trustworthy AI serves as a foundational pillar for two major AI ethics conferences: AIES and FAccT. However, current research often adopts techno-centric approaches, focusing primarily on technical attributes such as reliability, robustness, and fairness, while overlooking the sociotechnical dimensions critical to understanding AI trustworthiness in real-world contexts.\n  Objectives: This scoping review aims to examine how the AIES and FAccT communities conceptualize, measure, and validate AI trustworthiness, identifying major gaps and opportunities for advancing a holistic understanding of trustworthy AI systems.\n  Methods: We conduct a scoping review of AIES and FAccT conference proceedings to date, systematically analyzing how trustworthiness is defined, operationalized, and applied across different research domains. Our analysis focuses on conceptualization approaches, measurement methods, verification and validation techniques, application areas, and underlying values.\n  Results: While significant progress has been made in defining technical attributes such as transparency, accountability, and robustness, our findings reveal critical gaps. Current research often predominantly emphasizes technical precision at the expense of social and ethical considerations. The sociotechnical nature of AI systems remains less explored and trustworthiness emerges as a contested concept shaped by those with the power to define it.\n  Conclusions: An interdisciplinary approach combining technical rigor with social, cultural, and institutional considerations is essential for advancing trustworthy AI. We propose actionable measures for the AI ethics community to adopt holistic frameworks that genuinely address the complex interplay between AI systems and society, ultimately promoting responsible technological development that benefits all stakeholders.",
+      "published_date": "2025-10-27T04:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    }
+  ]
+}

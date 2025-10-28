@@ -1,0 +1,256 @@
+{
+  "report_date": "2025-10-28",
+  "generation_time": "2025-10-28T09:34:30.053642",
+  "articles": [
+    {
+      "id": "001",
+      "title": "A look at Anthropic's success with corporate AI, which makes up ~80% of its revenue; a July report put its enterprise API market share at 32% vs. OpenAI's 25% (Asa Fitch/Wall Street Journal)",
+      "url": "http://www.techmeme.com/251027/p33#a251027p33",
+      "source": "Techmeme",
+      "published_date": "2025-10-27T21:15:05",
+      "full_content": "Asa Fitch / Wall Street Journal:\nA look at Anthropic's success with corporate AI, which makes up ~80% of its revenue; a July report put its enterprise API market share at 32% vs. OpenAI's 25%  —  Anthropic, backed by Amazon and Google, is focusing on corporate customers rather than the mass market",
+      "credibility_score": 9,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 7,
+          "competitive_impact": 8,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 9
+        },
+        "weighted_score": 6.55,
+        "rationale": "这篇文章提到Anthropic在企业AI市场的成功，占据了32%的市场份额，超过OpenAI的25%。这表明Anthropic在AI领域的影响力正在增强，对市场格局有一定影响。同时，Anthropic的成功对竞争对手OpenAI构成挑战，竞争影响力较高。文章内容与公司关注的Fintech AI Applications、AI Products & Tools等业务领域相关，战略和运营相关性较高。来源Techmeme和华尔街日报的可信度较高。",
+        "key_takeaway": "Anthropic在企业AI市场超越OpenAI，市场份额达到32%",
+        "recommended_category": "Major AI Companies & Updates",
+        "average_score": 7.4
+      }
+    },
+    {
+      "id": "002",
+      "title": "The AI software development market map",
+      "url": "https://www.cbinsights.com/research/ai-software-development-market-map/",
+      "source": "CB Insights",
+      "published_date": "2025-10-22T20:18:13",
+      "full_content": "Generative AI is fundamentally restructuring the software development lifecycle (SDLC), compressing timelines and shifting the role of developers from coders to orchestrators of AI agents. AI-powered coding has become one of the fastest-growing enterprise use cases for LLMs. Startups like …\nThe post The AI software development market map appeared first on CB Insights Research.",
+      "credibility_score": 9,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 7,
+          "competitive_impact": 6,
+          "strategic_relevance": 8,
+          "operational_relevance": 6,
+          "credibility": 9
+        },
+        "weighted_score": 6.35,
+        "rationale": "文章讨论了生成式AI对软件开发生命周期的影响，这可能对金融科技和AI产品领域产生显著影响。它强调了AI编码作为企业用例的增长，这对我们的业务战略和产品开发具有战略相关性。CB Insights作为来源，提供了高可信度的市场分析。",
+        "key_takeaway": "生成式AI正在改变软件开发生命周期，对金融科技领域有战略影响",
+        "recommended_category": "Fintech AI Applications",
+        "average_score": 7.2
+      }
+    },
+    {
+      "id": "003",
+      "title": "From Questions to Queries: An AI-powered Multi-Agent Framework for Spatial Text-to-SQL",
+      "url": "https://arxiv.org/abs/2510.21045",
+      "source": "ArXiv AI (Test Source)",
+      "published_date": "2025-10-27T04:00:00",
+      "full_content": "arXiv:2510.21045v1 Announce Type: new \nAbstract: The complexity of Structured Query Language (SQL) and the specialized nature of geospatial functions in tools like PostGIS present significant barriers to non-experts seeking to analyze spatial data. While Large Language Models (LLMs) offer promise for translating natural language into SQL (Text-to-SQL), single-agent approaches often struggle with the semantic and syntactic complexities of spatial queries. To address this, we propose a multi-agent framework designed to accurately translate natural language questions into spatial SQL queries. The framework integrates several innovative components, including a knowledge base with programmatic schema profiling and semantic enrichment, embeddings for context retrieval, and a collaborative multi-agent pipeline as its core. This pipeline comprises specialized agents for entity extraction, metadata retrieval, query logic formulation, SQL generation, and a review agent that performs programmatic and semantic validation of the generated SQL to ensure correctness (self-verification). We evaluate our system using both the non-spatial KaggleDBQA benchmark and a new, comprehensive SpatialQueryQA benchmark that includes diverse geometry types, predicates, and three levels of query complexity. On KaggleDBQA, the system achieved an overall accuracy of 81.2% (221 out of 272 questions) after the review agent's review and corrections. For spatial queries, the system achieved an overall accuracy of 87.7% (79 out of 90 questions), compared with 76.7% without the review agent. Beyond accuracy, results also show that in some instances the system generates queries that are more semantically aligned with user intent than those in the benchmarks. This work makes spatial analysis more accessible, and provides a robust, generalizable foundation for spatial Text-to-SQL systems, advancing the development of autonomous GIS.",
+      "credibility_score": 10,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 8,
+          "operational_relevance": 7,
+          "credibility": 10
+        },
+        "weighted_score": 6.15,
+        "rationale": "这篇文章介绍了一个AI驱动的多代理框架，用于将自然语言问题转换为空间SQL查询。这对于Fintech和AI产品领域具有战略相关性，因为它可以提高数据处理和查询的效率和准确性。文章的运营相关性较高，因为它可以优化数据查询和分析流程。文章来自ArXiv AI，可信度很高。",
+        "key_takeaway": "AI驱动的多代理框架，提高空间数据查询效率",
+        "recommended_category": "Data Analytics & ML",
+        "average_score": 7.2
+      }
+    },
+    {
+      "id": "004",
+      "title": "Choosing the Best Model Size and Dataset Size under a Fixed Budget for LLMs",
+      "url": "https://towardsdatascience.com/choosing-the-best-model-size-and-dataset-size-under-a-fixed-budget-for-llms/",
+      "source": "Towards Data Science",
+      "published_date": "2025-10-24T14:00:00",
+      "full_content": "A small-scale exploration using Tiny Transformers\nThe post Choosing the Best Model Size and Dataset Size under a Fixed Budget for LLMs appeared first on Towards Data Science.",
+      "credibility_score": 8,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 7,
+          "credibility": 8
+        },
+        "weighted_score": 5.75,
+        "rationale": "这篇文章探讨了在固定预算下如何选择最佳的模型尺寸和数据集尺寸，这对AI产品的优化和成本控制具有战略意义。文章的发布平台Towards Data Science在数据科学领域具有较高的可信度，内容与公司关注的领域如数据科学、数据分析和机器学习紧密相关，对日常运营和产品开发有指导作用。",
+        "key_takeaway": "在固定预算下优化模型和数据集选择",
+        "recommended_category": "Data Analytics & ML",
+        "average_score": 6.6
+      }
+    },
+    {
+      "id": "005",
+      "title": "5 AI-Assisted Coding Techniques Guaranteed to Save You Time",
+      "url": "https://www.kdnuggets.com/5-ai-assisted-coding-techniques-guaranteed-to-save-you-time",
+      "source": "KDnuggets",
+      "published_date": "2025-10-24T13:06:14",
+      "full_content": "Tools like GitHub Copilot, Claude, and Google’s Jules have evolved from autocomplete assistants into coding agents that can plan, build, test, and even review code asynchronously.",
+      "credibility_score": 9,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 6,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 9
+        },
+        "weighted_score": 5.65,
+        "rationale": "文章讨论了AI辅助编程技术的最新进展，这对AI产品和工具领域具有中等市场影响力，且对竞争格局有一定影响，因为这些技术可能改变编程和软件开发的方式。文章与公司的战略规划和运营相关性较高，因为AI辅助编程技术可能提高开发效率和产品质量。KDnuggets是一个信誉良好的数据科学和机器学习社区，因此文章的可信度较高。",
+        "key_takeaway": "AI辅助编程技术正在改变软件开发行业",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.6
+      }
+    },
+    {
+      "id": "006",
+      "title": "MiniMax-M2: Better Than GLM 4.6 (Compact & High-Efficiency AI Model)",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/minimax-m2/",
+      "source": "Analytics Vidhya",
+      "published_date": "2025-10-27T12:25:04",
+      "full_content": "AI development has become a race of excess. More parameters, more compute, more GPUs. It’s an attempt to increase intelligence by adding more brains (instead of developing one). Every new release flaunts size rather than substance. But the newer models have proven one thing: real progress isn’t just about how big you can go. It’s […]\nThe post MiniMax-M2: Better Than GLM 4.6 (Compact & High-Efficiency AI Model) appeared first on Analytics Vidhya.",
+      "credibility_score": 8,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 8
+        },
+        "weighted_score": 5.6,
+        "rationale": "文章讨论了AI模型的新发展，MiniMax-M2，它比GLM 4.6更紧凑且高效。这对AI行业是一个中等市场关注度的新闻，因为它可能影响AI模型的未来发展方向。对公司来说，这个模型可能提供新的技术选择，具有战略相关性。同时，它可能对日常运营和产品开发有辅助意义，但直接影响不大。Analytics Vidhya是一个信誉良好的来源，内容可信。",
+        "key_takeaway": "AI模型的新发展，MiniMax-M2比GLM 4.6更紧凑高效",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.4
+      }
+    },
+    {
+      "id": "007",
+      "title": "Poisoning Attacks on LLMs: A Direct Attack on LLMs with Less than 250 Samples",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/llm-data-poisoning/",
+      "source": "Analytics Vidhya",
+      "published_date": "2025-10-24T08:13:02",
+      "full_content": "Anthropic, in collaboration with the United Kingdom’s Artificial Intelligence Security Institute and the Alan Turing Institute, recently published an intriguing paper showing that as few as 250 malicious documents can create a “backdoor” vulnerability in a large language model, regardless of the model’s size or the volume of training data! We’ll explore these results in […]\nThe post Poisoning Attacks on LLMs: A Direct Attack on LLMs with Less than 250 Samples appeared first on Analytics Vidhya.",
+      "credibility_score": 8,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 8
+        },
+        "weighted_score": 5.6,
+        "rationale": "这篇文章讨论了对大型语言模型（LLMs）的攻击，特别是通过少量恶意文档创建后门漏洞的问题。这对AI行业尤其是涉及LLMs的公司具有战略相关性，因为它们需要关注并防范此类安全威胁。文章对市场的影响和竞争影响相对有限，因为这种攻击方法的具体应用和影响范围尚未广泛扩散。然而，对于关注数据安全和AI产品的公司来说，这是一个值得关注的领域。",
+        "key_takeaway": "少量恶意文档即可对LLMs造成安全威胁",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.4
+      }
+    },
+    {
+      "id": "008",
+      "title": "GoodMetrics – A better alternative to Google Analytics",
+      "url": "https://betalist.com/startups/goodmetrics?utm_campaign=startup-136882&utm_medium=atom&utm_source=newsfeed",
+      "source": "BetaList",
+      "published_date": "2025-10-27T10:00:00",
+      "full_content": "GoodMetrics is a web analytics tool built for people who want clear, actionable insights without the headaches of GA4. It shows you where your traffic comes from, what drives conversions, and which content performs best — all in a privacy-friendly way.\nUnlike Google Analytics, GoodMetrics doesn’t rely on cookies or personal data — so you get full visibility without the privacy trade-offs. Data appears instantly, reports stay consistent, and you’ll always know what’s happening on your site in real time.\nView startup",
+      "credibility_score": 8,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 6,
+          "strategic_relevance": 6,
+          "operational_relevance": 7,
+          "credibility": 8
+        },
+        "weighted_score": 5.5,
+        "rationale": "GoodMetrics作为Google Analytics的替代品，提供了隐私友好的网络分析工具，这对于注重隐私和数据安全的公司而言具有吸引力。虽然对整个市场的影响有限，但在数据隐私和AI应用领域具有一定的竞争影响力。对于Fintech和AI产品公司来说，GoodMetrics可能提供新的数据洞察方式，对战略规划和日常运营都有一定的参考价值。",
+        "key_takeaway": "GoodMetrics提供隐私友好的网络分析工具，对注重数据隐私的公司有吸引力",
+        "recommended_category": "Data Analytics & ML",
+        "average_score": 6.4
+      }
+    },
+    {
+      "id": "009",
+      "title": "Less is More: Recursive Reasoning with Tiny Networks",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/trm-recursive-reasoning/",
+      "source": "Analytics Vidhya",
+      "published_date": "2025-10-23T04:24:00",
+      "full_content": "Do you think that a small neural network (like TRM) can outperform models many times larger in reasoning tasks? How is it possible for billions of LLM parameters to have such a small number of modest million-parameter iterations solving puzzles? “Currently, we live in a scale-obsessed world: More data. More GPUs mean bigger and better […]\nThe post Less is More: Recursive Reasoning with Tiny Networks appeared first on Analytics Vidhya.",
+      "credibility_score": 8,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 6,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 8
+        },
+        "weighted_score": 5.55,
+        "rationale": "文章讨论了小型神经网络在推理任务中可能超越大型模型的可能性，这对AI行业具有一定的市场影响力和竞争影响，特别是在AI产品和工具领域。文章的战略相关性较高，因为它可能影响公司在AI产品开发上的策略。运营相关性适中，因为小型网络的高效推理能力可以用于优化数据科学和机器学习项目。",
+        "key_takeaway": "小型神经网络在推理任务中的潜力",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.4
+      }
+    },
+    {
+      "id": "010",
+      "title": "Top 5 Beginner-Friendly Courses to Level Up with Google Skills",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/beginner-friendly-courses-google-skills/",
+      "source": "Analytics Vidhya",
+      "published_date": "2025-10-26T10:08:27",
+      "full_content": "The trend for AI upskilling goes on, as the latest gem from the house of Google drops. With the words, “Say Hello to Google Skills,” the company has announced its new initiative that is meant to upskill people in AI. It only makes sense, with AI being the go-to word in the job industry. Skills […]\nThe post Top 5 Beginner-Friendly Courses to Level Up with Google Skills appeared first on Analytics Vidhya.",
+      "credibility_score": 8,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 8
+        },
+        "weighted_score": 5.45,
+        "rationale": "文章介绍了Google推出的AI技能提升课程，这对于整个AI市场和行业有一定的影响，尤其是对于提升人才技能和市场竞争力。对于公司而言，这些课程可能有助于员工技能提升和产品创新，因此战略相关性较高。然而，文章内容并未涉及具体的金融科技应用，因此对公司日常运营的影响有限。",
+        "key_takeaway": "Google推出AI技能提升课程，对AI人才培养和市场竞争有一定影响",
+        "recommended_category": "Data Analytics & ML",
+        "average_score": 6.2
+      }
+    }
+  ]
+}

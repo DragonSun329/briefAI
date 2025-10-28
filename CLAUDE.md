@@ -2,332 +2,323 @@
 
 ## Project Goal
 
-Build an intelligent agent that automatically generates weekly AI industry briefings in Mandarin Chinese for a CEO. The system should scrape news, evaluate importance, paraphrase articles, and format them into a professional report.
+Automatically generate weekly AI industry briefings in Mandarin Chinese for executive review. The system scrapes news from 61 global English-language sources, applies intelligent filtering and 5D weighted scoring, generates deep analysis (500-600 characters per article), and produces professional Markdown reports.
+
+**Regional Focus:** News coverage for China, Indonesia, Philippines, Spain, and Mexico (via English-language sources)
 
 ## What This Agent Does
 
-Every week, this agent will:
-1. **Ask the CEO** what types of AI news they want (e.g., "大模型", "AI应用", "政策监管")
-2. **Scrape articles** from Chinese and English AI news sources
-3. **Evaluate** which articles are most important/relevant
-4. **Paraphrase** selected articles into concise executive summaries (in Mandarin, paragraph format)
-5. **Generate** a beautiful weekly report with insights and key takeaways
+Every week, the complete pipeline:
 
-**Final Output**: A Markdown report in Mandarin Chinese, ready to send to the CEO every Friday.
+1. **Scrapes articles** from 61 AI and tech news sources worldwide (100% English, RSS-based)
+   - Official company blogs: OpenAI, Anthropic, DeepMind, Meta, Microsoft, Hugging Face
+   - Industry research: McKinsey, BCG, Deloitte, EY, PwC, Accenture
+   - Regional tech news: TechInAsia, Rest of World, DealStreetAsia, e27, Nikkei Asia, SCMP, Xataka, and more
+   - General AI news: TechCrunch, Techmeme, VentureBeat, Hacker News, and other leading sources
 
-## Key Requirements
+2. **Filters and evaluates** articles using intelligent 3-tier system:
+   - **Tier 1**: Keyword-based pre-filtering (3.0 threshold)
+   - **Tier 2**: Quick LLM batch evaluation (6.0 threshold)
+   - **Tier 3**: Deep 5D weighted evaluation (top 10-15 articles)
+
+3. **Ranks** articles by 5D weighted scoring:
+   - Market Impact (25%)
+   - Competitive Impact (20%)
+   - Strategic Relevance (20%)
+   - Operational Relevance (15%)
+   - Credibility (10%)
+
+4. **Generates** deep analysis in 500-600 Chinese characters per article with:
+   - Central argument & key supporting data
+   - Quantified impact & performance metrics
+   - Mechanism & differentiation from alternatives
+   - Practical use cases & business improvements
+   - Market significance & strategic risks
+
+5. **Creates** a beautiful Markdown report with:
+   - Weekly overview & key trends
+   - Top 10 articles with 5D scores and deep analysis
+   - Strategic insights & industry implications
+   - Professional formatting ready for CEO review
+
+**Final Output**: A professional CEO briefing in Mandarin Chinese, generated every Friday
+
+## Key Features
 
 ### Critical Output Requirements
-- ✅ All content must be in **Mandarin Chinese** (except technical terms like "GPT", "Claude")
-- ✅ Article summaries must be in **paragraph format** (流畅的段落), NOT bullet points
-- ✅ Length: **500-600 Chinese characters per article** (enhanced analysis format)
-- ✅ Professional, executive-level tone
-- ✅ Factually accurate - no hallucinations
+- ✅ All content in **Mandarin Chinese** (technical terms like GPT, Claude in English)
+- ✅ Article summaries in **flowing paragraph format** (never bullet points)
+- ✅ **500-600 Chinese characters per article** with deep analysis
+- ✅ Professional, analytical-inspiring executive tone
+- ✅ Factually accurate with no hallucinations
 
-### New Report Generation Requirements (Updated Oct 2025)
-- ✅ **5D Scoring System**: Articles ranked by weighted scores (Market Impact 25%, Competitive Impact 20%, Strategic Relevance 20%, Operational Relevance 15%, Credibility 10%)
-- ✅ **Semantic Article Merging**: Similar/duplicate articles automatically merged via 0.85+ cosine similarity detection
-- ✅ **Deep Analysis Format** (500-600 chars, 3-4 paragraphs):
-  - **中心论点** (Central Argument): Core insight or breakthrough + key supporting data
-  - **数据和证据** (Data & Evidence): Quantified impact, performance metrics, market data with context
-  - **机制和对比** (Mechanism & Differentiation): How it works, why it's different from alternatives
-  - **实际影响和应用** (Practical Impact): Specific use cases, affected stakeholders, business improvements
-  - **市场意义与风险** (Market Significance & Risks): Industry implications, strategic insights, limitations/challenges
-- ✅ **No Ranking Display**: 5D scores used internally for sorting, not shown in final report
-- ✅ **Analytical-Inspiring Tone**: Balance between insights and critical thinking, avoid marketing language
+### 5D Scoring System
+- ✅ **Market Impact (25%)**: Industry-wide implications, market disruption potential
+- ✅ **Competitive Impact (20%)**: Effect on competitive landscape, market consolidation
+- ✅ **Strategic Relevance (20%)**: Alignment with CEO strategic priorities
+- ✅ **Operational Relevance (15%)**: Practical application to business operations
+- ✅ **Credibility (10%)**: Source reliability, evidence quality, verification status
 
-### Technical Requirements
+### Data Processing
+- ✅ **Semantic deduplication**: Similar articles automatically merged (0.85+ cosine similarity)
+- ✅ **Entity-based clustering**: Related topics grouped intelligently
+- ✅ **Source weighting**: Premium sources (McKinsey, Gartner) weighted higher
+- ✅ **Temporal filtering**: Recent articles prioritized (recency boost in scoring)
+
+### Technical Stack
 - Python 3.10+
 - Anthropic Claude API (Sonnet 4.5)
-- Web scraping (RSS + HTML)
-- Modular architecture (5 main components)
+- RSS feeds (100% automated, no web scraping)
+- Streamlit web interface for viewing reports
+- 61 news sources (expanded Oct 2025)
 
 ## Architecture Overview
 
 ```
-User Input → Category Selector → Web Scraper → News Evaluator → Article Paraphraser → Report Formatter → Final Report
+61 News Sources → Scraper → Tier 1 Filter → Tier 2 Batch Eval → Tier 3 5D Eval → Ranking → Paraphraser → Report Formatter → Final Report
 ```
 
-### The 5 Core Modules
+### Core Modules
 
-1. **Category Selector** (`modules/category_selector.py`)
-   - Interprets user preferences (e.g., "我想了解大模型和AI应用")
-   - Maps to structured categories with priorities
-   - Uses Claude to understand natural language input
+1. **Web Scraper** (`modules/web_scraper.py`)
+   - Fetches articles from 61 configured sources via RSS
+   - Supports parallel scraping with caching
+   - Returns: title, URL, content, publication date, source, language
 
-2. **Web Scraper** (`modules/web_scraper.py`)
-   - Scrapes from configured sources (机器之心, 量子位, TechCrunch AI, etc.)
-   - Supports RSS feeds and HTML scraping
-   - Caches articles to avoid re-scraping
-   - Returns: title, url, content, date, source
+2. **Article Filter** (`utils/article_filter.py`)
+   - Tier 1 pre-filtering based on keywords and relevance
+   - Quick keyword matching against category aliases
+   - Configurable scoring threshold (default: 3.0)
 
-3. **News Evaluator** (`modules/news_evaluator.py`)
-   - Scores articles on 4 dimensions: Impact, Relevance, Recency, Credibility
-   - Uses Claude with evaluation prompts
-   - Ranks articles and selects top 10-15
-   - Returns: scores, rationale, key takeaway (in Mandarin)
+3. **Batch Evaluator** (`modules/batch_evaluator.py`)
+   - Tier 2 quick LLM-based evaluation
+   - Scores 10 articles in parallel batches
+   - Configurable pass score (default: 6.0)
 
-4. **Article Paraphraser** (`modules/article_paraphraser.py`)
-   - Condenses full articles into executive summaries
-   - Output in flowing paragraph format (NOT bullet points)
-   - 150-250 Chinese characters
-   - Includes fact-checking to prevent hallucinations
-   - Returns: paraphrased content in Mandarin
+4. **News Evaluator** (`modules/news_evaluator.py`)
+   - Tier 3 deep evaluation with 5D scoring
+   - Full analysis of article impact, relevance, credibility
+   - Returns structured evaluation with scores and rationale
 
-5. **Report Formatter** (`modules/report_formatter.py`)
-   - Compiles all paraphrased articles into final report
-   - Generates executive summary (2-3 sentences)
-   - Generates key insights (3-5 strategic takeaways)
+5. **Scoring Engine** (`utils/scoring_engine.py`)
+   - Applies 5D weights to evaluation scores
+   - Calculates final weighted rank (0-10 scale)
+   - Handles deduplication and semantic clustering
+
+6. **Article Paraphraser** (`modules/article_paraphraser.py`)
+   - Condenses articles into 500-600 character deep analysis
+   - Multi-paragraph format with structured sections
+   - Mandarin Chinese output with professional tone
+
+7. **Report Formatter** (`modules/report_formatter.py`)
+   - Compiles all articles into final Markdown report
+   - Generates executive summary and key insights
    - Uses Jinja2 template for consistent formatting
-   - Output: Markdown (with optional HTML/PDF export)
 
 ## Project Structure
 
 ```
-ai_briefing_agent/
-├── CLAUDE.md                      # This file - project overview
+briefAI/
+├── README.md                      # Project overview and quick start
+├── CLAUDE.md                      # This file - detailed specification
+├── ARCHITECTURE.md                # System architecture & data flow
+├── PROMPTS.md                     # LLM prompt templates
+├── app.py                         # Streamlit web interface
+├── main.py                        # Legacy CLI orchestrator
+├── run_pipeline_with_categories.py # Pipeline runner with 5D scoring
+├── requirements.txt               # Python dependencies
+├── .env                          # API keys and configuration
 ├── config/
-│   ├── sources.json               # News source configurations
-│   ├── categories.json            # Category taxonomy
-│   └── report_template.md         # Report template (Jinja2)
+│   ├── sources.json              # 61 news sources configuration
+│   ├── categories.json           # Business category taxonomy
+│   ├── user_profile.md           # User preferences
+│   └── report_template.md        # Jinja2 report template
 ├── modules/
-│   ├── category_selector.py
-│   ├── web_scraper.py
-│   ├── news_evaluator.py
-│   ├── article_paraphraser.py
-│   └── report_formatter.py
+│   ├── category_selector.py      # Category parsing from user input
+│   ├── web_scraper.py            # Article scraping from 61 sources
+│   ├── article_filter.py         # Tier 1 pre-filtering
+│   ├── batch_evaluator.py        # Tier 2 batch LLM evaluation
+│   ├── news_evaluator.py         # Tier 3 5D evaluation
+│   ├── article_paraphraser.py    # 500-600 char deep analysis
+│   └── report_formatter.py       # Final report generation
 ├── utils/
-│   ├── claude_client.py           # Claude API wrapper
-│   ├── cache_manager.py           # Caching utilities
-│   └── logger.py
+│   ├── llm_client.py             # Anthropic API wrapper
+│   ├── llm_client_enhanced.py    # Enhanced LLM client with provider fallback
+│   ├── claude_client.py          # Backup Claude API client
+│   ├── cache_manager.py          # Article and evaluation caching
+│   ├── scoring_engine.py         # 5D weighting and ranking
+│   ├── context_retriever.py      # Context retrieval for search
+│   ├── provider_switcher.py      # LLM provider switching
+│   ├── category_loader.py        # Category loading utilities
+│   └── logger.py                 # Logging configuration
 ├── data/
-│   ├── cache/                     # Cached scraped articles
-│   └── reports/                   # Generated reports
-├── main.py                        # Main orchestrator
-├── requirements.txt
-└── .env                           # API keys and config
+│   ├── cache/                    # Cached articles & evaluations
+│   ├── reports/                  # Generated Markdown reports
+│   └── chroma_db/                # Vector database for semantic search
+├── docs/
+│   ├── CLAUDE_CLIENT_API.md      # API documentation
+│   ├── CATEGORY_SELECTOR_API.md  # Category selector API
+│   └── CLAUDE_CLIENT_QUICKREF.md # Quick reference guide
+└── logs/                         # Application logs
 ```
 
-## Documentation
+## Quick Start
 
-**READ THESE FILES FIRST** - They contain all the details you need:
+### Installation
 
-1. **`ARCHITECTURE.md`** - Complete system architecture, data flow, technology stack, and configuration examples
-
-2. **`PROMPTS.md`** - All Claude API prompt templates for each module (system prompts, user prompts, JSON formats)
-
-3. **`GUIDE.md`** - Step-by-step implementation guide with code examples, 8-day development plan, and deployment instructions
-
-## How to Get Started
-
-### Phase 1: Setup (Start Here)
 ```bash
-# 1. Create project structure
-mkdir -p briefAI/{config,modules,utils,data/{cache,reports},logs}
+# Clone repository and setup
 cd briefAI
-
-# 2. Create virtual environment
 python3 -m venv venv
-source venv/bin/activate  # or `venv\Scripts\activate` on Windows
+source venv/bin/activate
 
-# 3. Create requirements.txt
-cat > requirements.txt << EOF
-anthropic>=0.25.0
-requests>=2.31.0
-beautifulsoup4>=4.12.0
-lxml>=4.9.0
-feedparser>=6.0.10
-playwright>=1.40.0
-python-dateutil>=2.8.2
-jinja2>=3.1.2
-pyyaml>=6.0
-python-dotenv>=1.0.0
-EOF
-
-# 4. Install dependencies
+# Install dependencies
 pip install -r requirements.txt
 
-# 5. Create .env file
-cat > .env << EOF
-ANTHROPIC_API_KEY=your_api_key_here
-DEFAULT_CATEGORIES=大模型,AI应用,政策监管
-REPORT_OUTPUT_DIR=./data/reports
-CACHE_DIR=./data/cache
-LOG_LEVEL=INFO
-EOF
+# Configure API keys
+echo "ANTHROPIC_API_KEY=your_key_here" > .env
 ```
 
-### Phase 2: Build Core Components
+### Running the Pipeline
 
-**Start with the easiest module first** to validate the approach:
+```bash
+# Generate a new report with full pipeline (5D scoring, 500-600 char analysis)
+python3 run_pipeline_with_categories.py --top-n 12
 
-#### Step 1: Build Claude Client (`utils/claude_client.py`)
-- Wrapper for Anthropic API
-- Add retry logic and error handling
-- Implement caching for repeated calls
-- See implementation guide for code examples
-
-#### Step 2: Build Category Selector (`modules/category_selector.py`)
-- Load categories from `config/categories.json`
-- Use Claude to parse user input
-- Return structured category list
-- Test with: "我想了解大模型和AI应用"
-
-#### Step 3: Build RSS Scraper (simplest scraper)
-- Start with just RSS feeds (easiest)
-- Use `feedparser` library
-- Scrape from 机器之心 RSS feed
-- Cache results to avoid re-scraping
-
-#### Step 4: Build News Evaluator
-- Use evaluation prompts from templates doc
-- Score articles on 4 dimensions
-- Rank and select top articles
-
-#### Step 5: Build Article Paraphraser
-- CRITICAL: Output must be flowing paragraphs in Mandarin, NOT bullet points
-- Use paraphrase prompts from templates doc
-- Add fact-checking verification step
-- Test thoroughly to prevent hallucinations
-
-#### Step 6: Build Report Formatter
-- Use Jinja2 template from config
-- Generate executive summary with Claude
-- Generate key insights
-- Compile into final Markdown report
-
-#### Step 7: Build Main Orchestrator (`main.py`)
-- Connect all modules together
-- Add CLI interface with argparse
-- Implement workflow: select → scrape → evaluate → paraphrase → format
-- Add progress logging
-
-## Configuration Files to Create
-
-### `config/sources.json`
-```json
-{
-  "sources": [
-    {
-      "id": "jiqizhixin",
-      "name": "机器之心",
-      "url": "https://www.jiqizhixin.com",
-      "type": "rss",
-      "rss_url": "https://www.jiqizhixin.com/rss",
-      "enabled": true,
-      "categories": ["大模型", "AI应用", "研究突破"],
-      "language": "zh-CN",
-      "credibility_score": 9
-    },
-    {
-      "id": "qbitai",
-      "name": "量子位",
-      "url": "https://www.qbitai.com",
-      "type": "web",
-      "enabled": true,
-      "categories": ["大模型", "AI应用", "企业动态"],
-      "language": "zh-CN",
-      "credibility_score": 8
-    }
-  ]
-}
+# View reports on Streamlit web interface
+streamlit run app.py
 ```
 
-### `config/categories.json`
-See implementation guide for complete example with 7 categories.
+### Expected Output
 
-### `config/report_template.md`
-Jinja2 template with sections: 本周概览, 重点资讯 (by category), 关键洞察, 延伸阅读
+- **Location**: `data/reports/ai_briefing_YYYYMMDD_cn.md`
+- **Format**: Markdown with Mandarin Chinese content
+- **Size**: 10-15 articles with 5D ranking
+- **Analysis**: 500-600 characters per article
+- **Time**: ~5-10 minutes for complete pipeline
 
-## Testing Strategy
+## News Sources (61 Total)
 
-### Unit Tests
-- Test each module independently
-- Mock external dependencies (API calls, web requests)
-- Validate data structures and outputs
+### Official Company Blogs (6)
+- OpenAI, Anthropic, Google DeepMind, Meta AI, Microsoft AI, Hugging Face
 
-### Integration Test
-- Run end-to-end with 3-5 sample articles
-- Verify report format and Mandarin output quality
-- Check for hallucinations in paraphrased content
+### Industry Research (6)
+- McKinsey AI & Analytics, BCG, Deloitte, EY, PwC, Accenture
 
-### Manual Quality Checks
-- [ ] Verify factual accuracy against original articles
-- [ ] Check Mandarin language quality and grammar
-- [ ] Ensure paragraph format (not bullet points)
-- [ ] Validate all links work
-- [ ] Review executive summary relevance
+### Regional Tech News (11)
+- **Asia-Pacific**: TechInAsia, Rest of World, DealStreetAsia, e27, Nikkei Asia, SCMP
+- **Spain/Mexico**: Xataka, La Vanguardia, México Business News, América Economía, Entrepreneur Latin America
 
-## Success Criteria
+### General AI & Tech News (32)
+- TechCrunch, Techmeme, VentureBeat, CB Insights, Hacker News, Product Hunt, and 26 specialized newsletters
 
-- ✅ Generates report with 10-15 high-quality articles
-- ✅ All content in professional Mandarin Chinese
-- ✅ Article summaries are 150-250 characters, paragraph format
-- ✅ 95%+ factual accuracy (no hallucinations)
-- ✅ Complete workflow takes <30 minutes
-- ✅ Output ready for CEO by Friday
+**All sources use RSS feeds (100% automated, no fragile web scraping)**
 
-## Cost Estimation
+## Key Improvements (October 2025)
+
+✅ **Removed 6 broken Chinese sources** - Now 100% English language coverage
+✅ **Added 23 new premium sources** - Industry research, company blogs, regional coverage
+✅ **Implemented 5D scoring** - Sophisticated multi-dimensional ranking system
+✅ **Deep analysis format** - 500-600 character analysis (vs previous 150-250)
+✅ **Streamlit web interface** - Beautiful dashboard for report browsing
+✅ **Parser improvements** - Correctly extracts full deep analysis content
+
+## Configuration
+
+### Key Environment Variables
+
+```bash
+ANTHROPIC_API_KEY=your_api_key         # Required: Claude API access
+DEFAULT_CATEGORIES=fintech_ai,llm_tech,emerging_products
+REPORT_OUTPUT_DIR=./data/reports       # Report output location
+CACHE_DIR=./data/cache                 # Cache directory
+LOG_LEVEL=INFO                         # Logging level
+```
+
+### News Sources Configuration
+
+Edit `config/sources.json` to:
+- Add/remove sources
+- Adjust credibility scores (1-10)
+- Modify relevance weights (1-10)
+- Configure category mappings
+- Enable/disable specific sources
+
+### Category Configuration
+
+Edit `config/categories.json` to define:
+- Business categories (e.g., fintech_ai, llm_tech, emerging_products)
+- Keywords and aliases
+- Priority levels
+- Focus tags
+
+## Success Metrics
+
+✅ **Report Quality**: 10-15 high-quality articles per briefing
+✅ **Content**: All Mandarin Chinese with professional tone
+✅ **Analysis Depth**: 500-600 characters per article (3-4 paragraphs)
+✅ **Accuracy**: 95%+ factually accurate, no hallucinations
+✅ **Speed**: Complete pipeline in 5-10 minutes
+✅ **Format**: Professional Markdown, ready for executive distribution
+✅ **Ranking**: Articles ranked by 5D weighted scores
+
+## Cost Analysis
 
 **Per weekly report:**
-- ~60,000 tokens (input + output)
-- Cost: $0.50 - $1.00 per report
-- Monthly: ~$2-4
+- ~60,000-80,000 tokens (all processing)
+- Cost: $0.50-$1.00 per report
+- Monthly: ~$2-4 for weekly briefings
 
-Very affordable for weekly CEO briefings!
+**Very affordable for executive intelligence!**
 
-## Common Pitfalls to Avoid
+## Deployment
 
-1. **Don't use bullet points** in article summaries - requirement is flowing paragraphs
-2. **Always verify facts** - don't let Claude hallucinate
-3. **Handle Chinese encoding properly** - always use `encoding='utf-8'`
-4. **Respect rate limits** - add delays between API calls
-5. **Cache aggressively** - don't re-scrape or re-evaluate
-6. **Test prompts iteratively** - start simple, refine based on output
+### Local Development
+```bash
+streamlit run app.py --logger.level=debug
+# Opens at http://localhost:8501
+```
 
-## Development Timeline
-
-- **Day 1**: Project setup, configs, Claude client
-- **Day 2**: Category selector + RSS scraper
-- **Day 3**: News evaluator
-- **Day 4**: Article paraphraser (most critical component)
-- **Day 5**: Report formatter
-- **Day 6**: Main orchestrator + CLI
-- **Day 7**: Testing and refinement
-- **Day 8**: Deployment + automation setup
-
-## Next Steps
-
-1. **Read the three documentation files** in detail
-2. **Set up project structure** (Phase 1 above)
-3. **Start with Claude client** - get API working
-4. **Build modules incrementally** - test each one
-5. **Iterate on prompts** - refine based on output quality
-6. **Test with real data** - validate with CEO
-7. **Automate** - set up weekly cron job
-
-## Questions to Consider
-
-- Which news sources should we prioritize?
-- How many articles should each report include? (default: 10-15)
-- Should we track trends week-over-week?
-- Do we need PDF export or is Markdown sufficient?
-- Should reports be emailed automatically?
+### Production
+- Deploy on Streamlit Cloud (free tier available)
+- Configure scheduled pipelines (cron jobs)
+- Email reports automatically on Friday mornings
+- Archive reports for trend analysis
 
 ## Important Notes
 
-- This agent uses **Claude Sonnet 4.5** via Anthropic API
-- All outputs are in **Mandarin Chinese** (except technical terms)
-- Article summaries are **paragraph format**, never bullet points
-- The system is designed to run **weekly** (every Monday/Friday)
-- Focus on **quality over quantity** - better to have 10 great articles than 30 mediocre ones
+- ✅ System is **fully functional** and generating reports weekly
+- ✅ **61 English-language sources** providing global AI industry coverage
+- ✅ Reports in **Mandarin Chinese** with 500-600 character deep analysis
+- ✅ Uses **Claude Sonnet 4.5** for all intelligent processing
+- ✅ **Streamlit web interface** for viewing and searching reports
+- ✅ **100% RSS-based** (no fragile web scraping)
+- ✅ Regional focus on China, Indonesia, Philippines, Spain, Mexico
+
+## Troubleshooting
+
+**No articles found?**
+- Check `.env` file for valid `ANTHROPIC_API_KEY`
+- Verify internet connection for RSS feeds
+- Check `data/cache/` for cached articles
+
+**Low report quality?**
+- Adjust scoring thresholds in module configs
+- Review category definitions in `config/categories.json`
+- Check source weights in `config/sources.json`
+
+**LLM errors?**
+- Verify API key is active and has quota
+- Check rate limits (may need to add delays)
+- Review logs in `logs/` directory
+
+## Support & Documentation
+
+- **ARCHITECTURE.md** - Complete system design and data flow
+- **PROMPTS.md** - All LLM prompt templates used in the system
+- **README.md** - Quick start guide and project overview
+- **docs/** - Detailed API documentation for each module
 
 ---
 
-## Ready to Build?
-
-Start with the implementation guide and build incrementally. Test each module before moving to the next. The architecture is designed to be modular and maintainable.
-
-**Key principle**: Make it work first (MVP), then make it better (refinement).
-
-Good luck! 🚀
+**Status**: Production-ready | **Last Updated**: October 2025 | **Sources**: 61 | **Analysis**: 5D Scoring + 500-600 chars
