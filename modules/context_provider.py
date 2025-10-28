@@ -306,8 +306,9 @@ class ContextProvider:
 
 业务模式：[150-200字]"""
 
-            response = self.llm_client.call_claude(
-                prompt=prompt,
+            response = self.llm_client.chat(
+                system_prompt="You are a helpful assistant providing concise company background information for CEO briefings.",
+                user_message=prompt,
                 temperature=0.3,
                 max_tokens=400
             )
@@ -374,8 +375,9 @@ class ContextProvider:
 - 精准准确，不编造信息
 - 突出对业务的实际意义"""
 
-            response = self.llm_client.call_claude(
-                prompt=prompt,
+            response = self.llm_client.chat(
+                system_prompt="You are a helpful assistant explaining technology concepts for CEO briefings in simple, accessible language.",
+                user_message=prompt,
                 temperature=0.3,
                 max_tokens=300
             )
