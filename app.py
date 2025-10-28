@@ -18,6 +18,8 @@ from typing import List, Dict, Any, Optional
 import os
 from utils.provider_switcher import ProviderSwitcher
 from utils.context_retriever import ContextRetriever
+from utils.semantic_search import SemanticSearch
+from utils.cache_manager import CacheManager
 
 # ============================================================================
 # TRANSLATIONS - UI TEXT IN ENGLISH AND MANDARIN CHINESE
@@ -538,6 +540,169 @@ def search_archive(
         return results
     except Exception as e:
         return []
+
+
+def hybrid_search(
+    query: str,
+    articles: List[Dict[str, Any]],
+    weeks: int = 4,
+    semantic_weight: float = 0.3,
+    keyword_weight: float = 0.7,
+    lang: str = "zh"
+) -> List[Dict[str, Any]]:
+    """
+    Hybrid search combining keyword and semantic similarity matching.
+
+    Searches articles using both traditional keyword matching and semantic
+    similarity, combining results with configurable weights.
+
+    Args:
+        query: Search query text
+        articles: List of articles to search (from ContextRetriever or direct list)
+        weeks: Number of weeks for date filtering (if articles come from search_archive)
+        semantic_weight: Weight for semantic similarity (0.0-1.0)
+        keyword_weight: Weight for keyword matching (0.0-1.0)
+        lang: Language for output (zh/en)
+
+    Returns:
+        List of articles ranked by hybrid score (keyword + semantic)
+    """
+    if not articles:
+        return []
+
+    # Normalize weights
+    total_weight = semantic_weight + keyword_weight
+    if total_weight == 0:
+        return articles
+
+    semantic_norm = semantic_weight / total_weight
+    keyword_norm = keyword_weight / total_weight
+
+    # Initialize semantic search
+    cache_mgr = CacheManager()
+    semantic = SemanticSearch(cache_manager=cache_mgr)
+
+    # If semantic search not available, fall back to keyword-only
+    if not semantic.is_available():
+        return search_archive(query=query, weeks=weeks)
+
+    # Score all articles
+    scored_articles = []
+
+    for article in articles:
+        # Keyword relevance score (0-1)
+        keyword_score = 0.0
+        query_lower = query.lower()
+        title = article.get('title', '').lower()
+        content = article.get('paraphrased_content', '') or article.get('full_content', '')
+        content_lower = content.lower()
+
+        if query_lower in title:
+            keyword_score = 1.0
+        elif any(word in title for word in query_lower.split()):
+            keyword_score = 0.8
+        elif query_lower in content_lower:
+            keyword_score = 0.6
+        elif any(word in content_lower for word in query_lower.split()):
+            keyword_score = 0.4
+
+        # Semantic similarity score (0-1)
+        semantic_score = 0.0
+        combined_text = f"{title} {content[:500]}"
+        if combined_text.strip():
+            emb = semantic.get_embedding(combined_text)
+            query_emb = semantic.get_embedding(query)
+            if emb is not None and query_emb is not None:
+                semantic_score = semantic.cosine_similarity(emb, query_emb)
+                semantic_score = max(0, min(1, semantic_score))  # Normalize to [0,1]
+
+        # Combine scores
+        hybrid_score = (keyword_norm * keyword_score) + (semantic_norm * semantic_score)
+
+        article_scored = article.copy()
+        article_scored['keyword_score'] = keyword_score
+        article_scored['semantic_similarity'] = semantic_score
+        article_scored['hybrid_score'] = hybrid_score
+
+        scored_articles.append(article_scored)
+
+    # Sort by hybrid score
+    scored_articles.sort(key=lambda x: x['hybrid_score'], reverse=True)
+
+    return scored_articles
+
+
+def cluster_search_results(
+    articles: List[Dict[str, Any]],
+    similarity_threshold: float = 0.7
+) -> Dict[str, List[Dict[str, Any]]]:
+    """
+    Cluster search results by semantic similarity.
+
+    Groups similar articles together for better organization and insights.
+
+    Args:
+        articles: Articles to cluster
+        similarity_threshold: Threshold for grouping (0.7-0.95)
+
+    Returns:
+        Dict with clusters and metadata:
+        {
+            "clusters": [
+                {"title": "Cluster topic", "articles": [...], "size": 5},
+                ...
+            ],
+            "total_clusters": 3,
+            "articles_per_cluster": [5, 3, 2]
+        }
+    """
+    if not articles:
+        return {"clusters": [], "total_clusters": 0, "articles_per_cluster": []}
+
+    # Initialize semantic search
+    cache_mgr = CacheManager()
+    semantic = SemanticSearch(cache_manager=cache_mgr)
+
+    if not semantic.is_available():
+        # Fallback: each article is its own cluster
+        clusters = [
+            {
+                "title": f"Article {i+1}: {article.get('title', 'Untitled')[:50]}",
+                "articles": [article],
+                "size": 1
+            }
+            for i, article in enumerate(articles)
+        ]
+        return {
+            "clusters": clusters,
+            "total_clusters": len(clusters),
+            "articles_per_cluster": [1] * len(clusters)
+        }
+
+    # Use semantic clustering
+    article_clusters = semantic.cluster_by_similarity(
+        articles,
+        similarity_threshold=similarity_threshold
+    )
+
+    # Format clusters with titles
+    formatted_clusters = []
+    for i, cluster in enumerate(article_clusters, 1):
+        if cluster:
+            # Use the first article's title as cluster title
+            cluster_title = cluster[0].get('title', f'Cluster {i}')[:60]
+            formatted_clusters.append({
+                "title": f"Cluster {i}: {cluster_title}",
+                "articles": cluster,
+                "size": len(cluster)
+            })
+
+    return {
+        "clusters": formatted_clusters,
+        "total_clusters": len(formatted_clusters),
+        "articles_per_cluster": [c["size"] for c in formatted_clusters]
+    }
+
 
 # Legacy function names - kept for backward compatibility
 def search_multi_week_with_context_retriever(
