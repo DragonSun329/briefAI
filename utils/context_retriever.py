@@ -141,11 +141,34 @@ class ContextRetriever:
         logger.warning(f"Article {article_id} not found in report {date}")
         return None
 
+    def get_last_n_weeks_date_range(self, weeks: int = 4) -> tuple[Optional[str], Optional[str]]:
+        """
+        Get date range for the last N weeks
+
+        Args:
+            weeks: Number of weeks to go back (default: 4)
+
+        Returns:
+            Tuple of (date_from, date_to) in YYYY-MM-DD format
+        """
+        reports = self.list_available_reports()
+        if not reports:
+            return None, None
+
+        # Get latest and earliest dates from available reports
+        latest_date = datetime.strptime(reports[0]["date"], "%Y-%m-%d")
+
+        # Calculate date from (N weeks back from latest)
+        date_from = latest_date - timedelta(weeks=weeks)
+
+        return date_from.strftime("%Y-%m-%d"), latest_date.strftime("%Y-%m-%d")
+
     def search_by_keyword(
         self,
         keyword: str,
         date_from: Optional[str] = None,
         date_to: Optional[str] = None,
+        weeks: Optional[int] = None,
         search_fields: List[str] = None
     ) -> List[Dict[str, Any]]:
         """
@@ -155,6 +178,7 @@ class ContextRetriever:
             keyword: Search term (case-insensitive)
             date_from: Start date (YYYY-MM-DD) - optional
             date_to: End date (YYYY-MM-DD) - optional
+            weeks: Limit search to last N weeks - overrides date_from/date_to if specified
             search_fields: Fields to search in (default: ["title", "full_content"])
 
         Returns:
@@ -165,6 +189,10 @@ class ContextRetriever:
 
         keyword_lower = keyword.lower()
         results = []
+
+        # If weeks specified, auto-calculate date range
+        if weeks is not None:
+            date_from, date_to = self.get_last_n_weeks_date_range(weeks=weeks)
 
         # Get date range
         reports = self.list_available_reports()
@@ -198,7 +226,7 @@ class ContextRetriever:
                     article["report_date"] = report_date
                     results.append(article)
 
-        logger.info(f"Found {len(results)} articles matching '{keyword}'")
+        logger.info(f"Found {len(results)} articles matching '{keyword}' (weeks={weeks})")
         return results
 
     def search_by_entity(
@@ -206,7 +234,8 @@ class ContextRetriever:
         entity_name: str,
         entity_type: Optional[str] = None,
         date_from: Optional[str] = None,
-        date_to: Optional[str] = None
+        date_to: Optional[str] = None,
+        weeks: Optional[int] = None
     ) -> List[Dict[str, Any]]:
         """
         Search cached articles by entity
@@ -216,12 +245,17 @@ class ContextRetriever:
             entity_type: Optional entity type filter (companies, models, people, locations, other)
             date_from: Start date (YYYY-MM-DD) - optional
             date_to: End date (YYYY-MM-DD) - optional
+            weeks: Limit search to last N weeks - overrides date_from/date_to if specified
 
         Returns:
             List of matching articles
         """
         entity_lower = entity_name.lower()
         results = []
+
+        # If weeks specified, auto-calculate date range
+        if weeks is not None:
+            date_from, date_to = self.get_last_n_weeks_date_range(weeks=weeks)
 
         # Get reports in date range
         reports = self.list_available_reports()

@@ -466,33 +466,95 @@ def create_enriched_briefing_context(articles: List[Dict[str, str]]) -> str:
 
     return "\n".join(context_lines)
 
-def search_multi_week_with_context_retriever(
-    keyword: str,
+def search_archive(
+    query: str,
+    weeks: int = 4,
+    entity_type: Optional[str] = None,
     date_from: Optional[str] = None,
     date_to: Optional[str] = None
 ) -> List[Dict[str, Any]]:
     """
-    Search articles across multiple weeks using ContextRetriever
+    Smart unified archive search - supports both keyword and entity search
+
+    Intelligently detects whether query is an entity (company/model) or keyword phrase.
+    Searches across last N weeks (default 4 weeks for ~1 month coverage).
 
     Args:
-        keyword: Search term
-        date_from: Start date (YYYY-MM-DD) - optional
-        date_to: End date (YYYY-MM-DD) - optional
+        query: Search term (keyword phrase or entity name)
+        weeks: Number of weeks to search (default: 4 for 1 month)
+        entity_type: Optional entity type hint (companies, models, people, locations, other)
+        date_from: Start date (YYYY-MM-DD) - optional, overrides weeks if specified
+        date_to: End date (YYYY-MM-DD) - optional, overrides weeks if specified
 
     Returns:
         List of matching articles with report metadata
     """
     try:
         retriever = ContextRetriever()
-        results = retriever.search_by_keyword(
-            keyword=keyword,
-            date_from=date_from,
-            date_to=date_to,
-            search_fields=["title", "full_content"]
-        )
+
+        # If explicit dates provided, use them; otherwise use weeks param
+        if date_from is None and date_to is None and weeks is not None:
+            # Use weeks-based filtering
+            results = retriever.search_by_keyword(
+                keyword=query,
+                weeks=weeks,
+                search_fields=["title", "full_content"]
+            )
+
+            # Also try entity search if entity_type provided or if it looks like a company/model name
+            if entity_type is None:
+                # Auto-detect: if it's a short phrase (likely entity), also search by entity
+                if len(query.split()) <= 3:  # Single/dual/triple word phrases
+                    entity_results = retriever.search_by_entity(
+                        entity_name=query,
+                        weeks=weeks
+                    )
+                    # Merge entity results (avoiding duplicates)
+                    existing_titles = {r.get('title') for r in results}
+                    for r in entity_results:
+                        if r.get('title') not in existing_titles:
+                            results.append(r)
+            else:
+                # Search by specific entity type
+                entity_results = retriever.search_by_entity(
+                    entity_name=query,
+                    entity_type=entity_type,
+                    weeks=weeks
+                )
+                # Merge entity results
+                existing_titles = {r.get('title') for r in results}
+                for r in entity_results:
+                    if r.get('title') not in existing_titles:
+                        results.append(r)
+        else:
+            # Use explicit date range
+            results = retriever.search_by_keyword(
+                keyword=query,
+                date_from=date_from,
+                date_to=date_to,
+                search_fields=["title", "full_content"]
+            )
+
         return results
     except Exception as e:
         return []
+
+# Legacy function names - kept for backward compatibility
+def search_multi_week_with_context_retriever(
+    keyword: str,
+    date_from: Optional[str] = None,
+    date_to: Optional[str] = None
+) -> List[Dict[str, Any]]:
+    """
+    DEPRECATED: Use search_archive() instead.
+    Search articles across multiple weeks using ContextRetriever
+    """
+    return search_archive(
+        query=keyword,
+        date_from=date_from,
+        date_to=date_to,
+        weeks=None if (date_from or date_to) else 4
+    )
 
 def search_by_entity_with_context_retriever(
     entity_name: str,
@@ -501,29 +563,16 @@ def search_by_entity_with_context_retriever(
     date_to: Optional[str] = None
 ) -> List[Dict[str, Any]]:
     """
+    DEPRECATED: Use search_archive() instead.
     Search articles by entity (company, model, person, location)
-    across multiple weeks using ContextRetriever
-
-    Args:
-        entity_name: Name of entity to search for
-        entity_type: Type of entity (companies, models, people, locations, other)
-        date_from: Start date (YYYY-MM-DD) - optional
-        date_to: End date (YYYY-MM-DD) - optional
-
-    Returns:
-        List of articles mentioning the entity with report metadata
     """
-    try:
-        retriever = ContextRetriever()
-        results = retriever.search_by_entity(
-            entity_name=entity_name,
-            entity_type=entity_type,
-            date_from=date_from,
-            date_to=date_to
-        )
-        return results
-    except Exception as e:
-        return []
+    return search_archive(
+        query=entity_name,
+        entity_type=entity_type,
+        date_from=date_from,
+        date_to=date_to,
+        weeks=None if (date_from or date_to) else 4
+    )
 
 def format_multi_week_results(results: List[Dict[str, Any]], lang: str = "zh") -> str:
     """
