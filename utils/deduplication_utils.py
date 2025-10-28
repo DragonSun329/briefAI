@@ -246,7 +246,7 @@ class DeduplicationUtils:
         strategy: str = "prefer_higher_score"
     ) -> Dict[str, Any]:
         """
-        Merge two duplicate articles into one
+        Merge two duplicate articles into one, preserving ALL sources from both articles
 
         Args:
             article1: First article
@@ -254,8 +254,29 @@ class DeduplicationUtils:
             strategy: Merge strategy ('prefer_higher_score', 'prefer_recent', 'combine', 'smart_merge')
 
         Returns:
-            Merged article dictionary
+            Merged article dictionary with all_sources list containing ALL source names
         """
+        def collect_all_sources(article: Dict[str, Any]) -> List[str]:
+            """Collect all sources from article, including previously merged ones"""
+            sources = []
+
+            # If article has 'all_sources' list, use it
+            if 'all_sources' in article and isinstance(article['all_sources'], list):
+                sources.extend(article['all_sources'])
+
+            # Also check 'sources' field (for compatibility with smart_merge)
+            if 'sources' in article and isinstance(article['sources'], list):
+                for src in article['sources']:
+                    if src and src not in sources:
+                        sources.append(src)
+
+            # Add primary source
+            source = article.get('source', '')
+            if source and source not in sources:
+                sources.append(source)
+
+            return sources
+
         if strategy == "prefer_higher_score":
             # Keep the article with higher tier2_score
             score1 = article1.get('tier2_score', 0)
@@ -282,7 +303,15 @@ class DeduplicationUtils:
             merged['tier2_score'] = max(score1, score2)  # Keep the higher score
             merged['merged_with'] = [secondary.get('id')]
             merged['merge_strategy'] = 'smart_merge'
-            merged['sources'] = [primary.get('source'), secondary.get('source')]
+
+            # Collect ALL sources from both articles
+            all_sources = collect_all_sources(article1)
+            for src in collect_all_sources(article2):
+                if src not in all_sources:
+                    all_sources.append(src)
+
+            merged['all_sources'] = all_sources
+            merged['sources'] = all_sources  # Keep for backward compatibility
 
             return merged
 
@@ -293,12 +322,27 @@ class DeduplicationUtils:
             score2 = article2.get('tier2_score', 0)
             primary['tier2_score'] = (score1 + score2) / 2
             primary['merged_from'] = [article1.get('id'), article2.get('id')]
+
+            # Collect ALL sources from both articles
+            all_sources = collect_all_sources(article1)
+            for src in collect_all_sources(article2):
+                if src not in all_sources:
+                    all_sources.append(src)
+            primary['all_sources'] = all_sources
+
             return primary
 
         # For prefer strategies: copy primary and add merge metadata
         merged = primary.copy()
         merged['merged_with'] = secondary.get('id')
         merged['merge_strategy'] = strategy
+
+        # Collect ALL sources from both articles
+        all_sources = collect_all_sources(primary)
+        for src in collect_all_sources(secondary):
+            if src not in all_sources:
+                all_sources.append(src)
+        merged['all_sources'] = all_sources
 
         return merged
 
