@@ -574,9 +574,203 @@ def search_by_entity_with_context_retriever(
         weeks=None if (date_from or date_to) else 4
     )
 
+def filter_and_facet_results(
+    results: List[Dict[str, Any]],
+    source_filter: Optional[List[str]] = None,
+    min_score: Optional[float] = None,
+    max_score: Optional[float] = None,
+    date_from: Optional[str] = None,
+    date_to: Optional[str] = None,
+    lang: str = "zh"
+) -> Dict[str, Any]:
+    """
+    Filter search results by various criteria and return faceting information
+
+    Args:
+        results: List of articles to filter
+        source_filter: List of source names to include (if None, include all)
+        min_score: Minimum weighted score (0-10)
+        max_score: Maximum weighted score (0-10)
+        date_from: Start date (YYYY-MM-DD)
+        date_to: End date (YYYY-MM-DD)
+        lang: Language for output
+
+    Returns:
+        Dict with 'filtered_results' and 'facets' (source counts, date range, etc.)
+    """
+    filtered = results[:]
+
+    # Filter by source
+    if source_filter:
+        filtered = [r for r in filtered if r.get('source', '') in source_filter]
+
+    # Filter by score range
+    if min_score is not None:
+        filtered = [r for r in filtered if r.get('weighted_score', 0) >= min_score]
+    if max_score is not None:
+        filtered = [r for r in filtered if r.get('weighted_score', 10) <= max_score]
+
+    # Filter by date range
+    if date_from:
+        filtered = [r for r in filtered if r.get('report_date', '') >= date_from]
+    if date_to:
+        filtered = [r for r in filtered if r.get('report_date', '') <= date_to]
+
+    # Collect faceting information from original results
+    facets = {
+        "total_original": len(results),
+        "total_filtered": len(filtered),
+        "sources": {},
+        "score_range": {"min": 0, "max": 10},
+        "date_range": {}
+    }
+
+    # Count by source
+    for article in results:
+        source = article.get('source', 'Unknown')
+        facets["sources"][source] = facets["sources"].get(source, 0) + 1
+
+    # Find date range
+    if results:
+        dates = [r.get('report_date', '') for r in results if r.get('report_date')]
+        if dates:
+            facets["date_range"] = {
+                "earliest": min(dates),
+                "latest": max(dates),
+                "count": len(set(dates))
+            }
+
+    # Find actual score range
+    if results:
+        scores = [r.get('weighted_score', 0) for r in results if r.get('weighted_score')]
+        if scores:
+            facets["score_range"] = {
+                "min": min(scores),
+                "max": max(scores),
+                "avg": sum(scores) / len(scores)
+            }
+
+    return {
+        "filtered_results": filtered,
+        "facets": facets
+    }
+
+
+def format_enhanced_search_results(
+    results: List[Dict[str, Any]],
+    lang: str = "zh",
+    sort_by: str = "date",
+    min_score: Optional[float] = None,
+    show_paraphrase: bool = True
+) -> str:
+    """
+    Enhanced formatting for search results with 5D scores, metadata, and visual hierarchy
+
+    Args:
+        results: List of articles from ContextRetriever or search_archive()
+        lang: Language for display (zh/en)
+        sort_by: Sort order - 'date' (newest first), 'score' (highest score first), 'relevance' (title match)
+        min_score: Filter articles by minimum weighted score (0-10)
+        show_paraphrase: Whether to show paraphrased content summary
+
+    Returns:
+        Formatted markdown string with enhanced styling
+    """
+    if not results:
+        return "没有找到匹配的文章。" if lang == "zh" else "No articles found."
+
+    # Filter by minimum score if provided
+    if min_score is not None:
+        results = [r for r in results if r.get('weighted_score', 0) >= min_score]
+        if not results:
+            return (f"没有找到符合最低评分 {min_score} 的文章。" if lang == "zh"
+                    else f"No articles found with minimum score {min_score}.")
+
+    # Sort results
+    if sort_by == "score":
+        results = sorted(results, key=lambda x: x.get('weighted_score', 0), reverse=True)
+    elif sort_by == "relevance":
+        # Already in search relevance order, keep as-is
+        pass
+    else:  # date (default)
+        results = sorted(results, key=lambda x: x.get('report_date', ''), reverse=True)
+
+    output_lines = []
+
+    # Header with result count and filters info
+    header_text = f"找到 {len(results)} 篇相关文章" if lang == "zh" else f"Found {len(results)} relevant articles"
+    filter_info = []
+    if sort_by == "score":
+        filter_info.append(f"(按评分排序)" if lang == "zh" else "(sorted by score)")
+    if min_score:
+        filter_info.append(f"(最低分数: {min_score})" if lang == "zh" else f"(min score: {min_score})")
+
+    if filter_info:
+        header_text += " " + " ".join(filter_info)
+    output_lines.append(f"## {header_text}\n")
+
+    # Group by report date for better organization
+    by_date = {}
+    for article in results:
+        date = article.get("report_date", "Unknown")
+        if date not in by_date:
+            by_date[date] = []
+        by_date[date].append(article)
+
+    # Display articles grouped by date
+    for date in sorted(by_date.keys(), reverse=True):
+        output_lines.append(f"### 📅 {date}")
+        output_lines.append("")
+
+        for idx, article in enumerate(by_date[date], 1):
+            # Article title with ranking indicator
+            title = article.get('title', 'Untitled')
+            rank_badge = ""
+            if sort_by == "score" and article.get('weighted_score'):
+                rank_badge = f" [{article.get('weighted_score'):.1f}/10]"
+            output_lines.append(f"**{idx}. {title}{rank_badge}**")
+
+            # Source and URL metadata
+            meta_parts = []
+            if article.get('source'):
+                meta_parts.append(f"📰 {article['source']}" if lang == "zh" else f"📰 {article['source']}")
+            if article.get('url'):
+                meta_parts.append(f"[链接]({article['url']})" if lang == "zh" else f"[Link]({article['url']})")
+
+            if meta_parts:
+                output_lines.append(" | ".join(meta_parts))
+
+            # 5D Scores if available
+            if article.get('evaluation') and article.get('evaluation').get('scores'):
+                scores = article['evaluation']['scores']
+                score_line = ""
+                if lang == "zh":
+                    score_line = f"📊 评分 - 市场影响: {scores.get('market_impact', 0):.1f} | 竞争影响: {scores.get('competitive_impact', 0):.1f} | 战略相关性: {scores.get('strategic_relevance', 0):.1f}"
+                else:
+                    score_line = f"📊 Scores - Market: {scores.get('market_impact', 0):.1f} | Competitive: {scores.get('competitive_impact', 0):.1f} | Strategic: {scores.get('strategic_relevance', 0):.1f}"
+                output_lines.append(score_line)
+
+            # Credibility score
+            if article.get('credibility_score'):
+                cred_score = article.get('credibility_score')
+                output_lines.append(f"✅ 可信度: {cred_score}/10" if lang == "zh" else f"✅ Credibility: {cred_score}/10")
+
+            # Paraphrased content summary if available
+            if show_paraphrase and article.get('paraphrased_content'):
+                content = article['paraphrased_content']
+                # Show first 300 characters as summary
+                preview = content[:300] + ("..." if len(content) > 300 else "")
+                output_lines.append("")
+                output_lines.append(f"> {preview}")
+
+            output_lines.append("")
+
+    return "\n".join(output_lines)
+
+
 def format_multi_week_results(results: List[Dict[str, Any]], lang: str = "zh") -> str:
     """
-    Format multi-week search results for display
+    Format multi-week search results for display (legacy - uses enhanced formatter)
 
     Args:
         results: List of articles from ContextRetriever
@@ -585,44 +779,8 @@ def format_multi_week_results(results: List[Dict[str, Any]], lang: str = "zh") -
     Returns:
         Formatted markdown string
     """
-    if not results:
-        return "没有找到匹配的文章。" if lang == "zh" else "No articles found."
-
-    output_lines = []
-    output_lines.append(f"## 找到 {len(results)} 篇相关文章\n" if lang == "zh" else f"## Found {len(results)} relevant articles\n")
-
-    # Group by date
-    by_date = {}
-    for article in results:
-        date = article.get("report_date", "Unknown")
-        if date not in by_date:
-            by_date[date] = []
-        by_date[date].append(article)
-
-    # Display grouped by date
-    for date in sorted(by_date.keys(), reverse=True):
-        output_lines.append(f"### 📅 {date}")
-        output_lines.append("")
-
-        for article in by_date[date]:
-            output_lines.append(f"**{article.get('title', 'Untitled')}**")
-
-            meta_parts = []
-            if article.get('source'):
-                meta_parts.append(f"来源: {article['source']}" if lang == "zh" else f"Source: {article['source']}")
-            if article.get('url'):
-                meta_parts.append(f"[URL]({article['url']})")
-
-            if meta_parts:
-                output_lines.append(" | ".join(meta_parts))
-
-            if article.get('credibility_score'):
-                score = article.get('credibility_score')
-                output_lines.append(f"可信度: {score}/10" if lang == "zh" else f"Credibility: {score}/10")
-
-            output_lines.append("")
-
-    return "\n".join(output_lines)
+    # Use enhanced formatter with default settings
+    return format_enhanced_search_results(results, lang=lang, sort_by="date", show_paraphrase=False)
 
 def load_latest_briefing() -> Optional[Dict[str, Any]]:
     """Load the latest briefing from data/reports directory"""
