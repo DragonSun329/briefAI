@@ -1263,12 +1263,113 @@ URL: [链接]
     except Exception as e:
         return f"{t('chat_error', lang)}: {str(e)}"
 
+def enrich_qa_context(
+    question: str,
+    articles: List[Dict[str, str]],
+    briefing_content: str
+) -> str:
+    """
+    Enrich Q&A context with Context Provider data and optional URL fetching
+
+    Smart routing:
+    - Simple questions → Use paraphrase only
+    - Company/tech questions → Add Context Provider data
+    - Detailed questions → Optionally fetch full article content
+
+    Args:
+        question: User's question
+        articles: List of article dicts with title, url, summary
+        briefing_content: Basic briefing context
+
+    Returns:
+        Enriched context string with company/tech background
+    """
+    enriched_parts = [briefing_content]
+
+    # Detect if question asks about companies or technologies
+    company_keywords = ['公司', 'company', 'business', '业务', '商业模式', '收入', '创始']
+    tech_keywords = ['技术', 'technology', 'principle', '原理', 'how does', '如何工作', '实现']
+
+    question_lower = question.lower()
+    asks_about_company = any(kw in question_lower for kw in company_keywords)
+    asks_about_tech = any(kw in question_lower for kw in tech_keywords)
+
+    # Extract potential entities from question
+    entities_in_question = set()
+    common_companies = ['anthropic', 'openai', 'google', 'deepmind', 'meta', 'microsoft',
+                       'amazon', 'apple', 'nvidia', 'hugging face', 'midjourney', 'cohere']
+    for company in common_companies:
+        if company in question_lower:
+            entities_in_question.add(company.title())
+
+    # If asking about companies/tech, fetch Context Provider data
+    if (asks_about_company or asks_about_tech) and entities_in_question:
+        try:
+            from modules.context_provider import ContextProvider
+            from utils.llm_client_enhanced import LLMClient
+
+            context_provider = ContextProvider(llm_client=LLMClient())
+            enriched_parts.append("\n\n# 补充背景信息\n")
+
+            for entity in entities_in_question:
+                if asks_about_company:
+                    company_ctx = context_provider.get_company_context(entity)
+                    if company_ctx:
+                        enriched_parts.append(f"\n## {entity} 公司背景")
+                        enriched_parts.append(f"**背景**: {company_ctx.get('background', '')}")
+                        enriched_parts.append(f"**业务模式**: {company_ctx.get('business_model', '')}")
+
+                if asks_about_tech:
+                    # Try to find tech mentions in articles about this company
+                    tech_ctx = context_provider.get_technology_context(entity, entity)
+                    if tech_ctx:
+                        enriched_parts.append(f"\n## {entity} 技术原理")
+                        enriched_parts.append(f"**原理**: {tech_ctx}")
+
+        except Exception as e:
+            logger.warning(f"Failed to enrich context with Context Provider: {e}")
+
+    # Optionally fetch full article content for detailed questions
+    # (Only if question is very specific and requests details)
+    detail_keywords = ['详细', 'detail', 'explain', '解释', 'how', '为什么', 'why']
+    asks_for_details = any(kw in question_lower for kw in detail_keywords)
+
+    if asks_for_details and articles and entities_in_question:
+        # Try to fetch one relevant article's full content
+        try:
+            # Find most relevant article by checking if title matches question
+            best_match = None
+            for article in articles[:3]:  # Check top 3 articles only
+                title_lower = article.get('title', '').lower()
+                if any(entity.lower() in title_lower for entity in entities_in_question):
+                    best_match = article
+                    break
+
+            if best_match and best_match.get('url'):
+                # Note: WebFetch would be called here in production
+                # For now, we indicate that full content could be fetched
+                enriched_parts.append(f"\n\n# 相关文章 URL - {best_match.get('title')}")
+                enriched_parts.append(f"URL: {best_match['url']}")
+                enriched_parts.append("(如需更多细节，可以访问原文)")
+
+        except Exception as e:
+            logger.warning(f"Failed to fetch full article content: {e}")
+
+    return "\n".join(enriched_parts)
+
+
 def answer_question_about_briefing(question: str, briefing_content: str, lang: str = "en") -> str:
-    """Use LLM to answer questions about the briefing with deep analysis"""
+    """Use LLM to answer questions about the briefing with deep analysis and enriched context"""
     if not st.session_state.provider_switcher:
         return t("chat_error", lang)
 
     try:
+        # Parse articles from markdown to get structured data
+        articles = parse_articles_from_markdown(briefing_content)
+
+        # Enrich context with Context Provider and optional URL fetching
+        enriched_content = enrich_qa_context(question, articles, briefing_content)
+
         system_prompt = f"""你是一位AI行业分析专家。你需要回答关于AI行业周报的问题。
 
 关键职责:
@@ -1277,22 +1378,25 @@ def answer_question_about_briefing(question: str, briefing_content: str, lang: s
 3. 如果用户提问含混，应该提供多角度的分析
 4. 引用具体的文章标题和来源
 5. 深入分析而非仅重复摘要
+6. **如果提供了补充背景信息，请优先使用这些信息回答**
+7. **如果提供了原文详细内容，请从中提取关键事实和数据**
 
 回答要求:
-- 准确引用文章内容
+- 准确引用文章内容和补充背景
 - 提供具体的数据、数字或事实
 - 解释因果关系和逻辑
 - 必要时可以从多篇文章综合分析
+- 如果信息不足以回答问题，请明确指出需要哪些补充信息
 - 使用中文回答，保持专业且易懂的语气
 
-以下是本周的文章内容:
+以下是本周的文章内容（包含补充背景信息）:
 
-{briefing_content}"""
+{enriched_content}"""
 
         response = st.session_state.provider_switcher.query(
             prompt=question,
             system_prompt=system_prompt,
-            max_tokens=1024,
+            max_tokens=1500,  # Increased for richer responses
             temperature=0.7
         )
         return response
