@@ -120,13 +120,9 @@ TRANSLATIONS = {
         "en": "Assistant",
         "zh": "助手"
     },
-    "multi_week_search": {
-        "en": "Multi-Week Search",
-        "zh": "多周搜索"
-    },
-    "entity_search": {
-        "en": "Entity Search",
-        "zh": "实体搜索"
+    "advanced_search": {
+        "en": "Advanced Search",
+        "zh": "高级搜索"
     },
     "date_range": {
         "en": "Date Range",
@@ -1202,12 +1198,11 @@ with left_col:
 with right_col:
     st.markdown("### 🤖 AI Assistant")
 
-    # Mode selector with support for three search types + ask
+    # Mode selector - consolidated to 3 modes: This Week, Advanced Search, Ask Question
     st.markdown(f"<div class='mode-selector'>", unsafe_allow_html=True)
     mode_options = {
         "this_week": t('mode_search', st.session_state.language),
-        "multi_week": t('multi_week_search', st.session_state.language),
-        "entity": t('entity_search', st.session_state.language),
+        "advanced_search": t('advanced_search', st.session_state.language),
         "ask": t('mode_ask', st.session_state.language)
     }
 
@@ -1226,6 +1221,7 @@ with right_col:
     search_params = {}
 
     if st.session_state.current_mode == "this_week":
+        # This Week Search: Simple, single searchbox
         user_input = st.text_input(
             "Search / 搜索",
             placeholder=t('unified_input_search', st.session_state.language),
@@ -1234,77 +1230,57 @@ with right_col:
         )
         st.caption(t('search_help', st.session_state.language))
 
-    elif st.session_state.current_mode == "multi_week":
-        col1, col2 = st.columns(2)
-        with col1:
-            # Default to last 4 weeks
-            default_from = datetime.now() - timedelta(days=28)
-            date_from = st.date_input(
-                f"{t('date_range', st.session_state.language)} - {t('mode_search', st.session_state.language).split()[0]}",
-                value=default_from,
-                key="date_from",
-                label_visibility="collapsed"
-            )
-        with col2:
-            date_to = st.date_input(
-                f"{t('date_range', st.session_state.language)} - {t('mode_ask', st.session_state.language)}",
-                value=datetime.now(),
-                key="date_to",
-                label_visibility="collapsed"
-            )
+    elif st.session_state.current_mode == "advanced_search":
+        # Advanced Search: Unified multi-week + entity search with all filter options
 
+        # Main search input
         user_input = st.text_input(
-            "Multi-Week Search / 多周搜索",
-            placeholder=t('unified_input_search', st.session_state.language),
-            key="multiweek_search_input",
+            "Search / 搜索",
+            placeholder="Keyword, Company, Model, Person / 关键词、公司、模型、人物",
+            key="advanced_search_input",
             label_visibility="collapsed"
         )
-        st.caption(f"🔍 {t('search_help', st.session_state.language)}")
-        search_params['date_from'] = date_from
-        search_params['date_to'] = date_to
 
-    elif st.session_state.current_mode == "entity":
-        col1, col2 = st.columns(2)
-        with col1:
+        # Optional filters in expander
+        with st.expander("🔧 " + ("高级过滤器" if st.session_state.language == "zh" else "Advanced Filters"), expanded=False):
+            # Entity type filter (optional)
             entity_type = st.selectbox(
                 t('entity_type', st.session_state.language),
-                ["companies", "models", "people", "locations", "other"],
+                ["any", "companies", "models", "people", "locations", "other"],
                 format_func=lambda x: {
+                    "any": "Any / 任何" if st.session_state.language == "zh" else "Any",
                     "companies": t('companies', st.session_state.language),
-                    "models": "Models",
+                    "models": "Models / 模型" if st.session_state.language == "zh" else "Models",
                     "people": t('people', st.session_state.language),
                     "locations": t('locations', st.session_state.language),
                     "other": t('other', st.session_state.language)
                 }[x],
-                key="entity_type_selector",
-                label_visibility="collapsed"
-            )
-        with col2:
-            default_from = datetime.now() - timedelta(days=28)
-            date_from = st.date_input(
-                f"{t('date_range', st.session_state.language)} - From",
-                value=default_from,
-                key="entity_date_from",
-                label_visibility="collapsed"
+                key="advanced_entity_type",
+                help="Filter by entity type (optional) / 按实体类型过滤（可选）"
             )
 
-        date_to = st.date_input(
-            f"{t('date_range', st.session_state.language)} - To",
-            value=datetime.now(),
-            key="entity_date_to",
-            label_visibility="collapsed"
-        )
+            # Date range filter
+            col1, col2 = st.columns(2)
+            with col1:
+                default_from = datetime.now() - timedelta(days=28)
+                date_from = st.date_input(
+                    "From / 从",
+                    value=default_from,
+                    key="advanced_date_from"
+                )
+            with col2:
+                date_to = st.date_input(
+                    "To / 至",
+                    value=datetime.now(),
+                    key="advanced_date_to"
+                )
 
-        user_input = st.text_input(
-            "Entity Search / 实体搜索",
-            placeholder="e.g., OpenAI, GPT-4, Yann LeCun / 例如：OpenAI、GPT-4、Yann LeCun",
-            key="entity_search_input",
-            label_visibility="collapsed"
-        )
-        st.caption(f"🔍 {t('search_help', st.session_state.language)}")
-        search_params['entity_type'] = entity_type
+        # Store search parameters
+        search_params['entity_type'] = None if entity_type == "any" else entity_type
         search_params['date_from'] = date_from
         search_params['date_to'] = date_to
+
+        st.caption(f"🔍 {t('search_help', st.session_state.language)}")
 
     else:  # Ask mode
         user_input = st.text_input(
@@ -1342,34 +1318,31 @@ with right_col:
             else:
                 st.warning(t('no_results', st.session_state.language))
 
-        elif st.session_state.current_mode == "multi_week":
-            # Multi-week search: Search across multiple briefings using ContextRetriever (Phase B)
-            with st.spinner(f"🔍 {t('multi_week_search', st.session_state.language)}..."):
-                results = search_multi_week_with_context_retriever(
-                    keyword=user_input,
+        elif st.session_state.current_mode == "advanced_search":
+            # Advanced Search: Unified search across multiple weeks with optional entity filtering
+            with st.spinner(f"🔍 {t('advanced_search', st.session_state.language)}..."):
+                # Use the unified search_archive function which handles both keyword and entity search
+                results = search_archive(
+                    query=user_input,
+                    entity_type=search_params.get('entity_type'),
                     date_from=search_params['date_from'].strftime("%Y-%m-%d"),
-                    date_to=search_params['date_to'].strftime("%Y-%m-%d")
+                    date_to=search_params['date_to'].strftime("%Y-%m-%d"),
+                    weeks=None  # Use explicit dates instead of weeks parameter
                 )
 
-            st.markdown(f"**{t('search_results_title', st.session_state.language)}**")
-            if results:
-                # Format and display results grouped by date
-                formatted_results = format_multi_week_results(results, st.session_state.language)
-                st.markdown(formatted_results)
-            else:
-                st.warning(t('no_results', st.session_state.language))
+            # Display results with entity type badge if filtered
+            title_parts = [t('search_results_title', st.session_state.language)]
+            if search_params.get('entity_type'):
+                entity_label = {
+                    "companies": t('companies', st.session_state.language),
+                    "models": "Models",
+                    "people": t('people', st.session_state.language),
+                    "locations": t('locations', st.session_state.language),
+                    "other": t('other', st.session_state.language)
+                }.get(search_params['entity_type'], search_params['entity_type'])
+                title_parts.append(f"({entity_label})")
 
-        elif st.session_state.current_mode == "entity":
-            # Entity search: Search for specific companies, people, models, locations (Phase B)
-            with st.spinner(f"🔍 {t('entity_search', st.session_state.language)}..."):
-                results = search_by_entity_with_context_retriever(
-                    entity_name=user_input,
-                    entity_type=search_params['entity_type'],
-                    date_from=search_params['date_from'].strftime("%Y-%m-%d"),
-                    date_to=search_params['date_to'].strftime("%Y-%m-%d")
-                )
-
-            st.markdown(f"**{t('entity_search', st.session_state.language)}: {user_input}**")
+            st.markdown(f"**{' '.join(title_parts)}**")
             if results:
                 # Format and display results grouped by date
                 formatted_results = format_multi_week_results(results, st.session_state.language)
