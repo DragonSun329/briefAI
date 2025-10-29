@@ -24,6 +24,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from modules.web_scraper import WebScraper
 from utils.cache_manager import CacheManager
+from utils.checkpoint_manager import CheckpointManager
 from utils.article_filter import ArticleFilter
 from modules.batch_evaluator import BatchEvaluator
 from modules.news_evaluator import NewsEvaluator
@@ -34,7 +35,7 @@ from utils.category_loader import load_categories, get_company_context
 from loguru import logger
 
 
-def run_full_pipeline(category_ids=None, top_n=12, early_exit=False):
+def run_full_pipeline(category_ids=None, top_n=12, early_exit=False, resume=False, force_restart=False):
     """
     Run complete pipeline from scraping to final report.
 
@@ -66,20 +67,56 @@ def run_full_pipeline(category_ids=None, top_n=12, early_exit=False):
 
     # Initialize components
     cache_mgr = CacheManager()
+    checkpoint_mgr = CheckpointManager()
     llm_client = LLMClient()
 
     # =========================================================================
-    # PHASE 1: SCRAPE - Fresh articles from 44 sources
+    # CHECKPOINT: Check for existing checkpoint
     # =========================================================================
-    print("\n[1/6] SCRAPING fresh articles from 44 sources...")
+    if resume and not force_restart:
+        checkpoint_info = checkpoint_mgr.get_checkpoint_info()
+        if checkpoint_info:
+            print("\n" + "=" * 80)
+            print("📋 CHECKPOINT FOUND - RESUME MODE")
+            print("=" * 80)
+            print(f"  Phase: {checkpoint_info['phase']}")
+            print(f"  Progress: {checkpoint_info['progress']} ({checkpoint_info['progress_percent']}%)")
+            print(f"  Articles: {checkpoint_info['articles_count']}")
+            print(f"  Age: {checkpoint_info['age']}")
+            print(f"  Run ID: {checkpoint_info['run_id']}")
+            print("=" * 80 + "\n")
+        else:
+            print("\n⚠️  No valid checkpoint found - starting fresh scrape\n")
+    elif force_restart:
+        print("\n🔄 Force restart mode - ignoring any existing checkpoint\n")
+        checkpoint_mgr.clear_checkpoint()
+
+    # =========================================================================
+    # PHASE 1: SCRAPE - Fresh articles from 69 sources
+    # =========================================================================
+    print("\n[1/6] SCRAPING articles from 69 sources...")
     print("      ├─ RSS feeds: ArXiv, Towards Data Science, KDnuggets, etc.")
-    print("      ├─ Web scraping: Product Hunt, Hacker News, BetaList, etc.")
+    print("      ├─ Official blogs: OpenAI, Anthropic, DeepMind, Mistral, etc.")
+    print("      ├─ Fintech sources: Fintechnews SG/ID, PaymentsNerd, etc.")
     print("      └─ Time window: Last 7 days")
+    if resume:
+        print("      └─ Resume: Enabled (will skip completed sources)")
 
     try:
         scraper = WebScraper(cache_manager=cache_mgr)
-        articles = scraper.scrape_all(days_back=7, use_cache=False)
+        articles = scraper.scrape_all(
+            days_back=7,
+            use_cache=False,
+            resume=resume and not force_restart,
+            checkpoint_manager=checkpoint_mgr
+        )
         print(f"      ✓ Scraped {len(articles)} articles\n")
+
+        # Clear checkpoint after successful scraping phase
+        if resume:
+            logger.info("Scraping phase completed - clearing checkpoint")
+            checkpoint_mgr.clear_checkpoint()
+
     except Exception as e:
         logger.error(f"Scraping failed: {e}")
         return []
@@ -283,6 +320,16 @@ if __name__ == "__main__":
         action="store_true",
         help="Exit after Tier 2 (skip expensive Tier 3 5D evaluation)"
     )
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="Resume from checkpoint if available (skips completed sources)"
+    )
+    parser.add_argument(
+        "--force-restart",
+        action="store_true",
+        help="Force restart (ignore any existing checkpoint and start fresh)"
+    )
 
     args = parser.parse_args()
 
@@ -290,7 +337,9 @@ if __name__ == "__main__":
     final_articles = run_full_pipeline(
         category_ids=args.categories,
         top_n=args.top_n,
-        early_exit=args.early_exit
+        early_exit=args.early_exit,
+        resume=args.resume,
+        force_restart=args.force_restart
     )
 
     # Optionally save results

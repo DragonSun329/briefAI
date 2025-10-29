@@ -13,9 +13,10 @@ from typing import List, Dict, Any, Optional
 from pathlib import Path
 from bs4 import BeautifulSoup
 from loguru import logger
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed, wait, FIRST_COMPLETED
 
 from utils.cache_manager import CacheManager
+from utils.checkpoint_manager import CheckpointManager
 
 
 class WebScraper:
@@ -62,10 +63,12 @@ class WebScraper:
         use_cache: bool = True,
         query_plan: Dict[str, Any] = None,
         enable_parallel: bool = True,
-        max_workers: int = 8
+        max_workers: int = 8,
+        resume: bool = False,
+        checkpoint_manager: Optional[CheckpointManager] = None
     ) -> List[Dict[str, Any]]:
         """
-        Scrape articles from all sources (with optional parallel execution)
+        Scrape articles from all sources (with optional parallel execution and resume)
 
         Args:
             categories: Filter by categories (None = all categories)
@@ -74,6 +77,8 @@ class WebScraper:
             query_plan: Query plan from ACE-Planner for keyword filtering
             enable_parallel: Use parallel scraping (default: True)
             max_workers: Number of parallel threads (default: 8)
+            resume: If True, resume from checkpoint if available (default: False)
+            checkpoint_manager: Optional CheckpointManager instance for resume functionality
 
         Returns:
             List of article dictionaries
@@ -90,25 +95,54 @@ class WebScraper:
             ]
             logger.info(f"Filtered to {len(sources_to_scrape)} sources matching categories")
 
+        # Handle checkpoint resume logic
+        if resume and checkpoint_manager:
+            checkpoint_info = checkpoint_manager.get_checkpoint_info()
+            if checkpoint_info:
+                logger.info(
+                    f"Resume mode: Checkpoint found with {checkpoint_info['progress']} sources completed "
+                    f"({checkpoint_info['progress_percent']}%) - Age: {checkpoint_info['age']}"
+                )
+
+                # Get remaining sources to scrape
+                sources_to_scrape = checkpoint_manager.get_remaining_sources(sources_to_scrape)
+                logger.info(f"Resuming with {len(sources_to_scrape)} remaining sources")
+
+                # Load cached articles from completed sources
+                completed_source_ids = checkpoint_manager.get_completed_sources()
+                for source_id in completed_source_ids:
+                    cache_key = f"source_{source_id}_7days"
+                    cached_articles = self.cache_manager.get(cache_key, max_age_hours=24)
+                    if cached_articles:
+                        all_articles.extend(cached_articles)
+                        logger.debug(f"Loaded {len(cached_articles)} articles from cache for {source_id}")
+
+                logger.info(f"Resumed with {len(all_articles)} cached articles from completed sources")
+            else:
+                logger.info("No valid checkpoint found - starting fresh scrape")
+
         if enable_parallel and len(sources_to_scrape) > 1:
             # Parallel scraping with ThreadPoolExecutor
             logger.info(f"Starting parallel scraping ({len(sources_to_scrape)} sources, max_workers={max_workers})")
-            all_articles = self._scrape_all_parallel(
+            new_articles = self._scrape_all_parallel(
                 sources_to_scrape,
                 cutoff_date,
                 use_cache,
                 query_plan,
-                max_workers
+                max_workers,
+                checkpoint_manager=checkpoint_manager
             )
+            all_articles.extend(new_articles)
         else:
             # Sequential scraping (fallback)
             logger.info(f"Starting sequential scraping ({len(sources_to_scrape)} sources)")
-            all_articles = self._scrape_all_sequential(
+            new_articles = self._scrape_all_sequential(
                 sources_to_scrape,
                 cutoff_date,
                 use_cache,
                 query_plan
             )
+            all_articles.extend(new_articles)
 
         logger.info(f"Total articles scraped: {len(all_articles)}")
         return all_articles
@@ -119,10 +153,12 @@ class WebScraper:
         cutoff_date: datetime,
         use_cache: bool,
         query_plan: Dict[str, Any],
-        max_workers: int
+        max_workers: int,
+        per_source_timeout: int = 60,
+        checkpoint_manager: Optional[CheckpointManager] = None
     ) -> List[Dict[str, Any]]:
         """
-        Scrape multiple sources in parallel using ThreadPoolExecutor
+        Scrape multiple sources in parallel using ThreadPoolExecutor with per-source timeout
 
         Args:
             sources: List of sources to scrape
@@ -130,39 +166,84 @@ class WebScraper:
             use_cache: Use cached articles
             query_plan: Query plan for filtering
             max_workers: Number of parallel threads
+            per_source_timeout: Maximum seconds to wait for each source (default: 60)
+            checkpoint_manager: Optional CheckpointManager for saving progress
 
         Returns:
             List of all scraped articles
         """
         all_articles = []
+        completed_source_ids = checkpoint_manager.get_completed_sources() if checkpoint_manager else []
+        run_id = checkpoint_manager.get_run_id() if checkpoint_manager else datetime.now().strftime("%Y%m%d_%H%M%S")
 
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            # Submit all scraping tasks
-            futures = {
+            # Submit all scraping tasks with source metadata
+            futures_to_sources = {
                 executor.submit(
                     self._scrape_single_source,
                     source,
                     cutoff_date,
                     use_cache,
                     query_plan
-                ): source['name']
+                ): source
                 for source in sources
             }
 
-            # Collect results as they complete
+            pending_futures = set(futures_to_sources.keys())
             completed = 0
-            for future in as_completed(futures):
-                source_name = futures[future]
-                completed += 1
-                try:
-                    articles = future.result()
-                    if articles:
-                        all_articles.extend(articles)
-                        logger.info(f"[{completed}/{len(sources)}] {source_name}: {len(articles)} articles")
-                    else:
-                        logger.debug(f"[{completed}/{len(sources)}] {source_name}: no articles")
-                except Exception as e:
-                    logger.error(f"[{completed}/{len(sources)}] {source_name} failed: {e}")
+            total = len(sources)
+
+            # Process futures as they complete, with timeout handling
+            while pending_futures:
+                # Wait for at least one future to complete, or timeout
+                done, pending_futures = wait(
+                    pending_futures,
+                    timeout=per_source_timeout,
+                    return_when=FIRST_COMPLETED
+                )
+
+                # Process completed futures
+                for future in done:
+                    source = futures_to_sources[future]
+                    source_name = source['name']
+                    source_id = source['id']
+                    completed += 1
+
+                    try:
+                        articles = future.result(timeout=1)  # Quick retrieval
+                        if articles:
+                            all_articles.extend(articles)
+                            logger.info(f"[{completed}/{total}] {source_name}: {len(articles)} articles")
+                        else:
+                            logger.debug(f"[{completed}/{total}] {source_name}: no articles")
+
+                        # Save checkpoint after each successful source
+                        if checkpoint_manager:
+                            completed_source_ids.append(source_id)
+                            checkpoint_manager.save_checkpoint(
+                                phase='scraping',
+                                completed_sources=completed_source_ids,
+                                total_sources=total + len(checkpoint_manager.get_completed_sources()),
+                                articles_count=len(all_articles),
+                                run_id=run_id
+                            )
+
+                    except Exception as e:
+                        logger.error(f"[{completed}/{total}] {source_name} failed: {e}")
+
+                # Handle timed-out futures (if no futures completed in timeout window)
+                if not done and pending_futures:
+                    # Cancel slow futures
+                    for future in list(pending_futures):
+                        source = futures_to_sources[future]
+                        source_name = source['name']
+                        completed += 1
+
+                        logger.warning(
+                            f"[{completed}/{total}] {source_name} TIMEOUT after {per_source_timeout}s - skipping"
+                        )
+                        future.cancel()
+                        pending_futures.remove(future)
 
         return all_articles
 
