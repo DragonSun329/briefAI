@@ -6,6 +6,7 @@ Supports caching to avoid redundant scraping.
 """
 
 import json
+import time
 import requests
 import feedparser
 from datetime import datetime, timedelta
@@ -177,28 +178,31 @@ class WebScraper:
         run_id = checkpoint_manager.get_run_id() if checkpoint_manager else datetime.now().strftime("%Y%m%d_%H%M%S")
 
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            # Submit all scraping tasks with source metadata
-            futures_to_sources = {
-                executor.submit(
+            # Submit all scraping tasks with source metadata and track submission time
+            futures_to_sources = {}
+            future_start_times = {}
+
+            for source in sources:
+                future = executor.submit(
                     self._scrape_single_source,
                     source,
                     cutoff_date,
                     use_cache,
                     query_plan
-                ): source
-                for source in sources
-            }
+                )
+                futures_to_sources[future] = source
+                future_start_times[future] = time.time()
 
             pending_futures = set(futures_to_sources.keys())
             completed = 0
             total = len(sources)
 
-            # Process futures as they complete, with timeout handling
+            # Process futures as they complete, with per-future timeout handling
             while pending_futures:
-                # Wait for at least one future to complete, or timeout
-                done, pending_futures = wait(
+                # Wait for at least one future to complete (short timeout for checking)
+                done, still_pending = wait(
                     pending_futures,
-                    timeout=per_source_timeout,
+                    timeout=1.0,  # Check every second
                     return_when=FIRST_COMPLETED
                 )
 
@@ -208,14 +212,15 @@ class WebScraper:
                     source_name = source['name']
                     source_id = source['id']
                     completed += 1
+                    elapsed = time.time() - future_start_times[future]
 
                     try:
                         articles = future.result(timeout=1)  # Quick retrieval
                         if articles:
                             all_articles.extend(articles)
-                            logger.info(f"[{completed}/{total}] {source_name}: {len(articles)} articles")
+                            logger.info(f"[{completed}/{total}] {source_name}: {len(articles)} articles ({elapsed:.1f}s)")
                         else:
-                            logger.debug(f"[{completed}/{total}] {source_name}: no articles")
+                            logger.debug(f"[{completed}/{total}] {source_name}: no articles ({elapsed:.1f}s)")
 
                         # Save checkpoint after each successful source
                         if checkpoint_manager:
@@ -231,19 +236,31 @@ class WebScraper:
                     except Exception as e:
                         logger.error(f"[{completed}/{total}] {source_name} failed: {e}")
 
-                # Handle timed-out futures (if no futures completed in timeout window)
-                if not done and pending_futures:
-                    # Cancel slow futures
-                    for future in list(pending_futures):
-                        source = futures_to_sources[future]
-                        source_name = source['name']
-                        completed += 1
+                    # Clean up tracking
+                    del future_start_times[future]
+                    pending_futures.remove(future)
 
-                        logger.warning(
-                            f"[{completed}/{total}] {source_name} TIMEOUT after {per_source_timeout}s - skipping"
-                        )
-                        future.cancel()
-                        pending_futures.remove(future)
+                # Check for timed-out futures (per-future timeout check)
+                current_time = time.time()
+                timed_out = []
+                for future in list(pending_futures):
+                    elapsed = current_time - future_start_times[future]
+                    if elapsed > per_source_timeout:
+                        timed_out.append(future)
+
+                # Cancel timed-out futures
+                for future in timed_out:
+                    source = futures_to_sources[future]
+                    source_name = source['name']
+                    completed += 1
+                    elapsed = current_time - future_start_times[future]
+
+                    logger.warning(
+                        f"[{completed}/{total}] {source_name} TIMEOUT after {elapsed:.1f}s - skipping"
+                    )
+                    future.cancel()
+                    del future_start_times[future]
+                    pending_futures.remove(future)
 
         return all_articles
 
