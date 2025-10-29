@@ -253,25 +253,78 @@ class WebScraper:
         source: Dict[str, Any],
         cutoff_date: datetime
     ) -> List[Dict[str, Any]]:
-        """Scrape articles from RSS feed"""
+        """Scrape articles from RSS feed with alternative URL fallbacks"""
         articles = []
 
+        # Try primary RSS URL first
+        rss_urls_to_try = [source['rss_url']]
+
+        # Add alternative RSS URLs if primary fails
+        if 'alternative_rss_urls' in source:
+            rss_urls_to_try.extend(source['alternative_rss_urls'])
+        else:
+            # Generate common alternative endpoints for high-credibility sources
+            if source.get('credibility_score', 0) >= 9:
+                base_url = source.get('url', '')
+                if base_url:
+                    # Common RSS endpoint variations
+                    rss_urls_to_try.extend([
+                        f"{base_url.rstrip('/')}/rss.xml",
+                        f"{base_url.rstrip('/')}/feed",
+                        f"{base_url.rstrip('/')}/feed.xml",
+                        f"{base_url.rstrip('/')}/index.xml",
+                        f"{base_url.rstrip('/')}/rss",
+                        f"{base_url.rstrip('/')}/atom.xml"
+                    ])
+
+        feed = None
+        successful_url = None
+
+        for rss_url in rss_urls_to_try:
+            if rss_url == source['rss_url']:
+                # Try primary URL
+                try:
+                    feed = feedparser.parse(rss_url)
+
+                    # Check for feed errors
+                    if feed.get('bozo', False):
+                        error_msg = str(feed.get('bozo_exception', 'Unknown error'))
+                        if 'SSL' in error_msg or 'certificate' in error_msg.lower():
+                            logger.error(f"SSL certificate error for {source['name']}: {error_msg}")
+                            logger.error("Fix: Run /Applications/Python 3.9/Install Certificates.command")
+                        else:
+                            logger.warning(f"RSS feed warning for {source['name']}: {error_msg}")
+
+                    if feed.entries:
+                        successful_url = rss_url
+                        break
+                    else:
+                        logger.debug(f"No entries from primary RSS URL for {source['name']}, trying alternatives...")
+                        feed = None
+                except Exception as e:
+                    logger.debug(f"Primary RSS failed for {source['name']}: {e}")
+                    feed = None
+            else:
+                # Try alternative URLs silently
+                try:
+                    test_feed = feedparser.parse(rss_url)
+                    if test_feed.entries and not test_feed.get('bozo', False):
+                        feed = test_feed
+                        successful_url = rss_url
+                        logger.info(f"✓ Alternative RSS URL worked for {source['name']}: {rss_url}")
+                        break
+                except Exception:
+                    continue
+
+        if not feed or not feed.entries:
+            logger.warning(f"No entries found in RSS feed for {source['name']}")
+            # Try HTML scraping fallback for high-credibility sources
+            if source.get('credibility_score', 0) >= 9:
+                logger.info(f"Attempting HTML scraping fallback for {source['name']}...")
+                return self._scrape_html_fallback(source, cutoff_date)
+            return articles
+
         try:
-            feed = feedparser.parse(source['rss_url'])
-
-            # Check for feed errors
-            if feed.get('bozo', False):
-                error_msg = str(feed.get('bozo_exception', 'Unknown error'))
-                if 'SSL' in error_msg or 'certificate' in error_msg.lower():
-                    logger.error(f"SSL certificate error for {source['name']}: {error_msg}")
-                    logger.error("Fix: Run /Applications/Python 3.9/Install Certificates.command")
-                else:
-                    logger.warning(f"RSS feed warning for {source['name']}: {error_msg}")
-
-            if not feed.entries:
-                logger.warning(f"No entries found in RSS feed for {source['name']}")
-                return articles
-
             for entry in feed.entries[:self.max_articles_per_source]:
                 # Parse published date
                 pub_date = None
@@ -313,6 +366,141 @@ class WebScraper:
 
         except Exception as e:
             logger.error(f"RSS scraping error for {source['name']}: {e}")
+
+        return articles
+
+    def _scrape_html_fallback(
+        self,
+        source: Dict[str, Any],
+        cutoff_date: datetime
+    ) -> List[Dict[str, Any]]:
+        """
+        HTML scraping fallback for official company blogs when RSS fails.
+        Uses BeautifulSoup to extract blog posts directly from HTML.
+        """
+        articles = []
+
+        try:
+            blog_url = source.get('url', '')
+            if not blog_url:
+                return articles
+
+            # Add common blog listing paths
+            blog_urls_to_try = [
+                blog_url,
+                f"{blog_url.rstrip('/')}/blog",
+                f"{blog_url.rstrip('/')}/news",
+                f"{blog_url.rstrip('/')}/updates"
+            ]
+
+            response = None
+            for url in blog_urls_to_try:
+                try:
+                    response = self.session.get(url, timeout=15)
+                    if response.status_code == 200:
+                        break
+                except:
+                    continue
+
+            if not response or response.status_code != 200:
+                logger.warning(f"HTML fallback failed - couldn't fetch {source['name']}")
+                return articles
+
+            soup = BeautifulSoup(response.text, 'html.parser')
+
+            # Company-specific selectors for major AI blogs
+            blog_selectors = {
+                'anthropic': ['article.blog-post', 'div.news-item', 'article'],
+                'openai': ['article', 'div.post', 'div.blog-post'],
+                'deepmind': ['article', 'div.card', 'div.article-card'],
+                'meta': ['article', 'div.blog-card'],
+                'huggingface': ['article', 'div.space-post'],
+                'default': ['article', 'div.blog-post', 'div.post-item', 'div.article']
+            }
+
+            # Detect which selector to use
+            source_id = source.get('id', '').lower()
+            selectors = blog_selectors.get('default')
+            for key in blog_selectors:
+                if key in source_id:
+                    selectors = blog_selectors[key]
+                    break
+
+            # Try selectors until we find articles
+            article_elements = []
+            for selector in selectors:
+                article_elements = soup.select(selector)
+                if len(article_elements) > 0:
+                    logger.debug(f"Found {len(article_elements)} articles using selector: {selector}")
+                    break
+
+            for element in article_elements[:self.max_articles_per_source]:
+                try:
+                    # Extract title
+                    title_elem = element.find(['h1', 'h2', 'h3']) or element.find('a', class_=lambda x: 'title' in str(x).lower() if x else False)
+                    title = title_elem.get_text().strip() if title_elem else None
+
+                    if not title:
+                        continue
+
+                    # Extract URL
+                    link_elem = element.find('a')
+                    url = link_elem.get('href', '') if link_elem else ''
+                    if url and not url.startswith('http'):
+                        from urllib.parse import urljoin
+                        url = urljoin(blog_url, url)
+
+                    # Extract content (first few paragraphs)
+                    content_parts = []
+                    for p in element.find_all('p')[:3]:  # First 3 paragraphs
+                        text = p.get_text().strip()
+                        if len(text) > 50:  # Only meaningful paragraphs
+                            content_parts.append(text)
+
+                    content = ' '.join(content_parts) if content_parts else element.get_text().strip()[:500]
+
+                    # Try to extract date
+                    pub_date = None
+                    date_elem = element.find(['time', 'span'], class_=lambda x: 'date' in str(x).lower() if x else False)
+                    if date_elem:
+                        date_str = date_elem.get('datetime') or date_elem.get_text().strip()
+                        try:
+                            from dateutil import parser
+                            pub_date = parser.parse(date_str)
+                        except:
+                            pass
+
+                    # Skip if too old (if we have a date)
+                    if pub_date and pub_date < cutoff_date:
+                        continue
+
+                    article = {
+                        'title': title,
+                        'url': url,
+                        'content': content,
+                        'published_date': pub_date.isoformat() if pub_date else None,
+                        'source': source['name'],
+                        'source_id': source['id'],
+                        'language': source['language'],
+                        'credibility_score': source.get('credibility_score', 5),
+                        'relevance_weight': source.get('relevance_weight', 5),
+                        'focus_tags': source.get('focus_tags', [])
+                    }
+
+                    articles.append(article)
+                    logger.debug(f"Scraped article: {title[:50]}...")
+
+                except Exception as e:
+                    logger.debug(f"Error extracting article element: {e}")
+                    continue
+
+            if articles:
+                logger.info(f"✓ HTML fallback successful for {source['name']}: {len(articles)} articles")
+            else:
+                logger.warning(f"HTML fallback found no articles for {source['name']}")
+
+        except Exception as e:
+            logger.error(f"HTML fallback error for {source['name']}: {e}")
 
         return articles
 

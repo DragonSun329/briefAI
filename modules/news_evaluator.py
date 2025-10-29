@@ -178,6 +178,14 @@ class NewsEvaluator:
         # Calculate weighted score using 5D scoring system
         scores = response.get('scores', {})
 
+        # Detect explosive news and boost Market Impact if applicable
+        market_impact_boost = self._detect_explosive_news(article)
+        if market_impact_boost > 0:
+            original_market_impact = scores.get('market_impact', 0)
+            boosted_market_impact = min(10, original_market_impact + market_impact_boost)
+            scores['market_impact'] = boosted_market_impact
+            logger.info(f"Explosive news detected: '{article['title'][:50]}...' - Market Impact {original_market_impact} → {boosted_market_impact} (+{market_impact_boost})")
+
         # 5D weights: market_impact (25%), competitive_impact (20%), strategic_relevance (20%),
         #             operational_relevance (15%), credibility (10%)
         weights = {
@@ -197,6 +205,60 @@ class NewsEvaluator:
         response['average_score'] = round(avg_score, 2)
 
         return response
+
+    def _detect_explosive_news(self, article: Dict[str, Any]) -> int:
+        """
+        Detect explosive news and return Market Impact boost amount.
+
+        Returns:
+            int: Boost amount (0, 2, or 3 points)
+                0 = Normal news (no boost)
+                2 = Explosive research (SOTA, paradigm shift)
+                3 = Explosive product launch or fintech innovation
+        """
+        title_content = (article.get('title', '') + ' ' + article.get('content', '')[:500]).lower()
+
+        # Explosive product launch keywords (+3 to Market Impact)
+        explosive_product_keywords = [
+            'launches', 'announces', 'unveils', 'releases', 'introducing',
+            'now supports', 'now available', 'breakthrough feature',
+            'first-ever', 'revolutionary', 'game-changing', 'major update',
+            'completely new', 'rolling out'
+        ]
+
+        # Explosive research keywords (+2 to Market Impact)
+        explosive_research_keywords = [
+            'beats gpt', 'surpasses', 'state-of-the-art', 'sota',
+            'breakthrough', '10x faster', '10x better', 'paradigm shift',
+            'unprecedented', 'first time', 'outperforms', 'new record'
+        ]
+
+        # Explosive fintech keywords (+3 to Market Impact)
+        explosive_fintech_keywords = [
+            'ai-powered payments', 'ai payment', 'autonomous trading',
+            'conversational banking', 'fraud detection ai', 'ai fraud',
+            'credit scoring ai', 'raises $', 'series a', 'series b', 'series c',
+            'funding round', 'million funding', 'billion funding'
+        ]
+
+        # Check fintech context
+        fintech_context_keywords = ['fintech', 'payment', 'banking', 'lending', 'insurance', 'finance']
+        has_fintech_context = any(kw in title_content for kw in fintech_context_keywords)
+
+        # Detect explosive product launch
+        if any(kw in title_content for kw in explosive_product_keywords):
+            return 3
+
+        # Detect explosive research
+        if any(kw in title_content for kw in explosive_research_keywords):
+            return 2
+
+        # Detect explosive fintech (must have fintech context + explosive indicator)
+        if has_fintech_context and any(kw in title_content for kw in explosive_fintech_keywords):
+            return 3
+
+        # No boost for normal news
+        return 0
 
     def _build_evaluation_prompt(self) -> str:
         """Build system prompt for article evaluation with 5D scoring"""

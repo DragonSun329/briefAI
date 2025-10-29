@@ -106,6 +106,39 @@ Provide evaluation in JSON format:
 Be critical and discerning. Not all news deserves high scores.
 ```
 
+### Explosive News Criteria (Market Impact Boost):
+
+The system automatically detects explosive news and adds +2 or +3 points to the **Market Impact** dimension only. This provides a conservative boost (~0.5-0.75 points to final score) for truly important announcements.
+
+**Explosive Product Launch (+3 to Market Impact):**
+Keywords: launches, announces, unveils, releases, introducing, now supports, breakthrough feature, first-ever, revolutionary, game-changing, major update
+
+Examples:
+- "Claude announces Excel integration" → Market Impact +3
+- "OpenAI unveils GPT-5 with revolutionary capabilities" → Market Impact +3
+- "DeepSeek releases first-ever OCR feature for LLMs" → Market Impact +3
+
+**Explosive Research (+2 to Market Impact):**
+Keywords: beats GPT, surpasses, state-of-the-art, SOTA, breakthrough, 10x faster, paradigm shift, unprecedented, outperforms
+
+Examples:
+- "New model beats GPT-4 on all benchmarks" → Market Impact +2
+- "Breakthrough algorithm achieves 10x faster training" → Market Impact +2
+- "Researchers achieve unprecedented accuracy on reasoning tasks" → Market Impact +2
+
+**Explosive Fintech (+3 to Market Impact):**
+Keywords (must have fintech context): AI-powered payments, autonomous trading, conversational banking, fraud detection AI, raises $, series A/B/C, funding round
+
+Examples:
+- "Singapore fintech raises $100M for AI lending platform" → Market Impact +3
+- "New AI-powered payment system launches in Indonesia" → Market Impact +3
+- "Autonomous trading platform achieves record performance" → Market Impact +3
+
+**Normal News (No Boost):**
+- Regular updates, incremental improvements, general analysis → Market Impact unchanged
+
+**Important:** The boost only affects Market Impact (25% weight). Other dimensions (Competitive, Strategic, Operational, Credibility) are scored normally. This ensures explosive news ranks higher without artificial score inflation.
+
 ---
 
 ## 3. Article Paraphraser Prompt

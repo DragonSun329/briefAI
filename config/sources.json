@@ -1074,7 +1074,7 @@
         "fintech_ai"
       ],
       "language": "en",
-      "credibility_score": 8,
+      "credibility_score": 9,
       "relevance_weight": 9,
       "focus_tags": [
         "东南亚科技",
@@ -1095,7 +1095,7 @@
         "emerging_products"
       ],
       "language": "en",
-      "credibility_score": 8,
+      "credibility_score": 9,
       "relevance_weight": 8,
       "focus_tags": [
         "新兴市场",
@@ -1139,8 +1139,8 @@
         "fintech_ai"
       ],
       "language": "en",
-      "credibility_score": 8,
-      "relevance_weight": 9,
+      "credibility_score": 9,
+      "relevance_weight": 10,
       "focus_tags": [
         "东南亚创业",
         "融资新闻",
@@ -1299,6 +1299,185 @@
         "企业管理",
         "行业洞察",
         "创新案例"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek AI Blog",
+      "url": "https://www.deepseek.com",
+      "type": "rss",
+      "rss_url": "https://www.deepseek.com/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "emerging_products",
+        "ai_companies"
+      ],
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "DeepSeek",
+        "大模型",
+        "OCR",
+        "视觉AI",
+        "官方发布"
+      ]
+    },
+    {
+      "id": "mistral_ai",
+      "name": "Mistral AI News",
+      "url": "https://mistral.ai",
+      "type": "rss",
+      "rss_url": "https://mistral.ai/news/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "emerging_products",
+        "ai_companies"
+      ],
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "Mistral",
+        "大模型",
+        "开源AI",
+        "官方发布"
+      ]
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere AI Blog",
+      "url": "https://cohere.com",
+      "type": "rss",
+      "rss_url": "https://cohere.com/blog/rss.xml",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "emerging_products",
+        "ai_companies"
+      ],
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "Cohere",
+        "企业AI",
+        "RAG",
+        "官方发布"
+      ]
+    },
+    {
+      "id": "perplexity_ai",
+      "name": "Perplexity AI Blog",
+      "url": "https://www.perplexity.ai",
+      "type": "rss",
+      "rss_url": "https://www.perplexity.ai/hub/blog/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "emerging_products",
+        "ai_companies"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "Perplexity",
+        "搜索AI",
+        "问答系统",
+        "官方发布"
+      ]
+    },
+    {
+      "id": "ai21_labs",
+      "name": "AI21 Labs Blog",
+      "url": "https://www.ai21.com",
+      "type": "rss",
+      "rss_url": "https://www.ai21.com/blog/feed",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "emerging_products",
+        "ai_companies"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "AI21",
+        "大模型",
+        "企业AI",
+        "官方发布"
+      ]
+    },
+    {
+      "id": "fintechnews_singapore",
+      "name": "Fintechnews Singapore",
+      "url": "https://fintechnews.sg",
+      "type": "rss",
+      "rss_url": "https://fintechnews.sg/feed/",
+      "enabled": true,
+      "categories": [
+        "fintech_ai",
+        "emerging_products",
+        "strategic_insights"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 10,
+      "focus_tags": [
+        "新加坡",
+        "金融科技",
+        "支付创新",
+        "AI银行",
+        "东南亚"
+      ]
+    },
+    {
+      "id": "fintechnews_indonesia",
+      "name": "Fintechnews Indonesia",
+      "url": "https://fintechnews.id",
+      "type": "rss",
+      "rss_url": "https://fintechnews.id/feed/",
+      "enabled": true,
+      "categories": [
+        "fintech_ai",
+        "emerging_products",
+        "strategic_insights"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 10,
+      "focus_tags": [
+        "印度尼西亚",
+        "金融科技",
+        "数字支付",
+        "AI金融",
+        "东南亚"
+      ]
+    },
+    {
+      "id": "paymentsnerd",
+      "name": "PaymentsNerd - Fintech AI",
+      "url": "https://paymentsnerd.com",
+      "type": "rss",
+      "rss_url": "https://paymentsnerd.com/feed",
+      "enabled": true,
+      "categories": [
+        "fintech_ai",
+        "emerging_products",
+        "llm_tech"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "支付技术",
+        "金融AI",
+        "交易系统",
+        "支付创新"
       ]
     }
   ],
