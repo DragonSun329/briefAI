@@ -16,6 +16,7 @@ Run: python3 run_pipeline_with_categories.py
 
 import sys
 import json
+import os
 from datetime import datetime
 from pathlib import Path
 
@@ -102,6 +103,9 @@ def run_full_pipeline(category_ids=None, top_n=12, early_exit=False, resume=Fals
     if resume:
         print("      └─ Resume: Enabled (will skip completed sources)")
 
+    # Variable to track backup file path for cleanup
+    backup_file = None
+
     try:
         scraper = WebScraper(cache_manager=cache_mgr)
         articles = scraper.scrape_all(
@@ -117,8 +121,33 @@ def run_full_pipeline(category_ids=None, top_n=12, early_exit=False, resume=Fals
             logger.info("Scraping phase completed - clearing checkpoint")
             checkpoint_mgr.clear_checkpoint()
 
+        # =====================================================================
+        # BACKUP: Save all scraped articles to backup file
+        # =====================================================================
+        backup_dir = Path("data/cache/scraped_backups")
+        backup_dir.mkdir(parents=True, exist_ok=True)
+
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        backup_file = backup_dir / f"scraped_backup_{timestamp}.json"
+
+        backup_data = {
+            'timestamp': datetime.now().isoformat(),
+            'run_id': timestamp,
+            'articles_count': len(articles),
+            'sources_count': 69,
+            'articles': articles
+        }
+
+        with open(backup_file, 'w', encoding='utf-8') as f:
+            json.dump(backup_data, f, indent=2, ensure_ascii=False)
+
+        logger.info(f"✓ Saved {len(articles)} scraped articles to backup: {backup_file}")
+        print(f"      ✓ Backup saved: {backup_file.name}\n")
+
     except Exception as e:
         logger.error(f"Scraping failed: {e}")
+        if backup_file:
+            logger.info(f"Scraped articles backup preserved at: {backup_file}")
         return []
 
     if not articles:
@@ -293,6 +322,17 @@ def run_full_pipeline(category_ids=None, top_n=12, early_exit=False, resume=Fals
     print(f"  • Language: Mandarin Chinese")
     print(f"  • Tone: Analytical-inspiring")
     print(f"  • Scores: Weighted across 5 dimensions (Market, Competitive, Strategic, Operational, Credibility)")
+
+    # =========================================================================
+    # CLEANUP: Delete backup file after successful pipeline completion
+    # =========================================================================
+    if backup_file and backup_file.exists():
+        try:
+            os.remove(backup_file)
+            logger.info(f"✓ Deleted backup file (pipeline completed successfully): {backup_file}")
+            print(f"\n      ✓ Backup cleaned up: {backup_file.name}")
+        except Exception as e:
+            logger.warning(f"Failed to delete backup file: {e}")
 
     return final_articles
 
