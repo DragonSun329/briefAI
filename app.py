@@ -1463,17 +1463,14 @@ def answer_question_about_briefing(question: str, briefing_content: str, lang: s
 
 {enriched_content}"""
 
-        # Use ProviderSwitcher configured for OpenRouter-only with automatic fallback
-        # This gives us automatic rotation through 50+ models if rate limits are hit
-        # Skip Kimi to avoid authentication issues, start directly with OpenRouter tier1
+        # Use ProviderSwitcher with automatic fallback (Kimi → OpenRouter)
+        # Kimi is primary (working), OpenRouter is fallback (50+ models)
         from utils.provider_switcher import ProviderSwitcher
 
-        # Create switcher and override to start with OpenRouter tier1
+        # Create switcher - starts with Kimi by default, falls back to OpenRouter if needed
         switcher = ProviderSwitcher()
-        switcher.current_provider_id = 'openrouter.tier1_quality'
-        switcher.current_provider = switcher._get_or_create_provider('openrouter.tier1_quality')
 
-        # Use automatic fallback through tier1 → tier2 → tier3 models
+        # Use automatic fallback: kimi → tier1 → tier2 → tier3
         response = switcher.query(
             prompt=question,
             system_prompt=system_prompt,
