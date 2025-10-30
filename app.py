@@ -293,8 +293,68 @@ def parse_articles_from_markdown(content: str) -> List[Dict[str, str]]:
     while i < len(lines):
         line = lines[i]
 
-        # NEW FORMAT: Look for "### 【Category】Title" pattern
-        if line.startswith('###') and '】' in line:
+        # FORMAT V3 (NEWEST): Look for "#### N. [Title](URL)" pattern
+        if line.startswith('####') and '[' in line and '](' in line:
+            # Extract title and URL from markdown link [Title](URL)
+            import re
+            match = re.search(r'\[([^\]]+)\]\(([^\)]+)\)', line)
+            if match:
+                title = match.group(1)
+                url = match.group(2)
+            else:
+                i += 1
+                continue
+
+            summary = ""
+            source = ""
+            i += 1
+
+            # Collect content until next article or section
+            content_lines = []
+            while i < len(lines):
+                current_line = lines[i].strip()
+
+                # Stop if we hit another article (####)
+                if current_line.startswith('####'):
+                    break
+
+                # Stop if we hit a category section (###)
+                if current_line.startswith('###'):
+                    break
+
+                # Stop if we hit key insights or other major sections (##)
+                if current_line.startswith('##'):
+                    break
+
+                # Extract source from "**来源**: Source | **发布时间**: Date" line
+                if '**来源**' in current_line and ':' in current_line:
+                    parts = current_line.split('**来源**:', 1)
+                    if len(parts) > 1:
+                        source_part = parts[1].strip()
+                        # Extract just the source name (before |)
+                        source = source_part.split('|')[0].strip()
+
+                # Collect non-empty lines for summary (skip metadata and separators)
+                elif current_line and not current_line.startswith('**') and not current_line.startswith('---') and current_line != '':
+                    content_lines.append(current_line)
+
+                i += 1
+
+            # Build summary from collected lines (first 500 chars)
+            summary = ' '.join(content_lines) if content_lines else ""
+            summary = summary[:500] if summary else ""
+
+            if title:
+                articles.append({
+                    'title': title,
+                    'url': url,
+                    'summary': summary if summary else "无摘要",
+                    'source': source if source else ""
+                })
+            continue
+
+        # FORMAT V2: Look for "### 【Category】Title" pattern
+        elif line.startswith('###') and '】' in line:
             # Extract title - everything after the 】
             if '】' in line:
                 title = line.split('】', 1)[1].strip()
