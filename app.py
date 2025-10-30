@@ -16,6 +16,11 @@ from pathlib import Path
 from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 from utils.provider_switcher import ProviderSwitcher
 from utils.context_retriever import ContextRetriever
 from utils.semantic_search import SemanticSearch
