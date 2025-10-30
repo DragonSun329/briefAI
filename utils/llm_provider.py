@@ -240,12 +240,17 @@ class OpenRouterProvider(BaseLLMProvider):
         Initialize OpenRouter provider
 
         Args:
-            api_key: OpenRouter API key (defaults to env var)
+            api_key: OpenRouter API key (defaults to env vars with fallback)
             model: Default model to use
         """
-        api_key = api_key or os.getenv("OPENROUTER_API_KEY")
+        # Try multiple API keys in order: explicit, primary, secondary
         if not api_key:
-            raise ValueError("OPENROUTER_API_KEY not found in environment")
+            api_key = os.getenv("OPENROUTER_API_KEY")
+            if not api_key:
+                api_key = os.getenv("OPENROUTER_API_KEY_2")
+
+        if not api_key:
+            raise ValueError("No OPENROUTER_API_KEY found in environment")
 
         super().__init__(
             provider_id="openrouter",
@@ -254,7 +259,16 @@ class OpenRouterProvider(BaseLLMProvider):
             model=model
         )
 
-        logger.info(f"Initialized OpenRouter provider with model: {model}")
+        # Store all available API keys for fallback
+        self.api_keys = [
+            k for k in [
+                os.getenv("OPENROUTER_API_KEY"),
+                os.getenv("OPENROUTER_API_KEY_2")
+            ] if k
+        ]
+        self.current_key_index = 0
+
+        logger.info(f"Initialized OpenRouter provider with model: {model} ({len(self.api_keys)} API keys available)")
 
     def get_pricing(self, model: str) -> Dict[str, float]:
         """
@@ -315,6 +329,25 @@ class OpenRouterProvider(BaseLLMProvider):
             self.stats["rate_limit_errors"] += 1
             self.stats["failed_calls"] += 1
             self.last_error = e
+
+            # Check if it's a daily limit error and we have backup API keys
+            error_str = str(e).lower()
+            if ('free-models-per-day' in error_str or 'daily' in error_str) and len(self.api_keys) > 1:
+                # Try switching to next API key
+                next_index = (self.current_key_index + 1) % len(self.api_keys)
+                if next_index != self.current_key_index:  # Haven't tried all keys yet
+                    next_key = self.api_keys[next_index]
+                    logger.warning(f"OpenRouter daily limit hit on key {self.current_key_index + 1}, switching to key {next_index + 1}")
+
+                    # Recreate client with new API key
+                    from openai import OpenAI
+                    self.api_key = next_key
+                    self.client = OpenAI(api_key=next_key, base_url=self.base_url)
+                    self.current_key_index = next_index
+
+                    # Retry with new API key
+                    return self.chat(system_prompt, user_message, model, temperature, max_tokens)
+
             logger.warning(f"OpenRouter rate limit hit: {e}")
             raise
 
