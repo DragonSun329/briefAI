@@ -340,9 +340,8 @@ def parse_articles_from_markdown(content: str) -> List[Dict[str, str]]:
 
                 i += 1
 
-            # Build summary from collected lines (first 500 chars)
+            # Build summary from collected lines (full content, no truncation)
             summary = ' '.join(content_lines) if content_lines else ""
-            summary = summary[:500] if summary else ""
 
             if title:
                 articles.append({
