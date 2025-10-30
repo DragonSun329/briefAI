@@ -36,6 +36,7 @@ from orchestrator.execution_reporter import ExecutionReporter
 from modules.web_scraper import WebScraper
 from utils.cache_manager import CacheManager
 from utils.checkpoint_manager import CheckpointManager
+from utils.artifact_manager import ArtifactManager
 from utils.article_filter import ArticleFilter
 from modules.batch_evaluator import BatchEvaluator
 from modules.news_evaluator import NewsEvaluator
@@ -66,10 +67,12 @@ class ACEOrchestrator:
         self.context_engine = ContextEngine(self.run_id)
         self.error_tracker = ErrorTracker(self.run_id)
         self.metrics_collector = MetricsCollector(self.run_id)
+        self.artifact_manager = ArtifactManager(run_id=self.run_id)
         self.phase_manager = PhaseManager(
             self.context_engine,
             self.error_tracker,
-            self.metrics_collector
+            self.metrics_collector,
+            self.artifact_manager
         )
         self.execution_reporter = ExecutionReporter(
             self.context_engine,

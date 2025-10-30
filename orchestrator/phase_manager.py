@@ -47,7 +47,7 @@ class PhaseManager:
         'finalization': []
     }
 
-    def __init__(self, context_engine, error_tracker, metrics_collector):
+    def __init__(self, context_engine, error_tracker, metrics_collector, artifact_manager=None):
         """
         Initialize phase manager
 
@@ -55,10 +55,12 @@ class PhaseManager:
             context_engine: ContextEngine instance
             error_tracker: ErrorTracker instance
             metrics_collector: MetricsCollector instance
+            artifact_manager: Optional ArtifactManager instance
         """
         self.context_engine = context_engine
         self.error_tracker = error_tracker
         self.metrics_collector = metrics_collector
+        self.artifact_manager = artifact_manager
 
         # Track completed phases
         self.completed_phases: List[str] = []
@@ -141,6 +143,40 @@ class PhaseManager:
                 metrics=phase_metrics or {},
                 insights=self._extract_insights(phase_name, result, phase_metrics)
             )
+
+            # Save artifact if artifact manager is available
+            if self.artifact_manager:
+                phase_number = list(self.PHASE_DEPENDENCIES.keys()).index(phase_name) + 1
+
+                # Prepare artifact data
+                artifact_data = {}
+                if isinstance(result, list):
+                    artifact_data['articles'] = result
+                elif isinstance(result, str):
+                    artifact_data['report_path'] = result
+                elif isinstance(result, dict):
+                    artifact_data = result
+                else:
+                    artifact_data['result'] = result
+
+                # Prepare metadata
+                artifact_metadata = {
+                    'duration_seconds': phase_metrics.get('duration', 0) if phase_metrics else 0,
+                    'llm_calls': phase_metrics.get('llm_calls', 0) if phase_metrics else 0,
+                    'cost_usd': phase_metrics.get('cost', 0) if phase_metrics else 0,
+                    'input_count': articles_input_count or 0,
+                }
+
+                # Save artifact
+                try:
+                    self.artifact_manager.save_artifact(
+                        phase_name=phase_name,
+                        phase_number=phase_number,
+                        data=artifact_data,
+                        metadata=artifact_metadata
+                    )
+                except Exception as artifact_err:
+                    logger.warning(f"Failed to save artifact for phase '{phase_name}': {artifact_err}")
 
             logger.info(f"✓ Phase '{phase_name}' completed successfully")
 

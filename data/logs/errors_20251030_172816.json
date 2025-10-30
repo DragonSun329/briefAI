@@ -1,0 +1,63 @@
+{
+  "run_id": "20251030_172816",
+  "timestamp": "2025-10-30T17:46:05.517695",
+  "total_errors": 2,
+  "critical_errors": 2,
+  "warnings": 0,
+  "errors": [
+    {
+      "id": "err_001",
+      "timestamp": "2025-10-30T17:46:05.441227",
+      "phase": "quality_validation",
+      "severity": "CRITICAL",
+      "error_type": "UNKNOWN",
+      "error_subtype": "unclassified",
+      "message": "1 articles failed quality validation",
+      "exception_class": "ValueError",
+      "context": {
+        "failed_count": 1,
+        "failed_articles": [
+          {
+            "index": 7,
+            "title": "Scheduling Your LLM Reinforcement Learning with Re",
+            "reasons": [
+              "Too short (203 chars)"
+            ]
+          }
+        ]
+      },
+      "traceback": "NoneType: None\n",
+      "recovery_action": "RE_PARAPHRASE"
+    },
+    {
+      "id": "err_002",
+      "timestamp": "2025-10-30T17:46:05.498543",
+      "phase": "quality_validation",
+      "severity": "CRITICAL",
+      "error_type": "UNKNOWN",
+      "error_subtype": "unclassified",
+      "message": "name 'paraphrased_articles' is not defined",
+      "exception_class": "NameError",
+      "context": {
+        "phase_function": "phase_8_5_quality_validation"
+      },
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/dragonsun/briefAI/orchestrator/phase_manager.py\", line 117, in execute\n    result = phase_func(**kwargs)\n  File \"/Users/dragonsun/briefAI/orchestrator/ace_orchestrator.py\", line 791, in phase_8_5_quality_validation\n    f\"✗ {len(failed_validations)}/{len(paraphrased_articles)} articles failed validation. \"\nNameError: name 'paraphrased_articles' is not defined\n",
+      "recovery_action": "FAIL_FAST"
+    }
+  ],
+  "error_summary": {
+    "total_errors": 2,
+    "critical_errors": 2,
+    "warnings": 0,
+    "info": 0,
+    "by_phase": {
+      "quality_validation": 2
+    },
+    "by_type": {
+      "UNKNOWN": 2
+    },
+    "by_severity": {
+      "CRITICAL": 2
+    }
+  }
+}
