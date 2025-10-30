@@ -1542,8 +1542,8 @@ def answer_question_about_briefing(question: str, briefing_content: str, lang: s
 
         # Try to use query with automatic fallback
         response = switcher.query(
+            prompt=question,
             system_prompt=system_prompt,
-            user_message=question,
             max_tokens=1500,
             temperature=0.7
         )
