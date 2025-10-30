@@ -2,9 +2,11 @@
 
 ## Project Goal
 
-Automatically generate weekly AI industry briefings in Mandarin Chinese for executive review. The system scrapes news from 61 global English-language sources, applies intelligent filtering and 5D weighted scoring, generates deep analysis (500-600 characters per article), and produces professional Markdown reports.
+Automatically generate weekly AI industry briefings in Mandarin Chinese focused on **explosive new trends and breakthrough products**. The system scrapes news from 86 global English-language sources, applies intelligent filtering and 5D weighted scoring, generates deep analysis (500-600 characters per article), and produces professional Markdown reports.
 
-**Regional Focus:** News coverage for China, Indonesia, Philippines, Spain, and Mexico (via English-language sources)
+**Content Focus:** Product Hunt-style discoveries - viral launches, breakthrough innovations, trending AI tools, game-changing applications, and hot industry movements
+
+**Regional Coverage:** Global AI industry with emphasis on explosive trends from all major tech hubs
 
 ## NEW: ACE Orchestrator (Agentic Context Engineering)
 
@@ -266,7 +268,7 @@ streamlit run app.py
 
 ```bash
 ANTHROPIC_API_KEY=your_api_key         # Required: Claude API access
-DEFAULT_CATEGORIES=fintech_ai,llm_tech,emerging_products
+DEFAULT_CATEGORIES=breakthrough_products,ai_companies,emerging_trends,llm_tech,creative_ai,ai_agents
 REPORT_OUTPUT_DIR=./data/reports       # Report output location
 CACHE_DIR=./data/cache                 # Cache directory
 LOG_LEVEL=INFO                         # Logging level

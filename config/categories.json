@@ -1,74 +1,116 @@
 {
   "categories": [
     {
-      "id": "fintech_ai",
-      "name": "Fintech AI Applications",
-      "aliases": ["fintech", "finance", "banking", "payments", "lending", "credit", "fraud", "fraud detection", "risk management", "credit scoring", "underwriting", "loan", "investment", "trading", "portfolio"],
+      "id": "breakthrough_products",
+      "name": "Breakthrough AI Products",
+      "aliases": ["product hunt", "new product", "launch", "startup", "beta", "release", "tool", "app", "saas", "platform", "innovation", "breakthrough", "revolutionary", "game-changer", "disruptive", "viral", "trending", "popular", "hot", "explosive growth"],
       "priority": 10,
-      "description": "AI applications in fintech: fraud detection, credit scoring, risk management, lending decisions, payment systems, trading algorithms"
-    },
-    {
-      "id": "data_analytics",
-      "name": "Data Analytics & ML",
-      "aliases": ["data analytics", "data science", "analytics", "machine learning", "ml", "data engineering", "big data", "analytics platform", "data platform", "data warehouse", "prediction", "predictive", "analytics tools", "dataset", "datasets"],
-      "priority": 10,
-      "description": "Data analytics technologies, tools, and methods. Machine learning applications for data analysis. Data engineering and analytics platforms."
-    },
-    {
-      "id": "marketing_ai",
-      "name": "Marketing & Growth AI",
-      "aliases": ["marketing", "advertising", "ad tech", "growth", "conversion", "optimization", "personalization", "recommendation", "customer segmentation", "audience targeting", "campaign", "user acquisition", "marketing automation", "cro"],
-      "priority": 9,
-      "description": "AI-driven marketing strategies, advertising optimization, user growth, conversion rate optimization, personalization, and customer analytics"
-    },
-    {
-      "id": "emerging_products",
-      "name": "AI Products & Tools",
-      "aliases": ["product", "tool", "app", "saas", "software", "platform", "startup", "new product", "launch", "feature", "update", "beta", "release", "application", "solutions"],
-      "priority": 9,
-      "description": "New AI products, tools, platforms, and SaaS solutions. AI application launches and features."
-    },
-    {
-      "id": "llm_tech",
-      "name": "LLM & Language Models",
-      "aliases": ["llm", "language model", "gpt", "claude", "chatgpt", "ai model", "foundation model", "generative ai", "transformer", "bert", "prompt", "fine-tuning", "alignment", "reasoning", "reasoning model"],
-      "priority": 8,
-      "description": "Large language models, foundation models, generative AI, prompt engineering, model training and alignment, API applications"
+      "description": "Explosive new AI products and tools making waves. Product Hunt-style discoveries: viral launches, breakthrough innovations, trending tools, and game-changing applications."
     },
     {
       "id": "ai_companies",
-      "name": "Major AI Companies & Updates",
-      "aliases": ["openai", "anthropic", "nvidia", "google", "meta", "microsoft", "deepseek", "qwen", "alibaba", "grok", "xai", "doubao", "bytedance", "tesla", "cohere", "inflection", "mistral", "llama", "claude", "gemini", "gpt", "chatgpt", "bard", "perplexity", "company", "startup", "acquisition", "merger", "funding", "ipo", "partnership", "collaboration", "announcement"],
+      "name": "Major AI Companies & Strategic Moves",
+      "aliases": ["openai", "anthropic", "nvidia", "google", "meta", "microsoft", "deepseek", "qwen", "alibaba", "grok", "xai", "doubao", "bytedance", "tesla", "cohere", "inflection", "mistral", "llama", "claude", "gemini", "gpt", "chatgpt", "bard", "perplexity", "company", "startup", "acquisition", "merger", "funding", "ipo", "partnership", "collaboration", "announcement", "valuation", "unicorn"],
+      "priority": 10,
+      "description": "Major AI companies' strategic moves: OpenAI, Anthropic, NVIDIA, Google, Meta, Microsoft, Deepseek, Alibaba, Qwen, Doubao, Grok/XAI, Tesla, Mistral. Includes funding rounds, acquisitions, partnerships, product launches, and market-shaking announcements."
+    },
+    {
+      "id": "emerging_trends",
+      "name": "Emerging Trends & Hot Topics",
+      "aliases": ["trend", "trending", "hot topic", "viral", "buzz", "hype", "movement", "wave", "shift", "paradigm", "breakthrough", "innovation", "disruption", "next big thing", "future", "cutting edge", "frontier", "revolution"],
+      "priority": 10,
+      "description": "Explosive emerging trends in AI. Hot topics, viral movements, paradigm shifts, and next-generation innovations that are reshaping the industry."
+    },
+    {
+      "id": "llm_tech",
+      "name": "LLM & Generative AI Breakthroughs",
+      "aliases": ["llm", "language model", "gpt", "claude", "chatgpt", "ai model", "foundation model", "generative ai", "transformer", "bert", "prompt", "fine-tuning", "alignment", "reasoning", "reasoning model", "multimodal", "vision", "voice", "audio", "video generation", "image generation"],
       "priority": 9,
-      "description": "News about major AI companies: OpenAI, Anthropic, NVIDIA, Google, Meta, Microsoft, Deepseek, Alibaba, Qwen, Doubao, Grok/XAI, Tesla, Mistral, Cohere, and other leading AI firms. Includes company announcements, funding, partnerships, and strategic moves."
+      "description": "Cutting-edge LLM and generative AI breakthroughs. New models, reasoning capabilities, multimodal systems, and revolutionary AI architectures."
     },
     {
-      "id": "industry_cases",
-      "name": "Industry Applications & ROI",
-      "aliases": ["case study", "implementation", "deployment", "use case", "real-world", "production", "roi", "impact", "results", "performance", "metrics", "success", "adoption", "enterprise"],
+      "id": "creative_ai",
+      "name": "Creative AI & Content Generation",
+      "aliases": ["creative", "creativity", "art", "design", "image generation", "video generation", "music", "audio", "voice", "text-to-image", "text-to-video", "dall-e", "midjourney", "stable diffusion", "sora", "runway", "synthesis", "generation", "content creation", "media"],
+      "priority": 9,
+      "description": "AI transforming creative industries: image/video/music generation, design tools, content creation platforms, and artistic AI applications."
+    },
+    {
+      "id": "ai_agents",
+      "name": "AI Agents & Automation",
+      "aliases": ["agent", "autonomous", "automation", "workflow", "task automation", "bot", "assistant", "copilot", "auto-gpt", "autonomous agent", "multi-agent", "orchestration", "agentic", "workflow automation"],
+      "priority": 9,
+      "description": "Autonomous AI agents and automation systems. Intelligent assistants, workflow automation, multi-agent systems, and agentic AI platforms."
+    },
+    {
+      "id": "developer_tools",
+      "name": "Developer Tools & Infrastructure",
+      "aliases": ["developer", "dev tool", "api", "sdk", "framework", "library", "open source", "github", "code", "coding", "programming", "copilot", "code generation", "ide", "devtools", "infrastructure", "mlops", "deployment"],
       "priority": 8,
-      "description": "Real-world AI applications across industries. Case studies, ROI measurements, deployment strategies, and business impact"
+      "description": "AI-powered developer tools and infrastructure. Code generation, AI assistants for developers, APIs, SDKs, frameworks, and MLOps platforms."
     },
     {
-      "id": "compliance_policy",
-      "name": "AI Policy & Regulation",
-      "aliases": ["regulation", "regulatory", "policy", "compliance", "governance", "privacy", "security", "data protection", "gdpr", "compliance", "ethics", "responsible ai", "trustworthy", "safe ai"],
+      "id": "data_analytics",
+      "name": "Data Analytics & ML Innovations",
+      "aliases": ["data analytics", "data science", "analytics", "machine learning", "ml", "data engineering", "big data", "analytics platform", "data platform", "prediction", "predictive", "analytics tools", "dataset", "datasets", "insights"],
+      "priority": 8,
+      "description": "Innovative data analytics and ML technologies. Next-gen analytics platforms, breakthrough ML methods, and data-driven insights tools."
+    },
+    {
+      "id": "industry_disruption",
+      "name": "Industry Disruption & Use Cases",
+      "aliases": ["disruption", "transformation", "revolution", "case study", "implementation", "use case", "real-world", "production", "impact", "adoption", "enterprise", "healthcare", "education", "retail", "manufacturing", "logistics", "entertainment"],
       "priority": 7,
-      "description": "AI policy, regulation, compliance requirements, data privacy, security, ethical AI, and responsible AI practices"
+      "description": "AI disrupting traditional industries. Real-world use cases, transformative applications, and industry-changing implementations across healthcare, education, retail, and more."
     },
     {
-      "id": "tech_stack",
-      "name": "AI Tech Stack & Infrastructure",
-      "aliases": ["technology", "framework", "library", "open source", "gpu", "infrastructure", "cloud", "api", "sdk", "model serving", "mlops", "devops", "deployment", "architecture", "backend"],
+      "id": "research_breakthroughs",
+      "name": "Research & Scientific Breakthroughs",
+      "aliases": ["research", "paper", "arxiv", "study", "scientific", "breakthrough", "discovery", "algorithm", "method", "technique", "theory", "academia", "university", "lab", "neurips", "iclr", "cvpr", "benchmark"],
+      "priority": 7,
+      "description": "Groundbreaking AI research and scientific discoveries. Major papers, new algorithms, benchmark-breaking results, and academic breakthroughs."
+    },
+    {
+      "id": "consumer_apps",
+      "name": "Consumer AI Apps & Experiences",
+      "aliases": ["consumer", "b2c", "mobile", "app store", "play store", "user experience", "ux", "interface", "chat", "chatbot", "personal assistant", "productivity", "lifestyle", "entertainment", "social", "gaming"],
+      "priority": 7,
+      "description": "Consumer-facing AI applications. Mobile apps, chat experiences, personal productivity tools, and AI-enhanced consumer products."
+    },
+    {
+      "id": "enterprise_solutions",
+      "name": "Enterprise AI Solutions",
+      "aliases": ["enterprise", "b2b", "business", "corporate", "workplace", "office", "productivity", "efficiency", "cost reduction", "automation", "workflow", "crm", "erp", "hr", "finance", "operations"],
       "priority": 6,
-      "description": "AI technology stack, open source frameworks, APIs, SDKs, infrastructure, MLOps, model deployment, and development tools"
+      "description": "AI solutions transforming enterprise operations. Workplace productivity, business automation, cost optimization, and corporate AI adoption."
+    },
+    {
+      "id": "ai_hardware",
+      "name": "AI Hardware & Computing",
+      "aliases": ["hardware", "chip", "gpu", "tpu", "processor", "silicon", "semiconductor", "nvidia", "amd", "intel", "computing", "supercomputer", "quantum", "edge", "device"],
+      "priority": 6,
+      "description": "AI hardware innovations. Next-gen chips, GPUs, specialized processors, edge computing, and computational breakthroughs powering AI."
+    },
+    {
+      "id": "investment_funding",
+      "name": "Investment & Market Dynamics",
+      "aliases": ["investment", "funding", "venture capital", "vc", "seed", "series a", "series b", "valuation", "ipo", "exit", "acquisition", "market", "stock", "revenue", "growth", "economics"],
+      "priority": 5,
+      "description": "AI market dynamics and investment trends. Funding rounds, valuations, acquisitions, IPOs, and financial movements in the AI industry."
+    },
+    {
+      "id": "ai_safety",
+      "name": "AI Safety & Ethics",
+      "aliases": ["safety", "ethics", "responsible ai", "alignment", "governance", "regulation", "policy", "privacy", "security", "bias", "fairness", "transparency", "explainability", "trustworthy", "risk"],
+      "priority": 4,
+      "description": "AI safety, ethics, and responsible development. Alignment research, governance frameworks, regulatory developments, and ethical considerations."
     }
   ],
-  "default_categories": ["fintech_ai", "data_analytics", "marketing_ai", "emerging_products", "llm_tech", "ai_companies"],
+  "default_categories": ["breakthrough_products", "ai_companies", "emerging_trends", "llm_tech", "creative_ai", "ai_agents"],
   "company_context": {
-    "business": "Fintech & AI Products",
-    "industry": "Financial Technology / AI",
-    "focus_areas": ["Risk Management", "Credit Decisions", "Data Analytics", "Marketing & Growth", "AI Products"],
-    "relevance_keywords": ["fintech", "fraud detection", "risk", "lending", "data analytics", "machine learning", "marketing", "ai product", "saas", "payments"]
+    "business": "AI Industry Intelligence & Trend Tracking",
+    "industry": "Artificial Intelligence / Technology Innovation",
+    "focus_areas": ["Breakthrough Products", "Emerging Trends", "Hot Launches", "Industry Disruption", "Innovation Tracking"],
+    "relevance_keywords": ["breakthrough", "explosive", "trending", "viral", "launch", "innovation", "product hunt", "game-changer", "disruptive", "hot", "new product", "startup", "revolutionary"]
   }
 }
