@@ -16,7 +16,11 @@ from pathlib import Path
 from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional
 import os
+import sys
 from dotenv import load_dotenv
+
+# Add parent directory to path to access shared utilities
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 # Load environment variables from .env file
 load_dotenv()
