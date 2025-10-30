@@ -1296,6 +1296,7 @@ def fetch_url_content_with_webfetch(url: str, max_chars: int = 5000) -> Optional
     Fetch article content from URL using Claude's WebFetch tool
 
     This uses the WebFetch capability to retrieve and parse web content.
+    NOTE: This function is currently disabled to avoid authentication errors.
 
     Args:
         url: URL to fetch
@@ -1304,47 +1305,25 @@ def fetch_url_content_with_webfetch(url: str, max_chars: int = 5000) -> Optional
     Returns:
         Article content (markdown format), or None if fetch fails
     """
-    try:
-        # Use WebFetch tool to get content
-        from anthropic import Anthropic
+    # DISABLED: WebFetch requires ANTHROPIC_API_KEY and causes authentication issues
+    # Return None to skip URL fetching and rely on cached content only
+    logger.debug(f"WebFetch disabled - skipping URL: {url[:50]}...")
+    return None
 
-        client = Anthropic()
-
-        # Call Claude with WebFetch tool
-        response = client.messages.create(
-            model="claude-sonnet-4-20250514",
-            max_tokens=2000,
-            tools=[{
-                "name": "web_fetch",
-                "description": "Fetches content from a URL",
-                "input_schema": {
-                    "type": "object",
-                    "properties": {
-                        "url": {"type": "string"},
-                        "prompt": {"type": "string"}
-                    },
-                    "required": ["url", "prompt"]
-                }
-            }],
-            messages=[{
-                "role": "user",
-                "content": f"Please fetch and extract the main article content from: {url}"
-            }]
-        )
-
-        # Parse response to get fetched content
-        for block in response.content:
-            if hasattr(block, 'text'):
-                content = block.text
-                if content and len(content) > 100:
-                    logger.info(f"Fetched content from URL: {url[:50]}...")
-                    return content[:max_chars]
-
-        return None
-
-    except Exception as e:
-        logger.warning(f"WebFetch failed for {url}: {e}")
-        return None
+    # Original implementation commented out to avoid breaking ask function
+    # try:
+    #     from anthropic import Anthropic
+    #     api_key = os.getenv("ANTHROPIC_API_KEY")
+    #     if not api_key:
+    #         logger.warning("ANTHROPIC_API_KEY not found - cannot use WebFetch")
+    #         return None
+    #
+    #     client = Anthropic(api_key=api_key)
+    #     response = client.messages.create(...)
+    #     ...
+    # except Exception as e:
+    #     logger.warning(f"WebFetch failed for {url}: {e}")
+    #     return None
 
 def enrich_qa_context(
     question: str,
