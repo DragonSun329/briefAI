@@ -1449,9 +1449,6 @@ def enrich_qa_context(
 
 def answer_question_about_briefing(question: str, briefing_content: str, lang: str = "en") -> str:
     """Use LLM to answer questions about the briefing with deep analysis and enriched context"""
-    if not st.session_state.provider_switcher:
-        return t("chat_error", lang)
-
     try:
         # Parse articles from markdown to get structured data
         articles = parse_articles_from_markdown(briefing_content)
@@ -1487,12 +1484,19 @@ def answer_question_about_briefing(question: str, briefing_content: str, lang: s
 
 {enriched_content}"""
 
-        response = st.session_state.provider_switcher.query(
-            prompt=question,
+        # Use OpenRouter directly to avoid Kimi authentication issues
+        # OpenRouter has higher rate limits (200 RPM) and more reliable authentication
+        from utils.llm_provider import OpenRouterProvider
+
+        # Use high-quality reasoning model from tier1
+        openrouter = OpenRouterProvider(model="deepseek/deepseek-r1:free")
+        response, usage = openrouter.chat(
             system_prompt=system_prompt,
-            max_tokens=1500,  # Increased for richer responses
+            user_message=question,
+            max_tokens=1500,
             temperature=0.7
         )
+
         return response
     except Exception as e:
         return f"{t('chat_error', lang)}: {str(e)}"
