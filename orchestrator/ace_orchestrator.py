@@ -788,18 +788,18 @@ class ACEOrchestrator:
             )
 
             logger.error(
-                f"✗ {len(failed_validations)}/{len(paraphrased_articles)} articles failed validation. "
+                f"✗ {len(failed_validations)}/{len(enriched_articles)} articles failed validation. "
                 "Consider re-running paraphrasing phase."
             )
 
         logger.info(
-            f"✓ Quality validation: {len(validated_articles)}/{len(paraphrased_articles)} articles passed"
+            f"✓ Quality validation: {len(validated_articles)}/{len(enriched_articles)} articles passed"
         )
 
         # Record metrics
         self.metrics_collector.record_metric(
             'validation_pass_rate',
-            len(validated_articles) / len(paraphrased_articles) if paraphrased_articles else 0,
+            len(validated_articles) / len(enriched_articles) if enriched_articles else 0,
             'quality_validation'
         )
 
