@@ -1331,32 +1331,98 @@ def enrich_qa_context(
     briefing_content: str
 ) -> str:
     """
-    Enrich Q&A context with full article content from cache or WebFetch
+    Multi-stage context enrichment pipeline for ask function
 
-    Smart routing:
-    - Simple questions → Use paraphrase only
-    - Company/tech questions → Add Context Provider data
-    - Detailed questions → Optionally fetch full article content
+    Architecture:
+    Stage 1: Lexical search on current briefing (FREE, instant)
+    Stage 2: Lexical search on historical articles (FREE, fast)
+    Stage 3: Semantic search if needed (ChromaDB, slower)
+    Stage 4: Entity background enrichment
+    Stage 5: Full article content + paywall bypass links
 
     Args:
         question: User's question
-        articles: List of article dicts with title, url, summary
-        briefing_content: Basic briefing context
+        articles: List of article dicts from current briefing
+        briefing_content: Basic briefing markdown content
 
     Returns:
-        Enriched context string with company/tech background
+        Enriched context with all relevant sources combined
     """
-    enriched_parts = [briefing_content]
+    from loguru import logger
+    from utils.context_retriever import ContextRetriever
+    from utils.semantic_search import SemanticSearch
+    from utils.cache_manager import CacheManager
 
-    # Detect if question asks about companies or technologies
+    enriched_parts = [briefing_content]
+    question_lower = question.lower()
+
+    # Detect question type
+    detail_keywords = ['数据', '具体', 'data', 'benchmark', 'number', '数字',
+                       '详细', 'detail', 'explain', '解释', 'how', '为什么', 'why',
+                       '多少', 'percentage', '百分比', '提升', 'improvement']
+    asks_for_details = any(kw in question_lower for kw in detail_keywords)
+
+    if not asks_for_details:
+        # Simple question - use briefing content only
+        logger.info("Simple question detected - using briefing content only")
+        return briefing_content
+
+    # === STAGE 1: Lexical Search on Current Briefing ===
+    logger.info("Stage 1: Lexical search on current briefing")
+    stage1_articles = find_relevant_articles(question, articles, max_results=2)
+    logger.info(f"Stage 1 found {len(stage1_articles)} articles")
+
+    # === STAGE 2: Lexical Search on Historical Articles ===
+    logger.info("Stage 2: Lexical search on historical articles (4 weeks)")
+    stage2_articles = []
+    try:
+        retriever = ContextRetriever()
+        historical_results = retriever.search_by_keyword(
+            keyword=question,
+            weeks=4,
+            search_fields=["title", "full_content"]
+        )
+        if historical_results:
+            stage2_articles = historical_results[:3]  # Top 3
+            logger.info(f"Stage 2 found {len(stage2_articles)} historical articles")
+    except Exception as e:
+        logger.warning(f"Stage 2 failed: {e}")
+
+    # Combine Stage 1 + Stage 2 (avoid duplicates)
+    all_articles = stage1_articles.copy()
+    seen_urls = {a.get('url') for a in all_articles}
+    for article in stage2_articles:
+        if article.get('url') not in seen_urls:
+            all_articles.append(article)
+            seen_urls.add(article.get('url'))
+
+    # === STAGE 3: Semantic Search (only if few results) ===
+    if len(all_articles) < 3:
+        logger.info("Stage 3: Semantic search (insufficient lexical results)")
+        try:
+            cache_mgr = CacheManager()
+            semantic = SemanticSearch(cache_manager=cache_mgr)
+            semantic_results = semantic.search(query=question, top_k=3)
+
+            for result in semantic_results:
+                if result.get('url') not in seen_urls:
+                    all_articles.append(result)
+                    seen_urls.add(result.get('url'))
+
+            logger.info(f"Stage 3 added {len(semantic_results)} semantic matches")
+        except Exception as e:
+            logger.warning(f"Stage 3 failed: {e}")
+    else:
+        logger.info(f"Stage 3 skipped (found {len(all_articles)} articles already)")
+
+    # === STAGE 4: Entity Background Enrichment ===
     company_keywords = ['公司', 'company', 'business', '业务', '商业模式', '收入', '创始']
     tech_keywords = ['技术', 'technology', 'principle', '原理', 'how does', '如何工作', '实现']
 
-    question_lower = question.lower()
     asks_about_company = any(kw in question_lower for kw in company_keywords)
     asks_about_tech = any(kw in question_lower for kw in tech_keywords)
 
-    # Extract potential entities from question
+    # Extract entities from question for Stage 4
     entities_in_question = set()
     common_companies = ['anthropic', 'openai', 'google', 'deepmind', 'meta', 'microsoft',
                        'amazon', 'apple', 'nvidia', 'hugging face', 'midjourney', 'cohere']
@@ -1364,65 +1430,61 @@ def enrich_qa_context(
         if company in question_lower:
             entities_in_question.add(company.title())
 
-    # Note: Entity background context is now provided by entity_background_agent
-    # in the orchestrated pipeline. Legacy ContextProvider has been removed.
+    if entities_in_question and (asks_about_company or asks_about_tech):
+        logger.info(f"Stage 4: Entity enrichment for {entities_in_question}")
+        enriched_parts.append(f"\n\n## 📊 相关实体背景")
+        enriched_parts.append(f"检测到以下实体: {', '.join(entities_in_question)}")
+        enriched_parts.append("注: 实体背景信息来自文章中的entity_background字段")
+    else:
+        logger.info("Stage 4 skipped (no entities detected)")
 
-    # Fetch full article content for detailed questions
-    # Detect if user asks for details (数据, 具体, benchmark, 详细, etc.)
-    detail_keywords = ['数据', '具体', 'data', 'benchmark', 'number', '数字',
-                       '详细', 'detail', 'explain', '解释', 'how', '为什么', 'why',
-                       '多少', 'percentage', '百分比', '提升', 'improvement']
-    asks_for_details = any(kw in question_lower for kw in detail_keywords)
+    # === STAGE 5: Full Article Content + Paywall Bypass ===
+    logger.info(f"Stage 5: Retrieving full content for {len(all_articles)} articles")
+    if all_articles:
+        enriched_parts.append("\n\n# 📄 相关文章详细内容")
+        enriched_parts.append(f"共找到 {len(all_articles)} 篇相关文章 (当前周报 + 历史文章)")
 
-    if asks_for_details and articles:
-        # Find most relevant articles using smart scoring
-        relevant_articles = find_relevant_articles(question, articles, max_results=2)
+        articles_with_content = 0
+        for idx, article in enumerate(all_articles[:5], 1):  # Max 5 articles
+            article_url = article.get('url', '')
+            article_title = article.get('title', 'Unknown')
+            article_source = article.get('source', 'Unknown')
 
-        if relevant_articles:
-            enriched_parts.append("\n\n# 相关文章详细内容")
+            # Try cache first (fast, no API calls)
+            full_content = get_full_article_from_cache(article_url)
 
-            for article in relevant_articles:
+            if full_content:
+                articles_with_content += 1
+                enriched_parts.append(f"\n## {idx}. 【{article_source}】{article_title}")
+                enriched_parts.append(f"来源: {article_source}")
+                enriched_parts.append(f"URL: {article_url}")
+                enriched_parts.append(f"\n**原文内容** (前5000字):\n{full_content[:5000]}")
+                enriched_parts.append("\n---")
+                logger.info(f"Added full content for: {article_title[:40]}...")
+
+        # If no full content found, provide paywall bypass links
+        if articles_with_content == 0:
+            enriched_parts.append("\n\n## 🔓 突破付费墙获取完整文章")
+            enriched_parts.append("\n⚠️ 详细原文内容未缓存。以下文章可能需要付费，使用PaywallBuster访问:")
+
+            for idx, article in enumerate(all_articles[:3], 1):
                 article_url = article.get('url', '')
                 article_title = article.get('title', 'Unknown')
-                article_source = article.get('source', 'Unknown')
 
-                # Try cache first (fast, no API calls)
-                full_content = get_full_article_from_cache(article_url)
+                # Generate paywallbuster link
+                paywall_bypass_url = f"https://www.paywallbuster.com/?url={article_url}"
 
-                if full_content:
-                    # Found in cache! Include full content
-                    enriched_parts.append(f"\n## 【{article_source}】{article_title}")
-                    enriched_parts.append(f"来源: {article_source}")
-                    enriched_parts.append(f"URL: {article_url}")
-                    enriched_parts.append(f"\n原文内容:\n{full_content[:5000]}")  # First 5000 chars
-                    enriched_parts.append("\n---")
-                    logger.info(f"Enriched context with cached article: {article_title[:50]}")
+                enriched_parts.append(f"\n### {idx}. {article_title}")
+                enriched_parts.append(f"- 📰 原始链接: {article_url}")
+                enriched_parts.append(f"- 🔓 突破付费墙: {paywall_bypass_url}")
+                enriched_parts.append("")
 
-                elif article_url:
-                    # Cache miss - try WebFetch (optional fallback)
-                    # Only try if question seems critical
-                    critical_keywords = ['benchmark', 'data', '数据', '具体数字']
-                    is_critical = any(kw in question_lower for kw in critical_keywords)
+            logger.info(f"Generated {len(all_articles[:3])} paywallbuster links")
+        else:
+            logger.info(f"Stage 5 complete: {articles_with_content}/{len(all_articles)} articles with full content")
 
-                    if is_critical:
-                        try:
-                            fetched_content = fetch_url_content_with_webfetch(article_url, max_chars=5000)
-                            if fetched_content:
-                                enriched_parts.append(f"\n## 【{article_source}】{article_title}")
-                                enriched_parts.append(f"来源: {article_source} (在线获取)")
-                                enriched_parts.append(f"URL: {article_url}")
-                                enriched_parts.append(f"\n原文内容:\n{fetched_content}")
-                                enriched_parts.append("\n---")
-                                logger.info(f"Enriched context with WebFetch: {article_title[:50]}")
-                        except Exception as e:
-                            logger.warning(f"WebFetch failed for {article_url}: {e}")
-
-            # If no full content found, indicate URLs for manual access
-            if len([p for p in enriched_parts if '原文内容' in p]) == 0:
-                enriched_parts.append("\n注: 详细原文内容未缓存，建议访问以下URL获取完整信息:")
-                for article in relevant_articles[:2]:
-                    enriched_parts.append(f"- {article.get('title')}: {article.get('url')}")
-
+    # Final summary
+    logger.info(f"Context enrichment complete: {len(enriched_parts)} sections")
     return "\n".join(enriched_parts)
 
 
@@ -1463,24 +1525,36 @@ def answer_question_about_briefing(question: str, briefing_content: str, lang: s
 
 {enriched_content}"""
 
-        # Use ProviderSwitcher with automatic fallback (Kimi → OpenRouter)
-        # Kimi is primary (working), OpenRouter is fallback (50+ models)
-        from utils.provider_switcher import ProviderSwitcher
+        # Use Kimi directly - simple, fast, reliable for Q&A
+        # OpenRouter is reserved for high-volume pipeline processing
+        from utils.llm_provider import KimiProvider
+        from loguru import logger
 
-        # Create switcher - starts with Kimi by default, falls back to OpenRouter if needed
-        switcher = ProviderSwitcher()
+        logger.info("Ask function: Using Kimi provider for Q&A")
 
-        # Use automatic fallback: kimi → tier1 → tier2 → tier3
-        response = switcher.query(
-            prompt=question,
+        # Create Kimi provider directly (no fallback needed for low-volume Q&A)
+        kimi = KimiProvider(model='moonshot-v1-8k')
+
+        response, usage = kimi.chat(
             system_prompt=system_prompt,
+            user_message=question,
             max_tokens=1500,
             temperature=0.7
         )
 
+        logger.info(f"Ask function: Success with Kimi ({usage.get('total_tokens', 0)} tokens)")
         return response
+
     except Exception as e:
-        return f"{t('chat_error', lang)}: {str(e)}"
+        # If Kimi fails, provide helpful error message
+        logger.error(f"Ask function failed: {type(e).__name__}: {e}")
+        error_msg = f"{t('chat_error', lang)}: {str(e)}"
+
+        # Add hint for rate limit errors
+        if "429" in str(e) or "rate" in str(e).lower():
+            error_msg += "\n\n💡 Kimi API达到速率限制。请稍后重试。"
+
+        return error_msg
 
 # ============================================================================
 # MAIN APP LAYOUT
