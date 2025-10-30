@@ -1,0 +1,803 @@
+"""
+Web Scraper Module
+
+Scrapes articles from configured news sources using RSS feeds and HTML parsing.
+Supports caching to avoid redundant scraping.
+"""
+
+import json
+import time
+import requests
+import feedparser
+from datetime import datetime, timedelta
+from typing import List, Dict, Any, Optional
+from pathlib import Path
+from bs4 import BeautifulSoup
+from loguru import logger
+from concurrent.futures import ThreadPoolExecutor, as_completed, wait, FIRST_COMPLETED
+
+from utils.cache_manager import CacheManager
+from utils.checkpoint_manager import CheckpointManager
+
+
+class WebScraper:
+    """Scrapes AI news from configured sources"""
+
+    def __init__(
+        self,
+        sources_config: str = "./config/sources.json",
+        cache_manager: CacheManager = None,
+        max_articles_per_source: int = 20
+    ):
+        """
+        Initialize web scraper
+
+        Args:
+            sources_config: Path to sources configuration file
+            cache_manager: Cache manager instance (creates new if None)
+            max_articles_per_source: Maximum articles to scrape per source
+        """
+        self.sources_config = Path(sources_config)
+        self.cache_manager = cache_manager or CacheManager()
+        self.max_articles_per_source = max_articles_per_source
+
+        # Load sources
+        with open(self.sources_config, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+            self.sources = [s for s in config['sources'] if s.get('enabled', True)]
+            self.weighting_config = config.get('weighting_config', {})
+
+        logger.info(f"Loaded {len(self.sources)} enabled sources")
+        if self.weighting_config.get('enabled', False):
+            logger.info("Source weighting system enabled")
+
+        # Setup session with headers
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (compatible; AI-Briefing-Agent/1.0)'
+        })
+
+    def scrape_all(
+        self,
+        categories: List[str] = None,
+        days_back: int = 7,
+        use_cache: bool = True,
+        query_plan: Dict[str, Any] = None,
+        enable_parallel: bool = True,
+        max_workers: int = 8,
+        resume: bool = False,
+        checkpoint_manager: Optional[CheckpointManager] = None
+    ) -> List[Dict[str, Any]]:
+        """
+        Scrape articles from all sources (with optional parallel execution and resume)
+
+        Args:
+            categories: Filter by categories (None = all categories)
+            days_back: Only get articles from last N days
+            use_cache: Use cached articles if available
+            query_plan: Query plan from ACE-Planner for keyword filtering
+            enable_parallel: Use parallel scraping (default: True)
+            max_workers: Number of parallel threads (default: 8)
+            resume: If True, resume from checkpoint if available (default: False)
+            checkpoint_manager: Optional CheckpointManager instance for resume functionality
+
+        Returns:
+            List of article dictionaries
+        """
+        all_articles = []
+        cutoff_date = datetime.now() - timedelta(days=days_back)
+
+        # Filter sources by category if specified
+        sources_to_scrape = self.sources
+        if categories:
+            sources_to_scrape = [
+                s for s in self.sources
+                if set(s.get('categories', [])).intersection(categories)
+            ]
+            logger.info(f"Filtered to {len(sources_to_scrape)} sources matching categories")
+
+        # Handle checkpoint resume logic
+        if resume and checkpoint_manager:
+            checkpoint_info = checkpoint_manager.get_checkpoint_info()
+            if checkpoint_info:
+                logger.info(
+                    f"Resume mode: Checkpoint found with {checkpoint_info['progress']} sources completed "
+                    f"({checkpoint_info['progress_percent']}%) - Age: {checkpoint_info['age']}"
+                )
+
+                # Get remaining sources to scrape
+                sources_to_scrape = checkpoint_manager.get_remaining_sources(sources_to_scrape)
+                logger.info(f"Resuming with {len(sources_to_scrape)} remaining sources")
+
+                # Load cached articles from completed sources
+                completed_source_ids = checkpoint_manager.get_completed_sources()
+                for source_id in completed_source_ids:
+                    cache_key = f"source_{source_id}_7days"
+                    cached_articles = self.cache_manager.get(cache_key, max_age_hours=24)
+                    if cached_articles:
+                        all_articles.extend(cached_articles)
+                        logger.debug(f"Loaded {len(cached_articles)} articles from cache for {source_id}")
+
+                logger.info(f"Resumed with {len(all_articles)} cached articles from completed sources")
+            else:
+                logger.info("No valid checkpoint found - starting fresh scrape")
+
+        if enable_parallel and len(sources_to_scrape) > 1:
+            # Parallel scraping with ThreadPoolExecutor
+            logger.info(f"Starting parallel scraping ({len(sources_to_scrape)} sources, max_workers={max_workers})")
+            new_articles = self._scrape_all_parallel(
+                sources_to_scrape,
+                cutoff_date,
+                use_cache,
+                query_plan,
+                max_workers,
+                checkpoint_manager=checkpoint_manager
+            )
+            all_articles.extend(new_articles)
+        else:
+            # Sequential scraping (fallback)
+            logger.info(f"Starting sequential scraping ({len(sources_to_scrape)} sources)")
+            new_articles = self._scrape_all_sequential(
+                sources_to_scrape,
+                cutoff_date,
+                use_cache,
+                query_plan
+            )
+            all_articles.extend(new_articles)
+
+        logger.info(f"Total articles scraped: {len(all_articles)}")
+        return all_articles
+
+    def _scrape_all_parallel(
+        self,
+        sources: List[Dict[str, Any]],
+        cutoff_date: datetime,
+        use_cache: bool,
+        query_plan: Dict[str, Any],
+        max_workers: int,
+        per_source_timeout: int = 60,
+        checkpoint_manager: Optional[CheckpointManager] = None
+    ) -> List[Dict[str, Any]]:
+        """
+        Scrape multiple sources in parallel using ThreadPoolExecutor with per-source timeout
+
+        Args:
+            sources: List of sources to scrape
+            cutoff_date: Cutoff date for article filtering
+            use_cache: Use cached articles
+            query_plan: Query plan for filtering
+            max_workers: Number of parallel threads
+            per_source_timeout: Maximum seconds to wait for each source (default: 60)
+            checkpoint_manager: Optional CheckpointManager for saving progress
+
+        Returns:
+            List of all scraped articles
+        """
+        all_articles = []
+        completed_source_ids = checkpoint_manager.get_completed_sources() if checkpoint_manager else []
+        run_id = checkpoint_manager.get_run_id() if checkpoint_manager else datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # Submit all scraping tasks with source metadata and track submission time
+            futures_to_sources = {}
+            future_start_times = {}
+
+            for source in sources:
+                future = executor.submit(
+                    self._scrape_single_source,
+                    source,
+                    cutoff_date,
+                    use_cache,
+                    query_plan
+                )
+                futures_to_sources[future] = source
+                future_start_times[future] = time.time()
+
+            pending_futures = set(futures_to_sources.keys())
+            completed = 0
+            total = len(sources)
+
+            # Process futures as they complete, with per-future timeout handling
+            while pending_futures:
+                # Wait for at least one future to complete (short timeout for checking)
+                done, still_pending = wait(
+                    pending_futures,
+                    timeout=1.0,  # Check every second
+                    return_when=FIRST_COMPLETED
+                )
+
+                # Process completed futures
+                for future in done:
+                    source = futures_to_sources[future]
+                    source_name = source['name']
+                    source_id = source['id']
+                    completed += 1
+                    elapsed = time.time() - future_start_times[future]
+
+                    try:
+                        articles = future.result(timeout=1)  # Quick retrieval
+                        if articles:
+                            all_articles.extend(articles)
+                            logger.info(f"[{completed}/{total}] {source_name}: {len(articles)} articles ({elapsed:.1f}s)")
+                        else:
+                            logger.debug(f"[{completed}/{total}] {source_name}: no articles ({elapsed:.1f}s)")
+
+                        # Save checkpoint after each successful source
+                        if checkpoint_manager:
+                            completed_source_ids.append(source_id)
+                            checkpoint_manager.save_checkpoint(
+                                phase='scraping',
+                                completed_sources=completed_source_ids,
+                                total_sources=total + len(checkpoint_manager.get_completed_sources()),
+                                articles_count=len(all_articles),
+                                run_id=run_id
+                            )
+
+                    except Exception as e:
+                        logger.error(f"[{completed}/{total}] {source_name} failed: {e}")
+
+                    # Clean up tracking
+                    del future_start_times[future]
+                    pending_futures.remove(future)
+
+                # Check for timed-out futures (per-future timeout check)
+                current_time = time.time()
+                timed_out = []
+                for future in list(pending_futures):
+                    elapsed = current_time - future_start_times[future]
+                    if elapsed > per_source_timeout:
+                        timed_out.append(future)
+
+                # Cancel timed-out futures
+                for future in timed_out:
+                    source = futures_to_sources[future]
+                    source_name = source['name']
+                    completed += 1
+                    elapsed = current_time - future_start_times[future]
+
+                    logger.warning(
+                        f"[{completed}/{total}] {source_name} TIMEOUT after {elapsed:.1f}s - skipping"
+                    )
+                    future.cancel()
+                    del future_start_times[future]
+                    pending_futures.remove(future)
+
+        return all_articles
+
+    def _scrape_all_sequential(
+        self,
+        sources: List[Dict[str, Any]],
+        cutoff_date: datetime,
+        use_cache: bool,
+        query_plan: Dict[str, Any]
+    ) -> List[Dict[str, Any]]:
+        """
+        Scrape sources sequentially (fallback for single source or disabled parallel)
+
+        Args:
+            sources: List of sources to scrape
+            cutoff_date: Cutoff date for article filtering
+            use_cache: Use cached articles
+            query_plan: Query plan for filtering
+
+        Returns:
+            List of all scraped articles
+        """
+        all_articles = []
+
+        for i, source in enumerate(sources, 1):
+            logger.info(f"Scraping [{i}/{len(sources)}]: {source['name']}")
+            try:
+                articles = self._scrape_single_source(source, cutoff_date, use_cache, query_plan)
+                if articles:
+                    all_articles.extend(articles)
+                    logger.info(f"Scraped {len(articles)} articles from {source['name']}")
+            except Exception as e:
+                logger.error(f"Failed to scrape {source['name']}: {e}")
+                continue
+
+        return all_articles
+
+    def _scrape_single_source(
+        self,
+        source: Dict[str, Any],
+        cutoff_date: datetime,
+        use_cache: bool,
+        query_plan: Dict[str, Any]
+    ) -> List[Dict[str, Any]]:
+        """
+        Scrape a single source with caching and query plan filtering
+
+        Args:
+            source: Source configuration
+            cutoff_date: Cutoff date for filtering
+            use_cache: Use cached results
+            query_plan: Optional query plan for filtering
+
+        Returns:
+            List of articles from this source
+        """
+        # Check cache first
+        cache_key = f"source_{source['id']}_7days"
+        if use_cache:
+            cached_articles = self.cache_manager.get(cache_key, max_age_hours=24)
+            if cached_articles:
+                # Apply keyword filtering if query plan exists
+                if query_plan:
+                    cached_articles = self._filter_by_query_plan(cached_articles, query_plan)
+                return cached_articles
+
+        # Scrape based on source type (with paywall bypass if configured)
+        if source['type'] == 'rss':
+            articles = self._scrape_with_paywall_bypass(source, cutoff_date)
+        elif source['type'] == 'web':
+            articles = self._scrape_web(source, cutoff_date)
+        else:
+            logger.warning(f"Unknown source type: {source['type']}")
+            return []
+
+        # Apply keyword filtering if query plan exists
+        if query_plan and articles:
+            articles = self._filter_by_query_plan(articles, query_plan)
+
+        # Cache the results
+        if articles:
+            self.cache_manager.set(cache_key, articles)
+
+        return articles
+
+    def _scrape_with_paywall_bypass(
+        self,
+        source: Dict[str, Any],
+        cutoff_date: datetime
+    ) -> List[Dict[str, Any]]:
+        """
+        Try normal RSS scrape first, fallback to paywallbuster if failed
+
+        Args:
+            source: Source configuration dict
+            cutoff_date: Cutoff date for filtering
+
+        Returns:
+            List of scraped articles
+        """
+        # Step 1: Try normal RSS fetch
+        articles = self._scrape_rss(source, cutoff_date)
+
+        # Step 2: Check if paywall bypass needed
+        if (not articles or len(articles) == 0) and source.get('use_paywall_bypass', False):
+            logger.warning(f"Normal scrape failed for {source['name']}, trying paywallbuster")
+
+            original_url = source['rss_url']
+            paywall_url = f"https://www.paywallbuster.com/?url={original_url}"
+
+            # Create modified source with paywallbuster URL
+            paywall_source = source.copy()
+            paywall_source['rss_url'] = paywall_url
+
+            # Retry with paywallbuster
+            articles = self._scrape_rss(paywall_source, cutoff_date)
+
+            if articles:
+                logger.info(f"✅ Paywallbuster success: {len(articles)} articles from {source['name']}")
+                # Mark articles as coming from paywall bypass
+                for article in articles:
+                    article['scraped_via_paywall_bypass'] = True
+            else:
+                logger.warning(f"❌ Paywallbuster also failed for {source['name']}")
+
+        return articles
+
+    def _scrape_rss(
+        self,
+        source: Dict[str, Any],
+        cutoff_date: datetime
+    ) -> List[Dict[str, Any]]:
+        """Scrape articles from RSS feed with alternative URL fallbacks"""
+        articles = []
+
+        # Try primary RSS URL first
+        rss_urls_to_try = [source['rss_url']]
+
+        # Add alternative RSS URLs if primary fails
+        if 'alternative_rss_urls' in source:
+            rss_urls_to_try.extend(source['alternative_rss_urls'])
+        else:
+            # Generate common alternative endpoints for high-credibility sources
+            if source.get('credibility_score', 0) >= 9:
+                base_url = source.get('url', '')
+                if base_url:
+                    # Common RSS endpoint variations
+                    rss_urls_to_try.extend([
+                        f"{base_url.rstrip('/')}/rss.xml",
+                        f"{base_url.rstrip('/')}/feed",
+                        f"{base_url.rstrip('/')}/feed.xml",
+                        f"{base_url.rstrip('/')}/index.xml",
+                        f"{base_url.rstrip('/')}/rss",
+                        f"{base_url.rstrip('/')}/atom.xml"
+                    ])
+
+        feed = None
+        successful_url = None
+
+        for rss_url in rss_urls_to_try:
+            if rss_url == source['rss_url']:
+                # Try primary URL
+                try:
+                    feed = feedparser.parse(rss_url)
+
+                    # Check for feed errors
+                    if feed.get('bozo', False):
+                        error_msg = str(feed.get('bozo_exception', 'Unknown error'))
+                        if 'SSL' in error_msg or 'certificate' in error_msg.lower():
+                            logger.error(f"SSL certificate error for {source['name']}: {error_msg}")
+                            logger.error("Fix: Run /Applications/Python 3.9/Install Certificates.command")
+                        else:
+                            logger.warning(f"RSS feed warning for {source['name']}: {error_msg}")
+
+                    if feed.entries:
+                        successful_url = rss_url
+                        break
+                    else:
+                        logger.debug(f"No entries from primary RSS URL for {source['name']}, trying alternatives...")
+                        feed = None
+                except Exception as e:
+                    logger.debug(f"Primary RSS failed for {source['name']}: {e}")
+                    feed = None
+            else:
+                # Try alternative URLs silently
+                try:
+                    test_feed = feedparser.parse(rss_url)
+                    if test_feed.entries and not test_feed.get('bozo', False):
+                        feed = test_feed
+                        successful_url = rss_url
+                        logger.info(f"✓ Alternative RSS URL worked for {source['name']}: {rss_url}")
+                        break
+                except Exception:
+                    continue
+
+        if not feed or not feed.entries:
+            logger.warning(f"No entries found in RSS feed for {source['name']}")
+            # Try HTML scraping fallback for high-credibility sources
+            if source.get('credibility_score', 0) >= 9:
+                logger.info(f"Attempting HTML scraping fallback for {source['name']}...")
+                return self._scrape_html_fallback(source, cutoff_date)
+            return articles
+
+        try:
+            for entry in feed.entries[:self.max_articles_per_source]:
+                # Parse published date
+                pub_date = None
+                if hasattr(entry, 'published_parsed'):
+                    pub_date = datetime(*entry.published_parsed[:6])
+                elif hasattr(entry, 'updated_parsed'):
+                    pub_date = datetime(*entry.updated_parsed[:6])
+
+                # Skip old articles
+                if pub_date and pub_date < cutoff_date:
+                    continue
+
+                # Extract content
+                content = ""
+                if hasattr(entry, 'summary'):
+                    content = entry.summary
+                elif hasattr(entry, 'description'):
+                    content = entry.description
+
+                # Clean HTML from content
+                if content:
+                    soup = BeautifulSoup(content, 'html.parser')
+                    content = soup.get_text().strip()
+
+                article = {
+                    'title': entry.title,
+                    'url': entry.link,
+                    'content': content,
+                    'published_date': pub_date.isoformat() if pub_date else None,
+                    'source': source['name'],
+                    'source_id': source['id'],
+                    'language': source['language'],
+                    'credibility_score': source.get('credibility_score', 5),
+                    'relevance_weight': source.get('relevance_weight', 5),
+                    'focus_tags': source.get('focus_tags', [])
+                }
+
+                articles.append(article)
+
+        except Exception as e:
+            logger.error(f"RSS scraping error for {source['name']}: {e}")
+
+        return articles
+
+    def _scrape_html_fallback(
+        self,
+        source: Dict[str, Any],
+        cutoff_date: datetime
+    ) -> List[Dict[str, Any]]:
+        """
+        HTML scraping fallback for official company blogs when RSS fails.
+        Uses BeautifulSoup to extract blog posts directly from HTML.
+        """
+        articles = []
+
+        try:
+            blog_url = source.get('url', '')
+            if not blog_url:
+                return articles
+
+            # Add common blog listing paths
+            blog_urls_to_try = [
+                blog_url,
+                f"{blog_url.rstrip('/')}/blog",
+                f"{blog_url.rstrip('/')}/news",
+                f"{blog_url.rstrip('/')}/updates"
+            ]
+
+            response = None
+            for url in blog_urls_to_try:
+                try:
+                    response = self.session.get(url, timeout=15)
+                    if response.status_code == 200:
+                        break
+                except:
+                    continue
+
+            if not response or response.status_code != 200:
+                logger.warning(f"HTML fallback failed - couldn't fetch {source['name']}")
+                return articles
+
+            soup = BeautifulSoup(response.text, 'html.parser')
+
+            # Company-specific selectors for major AI blogs
+            blog_selectors = {
+                'anthropic': ['article.blog-post', 'div.news-item', 'article'],
+                'openai': ['article', 'div.post', 'div.blog-post'],
+                'deepmind': ['article', 'div.card', 'div.article-card'],
+                'meta': ['article', 'div.blog-card'],
+                'huggingface': ['article', 'div.space-post'],
+                'default': ['article', 'div.blog-post', 'div.post-item', 'div.article']
+            }
+
+            # Detect which selector to use
+            source_id = source.get('id', '').lower()
+            selectors = blog_selectors.get('default')
+            for key in blog_selectors:
+                if key in source_id:
+                    selectors = blog_selectors[key]
+                    break
+
+            # Try selectors until we find articles
+            article_elements = []
+            for selector in selectors:
+                article_elements = soup.select(selector)
+                if len(article_elements) > 0:
+                    logger.debug(f"Found {len(article_elements)} articles using selector: {selector}")
+                    break
+
+            for element in article_elements[:self.max_articles_per_source]:
+                try:
+                    # Extract title
+                    title_elem = element.find(['h1', 'h2', 'h3']) or element.find('a', class_=lambda x: 'title' in str(x).lower() if x else False)
+                    title = title_elem.get_text().strip() if title_elem else None
+
+                    if not title:
+                        continue
+
+                    # Extract URL
+                    link_elem = element.find('a')
+                    url = link_elem.get('href', '') if link_elem else ''
+                    if url and not url.startswith('http'):
+                        from urllib.parse import urljoin
+                        url = urljoin(blog_url, url)
+
+                    # Extract content (first few paragraphs)
+                    content_parts = []
+                    for p in element.find_all('p')[:3]:  # First 3 paragraphs
+                        text = p.get_text().strip()
+                        if len(text) > 50:  # Only meaningful paragraphs
+                            content_parts.append(text)
+
+                    content = ' '.join(content_parts) if content_parts else element.get_text().strip()[:500]
+
+                    # Try to extract date
+                    pub_date = None
+                    date_elem = element.find(['time', 'span'], class_=lambda x: 'date' in str(x).lower() if x else False)
+                    if date_elem:
+                        date_str = date_elem.get('datetime') or date_elem.get_text().strip()
+                        try:
+                            from dateutil import parser
+                            pub_date = parser.parse(date_str)
+                        except:
+                            pass
+
+                    # Skip if too old (if we have a date)
+                    if pub_date and pub_date < cutoff_date:
+                        continue
+
+                    article = {
+                        'title': title,
+                        'url': url,
+                        'content': content,
+                        'published_date': pub_date.isoformat() if pub_date else None,
+                        'source': source['name'],
+                        'source_id': source['id'],
+                        'language': source['language'],
+                        'credibility_score': source.get('credibility_score', 5),
+                        'relevance_weight': source.get('relevance_weight', 5),
+                        'focus_tags': source.get('focus_tags', [])
+                    }
+
+                    articles.append(article)
+                    logger.debug(f"Scraped article: {title[:50]}...")
+
+                except Exception as e:
+                    logger.debug(f"Error extracting article element: {e}")
+                    continue
+
+            if articles:
+                logger.info(f"✓ HTML fallback successful for {source['name']}: {len(articles)} articles")
+            else:
+                logger.warning(f"HTML fallback found no articles for {source['name']}")
+
+        except Exception as e:
+            logger.error(f"HTML fallback error for {source['name']}: {e}")
+
+        return articles
+
+    def _scrape_web(
+        self,
+        source: Dict[str, Any],
+        cutoff_date: datetime
+    ) -> List[Dict[str, Any]]:
+        """
+        Scrape articles from web page (HTML parsing)
+
+        Implements generic scraping with fallback to RSS if available
+        """
+        articles = []
+
+        try:
+            # Try RSS URL first if available
+            if 'rss_url' in source:
+                return self._scrape_rss(source, cutoff_date)
+
+            # Otherwise attempt generic HTML parsing
+            logger.debug(f"Attempting HTML scraping for {source['name']}")
+            response = self.session.get(source['url'], timeout=15)
+            response.raise_for_status()
+            response.encoding = source.get('encoding', 'utf-8')
+
+            logger.debug(f"Successfully fetched {source['url']} ({response.status_code})")
+
+            soup = BeautifulSoup(response.text, 'html.parser')
+
+            # Generic article extraction (works for many news sites)
+            article_selectors = [
+                'article',
+                '.article-item',
+                '.news-item',
+                '.post',
+                'li.item'
+            ]
+
+            article_elements = []
+            for selector in article_selectors:
+                article_elements = soup.select(selector)
+                if article_elements:
+                    break
+
+            for element in article_elements[:self.max_articles_per_source]:
+                try:
+                    # Extract title
+                    title_elem = element.find(['h1', 'h2', 'h3', 'h4']) or element.find('a')
+                    title = title_elem.get_text().strip() if title_elem else None
+
+                    # Extract URL
+                    link_elem = element.find('a')
+                    url = link_elem.get('href', '') if link_elem else ''
+                    if url and not url.startswith('http'):
+                        from urllib.parse import urljoin
+                        url = urljoin(source['url'], url)
+
+                    # Extract summary/content
+                    content_elem = element.find(['p', '.summary', '.description'])
+                    content = content_elem.get_text().strip() if content_elem else ''
+
+                    # Skip if missing critical fields
+                    if not title or not url:
+                        continue
+
+                    article = {
+                        'title': title,
+                        'url': url,
+                        'content': content,
+                        'published_date': datetime.now().isoformat(),  # Fallback to now
+                        'source': source['name'],
+                        'source_id': source['id'],
+                        'language': source['language'],
+                        'credibility_score': source.get('credibility_score', 5),
+                        'relevance_weight': source.get('relevance_weight', 5),
+                        'focus_tags': source.get('focus_tags', [])
+                    }
+
+                    articles.append(article)
+
+                except Exception as e:
+                    logger.debug(f"Failed to parse article element: {e}")
+                    continue
+
+            if not articles:
+                logger.warning(f"No articles extracted from {source['name']} using generic parser")
+
+        except Exception as e:
+            logger.error(f"Web scraping error for {source['name']}: {e}")
+
+        return articles
+
+    def _filter_by_query_plan(
+        self,
+        articles: List[Dict[str, Any]],
+        query_plan: Dict[str, Any]
+    ) -> List[Dict[str, Any]]:
+        """
+        Filter articles based on ACE-Planner query plan keywords
+
+        Args:
+            articles: List of articles to filter
+            query_plan: Query plan with themes and keywords
+
+        Returns:
+            Filtered list of articles
+        """
+        if not query_plan or not query_plan.get('themes'):
+            return articles
+
+        filtered_articles = []
+
+        for article in articles:
+            # Combine title and content for matching
+            text = (article.get('title', '') + ' ' + article.get('content', '')).lower()
+
+            # Check if article matches any theme
+            matches_theme = False
+
+            for theme in query_plan['themes']:
+                must_keywords = theme.get('must_keywords', [])
+                should_keywords = theme.get('should_keywords', [])
+                not_keywords = theme.get('not_keywords', [])
+
+                # Check "not" keywords first (exclusion)
+                has_not_keyword = any(kw.lower() in text for kw in not_keywords)
+                if has_not_keyword:
+                    continue  # Skip this theme
+
+                # Check "must" keywords (at least one must match)
+                has_must_keyword = any(kw.lower() in text for kw in must_keywords)
+
+                # Check "should" keywords (optional, but boost relevance)
+                should_count = sum(1 for kw in should_keywords if kw.lower() in text)
+
+                # Article matches if:
+                # - Has at least one "must" keyword, OR
+                # - Has multiple "should" keywords (2+)
+                if has_must_keyword or should_count >= 2:
+                    matches_theme = True
+                    break
+
+            if matches_theme:
+                filtered_articles.append(article)
+
+        logger.debug(f"Keyword filtering: {len(articles)} → {len(filtered_articles)} articles")
+        return filtered_articles
+
+
+if __name__ == "__main__":
+    # Test web scraper
+    scraper = WebScraper()
+
+    # Scrape recent articles
+    articles = scraper.scrape_all(days_back=3, use_cache=False)
+
+    print(f"\nScraped {len(articles)} articles:")
+    for article in articles[:5]:
+        print(f"- {article['title']} ({article['source']})")
