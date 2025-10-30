@@ -1,7 +1,71 @@
 {
-  "timestamp": "2025-10-28T09:25:43.883471",
+  "timestamp": "2025-10-30T11:17:52.737820",
   "key": "source_analyticsvidhya_7days",
   "value": [
+    {
+      "title": "Grokipedia vs Wikipedia: Elon Musk’s AI Encyclopedia is Here!",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/grokipedia-elon-musks-ai-encyclopedia/",
+      "content": "Grokipedia, or the “bias-free Wikipedia”, is finally here. With a massive store of over 800K articles, Grokipedia isn’t just another challenger to the reign of free information: it’s already taking its place. A lot has changed since the first public release of Grokipedia, from the addition of more articles to the promise of even more […]\nThe post Grokipedia vs Wikipedia: Elon Musk’s AI Encyclopedia is Here! appeared first on Analytics Vidhya.",
+      "published_date": "2025-10-29T16:43:10",
+      "source": "Analytics Vidhya",
+      "source_id": "analyticsvidhya",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    },
+    {
+      "title": "Train Your AI Agents Like a Pro with Microsoft Agent Lightning (Full Setup & Workflow)",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/microsoft-agent-lightning/",
+      "content": "AI agents are changing how we use technology. Powered by large language models, they can answer questions, complete tasks, and connect with data or APIs. But they still make mistakes, especially with complex, multi-step work, and fixing that manually takes time and effort. Microsoft’s new Agent Lightning framework makes this easier. It separates how an […]\nThe post Train Your AI Agents Like a Pro with Microsoft Agent Lightning (Full Setup & Workflow)  appeared first on Analytics Vidhya.",
+      "published_date": "2025-10-29T12:05:46",
+      "source": "Analytics Vidhya",
+      "source_id": "analyticsvidhya",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    },
+    {
+      "title": "Guide to Node-level Caching in LangGraph",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/caching-in-langgraph/",
+      "content": "If you’re learning LangGraph or exploring more about it then it’s nice to know about the pre-built node-level caching in LangGraph. Caching not only eliminates unnecessary computation but also fastens the latency. We’ll be looking at the implementation of the same in the article.  It’s assumed that you have an idea about agents and nodes […]\nThe post Guide to Node-level Caching in LangGraph appeared first on Analytics Vidhya.",
+      "published_date": "2025-10-28T13:06:41",
+      "source": "Analytics Vidhya",
+      "source_id": "analyticsvidhya",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    },
+    {
+      "title": "Building a Multi-Agent Dungeons & Dragons Game with LangChain",
+      "url": "https://www.analyticsvidhya.com/blog/2025/10/dungeons-dragons-game-with-langchain/",
+      "content": "Imagine a world where AI Agents not only engage in conversation but also embark on grand quests, defeat evil adversaries, and work together to rescue the wizarding world. Today, we are going to look at one of the most exciting use cases for Large Language Models. We will build a fully autonomous multi-player Dungeons & […]\nThe post Building a Multi-Agent Dungeons & Dragons Game with LangChain appeared first on Analytics Vidhya.",
+      "published_date": "2025-10-28T13:00:08",
+      "source": "Analytics Vidhya",
+      "source_id": "analyticsvidhya",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "机器学习",
+        "实战教程"
+      ]
+    },
     {
       "title": "Is ChatGPT Atlas Better than Perplexity Comet?",
       "url": "https://www.analyticsvidhya.com/blog/2025/10/chatgpt-atlas/",
@@ -87,70 +151,6 @@
       "url": "https://www.analyticsvidhya.com/blog/2025/10/claude-haiku-4-5/",
       "content": "Claude Haiku 4.5 is Anthropic’s latest small model, released on 15th October to all users. It’s a strong reminder that speed and intelligence don’t have to come at a high price. Just five months ago, Claude Sonnet 4 was considered the benchmark for balanced performance. Now, Haiku 4.5 delivers nearly the same coding and reasoning […]\nThe post Claude Haiku 4.5 is Here… and it’s BETTER than Sonnet 4.5? appeared first on Analytics Vidhya.",
       "published_date": "2025-10-24T13:25:40",
-      "source": "Analytics Vidhya",
-      "source_id": "analyticsvidhya",
-      "language": "en",
-      "credibility_score": 8,
-      "relevance_weight": 8,
-      "focus_tags": [
-        "数据科学",
-        "机器学习",
-        "实战教程"
-      ]
-    },
-    {
-      "title": "Guardrails in LLMs: Building Reliable AI Systems with Guardrails",
-      "url": "https://www.analyticsvidhya.com/blog/2025/10/guardrails-in-llm/",
-      "content": "Guardrails are the building blocks of LLM applications, helping turn experimental LLM apps into reliable, enterprise-grade solutions. How? While LLM-powered AI applications may look effortless in Proof of Concept (POC), scaling them reliably is a hard task. While LLMs excel at open-ended reasoning, they struggle with control and consistency when adapted for specific, mission-critical use […]\nThe post Guardrails in LLMs: Building Reliable AI Systems with Guardrails appeared first on Analytics Vidhya.",
-      "published_date": "2025-10-24T09:59:00",
-      "source": "Analytics Vidhya",
-      "source_id": "analyticsvidhya",
-      "language": "en",
-      "credibility_score": 8,
-      "relevance_weight": 8,
-      "focus_tags": [
-        "数据科学",
-        "机器学习",
-        "实战教程"
-      ]
-    },
-    {
-      "title": "Poisoning Attacks on LLMs: A Direct Attack on LLMs with Less than 250 Samples",
-      "url": "https://www.analyticsvidhya.com/blog/2025/10/llm-data-poisoning/",
-      "content": "Anthropic, in collaboration with the United Kingdom’s Artificial Intelligence Security Institute and the Alan Turing Institute, recently published an intriguing paper showing that as few as 250 malicious documents can create a “backdoor” vulnerability in a large language model, regardless of the model’s size or the volume of training data! We’ll explore these results in […]\nThe post Poisoning Attacks on LLMs: A Direct Attack on LLMs with Less than 250 Samples appeared first on Analytics Vidhya.",
-      "published_date": "2025-10-24T08:13:02",
-      "source": "Analytics Vidhya",
-      "source_id": "analyticsvidhya",
-      "language": "en",
-      "credibility_score": 8,
-      "relevance_weight": 8,
-      "focus_tags": [
-        "数据科学",
-        "机器学习",
-        "实战教程"
-      ]
-    },
-    {
-      "title": "Less is More: Recursive Reasoning with Tiny Networks",
-      "url": "https://www.analyticsvidhya.com/blog/2025/10/trm-recursive-reasoning/",
-      "content": "Do you think that a small neural network (like TRM) can outperform models many times larger in reasoning tasks? How is it possible for billions of LLM parameters to have such a small number of modest million-parameter iterations solving puzzles? “Currently, we live in a scale-obsessed world: More data. More GPUs mean bigger and better […]\nThe post Less is More: Recursive Reasoning with Tiny Networks appeared first on Analytics Vidhya.",
-      "published_date": "2025-10-23T04:24:00",
-      "source": "Analytics Vidhya",
-      "source_id": "analyticsvidhya",
-      "language": "en",
-      "credibility_score": 8,
-      "relevance_weight": 8,
-      "focus_tags": [
-        "数据科学",
-        "机器学习",
-        "实战教程"
-      ]
-    },
-    {
-      "title": "RIP Prompt Engineering? Why Verbalized Sampling Changes Everything!",
-      "url": "https://www.analyticsvidhya.com/blog/2025/10/verbalized-sampling/",
-      "content": "Over the last few years, Prompt engineering has been the secret handshake of the AI world. The right phrasing could make a model sound poetic, funny, or insightful; the wrong one turned it flat and robotic. But a new Stanford-led paper argues that most of this “craft” has been compensating for something deeper, a hidden […]\nThe post RIP Prompt Engineering? Why Verbalized Sampling Changes Everything! appeared first on Analytics Vidhya.",
-      "published_date": "2025-10-22T04:46:00",
       "source": "Analytics Vidhya",
       "source_id": "analyticsvidhya",
       "language": "en",

@@ -1,0 +1,161 @@
+{
+  "run_id": "20251030_094236",
+  "created_at": "2025-10-30T09:42:36.499733",
+  "phases": {
+    "initialization": {
+      "completed_at": "2025-10-30T09:42:36.574855",
+      "metrics": {
+        "phase_name": "initialization",
+        "started_at": "2025-10-30T09:42:36.500816",
+        "completed_at": "2025-10-30T09:42:36.574789",
+        "duration_seconds": 0.07,
+        "custom_metrics": {
+          "categories_loaded": {
+            "value": 6,
+            "timestamp": "2025-10-30T09:42:36.574769",
+            "metadata": {}
+          }
+        }
+      },
+      "insights": []
+    },
+    "scraping": {
+      "completed_at": "2025-10-30T09:44:35.942866",
+      "metrics": {
+        "phase_name": "scraping",
+        "started_at": "2025-10-30T09:42:36.575122",
+        "completed_at": "2025-10-30T09:44:35.942771",
+        "duration_seconds": 119.37,
+        "custom_metrics": {
+          "sources_attempted": {
+            "value": 86,
+            "timestamp": "2025-10-30T09:44:35.942696",
+            "metadata": {}
+          },
+          "sources_succeeded": {
+            "value": 14,
+            "timestamp": "2025-10-30T09:44:35.942745",
+            "metadata": {}
+          }
+        },
+        "articles_output": 158
+      },
+      "insights": [
+        "Average 1.8 articles per source"
+      ]
+    },
+    "tier1_filter": {
+      "completed_at": "2025-10-30T09:44:36.148195",
+      "metrics": {
+        "phase_name": "tier1_filter",
+        "started_at": "2025-10-30T09:44:35.943232",
+        "completed_at": "2025-10-30T09:44:36.148116",
+        "duration_seconds": 0.2,
+        "custom_metrics": {
+          "filter_rate": {
+            "value": 0.23417721518987342,
+            "timestamp": "2025-10-30T09:44:36.148096",
+            "metadata": {}
+          }
+        },
+        "articles_input": 158,
+        "articles_output": 37
+      },
+      "insights": [
+        "Tier 1 filter rate: 23.4%"
+      ]
+    },
+    "tier2_batch_eval": {
+      "completed_at": "2025-10-30T09:45:27.966601",
+      "metrics": {
+        "phase_name": "tier2_batch_eval",
+        "started_at": "2025-10-30T09:44:36.148455",
+        "completed_at": "2025-10-30T09:45:27.966506",
+        "duration_seconds": 51.82,
+        "custom_metrics": {
+          "pass_rate": {
+            "value": 1.0,
+            "timestamp": "2025-10-30T09:45:27.966183",
+            "metadata": {}
+          }
+        },
+        "articles_input": 37,
+        "articles_output": 37,
+        "llm_calls": 4,
+        "total_input_tokens": 8000,
+        "total_output_tokens": 2000,
+        "total_tokens": 10000,
+        "total_cost_usd": 0.0168,
+        "avg_latency_ms": 2000.0
+      },
+      "insights": [
+        "Tier 2 pass rate: 100.0%"
+      ]
+    },
+    "tier3_5d_eval": {
+      "completed_at": "2025-10-30T09:54:25.517267",
+      "metrics": {
+        "phase_name": "tier3_5d_eval",
+        "started_at": "2025-10-30T09:45:27.966884",
+        "completed_at": "2025-10-30T09:54:25.516909",
+        "duration_seconds": 537.55,
+        "custom_metrics": {},
+        "articles_input": 37,
+        "articles_output": 10,
+        "llm_calls": 10,
+        "total_input_tokens": 30000,
+        "total_output_tokens": 8000,
+        "total_tokens": 38000,
+        "total_cost_usd": 0.064,
+        "avg_latency_ms": 2500.0
+      },
+      "insights": []
+    },
+    "ranking": {
+      "completed_at": "2025-10-30T09:54:25.524772",
+      "metrics": {
+        "phase_name": "ranking",
+        "started_at": "2025-10-30T09:54:25.518326",
+        "completed_at": "2025-10-30T09:54:25.524658",
+        "duration_seconds": 0.01,
+        "custom_metrics": {},
+        "articles_output": 10
+      },
+      "insights": []
+    },
+    "paraphrasing": {
+      "completed_at": "2025-10-30T09:57:19.999986",
+      "metrics": {
+        "phase_name": "paraphrasing",
+        "started_at": "2025-10-30T09:54:25.525173",
+        "completed_at": "2025-10-30T09:57:19.999749",
+        "duration_seconds": 174.47,
+        "custom_metrics": {},
+        "articles_output": 10,
+        "llm_calls": 10,
+        "total_input_tokens": 25000,
+        "total_output_tokens": 6000,
+        "total_tokens": 31000,
+        "total_cost_usd": 0.052,
+        "avg_latency_ms": 2000.0
+      },
+      "insights": [
+        "Average paraphrase length: 512 characters"
+      ]
+    },
+    "report_generation": {
+      "completed_at": "2025-10-30T09:58:13.744658",
+      "metrics": {
+        "phase_name": "report_generation",
+        "started_at": "2025-10-30T09:57:20.000845",
+        "completed_at": "2025-10-30T09:58:13.744510",
+        "duration_seconds": 53.74,
+        "custom_metrics": {}
+      },
+      "insights": []
+    }
+  },
+  "global_insights": [],
+  "historical_averages": {},
+  "anomalies_detected": []
+}

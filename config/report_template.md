@@ -20,6 +20,10 @@
 {% for article in articles %}
 #### {{ loop.index }}. [{{ article.title }}]({{ article.url }})
 
+{% if article.entity_background %}
+**【背景信息】**: {{ article.entity_background }}
+
+{% endif %}
 {{ article.paraphrased_content }}
 
 **来源**: {{ article.source }} | **发布时间**: {{ article.published_date }} | **[阅读原文]({{ article.url }})**

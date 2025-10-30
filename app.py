@@ -1114,13 +1114,181 @@ URL: [链接]
     except Exception as e:
         return f"{t('chat_error', lang)}: {str(e)}"
 
+def get_full_article_from_cache(article_url: str) -> Optional[str]:
+    """
+    Retrieve full article content from cache by URL
+
+    Searches through data/cache/*.json files to find matching URL.
+    Returns full 'content' field (not just paraphrased summary).
+
+    Args:
+        article_url: URL of the article to find
+
+    Returns:
+        Full article content (3-20KB), or None if not found
+    """
+    cache_dir = Path("./data/cache")
+    if not cache_dir.exists():
+        return None
+
+    try:
+        # Search through all cache files
+        for cache_file in cache_dir.glob("*.json"):
+            if cache_file.name.startswith("article_contexts"):
+                continue  # Skip context files
+
+            with open(cache_file, 'r', encoding='utf-8') as f:
+                cached = json.load(f)
+
+                # Handle cache format: {"value": [articles...]}
+                if isinstance(cached, dict) and cached.get('value'):
+                    for article in cached['value']:
+                        if article.get('url') == article_url:
+                            content = article.get('content', '')
+                            if content and len(content) > 500:  # Has substantial content
+                                logger.debug(f"Found cached article: {article_url[:50]}...")
+                                return content
+
+    except Exception as e:
+        logger.warning(f"Error retrieving from cache: {e}")
+
+    return None
+
+def find_relevant_articles(
+    question: str,
+    articles: List[Dict[str, str]],
+    max_results: int = 3
+) -> List[Dict[str, str]]:
+    """
+    Find articles most relevant to user's question using scoring
+
+    Scoring factors:
+    1. Entity matching (company/tech names) - +3 points
+    2. Keyword overlap in title - +2 points per keyword
+    3. Keyword overlap in summary - +1 point per keyword
+
+    Args:
+        question: User's question
+        articles: List of article dicts
+        max_results: Maximum number of articles to return
+
+    Returns:
+        List of most relevant articles, sorted by relevance score
+    """
+    scored_articles = []
+    question_lower = question.lower()
+
+    # Extract entities from question
+    common_entities = [
+        'anthropic', 'openai', 'google', 'deepmind', 'meta', 'microsoft',
+        'amazon', 'apple', 'nvidia', 'hugging face', 'midjourney', 'cohere',
+        'claude', 'gpt', 'gemini', 'llama', 'palm', 'dall-e', 'stable diffusion'
+    ]
+
+    entities_in_question = [e for e in common_entities if e in question_lower]
+
+    # Extract keywords (filter out common words)
+    stop_words = {'的', '是', '在', '和', '了', '有', '这', '个', '与', '为',
+                  'the', 'is', 'in', 'and', 'of', 'a', 'to', 'for', 'on', 'with'}
+    keywords = [w for w in question_lower.split()
+                if len(w) > 2 and w not in stop_words]
+
+    for article in articles:
+        score = 0
+        title_lower = article.get('title', '').lower()
+        summary_lower = article.get('summary', '').lower()
+
+        # Entity matching (+3 points each)
+        for entity in entities_in_question:
+            if entity in title_lower or entity in summary_lower:
+                score += 3
+
+        # Keyword overlap in title (+2 points each)
+        for keyword in keywords:
+            if keyword in title_lower:
+                score += 2
+
+        # Keyword overlap in summary (+1 point each)
+        for keyword in keywords:
+            if keyword in summary_lower:
+                score += 1
+
+        if score > 0:
+            scored_articles.append((score, article))
+
+    # Sort by score (descending) and return top matches
+    scored_articles.sort(reverse=True, key=lambda x: x[0])
+
+    # Return articles only (not scores)
+    result = [art for score, art in scored_articles[:max_results]]
+
+    if result:
+        logger.info(f"Found {len(result)} relevant articles for question")
+
+    return result
+
+def fetch_url_content_with_webfetch(url: str, max_chars: int = 5000) -> Optional[str]:
+    """
+    Fetch article content from URL using Claude's WebFetch tool
+
+    This uses the WebFetch capability to retrieve and parse web content.
+
+    Args:
+        url: URL to fetch
+        max_chars: Maximum characters to return
+
+    Returns:
+        Article content (markdown format), or None if fetch fails
+    """
+    try:
+        # Use WebFetch tool to get content
+        from anthropic import Anthropic
+
+        client = Anthropic()
+
+        # Call Claude with WebFetch tool
+        response = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=2000,
+            tools=[{
+                "name": "web_fetch",
+                "description": "Fetches content from a URL",
+                "input_schema": {
+                    "type": "object",
+                    "properties": {
+                        "url": {"type": "string"},
+                        "prompt": {"type": "string"}
+                    },
+                    "required": ["url", "prompt"]
+                }
+            }],
+            messages=[{
+                "role": "user",
+                "content": f"Please fetch and extract the main article content from: {url}"
+            }]
+        )
+
+        # Parse response to get fetched content
+        for block in response.content:
+            if hasattr(block, 'text'):
+                content = block.text
+                if content and len(content) > 100:
+                    logger.info(f"Fetched content from URL: {url[:50]}...")
+                    return content[:max_chars]
+
+        return None
+
+    except Exception as e:
+        logger.warning(f"WebFetch failed for {url}: {e}")
+        return None
+
 def enrich_qa_context(
     question: str,
     articles: List[Dict[str, str]],
     briefing_content: str
 ) -> str:
     """
-    Enrich Q&A context with Context Provider data and optional URL fetching
+    Enrich Q&A context with full article content from cache or WebFetch
 
     Smart routing:
     - Simple questions → Use paraphrase only
@@ -1153,58 +1321,64 @@ def enrich_qa_context(
         if company in question_lower:
             entities_in_question.add(company.title())
 
-    # If asking about companies/tech, fetch Context Provider data
-    if (asks_about_company or asks_about_tech) and entities_in_question:
-        try:
-            from modules.context_provider import ContextProvider
-            from utils.llm_client_enhanced import LLMClient
+    # Note: Entity background context is now provided by entity_background_agent
+    # in the orchestrated pipeline. Legacy ContextProvider has been removed.
 
-            context_provider = ContextProvider(llm_client=LLMClient())
-            enriched_parts.append("\n\n# 补充背景信息\n")
-
-            for entity in entities_in_question:
-                if asks_about_company:
-                    company_ctx = context_provider.get_company_context(entity)
-                    if company_ctx:
-                        enriched_parts.append(f"\n## {entity} 公司背景")
-                        enriched_parts.append(f"**背景**: {company_ctx.get('background', '')}")
-                        enriched_parts.append(f"**业务模式**: {company_ctx.get('business_model', '')}")
-
-                if asks_about_tech:
-                    # Try to find tech mentions in articles about this company
-                    tech_ctx = context_provider.get_technology_context(entity, entity)
-                    if tech_ctx:
-                        enriched_parts.append(f"\n## {entity} 技术原理")
-                        enriched_parts.append(f"**原理**: {tech_ctx}")
-
-        except Exception as e:
-            logger.warning(f"Failed to enrich context with Context Provider: {e}")
-
-    # Optionally fetch full article content for detailed questions
-    # (Only if question is very specific and requests details)
-    detail_keywords = ['详细', 'detail', 'explain', '解释', 'how', '为什么', 'why']
+    # Fetch full article content for detailed questions
+    # Detect if user asks for details (数据, 具体, benchmark, 详细, etc.)
+    detail_keywords = ['数据', '具体', 'data', 'benchmark', 'number', '数字',
+                       '详细', 'detail', 'explain', '解释', 'how', '为什么', 'why',
+                       '多少', 'percentage', '百分比', '提升', 'improvement']
     asks_for_details = any(kw in question_lower for kw in detail_keywords)
 
-    if asks_for_details and articles and entities_in_question:
-        # Try to fetch one relevant article's full content
-        try:
-            # Find most relevant article by checking if title matches question
-            best_match = None
-            for article in articles[:3]:  # Check top 3 articles only
-                title_lower = article.get('title', '').lower()
-                if any(entity.lower() in title_lower for entity in entities_in_question):
-                    best_match = article
-                    break
+    if asks_for_details and articles:
+        # Find most relevant articles using smart scoring
+        relevant_articles = find_relevant_articles(question, articles, max_results=2)
 
-            if best_match and best_match.get('url'):
-                # Note: WebFetch would be called here in production
-                # For now, we indicate that full content could be fetched
-                enriched_parts.append(f"\n\n# 相关文章 URL - {best_match.get('title')}")
-                enriched_parts.append(f"URL: {best_match['url']}")
-                enriched_parts.append("(如需更多细节，可以访问原文)")
+        if relevant_articles:
+            enriched_parts.append("\n\n# 相关文章详细内容")
 
-        except Exception as e:
-            logger.warning(f"Failed to fetch full article content: {e}")
+            for article in relevant_articles:
+                article_url = article.get('url', '')
+                article_title = article.get('title', 'Unknown')
+                article_source = article.get('source', 'Unknown')
+
+                # Try cache first (fast, no API calls)
+                full_content = get_full_article_from_cache(article_url)
+
+                if full_content:
+                    # Found in cache! Include full content
+                    enriched_parts.append(f"\n## 【{article_source}】{article_title}")
+                    enriched_parts.append(f"来源: {article_source}")
+                    enriched_parts.append(f"URL: {article_url}")
+                    enriched_parts.append(f"\n原文内容:\n{full_content[:5000]}")  # First 5000 chars
+                    enriched_parts.append("\n---")
+                    logger.info(f"Enriched context with cached article: {article_title[:50]}")
+
+                elif article_url:
+                    # Cache miss - try WebFetch (optional fallback)
+                    # Only try if question seems critical
+                    critical_keywords = ['benchmark', 'data', '数据', '具体数字']
+                    is_critical = any(kw in question_lower for kw in critical_keywords)
+
+                    if is_critical:
+                        try:
+                            fetched_content = fetch_url_content_with_webfetch(article_url, max_chars=5000)
+                            if fetched_content:
+                                enriched_parts.append(f"\n## 【{article_source}】{article_title}")
+                                enriched_parts.append(f"来源: {article_source} (在线获取)")
+                                enriched_parts.append(f"URL: {article_url}")
+                                enriched_parts.append(f"\n原文内容:\n{fetched_content}")
+                                enriched_parts.append("\n---")
+                                logger.info(f"Enriched context with WebFetch: {article_title[:50]}")
+                        except Exception as e:
+                            logger.warning(f"WebFetch failed for {article_url}: {e}")
+
+            # If no full content found, indicate URLs for manual access
+            if len([p for p in enriched_parts if '原文内容' in p]) == 0:
+                enriched_parts.append("\n注: 详细原文内容未缓存，建议访问以下URL获取完整信息:")
+                for article in relevant_articles[:2]:
+                    enriched_parts.append(f"- {article.get('title')}: {article.get('url')}")
 
     return "\n".join(enriched_parts)
 
@@ -1226,21 +1400,26 @@ def answer_question_about_briefing(question: str, briefing_content: str, lang: s
 关键职责:
 1. 分析文章内容，提取中心论点（Central Argument）
 2. 识别并解释支撑论点的数据和证据（Data and Evidence）
-3. 如果用户提问含混，应该提供多角度的分析
+3. **如果提供了"原文详细内容"，优先从中提取具体数据、数字、benchmark、百分比等关键事实**
 4. 引用具体的文章标题和来源
 5. 深入分析而非仅重复摘要
-6. **如果提供了补充背景信息，请优先使用这些信息回答**
-7. **如果提供了原文详细内容，请从中提取关键事实和数据**
+6. 区分"周报摘要"（简要分析）和"原文详细内容"（完整信息）
 
 回答要求:
-- 准确引用文章内容和补充背景
-- 提供具体的数据、数字或事实
+- **优先使用原文详细内容中的具体数据回答问题**（如benchmark分数、百分比、具体数字）
+- 准确引用文章标题、来源、URL
+- 提供具体的数据、数字或事实（来自原文详细内容）
 - 解释因果关系和逻辑
+- 如果原文详细内容已提供，不要只重复周报摘要
 - 必要时可以从多篇文章综合分析
-- 如果信息不足以回答问题，请明确指出需要哪些补充信息
+- 如果信息不足以回答问题，明确指出需要访问哪些URL获取更多信息
 - 使用中文回答，保持专业且易懂的语气
 
-以下是本周的文章内容（包含补充背景信息）:
+数据格式示例:
+- ✅ 好: "Claude 3.5在MMLU benchmark上得分88.7%，相比Claude 3提升3.2%"
+- ❌ 差: "Claude 3.5在benchmark上表现优异"
+
+以下是本周的文章内容（可能包含原文详细内容）:
 
 {enriched_content}"""
 

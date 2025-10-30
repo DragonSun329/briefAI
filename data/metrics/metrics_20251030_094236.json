@@ -1,0 +1,480 @@
+{
+  "run_id": "20251030_094236",
+  "timestamp": "2025-10-30T09:58:13.748200",
+  "total_metrics": {
+    "total_llm_calls": 24,
+    "total_input_tokens": 63000,
+    "total_output_tokens": 16000,
+    "total_tokens": 79000,
+    "total_cost_usd": 0.1328,
+    "total_duration_seconds": 937.23,
+    "avg_tokens_per_call": 3292.0,
+    "phases_completed": 8
+  },
+  "phase_metrics": {
+    "initialization": {
+      "phase_name": "initialization",
+      "started_at": "2025-10-30T09:42:36.500816",
+      "completed_at": "2025-10-30T09:42:36.574789",
+      "duration_seconds": 0.07,
+      "custom_metrics": {
+        "categories_loaded": {
+          "value": 6,
+          "timestamp": "2025-10-30T09:42:36.574769",
+          "metadata": {}
+        }
+      }
+    },
+    "scraping": {
+      "phase_name": "scraping",
+      "started_at": "2025-10-30T09:42:36.575122",
+      "completed_at": "2025-10-30T09:44:35.942771",
+      "duration_seconds": 119.37,
+      "custom_metrics": {
+        "sources_attempted": {
+          "value": 86,
+          "timestamp": "2025-10-30T09:44:35.942696",
+          "metadata": {}
+        },
+        "sources_succeeded": {
+          "value": 14,
+          "timestamp": "2025-10-30T09:44:35.942745",
+          "metadata": {}
+        }
+      },
+      "articles_output": 158
+    },
+    "tier1_filter": {
+      "phase_name": "tier1_filter",
+      "started_at": "2025-10-30T09:44:35.943232",
+      "completed_at": "2025-10-30T09:44:36.148116",
+      "duration_seconds": 0.2,
+      "custom_metrics": {
+        "filter_rate": {
+          "value": 0.23417721518987342,
+          "timestamp": "2025-10-30T09:44:36.148096",
+          "metadata": {}
+        }
+      },
+      "articles_input": 158,
+      "articles_output": 37
+    },
+    "tier2_batch_eval": {
+      "phase_name": "tier2_batch_eval",
+      "started_at": "2025-10-30T09:44:36.148455",
+      "completed_at": "2025-10-30T09:45:27.966506",
+      "duration_seconds": 51.82,
+      "custom_metrics": {
+        "pass_rate": {
+          "value": 1.0,
+          "timestamp": "2025-10-30T09:45:27.966183",
+          "metadata": {}
+        }
+      },
+      "articles_input": 37,
+      "articles_output": 37,
+      "llm_calls": 4,
+      "total_input_tokens": 8000,
+      "total_output_tokens": 2000,
+      "total_tokens": 10000,
+      "total_cost_usd": 0.0168,
+      "avg_latency_ms": 2000.0
+    },
+    "tier3_5d_eval": {
+      "phase_name": "tier3_5d_eval",
+      "started_at": "2025-10-30T09:45:27.966884",
+      "completed_at": "2025-10-30T09:54:25.516909",
+      "duration_seconds": 537.55,
+      "custom_metrics": {},
+      "articles_input": 37,
+      "articles_output": 10,
+      "llm_calls": 10,
+      "total_input_tokens": 30000,
+      "total_output_tokens": 8000,
+      "total_tokens": 38000,
+      "total_cost_usd": 0.064,
+      "avg_latency_ms": 2500.0
+    },
+    "ranking": {
+      "phase_name": "ranking",
+      "started_at": "2025-10-30T09:54:25.518326",
+      "completed_at": "2025-10-30T09:54:25.524658",
+      "duration_seconds": 0.01,
+      "custom_metrics": {},
+      "articles_output": 10
+    },
+    "paraphrasing": {
+      "phase_name": "paraphrasing",
+      "started_at": "2025-10-30T09:54:25.525173",
+      "completed_at": "2025-10-30T09:57:19.999749",
+      "duration_seconds": 174.47,
+      "custom_metrics": {},
+      "articles_output": 10,
+      "llm_calls": 10,
+      "total_input_tokens": 25000,
+      "total_output_tokens": 6000,
+      "total_tokens": 31000,
+      "total_cost_usd": 0.052,
+      "avg_latency_ms": 2000.0
+    },
+    "report_generation": {
+      "phase_name": "report_generation",
+      "started_at": "2025-10-30T09:57:20.000845",
+      "completed_at": "2025-10-30T09:58:13.744510",
+      "duration_seconds": 53.74,
+      "custom_metrics": {}
+    },
+    "finalization": {
+      "phase_name": "finalization",
+      "started_at": "2025-10-30T09:58:13.745132",
+      "completed_at": null,
+      "duration_seconds": null,
+      "custom_metrics": {}
+    }
+  },
+  "llm_calls": [
+    {
+      "call_id": "llm_call_001",
+      "timestamp": "2025-10-30T09:45:27.966212",
+      "phase": "tier2_batch_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2000,
+      "output_tokens": 500,
+      "total_tokens": 2500,
+      "cost_usd": 0.0042,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_002",
+      "timestamp": "2025-10-30T09:45:27.966289",
+      "phase": "tier2_batch_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2000,
+      "output_tokens": 500,
+      "total_tokens": 2500,
+      "cost_usd": 0.0042,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_003",
+      "timestamp": "2025-10-30T09:45:27.966351",
+      "phase": "tier2_batch_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2000,
+      "output_tokens": 500,
+      "total_tokens": 2500,
+      "cost_usd": 0.0042,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_004",
+      "timestamp": "2025-10-30T09:45:27.966412",
+      "phase": "tier2_batch_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2000,
+      "output_tokens": 500,
+      "total_tokens": 2500,
+      "cost_usd": 0.0042,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_005",
+      "timestamp": "2025-10-30T09:54:25.515049",
+      "phase": "tier3_5d_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 3000,
+      "output_tokens": 800,
+      "total_tokens": 3800,
+      "cost_usd": 0.0064,
+      "latency_ms": 2500,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_006",
+      "timestamp": "2025-10-30T09:54:25.515243",
+      "phase": "tier3_5d_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 3000,
+      "output_tokens": 800,
+      "total_tokens": 3800,
+      "cost_usd": 0.0064,
+      "latency_ms": 2500,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_007",
+      "timestamp": "2025-10-30T09:54:25.515337",
+      "phase": "tier3_5d_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 3000,
+      "output_tokens": 800,
+      "total_tokens": 3800,
+      "cost_usd": 0.0064,
+      "latency_ms": 2500,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_008",
+      "timestamp": "2025-10-30T09:54:25.515422",
+      "phase": "tier3_5d_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 3000,
+      "output_tokens": 800,
+      "total_tokens": 3800,
+      "cost_usd": 0.0064,
+      "latency_ms": 2500,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_009",
+      "timestamp": "2025-10-30T09:54:25.515529",
+      "phase": "tier3_5d_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 3000,
+      "output_tokens": 800,
+      "total_tokens": 3800,
+      "cost_usd": 0.0064,
+      "latency_ms": 2500,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_010",
+      "timestamp": "2025-10-30T09:54:25.515615",
+      "phase": "tier3_5d_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 3000,
+      "output_tokens": 800,
+      "total_tokens": 3800,
+      "cost_usd": 0.0064,
+      "latency_ms": 2500,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_011",
+      "timestamp": "2025-10-30T09:54:25.515704",
+      "phase": "tier3_5d_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 3000,
+      "output_tokens": 800,
+      "total_tokens": 3800,
+      "cost_usd": 0.0064,
+      "latency_ms": 2500,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_012",
+      "timestamp": "2025-10-30T09:54:25.515785",
+      "phase": "tier3_5d_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 3000,
+      "output_tokens": 800,
+      "total_tokens": 3800,
+      "cost_usd": 0.0064,
+      "latency_ms": 2500,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_013",
+      "timestamp": "2025-10-30T09:54:25.515864",
+      "phase": "tier3_5d_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 3000,
+      "output_tokens": 800,
+      "total_tokens": 3800,
+      "cost_usd": 0.0064,
+      "latency_ms": 2500,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_014",
+      "timestamp": "2025-10-30T09:54:25.515943",
+      "phase": "tier3_5d_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 3000,
+      "output_tokens": 800,
+      "total_tokens": 3800,
+      "cost_usd": 0.0064,
+      "latency_ms": 2500,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_015",
+      "timestamp": "2025-10-30T09:57:19.998414",
+      "phase": "paraphrasing",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2500,
+      "output_tokens": 600,
+      "total_tokens": 3100,
+      "cost_usd": 0.0052,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_016",
+      "timestamp": "2025-10-30T09:57:19.998580",
+      "phase": "paraphrasing",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2500,
+      "output_tokens": 600,
+      "total_tokens": 3100,
+      "cost_usd": 0.0052,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_017",
+      "timestamp": "2025-10-30T09:57:19.998718",
+      "phase": "paraphrasing",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2500,
+      "output_tokens": 600,
+      "total_tokens": 3100,
+      "cost_usd": 0.0052,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_018",
+      "timestamp": "2025-10-30T09:57:19.998860",
+      "phase": "paraphrasing",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2500,
+      "output_tokens": 600,
+      "total_tokens": 3100,
+      "cost_usd": 0.0052,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_019",
+      "timestamp": "2025-10-30T09:57:19.998989",
+      "phase": "paraphrasing",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2500,
+      "output_tokens": 600,
+      "total_tokens": 3100,
+      "cost_usd": 0.0052,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_020",
+      "timestamp": "2025-10-30T09:57:19.999116",
+      "phase": "paraphrasing",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2500,
+      "output_tokens": 600,
+      "total_tokens": 3100,
+      "cost_usd": 0.0052,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_021",
+      "timestamp": "2025-10-30T09:57:19.999243",
+      "phase": "paraphrasing",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2500,
+      "output_tokens": 600,
+      "total_tokens": 3100,
+      "cost_usd": 0.0052,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_022",
+      "timestamp": "2025-10-30T09:57:19.999369",
+      "phase": "paraphrasing",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2500,
+      "output_tokens": 600,
+      "total_tokens": 3100,
+      "cost_usd": 0.0052,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_023",
+      "timestamp": "2025-10-30T09:57:19.999493",
+      "phase": "paraphrasing",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2500,
+      "output_tokens": 600,
+      "total_tokens": 3100,
+      "cost_usd": 0.0052,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_024",
+      "timestamp": "2025-10-30T09:57:19.999614",
+      "phase": "paraphrasing",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2500,
+      "output_tokens": 600,
+      "total_tokens": 3100,
+      "cost_usd": 0.0052,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    }
+  ],
+  "provider_stats": {
+    "kimi": {
+      "calls": 24,
+      "tokens": 79000,
+      "cost": 0.1328
+    }
+  }
+}

@@ -6,6 +6,34 @@ Automatically generate weekly AI industry briefings in Mandarin Chinese for exec
 
 **Regional Focus:** News coverage for China, Indonesia, Philippines, Spain, and Mexico (via English-language sources)
 
+## NEW: ACE Orchestrator (Agentic Context Engineering)
+
+**October 2025 Update**: The pipeline now runs through the ACE Orchestrator, a master controller that provides:
+
+- **Adaptive Context Management**: Each phase learns from previous phases and historical runs
+- **Comprehensive Error Tracking**: All errors logged, classified, and analyzed with fail-fast behavior
+- **Detailed Metrics Collection**: Token usage tracked per LLM call with cost calculation
+- **Execution Summaries**: Automatic generation of execution reports and bug reports
+- **Historical Learning**: Context persists across runs for continuous optimization
+
+**New Entry Point**: `python3 run_orchestrated_pipeline.py --top-n 12`
+
+**Orchestrator Components**:
+- `ContextEngine`: Manages adaptive context across 10 phases and historical runs
+- `ErrorTracker`: Comprehensive error logging with classification (NETWORK, LLM, PARSING, etc.)
+- `MetricsCollector`: Detailed token usage and performance tracking
+- `PhaseManager`: Dependency resolution and phase execution control (10 phases)
+- `EntityBackgroundAgent`: **NEW** - Generates article-specific entity backgrounds (Phase 8)
+- `QualityValidator`: Validates paraphrased content before report generation (Phase 8.5)
+- `ExecutionReporter`: Generates execution summaries and bug reports
+
+**Output Files (per run)**:
+- `data/reports/ai_briefing_YYYYMMDD_cn.md` - Final report
+- `data/reports/execution_summary_YYYYMMDD_HHMMSS.md` - Execution summary
+- `data/logs/errors_YYYYMMDD_HHMMSS.json` - Error log
+- `data/metrics/metrics_YYYYMMDD_HHMMSS.json` - Detailed metrics
+- `data/context/context_YYYYMMDD_HHMMSS.json` - Context snapshot
+
 ## What This Agent Does
 
 Every week, the complete pipeline:
@@ -124,42 +152,48 @@ briefAI/
 ├── ARCHITECTURE.md                # System architecture & data flow
 ├── PROMPTS.md                     # LLM prompt templates
 ├── app.py                         # Streamlit web interface
-├── main.py                        # Legacy CLI orchestrator
-├── run_pipeline_with_categories.py # Pipeline runner with 5D scoring
+├── run_orchestrated_pipeline.py   # ACE Orchestrator entry point (MAIN)
 ├── requirements.txt               # Python dependencies
 ├── .env                          # API keys and configuration
 ├── config/
 │   ├── sources.json              # 61 news sources configuration
 │   ├── categories.json           # Business category taxonomy
 │   ├── user_profile.md           # User preferences
-│   └── report_template.md        # Jinja2 report template
+│   ├── report_template.md        # Jinja2 report template
+│   └── orchestrator_config.json  # ACE Orchestrator configuration
+├── orchestrator/                 # ACE Orchestrator (NEW)
+│   ├── ace_orchestrator.py       # Main orchestrator controller
+│   ├── context_engine.py         # Adaptive context management
+│   ├── error_tracker.py          # Error logging & classification
+│   ├── metrics_collector.py      # Token usage & performance tracking
+│   ├── phase_manager.py          # Phase execution control
+│   └── execution_reporter.py     # Summary generation
 ├── modules/
 │   ├── category_selector.py      # Category parsing from user input
 │   ├── web_scraper.py            # Article scraping from 61 sources
-│   ├── article_filter.py         # Tier 1 pre-filtering
 │   ├── batch_evaluator.py        # Tier 2 batch LLM evaluation
 │   ├── news_evaluator.py         # Tier 3 5D evaluation
 │   ├── article_paraphraser.py    # 500-600 char deep analysis
+│   ├── entity_background_agent.py # Article-specific entity backgrounds (NEW)
 │   └── report_formatter.py       # Final report generation
 ├── utils/
-│   ├── llm_client.py             # Anthropic API wrapper
 │   ├── llm_client_enhanced.py    # Enhanced LLM client with provider fallback
-│   ├── claude_client.py          # Backup Claude API client
 │   ├── cache_manager.py          # Article and evaluation caching
 │   ├── scoring_engine.py         # 5D weighting and ranking
-│   ├── context_retriever.py      # Context retrieval for search
-│   ├── provider_switcher.py      # LLM provider switching
-│   ├── category_loader.py        # Category loading utilities
+│   ├── article_filter.py         # Tier 1 pre-filtering
+│   ├── checkpoint_manager.py     # Scraping checkpoint/resume
 │   └── logger.py                 # Logging configuration
 ├── data/
 │   ├── cache/                    # Cached articles & evaluations
 │   ├── reports/                  # Generated Markdown reports
+│   ├── metrics/                  # Metrics JSON files (per run)
+│   ├── logs/                     # Error logs JSON (per run)
+│   ├── context/                  # Context snapshots (per run)
 │   └── chroma_db/                # Vector database for semantic search
 ├── docs/
 │   ├── CLAUDE_CLIENT_API.md      # API documentation
-│   ├── CATEGORY_SELECTOR_API.md  # Category selector API
-│   └── CLAUDE_CLIENT_QUICKREF.md # Quick reference guide
-└── logs/                         # Application logs
+│   └── CATEGORY_SELECTOR_API.md  # Category selector API
+└── tests/                        # Test files
 ```
 
 ## Quick Start
@@ -182,8 +216,11 @@ echo "ANTHROPIC_API_KEY=your_key_here" > .env
 ### Running the Pipeline
 
 ```bash
-# Generate a new report with full pipeline (5D scoring, 500-600 char analysis)
-python3 run_pipeline_with_categories.py --top-n 12
+# Generate a new report with ACE Orchestrator (recommended)
+python3 run_orchestrated_pipeline.py --top-n 12
+
+# Optional: Resume from checkpoint if scraping was interrupted
+python3 run_orchestrated_pipeline.py --top-n 12 --resume
 
 # View reports on Streamlit web interface
 streamlit run app.py

@@ -1,0 +1,73 @@
+{
+  "pipeline_defaults": {
+    "top_n": 12,
+    "days_back": 7,
+    "resume_enabled": true,
+    "force_restart": false
+  },
+  "tier1_filter": {
+    "score_threshold": 3.0,
+    "min_matches": 1
+  },
+  "tier2_batch_eval": {
+    "batch_size": 10,
+    "pass_score": 6.0
+  },
+  "tier3_5d_eval": {
+    "enabled": true,
+    "weights": {
+      "market_impact": 0.25,
+      "competitive_impact": 0.20,
+      "strategic_relevance": 0.20,
+      "operational_relevance": 0.15,
+      "credibility": 0.10
+    }
+  },
+  "paraphrasing": {
+    "min_length": 500,
+    "max_length": 600,
+    "target_paragraphs": 3,
+    "language": "zh-CN"
+  },
+  "error_tracking": {
+    "fail_fast_on_critical": true,
+    "log_per_run": true,
+    "max_retries": 0
+  },
+  "metrics_collection": {
+    "track_token_usage": true,
+    "track_llm_latency": true,
+    "track_phase_timing": true,
+    "save_to_file": true
+  },
+  "context_engine": {
+    "persist_between_runs": true,
+    "lookback_runs": 5,
+    "anomaly_threshold": 0.5,
+    "enable_optimizations": true
+  },
+  "scraping": {
+    "timeout_seconds": 60,
+    "max_workers": 8,
+    "enable_checkpoints": true,
+    "checkpoint_max_age_hours": 2
+  },
+  "report_generation": {
+    "format": "markdown",
+    "include_5d_scores": true,
+    "include_source_links": true,
+    "output_dir": "./data/reports"
+  },
+  "output_paths": {
+    "reports": "./data/reports",
+    "logs": "./data/logs",
+    "context": "./data/context",
+    "metrics": "./data/metrics",
+    "cache": "./data/cache"
+  },
+  "notifications": {
+    "email_enabled": false,
+    "slack_enabled": false,
+    "generate_summary_report": true
+  }
+}

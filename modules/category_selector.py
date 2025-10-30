@@ -29,8 +29,7 @@ class CategorySelector:
         categories_config: str = "./config/categories.json",
         llm_client: LLMClient = None,
         cache_manager: CacheManager = None,
-        enable_caching: bool = True,
-        enable_ace_planner: bool = True
+        enable_caching: bool = True
     ):
         """
         Initialize category selector
@@ -40,12 +39,10 @@ class CategorySelector:
             llm_client: LLM client instance (creates new if None)
             cache_manager: Cache manager for caching selections
             enable_caching: Enable caching of category selections
-            enable_ace_planner: Enable ACE-Planner for query decomposition
         """
         self.categories_config = Path(categories_config)
         self.cache_manager = cache_manager
         self.enable_caching = enable_caching
-        self.enable_ace_planner = enable_ace_planner
 
         # Initialize LLM client with caching if available
         if llm_client:
@@ -62,16 +59,6 @@ class CategorySelector:
             self.categories = config['categories']
             self.default_categories = config['default_categories']
             self.company_context = config.get('company_context', {})
-
-        # Initialize ACE-Planner if enabled
-        self.ace_planner = None
-        if self.enable_ace_planner:
-            from modules.ace_planner import ACEPlanner
-            self.ace_planner = ACEPlanner(
-                llm_client=self.llm_client,
-                company_context=self.company_context
-            )
-            logger.info("ACE-Planner enabled for enhanced query planning")
 
         # Build category lookup maps for faster matching
         self._build_lookup_maps()
@@ -141,20 +128,6 @@ class CategorySelector:
 
             # Enrich category data
             selected_categories = self._enrich_categories(response['categories'])
-
-            # Use ACE-Planner to generate detailed query plan
-            if self.ace_planner and selected_categories:
-                try:
-                    logger.info("Generating query plan with ACE-Planner...")
-                    query_plan = self.ace_planner.plan_queries(user_input, selected_categories)
-
-                    # Attach query plan to each category
-                    for cat in selected_categories:
-                        cat['query_plan'] = query_plan
-
-                    logger.info(f"Query plan generated with {len(query_plan['themes'])} themes")
-                except Exception as e:
-                    logger.warning(f"ACE-Planner failed, continuing without query plan: {e}")
 
             logger.info(
                 f"Selected {len(selected_categories)} categories: "
