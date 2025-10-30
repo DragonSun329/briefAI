@@ -1484,15 +1484,20 @@ def answer_question_about_briefing(question: str, briefing_content: str, lang: s
 
 {enriched_content}"""
 
-        # Use OpenRouter directly to avoid Kimi authentication issues
-        # OpenRouter has higher rate limits (200 RPM) and more reliable authentication
-        from utils.llm_provider import OpenRouterProvider
+        # Use ProviderSwitcher configured for OpenRouter-only with automatic fallback
+        # This gives us automatic rotation through 50+ models if rate limits are hit
+        # Skip Kimi to avoid authentication issues, start directly with OpenRouter tier1
+        from utils.provider_switcher import ProviderSwitcher
 
-        # Use high-quality reasoning model from tier1
-        openrouter = OpenRouterProvider(model="deepseek/deepseek-r1:free")
-        response, usage = openrouter.chat(
+        # Create switcher and override to start with OpenRouter tier1
+        switcher = ProviderSwitcher()
+        switcher.current_provider_id = 'openrouter.tier1_quality'
+        switcher.current_provider = switcher._get_or_create_provider('openrouter.tier1_quality')
+
+        # Use automatic fallback through tier1 → tier2 → tier3 models
+        response = switcher.query(
+            prompt=question,
             system_prompt=system_prompt,
-            user_message=question,
             max_tokens=1500,
             temperature=0.7
         )
