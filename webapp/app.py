@@ -20,10 +20,12 @@ import sys
 from dotenv import load_dotenv
 
 # Add parent directory to path to access shared utilities
-sys.path.insert(0, str(Path(__file__).parent.parent))
+parent_dir = Path(__file__).parent.parent
+sys.path.insert(0, str(parent_dir))
 
-# Load environment variables from .env file
-load_dotenv()
+# Load environment variables from .env file in parent directory
+env_path = parent_dir / ".env"
+load_dotenv(dotenv_path=env_path)
 
 from utils.provider_switcher import ProviderSwitcher
 from utils.context_retriever import ContextRetriever
@@ -1529,34 +1531,36 @@ def answer_question_about_briefing(question: str, briefing_content: str, lang: s
 
 {enriched_content}"""
 
-        # Use Kimi directly - simple, fast, reliable for Q&A
-        # OpenRouter is reserved for high-volume pipeline processing
-        from utils.llm_provider import KimiProvider
+        # Use ProviderSwitcher with automatic fallback
+        # Priority: Kimi (fast) → OpenRouter (robust with 50+ model fallback)
         from loguru import logger
 
-        logger.info("Ask function: Using Kimi provider for Q&A")
+        logger.info("Ask function: Using ProviderSwitcher with Kimi → OpenRouter fallback")
 
-        # Create Kimi provider directly (no fallback needed for low-volume Q&A)
-        kimi = KimiProvider(model='moonshot-v1-8k')
+        # Create ProviderSwitcher for automatic fallback
+        switcher = ProviderSwitcher()
 
-        response, usage = kimi.chat(
+        # Try to use query with automatic fallback
+        response = switcher.query(
             system_prompt=system_prompt,
             user_message=question,
             max_tokens=1500,
             temperature=0.7
         )
 
-        logger.info(f"Ask function: Success with Kimi ({usage.get('total_tokens', 0)} tokens)")
+        logger.info(f"Ask function: Success with {switcher.current_provider_id}")
         return response
 
     except Exception as e:
-        # If Kimi fails, provide helpful error message
-        logger.error(f"Ask function failed: {type(e).__name__}: {e}")
+        # If all providers fail, provide helpful error message
+        logger.error(f"Ask function failed after all fallbacks: {type(e).__name__}: {e}")
         error_msg = f"{t('chat_error', lang)}: {str(e)}"
 
         # Add hint for rate limit errors
         if "429" in str(e) or "rate" in str(e).lower():
-            error_msg += "\n\n💡 Kimi API达到速率限制。请稍后重试。"
+            error_msg += "\n\n💡 所有API提供商都达到速率限制。请稍后重试。"
+        elif "401" in str(e) or "authentication" in str(e).lower():
+            error_msg += "\n\n💡 API认证失败。请检查.env文件中的API密钥配置。"
 
         return error_msg
 
