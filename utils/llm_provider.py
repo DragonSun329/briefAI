@@ -93,7 +93,7 @@ class BaseLLMProvider(ABC):
     def detect_rate_limit(self, error: Exception) -> bool:
         """
         Detect if error is a rate limit or fallback-triggering error.
-        Treats 403 moderation blocks and 429 rate limits the same way - triggers fallback.
+        Treats 403 moderation blocks, 404 no endpoints, and 429 rate limits the same way - triggers fallback.
         """
         # Direct rate limit errors
         if isinstance(error, RateLimitError):
@@ -102,6 +102,14 @@ class BaseLLMProvider(ABC):
         # HTTP 429 (rate limit)
         if hasattr(error, 'status_code') and error.status_code == 429:
             return True
+
+        # HTTP 404 (no endpoints available - common with free tier)
+        # "no endpoints found matching your data policy" means model unavailable
+        if hasattr(error, 'status_code') and error.status_code == 404:
+            error_str = str(error).lower()
+            if 'no endpoints' in error_str or 'not found' in error_str:
+                logger.warning(f"Model endpoint not available, will try next model")
+                return True
 
         # HTTP 403 (moderation blocked, content blocked, etc.)
         # This should trigger fallback to next model
