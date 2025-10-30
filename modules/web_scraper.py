@@ -327,9 +327,9 @@ class WebScraper:
                     cached_articles = self._filter_by_query_plan(cached_articles, query_plan)
                 return cached_articles
 
-        # Scrape based on source type
+        # Scrape based on source type (with paywall bypass if configured)
         if source['type'] == 'rss':
-            articles = self._scrape_rss(source, cutoff_date)
+            articles = self._scrape_with_paywall_bypass(source, cutoff_date)
         elif source['type'] == 'web':
             articles = self._scrape_web(source, cutoff_date)
         else:
@@ -343,6 +343,48 @@ class WebScraper:
         # Cache the results
         if articles:
             self.cache_manager.set(cache_key, articles)
+
+        return articles
+
+    def _scrape_with_paywall_bypass(
+        self,
+        source: Dict[str, Any],
+        cutoff_date: datetime
+    ) -> List[Dict[str, Any]]:
+        """
+        Try normal RSS scrape first, fallback to paywallbuster if failed
+
+        Args:
+            source: Source configuration dict
+            cutoff_date: Cutoff date for filtering
+
+        Returns:
+            List of scraped articles
+        """
+        # Step 1: Try normal RSS fetch
+        articles = self._scrape_rss(source, cutoff_date)
+
+        # Step 2: Check if paywall bypass needed
+        if (not articles or len(articles) == 0) and source.get('use_paywall_bypass', False):
+            logger.warning(f"Normal scrape failed for {source['name']}, trying paywallbuster")
+
+            original_url = source['rss_url']
+            paywall_url = f"https://www.paywallbuster.com/?url={original_url}"
+
+            # Create modified source with paywallbuster URL
+            paywall_source = source.copy()
+            paywall_source['rss_url'] = paywall_url
+
+            # Retry with paywallbuster
+            articles = self._scrape_rss(paywall_source, cutoff_date)
+
+            if articles:
+                logger.info(f"✅ Paywallbuster success: {len(articles)} articles from {source['name']}")
+                # Mark articles as coming from paywall bypass
+                for article in articles:
+                    article['scraped_via_paywall_bypass'] = True
+            else:
+                logger.warning(f"❌ Paywallbuster also failed for {source['name']}")
 
         return articles
 
