@@ -133,14 +133,15 @@
   "fallback_strategy": {
     "description": "Provider switching strategy when rate limits are hit",
     "order": [
-      "kimi",
       "openrouter.tier1_quality",
       "openrouter.tier2_balanced",
-      "openrouter.tier3_fast"
+      "openrouter.tier3_fast",
+      "kimi"
     ],
     "on_rate_limit": "switch_to_next_provider",
     "max_retries_per_provider": 3,
-    "retry_backoff": "exponential"
+    "retry_backoff": "exponential",
+    "notes": "OpenRouter primary for pipeline (high volume), Kimi fallback. Ask function uses Kimi primary (set in app.py)."
   },
   "caching": {
     "cache_responses": true,

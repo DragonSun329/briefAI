@@ -28,8 +28,10 @@ class ProviderSwitcher:
 
         # Initialize providers
         self.providers: Dict[str, BaseLLMProvider] = {}
-        self.current_provider_id = "kimi"
         self.provider_queue = self._build_fallback_queue()
+
+        # Set primary provider to first in queue
+        self.current_provider_id = self.provider_queue[0] if self.provider_queue else "kimi"
 
         # Track model usage per tier for rotation
         self.tier_model_indices: Dict[str, int] = {
@@ -38,8 +40,8 @@ class ProviderSwitcher:
             'tier3_fast': 0
         }
 
-        # Initialize primary provider
-        self.current_provider = self._get_or_create_provider("kimi")
+        # Initialize primary provider (first in queue)
+        self.current_provider = self._get_or_create_provider(self.current_provider_id)
 
         logger.info("Provider Switcher initialized")
         logger.info(f"Fallback order: {' → '.join(self.provider_queue)}")
@@ -55,6 +57,11 @@ class ProviderSwitcher:
 
     def _build_fallback_queue(self) -> List[str]:
         """Build provider fallback queue from configuration"""
+        # Use fallback_strategy.order from config if available
+        if 'fallback_strategy' in self.config and 'order' in self.config['fallback_strategy']:
+            return self.config['fallback_strategy']['order']
+
+        # Fallback to old hardcoded behavior if config missing
         queue = []
 
         # Add Kimi first
