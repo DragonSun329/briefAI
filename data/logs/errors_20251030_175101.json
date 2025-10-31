@@ -1,0 +1,69 @@
+{
+  "run_id": "20251030_175101",
+  "timestamp": "2025-10-31T11:02:53.146189",
+  "total_errors": 1,
+  "critical_errors": 1,
+  "warnings": 0,
+  "errors": [
+    {
+      "id": "err_001",
+      "timestamp": "2025-10-31T11:02:52.958693",
+      "phase": "quality_validation",
+      "severity": "CRITICAL",
+      "error_type": "UNKNOWN",
+      "error_subtype": "unclassified",
+      "message": "4 articles failed quality validation",
+      "exception_class": "ValueError",
+      "context": {
+        "failed_count": 4,
+        "failed_articles": [
+          {
+            "index": 1,
+            "title": "ChatGPT Atlas Is Facing Major Backlash Over Its Se",
+            "reasons": [
+              "Too short (162 chars)"
+            ]
+          },
+          {
+            "index": 5,
+            "title": "Agentic AI: A Comprehensive Survey of Architecture",
+            "reasons": [
+              "Too short (203 chars)"
+            ]
+          },
+          {
+            "index": 6,
+            "title": "Agentic AI Coding with Google Jules",
+            "reasons": [
+              "Too short (103 chars)"
+            ]
+          },
+          {
+            "index": 7,
+            "title": "Grokipedia vs Wikipedia: Elon Musk’s AI Encycloped",
+            "reasons": [
+              "Too short (203 chars)"
+            ]
+          }
+        ]
+      },
+      "traceback": "NoneType: None\n",
+      "recovery_action": "RE_PARAPHRASE"
+    }
+  ],
+  "error_summary": {
+    "total_errors": 1,
+    "critical_errors": 1,
+    "warnings": 0,
+    "info": 0,
+    "by_phase": {
+      "quality_validation": 1
+    },
+    "by_type": {
+      "UNKNOWN": 1
+    },
+    "by_severity": {
+      "CRITICAL": 1
+    }
+  }
+}

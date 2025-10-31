@@ -1,0 +1,240 @@
+{
+  "run_id": "20251030_175101",
+  "created_at": "2025-10-30T17:51:01.509573",
+  "phases": {
+    "initialization": {
+      "completed_at": "2025-10-30T17:51:01.601743",
+      "metrics": {
+        "phase_name": "initialization",
+        "started_at": "2025-10-30T17:51:01.512654",
+        "completed_at": "2025-10-30T17:51:01.601675",
+        "duration_seconds": 0.09,
+        "custom_metrics": {
+          "categories_loaded": {
+            "value": 6,
+            "timestamp": "2025-10-30T17:51:01.601656",
+            "metadata": {}
+          }
+        }
+      },
+      "insights": []
+    },
+    "scraping": {
+      "completed_at": "2025-10-30T17:53:05.670860",
+      "metrics": {
+        "phase_name": "scraping",
+        "started_at": "2025-10-30T17:51:01.601992",
+        "completed_at": "2025-10-30T17:53:05.670772",
+        "duration_seconds": 124.07,
+        "custom_metrics": {
+          "sources_attempted": {
+            "value": 86,
+            "timestamp": "2025-10-30T17:53:05.670714",
+            "metadata": {}
+          },
+          "sources_succeeded": {
+            "value": 12,
+            "timestamp": "2025-10-30T17:53:05.670756",
+            "metadata": {}
+          }
+        },
+        "articles_output": 141
+      },
+      "insights": [
+        "Average 1.6 articles per source"
+      ]
+    },
+    "tier1_filter": {
+      "completed_at": "2025-10-30T17:53:05.876015",
+      "metrics": {
+        "phase_name": "tier1_filter",
+        "started_at": "2025-10-30T17:53:05.671154",
+        "completed_at": "2025-10-30T17:53:05.875940",
+        "duration_seconds": 0.2,
+        "custom_metrics": {
+          "filter_rate": {
+            "value": 0.2765957446808511,
+            "timestamp": "2025-10-30T17:53:05.875922",
+            "metadata": {}
+          }
+        },
+        "articles_input": 141,
+        "articles_output": 39
+      },
+      "insights": [
+        "Tier 1 filter rate: 27.7%"
+      ]
+    },
+    "tier2_batch_eval": {
+      "completed_at": "2025-10-30T17:54:14.321979",
+      "metrics": {
+        "phase_name": "tier2_batch_eval",
+        "started_at": "2025-10-30T17:53:05.876266",
+        "completed_at": "2025-10-30T17:54:14.321840",
+        "duration_seconds": 68.45,
+        "custom_metrics": {
+          "pass_rate": {
+            "value": 1.0,
+            "timestamp": "2025-10-30T17:54:14.321197",
+            "metadata": {}
+          }
+        },
+        "articles_input": 39,
+        "articles_output": 39,
+        "llm_calls": 4,
+        "total_input_tokens": 8000,
+        "total_output_tokens": 2000,
+        "total_tokens": 10000,
+        "total_cost_usd": 0.0168,
+        "avg_latency_ms": 2000.0
+      },
+      "insights": [
+        "Tier 2 pass rate: 100.0%"
+      ]
+    },
+    "tier3_5d_eval": {
+      "completed_at": "2025-10-31T10:59:46.494848",
+      "metrics": {
+        "phase_name": "tier3_5d_eval",
+        "started_at": "2025-10-30T17:54:14.322360",
+        "completed_at": "2025-10-31T10:59:46.493933",
+        "duration_seconds": 61532.17,
+        "custom_metrics": {},
+        "articles_input": 39,
+        "articles_output": 10,
+        "llm_calls": 10,
+        "total_input_tokens": 30000,
+        "total_output_tokens": 8000,
+        "total_tokens": 38000,
+        "total_cost_usd": 0.064,
+        "avg_latency_ms": 2500.0
+      },
+      "insights": []
+    },
+    "ranking": {
+      "completed_at": "2025-10-31T10:59:46.503658",
+      "metrics": {
+        "phase_name": "ranking",
+        "started_at": "2025-10-31T10:59:46.496029",
+        "completed_at": "2025-10-31T10:59:46.503575",
+        "duration_seconds": 0.01,
+        "custom_metrics": {},
+        "articles_output": 10
+      },
+      "insights": []
+    },
+    "paraphrasing": {
+      "completed_at": "2025-10-31T11:01:27.473390",
+      "metrics": {
+        "phase_name": "paraphrasing",
+        "started_at": "2025-10-31T10:59:46.503938",
+        "completed_at": "2025-10-31T11:01:27.472945",
+        "duration_seconds": 100.97,
+        "custom_metrics": {},
+        "articles_output": 10,
+        "llm_calls": 10,
+        "total_input_tokens": 25000,
+        "total_output_tokens": 6000,
+        "total_tokens": 31000,
+        "total_cost_usd": 0.052,
+        "avg_latency_ms": 2000.0
+      },
+      "insights": [
+        "Average paraphrase length: 416 characters"
+      ]
+    },
+    "entity_background": {
+      "completed_at": "2025-10-31T11:02:52.956840",
+      "metrics": {
+        "phase_name": "entity_background",
+        "started_at": "2025-10-31T11:01:27.473967",
+        "completed_at": "2025-10-31T11:02:52.956688",
+        "duration_seconds": 85.48,
+        "custom_metrics": {},
+        "articles_output": 10,
+        "llm_calls": 3,
+        "total_input_tokens": 1200,
+        "total_output_tokens": 600,
+        "total_tokens": 1800,
+        "total_cost_usd": 0.003,
+        "avg_latency_ms": 1500.0
+      },
+      "insights": []
+    },
+    "quality_validation": {
+      "completed_at": "2025-10-31T11:02:53.151146",
+      "metrics": {
+        "phase_name": "quality_validation",
+        "started_at": "2025-10-31T11:02:52.957298",
+        "completed_at": "2025-10-31T11:02:53.150982",
+        "duration_seconds": 0.19,
+        "custom_metrics": {
+          "validation_pass_rate": {
+            "value": 0.6,
+            "timestamp": "2025-10-31T11:02:53.150947",
+            "metadata": {}
+          }
+        },
+        "articles_output": 6
+      },
+      "insights": []
+    },
+    "report_generation": {
+      "completed_at": "2025-10-31T11:03:11.732773",
+      "metrics": {
+        "phase_name": "report_generation",
+        "started_at": "2025-10-31T11:02:53.151648",
+        "completed_at": "2025-10-31T11:03:11.732686",
+        "duration_seconds": 18.58,
+        "custom_metrics": {}
+      },
+      "insights": []
+    }
+  },
+  "global_insights": [
+    {
+      "timestamp": "2025-10-31T11:02:52.956574",
+      "insight": "Entity background enrichment: 10 entities identified, 3 new backgrounds generated"
+    },
+    {
+      "timestamp": "2025-10-31T11:02:52.958603",
+      "insight": "Quality validation found 4 articles with paraphrasing issues: #1, #5, #6, #7"
+    }
+  ],
+  "historical_averages": {},
+  "anomalies_detected": [
+    {
+      "phase": "tier3_5d_eval",
+      "metric": "duration_seconds",
+      "current_value": 61532.17,
+      "historical_average": 537.55,
+      "deviation_percent": 11346.8,
+      "severity": "HIGH"
+    },
+    {
+      "phase": "report_generation",
+      "metric": "duration_seconds",
+      "current_value": 18.58,
+      "historical_average": 53.74,
+      "deviation_percent": 65.4,
+      "severity": "MEDIUM"
+    }
+  ],
+  "entity_backgrounds": {
+    "product:Aligning L": {
+      "name": "Aligning L",
+      "type": "product",
+      "background": "Autoregressive State-Tracking Prompting（ASTP）技术是针对游戏AI交互领域的一项创新，它通过策略性编排提示，使大型语言模型（LLM）在遵循规则化交易系统时能够明确并验证其状态跟踪过程，从而提升玩家信任。这项技术的核心在于要求LLM识别并报告预定义的状态标签，而不是依赖隐含的上下文理解，确保了交易的完整性和价格计算的准确性。ASTP技术不仅在大型模型上表现出色，而且在小型模型上也能实现相似的性能，同时大幅缩短响应时间，从21.2秒减少到2.4秒，满足了商业应用的需求。这一技术突破对于提升游戏AI的交互质量和用户体验具有重要意义，CEO需要关注其在提升游戏..."
+    },
+    "product:Meet C": {
+      "name": "Meet C",
+      "type": "product",
+      "background": "OpenAI最新推出的ChatGPT Atlas是一款结合了自动化和AI辅助功能的新型浏览器，其功能定位在于通过先进的自然语言处理技术和上下文记忆功能，为用户带来个性化的浏览体验和自动化服务。技术特点在于理解用户意图、记忆浏览历史和偏好，以及在复杂任务和多任务处理上的优势，如自动填写表单和网页信息整理。此次更新的新闻相关性在于，ChatGPT Atlas将这些功能直接融入日常浏览体验中，极大提升了工作效率和信息管理能力，尤其是对营销人员而言，能够快速整理网页数据，这是对传统浏览器功能的一次重大突破。CEO需要了解的核心要点是，ChatGPT Atlas通过集成AI技术，改变了用户与网络内容交互..."
+    },
+    "product:Agentic AI": {
+      "name": "Agentic AI",
+      "type": "product",
+      "background": "Agentic AI是一种新型的人工智能架构，它通过模拟人类代理的行为和决策过程，实现了更高级的自主性和适应性。这种技术的核心在于能够根据环境变化和任务需求，动态调整其行为策略，从而在复杂环境中实现更优的性能。Agentic AI的更新重点在于提升了其学习能力和决策效率，使其在动态环境中的适应性更强。此次新闻报道的Agentic AI研究进展，对于CEO而言，意味着企业在自动化和智能化转型中，可以利用这种技术来提升业务流程的灵活性和效率，特别是在需要快速响应市场变化和客户需求的场景中。核心要点是理解Agentic AI如何通过其独特的架构和应用，为企业带来竞争优势，并探索其在未来业务战略中的应..."
+    }
+  }
+}
