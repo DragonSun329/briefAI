@@ -1,84 +1,9 @@
 {
   "report_date": "2025-10-31",
-  "generation_time": "2025-10-31T10:59:46.512263",
+  "generation_time": "2025-10-31T17:22:05.158199",
   "articles": [
     {
       "id": "001",
-      "title": "ChatGPT Atlas Is Facing Major Backlash Over Its Security Flaws",
-      "url": "https://www.marketingaiinstitute.com/blog/chatgpt-atlas-security",
-      "source": "Marketing AI Institute",
-      "published_date": "2025-10-28T12:30:01",
-      "full_content": "OpenAI’s new ChatGPT Atlas browser is rolling out with powerful agentic features designed to read pages, click buttons, and carry out tasks on a user's behalf.",
-      "credibility_score": 7,
-      "relevance_score": 0,
-      "entities": {},
-      "evaluation": {
-        "scores": {
-          "market_impact": 10,
-          "competitive_impact": 8,
-          "strategic_relevance": 9,
-          "operational_relevance": 8,
-          "credibility": 7
-        },
-        "weighted_score": 7.8,
-        "rationale": "文章提到了OpenAI的ChatGPT Atlas浏览器由于安全漏洞而面临重大反弹，这对于AI行业特别是AI营销和自动化领域具有显著影响。作为AI行业的重要产品，其安全问题可能会影响市场对AI产品的信任和接受度，对竞争对手而言也是一个警示，需要关注并可能影响战略规划和日常运营。",
-        "key_takeaway": "ChatGPT Atlas安全漏洞引发行业关注",
-        "recommended_category": "Breakthrough AI Products",
-        "average_score": 8.4
-      }
-    },
-    {
-      "id": "002",
-      "title": "Agentic Moderation: Multi-Agent Design for Safer Vision-Language Models",
-      "url": "https://arxiv.org/abs/2510.25179",
-      "source": "ArXiv AI (Test Source)",
-      "published_date": "2025-10-30T04:00:00",
-      "full_content": "arXiv:2510.25179v1 Announce Type: new \nAbstract: Agentic methods have emerged as a powerful and autonomous paradigm that enhances reasoning, collaboration, and adaptive control, enabling systems to coordinate and independently solve complex tasks. We extend this paradigm to safety alignment by introducing Agentic Moderation, a model-agnostic framework that leverages specialised agents to defend multimodal systems against jailbreak attacks. Unlike prior approaches that apply as a static layer over inputs or outputs and provide only binary classifications (safe or unsafe), our method integrates dynamic, cooperative agents, including Shield, Responder, Evaluator, and Reflector, to achieve context-aware and interpretable moderation. Extensive experiments across five datasets and four representative Large Vision-Language Models (LVLMs) demonstrate that our approach reduces the Attack Success Rate (ASR) by 7-19%, maintains a stable Non-Following Rate (NF), and improves the Refusal Rate (RR) by 4-20%, achieving robust, interpretable, and well-balanced safety performance. By harnessing the flexibility and reasoning capacity of agentic architectures, Agentic Moderation provides modular, scalable, and fine-grained safety enforcement, highlighting the broader potential of agentic systems as a foundation for automated safety governance.",
-      "credibility_score": 10,
-      "relevance_score": 0,
-      "entities": {},
-      "evaluation": {
-        "scores": {
-          "market_impact": 9,
-          "competitive_impact": 7,
-          "strategic_relevance": 8,
-          "operational_relevance": 7,
-          "credibility": 10
-        },
-        "weighted_score": 7.3,
-        "rationale": "这篇文章介绍了一种新的多代理设计框架，旨在提高视觉-语言模型的安全性。它通过减少攻击成功率并提高拒绝率来增强系统的安全性，这对AI安全领域是一个重要的进步。文章的发布在ArXiv AI上，来源可信度极高，因此信息的可靠性无需质疑。",
-        "key_takeaway": "Agentic Moderation框架通过多代理合作提升视觉-语言模型的安全性",
-        "recommended_category": "LLM & Generative AI Breakthroughs",
-        "average_score": 8.2
-      }
-    },
-    {
-      "id": "003",
-      "title": "Aligning Large Language Models with Procedural Rules: An Autoregressive State-Tracking Prompting for In-Game Trading",
-      "url": "https://arxiv.org/abs/2510.25014",
-      "source": "ArXiv AI (Test Source)",
-      "published_date": "2025-10-30T04:00:00",
-      "full_content": "arXiv:2510.25014v1 Announce Type: new \nAbstract: Large Language Models (LLMs) enable dynamic game interactions but fail to follow essential procedural flows in rule-governed trading systems, eroding player trust. This work resolves the core tension between the creative flexibility of LLMs and the procedural demands of in-game trading (browse-offer-review-confirm). To this end, Autoregressive State-Tracking Prompting (ASTP) is introduced, a methodology centered on a strategically orchestrated prompt that compels an LLM to make its state-tracking process explicit and verifiable. Instead of relying on implicit contextual understanding, ASTP tasks the LLM with identifying and reporting a predefined state label from the previous turn. To ensure transactional integrity, this is complemented by a state-specific placeholder post-processing method for accurate price calculations. Evaluation across 300 trading dialogues demonstrates >99% state compliance and 99.3% calculation precision. Notably, ASTP with placeholder post-processing on smaller models (Gemini-2.5-Flash) matches larger models' (Gemini-2.5-Pro) performance while reducing response time from 21.2s to 2.4s, establishing a practical foundation that satisfies both real-time requirements and resource constraints of commercial games.",
-      "credibility_score": 10,
-      "relevance_score": 0,
-      "entities": {},
-      "evaluation": {
-        "scores": {
-          "market_impact": 7,
-          "competitive_impact": 8,
-          "strategic_relevance": 9,
-          "operational_relevance": 7,
-          "credibility": 10
-        },
-        "weighted_score": 7.2,
-        "rationale": "这篇文章介绍了一种新的技术方法ASTP，用于解决大型语言模型在游戏交易系统中遵循规则的问题，这对AI游戏交互领域是一个重要的技术突破。它可能对游戏AI和交易系统的开发产生显著影响，对竞争对手来说是一个值得关注的技术动向。文章的战略相关性高，因为它涉及到公司可能关注的AI技术前沿和创新应用。运营相关性也较高，因为它提供了一种可能改善AI产品性能和用户体验的技术方案。来源ArXiv AI是学术界公认的预印本平台，内容可信度高。",
-        "key_takeaway": "ASTP技术可能推动游戏AI交互领域的技术进步",
-        "recommended_category": "LLM & Generative AI Breakthroughs",
-        "average_score": 8.2
-      }
-    },
-    {
-      "id": "004",
       "title": "Meet ChatGPT Atlas, OpenAI’s Agentic Web Browser",
       "url": "https://www.marketingaiinstitute.com/blog/chatgpt-atlas",
       "source": "Marketing AI Institute",
@@ -90,166 +15,41 @@
       "evaluation": {
         "scores": {
           "market_impact": 8,
-          "competitive_impact": 8,
+          "competitive_impact": 7,
           "strategic_relevance": 9,
           "operational_relevance": 7,
           "credibility": 7
         },
-        "weighted_score": 7.15,
-        "rationale": "OpenAI推出的ChatGPT Atlas AI浏览器集成自动化、记忆和AI辅助功能，对市场和竞争格局影响显著，特别是对AI营销和自动化领域。同时，该产品与公司业务战略高度相关，对日常运营和产品开发具有重要参考价值。",
-        "key_takeaway": "OpenAI发布ChatGPT Atlas AI浏览器，集成自动化和AI辅助功能",
-        "recommended_category": "Breakthrough AI Products",
-        "average_score": 7.8
-      }
-    },
-    {
-      "id": "005",
-      "title": "Agentic AI: A Comprehensive Survey of Architectures, Applications, and Future Directions",
-      "url": "https://arxiv.org/abs/2510.25445",
-      "source": "ArXiv AI (Test Source)",
-      "published_date": "2025-10-30T04:00:00",
-      "full_content": "arXiv:2510.25445v1 Announce Type: new \nAbstract: Agentic AI represents a transformative shift in artificial intelligence, but its rapid advancement has led to a fragmented understanding, often conflating modern neural systems with outdated symbolic models -- a practice known as conceptual retrofitting. This survey cuts through this confusion by introducing a novel dual-paradigm framework that categorizes agentic systems into two distinct lineages: the Symbolic/Classical (relying on algorithmic planning and persistent state) and the Neural/Generative (leveraging stochastic generation and prompt-driven orchestration). Through a systematic PRISMA-based review of 90 studies (2018--2025), we provide a comprehensive analysis structured around this framework across three dimensions: (1) the theoretical foundations and architectural principles defining each paradigm; (2) domain-specific implementations in healthcare, finance, and robotics, demonstrating how application constraints dictate paradigm selection; and (3) paradigm-specific ethical and governance challenges, revealing divergent risks and mitigation strategies. Our analysis reveals that the choice of paradigm is strategic: symbolic systems dominate safety-critical domains (e.g., healthcare), while neural systems prevail in adaptive, data-rich environments (e.g., finance). Furthermore, we identify critical research gaps, including a significant deficit in governance models for symbolic systems and a pressing need for hybrid neuro-symbolic architectures. The findings culminate in a strategic roadmap arguing that the future of Agentic AI lies not in the dominance of one paradigm, but in their intentional integration to create systems that are both adaptable and reliable. This work provides the essential conceptual toolkit to guide future research, development, and policy toward robust and trustworthy hybrid intelligent systems.",
-      "credibility_score": 10,
-      "relevance_score": 0,
-      "entities": {},
-      "evaluation": {
-        "scores": {
-          "market_impact": 10,
-          "competitive_impact": 6,
-          "strategic_relevance": 8,
-          "operational_relevance": 5,
-          "credibility": 10
-        },
-        "weighted_score": 7.05,
-        "rationale": "这篇文章提供了对Agentic AI的全面调查，包括架构、应用和未来方向，这对于理解AI领域的最新发展至关重要。它可能不会立即改变市场格局，但对市场趋势和竞争态势有一定影响。文章的战略相关性较高，因为它提供了对AI未来方向的见解，这可能影响公司的长期规划。运营相关性适中，因为它提供了对AI应用的深入分析，这可能有助于优化公司的产品和服务。文章的可信度非常高，因为它来自ArXiv AI，这是一个知名的预印本服务器，专注于AI领域的研究论文。",
-        "key_takeaway": "Agentic AI的全面调查提供了对AI架构、应用和未来方向的深入分析",
-        "recommended_category": "Emerging Trends & Hot Topics",
-        "average_score": 7.8
-      }
-    },
-    {
-      "id": "006",
-      "title": "Agentic AI Coding with Google Jules",
-      "url": "https://www.kdnuggets.com/agentic-ai-coding-with-google-jules",
-      "source": "KDnuggets",
-      "published_date": "2025-10-27T15:53:10",
-      "full_content": "Google Jules is not a chat assistant that lives in your IDE; it’s a fully asynchronous coding agent.",
-      "credibility_score": 9,
-      "relevance_score": 0,
-      "entities": {},
-      "evaluation": {
-        "scores": {
-          "market_impact": 7,
-          "competitive_impact": 8,
-          "strategic_relevance": 9,
-          "operational_relevance": 6,
-          "credibility": 9
-        },
         "weighted_score": 6.95,
-        "rationale": "Google Jules作为一个新的AI编码代理，可能会对编程和开发工具市场产生显著影响，特别是对现有的IDE和代码辅助工具构成竞争压力。文章内容与公司关注领域高度相关，尤其是AI产品突破和大公司战略动向。",
-        "key_takeaway": "Google Jules可能改变AI辅助编程工具市场格局",
-        "recommended_category": "Breakthrough AI Products",
-        "average_score": 7.8
-      }
-    },
-    {
-      "id": "007",
-      "title": "Grokipedia vs Wikipedia: Elon Musk’s AI Encyclopedia is Here!",
-      "url": "https://www.analyticsvidhya.com/blog/2025/10/grokipedia-elon-musks-ai-encyclopedia/",
-      "source": "Analytics Vidhya",
-      "published_date": "2025-10-29T16:43:10",
-      "full_content": "Grokipedia, or the “bias-free Wikipedia”, is finally here. With a massive store of over 800K articles, Grokipedia isn’t just another challenger to the reign of free information: it’s already taking its place. A lot has changed since the first public release of Grokipedia, from the addition of more articles to the promise of even more […]\nThe post Grokipedia vs Wikipedia: Elon Musk’s AI Encyclopedia is Here! appeared first on Analytics Vidhya.",
-      "credibility_score": 8,
-      "relevance_score": 0,
-      "entities": {},
-      "evaluation": {
-        "scores": {
-          "market_impact": 8,
-          "competitive_impact": 7,
-          "strategic_relevance": 9,
-          "operational_relevance": 6,
-          "credibility": 8
-        },
-        "weighted_score": 6.9,
-        "rationale": "文章介绍了Elon Musk参与的Grokipedia项目，作为AI百科全书可能对信息检索领域产生竞争影响。但内容缺乏具体技术细节和市场数据支撑，仅提及产品发布和规模，未明确其创新性或对行业生态的颠覆性。该新闻涉及头部企业战略动向，对趋势跟踪有参考价值。",
-        "key_takeaway": "Elon Musk的Grokipedia项目可能重塑AI驱动的知识库市场格局，但需进一步验证其技术独特性和实际应用价值。",
-        "recommended_category": "Major AI Companies & Strategic Moves",
+        "rationale": "OpenAI推出ChatGPT Atlas作为AI驱动的浏览器，集成自动化、记忆和AI辅助功能，对AI行业和浏览器市场有较大影响。作为营销工具和商业应用的新类别，对公司的战略规划和日常运营都有重要参考价值。",
+        "key_takeaway": "OpenAI推出ChatGPT Atlas，AI浏览器新趋势",
+        "recommended_category": "生产力工具",
         "average_score": 7.6
       }
     },
     {
-      "id": "008",
-      "title": "Claude Haiku 4.5 is Here… and it’s BETTER than Sonnet 4.5?",
-      "url": "https://www.analyticsvidhya.com/blog/2025/10/claude-haiku-4-5/",
-      "source": "Analytics Vidhya",
-      "published_date": "2025-10-24T13:25:40",
-      "full_content": "Claude Haiku 4.5 is Anthropic’s latest small model, released on 15th October to all users. It’s a strong reminder that speed and intelligence don’t have to come at a high price. Just five months ago, Claude Sonnet 4 was considered the benchmark for balanced performance. Now, Haiku 4.5 delivers nearly the same coding and reasoning […]\nThe post Claude Haiku 4.5 is Here… and it’s BETTER than Sonnet 4.5? appeared first on Analytics Vidhya.",
-      "credibility_score": 8,
-      "relevance_score": 0,
-      "entities": {},
-      "evaluation": {
-        "scores": {
-          "market_impact": 7,
-          "competitive_impact": 8,
-          "strategic_relevance": 9,
-          "operational_relevance": 6,
-          "credibility": 8
-        },
-        "weighted_score": 6.85,
-        "rationale": "Anthropic的最新模型Claude Haiku 4.5的发布，对市场和竞争格局有显著影响，特别是与Sonnet 4.5的比较，可能改变AI模型的选择和使用。文章讨论了Haiku 4.5在性能和成本效益方面的优势，这对我们跟踪行业趋势和评估竞争对手动作具有战略相关性。同时，文章提供了对AI模型性能的新见解，对我们的产品开发和客户体验优化有一定参考价值。",
-        "key_takeaway": "Anthropic发布性能更强、成本更低的AI模型Claude Haiku 4.5，对市场和竞争格局产生影响",
-        "recommended_category": "Breakthrough AI Products",
-        "average_score": 7.6
-      }
-    },
-    {
-      "id": "009",
-      "title": "Top 5 Beginner-Friendly Courses to Level Up with Google Skills",
-      "url": "https://www.analyticsvidhya.com/blog/2025/10/beginner-friendly-courses-google-skills/",
-      "source": "Analytics Vidhya",
-      "published_date": "2025-10-26T10:08:27",
-      "full_content": "The trend for AI upskilling goes on, as the latest gem from the house of Google drops. With the words, “Say Hello to Google Skills,” the company has announced its new initiative that is meant to upskill people in AI. It only makes sense, with AI being the go-to word in the job industry. Skills […]\nThe post Top 5 Beginner-Friendly Courses to Level Up with Google Skills appeared first on Analytics Vidhya.",
-      "credibility_score": 8,
-      "relevance_score": 0,
-      "entities": {},
-      "evaluation": {
-        "scores": {
-          "market_impact": 7,
-          "competitive_impact": 7,
-          "strategic_relevance": 8,
-          "operational_relevance": 6,
-          "credibility": 8
-        },
-        "weighted_score": 6.45,
-        "rationale": "文章反映Google推出AI技能教育计划，属于AI行业战略动向，但未直接引发技术突破或竞争格局变化。对新兴趋势和公司战略有中等相关性，可信度较高。",
-        "key_takeaway": "Google推出AI技能课程，强化AI教育生态布局",
-        "recommended_category": "Major AI Companies & Strategic Moves",
-        "average_score": 7.2
-      }
-    },
-    {
-      "id": "010",
-      "title": "Train Your AI Agents Like a Pro with Microsoft Agent Lightning (Full Setup & Workflow)",
-      "url": "https://www.analyticsvidhya.com/blog/2025/10/microsoft-agent-lightning/",
-      "source": "Analytics Vidhya",
-      "published_date": "2025-10-29T12:05:46",
-      "full_content": "AI agents are changing how we use technology. Powered by large language models, they can answer questions, complete tasks, and connect with data or APIs. But they still make mistakes, especially with complex, multi-step work, and fixing that manually takes time and effort. Microsoft’s new Agent Lightning framework makes this easier. It separates how an […]\nThe post Train Your AI Agents Like a Pro with Microsoft Agent Lightning (Full Setup & Workflow)  appeared first on Analytics Vidhya.",
+      "id": "002",
+      "title": "Build LLM Agents Faster with Datapizza AI",
+      "url": "https://towardsdatascience.com/datapizza-the-ai-framework-made-in-italy/",
+      "source": "Towards Data Science",
+      "published_date": "2025-10-30T17:23:10",
+      "full_content": "Intro Organizations are increasingly investing in AI as these new tools are adopted in everyday operations more and more. This continuous wave of innovation is fueling the demand for more efficient and reliable frameworks. Following this trend, Datapizza (the startup behind Italy’s tech community) just released an open-source framework for GenAI with Python, called Datapizza […]\nThe post Build LLM Agents Faster with Datapizza AI appeared first on Towards Data Science.",
       "credibility_score": 8,
       "relevance_score": 0,
       "entities": {},
       "evaluation": {
         "scores": {
           "market_impact": 6,
-          "competitive_impact": 7,
-          "strategic_relevance": 8,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
           "operational_relevance": 7,
           "credibility": 8
         },
-        "weighted_score": 6.35,
-        "rationale": "这篇文章介绍了微软的新框架Agent Lightning，旨在简化AI代理的训练过程。它对市场有一定的影响，因为它可能提高AI代理的效率和准确性。对竞争格局有明显影响，因为它可能改变AI代理训练的竞争环境。与公司的战略规划和运营密切相关，因为它提供了一种新的AI代理训练方法。内容来自Analytics Vidhya，可信度较高。",
-        "key_takeaway": "微软发布Agent Lightning框架，简化AI代理训练",
-        "recommended_category": "Breakthrough AI Products",
-        "average_score": 7.2
+        "weighted_score": 5.75,
+        "rationale": "这篇文章介绍了Datapizza AI，一个开源的GenAI框架，旨在提高构建大型语言模型（LLM）代理的效率。这对市场有一定的影响，因为它提供了一个新的工具来满足日益增长的AI需求。对竞争格局有一定影响，因为它可能会改变现有的工具市场。对公司的战略规划和运营都具有相关性，因为它提供了一个新的工具来提高生产力和自动化能力。",
+        "key_takeaway": "Datapizza AI提供了一个新的开源GenAI框架，有助于提高构建LLM代理的效率",
+        "recommended_category": "生产力工具",
+        "average_score": 6.6
       }
     }
   ]

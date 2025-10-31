@@ -1,0 +1,52 @@
+{
+  "run_id": "20251031_155533",
+  "timestamp": "2025-10-31T15:55:34.044619",
+  "total_errors": 2,
+  "critical_errors": 2,
+  "warnings": 0,
+  "errors": [
+    {
+      "id": "err_001",
+      "timestamp": "2025-10-31T15:55:34.042228",
+      "phase": "scraping",
+      "severity": "CRITICAL",
+      "error_type": "UNKNOWN",
+      "error_subtype": "unclassified",
+      "message": "__init__() got an unexpected keyword argument 'sources_file'",
+      "exception_class": "TypeError",
+      "context": {},
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/dragonsun/briefAI/orchestrator/ace_orchestrator.py\", line 354, in phase_2_scraping\n    scraper = WebScraper(\nTypeError: __init__() got an unexpected keyword argument 'sources_file'\n",
+      "recovery_action": "FAIL_FAST"
+    },
+    {
+      "id": "err_002",
+      "timestamp": "2025-10-31T15:55:34.042981",
+      "phase": "scraping",
+      "severity": "CRITICAL",
+      "error_type": "UNKNOWN",
+      "error_subtype": "unclassified",
+      "message": "__init__() got an unexpected keyword argument 'sources_file'",
+      "exception_class": "TypeError",
+      "context": {
+        "phase_function": "phase_2_scraping"
+      },
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/dragonsun/briefAI/orchestrator/phase_manager.py\", line 125, in execute\n    result = phase_func(**kwargs)\n  File \"/Users/dragonsun/briefAI/orchestrator/ace_orchestrator.py\", line 354, in phase_2_scraping\n    scraper = WebScraper(\nTypeError: __init__() got an unexpected keyword argument 'sources_file'\n",
+      "recovery_action": "FAIL_FAST"
+    }
+  ],
+  "error_summary": {
+    "total_errors": 2,
+    "critical_errors": 2,
+    "warnings": 0,
+    "info": 0,
+    "by_phase": {
+      "scraping": 2
+    },
+    "by_type": {
+      "UNKNOWN": 2
+    },
+    "by_severity": {
+      "CRITICAL": 2
+    }
+  }
+}

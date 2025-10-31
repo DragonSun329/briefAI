@@ -1,0 +1,522 @@
+{
+  "run_id": "20251031_172126",
+  "created_at": "2025-10-31T17:21:26.504354",
+  "phases": {
+    "initialization": {
+      "completed_at": "2025-10-31T17:21:26.655023",
+      "metrics": {
+        "phase_name": "initialization",
+        "started_at": "2025-10-31T17:21:26.508612",
+        "completed_at": "2025-10-31T17:21:26.654941",
+        "duration_seconds": 0.15,
+        "custom_metrics": {
+          "categories_loaded": {
+            "value": 5,
+            "timestamp": "2025-10-31T17:21:26.654912",
+            "metadata": {}
+          }
+        }
+      },
+      "insights": []
+    },
+    "scraping": {
+      "completed_at": "2025-10-31T17:21:29.692515",
+      "metrics": {
+        "phase_name": "scraping",
+        "started_at": "2025-10-31T17:21:26.667057",
+        "completed_at": "2025-10-31T17:21:29.692444",
+        "duration_seconds": 3.03,
+        "custom_metrics": {
+          "sources_attempted": {
+            "value": 18,
+            "timestamp": "2025-10-31T17:21:29.692411",
+            "metadata": {}
+          },
+          "sources_succeeded": {
+            "value": 5,
+            "timestamp": "2025-10-31T17:21:29.692431",
+            "metadata": {}
+          }
+        },
+        "articles_output": 77
+      },
+      "insights": [
+        "Average 4.3 articles per source"
+      ]
+    },
+    "tier1_filter": {
+      "completed_at": "2025-10-31T17:21:29.785815",
+      "metrics": {
+        "phase_name": "tier1_filter",
+        "started_at": "2025-10-31T17:21:29.696210",
+        "completed_at": "2025-10-31T17:21:29.785704",
+        "duration_seconds": 0.09,
+        "custom_metrics": {
+          "filter_rate": {
+            "value": 0.03896103896103896,
+            "timestamp": "2025-10-31T17:21:29.785672",
+            "metadata": {}
+          }
+        },
+        "articles_input": 77,
+        "articles_output": 3
+      },
+      "insights": [
+        "Tier 1 filter rate: 3.9%"
+      ]
+    },
+    "tier2_batch_eval": {
+      "completed_at": "2025-10-31T17:21:38.941462",
+      "metrics": {
+        "phase_name": "tier2_batch_eval",
+        "started_at": "2025-10-31T17:21:29.787497",
+        "completed_at": "2025-10-31T17:21:38.941344",
+        "duration_seconds": 9.15,
+        "custom_metrics": {
+          "pass_rate": {
+            "value": 1.0,
+            "timestamp": "2025-10-31T17:21:38.941187",
+            "metadata": {}
+          }
+        },
+        "articles_input": 3,
+        "articles_output": 3,
+        "llm_calls": 1,
+        "total_input_tokens": 2000,
+        "total_output_tokens": 500,
+        "total_tokens": 2500,
+        "total_cost_usd": 0.0042,
+        "avg_latency_ms": 2000.0
+      },
+      "insights": [
+        "Tier 2 pass rate: 100.0%"
+      ]
+    },
+    "tier3_5d_eval": {
+      "completed_at": "2025-10-31T17:22:05.143677",
+      "metrics": {
+        "phase_name": "tier3_5d_eval",
+        "started_at": "2025-10-31T17:21:38.943893",
+        "completed_at": "2025-10-31T17:22:05.143481",
+        "duration_seconds": 26.2,
+        "custom_metrics": {},
+        "articles_input": 3,
+        "articles_output": 2,
+        "llm_calls": 2,
+        "total_input_tokens": 6000,
+        "total_output_tokens": 1600,
+        "total_tokens": 7600,
+        "total_cost_usd": 0.0128,
+        "avg_latency_ms": 2500.0
+      },
+      "insights": []
+    },
+    "ranking": {
+      "completed_at": "2025-10-31T17:22:05.154401",
+      "metrics": {
+        "phase_name": "ranking",
+        "started_at": "2025-10-31T17:22:05.153358",
+        "completed_at": "2025-10-31T17:22:05.154280",
+        "duration_seconds": 0.0,
+        "custom_metrics": {},
+        "articles_output": 2
+      },
+      "insights": []
+    },
+    "paraphrasing": {
+      "completed_at": "2025-10-31T17:22:26.698617",
+      "metrics": {
+        "phase_name": "paraphrasing",
+        "started_at": "2025-10-31T17:22:05.157506",
+        "completed_at": "2025-10-31T17:22:26.698283",
+        "duration_seconds": 21.54,
+        "custom_metrics": {},
+        "articles_output": 2,
+        "llm_calls": 2,
+        "total_input_tokens": 5000,
+        "total_output_tokens": 1200,
+        "total_tokens": 6200,
+        "total_cost_usd": 0.0104,
+        "avg_latency_ms": 2000.0
+      },
+      "insights": [
+        "Average paraphrase length: 585 characters"
+      ]
+    },
+    "entity_background": {
+      "completed_at": "2025-10-31T17:23:05.002214",
+      "metrics": {
+        "phase_name": "entity_background",
+        "started_at": "2025-10-31T17:22:26.702705",
+        "completed_at": "2025-10-31T17:23:05.002086",
+        "duration_seconds": 38.3,
+        "custom_metrics": {},
+        "articles_output": 2,
+        "llm_calls": 1,
+        "total_input_tokens": 400,
+        "total_output_tokens": 200,
+        "total_tokens": 600,
+        "total_cost_usd": 0.001,
+        "avg_latency_ms": 1500.0
+      },
+      "insights": []
+    },
+    "quality_validation": {
+      "completed_at": "2025-10-31T17:23:05.010932",
+      "metrics": {
+        "phase_name": "quality_validation",
+        "started_at": "2025-10-31T17:23:05.006899",
+        "completed_at": "2025-10-31T17:23:05.010715",
+        "duration_seconds": 0.0,
+        "custom_metrics": {
+          "validation_pass_rate": {
+            "value": 1.0,
+            "timestamp": "2025-10-31T17:23:05.010674",
+            "metadata": {}
+          }
+        },
+        "articles_output": 2
+      },
+      "insights": []
+    },
+    "report_generation": {
+      "completed_at": "2025-10-31T17:23:22.410458",
+      "metrics": {
+        "phase_name": "report_generation",
+        "started_at": "2025-10-31T17:23:05.080312",
+        "completed_at": "2025-10-31T17:23:22.410285",
+        "duration_seconds": 17.33,
+        "custom_metrics": {}
+      },
+      "insights": []
+    }
+  },
+  "global_insights": [
+    {
+      "timestamp": "2025-10-31T17:23:05.002061",
+      "insight": "Entity background enrichment: 2 entities identified, 1 new backgrounds generated"
+    }
+  ],
+  "historical_averages": {},
+  "anomalies_detected": [
+    {
+      "phase": "initialization",
+      "metric": "duration_seconds",
+      "current_value": 0.15,
+      "historical_average": 0.08,
+      "deviation_percent": 87.5,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "scraping",
+      "metric": "duration_seconds",
+      "current_value": 3.03,
+      "historical_average": 121.72,
+      "deviation_percent": 97.5,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier1_filter",
+      "metric": "duration_seconds",
+      "current_value": 0.09,
+      "historical_average": 0.2,
+      "deviation_percent": 55.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier1_filter",
+      "metric": "articles_output",
+      "current_value": 3,
+      "historical_average": 38.0,
+      "deviation_percent": 92.1,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier2_batch_eval",
+      "metric": "duration_seconds",
+      "current_value": 9.15,
+      "historical_average": 60.135000000000005,
+      "deviation_percent": 84.8,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier2_batch_eval",
+      "metric": "articles_input",
+      "current_value": 3,
+      "historical_average": 38.0,
+      "deviation_percent": 92.1,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier2_batch_eval",
+      "metric": "articles_output",
+      "current_value": 3,
+      "historical_average": 38.0,
+      "deviation_percent": 92.1,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier2_batch_eval",
+      "metric": "llm_calls",
+      "current_value": 1,
+      "historical_average": 4.0,
+      "deviation_percent": 75.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier2_batch_eval",
+      "metric": "total_input_tokens",
+      "current_value": 2000,
+      "historical_average": 8000.0,
+      "deviation_percent": 75.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier2_batch_eval",
+      "metric": "total_output_tokens",
+      "current_value": 500,
+      "historical_average": 2000.0,
+      "deviation_percent": 75.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier2_batch_eval",
+      "metric": "total_tokens",
+      "current_value": 2500,
+      "historical_average": 10000.0,
+      "deviation_percent": 75.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier2_batch_eval",
+      "metric": "total_cost_usd",
+      "current_value": 0.0042,
+      "historical_average": 0.0168,
+      "deviation_percent": 75.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier3_5d_eval",
+      "metric": "duration_seconds",
+      "current_value": 26.2,
+      "historical_average": 31034.86,
+      "deviation_percent": 99.9,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier3_5d_eval",
+      "metric": "articles_input",
+      "current_value": 3,
+      "historical_average": 38.0,
+      "deviation_percent": 92.1,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier3_5d_eval",
+      "metric": "articles_output",
+      "current_value": 2,
+      "historical_average": 10.0,
+      "deviation_percent": 80.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier3_5d_eval",
+      "metric": "llm_calls",
+      "current_value": 2,
+      "historical_average": 10.0,
+      "deviation_percent": 80.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier3_5d_eval",
+      "metric": "total_input_tokens",
+      "current_value": 6000,
+      "historical_average": 30000.0,
+      "deviation_percent": 80.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier3_5d_eval",
+      "metric": "total_output_tokens",
+      "current_value": 1600,
+      "historical_average": 8000.0,
+      "deviation_percent": 80.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier3_5d_eval",
+      "metric": "total_tokens",
+      "current_value": 7600,
+      "historical_average": 38000.0,
+      "deviation_percent": 80.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "tier3_5d_eval",
+      "metric": "total_cost_usd",
+      "current_value": 0.0128,
+      "historical_average": 0.064,
+      "deviation_percent": 80.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "ranking",
+      "metric": "duration_seconds",
+      "current_value": 0.0,
+      "historical_average": 0.01,
+      "deviation_percent": 100.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "ranking",
+      "metric": "articles_output",
+      "current_value": 2,
+      "historical_average": 10.0,
+      "deviation_percent": 80.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "paraphrasing",
+      "metric": "duration_seconds",
+      "current_value": 21.54,
+      "historical_average": 137.72,
+      "deviation_percent": 84.4,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "paraphrasing",
+      "metric": "articles_output",
+      "current_value": 2,
+      "historical_average": 10.0,
+      "deviation_percent": 80.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "paraphrasing",
+      "metric": "llm_calls",
+      "current_value": 2,
+      "historical_average": 10.0,
+      "deviation_percent": 80.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "paraphrasing",
+      "metric": "total_input_tokens",
+      "current_value": 5000,
+      "historical_average": 25000.0,
+      "deviation_percent": 80.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "paraphrasing",
+      "metric": "total_output_tokens",
+      "current_value": 1200,
+      "historical_average": 6000.0,
+      "deviation_percent": 80.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "paraphrasing",
+      "metric": "total_tokens",
+      "current_value": 6200,
+      "historical_average": 31000.0,
+      "deviation_percent": 80.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "paraphrasing",
+      "metric": "total_cost_usd",
+      "current_value": 0.0104,
+      "historical_average": 0.052,
+      "deviation_percent": 80.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "entity_background",
+      "metric": "duration_seconds",
+      "current_value": 38.3,
+      "historical_average": 85.48,
+      "deviation_percent": 55.2,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "entity_background",
+      "metric": "articles_output",
+      "current_value": 2,
+      "historical_average": 10.0,
+      "deviation_percent": 80.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "entity_background",
+      "metric": "llm_calls",
+      "current_value": 1,
+      "historical_average": 3.0,
+      "deviation_percent": 66.7,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "entity_background",
+      "metric": "total_input_tokens",
+      "current_value": 400,
+      "historical_average": 1200.0,
+      "deviation_percent": 66.7,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "entity_background",
+      "metric": "total_output_tokens",
+      "current_value": 200,
+      "historical_average": 600.0,
+      "deviation_percent": 66.7,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "entity_background",
+      "metric": "total_tokens",
+      "current_value": 600,
+      "historical_average": 1800.0,
+      "deviation_percent": 66.7,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "entity_background",
+      "metric": "total_cost_usd",
+      "current_value": 0.001,
+      "historical_average": 0.003,
+      "deviation_percent": 66.7,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "quality_validation",
+      "metric": "duration_seconds",
+      "current_value": 0.0,
+      "historical_average": 0.19,
+      "deviation_percent": 100.0,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "quality_validation",
+      "metric": "articles_output",
+      "current_value": 2,
+      "historical_average": 6.0,
+      "deviation_percent": 66.7,
+      "severity": "MEDIUM"
+    },
+    {
+      "phase": "report_generation",
+      "metric": "duration_seconds",
+      "current_value": 17.33,
+      "historical_average": 36.16,
+      "deviation_percent": 52.1,
+      "severity": "MEDIUM"
+    }
+  ],
+  "entity_backgrounds": {
+    "product:Build LLM": {
+      "name": "Build LLM",
+      "type": "product",
+      "background": "Datapizza AI推出的开源GenAI框架专注于提高大型语言模型（LLM）代理的开发效率，其功能定位在于简化LLM的开发流程，并通过Python支持降低技术门槛。技术特点包括集成高效的算法和模块化设计，实现自动化和优化LLM代理构建。此次更新，Datapizza AI强调了利用开源社区力量，集合多方智慧，以加速开发进程并保持成本效益，这与市场上封闭或成本较高的解决方案形成对比。对于CEO而言，核心要点在于该框架提供了一个开放且经济的LLM代理构建方案，有助于企业快速响应市场变化，提升竞争力。"
+    }
+  }
+}

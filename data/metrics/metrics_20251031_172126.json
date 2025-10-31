@@ -1,0 +1,256 @@
+{
+  "run_id": "20251031_172126",
+  "timestamp": "2025-10-31T17:23:22.418255",
+  "total_metrics": {
+    "total_llm_calls": 6,
+    "total_input_tokens": 13400,
+    "total_output_tokens": 3500,
+    "total_tokens": 16900,
+    "total_cost_usd": 0.0284,
+    "total_duration_seconds": 115.79,
+    "avg_tokens_per_call": 2817.0,
+    "phases_completed": 10
+  },
+  "phase_metrics": {
+    "initialization": {
+      "phase_name": "initialization",
+      "started_at": "2025-10-31T17:21:26.508612",
+      "completed_at": "2025-10-31T17:21:26.654941",
+      "duration_seconds": 0.15,
+      "custom_metrics": {
+        "categories_loaded": {
+          "value": 5,
+          "timestamp": "2025-10-31T17:21:26.654912",
+          "metadata": {}
+        }
+      }
+    },
+    "scraping": {
+      "phase_name": "scraping",
+      "started_at": "2025-10-31T17:21:26.667057",
+      "completed_at": "2025-10-31T17:21:29.692444",
+      "duration_seconds": 3.03,
+      "custom_metrics": {
+        "sources_attempted": {
+          "value": 18,
+          "timestamp": "2025-10-31T17:21:29.692411",
+          "metadata": {}
+        },
+        "sources_succeeded": {
+          "value": 5,
+          "timestamp": "2025-10-31T17:21:29.692431",
+          "metadata": {}
+        }
+      },
+      "articles_output": 77
+    },
+    "tier1_filter": {
+      "phase_name": "tier1_filter",
+      "started_at": "2025-10-31T17:21:29.696210",
+      "completed_at": "2025-10-31T17:21:29.785704",
+      "duration_seconds": 0.09,
+      "custom_metrics": {
+        "filter_rate": {
+          "value": 0.03896103896103896,
+          "timestamp": "2025-10-31T17:21:29.785672",
+          "metadata": {}
+        }
+      },
+      "articles_input": 77,
+      "articles_output": 3
+    },
+    "tier2_batch_eval": {
+      "phase_name": "tier2_batch_eval",
+      "started_at": "2025-10-31T17:21:29.787497",
+      "completed_at": "2025-10-31T17:21:38.941344",
+      "duration_seconds": 9.15,
+      "custom_metrics": {
+        "pass_rate": {
+          "value": 1.0,
+          "timestamp": "2025-10-31T17:21:38.941187",
+          "metadata": {}
+        }
+      },
+      "articles_input": 3,
+      "articles_output": 3,
+      "llm_calls": 1,
+      "total_input_tokens": 2000,
+      "total_output_tokens": 500,
+      "total_tokens": 2500,
+      "total_cost_usd": 0.0042,
+      "avg_latency_ms": 2000.0
+    },
+    "tier3_5d_eval": {
+      "phase_name": "tier3_5d_eval",
+      "started_at": "2025-10-31T17:21:38.943893",
+      "completed_at": "2025-10-31T17:22:05.143481",
+      "duration_seconds": 26.2,
+      "custom_metrics": {},
+      "articles_input": 3,
+      "articles_output": 2,
+      "llm_calls": 2,
+      "total_input_tokens": 6000,
+      "total_output_tokens": 1600,
+      "total_tokens": 7600,
+      "total_cost_usd": 0.0128,
+      "avg_latency_ms": 2500.0
+    },
+    "ranking": {
+      "phase_name": "ranking",
+      "started_at": "2025-10-31T17:22:05.153358",
+      "completed_at": "2025-10-31T17:22:05.154280",
+      "duration_seconds": 0.0,
+      "custom_metrics": {},
+      "articles_output": 2
+    },
+    "paraphrasing": {
+      "phase_name": "paraphrasing",
+      "started_at": "2025-10-31T17:22:05.157506",
+      "completed_at": "2025-10-31T17:22:26.698283",
+      "duration_seconds": 21.54,
+      "custom_metrics": {},
+      "articles_output": 2,
+      "llm_calls": 2,
+      "total_input_tokens": 5000,
+      "total_output_tokens": 1200,
+      "total_tokens": 6200,
+      "total_cost_usd": 0.0104,
+      "avg_latency_ms": 2000.0
+    },
+    "entity_background": {
+      "phase_name": "entity_background",
+      "started_at": "2025-10-31T17:22:26.702705",
+      "completed_at": "2025-10-31T17:23:05.002086",
+      "duration_seconds": 38.3,
+      "custom_metrics": {},
+      "articles_output": 2,
+      "llm_calls": 1,
+      "total_input_tokens": 400,
+      "total_output_tokens": 200,
+      "total_tokens": 600,
+      "total_cost_usd": 0.001,
+      "avg_latency_ms": 1500.0
+    },
+    "quality_validation": {
+      "phase_name": "quality_validation",
+      "started_at": "2025-10-31T17:23:05.006899",
+      "completed_at": "2025-10-31T17:23:05.010715",
+      "duration_seconds": 0.0,
+      "custom_metrics": {
+        "validation_pass_rate": {
+          "value": 1.0,
+          "timestamp": "2025-10-31T17:23:05.010674",
+          "metadata": {}
+        }
+      },
+      "articles_output": 2
+    },
+    "report_generation": {
+      "phase_name": "report_generation",
+      "started_at": "2025-10-31T17:23:05.080312",
+      "completed_at": "2025-10-31T17:23:22.410285",
+      "duration_seconds": 17.33,
+      "custom_metrics": {}
+    },
+    "finalization": {
+      "phase_name": "finalization",
+      "started_at": "2025-10-31T17:23:22.413176",
+      "completed_at": null,
+      "duration_seconds": null,
+      "custom_metrics": {}
+    }
+  },
+  "llm_calls": [
+    {
+      "call_id": "llm_call_001",
+      "timestamp": "2025-10-31T17:21:38.941223",
+      "phase": "tier2_batch_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2000,
+      "output_tokens": 500,
+      "total_tokens": 2500,
+      "cost_usd": 0.0042,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_002",
+      "timestamp": "2025-10-31T17:22:05.143046",
+      "phase": "tier3_5d_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 3000,
+      "output_tokens": 800,
+      "total_tokens": 3800,
+      "cost_usd": 0.0064,
+      "latency_ms": 2500,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_003",
+      "timestamp": "2025-10-31T17:22:05.143216",
+      "phase": "tier3_5d_eval",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 3000,
+      "output_tokens": 800,
+      "total_tokens": 3800,
+      "cost_usd": 0.0064,
+      "latency_ms": 2500,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_004",
+      "timestamp": "2025-10-31T17:22:26.697846",
+      "phase": "paraphrasing",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2500,
+      "output_tokens": 600,
+      "total_tokens": 3100,
+      "cost_usd": 0.0052,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_005",
+      "timestamp": "2025-10-31T17:22:26.698048",
+      "phase": "paraphrasing",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 2500,
+      "output_tokens": 600,
+      "total_tokens": 3100,
+      "cost_usd": 0.0052,
+      "latency_ms": 2000,
+      "success": true,
+      "metadata": {}
+    },
+    {
+      "call_id": "llm_call_006",
+      "timestamp": "2025-10-31T17:23:05.001942",
+      "phase": "entity_background",
+      "provider": "kimi",
+      "model": "moonshot-v1-8k",
+      "input_tokens": 400,
+      "output_tokens": 200,
+      "total_tokens": 600,
+      "cost_usd": 0.001,
+      "latency_ms": 1500,
+      "success": true,
+      "metadata": {}
+    }
+  ],
+  "provider_stats": {
+    "kimi": {
+      "calls": 6,
+      "tokens": 16900,
+      "cost": 0.0284
+    }
+  }
+}

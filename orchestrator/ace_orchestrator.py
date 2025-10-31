@@ -264,7 +264,7 @@ class ACEOrchestrator:
             print(summary)
 
             # Save summary to file
-            summary_file = Path(f"./data/reports/execution_summary_{self.run_id}.md")
+            summary_file = Path(f"./data/reports/execution_summaries/execution_summary_{self.run_id}.md")
             summary_file.parent.mkdir(parents=True, exist_ok=True)
             with open(summary_file, 'w', encoding='utf-8') as f:
                 f.write(summary)
@@ -274,7 +274,8 @@ class ACEOrchestrator:
             # Save bug report if errors occurred
             if self.error_tracker.has_critical_errors():
                 bug_report = self.error_tracker.generate_bug_report()
-                bug_file = Path(f"./data/reports/bug_report_{self.run_id}.md")
+                bug_file = Path(f"./data/reports/bug_reports/bug_report_{self.run_id}.md")
+                bug_file.parent.mkdir(parents=True, exist_ok=True)
                 with open(bug_file, 'w', encoding='utf-8') as f:
                     f.write(bug_report)
                 logger.info(f"Bug report saved: {bug_file}")

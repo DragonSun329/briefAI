@@ -1,0 +1,52 @@
+{
+  "run_id": "20251031_155953",
+  "timestamp": "2025-10-31T16:02:38.817648",
+  "total_errors": 2,
+  "critical_errors": 2,
+  "warnings": 0,
+  "errors": [
+    {
+      "id": "err_001",
+      "timestamp": "2025-10-31T16:02:38.803041",
+      "phase": "report_generation",
+      "severity": "CRITICAL",
+      "error_type": "UNKNOWN",
+      "error_subtype": "unclassified",
+      "message": "__init__() got an unexpected keyword argument 'template_file'",
+      "exception_class": "TypeError",
+      "context": {},
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/dragonsun/briefAI/orchestrator/ace_orchestrator.py\", line 867, in phase_9_report_generation\n    formatter = ReportFormatter(\nTypeError: __init__() got an unexpected keyword argument 'template_file'\n",
+      "recovery_action": "FAIL_FAST"
+    },
+    {
+      "id": "err_002",
+      "timestamp": "2025-10-31T16:02:38.812380",
+      "phase": "report_generation",
+      "severity": "CRITICAL",
+      "error_type": "UNKNOWN",
+      "error_subtype": "unclassified",
+      "message": "__init__() got an unexpected keyword argument 'template_file'",
+      "exception_class": "TypeError",
+      "context": {
+        "phase_function": "phase_9_report_generation"
+      },
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/dragonsun/briefAI/orchestrator/phase_manager.py\", line 125, in execute\n    result = phase_func(**kwargs)\n  File \"/Users/dragonsun/briefAI/orchestrator/ace_orchestrator.py\", line 867, in phase_9_report_generation\n    formatter = ReportFormatter(\nTypeError: __init__() got an unexpected keyword argument 'template_file'\n",
+      "recovery_action": "FAIL_FAST"
+    }
+  ],
+  "error_summary": {
+    "total_errors": 2,
+    "critical_errors": 2,
+    "warnings": 0,
+    "info": 0,
+    "by_phase": {
+      "report_generation": 2
+    },
+    "by_type": {
+      "UNKNOWN": 2
+    },
+    "by_severity": {
+      "CRITICAL": 2
+    }
+  }
+}

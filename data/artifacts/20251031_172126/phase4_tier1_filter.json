@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "duration_seconds": 0,
+    "llm_calls": 0,
+    "cost_usd": 0,
+    "input_count": 77,
+    "run_id": "20251031_172126",
+    "phase_name": "tier1_filter",
+    "phase_number": 4,
+    "timestamp": "2025-10-31T17:21:29.786159",
+    "status": "completed",
+    "output_count": 3
+  },
+  "data": {
+    "articles": [
+      {
+        "title": "Solana co-founder Anatoly Yakovenko is a big fan of agentic coding",
+        "url": "https://techcrunch.com/2025/10/29/solana-co-founder-anatoly-yakovenko-is-a-big-fan-of-agentic-coding/",
+        "content": "Speaking at TechCrunch Disrupt, Yakovenko said he's become increasingly comfortable taking a back seat in software development tasks.",
+        "published_date": "2025-10-29T22:44:00",
+        "source": "TechCrunch",
+        "source_id": "techcrunch",
+        "language": "en",
+        "credibility_score": 8,
+        "relevance_weight": 7,
+        "focus_tags": [
+          "科技新闻",
+          "产品发布",
+          "创业"
+        ],
+        "tier1_score": 3.5,
+        "tier1_rationale": "Low relevance"
+      },
+      {
+        "title": "Meet ChatGPT Atlas, OpenAI’s Agentic Web Browser",
+        "url": "https://www.marketingaiinstitute.com/blog/chatgpt-atlas",
+        "content": "OpenAI just officially launched ChatGPT Atlas, a new AI-powered web browser designed to weave automation, memory, and AI assistance directly into your everyday browsing.",
+        "published_date": "2025-10-28T12:30:00",
+        "source": "Marketing AI Institute",
+        "source_id": "marketing_ai_institute",
+        "language": "en",
+        "credibility_score": 7,
+        "relevance_weight": 6,
+        "focus_tags": [
+          "营销工具",
+          "商业应用"
+        ],
+        "tier1_score": 3.0,
+        "tier1_rationale": "Low relevance"
+      },
+      {
+        "title": "Build LLM Agents Faster with Datapizza AI",
+        "url": "https://towardsdatascience.com/datapizza-the-ai-framework-made-in-italy/",
+        "content": "Intro Organizations are increasingly investing in AI as these new tools are adopted in everyday operations more and more. This continuous wave of innovation is fueling the demand for more efficient and reliable frameworks. Following this trend, Datapizza (the startup behind Italy’s tech community) just released an open-source framework for GenAI with Python, called Datapizza […]\nThe post Build LLM Agents Faster with Datapizza AI appeared first on Towards Data Science.",
+        "published_date": "2025-10-30T17:23:10",
+        "source": "Towards Data Science",
+        "source_id": "towards_data_science",
+        "language": "en",
+        "credibility_score": 8,
+        "relevance_weight": 6,
+        "focus_tags": [
+          "数据科学",
+          "工具教程"
+        ],
+        "tier1_score": 3.1,
+        "tier1_rationale": "Low relevance"
+      }
+    ]
+  }
+}
