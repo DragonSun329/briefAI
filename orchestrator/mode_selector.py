@@ -58,7 +58,10 @@ class ModeConfig:
 
         # Mode-specific report settings
         self.report_prefix = f"weekly_briefing_{mode.value}"
-        self.report_dir = self.base_dir / "data/reports"
+        if mode == PipelineMode.PRODUCT:
+            self.report_dir = self.base_dir / "data/reports/product_reviews"
+        else:
+            self.report_dir = self.base_dir / "data/reports"
 
         # Mode-specific pipeline phases
         self.enabled_phases = self._get_enabled_phases()
