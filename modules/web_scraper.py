@@ -328,9 +328,17 @@ class WebScraper:
                 return cached_articles
 
         # Scrape based on source type (with paywall bypass if configured)
-        if source['type'] == 'rss':
+        if source['type'] == 'reddit':
+            # Reddit API sources (PRODUCT mode)
+            articles = self._scrape_reddit_source(source, cutoff_date)
+        elif source['type'] == 'api' and source.get('api_type') == 'graphql':
+            # Product Hunt GraphQL API (PRODUCT mode)
+            articles = self._scrape_producthunt_api(source, cutoff_date)
+        elif source['type'] == 'rss':
+            # Standard RSS sources (NEWS + PRODUCT modes)
             articles = self._scrape_with_paywall_bypass(source, cutoff_date)
         elif source['type'] == 'web':
+            # Standard web scraping
             articles = self._scrape_web(source, cutoff_date)
         else:
             logger.warning(f"Unknown source type: {source['type']}")
@@ -789,6 +797,65 @@ class WebScraper:
 
         logger.debug(f"Keyword filtering: {len(articles)} → {len(filtered_articles)} articles")
         return filtered_articles
+
+    def _scrape_reddit_source(
+        self,
+        source: Dict[str, Any],
+        cutoff_date: datetime
+    ) -> List[Dict[str, Any]]:
+        """
+        Scrape Reddit source using PRAW
+
+        Args:
+            source: Source configuration with 'subreddit' field
+            cutoff_date: Cutoff date for filtering
+
+        Returns:
+            List of articles from Reddit
+        """
+        try:
+            from modules.reddit_scraper import scrape_reddit_source
+            days_back = (datetime.now() - cutoff_date).days
+            articles = scrape_reddit_source(source, days_back=days_back)
+            logger.info(f"Scraped {len(articles)} articles from r/{source.get('subreddit', 'unknown')}")
+            return articles
+        except ImportError:
+            logger.warning(f"PRAW not installed - skipping Reddit source: {source.get('name')}")
+            return []
+        except ValueError as e:
+            logger.warning(f"Reddit API credentials missing - skipping: {source.get('name')}: {e}")
+            return []
+        except Exception as e:
+            logger.error(f"Error scraping Reddit source {source.get('name')}: {e}")
+            return []
+
+    def _scrape_producthunt_api(
+        self,
+        source: Dict[str, Any],
+        cutoff_date: datetime
+    ) -> List[Dict[str, Any]]:
+        """
+        Scrape Product Hunt API using GraphQL
+
+        Args:
+            source: Source configuration
+            cutoff_date: Cutoff date for filtering
+
+        Returns:
+            List of articles from Product Hunt API
+        """
+        try:
+            from modules.producthunt_scraper import scrape_producthunt_api
+            days_back = (datetime.now() - cutoff_date).days
+            articles = scrape_producthunt_api(source, days_back=days_back)
+            logger.info(f"Scraped {len(articles)} products from Product Hunt API")
+            return articles
+        except ValueError as e:
+            logger.warning(f"Product Hunt API credentials missing - skipping: {source.get('name')}: {e}")
+            return []
+        except Exception as e:
+            logger.error(f"Error scraping Product Hunt API {source.get('name')}: {e}")
+            return []
 
 
 if __name__ == "__main__":

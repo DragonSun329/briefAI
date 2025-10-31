@@ -21,12 +21,15 @@ class PhaseManager:
     PHASE_DEPENDENCIES = {
         'initialization': [],
         'scraping': ['initialization'],
-        'tier1_filter': ['scraping'],
+        'review_extraction': ['scraping'],  # NEW for PRODUCT mode
+        'tier1_filter': ['scraping'],  # For NEWS mode, or ['review_extraction'] for PRODUCT
         'tier2_batch_eval': ['tier1_filter'],
         'tier3_5d_eval': ['tier2_batch_eval'],
-        'ranking': ['tier3_5d_eval'],
+        'trending_calculation': ['tier3_5d_eval'],  # NEW for PRODUCT mode
+        'ranking': ['tier3_5d_eval'],  # For NEWS mode, or ['trending_calculation'] for PRODUCT
         'paraphrasing': ['ranking'],
-        'entity_background': ['paraphrasing'],
+        'review_summarization': ['paraphrasing'],  # NEW for PRODUCT mode
+        'entity_background': ['paraphrasing'],  # For NEWS mode, or ['review_summarization'] for PRODUCT
         'quality_validation': ['entity_background'],
         'report_generation': ['quality_validation'],
         'finalization': ['report_generation']
@@ -36,11 +39,14 @@ class PhaseManager:
     REQUIRED_CONTEXT = {
         'initialization': ['category_ids'],
         'scraping': ['days_back'],
+        'review_extraction': ['articles'],  # NEW for PRODUCT mode
         'tier1_filter': ['articles'],
         'tier2_batch_eval': ['filtered_articles'],
         'tier3_5d_eval': ['tier2_articles', 'top_n'],
+        'trending_calculation': ['evaluated_articles'],  # NEW for PRODUCT mode
         'ranking': ['evaluated_articles'],
         'paraphrasing': ['ranked_articles'],
+        'review_summarization': ['paraphrased_articles'],  # NEW for PRODUCT mode
         'entity_background': ['paraphrased_articles'],
         'quality_validation': ['enriched_articles'],
         'report_generation': ['final_articles'],
@@ -244,11 +250,15 @@ class PhaseManager:
         validation_rules = {
             'initialization': lambda x: isinstance(x, dict),
             'scraping': lambda x: isinstance(x, list),
+            'review_extraction': lambda x: isinstance(x, list) and len(x) > 0,  # NEW for PRODUCT
             'tier1_filter': lambda x: isinstance(x, list) and len(x) > 0,
             'tier2_batch_eval': lambda x: isinstance(x, list) and len(x) > 0,
             'tier3_5d_eval': lambda x: isinstance(x, list) and len(x) > 0,
+            'trending_calculation': lambda x: isinstance(x, list) and len(x) > 0,  # NEW for PRODUCT
             'ranking': lambda x: isinstance(x, list) and len(x) > 0,
             'paraphrasing': lambda x: isinstance(x, list) and len(x) > 0,
+            'review_summarization': lambda x: isinstance(x, list) and len(x) > 0,  # NEW for PRODUCT
+            'entity_background': lambda x: isinstance(x, list) and len(x) > 0,
             'quality_validation': lambda x: isinstance(x, list) and len(x) > 0,
             'report_generation': lambda x: isinstance(x, str) and len(x) > 0,
             'finalization': lambda x: True  # Always valid

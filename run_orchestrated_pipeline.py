@@ -14,6 +14,7 @@ Features:
 
 Usage:
     python3 run_orchestrated_pipeline.py --top-n 12
+    python3 run_orchestrated_pipeline.py --mode product --top-n 15
     python3 run_orchestrated_pipeline.py --categories fintech_ai llm_tech
     python3 run_orchestrated_pipeline.py --resume
 """
@@ -84,6 +85,13 @@ Examples:
         action='store_true',
         help='Force restart (ignore any existing checkpoint and start fresh)'
     )
+    parser.add_argument(
+        '--mode',
+        type=str,
+        choices=['news', 'product'],
+        default=None,
+        help='Pipeline mode: news (general AI news) or product (AI product reviews). Default from env or "news".'
+    )
 
     args = parser.parse_args()
 
@@ -93,6 +101,7 @@ Examples:
     print("Agentic Context Engineering (ACE) with Error Tracking & Metrics")
     print("=" * 80)
     print(f"\nConfiguration:")
+    print(f"  Mode: {args.mode or 'default (news)'}")
     print(f"  Categories: {args.categories or 'default'}")
     print(f"  Top N Articles: {args.top_n}")
     print(f"  Days Back: {args.days_back}")
@@ -101,8 +110,8 @@ Examples:
     print("=" * 80 + "\n")
 
     try:
-        # Initialize orchestrator
-        orchestrator = ACEOrchestrator()
+        # Initialize orchestrator with mode
+        orchestrator = ACEOrchestrator(mode=args.mode)
 
         # Run pipeline
         report_path = orchestrator.run_pipeline(

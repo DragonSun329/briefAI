@@ -31,6 +31,7 @@ from orchestrator.error_tracker import ErrorTracker
 from orchestrator.metrics_collector import MetricsCollector
 from orchestrator.phase_manager import PhaseManager
 from orchestrator.execution_reporter import ExecutionReporter
+from orchestrator.mode_selector import PipelineMode, ModeConfig
 
 # Import pipeline components
 from modules.web_scraper import WebScraper
@@ -46,19 +47,48 @@ from modules.report_formatter import ReportFormatter
 from utils.llm_client_enhanced import LLMClient
 from utils.category_loader import load_categories, get_company_context
 
+# Import PRODUCT mode modules (optional, graceful fallback)
+try:
+    from modules.review_extractor import ReviewExtractor
+    from modules.trending_calculator import TrendingCalculator
+    from modules.review_summarizer import ReviewSummarizer
+    PRODUCT_MODULES_AVAILABLE = True
+except ImportError:
+    PRODUCT_MODULES_AVAILABLE = False
+    logger.warning("PRODUCT mode modules not available - only NEWS mode supported")
+
 
 class ACEOrchestrator:
     """Main orchestrator for the briefAI pipeline with ACE (Agentic Context Engineering)"""
 
-    def __init__(self, config: Optional[Dict[str, Any]] = None):
+    def __init__(
+        self,
+        config: Optional[Dict[str, Any]] = None,
+        mode: Optional[str] = None
+    ):
         """
         Initialize ACE Orchestrator
 
         Args:
             config: Optional configuration dict
+            mode: Pipeline mode ('news', 'product', or None for default)
         """
         # Generate run ID
         self.run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        # Determine pipeline mode
+        if mode:
+            if isinstance(mode, str):
+                mode = PipelineMode(mode.lower())
+            self.mode = mode
+        else:
+            # Default mode from environment or config
+            import os
+            default_mode = os.getenv('DEFAULT_PIPELINE_MODE', 'news')
+            self.mode = PipelineMode(default_mode)
+
+        # Load mode-specific configuration
+        self.mode_config = ModeConfig(self.mode)
 
         # Load config
         self.config = config or self._load_default_config()
@@ -93,6 +123,7 @@ class ACEOrchestrator:
         self.final_report_path = None
 
         logger.info(f"ACE Orchestrator initialized - Run ID: {self.run_id}")
+        logger.info(f"Pipeline mode: {self.mode.value.upper()}")
 
     def run_pipeline(
         self,
@@ -265,9 +296,13 @@ class ACEOrchestrator:
             Initialization result dict
         """
         logger.info("Loading categories and configuration...")
+        logger.info(f"Mode-specific configs: {self.mode_config.sources_file}, {self.mode_config.categories_file}")
 
-        # Load categories
-        self.categories = load_categories(category_ids)
+        # Load categories from mode-specific file
+        self.categories = load_categories(
+            category_ids,
+            categories_file=str(self.mode_config.categories_file)
+        )
         self.company_context = get_company_context()
 
         # Initialize components
@@ -275,7 +310,7 @@ class ACEOrchestrator:
         self.checkpoint_mgr = CheckpointManager()
         self.llm_client = LLMClient()
 
-        logger.info(f"✓ Loaded {len(self.categories)} categories")
+        logger.info(f"✓ Loaded {len(self.categories)} categories ({self.mode.value.upper()} mode)")
         logger.info(f"✓ Company: {self.company_context.get('business', 'N/A')}")
 
         # Record metrics
@@ -288,7 +323,8 @@ class ACEOrchestrator:
         return {
             'status': 'ok',
             'categories_count': len(self.categories),
-            'config_valid': True
+            'config_valid': True,
+            'mode': self.mode.value
         }
 
     # =========================================================================
@@ -302,7 +338,7 @@ class ACEOrchestrator:
         force_restart: bool = False
     ) -> List[Dict[str, Any]]:
         """
-        Phase 2: Scrape articles from 86 sources
+        Phase 2: Scrape articles from configured sources
 
         Args:
             days_back: Days to look back
@@ -315,7 +351,10 @@ class ACEOrchestrator:
         logger.info(f"Scraping articles from last {days_back} days...")
 
         try:
-            scraper = WebScraper(cache_manager=self.cache_mgr)
+            scraper = WebScraper(
+                cache_manager=self.cache_mgr,
+                sources_file=str(self.mode_config.sources_file)
+            )
 
             articles = scraper.scrape_all(
                 days_back=days_back,
@@ -333,7 +372,7 @@ class ACEOrchestrator:
             # Record metrics
             self.metrics_collector.record_metric(
                 'sources_attempted',
-                86,  # Total sources
+                len(scraper.sources),  # Actual source count
                 'scraping'
             )
             self.metrics_collector.record_metric(
@@ -828,7 +867,8 @@ class ACEOrchestrator:
             formatter = ReportFormatter(
                 llm_client=self.llm_client,
                 company_context=self.company_context,
-                include_5d_scores=True
+                include_5d_scores=True,
+                template_file=str(self.mode_config.template_file)
             )
 
             report_path = formatter.generate_report(
@@ -886,6 +926,112 @@ class ACEOrchestrator:
             )
             # Don't fail pipeline on finalization errors
             return {'status': 'partial', 'error': str(e)}
+
+    # =========================================================================
+    # PRODUCT MODE PHASES (NEW)
+    # =========================================================================
+
+    def phase_review_extraction(self, articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        PRODUCT MODE: Extract structured reviews from Reddit/PH comments
+
+        Args:
+            articles: Scraped articles with reviews
+
+        Returns:
+            Articles with extracted review data
+        """
+        if not PRODUCT_MODULES_AVAILABLE:
+            logger.warning("PRODUCT modules not available - skipping review extraction")
+            return articles
+
+        logger.info(f"Extracting reviews from {len(articles)} articles...")
+
+        try:
+            extractor = ReviewExtractor()
+            articles_with_reviews = extractor.extract_reviews(articles)
+
+            logger.info(f"✓ Extracted reviews from {len(articles_with_reviews)} articles")
+
+            return articles_with_reviews
+
+        except Exception as e:
+            self.error_tracker.log_error(
+                phase='review_extraction',
+                error=e,
+                severity='WARNING',
+                recovery_action='CONTINUE'
+            )
+            # Return original articles if extraction fails
+            return articles
+
+    def phase_trending_calculation(self, evaluated_articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        PRODUCT MODE: Calculate viral/trending scores
+
+        Args:
+            evaluated_articles: Articles after 5D evaluation
+
+        Returns:
+            Articles with trending scores
+        """
+        if not PRODUCT_MODULES_AVAILABLE:
+            logger.warning("PRODUCT modules not available - skipping trending calculation")
+            return evaluated_articles
+
+        logger.info(f"Calculating trending scores for {len(evaluated_articles)} articles...")
+
+        try:
+            calculator = TrendingCalculator()
+            articles_with_trending = calculator.calculate_trending_scores(evaluated_articles)
+
+            logger.info(f"✓ Calculated trending scores")
+
+            return articles_with_trending
+
+        except Exception as e:
+            self.error_tracker.log_error(
+                phase='trending_calculation',
+                error=e,
+                severity='WARNING',
+                recovery_action='CONTINUE'
+            )
+            # Return original articles if calculation fails
+            return evaluated_articles
+
+    def phase_review_summarization(self, paraphrased_articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        PRODUCT MODE: LLM-based sentiment analysis in Chinese
+
+        Args:
+            paraphrased_articles: Articles after paraphrasing
+
+        Returns:
+            Articles with review summaries
+        """
+        if not PRODUCT_MODULES_AVAILABLE:
+            logger.warning("PRODUCT modules not available - skipping review summarization")
+            return paraphrased_articles
+
+        logger.info(f"Summarizing reviews for {len(paraphrased_articles)} articles...")
+
+        try:
+            summarizer = ReviewSummarizer(llm_client=self.llm_client)
+            articles_with_summaries = summarizer.summarize_reviews(paraphrased_articles)
+
+            logger.info(f"✓ Summarized reviews")
+
+            return articles_with_summaries
+
+        except Exception as e:
+            self.error_tracker.log_error(
+                phase='review_summarization',
+                error=e,
+                severity='WARNING',
+                recovery_action='CONTINUE'
+            )
+            # Return original articles if summarization fails
+            return paraphrased_articles
 
     # =========================================================================
     # HELPER METHODS
