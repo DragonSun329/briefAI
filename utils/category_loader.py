@@ -11,13 +11,17 @@ from pathlib import Path
 from loguru import logger
 
 
-def load_categories(category_ids: Optional[List[str]] = None) -> List[Dict[str, Any]]:
+def load_categories(
+    category_ids: Optional[List[str]] = None,
+    categories_file: Optional[str] = None
+) -> List[Dict[str, Any]]:
     """
     Load categories from configuration file.
 
     Args:
         category_ids: List of specific category IDs to load (e.g., ["fintech_ai", "data_analytics"])
                      If None, loads default categories from config
+        categories_file: Optional path to categories file (defaults to ./config/categories.json)
 
     Returns:
         List of category dictionaries with structure:
@@ -34,7 +38,7 @@ def load_categories(category_ids: Optional[List[str]] = None) -> List[Dict[str, 
         ValueError: If invalid category_ids specified
     """
     # Load config
-    config_path = Path("./config/categories.json")
+    config_path = Path(categories_file or "./config/categories.json")
     if not config_path.exists():
         logger.error(f"Category config not found at {config_path}")
         raise FileNotFoundError(f"Config file not found: {config_path}")

@@ -353,7 +353,7 @@ class ACEOrchestrator:
         try:
             scraper = WebScraper(
                 cache_manager=self.cache_mgr,
-                sources_file=str(self.mode_config.sources_file)
+                sources_config=str(self.mode_config.sources_file)
             )
 
             articles = scraper.scrape_all(
