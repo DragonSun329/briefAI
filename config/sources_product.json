@@ -1,0 +1,404 @@
+{
+  "sources": [
+    {
+      "id": "producthunt_api",
+      "name": "Product Hunt API - Hot Products",
+      "url": "https://www.producthunt.com",
+      "type": "api",
+      "api_type": "graphql",
+      "endpoint": "https://api.producthunt.com/v2/api/graphql",
+      "auth_type": "oauth",
+      "enabled": true,
+      "categories": [
+        "productivity_tools",
+        "automation_tools",
+        "coding_tools",
+        "creative_tools",
+        "specialized_tools"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 10,
+      "focus_tags": [
+        "产品评测",
+        "用户评价",
+        "新产品",
+        "热门产品"
+      ]
+    },
+    {
+      "id": "producthunt_rss",
+      "name": "Product Hunt RSS Feed",
+      "url": "https://www.producthunt.com",
+      "type": "rss",
+      "rss_url": "https://www.producthunt.com/feed",
+      "enabled": true,
+      "categories": [
+        "productivity_tools",
+        "indie_products"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "新产品",
+        "创业产品"
+      ]
+    },
+    {
+      "id": "reddit_chatgpt",
+      "name": "Reddit - r/ChatGPT",
+      "url": "https://reddit.com/r/ChatGPT",
+      "type": "reddit",
+      "subreddit": "ChatGPT",
+      "enabled": true,
+      "categories": [
+        "chat_assistants",
+        "productivity_tools"
+      ],
+      "language": "en",
+      "credibility_score": 7,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "ChatGPT",
+        "用户反馈",
+        "使用技巧"
+      ]
+    },
+    {
+      "id": "reddit_localllama",
+      "name": "Reddit - r/LocalLLaMA",
+      "url": "https://reddit.com/r/LocalLLaMA",
+      "type": "reddit",
+      "subreddit": "LocalLLaMA",
+      "enabled": true,
+      "categories": [
+        "coding_tools",
+        "specialized_tools"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "本地LLM",
+        "开源模型",
+        "技术讨论"
+      ]
+    },
+    {
+      "id": "reddit_sideproject",
+      "name": "Reddit - r/SideProject",
+      "url": "https://reddit.com/r/SideProject",
+      "type": "reddit",
+      "subreddit": "SideProject",
+      "enabled": true,
+      "categories": [
+        "indie_products",
+        "productivity_tools"
+      ],
+      "language": "en",
+      "credibility_score": 6,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "独立项目",
+        "创业产品",
+        "产品发布"
+      ]
+    },
+    {
+      "id": "reddit_entrepreneur",
+      "name": "Reddit - r/Entrepreneur",
+      "url": "https://reddit.com/r/Entrepreneur",
+      "type": "reddit",
+      "subreddit": "Entrepreneur",
+      "enabled": true,
+      "categories": [
+        "business_tools",
+        "automation_tools"
+      ],
+      "language": "en",
+      "credibility_score": 6,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "创业",
+        "商业工具",
+        "自动化"
+      ]
+    },
+    {
+      "id": "reddit_indiehackers",
+      "name": "Reddit - r/IndieBiz",
+      "url": "https://reddit.com/r/IndieBiz",
+      "type": "reddit",
+      "subreddit": "IndieBiz",
+      "enabled": true,
+      "categories": [
+        "indie_products",
+        "business_tools"
+      ],
+      "language": "en",
+      "credibility_score": 6,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "独立开发",
+        "创业"
+      ]
+    },
+    {
+      "id": "reddit_artificial",
+      "name": "Reddit - r/artificial",
+      "url": "https://reddit.com/r/artificial",
+      "type": "reddit",
+      "subreddit": "artificial",
+      "enabled": true,
+      "categories": [
+        "chat_assistants",
+        "specialized_tools"
+      ],
+      "language": "en",
+      "credibility_score": 7,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "人工智能",
+        "AI工具",
+        "产品讨论"
+      ]
+    },
+    {
+      "id": "betalist",
+      "name": "BetaList - New Startups",
+      "url": "https://betalist.com",
+      "type": "rss",
+      "rss_url": "https://betalist.com/feed",
+      "enabled": true,
+      "categories": [
+        "indie_products",
+        "productivity_tools"
+      ],
+      "language": "en",
+      "credibility_score": 7,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "新创公司",
+        "Beta测试",
+        "早期产品"
+      ]
+    },
+    {
+      "id": "hacker_news",
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com",
+      "type": "rss",
+      "rss_url": "https://news.ycombinator.com/rss",
+      "enabled": true,
+      "categories": [
+        "coding_tools",
+        "indie_products"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "技术讨论",
+        "产品发布",
+        "Show HN"
+      ]
+    },
+    {
+      "id": "techcrunch",
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com",
+      "type": "rss",
+      "rss_url": "https://techcrunch.com/feed/",
+      "enabled": true,
+      "categories": [
+        "productivity_tools",
+        "business_tools"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "科技新闻",
+        "产品发布",
+        "创业"
+      ]
+    },
+    {
+      "id": "theresanaiforthat",
+      "name": "There's An AI For That",
+      "url": "https://theresanaiforthat.com",
+      "type": "rss",
+      "rss_url": "https://theresanaiforthat.com/rss/",
+      "enabled": true,
+      "categories": [
+        "productivity_tools",
+        "specialized_tools",
+        "creative_tools"
+      ],
+      "language": "en",
+      "credibility_score": 7,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "AI工具目录",
+        "新产品",
+        "工具推荐"
+      ]
+    },
+    {
+      "id": "futuretools",
+      "name": "FutureTools",
+      "url": "https://www.futuretools.io",
+      "type": "rss",
+      "rss_url": "https://www.futuretools.io/rss",
+      "enabled": false,
+      "categories": [
+        "productivity_tools",
+        "creative_tools"
+      ],
+      "language": "en",
+      "credibility_score": 7,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "AI工具",
+        "工具评测"
+      ],
+      "notes": "RSS feed may be broken, disabled by default"
+    },
+    {
+      "id": "aibase",
+      "name": "AIbase - AI Tools Directory",
+      "url": "https://top.aibase.com",
+      "type": "rss",
+      "rss_url": "https://top.aibase.com/rss",
+      "enabled": true,
+      "categories": [
+        "productivity_tools",
+        "creative_tools",
+        "specialized_tools"
+      ],
+      "language": "en",
+      "credibility_score": 6,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "AI工具目录",
+        "产品排行"
+      ]
+    },
+    {
+      "id": "toolify",
+      "name": "Toolify AI",
+      "url": "https://www.toolify.ai",
+      "type": "rss",
+      "rss_url": "https://www.toolify.ai/rss",
+      "enabled": true,
+      "categories": [
+        "productivity_tools",
+        "automation_tools"
+      ],
+      "language": "en",
+      "credibility_score": 6,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "AI工具",
+        "工具推荐"
+      ]
+    },
+    {
+      "id": "aivalley",
+      "name": "AI Valley",
+      "url": "https://aivalley.ai",
+      "type": "rss",
+      "rss_url": "https://aivalley.ai/feed/",
+      "enabled": true,
+      "categories": [
+        "productivity_tools",
+        "creative_tools"
+      ],
+      "language": "en",
+      "credibility_score": 6,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI工具",
+        "产品评测"
+      ]
+    },
+    {
+      "id": "newsletter_product_hunt",
+      "name": "Product Hunt - AI Products Newsletter",
+      "url": "https://www.producthunt.com",
+      "type": "rss",
+      "rss_url": "https://www.producthunt.com/topics/artificial-intelligence/feed",
+      "enabled": true,
+      "categories": [
+        "productivity_tools",
+        "automation_tools"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "AI产品",
+        "Product Hunt"
+      ]
+    },
+    {
+      "id": "marketing_ai_institute",
+      "name": "Marketing AI Institute",
+      "url": "https://www.marketingaiinstitute.com",
+      "type": "rss",
+      "rss_url": "https://www.marketingaiinstitute.com/blog/rss.xml",
+      "enabled": true,
+      "categories": [
+        "business_tools",
+        "specialized_tools"
+      ],
+      "language": "en",
+      "credibility_score": 7,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "营销工具",
+        "商业应用"
+      ]
+    },
+    {
+      "id": "towards_data_science",
+      "name": "Towards Data Science",
+      "url": "https://towardsdatascience.com",
+      "type": "rss",
+      "rss_url": "https://towardsdatascience.com/feed",
+      "enabled": true,
+      "categories": [
+        "specialized_tools",
+        "coding_tools"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "数据科学",
+        "工具教程"
+      ]
+    },
+    {
+      "id": "indie_hackers_rss",
+      "name": "Indie Hackers",
+      "url": "https://www.indiehackers.com",
+      "type": "rss",
+      "rss_url": "https://www.indiehackers.com/feed",
+      "enabled": false,
+      "categories": [
+        "indie_products",
+        "business_tools"
+      ],
+      "language": "en",
+      "credibility_score": 7,
+      "relevance_weight": 7,
+      "focus_tags": [
+        "独立开发",
+        "创业"
+      ],
+      "notes": "RSS feed may be broken"
+    }
+  ]
+}

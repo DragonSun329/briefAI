@@ -1,0 +1,188 @@
+{
+  "categories": [
+    {
+      "id": "productivity_tools",
+      "name": "生产力工具",
+      "aliases": [
+        "productivity", "writing", "notes", "note-taking", "task management",
+        "calendar", "email", "notion", "obsidian", "roam", "evernote",
+        "todo", "gtd", "organization", "workspace", "collaboration",
+        "document", "docs", "editing", "word processor"
+      ],
+      "priority": 10,
+      "description": "AI生产力工具 - 写作助手、笔记应用、任务管理、日历、邮件工具等提升个人和团队效率的产品"
+    },
+    {
+      "id": "automation_tools",
+      "name": "自动化工具",
+      "aliases": [
+        "automation", "workflow", "zapier", "n8n", "make", "integromat",
+        "rpa", "robotic process", "agent", "autonomous", "auto-gpt",
+        "workflow automation", "integration", "no-code", "low-code",
+        "orchestration", "pipeline", "agentic"
+      ],
+      "priority": 10,
+      "description": "AI自动化工具 - 工作流自动化、AI代理、RPA、集成平台、无代码/低代码自动化解决方案"
+    },
+    {
+      "id": "coding_tools",
+      "name": "编程工具",
+      "aliases": [
+        "cursor", "copilot", "github copilot", "code", "coding", "programming",
+        "ide", "editor", "vscode", "intellij", "development", "developer",
+        "code generation", "code completion", "code assistant", "coding assistant",
+        "refactoring", "debugging", "pair programming", "ai coding"
+      ],
+      "priority": 9,
+      "description": "AI编程工具 - Cursor、Copilot等AI编程助手、IDE插件、代码生成和自动补全工具"
+    },
+    {
+      "id": "creative_tools",
+      "name": "创意工具",
+      "aliases": [
+        "design", "designer", "creative", "art", "artist", "graphics",
+        "image generation", "image", "photo", "midjourney", "dall-e", "stable diffusion",
+        "video generation", "video", "sora", "runway", "pika",
+        "music", "audio", "voice", "sound", "music generation",
+        "illustration", "drawing", "painting", "3d", "animation"
+      ],
+      "priority": 9,
+      "description": "AI创意工具 - 图像生成(Midjourney/DALL-E)、视频制作(Sora/Runway)、音乐创作、设计辅助工具"
+    },
+    {
+      "id": "specialized_tools",
+      "name": "专业工具",
+      "aliases": [
+        "voice", "speech", "transcription", "subtitle", "caption",
+        "translation", "translator", "localization", "i18n",
+        "research", "researcher", "academic", "paper", "literature review",
+        "data analysis", "analytics", "data science", "visualization",
+        "seo", "search engine", "marketing", "ads", "advertising",
+        "legal", "law", "contract", "compliance",
+        "medical", "healthcare", "diagnosis", "health"
+      ],
+      "priority": 9,
+      "description": "AI专业工具 - 语音转录、翻译、学术研究、数据分析、SEO、法律、医疗等垂直领域的专业AI工具"
+    },
+    {
+      "id": "chat_assistants",
+      "name": "聊天助手",
+      "aliases": [
+        "chatbot", "chat bot", "assistant", "virtual assistant", "ai assistant",
+        "chat", "conversation", "conversational ai", "dialogue",
+        "customer service", "customer support", "support", "helpdesk",
+        "chatgpt", "claude", "gemini", "bard", "perplexity",
+        "personal assistant", "ai chat"
+      ],
+      "priority": 8,
+      "description": "AI聊天助手 - ChatGPT、Claude等聊天机器人、客服工具、个人AI助手"
+    },
+    {
+      "id": "business_tools",
+      "name": "商业工具",
+      "aliases": [
+        "business", "enterprise", "b2b", "saas", "crm", "erp",
+        "sales", "marketing", "customer", "analytics",
+        "finance", "accounting", "hr", "human resources", "recruitment",
+        "project management", "team", "collaboration",
+        "presentation", "pitch", "deck", "slides"
+      ],
+      "priority": 7,
+      "description": "AI商业工具 - CRM、营销自动化、销售助手、财务分析、HR招聘、项目管理等企业级应用"
+    },
+    {
+      "id": "learning_tools",
+      "name": "学习工具",
+      "aliases": [
+        "education", "learning", "study", "student", "teacher",
+        "tutor", "tutoring", "teaching", "course", "training",
+        "language learning", "language", "vocabulary", "grammar",
+        "quiz", "test", "exam", "homework", "assignment",
+        "edtech", "e-learning", "online learning"
+      ],
+      "priority": 7,
+      "description": "AI学习工具 - 在线教育、语言学习、智能辅导、作业助手、考试准备工具"
+    },
+    {
+      "id": "search_tools",
+      "name": "搜索工具",
+      "aliases": [
+        "search", "search engine", "perplexity", "you.com",
+        "research", "information", "knowledge", "discovery",
+        "semantic search", "vector search", "rag", "retrieval",
+        "question answering", "qa", "answer engine"
+      ],
+      "priority": 6,
+      "description": "AI搜索工具 - Perplexity等AI搜索引擎、语义搜索、知识检索、问答系统"
+    },
+    {
+      "id": "indie_products",
+      "name": "独立开发产品",
+      "aliases": [
+        "indie", "indie hacker", "solo", "maker", "indie maker",
+        "side project", "side hustle", "bootstrap", "bootstrapped",
+        "solopreneur", "one-person", "mvp", "prototype",
+        "launch", "new product", "startup"
+      ],
+      "priority": 6,
+      "description": "独立开发者产品 - Side Project、单人创业、自筹资金的AI产品创新"
+    },
+    {
+      "id": "mobile_apps",
+      "name": "移动应用",
+      "aliases": [
+        "mobile", "ios", "iphone", "ipad", "app store",
+        "android", "play store", "mobile app", "smartphone",
+        "tablet", "wearable", "watch", "apple watch"
+      ],
+      "priority": 5,
+      "description": "AI移动应用 - iOS/Android平台的AI工具和应用"
+    },
+    {
+      "id": "browser_extensions",
+      "name": "浏览器插件",
+      "aliases": [
+        "extension", "browser extension", "chrome extension", "firefox",
+        "plugin", "add-on", "browser", "web", "sidebar"
+      ],
+      "priority": 5,
+      "description": "AI浏览器插件 - Chrome/Firefox等浏览器的AI增强插件"
+    }
+  ],
+  "default_categories": [
+    "productivity_tools",
+    "automation_tools",
+    "coding_tools",
+    "creative_tools",
+    "specialized_tools"
+  ],
+  "company_context": {
+    "business": "AI产品评测与趋势追踪",
+    "industry": "人工智能 / 产品评测",
+    "focus_areas": [
+      "生产力工具",
+      "自动化工具",
+      "专业工具",
+      "热门产品",
+      "用户评价",
+      "产品趋势"
+    ],
+    "relevance_keywords": [
+      "product hunt",
+      "trending",
+      "viral",
+      "hot",
+      "review",
+      "user feedback",
+      "rating",
+      "upvote",
+      "launch",
+      "new product",
+      "productivity",
+      "automation",
+      "tool",
+      "app",
+      "saas"
+    ]
+  }
+}
