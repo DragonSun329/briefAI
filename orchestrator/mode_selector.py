@@ -57,10 +57,11 @@ class ModeConfig:
         self.template_file = self.base_dir / f"config/template_{mode.value}.md"
 
         # Mode-specific report settings
-        self.report_prefix = f"weekly_briefing_{mode.value}"
         if mode == PipelineMode.PRODUCT:
+            self.report_prefix = "产品周报"
             self.report_dir = self.base_dir / "data/reports/product_reviews"
         else:
+            self.report_prefix = "AI周报"
             self.report_dir = self.base_dir / "data/reports"
 
         # Mode-specific pipeline phases

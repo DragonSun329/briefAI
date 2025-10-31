@@ -29,7 +29,8 @@ class ReportFormatter:
         llm_client: LLMClient = None,
         output_dir: str = "./data/reports",
         company_context: Dict[str, Any] = None,
-        include_5d_scores: bool = True
+        include_5d_scores: bool = True,
+        report_prefix: str = "weekly_briefing"
     ):
         """
         Initialize report formatter
@@ -40,6 +41,7 @@ class ReportFormatter:
             output_dir: Directory to save reports
             company_context: Company context for tailored insights
             include_5d_scores: Whether to include 5D score breakdowns in report
+            report_prefix: Filename prefix for reports (e.g., "AI周报", "产品周报")
         """
         self.template_path = Path(template_path)
         self.llm_client = llm_client or LLMClient()
@@ -47,6 +49,7 @@ class ReportFormatter:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.company_context = company_context or {}
         self.include_5d_scores = include_5d_scores
+        self.report_prefix = report_prefix
         self.scoring_engine = ScoringEngine()
 
         # Load company context from categories config if not provided
@@ -159,9 +162,9 @@ class ReportFormatter:
 
         # Generate filename based on report type
         if report_type == "weekly":
-            report_filename = f"weekly_briefing_{week_id}_{generation_timestamp.strftime('%Y%m%d')}.md"
+            report_filename = f"{self.report_prefix}_{generation_timestamp.strftime('%Y%m%d')}.md"
         else:
-            report_filename = f"ai_briefing_{generation_timestamp.strftime('%Y%m%d')}.md"
+            report_filename = f"{self.report_prefix}_{generation_timestamp.strftime('%Y%m%d')}.md"
 
         report_path = self.output_dir / report_filename
 
