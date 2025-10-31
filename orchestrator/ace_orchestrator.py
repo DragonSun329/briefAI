@@ -868,7 +868,7 @@ class ACEOrchestrator:
                 llm_client=self.llm_client,
                 company_context=self.company_context,
                 include_5d_scores=True,
-                template_file=str(self.mode_config.template_file)
+                template_path=str(self.mode_config.template_file)
             )
 
             report_path = formatter.generate_report(
