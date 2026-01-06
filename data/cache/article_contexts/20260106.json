@@ -1,187 +1,44 @@
 {
   "report_date": "2026-01-06",
-  "generation_time": "2026-01-06T14:42:15.887347",
+  "generation_time": "2026-01-06T14:50:47.504851",
   "articles": [
     {
       "id": "001",
-      "title": "Can AI Chatbots Run Ads Without Losing Consumer Trust?",
-      "url": "https://www.adexchanger.com/ai/can-ai-chatbots-run-ads-without-losing-consumer-trust/",
-      "source": "AdExchanger",
-      "published_date": "2026-01-02T06:00:34",
-      "full_content": "AI search platforms are introducing ads. But  if the ads don't add value and maintain authenticity, platforms risk losing  consumer trust.\nThe post Can AI Chatbots Run Ads Without Losing Consumer Trust? appeared first on AdExchanger.",
+      "title": "Right Now, Managing AI Agents is About as Much Work as Managing Humans. Just Different Work.",
+      "url": "https://www.saastr.com/right-now-managing-ai-agents-is-about-as-much-work-as-managing-humans/",
+      "source": "SaaStr",
+      "published_date": "2026-01-05T15:10:42",
+      "full_content": "Here’s something almost nobody tells you when you deploy your first AI agent: you’re not eliminating management overhead. You’re trading one type of work for another. It’s different work. But it requires about as much time for oversight, review, and training as managing humans did. We’ve deployed 20+ AI agents at SaaStr over the past... Continue Reading",
       "credibility_score": 8,
       "relevance_score": 0,
       "entities": {
         "companies": [
-          "AdExchanger"
+          "SaaStr"
         ],
         "models": [],
         "topics": [
-          "AI search platforms",
-          "ads",
-          "consumer trust",
-          "AI Chatbots"
+          "management overhead",
+          "AI agent deployment",
+          "oversight",
+          "review",
+          "training"
         ],
         "business_models": [],
         "people": []
       },
       "evaluation": {
         "scores": {
-          "market_impact": 6,
-          "competitive_impact": 5,
-          "strategic_relevance": 7,
-          "operational_relevance": 6,
-          "credibility": 8
-        },
-        "weighted_score": 5.6,
-        "rationale": "文章讨论了AI聊天机器人在广告领域的应用，以及如何平衡广告与消费者信任之间的关系。这对金融科技和AI产品公司来说是一个重要的议题，因为它们需要在不损害消费者信任的前提下利用AI技术进行营销和增长。文章的可信度较高，来源AdExchanger在广告技术领域有较好的声誉。",
-        "key_takeaway": "AI聊天机器人在广告领域的应用需要平衡商业利益与消费者信任",
-        "recommended_category": "Marketing & Growth AI",
-        "average_score": 6.4
-      }
-    },
-    {
-      "id": "002",
-      "title": "Stop Blaming the Data: A Better Way to Handle Covariance Shift",
-      "url": "https://towardsdatascience.com/stop-blaming-the-data-a-better-way-to-handle-covariance-shift/",
-      "source": "Towards Data Science",
-      "published_date": "2026-01-05T13:30:00",
-      "full_content": "Instead of using shift as an excuse for poor performance, use Inverse Probability Weighting to estimate how your model should perform in the new environment\nThe post Stop Blaming the Data: A Better Way to Handle Covariance Shift appeared first on Towards Data Science.",
-      "credibility_score": 8,
-      "relevance_score": 0,
-      "entities": {
-        "companies": [],
-        "models": [],
-        "topics": [
-          "Inverse Probability Weighting",
-          "Covariance Shift"
-        ],
-        "business_models": [],
-        "people": []
-      },
-      "evaluation": {
-        "scores": {
-          "market_impact": 6,
-          "competitive_impact": 5,
+          "market_impact": 5,
+          "competitive_impact": 6,
           "strategic_relevance": 7,
           "operational_relevance": 7,
           "credibility": 8
         },
-        "weighted_score": 5.75,
-        "rationale": "这篇文章讨论了处理协方差偏移的新方法，这对金融科技和AI产品的风险管理、信用决策和数据分析领域具有战略相关性。虽然它可能不会直接改变市场格局，但对提升模型性能和预测准确性有潜在帮助。文章来自信誉良好的数据科学平台，内容可信度较高。",
-        "key_takeaway": "探索处理协方差偏移的新方法，对提升模型性能有潜在帮助",
-        "recommended_category": "Data Analytics & ML",
+        "weighted_score": 5.7,
+        "rationale": "文章讨论了AI代理管理的复杂性，指出AI并没有消除管理开销，而是改变了管理的工作类型。这对AI产品的开发和运营具有直接的影响，尤其是在风险管理和信用决策方面。文章的可信度较高，来自SaaStr，一个知名的SaaS和投资领域媒体。",
+        "key_takeaway": "AI管理并非消除管理开销，而是改变了管理的工作类型。",
+        "recommended_category": "AI Products",
         "average_score": 6.6
-      }
-    },
-    {
-      "id": "003",
-      "title": "ChatGPT Ads Coming Soon?; Advertisers Sweat TikTok’s New Era",
-      "url": "https://www.adexchanger.com/daily-news-roundup/monday-05012026/",
-      "source": "AdExchanger",
-      "published_date": "2026-01-05T05:01:15",
-      "full_content": "ChatGPT ads might already be here; TikTok’s new ownership deal has marketers spooked; and California unveils a new consumer protection act. \nThe post ChatGPT Ads Coming Soon?; Advertisers Sweat TikTok’s New Era appeared first on AdExchanger.",
-      "credibility_score": 8,
-      "relevance_score": 0,
-      "entities": {
-        "companies": [
-          "TikTok",
-          "AdExchanger"
-        ],
-        "models": [],
-        "topics": [
-          "ChatGPT Ads",
-          "consumer protection act"
-        ],
-        "business_models": [],
-        "people": []
-      },
-      "evaluation": {
-        "scores": {
-          "market_impact": 6,
-          "competitive_impact": 5,
-          "strategic_relevance": 7,
-          "operational_relevance": 5,
-          "credibility": 8
-        },
-        "weighted_score": 5.45,
-        "rationale": "文章讨论了ChatGPT广告的潜在出现以及TikTok新所有权对广告商的影响，这对AI产品和工具领域有一定的市场和竞争影响，尤其是考虑到广告技术与数据驱动营销的交叉。同时，文章内容与公司关注的营销增长和AI产品相关，对战略规划和运营都有一定的参考价值。",
-        "key_takeaway": "ChatGPT广告和TikTok所有权变动对AI营销领域有影响",
-        "recommended_category": "Marketing & Growth AI",
-        "average_score": 6.2
-      }
-    },
-    {
-      "id": "004",
-      "title": "Don’t Let These Privacy Shifts Blindside You In 2026",
-      "url": "https://www.adexchanger.com/data-privacy-roundup/dont-let-these-privacy-shifts-blindside-you-in-2026/",
-      "source": "AdExchanger",
-      "published_date": "2026-01-05T06:00:20",
-      "full_content": "Last year, Google decided not to deprecate third-party cookies in Chrome after all. This year, Google decided to jettison its backup plan and not even launch a planned choice prompt for cookies in its browser. By October, the Privacy Sandbox was all but kaput. The UK’s Competition and Markets Authority released Google from its Privacy […]\nThe post Don’t Let These Privacy Shifts Blindside You In 2026 appeared first on AdExchanger.",
-      "credibility_score": 8,
-      "relevance_score": 0,
-      "entities": {
-        "companies": [
-          "google",
-          "Privacy Sandbox",
-          "UK’s Competition and Markets Authority",
-          "AdExchanger"
-        ],
-        "models": [],
-        "topics": [
-          "Privacy",
-          "Cookies"
-        ],
-        "business_models": [],
-        "people": []
-      },
-      "evaluation": {
-        "scores": {
-          "market_impact": 5,
-          "competitive_impact": 6,
-          "strategic_relevance": 7,
-          "operational_relevance": 5,
-          "credibility": 8
-        },
-        "weighted_score": 5.4,
-        "rationale": "文章讨论了谷歌在隐私政策上的转变，这对广告技术领域有中等市场影响力，对竞争格局有一定影响，尤其是涉及数据驱动营销和程序化广告的公司。由于文章内容涉及隐私政策变化，这对公司在数据管理和合规方面具有战略相关性，对日常运营和产品开发有辅助意义。AdExchanger的可信度较高，因此文章的可信度评分为8。",
-        "key_takeaway": "谷歌隐私政策的变化对广告技术领域有影响",
-        "recommended_category": "Marketing & Growth AI",
-        "average_score": 6.2
-      }
-    },
-    {
-      "id": "005",
-      "title": "Optable’s New Agent Aims To Ease The Ad Planning Load For Publishers",
-      "url": "https://www.adexchanger.com/marketers/optables-new-agent-aims-to-ease-the-ad-planning-load-for-publishers/",
-      "source": "AdExchanger",
-      "published_date": "2026-01-05T16:00:34",
-      "full_content": "Publishers can reach relevant audiences at scale and with greater specificity through Optable's new planner agent.\nThe post Optable’s New Agent Aims To Ease The Ad Planning Load For Publishers appeared first on AdExchanger.",
-      "credibility_score": 8,
-      "relevance_score": 0,
-      "entities": {
-        "companies": [
-          "Optable",
-          "AdExchanger"
-        ],
-        "models": [],
-        "topics": [],
-        "business_models": [],
-        "people": []
-      },
-      "evaluation": {
-        "scores": {
-          "market_impact": 5,
-          "competitive_impact": 6,
-          "strategic_relevance": 5,
-          "operational_relevance": 4,
-          "credibility": 8
-        },
-        "weighted_score": 4.85,
-        "rationale": "Optable的新广告规划代理可能对广告技术领域有一定的影响，尤其是在程序化广告和数据驱动营销方面。对于金融科技公司来说，这可能有助于改善营销和客户定位，但与核心的金融科技业务和产品战略相关性较低。",
-        "key_takeaway": "Optable的新广告规划代理可能对营销和广告技术领域产生影响",
-        "recommended_category": "Marketing & Growth AI",
-        "average_score": 5.6
       }
     }
   ]
