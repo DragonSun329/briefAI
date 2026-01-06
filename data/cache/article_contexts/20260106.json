@@ -1,6 +1,6 @@
 {
   "report_date": "2026-01-06",
-  "generation_time": "2026-01-06T15:31:59.714801",
+  "generation_time": "2026-01-06T15:49:55.596376",
   "articles": [
     {
       "id": "001",
@@ -15,9 +15,7 @@
         "companies": [
           "Nvidia"
         ],
-        "models": [
-          "Rubin"
-        ],
+        "models": [],
         "topics": [
           "AI computing"
         ],
@@ -28,60 +26,59 @@
       },
       "evaluation": {
         "scores": {
-          "market_impact": 9,
+          "market_impact": 8,
           "competitive_impact": 9,
           "strategic_relevance": 7,
           "operational_relevance": 6,
           "credibility": 9
         },
-        "weighted_score": 7.25,
-        "rationale": "Nvidia的新Rubin芯片架构作为AI计算的最新技术，对市场和竞争格局有重大影响，特别是在AI产品和风险管理领域。TechCrunch AI作为信誉良好的来源，内容可信度高。",
-        "key_takeaway": "Nvidia推出新一代AI芯片架构",
+        "weighted_score": 7.0,
+        "rationale": "Nvidia的新Rubin芯片架构代表了AI计算领域的最新技术，对市场有显著影响，尤其是对竞争对手构成直接挑战。文章与公司在AI产品和风险管理等方面的战略相关性较高，对公司未来技术布局和产品开发有指导意义。",
+        "key_takeaway": "Nvidia发布新一代AI芯片架构，对市场和竞争格局产生重大影响",
         "recommended_category": "AI-Specific Investment Signals",
-        "average_score": 8.0
+        "average_score": 7.8
       }
     },
     {
       "id": "002",
-      "title": "Nvidia’s Rubin Chips on Track, CEO Huang Says",
-      "url": "https://www.bloomberg.com/news/videos/2026-01-06/nvidia-s-rubin-chips-on-track-ceo-huang-says-video",
-      "source": "Bloomberg Technology",
-      "published_date": "2026-01-06T06:58:10",
-      "full_content": "Nvidia Corp.’s highly anticipated Rubin data center processors are in production and customers will soon be able to try out the technology, according to Chief Executive Officer Jensen Huang. Meanwhile, Advanced Micro Devices Inc. announced a new chip for corporate data center use and talked up the attributes of a future generation of products for that market. Bloomberg Intelligence’s Masahiro Wakasugi breaks down the situation.",
-      "credibility_score": 10,
+      "title": "Nvidia launches Alpamayo, open AI models that allow autonomous vehicles to ‘think like a human’",
+      "url": "https://techcrunch.com/2026/01/05/nvidia-launches-alpamayo-open-ai-models-that-allow-autonomous-vehicles-to-think-like-a-human/",
+      "source": "TechCrunch AI",
+      "published_date": "2026-01-05T21:52:22",
+      "full_content": "Nvidia unveiled Alpamayo at CES 2026, which includes a reasoning vision language action model that allows an autonomous vehicle to think more like a human and provide chain-of-thought reasoning.",
+      "credibility_score": 9,
       "relevance_score": 0,
       "entities": {
         "companies": [
-          "Nvidia Corp.",
-          "Advanced Micro Devices Inc.",
-          "Bloomberg Intelligence"
+          "Nvidia"
         ],
         "models": [
-          "Rubin"
+          "Alpamayo"
         ],
         "topics": [
-          "data center processors",
-          "chip for corporate data center use"
+          "reasoning",
+          "vision",
+          "language",
+          "action",
+          "chain-of-thought reasoning",
+          "autonomous vehicle"
         ],
         "business_models": [],
-        "people": [
-          "Jensen Huang",
-          "Masahiro Wakasugi"
-        ]
+        "people": []
       },
       "evaluation": {
         "scores": {
           "market_impact": 8,
-          "competitive_impact": 9,
+          "competitive_impact": 7,
           "strategic_relevance": 6,
           "operational_relevance": 5,
-          "credibility": 10
+          "credibility": 9
         },
-        "weighted_score": 6.75,
-        "rationale": "Nvidia的Rubin芯片对数据中心市场具有显著影响，尤其是对AI和高性能计算领域。AMD的新芯片也表明了数据中心处理器市场的竞争加剧。虽然Nvidia的芯片可能对公司的战略规划和运营产生影响，但考虑到公司业务主要集中在金融科技和AI产品，这种影响相对有限。",
-        "key_takeaway": "数据中心处理器市场竞争激烈，Nvidia和AMD均推出新产品",
-        "recommended_category": "Market Analysis & Trends",
-        "average_score": 7.6
+        "weighted_score": 6.25,
+        "rationale": "Nvidia的Alpamayo模型代表了AI在自动驾驶领域的一个重大进展，可以显著提升车辆的决策能力，对市场和竞争格局有重要影响。同时，该技术与公司在AI产品和风险管理等领域的业务战略相关，但可能不会直接影响日常运营。TechCrunch AI作为来源的可信度较高。",
+        "key_takeaway": "Nvidia推出Alpamayo，AI技术在自动驾驶领域取得突破",
+        "recommended_category": "AI新闻",
+        "average_score": 7.0
       }
     },
     {
@@ -117,98 +114,14 @@
           "credibility": 9
         },
         "weighted_score": 6.2,
-        "rationale": "Nvidia在CES 2026上展示的全栈机器人生态系统可能对AI和机器人行业产生显著影响，特别是对竞争对手而言。这与公司在AI产品和数据驱动决策方面的业务战略相关，但对日常运营和客户体验的直接影响有限。",
-        "key_takeaway": "Nvidia致力于打造通用机器人的默认平台",
-        "recommended_category": "AI-Specific Investment Signals",
-        "average_score": 7.0
-      }
-    },
-    {
-      "id": "004",
-      "title": "Nvidia launches Alpamayo, open AI models that allow autonomous vehicles to ‘think like a human’",
-      "url": "https://techcrunch.com/2026/01/05/nvidia-launches-alpamayo-open-ai-models-that-allow-autonomous-vehicles-to-think-like-a-human/",
-      "source": "TechCrunch AI",
-      "published_date": "2026-01-05T21:52:22",
-      "full_content": "Nvidia unveiled Alpamayo at CES 2026, which includes a reasoning vision language action model that allows an autonomous vehicle to think more like a human and provide chain-of-thought reasoning.",
-      "credibility_score": 9,
-      "relevance_score": 0,
-      "entities": {
-        "companies": [
-          "Nvidia"
-        ],
-        "models": [
-          "Alpamayo"
-        ],
-        "topics": [
-          "reasoning",
-          "vision",
-          "language",
-          "action",
-          "autonomous vehicle",
-          "chain-of-thought reasoning"
-        ],
-        "business_models": [],
-        "people": []
-      },
-      "evaluation": {
-        "scores": {
-          "market_impact": 7,
-          "competitive_impact": 8,
-          "strategic_relevance": 6,
-          "operational_relevance": 5,
-          "credibility": 9
-        },
-        "weighted_score": 6.2,
-        "rationale": "Nvidia在CES上推出的Alpamayo AI模型对自动驾驶领域是一个重要的技术进步，可能会显著影响市场和竞争格局。考虑到Nvidia在AI领域的影响力，这一新闻对竞争格局有明显变化，值得关注。同时，这一技术进步与公司在AI产品和风险管理等方面的战略相关性较高，但对日常运营的影响可能有限。",
-        "key_takeaway": "Nvidia推出Alpamayo AI模型，推动自动驾驶技术进步",
-        "recommended_category": "AI-Specific Investment Signals",
-        "average_score": 7.0
-      }
-    },
-    {
-      "id": "005",
-      "title": "CES 2026: Follow live as Nvidia, Lego, AMD, Amazon, and more make their big reveals",
-      "url": "https://techcrunch.com/storyline/ces-2026-follow-live-as-nvidia-lego-amd-amazon-and-more-make-their-big-reveals/",
-      "source": "TechCrunch Startups",
-      "published_date": "2026-01-05T16:09:26",
-      "full_content": "CES 2026, the annual consumer tech conference held in Las Vegas, is here. And lucky for you, we have TechCrunch editors and reporters on the ground to cover the news, scout out the interesting, weird, and relevant (and some not so relevant) tech, and of course the people working on it. Even before the official kickoff of CES on January 6, there will be product reveals from Amazon, Nvidia, Hyundai, AMD, and more. AI is at the center of most of the action. But this year, we're hearing a lot more about the convergence of AI and the physical world, whether it's in factories, robotics, or autonomous vehicles. Follow our live updates as we share all the reveals and new hardware as it happens.",
-      "credibility_score": 9,
-      "relevance_score": 0,
-      "entities": {
-        "companies": [
-          "TechCrunch",
-          "Amazon",
-          "Nvidia",
-          "Hyundai",
-          "AMD"
-        ],
-        "models": [],
-        "topics": [
-          "AI",
-          "factories",
-          "robotics",
-          "autonomous vehicles"
-        ],
-        "business_models": [],
-        "people": []
-      },
-      "evaluation": {
-        "scores": {
-          "market_impact": 8,
-          "competitive_impact": 7,
-          "strategic_relevance": 6,
-          "operational_relevance": 5,
-          "credibility": 9
-        },
-        "weighted_score": 6.25,
-        "rationale": "CES 2026作为年度消费科技大会，对于整个科技行业具有较高的市场影响力，尤其是今年AI与物理世界的融合成为焦点，对公司在AI产品和市场趋势方面的战略规划有辅助意义。虽然文章中提及的公司与用户关注的分类不完全匹配，但作为科技行业的风向标，CES的动态对公司运营和产品开发仍有一定参考价值。",
-        "key_takeaway": "CES 2026聚焦AI与物理世界的融合，对公司AI产品战略有辅助意义。",
+        "rationale": "Nvidia在CES上推出的全栈机器人生态系统对市场有显著影响，尤其是在AI和机器人技术领域。这可能改变竞争格局，特别是对于AI硬件和软件平台。对于我们公司来说，Nvidia的这一举措战略相关性较高，因为它可能影响我们的AI产品和市场定位。从运营角度看，虽然影响有限，但值得关注Nvidia的技术进展。文章来源TechCrunch AI的可信度较高。",
+        "key_takeaway": "Nvidia在CES上推出全栈机器人生态系统，可能改变AI和机器人领域的竞争格局",
         "recommended_category": "Market Analysis & Trends",
         "average_score": 7.0
       }
     },
     {
-      "id": "006",
+      "id": "004",
       "title": "CES 2026: Follow live as Nvidia, Lego, AMD, Amazon, and more make their big reveals",
       "url": "https://techcrunch.com/storyline/ces-2026-follow-live-as-nvidia-lego-amd-amazon-and-more-make-their-big-reveals/",
       "source": "TechCrunch AI",
@@ -244,10 +157,95 @@
           "credibility": 9
         },
         "weighted_score": 6.0,
-        "rationale": "CES 2026作为年度消费技术大会，涵盖了AI和多个领域的最新进展，对市场和竞争格局有一定影响。文章中提到AI与物理世界的融合，与公司关注的风险管理、信用决策等领域相关，但具体影响尚需进一步信息。TechCrunch AI作为知名科技媒体，报道可信度高。",
-        "key_takeaway": "CES 2026聚焦AI与物理世界的融合",
+        "rationale": "CES作为全球消费电子展，对科技行业特别是AI领域具有重要市场影响力。Nvidia、AMD等公司的AI相关产品发布，可能对竞争格局产生影响。文章内容与公司关注的风险管理、信用决策等领域相关性一般，但对了解行业趋势有帮助。TechCrunch AI作为知名科技媒体，报道可信度高。",
+        "key_takeaway": "CES 2026聚焦AI与物理世界的融合，Nvidia、AMD等公司将发布AI新品",
         "recommended_category": "Market Analysis & Trends",
         "average_score": 6.8
+      }
+    },
+    {
+      "id": "005",
+      "title": "Nvidia’s Rubin Chips on Track, CEO Huang Says",
+      "url": "https://www.bloomberg.com/news/videos/2026-01-06/nvidia-s-rubin-chips-on-track-ceo-huang-says-video",
+      "source": "Bloomberg Technology",
+      "published_date": "2026-01-06T06:58:10",
+      "full_content": "Nvidia Corp.’s highly anticipated Rubin data center processors are in production and customers will soon be able to try out the technology, according to Chief Executive Officer Jensen Huang. Meanwhile, Advanced Micro Devices Inc. announced a new chip for corporate data center use and talked up the attributes of a future generation of products for that market. Bloomberg Intelligence’s Masahiro Wakasugi breaks down the situation.",
+      "credibility_score": 10,
+      "relevance_score": 0,
+      "entities": {
+        "companies": [
+          "Nvidia Corp.",
+          "Advanced Micro Devices Inc.",
+          "Bloomberg Intelligence"
+        ],
+        "models": [
+          "Rubin"
+        ],
+        "topics": [
+          "data center processors",
+          "chip for corporate data center use"
+        ],
+        "business_models": [],
+        "people": [
+          "Jensen Huang",
+          "Masahiro Wakasugi"
+        ]
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 7,
+          "competitive_impact": 8,
+          "strategic_relevance": 5,
+          "operational_relevance": 4,
+          "credibility": 10
+        },
+        "weighted_score": 5.95,
+        "rationale": "Nvidia的Rubin芯片即将投入生产，这对数据中心处理器市场是一个重要进展。尽管Nvidia是AI和高性能计算领域的领导者，但文章中并未提及Rubin芯片与金融科技或AI产品的直接联系，因此对公司业务战略和运营的相关性较低。AMD的新芯片也可能对Nvidia构成竞争压力，但文章中缺乏具体细节。",
+        "key_takeaway": "Nvidia的Rubin芯片即将投入生产，可能加剧数据中心处理器市场的竞争。",
+        "recommended_category": "Market Analysis & Trends",
+        "average_score": 6.8
+      }
+    },
+    {
+      "id": "006",
+      "title": "CES 2026: Follow live as Nvidia, Lego, AMD, Amazon, and more make their big reveals",
+      "url": "https://techcrunch.com/storyline/ces-2026-follow-live-as-nvidia-lego-amd-amazon-and-more-make-their-big-reveals/",
+      "source": "TechCrunch Startups",
+      "published_date": "2026-01-05T16:09:26",
+      "full_content": "CES 2026, the annual consumer tech conference held in Las Vegas, is here. And lucky for you, we have TechCrunch editors and reporters on the ground to cover the news, scout out the interesting, weird, and relevant (and some not so relevant) tech, and of course the people working on it. Even before the official kickoff of CES on January 6, there will be product reveals from Amazon, Nvidia, Hyundai, AMD, and more. AI is at the center of most of the action. But this year, we're hearing a lot more about the convergence of AI and the physical world, whether it's in factories, robotics, or autonomous vehicles. Follow our live updates as we share all the reveals and new hardware as it happens.",
+      "credibility_score": 9,
+      "relevance_score": 0,
+      "entities": {
+        "companies": [
+          "TechCrunch",
+          "Amazon",
+          "Nvidia",
+          "Hyundai",
+          "AMD"
+        ],
+        "models": [],
+        "topics": [
+          "AI",
+          "factories",
+          "robotics",
+          "autonomous vehicles"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 7,
+          "competitive_impact": 6,
+          "strategic_relevance": 5,
+          "operational_relevance": 6,
+          "credibility": 9
+        },
+        "weighted_score": 5.75,
+        "rationale": "CES 2026作为年度消费技术大会，对市场有显著影响，尤其是AI领域。文章提到AI与物理世界的融合，与公司关注的领域相关，但具体对公司战略和运营的影响尚不明确。TechCrunch Startups作为来源，可信度较高。",
+        "key_takeaway": "CES 2026聚焦AI与物理世界的融合",
+        "recommended_category": "Market Analysis & Trends",
+        "average_score": 6.6
       }
     },
     {
@@ -279,53 +277,14 @@
           "credibility": 9
         },
         "weighted_score": 5.55,
-        "rationale": "这篇文章强调了微软CEO Nadella对AI的看法，即AI应被视为人类的助手而非工作杀手，这可能影响市场对AI的看法和使用方式。文章来自TechCrunch AI，可信度较高，但对具体的市场和竞争影响描述不够深入。对于我们公司来说，Nadella的观点可能影响我们对AI产品的定位和营销策略，具有一定的战略相关性。",
-        "key_takeaway": "微软CEO Nadella呼吁将AI视为人类助手",
+        "rationale": "这篇文章讨论了微软CEO Nadella对AI的看法，认为AI应被视为人类的助手而非工作杀手。这与公司在AI产品和风险管理方面的业务战略相关，但对市场和竞争格局的影响较为有限。文章来自TechCrunch AI，可信度较高。",
+        "key_takeaway": "微软CEO Nadella认为AI应被视为人类的助手",
         "recommended_category": "Market Analysis & Trends",
         "average_score": 6.4
       }
     },
     {
       "id": "008",
-      "title": "Right Now, Managing AI Agents is About as Much Work as Managing Humans. Just Different Work.",
-      "url": "https://www.saastr.com/right-now-managing-ai-agents-is-about-as-much-work-as-managing-humans/",
-      "source": "SaaStr",
-      "published_date": "2026-01-05T15:10:42",
-      "full_content": "Here’s something almost nobody tells you when you deploy your first AI agent: you’re not eliminating management overhead. You’re trading one type of work for another. It’s different work. But it requires about as much time for oversight, review, and training as managing humans did. We’ve deployed 20+ AI agents at SaaStr over the past... Continue Reading",
-      "credibility_score": 8,
-      "relevance_score": 0,
-      "entities": {
-        "companies": [
-          "SaaStr"
-        ],
-        "models": [],
-        "topics": [
-          "AI agent",
-          "management overhead",
-          "oversight",
-          "review",
-          "training"
-        ],
-        "business_models": [],
-        "people": []
-      },
-      "evaluation": {
-        "scores": {
-          "market_impact": 5,
-          "competitive_impact": 6,
-          "strategic_relevance": 7,
-          "operational_relevance": 6,
-          "credibility": 8
-        },
-        "weighted_score": 5.55,
-        "rationale": "文章讨论了AI代理管理的复杂性，这与公司在AI产品和风险管理方面的业务战略相关。虽然文章没有直接提到具体的市场数据或竞争动态，但它提供了对AI管理挑战的见解，这对于优化AI产品和运营具有参考价值。文章来自SaaS领域知名的SaaStr，可信度较高。",
-        "key_takeaway": "AI管理的复杂性不亚于人类管理",
-        "recommended_category": "AI-Specific Investment Signals",
-        "average_score": 6.4
-      }
-    },
-    {
-      "id": "009",
       "title": "AMD's Su Unveils New Tech, Talks Up AI Demand",
       "url": "https://www.bloomberg.com/news/videos/2026-01-06/amd-s-su-unveils-new-tech-talks-up-ai-demand-video",
       "source": "Bloomberg Technology",
@@ -350,16 +309,52 @@
       "evaluation": {
         "scores": {
           "market_impact": 6,
-          "competitive_impact": 5,
+          "competitive_impact": 7,
           "strategic_relevance": 5,
           "operational_relevance": 4,
           "credibility": 10
         },
-        "weighted_score": 5.1,
-        "rationale": "文章提到AMD的CEO强调了AI创新的速度，这对AI市场有一定的影响，但并非直接涉及金融科技领域，因此对公司业务战略和运营的相关性较低。文章来源自Bloomberg Technology，具有很高的可信度。",
-        "key_takeaway": "AMD CEO强调AI创新速度",
+        "weighted_score": 5.5,
+        "rationale": "AMD作为芯片制造商在AI领域的创新对市场有一定影响，但与金融科技和AI产品领域直接关联度不高。文章中提到的AI需求增长可能对公司的战略规划和市场分析有辅助意义，但对日常运营和产品开发的影响较小。",
+        "key_takeaway": "AMD在AI领域的创新可能影响AI芯片市场",
         "recommended_category": "Market Analysis & Trends",
-        "average_score": 6.0
+        "average_score": 6.4
+      }
+    },
+    {
+      "id": "009",
+      "title": "Right Now, Managing AI Agents is About as Much Work as Managing Humans. Just Different Work.",
+      "url": "https://www.saastr.com/right-now-managing-ai-agents-is-about-as-much-work-as-managing-humans/",
+      "source": "SaaStr",
+      "published_date": "2026-01-05T15:10:42",
+      "full_content": "Here’s something almost nobody tells you when you deploy your first AI agent: you’re not eliminating management overhead. You’re trading one type of work for another. It’s different work. But it requires about as much time for oversight, review, and training as managing humans did. We’ve deployed 20+ AI agents at SaaStr over the past... Continue Reading",
+      "credibility_score": 8,
+      "relevance_score": 0,
+      "entities": {
+        "companies": [
+          "SaaStr"
+        ],
+        "models": [],
+        "topics": [
+          "management overhead",
+          "AI agent deployment"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 6,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 8
+        },
+        "weighted_score": 5.55,
+        "rationale": "文章讨论了部署AI代理后管理复杂性的变化，这与公司在AI产品和运营中的管理实践相关。虽然文章并未直接涉及金融科技或风险管理，但对AI产品管理的见解可能对公司在AI领域的发展有启发作用。",
+        "key_takeaway": "AI代理的管理并非消除管理负担，而是管理类型的转变。",
+        "recommended_category": "AI-Specific Investment Signals",
+        "average_score": 6.4
       }
     },
     {
@@ -389,15 +384,15 @@
         "scores": {
           "market_impact": 6,
           "competitive_impact": 7,
-          "strategic_relevance": 5,
+          "strategic_relevance": 4,
           "operational_relevance": 4,
           "credibility": 9
         },
-        "weighted_score": 5.4,
-        "rationale": "AMD推出新的AI PC处理器对市场有一定影响，尤其是对竞争对手如Intel构成挑战。对公司而言，战略相关性一般，因为公司业务聚焦于金融科技和AI产品，而非PC处理器。运营相关性较低，因为公司业务不涉及PC处理器。",
-        "key_takeaway": "AMD推出AI PC处理器，对竞争对手构成挑战",
+        "weighted_score": 5.2,
+        "rationale": "AMD发布新的AI PC处理器对市场有一定影响，尤其是在游戏和内容创造领域。对竞争对手如英特尔和NVIDIA构成一定竞争压力。但对Fintech和AI产品公司而言，战略和运营相关性较低，因为公司业务不涉及硬件制造。",
+        "key_takeaway": "AMD发布新AI PC处理器，对游戏和内容创造领域有影响",
         "recommended_category": "Market Analysis & Trends",
-        "average_score": 6.2
+        "average_score": 6.0
       }
     }
   ]
