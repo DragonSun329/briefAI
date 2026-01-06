@@ -1,90 +1,26 @@
 {
   "report_date": "2026-01-06",
-  "generation_time": "2026-01-06T11:34:00.842203",
+  "generation_time": "2026-01-06T14:42:15.887347",
   "articles": [
     {
       "id": "001",
-      "title": "Context Engineering Explained in 3 Levels of Difficulty",
-      "url": "https://www.kdnuggets.com/context-engineering-explained-in-3-levels-of-difficulty",
-      "source": "KDnuggets",
-      "published_date": "2026-01-05T15:00:54",
-      "full_content": "Long-running LLM applications degrade when context is unmanaged. Context engineering turns the context window into a deliberate, optimized resource. Learn more in this article.",
-      "credibility_score": 9,
-      "relevance_score": 0,
-      "entities": {
-        "companies": [],
-        "models": [],
-        "topics": [
-          "LLM applications",
-          "Context engineering"
-        ],
-        "business_models": [],
-        "people": []
-      },
-      "evaluation": {
-        "scores": {
-          "market_impact": 6,
-          "competitive_impact": 5,
-          "strategic_relevance": 7,
-          "operational_relevance": 7,
-          "credibility": 9
-        },
-        "weighted_score": 5.85,
-        "rationale": "文章讨论了上下文工程在长运行的大型语言模型（LLM）中的应用，这与Fintech AI Applications和AI Products & Tools紧密相关，对于优化AI产品和工具的性能有直接影响。同时，上下文管理是数据科学和机器学习领域的一个重要议题，对公司在数据分析和机器学习的战略规划和日常运营具有辅助意义。KDnuggets作为数据科学领域的知名博客，其内容的可信度较高。",
-        "key_takeaway": "上下文工程对优化LLM应用至关重要",
-        "recommended_category": "Fintech AI Applications",
-        "average_score": 6.8
-      }
-    },
-    {
-      "id": "002",
-      "title": "I Asked ChatGPT, Claude and DeepSeek to Build Tetris",
-      "url": "https://www.kdnuggets.com/i-asked-gpt-claude-and-deepseek-to-build-tetris",
-      "source": "KDnuggets",
-      "published_date": "2026-01-05T18:47:53",
-      "full_content": "Which of these state-of-the-art models writes the best code?",
-      "credibility_score": 9,
-      "relevance_score": 0,
-      "entities": {
-        "companies": [],
-        "models": [
-          "state-of-the-art models"
-        ],
-        "topics": [],
-        "business_models": [],
-        "people": []
-      },
-      "evaluation": {
-        "scores": {
-          "market_impact": 5,
-          "competitive_impact": 6,
-          "strategic_relevance": 7,
-          "operational_relevance": 6,
-          "credibility": 9
-        },
-        "weighted_score": 5.65,
-        "rationale": "这篇文章讨论了不同AI模型在编写代码方面的性能比较，虽然对于AI行业有一定的市场关注度，但对金融科技领域的直接影响有限。文章涉及的内容与公司关注的AI产品和工具相关，可能对公司的战略规划和产品开发有一定的参考价值，但并非直接相关。",
-        "key_takeaway": "AI模型在代码编写领域的性能比较",
-        "recommended_category": "AI Products & Tools",
-        "average_score": 6.6
-      }
-    },
-    {
-      "id": "003",
-      "title": "Production-Ready LLMs Made Simple with the NeMo Agent Toolkit",
-      "url": "https://towardsdatascience.com/production-ready-llms-made-simple-with-nemo-agent-toolkit/",
-      "source": "Towards Data Science",
-      "published_date": "2025-12-31T15:30:00",
-      "full_content": "From simple chat to multi-agent reasoning and real-time REST APIs\nThe post Production-Ready LLMs Made Simple with the NeMo Agent Toolkit appeared first on Towards Data Science.",
+      "title": "Can AI Chatbots Run Ads Without Losing Consumer Trust?",
+      "url": "https://www.adexchanger.com/ai/can-ai-chatbots-run-ads-without-losing-consumer-trust/",
+      "source": "AdExchanger",
+      "published_date": "2026-01-02T06:00:34",
+      "full_content": "AI search platforms are introducing ads. But  if the ads don't add value and maintain authenticity, platforms risk losing  consumer trust.\nThe post Can AI Chatbots Run Ads Without Losing Consumer Trust? appeared first on AdExchanger.",
       "credibility_score": 8,
       "relevance_score": 0,
       "entities": {
-        "companies": [],
+        "companies": [
+          "AdExchanger"
+        ],
         "models": [],
         "topics": [
-          "chat",
-          "multi-agent reasoning",
-          "real-time REST APIs"
+          "AI search platforms",
+          "ads",
+          "consumer trust",
+          "AI Chatbots"
         ],
         "business_models": [],
         "people": []
@@ -98,28 +34,103 @@
           "credibility": 8
         },
         "weighted_score": 5.6,
-        "rationale": "文章介绍了NeMo Agent Toolkit，这是一个使大型语言模型（LLMs）更易于部署的工具。这对于Fintech AI Applications和AI Products & Tools等领域具有战略相关性，因为它们可以利用这些工具来提升产品功能和客户体验。文章的来源是Towards Data Science，这是一个信誉良好的平台，因此文章的可信度较高。",
-        "key_takeaway": "NeMo Agent Toolkit简化了LLMs的部署",
-        "recommended_category": "AI Products & Tools",
+        "rationale": "文章讨论了AI聊天机器人在广告领域的应用，以及如何平衡广告与消费者信任之间的关系。这对金融科技和AI产品公司来说是一个重要的议题，因为它们需要在不损害消费者信任的前提下利用AI技术进行营销和增长。文章的可信度较高，来源AdExchanger在广告技术领域有较好的声誉。",
+        "key_takeaway": "AI聊天机器人在广告领域的应用需要平衡商业利益与消费者信任",
+        "recommended_category": "Marketing & Growth AI",
         "average_score": 6.4
       }
     },
     {
-      "id": "004",
-      "title": "How to Keep MCPs Useful in Agentic Pipelines",
-      "url": "https://towardsdatascience.com/master-mcp-as-a-way-to-keep-mcps-useful-in-agentic-pipelines/",
+      "id": "002",
+      "title": "Stop Blaming the Data: A Better Way to Handle Covariance Shift",
+      "url": "https://towardsdatascience.com/stop-blaming-the-data-a-better-way-to-handle-covariance-shift/",
       "source": "Towards Data Science",
-      "published_date": "2026-01-03T13:00:00",
-      "full_content": "Check the tools your LLM uses before replacing it with just a more powerful model\nThe post How to Keep MCPs Useful in Agentic Pipelines appeared first on Towards Data Science.",
+      "published_date": "2026-01-05T13:30:00",
+      "full_content": "Instead of using shift as an excuse for poor performance, use Inverse Probability Weighting to estimate how your model should perform in the new environment\nThe post Stop Blaming the Data: A Better Way to Handle Covariance Shift appeared first on Towards Data Science.",
       "credibility_score": 8,
       "relevance_score": 0,
       "entities": {
         "companies": [],
         "models": [],
         "topics": [
-          "LLM",
-          "MCPs",
-          "Agentic Pipelines"
+          "Inverse Probability Weighting",
+          "Covariance Shift"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 7,
+          "credibility": 8
+        },
+        "weighted_score": 5.75,
+        "rationale": "这篇文章讨论了处理协方差偏移的新方法，这对金融科技和AI产品的风险管理、信用决策和数据分析领域具有战略相关性。虽然它可能不会直接改变市场格局，但对提升模型性能和预测准确性有潜在帮助。文章来自信誉良好的数据科学平台，内容可信度较高。",
+        "key_takeaway": "探索处理协方差偏移的新方法，对提升模型性能有潜在帮助",
+        "recommended_category": "Data Analytics & ML",
+        "average_score": 6.6
+      }
+    },
+    {
+      "id": "003",
+      "title": "ChatGPT Ads Coming Soon?; Advertisers Sweat TikTok’s New Era",
+      "url": "https://www.adexchanger.com/daily-news-roundup/monday-05012026/",
+      "source": "AdExchanger",
+      "published_date": "2026-01-05T05:01:15",
+      "full_content": "ChatGPT ads might already be here; TikTok’s new ownership deal has marketers spooked; and California unveils a new consumer protection act. \nThe post ChatGPT Ads Coming Soon?; Advertisers Sweat TikTok’s New Era appeared first on AdExchanger.",
+      "credibility_score": 8,
+      "relevance_score": 0,
+      "entities": {
+        "companies": [
+          "TikTok",
+          "AdExchanger"
+        ],
+        "models": [],
+        "topics": [
+          "ChatGPT Ads",
+          "consumer protection act"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 8
+        },
+        "weighted_score": 5.45,
+        "rationale": "文章讨论了ChatGPT广告的潜在出现以及TikTok新所有权对广告商的影响，这对AI产品和工具领域有一定的市场和竞争影响，尤其是考虑到广告技术与数据驱动营销的交叉。同时，文章内容与公司关注的营销增长和AI产品相关，对战略规划和运营都有一定的参考价值。",
+        "key_takeaway": "ChatGPT广告和TikTok所有权变动对AI营销领域有影响",
+        "recommended_category": "Marketing & Growth AI",
+        "average_score": 6.2
+      }
+    },
+    {
+      "id": "004",
+      "title": "Don’t Let These Privacy Shifts Blindside You In 2026",
+      "url": "https://www.adexchanger.com/data-privacy-roundup/dont-let-these-privacy-shifts-blindside-you-in-2026/",
+      "source": "AdExchanger",
+      "published_date": "2026-01-05T06:00:20",
+      "full_content": "Last year, Google decided not to deprecate third-party cookies in Chrome after all. This year, Google decided to jettison its backup plan and not even launch a planned choice prompt for cookies in its browser. By October, the Privacy Sandbox was all but kaput. The UK’s Competition and Markets Authority released Google from its Privacy […]\nThe post Don’t Let These Privacy Shifts Blindside You In 2026 appeared first on AdExchanger.",
+      "credibility_score": 8,
+      "relevance_score": 0,
+      "entities": {
+        "companies": [
+          "google",
+          "Privacy Sandbox",
+          "UK’s Competition and Markets Authority",
+          "AdExchanger"
+        ],
+        "models": [],
+        "topics": [
+          "Privacy",
+          "Cookies"
         ],
         "business_models": [],
         "people": []
@@ -129,87 +140,48 @@
           "market_impact": 5,
           "competitive_impact": 6,
           "strategic_relevance": 7,
-          "operational_relevance": 6,
+          "operational_relevance": 5,
           "credibility": 8
         },
-        "weighted_score": 5.55,
-        "rationale": "文章讨论了在数据科学和AI领域中，如何保持机器学习模型（MCPs）在代理管道中的有效性，这对于金融科技和AI产品公司来说具有一定的战略和运营参考价值。文章来源于'Towards Data Science'，该平台在数据科学领域具有较高的信誉，因此内容的可信度较高。",
-        "key_takeaway": "如何在代理管道中保持机器学习模型的有效性",
-        "recommended_category": "Data Analytics & ML",
-        "average_score": 6.4
+        "weighted_score": 5.4,
+        "rationale": "文章讨论了谷歌在隐私政策上的转变，这对广告技术领域有中等市场影响力，对竞争格局有一定影响，尤其是涉及数据驱动营销和程序化广告的公司。由于文章内容涉及隐私政策变化，这对公司在数据管理和合规方面具有战略相关性，对日常运营和产品开发有辅助意义。AdExchanger的可信度较高，因此文章的可信度评分为8。",
+        "key_takeaway": "谷歌隐私政策的变化对广告技术领域有影响",
+        "recommended_category": "Marketing & Growth AI",
+        "average_score": 6.2
       }
     },
     {
       "id": "005",
-      "title": "The Machine Learning “Advent Calendar” Bonus 2: Gradient Descent Variants in Excel",
-      "url": "https://towardsdatascience.com/the-machine-learning-advent-calendar-bonus-2-gradient-descent-variants-in-excel/",
-      "source": "Towards Data Science",
-      "published_date": "2025-12-31T11:00:00",
-      "full_content": "Gradient Descent, Momentum, RMSProp, and Adam all aim for the same minimum. They do not change the destination, only the path. Each method adds a mechanism that fixes a limitation of the previous one, making the movement faster, more stable, or more adaptive. The goal stays the same. The update becomes smarter.\nThe post The Machine Learning “Advent Calendar” Bonus 2: Gradient Descent Variants in Excel appeared first on Towards Data Science.",
-      "credibility_score": 8,
-      "relevance_score": 0,
-      "entities": {
-        "companies": [],
-        "models": [],
-        "topics": [
-          "Gradient Descent",
-          "Momentum",
-          "RMSProp",
-          "Adam"
-        ],
-        "business_models": [],
-        "people": []
-      },
-      "evaluation": {
-        "scores": {
-          "market_impact": 5,
-          "competitive_impact": 5,
-          "strategic_relevance": 6,
-          "operational_relevance": 6,
-          "credibility": 8
-        },
-        "weighted_score": 5.15,
-        "rationale": "这篇文章介绍了几种不同的梯度下降算法，并讨论了它们如何优化机器学习模型的训练过程。虽然这些算法对于AI和数据科学领域非常重要，但文章本身并没有提及具体的市场或竞争影响，因此市场影响力和竞争影响力评分为中等。文章与公司在数据科学和机器学习领域的战略规划相关，因此战略相关性较高。文章提供了一些技术细节，可能对优化公司的产品和工具有帮助，因此运营相关性也较高。文章来源为Towards Data Science，可信度较高。",
-        "key_takeaway": "介绍了几种梯度下降算法的优化机制",
-        "recommended_category": "Data Analytics & ML",
-        "average_score": 6.0
-      }
-    },
-    {
-      "id": "006",
-      "title": "Optimizing Data Transfer in AI/ML Workloads",
-      "url": "https://towardsdatascience.com/optimizing-data-transfer-in-ai-ml-workloads/",
-      "source": "Towards Data Science",
-      "published_date": "2026-01-03T15:00:00",
-      "full_content": "A deep dive on data transfer bottlenecks, their identification, and their resolution with the help of NVIDIA Nsight™ Systems\nThe post Optimizing Data Transfer in AI/ML Workloads appeared first on Towards Data Science.",
+      "title": "Optable’s New Agent Aims To Ease The Ad Planning Load For Publishers",
+      "url": "https://www.adexchanger.com/marketers/optables-new-agent-aims-to-ease-the-ad-planning-load-for-publishers/",
+      "source": "AdExchanger",
+      "published_date": "2026-01-05T16:00:34",
+      "full_content": "Publishers can reach relevant audiences at scale and with greater specificity through Optable's new planner agent.\nThe post Optable’s New Agent Aims To Ease The Ad Planning Load For Publishers appeared first on AdExchanger.",
       "credibility_score": 8,
       "relevance_score": 0,
       "entities": {
         "companies": [
-          "NVIDIA"
+          "Optable",
+          "AdExchanger"
         ],
         "models": [],
-        "topics": [
-          "Data Transfer",
-          "AI/ML Workloads",
-          "Optimizing"
-        ],
+        "topics": [],
         "business_models": [],
         "people": []
       },
       "evaluation": {
         "scores": {
           "market_impact": 5,
-          "competitive_impact": 4,
-          "strategic_relevance": 6,
-          "operational_relevance": 7,
+          "competitive_impact": 6,
+          "strategic_relevance": 5,
+          "operational_relevance": 4,
           "credibility": 8
         },
-        "weighted_score": 5.1,
-        "rationale": "文章讨论了AI/ML工作负载中的数据传输瓶颈及其优化方法，这对于提高AI产品性能和效率至关重要。尽管文章来自信誉良好的来源，但内容更偏向于技术细节，对市场和竞争格局的影响有限。对于专注于Fintech AI Applications和AI Products & Tools的公司来说，文章提供了有价值的技术见解，有助于优化数据传输和提升产品性能。",
-        "key_takeaway": "AI/ML工作负载中数据传输优化技术",
-        "recommended_category": "Data Analytics & ML",
-        "average_score": 6.0
+        "weighted_score": 4.85,
+        "rationale": "Optable的新广告规划代理可能对广告技术领域有一定的影响，尤其是在程序化广告和数据驱动营销方面。对于金融科技公司来说，这可能有助于改善营销和客户定位，但与核心的金融科技业务和产品战略相关性较低。",
+        "key_takeaway": "Optable的新广告规划代理可能对营销和广告技术领域产生影响",
+        "recommended_category": "Marketing & Growth AI",
+        "average_score": 5.6
       }
     }
   ]
