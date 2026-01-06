@@ -1,6 +1,6 @@
 {
   "report_date": "2026-01-06",
-  "generation_time": "2026-01-06T11:08:33.766702",
+  "generation_time": "2026-01-06T11:29:54.753690",
   "articles": [
     {
       "id": "001",
@@ -11,49 +11,30 @@
       "full_content": "Long-running LLM applications degrade when context is unmanaged. Context engineering turns the context window into a deliberate, optimized resource. Learn more in this article.",
       "credibility_score": 9,
       "relevance_score": 0,
-      "entities": {},
+      "entities": {
+        "companies": [],
+        "models": [],
+        "topics": [],
+        "business_models": [],
+        "people": []
+      },
       "evaluation": {
         "scores": {
-          "market_impact": 5,
-          "competitive_impact": 6,
+          "market_impact": 6,
+          "competitive_impact": 5,
           "strategic_relevance": 7,
           "operational_relevance": 7,
           "credibility": 9
         },
-        "weighted_score": 5.8,
-        "rationale": "文章讨论了上下文工程在大型语言模型（LLM）中的应用，这对AI领域是一个重要的技术进步，尤其是在提高模型性能和资源优化方面。它与公司在AI产品和工具方面的业务战略相关，可能对日常运营和产品开发有指导意义，尤其是在数据科学和机器学习领域。由于KDnuggets是一个知名的数据科学社区，文章的可信度较高。",
-        "key_takeaway": "上下文工程对优化LLM应用至关重要",
+        "weighted_score": 5.85,
+        "rationale": "文章讨论了上下文工程在LLM应用中的重要性，对于理解和优化AI产品中的上下文管理具有战略和运营意义。由于上下文管理对于提高AI模型的准确性和效率至关重要，这对Fintech AI Applications和AI Products & Tools等分类具有较高相关性。",
+        "key_takeaway": "上下文工程对于优化LLM应用至关重要",
         "recommended_category": "AI Products & Tools",
         "average_score": 6.8
       }
     },
     {
       "id": "002",
-      "title": "Optimizing Data Transfer in AI/ML Workloads",
-      "url": "https://towardsdatascience.com/optimizing-data-transfer-in-ai-ml-workloads/",
-      "source": "Towards Data Science",
-      "published_date": "2026-01-03T15:00:00",
-      "full_content": "A deep dive on data transfer bottlenecks, their identification, and their resolution with the help of NVIDIA Nsight™ Systems\nThe post Optimizing Data Transfer in AI/ML Workloads appeared first on Towards Data Science.",
-      "credibility_score": 8,
-      "relevance_score": 0,
-      "entities": {},
-      "evaluation": {
-        "scores": {
-          "market_impact": 6,
-          "competitive_impact": 5,
-          "strategic_relevance": 7,
-          "operational_relevance": 8,
-          "credibility": 8
-        },
-        "weighted_score": 5.9,
-        "rationale": "这篇文章讨论了AI/ML工作负载中数据传输瓶颈的优化问题，这对于Fintech和AI产品公司来说具有战略和运营相关性，因为它们需要高效处理大量数据以做出风险管理和信用决策。文章来自一个信誉良好的数据科学平台，提供了关于如何提高数据处理效率的见解。",
-        "key_takeaway": "AI/ML工作负载中数据传输优化的深入分析",
-        "recommended_category": "Data Analytics & ML",
-        "average_score": 6.8
-      }
-    },
-    {
-      "id": "003",
       "title": "I Asked ChatGPT, Claude and DeepSeek to Build Tetris",
       "url": "https://www.kdnuggets.com/i-asked-gpt-claude-and-deepseek-to-build-tetris",
       "source": "KDnuggets",
@@ -61,7 +42,13 @@
       "full_content": "Which of these state-of-the-art models writes the best code?",
       "credibility_score": 9,
       "relevance_score": 0,
-      "entities": {},
+      "entities": {
+        "companies": [],
+        "models": [],
+        "topics": [],
+        "business_models": [],
+        "people": []
+      },
       "evaluation": {
         "scores": {
           "market_impact": 5,
@@ -71,14 +58,14 @@
           "credibility": 9
         },
         "weighted_score": 5.65,
-        "rationale": "这篇文章探讨了不同AI模型编写代码的能力，属于AI领域内的技术比较和实战案例。对市场和竞争格局的影响相对有限，但在战略和运营层面，对于评估和选择AI工具有一定的参考价值。",
-        "key_takeaway": "AI模型编写代码能力的比较分析",
+        "rationale": "这篇文章讨论了不同AI模型编写代码的能力，这与公司关注的AI产品和工具相关，可能对评估和选择AI工具有一定参考价值。但文章内容相对技术化，对金融市场和竞争格局的影响有限。",
+        "key_takeaway": "不同AI模型编写代码能力的比较",
         "recommended_category": "AI Products & Tools",
         "average_score": 6.6
       }
     },
     {
-      "id": "004",
+      "id": "003",
       "title": "Production-Ready LLMs Made Simple with the NeMo Agent Toolkit",
       "url": "https://towardsdatascience.com/production-ready-llms-made-simple-with-nemo-agent-toolkit/",
       "source": "Towards Data Science",
@@ -86,7 +73,13 @@
       "full_content": "From simple chat to multi-agent reasoning and real-time REST APIs\nThe post Production-Ready LLMs Made Simple with the NeMo Agent Toolkit appeared first on Towards Data Science.",
       "credibility_score": 8,
       "relevance_score": 0,
-      "entities": {},
+      "entities": {
+        "companies": [],
+        "models": [],
+        "topics": [],
+        "business_models": [],
+        "people": []
+      },
       "evaluation": {
         "scores": {
           "market_impact": 6,
@@ -96,22 +89,28 @@
           "credibility": 8
         },
         "weighted_score": 5.6,
-        "rationale": "文章介绍了NeMo Agent Toolkit，这是一个简化生产就绪的大型语言模型（LLMs）的工具包，与公司在AI产品和工具方面的业务战略相关。虽然文章来源的可信度较高，但文章内容较为基础，可能对市场和竞争格局的影响有限。",
-        "key_takeaway": "NeMo Agent Toolkit简化生产就绪的LLMs",
+        "rationale": "文章介绍了NeMo Agent Toolkit，这是一个能够简化大型语言模型（LLMs）部署的工具。虽然文章没有直接提到金融科技领域的应用，但考虑到LLMs在数据科学和AI产品中的重要性，其对市场和战略规划具有中等影响。文章对日常运营和产品开发有一定的参考价值，但由于文章内容较为浅显，其对运营的具体影响有限。",
+        "key_takeaway": "NeMo Agent Toolkit简化了LLMs的部署",
         "recommended_category": "AI Products & Tools",
         "average_score": 6.4
       }
     },
     {
-      "id": "005",
-      "title": "How to Keep MCPs Useful in Agentic Pipelines",
-      "url": "https://towardsdatascience.com/master-mcp-as-a-way-to-keep-mcps-useful-in-agentic-pipelines/",
+      "id": "004",
+      "title": "Optimizing Data Transfer in AI/ML Workloads",
+      "url": "https://towardsdatascience.com/optimizing-data-transfer-in-ai-ml-workloads/",
       "source": "Towards Data Science",
-      "published_date": "2026-01-03T13:00:00",
-      "full_content": "Check the tools your LLM uses before replacing it with just a more powerful model\nThe post How to Keep MCPs Useful in Agentic Pipelines appeared first on Towards Data Science.",
+      "published_date": "2026-01-03T15:00:00",
+      "full_content": "A deep dive on data transfer bottlenecks, their identification, and their resolution with the help of NVIDIA Nsight™ Systems\nThe post Optimizing Data Transfer in AI/ML Workloads appeared first on Towards Data Science.",
       "credibility_score": 8,
       "relevance_score": 0,
-      "entities": {},
+      "entities": {
+        "companies": [],
+        "models": [],
+        "topics": [],
+        "business_models": [],
+        "people": []
+      },
       "evaluation": {
         "scores": {
           "market_impact": 5,
@@ -121,8 +120,8 @@
           "credibility": 8
         },
         "weighted_score": 5.55,
-        "rationale": "这篇文章讨论了在数据科学领域中如何保持MCPs（可能指中间计算产品）在代理管道中的有效性。虽然文章涉及的主题与数据分析和机器学习相关，但具体内容与金融科技和AI产品的应用联系不够直接，因此市场影响力和竞争影响力评分中等。文章的战略相关性较高，因为它可能对公司在数据科学和AI产品工具方面的战略规划有辅助作用。运营相关性也较高，因为文章中的分析方法和可视化技术可能对日常运营和产品开发有启发。",
-        "key_takeaway": "文章讨论了数据科学中MCPs的有效性，对战略规划和运营有一定参考价值。",
+        "rationale": "文章讨论了AI/ML工作负载中数据传输瓶颈的优化，这对提高AI产品性能至关重要。虽然文章内容较为技术性，但对提升数据处理效率、降低成本有实际帮助，对Fintech AI应用和数据科学领域具有战略和运营相关性。",
+        "key_takeaway": "AI/ML工作负载中数据传输优化对提升性能有重要意义",
         "recommended_category": "Data Analytics & ML",
         "average_score": 6.4
       }

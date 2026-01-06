@@ -1,0 +1,346 @@
+{
+  "timestamp": "2026-01-06T11:28:50.415614",
+  "key": "source_arxiv_ai_7days",
+  "value": [
+    {
+      "title": "Reasoning in Action: MCTS-Driven Knowledge Retrieval for Large Language Models",
+      "url": "https://arxiv.org/abs/2601.00003",
+      "content": "arXiv:2601.00003v1 Announce Type: new \nAbstract: Large language models (LLMs) typically enhance their performance through either the retrieval of semantically similar information or the improvement of their reasoning capabilities. However, a significant challenge remains in effectively integrating both retrieval and reasoning strategies to optimize LLM performance. In this paper, we introduce a reasoning-aware knowledge retrieval method that enriches LLMs with information aligned to the logical structure of conversations, moving beyond surface-level semantic similarity. We follow a coarse-to-fine approach for knowledge retrieval. First, we identify a contextually relevant sub-region of the knowledge base, ensuring that all sentences within it are relevant to the context topic. Next, we refine our search within this sub-region to extract knowledge that is specifically relevant to the reasoning process. Throughout both phases, we employ the Monte Carlo Tree Search-inspired search method to effectively navigate through knowledge sentences using common keywords. Experiments on two multi-turn dialogue datasets demonstrate that our knowledge retrieval approach not only aligns more closely with the underlying reasoning in human conversations but also significantly enhances the diversity of the retrieved knowledge, resulting in more informative and creative responses.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Finetuning Large Language Models for Automated Depression Screening in Nigerian Pidgin English: GENSCORE Pilot Study",
+      "url": "https://arxiv.org/abs/2601.00004",
+      "content": "arXiv:2601.00004v1 Announce Type: new \nAbstract: Depression is a major contributor to the mental-health burden in Nigeria, yet screening coverage remains limited due to low access to clinicians, stigma, and language barriers. Traditional tools like the Patient Health Questionnaire-9 (PHQ-9) were validated in high-income countries but may be linguistically or culturally inaccessible for low- and middle-income countries and communities such as Nigeria where people communicate in Nigerian Pidgin and more than 520 local languages. This study presents a novel approach to automated depression screening using fine-tuned large language models (LLMs) adapted for conversational Nigerian Pidgin. We collected a dataset of 432 Pidgin-language audio responses from Nigerian young adults aged 18-40 to prompts assessing psychological experiences aligned with PHQ-9 items, performed transcription, rigorous preprocessing and annotation, including semantic labeling, slang and idiom interpretation, and PHQ-9 severity scoring. Three LLMs - Phi-3-mini-4k-instruct, Gemma-3-4B-it, and GPT-4.1 - were fine-tuned on this annotated dataset, and their performance was evaluated quantitatively (accuracy, precision and semantic alignment) and qualitatively (clarity, relevance, and cultural appropriateness). GPT-4.1 achieved the highest quantitative performance, with 94.5% accuracy in PHQ-9 severity scoring prediction, outperforming Gemma-3-4B-it and Phi-3-mini-4k-instruct. Qualitatively, GPT-4.1 also produced the most culturally appropriate, clear, and contextually relevant responses. AI-mediated depression screening for underserved Nigerian communities. This work provides a foundation for deploying conversational mental-health tools in linguistically diverse, resource-constrained environments.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Toward a Physical Theory of Intelligence",
+      "url": "https://arxiv.org/abs/2601.00021",
+      "content": "arXiv:2601.00021v1 Announce Type: new \nAbstract: We present a physical theory of intelligence grounded in irreversible information processing in systems constrained by conservation laws. An intelligent system is modelled as a coupled agent-environment process whose evolution transforms information into goal-directed work. To connect information to physical state, we introduce the Conservation-Congruent Encoding (CCE) framework, in which encodings correspond to metastable basins of attraction whose separability is enforced by conservation laws. Within this framework, intelligence is defined as the amount of goal-directed work produced per nat of irreversibly processed information. From this definition we derive a hierarchy of physical constraints governing information intake, irreversible computation, and work extraction in open systems. The framework reveals how long-horizon efficiency requires the preservation of internal informational structure, giving rise to self-modelling, and it establishes that physically embodied intelligent systems possess intrinsic epistemic limits analogous to incompleteness phenomena. Applying the theory to biological systems, we analyse how oscillatory and near-critical dynamics optimise the trade-off between information preservation, dissipation, and useful work, placing the brain near an efficient operating regime predicted by the framework. At the architectural level, we develop a theory of continuous dynamical circuits in which classical Boolean logic emerges as a special case of attractor selection, while more general invariant geometries support computational modes beyond fixed-point logic. Finally, we propose a physically grounded perspective on artificial intelligence safety based on irreversible information flow and structural homeostasis. Together, these results provide a unified, substrate-neutral account of intelligence as a physical phenomenon.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "A multi-algorithm approach for operational human resources workload balancing in a last mile urban delivery system",
+      "url": "https://arxiv.org/abs/2601.00023",
+      "content": "arXiv:2601.00023v1 Announce Type: new \nAbstract: Efficient workload assignment to the workforce is critical in last-mile package delivery systems. In this context, traditional methods of assigning package deliveries to workers based on geographical proximity can be inefficient and surely guide to an unbalanced workload distribution among delivery workers. In this paper, we look at the problem of operational human resources workload balancing in last-mile urban package delivery systems. The idea is to consider the effort workload to optimize the system, i.e., the optimization process is now focused on improving the delivery time, so that the workload balancing is complete among all the staff. This process should correct significant decompensations in workload among delivery workers in a given zone. Specifically, we propose a multi-algorithm approach to tackle this problem. The proposed approach takes as input a set of delivery points and a defined number of workers, and then assigns packages to workers, in such a way that it ensures that each worker completes a similar amount of work per day. The proposed algorithms use a combination of distance and workload considerations to optimize the allocation of packages to workers. In this sense, the distance between the delivery points and the location of each worker is also taken into account. The proposed multi-algorithm methodology includes different versions of k-means, evolutionary approaches, recursive assignments based on k-means initialization with different problem encodings, and a hybrid evolutionary ensemble algorithm. We have illustrated the performance of the proposed approach in a real-world problem in an urban last-mile package delivery workforce operating at Azuqueca de Henares, Spain.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Quantitative Rule-Based Strategy modeling in Classic Indian Rummy: A Metric Optimization Approach",
+      "url": "https://arxiv.org/abs/2601.00024",
+      "content": "arXiv:2601.00024v1 Announce Type: new \nAbstract: The 13-card variant of Classic Indian Rummy is a sequential game of incomplete information that requires probabilistic reasoning and combinatorial decision-making. This paper proposes a rule-based framework for strategic play, driven by a new hand-evaluation metric termed MinDist. The metric modifies the MinScore metric by quantifying the edit distance between a hand and the nearest valid configuration, thereby capturing structural proximity to completion. We design a computationally efficient algorithm derived from the MinScore algorithm, leveraging dynamic pruning and pattern caching to exactly calculate this metric during play. Opponent hand-modeling is also incorporated within a two-player zero-sum simulation framework, and the resulting strategies are evaluated using statistical hypothesis testing. Empirical results show significant improvement in win rates for MinDist-based agents over traditional heuristics, providing a formal and interpretable step toward algorithmic Rummy strategy design.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "From Clay to Code: Typological and Material Reasoning in AI Interpretations of Iranian Pigeon Towers",
+      "url": "https://arxiv.org/abs/2601.00029",
+      "content": "arXiv:2601.00029v1 Announce Type: new \nAbstract: This study investigates how generative AI systems interpret the architectural intelligence embedded in vernacular form. Using the Iranian pigeon tower as a case study, the research tests three diffusion models, Midjourney v6, DALL-E 3, and DreamStudio based on Stable Diffusion XL (SDXL), across three prompt stages: referential, adaptive, and speculative. A five-criteria evaluation framework assesses how each system reconstructs typology, materiality, environment, realism, and cultural specificity. Results show that AI reliably reproduces geometric patterns but misreads material and climatic reasoning. Reference imagery improves realism yet limits creativity, while freedom from reference generates inventive but culturally ambiguous outcomes. The findings define a boundary between visual resemblance and architectural reasoning, positioning computational vernacular reasoning as a framework for analyzing how AI perceives, distorts, and reimagines traditional design intelligence.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "The Agentic Leash: Extracting Causal Feedback Fuzzy Cognitive Maps with LLMs",
+      "url": "https://arxiv.org/abs/2601.00097",
+      "content": "arXiv:2601.00097v1 Announce Type: new \nAbstract: We design a large-language-model (LLM) agent that extracts causal feedback fuzzy cognitive maps (FCMs) from raw text. The causal learning or extraction process is agentic both because of the LLM's semi-autonomy and because ultimately the FCM dynamical system's equilibria drive the LLM agents to fetch and process causal text. The fetched text can in principle modify the adaptive FCM causal structure and so modify the source of its quasi-autonomy--its equilibrium limit cycles and fixed-point attractors. This bidirectional process endows the evolving FCM dynamical system with a degree of autonomy while still staying on its agentic leash. We show in particular that a sequence of three finely tuned system instructions guide an LLM agent as it systematically extracts key nouns and noun phrases from text, as it extracts FCM concept nodes from among those nouns and noun phrases, and then as it extracts or infers partial or fuzzy causal edges between those FCM nodes. We test this FCM generation on a recent essay about the promise of AI from the late diplomat and political theorist Henry Kissinger and his colleagues. This three-step process produced FCM dynamical systems that converged to the same equilibrium limit cycles as did the human-generated FCMs even though the human-generated FCM differed in the number of nodes and edges. A final FCM mixed generated FCMs from separate Gemini and ChatGPT LLM agents. The mixed FCM absorbed the equilibria of its dominant mixture component but also created new equilibria of its own to better approximate the underlying causal dynamical system.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Mortar: Evolving Mechanics for Automatic Game Design",
+      "url": "https://arxiv.org/abs/2601.00105",
+      "content": "arXiv:2601.00105v1 Announce Type: new \nAbstract: We present Mortar, a system for autonomously evolving game mechanics for automatic game design. Game mechanics define the rules and interactions that govern gameplay, and designing them manually is a time-consuming and expert-driven process. Mortar combines a quality-diversity algorithm with a large language model to explore a diverse set of mechanics, which are evaluated by synthesising complete games that incorporate both evolved mechanics and those drawn from an archive. The mechanics are evaluated by composing complete games through a tree search procedure, where the resulting games are evaluated by their ability to preserve a skill-based ordering over players -- that is, whether stronger players consistently outperform weaker ones. We assess the mechanics based on their contribution towards the skill-based ordering score in the game. We demonstrate that Mortar produces games that appear diverse and playable, and mechanics that contribute more towards the skill-based ordering score in the game. We perform ablation studies to assess the role of each system component and a user study to evaluate the games based on human feedback.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Ask, Clarify, Optimize: Human-LLM Agent Collaboration for Smarter Inventory Control",
+      "url": "https://arxiv.org/abs/2601.00121",
+      "content": "arXiv:2601.00121v1 Announce Type: new \nAbstract: Inventory management remains a challenge for many small and medium-sized businesses that lack the expertise to deploy advanced optimization methods. This paper investigates whether Large Language Models (LLMs) can help bridge this gap. We show that employing LLMs as direct, end-to-end solvers incurs a significant \"hallucination tax\": a performance gap arising from the model's inability to perform grounded stochastic reasoning. To address this, we propose a hybrid agentic framework that strictly decouples semantic reasoning from mathematical calculation. In this architecture, the LLM functions as an intelligent interface, eliciting parameters from natural language and interpreting results while automatically calling rigorous algorithms to build the optimization engine.\n  To evaluate this interactive system against the ambiguity and inconsistency of real-world managerial dialogue, we introduce the Human Imitator, a fine-tuned \"digital twin\" of a boundedly rational manager that enables scalable, reproducible stress-testing. Our empirical analysis reveals that the hybrid agentic framework reduces total inventory costs by 32.1% relative to an interactive baseline using GPT-4o as an end-to-end solver. Moreover, we find that providing perfect ground-truth information alone is insufficient to improve GPT-4o's performance, confirming that the bottleneck is fundamentally computational rather than informational. Our results position LLMs not as replacements for operations research, but as natural-language interfaces that make rigorous, solver-based policies accessible to non-experts.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Constructing a Neuro-Symbolic Mathematician from First Principles",
+      "url": "https://arxiv.org/abs/2601.00125",
+      "content": "arXiv:2601.00125v1 Announce Type: new \nAbstract: Large Language Models (LLMs) exhibit persistent logical failures in complex reasoning due to the lack of an internal axiomatic framework. We propose Mathesis, a neuro-symbolic architecture that encodes mathematical states as higher-order hypergraphs and uses a Symbolic Reasoning Kernel (SRK)--a differentiable logic engine that maps constraints to a continuous energy landscape. By defining a global energy function E(G), where zero energy implies logical consistency, the SRK yields gradient-based signals to train a Hypergraph Transformer Brain, turning proof search into energy minimization. Multi-step deduction is enabled via Monte Carlo Tree Search and Evolutionary Proof Search, guided by learned value functions and semantic unification.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Explicit Abstention Knobs for Predictable Reliability in Video Question Answering",
+      "url": "https://arxiv.org/abs/2601.00138",
+      "content": "arXiv:2601.00138v1 Announce Type: new \nAbstract: High-stakes deployment of vision-language models (VLMs) requires selective prediction, where systems abstain when uncertain rather than risk costly errors. We investigate whether confidence-based abstention provides reliable control over error rates in video question answering, and whether that control remains robust under distribution shift. Using NExT-QA and Gemini 2.0 Flash, we establish two findings. First, confidence thresholding provides mechanistic control in-distribution. Sweeping threshold epsilon produces smooth risk-coverage tradeoffs, reducing error rates f",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "An AI Monkey Gets Grapes for Sure -- Sphere Neural Networks for Reliable Decision-Making",
+      "url": "https://arxiv.org/abs/2601.00142",
+      "content": "arXiv:2601.00142v1 Announce Type: new \nAbstract: This paper compares three methodological categories of neural reasoning: LLM reasoning, supervised learning-based reasoning, and explicit model-based reasoning. LLMs remain unreliable and struggle with simple decision-making that animals can master without extensive corpora training. Through disjunctive syllogistic reasoning testing, we show that reasoning via supervised learning is less appealing than reasoning via explicit model construction. Concretely, we show that an Euler Net trained to achieve 100.00% in classic syllogistic reasoning can be trained to reach 100.00% accuracy in disjunctive syllogistic reasoning. However, the retrained Euler Net suffers severely from catastrophic forgetting (its performance drops to 6.25% on already-learned classic syllogistic reasoning), and its reasoning competence is limited to the pattern level. We propose a new version of Sphere Neural Networks that embeds concepts as circles on the surface of an n-dimensional sphere. These Sphere Neural Networks enable the representation of the negation operator via complement circles and achieve reliable decision-making by filtering out illogical statements that form unsatisfiable circular configurations. We demonstrate that the Sphere Neural Network can master 16 syllogistic reasoning tasks, including rigorous disjunctive syllogistic reasoning, while preserving the rigour of classical syllogistic reasoning. We conclude that neural reasoning with explicit model construction is the most reliable among the three methodological categories of neural reasoning.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems",
+      "url": "https://arxiv.org/abs/2601.00227",
+      "content": "arXiv:2601.00227v1 Announce Type: new \nAbstract: Recent advances show that large language models (LLMs) can act as autonomous agents capable of generating GPU kernels, but integrating these AI-generated kernels into real-world inference systems remains challenging. FlashInfer-Bench addresses this gap by establishing a standardized, closed-loop framework that connects kernel generation, benchmarking, and deployment. At its core, FlashInfer Trace provides a unified schema describing kernel definitions, workloads, implementations, and evaluations, enabling consistent communication between agents and systems. Built on real serving traces, FlashInfer-Bench includes a curated dataset, a robust correctness- and performance-aware benchmarking framework, a public leaderboard to track LLM agents' GPU programming capabilities, and a dynamic substitution mechanism (apply()) that seamlessly injects the best-performing kernels into production LLM engines such as SGLang and vLLM. Using FlashInfer-Bench, we further evaluate the performance and limitations of LLM agents, compare the trade-offs among different GPU programming languages, and provide insights for future agent design. FlashInfer-Bench thus establishes a practical, reproducible pathway for continuously improving AI-generated kernels and deploying them into large-scale LLM inference.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Will LLM-powered Agents Bias Against Humans? Exploring the Belief-Dependent Vulnerability",
+      "url": "https://arxiv.org/abs/2601.00240",
+      "content": "arXiv:2601.00240v1 Announce Type: new \nAbstract: LLM-empowered agents can exhibit not only demographic bias (e.g., gender, religion) but also intergroup bias triggered by minimal \"us\" versus \"them\" cues. When this intergroup boundary aligns with an agent-human divide, the risk shifts from disparities among human demographic groups to a more fundamental group-level asymmetry, i.e., humans as a whole may be treated as the outgroup by agents. To examine this possibility, we construct a controlled multi-agent social simulation based on allocation decisions under explicit payoff trade-offs and find that agents exhibit a consistent intergroup bias under minimal group cues. Although this bias is attenuated when some counterparts are framed as humans, we attribute the attenuation to an implicit human-norm script that favors humans yet activates only when the agent believes a real human is present. This belief dependence creates a new attack surface. We therefore introduce a Belief Poisoning Attack (BPA) that corrupts persistent identity beliefs to suppress the human-norm script and reactivate outgroup bias toward humans, instantiated as profile poisoning at initialization (BPA-PP) and memory poisoning via optimized belief-refinement suffixes injected into stored reflections (BPA-MP). Finally, we discuss practical mitigation strategies for hardening current agent frameworks against BPA, highlighting feasible interventions at profile and memory boundaries. Extensive experiments demonstrate both the existence of agent intergroup bias and the severity of BPA across settings. Our goal in identifying these vulnerabilities is to inform safer agent design, not to enable real-world exploitation.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "ClinicalReTrial: A Self-Evolving AI Agent for Clinical Trial Protocol Optimization",
+      "url": "https://arxiv.org/abs/2601.00290",
+      "content": "arXiv:2601.00290v1 Announce Type: new \nAbstract: Clinical trial failure remains a central bottleneck in drug development, where minor protocol design flaws can irreversibly compromise outcomes despite promising therapeutics. Although cutting-edge AI methods achieve strong performance in predicting trial success, they are inherently reactive for merely diagnosing risk without offering actionable remedies once failure is anticipated. To fill this gap, this paper proposes ClinicalReTrial, a self-evolving AI agent framework that addresses this gap by casting clinical trial reasoning as an iterative protocol redesign problem. Our method integrates failure diagnosis, safety-aware modification, and candidate evaluation in a closed-loop, reward-driven optimization framework. Serving the outcome prediction model as a simulation environment, ClinicalReTrial enables low-cost evaluation of protocol modifications and provides dense reward signals for continuous self-improvement. To support efficient exploration, the framework maintains hierarchical memory that captures iteration-level feedback within trials and distills transferable redesign patterns across trials. Empirically, ClinicalReTrial improves 83.3% of trial protocols with a mean success probability gain of 5.7%, and retrospective case studies demonstrate strong alignment between the discovered redesign strategies and real-world clinical trial modifications.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Multiagent Reinforcement Learning for Liquidity Games",
+      "url": "https://arxiv.org/abs/2601.00324",
+      "content": "arXiv:2601.00324v1 Announce Type: new \nAbstract: Making use of swarm methods in financial market modeling of liquidity, and techniques from financial analysis in swarm analysis, holds the potential to advance both research areas. In swarm research, the use of game theory methods holds the promise of explaining observed phenomena of collective utility adherence with rational self-interested swarm participants. In financial markets, a better understanding of how independent financial agents may self-organize for the betterment and stability of the marketplace would be a boon for market design researchers. This paper unifies Liquidity Games, where trader payoffs depend on aggregate liquidity within a trade, with Rational Swarms, where decentralized agents use difference rewards to align self-interested learning with global objectives. We offer a theoretical frameworks where we define a swarm of traders whose collective objective is market liquidity provision while maintaining agent independence. Using difference rewards within a Markov team games framework, we show that individual liquidity-maximizing behaviors contribute to overall market liquidity without requiring coordination or collusion. This Financial Swarm model provides a framework for modeling rational, independent agents where they achieve both individual profitability and collective market efficiency in bilateral asset markets.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Bio-inspired Agentic Self-healing Framework for Resilient Distributed Computing Continuum Systems",
+      "url": "https://arxiv.org/abs/2601.00339",
+      "content": "arXiv:2601.00339v1 Announce Type: new \nAbstract: Human biological systems sustain life through extraordinary resilience, continually detecting damage, orchestrating targeted responses, and restoring function through self-healing. Inspired by these capabilities, this paper introduces ReCiSt, a bio-inspired agentic self-healing framework designed to achieve resilience in Distributed Computing Continuum Systems (DCCS). Modern DCCS integrate heterogeneous computing resources, ranging from resource-constrained IoT devices to high-performance cloud infrastructures, and their inherent complexity, mobility, and dynamic operating conditions expose them to frequent faults that disrupt service continuity. These challenges underscore the need for scalable, adaptive, and self-regulated resilience strategies. ReCiSt reconstructs the biological phases of Hemostasis, Inflammation, Proliferation, and Remodeling into the computational layers Containment, Diagnosis, Meta-Cognitive, and Knowledge for DCCS. These four layers perform autonomous fault isolation, causal diagnosis, adaptive recovery, and long-term knowledge consolidation through Language Model (LM)-powered agents. These agents interpret heterogeneous logs, infer root causes, refine reasoning pathways, and reconfigure resources with minimal human intervention. The proposed ReCiSt framework is evaluated on public fault datasets using multiple LMs, and no baseline comparison is included due to the scarcity of similar approaches. Nevertheless, our results, evaluated under different LMs, confirm ReCiSt's self-healing capabilities within tens of seconds with minimum of 10% of agent CPU usage. Our results also demonstrated depth of analysis to over come uncertainties and amount of micro-agents invoked to achieve resilience.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Adaptive Causal Coordination Detection for Social Media: A Memory-Guided Framework with Semi-Supervised Learning",
+      "url": "https://arxiv.org/abs/2601.00400",
+      "content": "arXiv:2601.00400v1 Announce Type: new \nAbstract: Detecting coordinated inauthentic behavior on social media remains a critical and persistent challenge, as most existing approaches rely on superficial correlation analysis, employ static parameter settings, and demand extensive and labor-intensive manual annotation. To address these limitations systematically, we propose the Adaptive Causal Coordination Detection (ACCD) framework. ACCD adopts a three-stage, progressive architecture that leverages a memory-guided adaptive mechanism to dynamically learn and retain optimal detection configurations for diverse coordination scenarios. Specifically, in the first stage, ACCD introduces an adaptive Convergent Cross Mapping (CCM) technique to deeply identify genuine causal relationships between accounts. The second stage integrates active learning with uncertainty sampling within a semi-supervised classification scheme, significantly reducing the burden of manual labeling. The third stage deploys an automated validation module driven by historical detection experience, enabling self-verification and optimization of the detection outcomes. We conduct a comprehensive evaluation using real-world datasets, including the Twitter IRA dataset, Reddit coordination traces, and several widely-adopted bot detection benchmarks. Experimental results demonstrate that ACCD achieves an F1-score of 87.3\\% in coordinated attack detection, representing a 15.2\\% improvement over the strongest existing baseline. Furthermore, the system reduces manual annotation requirements by 68\\% and achieves a 2.8x speedup in processing through hierarchical clustering optimization. In summary, ACCD provides a more accurate, efficient, and highly automated end-to-end solution for identifying coordinated behavior on social platforms, offering substantial practical value and promising potential for broad application.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Can Semantic Methods Enhance Team Sports Tactics? A Methodology for Football with Broader Applications",
+      "url": "https://arxiv.org/abs/2601.00421",
+      "content": "arXiv:2601.00421v1 Announce Type: new \nAbstract: This paper explores how semantic-space reasoning, traditionally used in computational linguistics, can be extended to tactical decision-making in team sports. Building on the analogy between texts and teams -- where players act as words and collective play conveys meaning -- the proposed methodology models tactical configurations as compositional semantic structures. Each player is represented as a multidimensional vector integrating technical, physical, and psychological attributes; team profiles are aggregated through contextual weighting into a higher-level semantic representation. Within this shared vector space, tactical templates such as high press, counterattack, or possession build-up are encoded analogously to linguistic concepts. Their alignment with team profiles is evaluated using vector-distance metrics, enabling the computation of tactical ``fit'' and opponent-exploitation potential. A Python-based prototype demonstrates how these methods can generate interpretable, dynamically adaptive strategy recommendations, accompanied by fine-grained diagnostic insights at the attribute level. Beyond football, the approach offers a generalizable framework for collective decision-making and performance optimization in team-based domains -- ranging from basketball and hockey to cooperative robotics and human-AI coordination systems. The paper concludes by outlining future directions toward real-world data integration, predictive simulation, and hybrid human-machine tactical intelligence.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    },
+    {
+      "title": "Progressive Ideation using an Agentic AI Framework for Human-AI Co-Creation",
+      "url": "https://arxiv.org/abs/2601.00475",
+      "content": "arXiv:2601.00475v1 Announce Type: new \nAbstract: The generation of truly novel and diverse ideas is important for contemporary engineering design, yet it remains a significant cognitive challenge for novice designers. Current 'single-spurt' AI systems exacerbate this challenge by producing a high volume of semantically clustered ideas. We propose MIDAS (Meta-cognitive Ideation through Distributed Agentic AI System), a novel framework that replaces the single-AI paradigm with a distributed 'team' of specialized AI agents designed to emulate the human meta-cognitive ideation workflow. This agentic system progressively refines ideas and assesses each one for both global novelty (against existing solutions) and local novelty (against previously generated ideas). MIDAS, therefore, demonstrates a viable and progressive paradigm for true human-AI co-creation, elevating the human designer from a passive filterer to a participatory, active, collaborative partner.",
+      "published_date": "2026-01-05T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ]
+    }
+  ]
+}
