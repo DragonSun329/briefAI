@@ -13,12 +13,18 @@ import argparse
 import subprocess
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 from dotenv import load_dotenv
 from loguru import logger
 
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent))
+
+# TEMPORARY: Patch for Python 3.14 spaCy incompatibility
+try:
+    import utils.entity_extractor_patch  # noqa: F401
+except ImportError:
+    pass
 
 from utils.llm_client_enhanced import LLMClient
 from utils.cache_manager import CacheManager
@@ -91,14 +97,14 @@ class BriefingAgent:
 
     def run(
         self,
-        user_input: str = None,
+        user_input: Optional[str] = None,
         use_defaults: bool = False,
         days_back: int = 7,
         top_n: int = 10,
         use_cache: bool = True,
         resume: bool = False,
-        batch_id: str = None
-    ) -> str:
+        batch_id: Optional[str] = None
+    ) -> Optional[str]:
         """
         Run the full briefing workflow
 
@@ -230,11 +236,11 @@ class BriefingAgent:
 
     def run_collection_mode(
         self,
-        user_input: str = None,
+        user_input: Optional[str] = None,
         use_defaults: bool = False,
         days_back: int = 7,
-        week_id: str = None,
-        day: int = None
+        week_id: Optional[str] = None,
+        day: Optional[int] = None
     ) -> Dict[str, Any]:
         """
         Run in collection mode (Days 1-6): Fast Tier 1 + Tier 2 without expensive Tier 3
@@ -313,8 +319,8 @@ class BriefingAgent:
 
     def run_finalization_mode(
         self,
-        week_id: str = None,
-        user_input: str = None,
+        week_id: Optional[str] = None,
+        user_input: Optional[str] = None,
         use_defaults: bool = False,
         top_n: int = 15
     ) -> Dict[str, Any]:
@@ -402,8 +408,8 @@ class BriefingAgent:
 
     def run_early_report_mode(
         self,
-        week_id: str = None,
-        user_input: str = None,
+        week_id: Optional[str] = None,
+        user_input: Optional[str] = None,
         use_defaults: bool = False,
         top_n: int = 15,
         enable_backfill: bool = True
@@ -494,7 +500,7 @@ class BriefingAgent:
 
     def generate_daily_report(
         self,
-        user_input: str = None,
+        user_input: Optional[str] = None,
         use_defaults: bool = False,
         top_n: int = 15
     ) -> Dict[str, Any]:
@@ -537,7 +543,7 @@ class BriefingAgent:
                 logger.error(f"No checkpoint found for {week_id}")
                 return {'error': f'No checkpoint found for {week_id}'}
 
-            all_articles = self.checkpoint_manager.processed_articles
+            all_articles = list(self.checkpoint_manager.processed_articles.values())
             logger.info(f"Loaded {len(all_articles)} total articles from week {week_id}")
 
             # Filter to yesterday's articles only
@@ -593,8 +599,8 @@ class BriefingAgent:
 
     def generate_weekly_report(
         self,
-        week_id: str = None,
-        user_input: str = None,
+        week_id: Optional[str] = None,
+        user_input: Optional[str] = None,
         use_defaults: bool = False,
         top_n: int = 15
     ) -> Dict[str, Any]:
@@ -638,7 +644,7 @@ class BriefingAgent:
                 logger.error(f"No checkpoint found for {week_id}")
                 return {'error': f'No checkpoint found for {week_id}'}
 
-            articles = self.checkpoint_manager.processed_articles
+            articles = list(self.checkpoint_manager.processed_articles.values())
             logger.info(f"Loaded {len(articles)} articles from week {week_id}")
 
             # Run full 5D evaluation on all articles
@@ -694,7 +700,7 @@ class BriefingAgent:
             return {'error': str(e)}
 
 
-def push_to_github(report_path: str = None) -> bool:
+def push_to_github(report_path: Optional[str] = None) -> bool:
     """
     Push updates to GitHub after report generation
 
@@ -909,6 +915,15 @@ Examples:
 
   # Disable cache (force fresh scraping)
   python main.py --defaults --no-cache
+
+  # Multi-Pipeline Mode (run all pipelines: news, product, investing)
+  python main.py --multi-pipeline
+
+  # Run specific pipelines only
+  python main.py --multi-pipeline --pipelines news product
+
+  # Run multi-pipeline for a specific date
+  python main.py --multi-pipeline --date 2026-01-06
         """
     )
 
@@ -1011,6 +1026,31 @@ Examples:
         help='Generate weekly report (7-day combined) instead of daily report'
     )
 
+    parser.add_argument(
+        '--multi-pipeline',
+        action='store_true',
+        help='Run multi-pipeline mode (news, product, investing) for comprehensive coverage'
+    )
+
+    parser.add_argument(
+        '--pipelines',
+        nargs='+',
+        choices=['news', 'product', 'investing'],
+        help='Specific pipelines to run in multi-pipeline mode (default: all enabled)'
+    )
+
+    parser.add_argument(
+        '--date',
+        type=str,
+        help='Target date for multi-pipeline mode (YYYY-MM-DD, default: today)'
+    )
+
+    parser.add_argument(
+        '--financial-signals',
+        action='store_true',
+        help='Fetch financial signals (Yahoo Finance, Kraken, DBnomics)'
+    )
+
     args = parser.parse_args()
 
     # Setup logging
@@ -1027,6 +1067,61 @@ Examples:
 
     if args.interactive:
         interactive_mode()
+    elif getattr(args, 'financial_signals', False):
+        # Financial signals mode
+        from utils.financial_signals import generate_financial_signals
+        from datetime import date
+
+        logger.info("=" * 60)
+        logger.info("Fetching Financial Signals")
+        logger.info("=" * 60)
+
+        target_date = date.today()
+        if args.date:
+            target_date = date.fromisoformat(args.date)
+
+        output = generate_financial_signals(target_date=target_date)
+
+        logger.info(f"Financial signals generated")
+        logger.info(f"Equities: {len(output.equities)}")
+        logger.info(f"Tokens: {len(output.tokens)}")
+        logger.info(f"Macro MRS: {output.mrs} ({output.mrs_interpretation})")
+        logger.info(f"Bucket signals: {len(output.bucket_signals)}")
+        return
+    elif getattr(args, 'multi_pipeline', False):
+        # Multi-pipeline mode: Run all pipelines (news, product, investing)
+        from pipeline.orchestrator import PipelineOrchestrator
+
+        logger.info("=" * 60)
+        logger.info("MULTI-PIPELINE MODE")
+        logger.info("=" * 60)
+
+        # Parse target date
+        target_date = None
+        if args.date:
+            from datetime import datetime as dt
+            target_date = dt.strptime(args.date, "%Y-%m-%d")
+
+        # Run orchestrator
+        orchestrator = PipelineOrchestrator()
+        results = orchestrator.run_all_pipelines(
+            target_date=target_date,
+            days_back=args.days,
+            top_n=args.top,
+            pipelines=args.pipelines
+        )
+
+        # Check for failures
+        from pipeline.orchestrator import PipelineStatus
+        failed = sum(1 for r in results.values() if r.status == PipelineStatus.FAILED)
+
+        if failed > 0:
+            logger.error(f"{failed} pipeline(s) failed")
+            sys.exit(1)
+
+        # Push updates to GitHub
+        push_to_github()
+
     elif args.collect:
         # Collection mode (Days 1-6)
         if not args.defaults and not args.input:
