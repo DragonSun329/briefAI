@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "description": "Mappings from tickers/tokens to trend buckets for financial signals",
+
+  "ticker_to_bucket": {
+    "ai-chips": ["NVDA", "AMD", "INTC", "AVGO", "MRVL"],
+    "ai-infrastructure": ["SMCI", "ANET", "VRT", "DELL"],
+    "llm-foundation": ["GOOGL", "META", "MSFT"],
+    "ai-enterprise": ["CRM", "NOW", "WDAY", "PLTR"],
+    "code-ai": ["MSFT", "ADBE", "NOW"],
+    "ai-healthcare": ["VEEV", "ISRG", "DXCM"],
+    "ai-finance": ["COIN", "SQ", "PYPL"],
+    "autonomous-vehicles": ["TSLA", "GOOGL", "UBER", "GM"],
+    "robotics-embodied": ["ISRG", "ROK", "ABB"],
+    "vision-multimodal": ["ADBE", "SNAP", "U"],
+    "ai-security": ["CRWD", "PANW", "ZS", "S"],
+    "ai-data": ["SNOW", "MDB", "DDOG"]
+  },
+
+  "token_to_bucket": {
+    "FET": {"primary": "agent-orchestration", "secondary": ["ai-infrastructure"], "confidence": 0.8},
+    "AGIX": {"primary": "ai-enterprise", "secondary": ["llm-foundation"], "confidence": 0.7},
+    "OCEAN": {"primary": "ai-data", "secondary": [], "confidence": 0.8},
+    "TAO": {"primary": "ai-infrastructure", "secondary": ["llm-foundation"], "confidence": 0.7},
+    "RNDR": {"primary": "ai-infrastructure", "secondary": ["vision-multimodal"], "confidence": 0.8},
+    "ARKM": {"primary": "ai-data", "secondary": ["ai-security"], "confidence": 0.6},
+    "WLD": {"primary": "ai-consumer-assistants", "secondary": [], "confidence": 0.5},
+    "AKT": {"primary": "ai-infrastructure", "secondary": [], "confidence": 0.7}
+  },
+
+  "macro_series": {
+    "FRED/VIXCLS": {"name": "VIX Volatility", "weight": 0.25, "invert": true},
+    "FRED/FEDFUNDS": {"name": "Fed Funds Rate", "weight": 0.25, "invert": true},
+    "FRED/UNRATE": {"name": "Unemployment Rate", "weight": 0.20, "invert": true},
+    "OECD/MEI_CLI/USA.LOLITOAA.STSA.M": {"name": "CLI Leading Indicator", "weight": 0.15, "invert": false},
+    "BIS/WS_CBS_PUB/Q.S.5A.4T.TO1.A.5J.A.TO1.TO1": {"name": "Cross-border Credit", "weight": 0.15, "invert": false}
+  }
+}
