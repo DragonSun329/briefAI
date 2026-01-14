@@ -666,3 +666,183 @@ class BucketSignalAggregator:
         below = sum(1 for v in all_values if v < value)
         percentile = (below / len(all_values)) * 100
         return round(percentile, 1)
+
+
+# =============================================================================
+# Output Generator
+# =============================================================================
+
+@dataclass
+class FinancialSignalsOutput:
+    """Complete financial signals output artifact."""
+    date: date
+    equities: List[EquityData]
+    tokens: List[TokenData]
+    macro: List[MacroData]
+    bucket_signals: Dict[str, BucketFinancialSignal]
+    mrs: float
+    mrs_interpretation: str
+
+    # Source status tracking
+    sources_status: Dict[str, Dict] = field(default_factory=dict)
+    warnings: List[str] = field(default_factory=list)
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to full output schema."""
+        # Determine overall status
+        degraded_sources = [s for s, info in self.sources_status.items()
+                          if info.get("status") == "degraded"]
+        overall_status = "degraded" if degraded_sources else "ok"
+
+        return {
+            "schema": {
+                "name": "financial_signals",
+                "version": "1.0",
+                "compatible_with": ["1.0"]
+            },
+            "date": self.date.isoformat(),
+            "generated_at": datetime.now().isoformat(),
+
+            "quality": {
+                "overall_status": overall_status,
+                "warnings": self.warnings,
+            },
+
+            "sources": self.sources_status,
+
+            "methods": {
+                "pms": {
+                    "window_days": [1, 7, 30],
+                    "weighting": "equal",
+                    "aggregation": "bucket_equal_weight",
+                    "transform": "percentile"
+                },
+                "css": {
+                    "window_days": [1, 7, 30],
+                    "weighting": "equal",
+                    "aggregation": "confidence_weighted",
+                    "transform": "percentile"
+                },
+                "mrs": {
+                    "components": ["volatility", "rates", "employment", "credit", "cli"],
+                    "transform": "zscore_composite",
+                    "normalize": "clip_-1_1"
+                }
+            },
+
+            "raw": {
+                "equities": [e.to_dict() for e in self.equities],
+                "tokens": [t.to_dict() for t in self.tokens],
+                "macro": [m.to_dict() for m in self.macro],
+            },
+
+            "macro_regime": {
+                "mrs": self.mrs,
+                "interpretation": self.mrs_interpretation,
+                "components": {
+                    m.name.lower().replace(" ", "_"): {
+                        "z_score": m.z_score,
+                        "weight": load_macro_series().get(m.series_id, {}).get("weight", 0.2)
+                    }
+                    for m in self.macro
+                }
+            },
+
+            "bucket_signals": {
+                bucket_id: signal.to_dict()
+                for bucket_id, signal in self.bucket_signals.items()
+            }
+        }
+
+    def save(self, path: Path):
+        """Save output to JSON file."""
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(self.to_dict(), f, indent=2, ensure_ascii=False)
+        logger.info(f"Saved financial signals to {path}")
+
+
+def generate_financial_signals(
+    output_dir: Optional[Path] = None,
+    target_date: Optional[date] = None,
+) -> FinancialSignalsOutput:
+    """
+    Generate complete financial signals artifact.
+
+    Args:
+        output_dir: Directory to save output. If None, uses default.
+        target_date: Date for the signals. If None, uses today.
+
+    Returns:
+        FinancialSignalsOutput object
+    """
+    if target_date is None:
+        target_date = date.today()
+
+    if output_dir is None:
+        output_dir = Path(__file__).parent.parent / "data" / "alternative_signals"
+
+    logger.info(f"Generating financial signals for {target_date}")
+
+    sources_status = {}
+    warnings = []
+
+    # Fetch equities
+    equity_fetcher = EquityFetcher()
+    equities = equity_fetcher.fetch()
+    sources_status["yahoo_finance"] = {
+        "status": "ok" if len(equities) > 20 else "degraded",
+        "tickers_fetched": len(equities),
+        "tickers_expected": len(equity_fetcher.tickers),
+    }
+    if len(equities) < len(equity_fetcher.tickers) * 0.8:
+        warnings.append(f"Only fetched {len(equities)}/{len(equity_fetcher.tickers)} equities")
+
+    # Fetch tokens
+    token_fetcher = TokenFetcher()
+    tokens = token_fetcher.fetch()
+    sources_status["kraken"] = {
+        "status": "ok" if len(tokens) > 5 else "degraded",
+        "tokens_fetched": len(tokens),
+        "tokens_expected": len(token_fetcher.tokens),
+    }
+    if len(tokens) < len(token_fetcher.tokens) * 0.8:
+        warnings.append(f"Only fetched {len(tokens)}/{len(token_fetcher.tokens)} tokens")
+
+    # Fetch macro
+    macro_fetcher = MacroFetcher()
+    macro = macro_fetcher.fetch()
+    sources_status["dbnomics"] = {
+        "status": "ok" if len(macro) > 3 else "degraded",
+        "series_fetched": len(macro),
+        "series_expected": len(macro_fetcher.series),
+    }
+
+    # Compute MRS
+    mrs = macro_fetcher.compute_mrs(macro)
+    mrs_interpretation = macro_fetcher.interpret_mrs(mrs)
+
+    # Aggregate to bucket signals
+    aggregator = BucketSignalAggregator()
+    bucket_signals = aggregator.compute_bucket_signals(
+        equity_data=equities,
+        token_data=tokens,
+    )
+
+    output = FinancialSignalsOutput(
+        date=target_date,
+        equities=equities,
+        tokens=tokens,
+        macro=macro,
+        bucket_signals=bucket_signals,
+        mrs=mrs,
+        mrs_interpretation=mrs_interpretation,
+        sources_status=sources_status,
+        warnings=warnings,
+    )
+
+    # Save to file
+    output_path = output_dir / f"financial_signals_{target_date.isoformat()}.json"
+    output.save(output_path)
+
+    return output

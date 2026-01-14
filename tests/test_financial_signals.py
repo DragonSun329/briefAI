@@ -4,9 +4,11 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+import json
+import tempfile
 import unittest
 from unittest.mock import patch, MagicMock
-from datetime import datetime
+from datetime import datetime, date
 from utils.financial_signals import (
     EquityFetcher,
     EquityData,
@@ -16,6 +18,8 @@ from utils.financial_signals import (
     MacroData,
     BucketSignalAggregator,
     BucketFinancialSignal,
+    FinancialSignalsOutput,
+    generate_financial_signals,
 )
 
 
@@ -194,6 +198,66 @@ class TestBucketSignalAggregator(unittest.TestCase):
         self.assertIsInstance(signals, dict)
         self.assertIn("agent-orchestration", signals)
         self.assertIsNotNone(signals["agent-orchestration"].css)
+
+
+class TestFinancialSignalsOutput(unittest.TestCase):
+    """Test financial signals output generation."""
+
+    def test_output_schema_version(self):
+        """Test output has correct schema version."""
+        output = FinancialSignalsOutput(
+            date=date.today(),
+            equities=[],
+            tokens=[],
+            macro=[],
+            bucket_signals={},
+            mrs=0.0,
+            mrs_interpretation="neutral",
+        )
+        result = output.to_dict()
+
+        self.assertEqual(result["schema"]["name"], "financial_signals")
+        self.assertEqual(result["schema"]["version"], "1.0")
+        self.assertIn("1.0", result["schema"]["compatible_with"])
+
+    def test_output_has_quality_status(self):
+        """Test output includes quality status."""
+        output = FinancialSignalsOutput(
+            date=date.today(),
+            equities=[],
+            tokens=[],
+            macro=[],
+            bucket_signals={},
+            mrs=0.0,
+            mrs_interpretation="neutral",
+        )
+        result = output.to_dict()
+
+        self.assertIn("quality", result)
+        self.assertIn("overall_status", result["quality"])
+
+    def test_output_saves_to_file(self):
+        """Test output saves to JSON file."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output_path = Path(tmpdir) / "test_signals.json"
+
+            output = FinancialSignalsOutput(
+                date=date.today(),
+                equities=[],
+                tokens=[],
+                macro=[],
+                bucket_signals={},
+                mrs=0.0,
+                mrs_interpretation="neutral",
+            )
+            output.save(output_path)
+
+            self.assertTrue(output_path.exists())
+
+            # Verify content
+            with open(output_path) as f:
+                data = json.load(f)
+            self.assertEqual(data["schema"]["name"], "financial_signals")
 
 
 if __name__ == "__main__":
