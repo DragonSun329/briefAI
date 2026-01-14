@@ -16,6 +16,7 @@ from dataclasses import dataclass, field, asdict
 from loguru import logger
 
 import yfinance as yf
+import ccxt
 
 from utils.config_loader import (
     load_ticker_buckets,
@@ -199,4 +200,105 @@ class EquityFetcher:
                     return round((current - old_price) / old_price * 100, 2)
         except Exception:
             pass
+        return 0.0
+
+
+class TokenFetcher:
+    """Fetches AI token data from crypto exchanges."""
+
+    # Mapping of token symbols to exchange trading pairs
+    TOKEN_PAIRS = {
+        "FET": "FET/USD",
+        "AGIX": "AGIX/USD",
+        "OCEAN": "OCEAN/USD",
+        "TAO": "TAO/USD",
+        "RNDR": "RNDR/USD",
+        "ARKM": "ARKM/USD",
+        "WLD": "WLD/USD",
+        "AKT": "AKT/USD",
+    }
+
+    def __init__(self, tokens: Optional[List[str]] = None, exchange: str = "kraken"):
+        """
+        Initialize fetcher.
+
+        Args:
+            tokens: List of token symbols. If None, loads from config.
+            exchange: Exchange to use (default: kraken)
+        """
+        self.tokens = tokens or get_all_tokens()
+        self.exchange_name = exchange
+        self.exchange = self._init_exchange(exchange)
+        logger.info(f"TokenFetcher initialized with {len(self.tokens)} tokens on {exchange}")
+
+    def _init_exchange(self, name: str):
+        """Initialize exchange connection."""
+        try:
+            exchange_class = getattr(ccxt, name)
+            return exchange_class({
+                'enableRateLimit': True,
+            })
+        except Exception as e:
+            logger.error(f"Failed to init exchange {name}: {e}")
+            return None
+
+    def fetch(self) -> List[TokenData]:
+        """
+        Fetch token data for all configured tokens.
+
+        Returns:
+            List of TokenData objects
+        """
+        if not self.exchange:
+            logger.error("No exchange initialized")
+            return []
+
+        results = []
+        now = datetime.now()
+
+        for token in self.tokens:
+            try:
+                pair = self.TOKEN_PAIRS.get(token, f"{token}/USD")
+
+                # Fetch current ticker
+                ticker = self.exchange.fetch_ticker(pair)
+                if not ticker:
+                    continue
+
+                current_price = ticker.get('last', 0)
+                change_1d = ticker.get('percentage', 0)
+                volume_24h = ticker.get('quoteVolume', 0)
+
+                # Fetch OHLCV for 7d and 30d changes
+                change_7d = self._calc_change_from_ohlcv(pair, 7, current_price)
+                change_30d = self._calc_change_from_ohlcv(pair, 30, current_price)
+
+                data = TokenData(
+                    symbol=token,
+                    asof=now,
+                    price_usd=current_price,
+                    change_1d_pct=round(change_1d, 2) if change_1d else 0,
+                    change_7d_pct=change_7d,
+                    change_30d_pct=change_30d,
+                    volume_24h_usd=volume_24h,
+                )
+                results.append(data)
+
+            except Exception as e:
+                logger.warning(f"Error fetching {token}: {e}")
+                continue
+
+        logger.info(f"Fetched {len(results)}/{len(self.tokens)} tokens")
+        return results
+
+    def _calc_change_from_ohlcv(self, pair: str, days: int, current: float) -> float:
+        """Calculate % change from OHLCV data."""
+        try:
+            ohlcv = self.exchange.fetch_ohlcv(pair, '1d', limit=days + 1)
+            if ohlcv and len(ohlcv) > days:
+                old_close = ohlcv[0][4]  # Close price from days ago
+                if old_close > 0:
+                    return round((current - old_close) / old_close * 100, 2)
+        except Exception as e:
+            logger.debug(f"OHLCV fetch failed for {pair}: {e}")
         return 0.0

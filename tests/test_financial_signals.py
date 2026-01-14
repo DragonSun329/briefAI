@@ -10,6 +10,8 @@ from datetime import datetime
 from utils.financial_signals import (
     EquityFetcher,
     EquityData,
+    TokenFetcher,
+    TokenData,
 )
 
 
@@ -58,6 +60,51 @@ class TestEquityFetcher(unittest.TestCase):
         mock_tickers.return_value.tickers = {"NVDA": mock_ticker}
 
         fetcher = EquityFetcher(tickers=["NVDA"])
+        result = fetcher.fetch()
+
+        self.assertIsInstance(result, list)
+
+
+class TestTokenFetcher(unittest.TestCase):
+    """Test crypto token fetcher."""
+
+    def test_token_data_model(self):
+        """Test TokenData model structure."""
+        data = TokenData(
+            symbol="FET",
+            asof=datetime.now(),
+            price_usd=2.15,
+            change_1d_pct=5.2,
+            change_7d_pct=12.8,
+            change_30d_pct=-8.4,
+            volume_24h_usd=180000000
+        )
+        self.assertEqual(data.symbol, "FET")
+        self.assertAlmostEqual(data.price_usd, 2.15)
+
+    def test_fetcher_init(self):
+        """Test TokenFetcher initialization."""
+        fetcher = TokenFetcher()
+        self.assertIsNotNone(fetcher.tokens)
+        self.assertIn("FET", fetcher.tokens)
+
+    @patch('utils.financial_signals.ccxt.kraken')
+    def test_fetch_returns_list(self, mock_kraken):
+        """Test fetch returns list of TokenData."""
+        # Mock ccxt response
+        mock_exchange = MagicMock()
+        mock_exchange.fetch_ticker.return_value = {
+            'last': 2.15,
+            'percentage': 5.2,
+            'quoteVolume': 180000000,
+        }
+        mock_exchange.fetch_ohlcv.return_value = [
+            [1, 2.0, 2.2, 1.9, 2.1, 1000],  # 7d ago
+            [2, 2.1, 2.3, 2.0, 2.15, 1000],  # now
+        ]
+        mock_kraken.return_value = mock_exchange
+
+        fetcher = TokenFetcher(tokens=["FET"])
         result = fetcher.fetch()
 
         self.assertIsInstance(result, list)
