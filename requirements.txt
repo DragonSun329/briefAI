@@ -32,3 +32,8 @@ loguru>=0.7.0
 rapidfuzz>=3.0.0
 sentence-transformers>=2.2.0
 chromadb>=0.4.0
+
+# Financial data sources
+yfinance>=0.2.36
+dbnomics>=1.2.0
+ccxt>=4.0.0
