@@ -17,6 +17,7 @@ from loguru import logger
 
 import yfinance as yf
 import ccxt
+import dbnomics
 
 from utils.config_loader import (
     load_ticker_buckets,
@@ -302,3 +303,137 @@ class TokenFetcher:
         except Exception as e:
             logger.debug(f"OHLCV fetch failed for {pair}: {e}")
         return 0.0
+
+
+class MacroFetcher:
+    """Fetches macro indicators from DBnomics."""
+
+    def __init__(self, series: Optional[Dict[str, Dict]] = None):
+        """
+        Initialize fetcher.
+
+        Args:
+            series: Dict of series configs. If None, loads from config.
+        """
+        self.series = series or load_macro_series()
+        self._historical_data: Dict[str, List[float]] = {}
+        logger.info(f"MacroFetcher initialized with {len(self.series)} series")
+
+    def fetch(self) -> List[MacroData]:
+        """
+        Fetch macro indicator data.
+
+        Returns:
+            List of MacroData objects with z-scores
+        """
+        results = []
+        now = datetime.now()
+
+        for series_id, config in self.series.items():
+            try:
+                # Fetch from DBnomics
+                df = dbnomics.fetch_series(series_id)
+
+                if df is None or df.empty:
+                    logger.warning(f"No data for {series_id}")
+                    continue
+
+                # Get latest value
+                latest = df.iloc[-1]
+                value = float(latest['value']) if 'value' in latest else float(latest.iloc[-1])
+
+                # Get timestamp
+                asof = latest.get('period', now)
+                if isinstance(asof, str):
+                    asof = datetime.fromisoformat(asof.replace('Z', '+00:00'))
+
+                # Compute z-score from historical data
+                values = df['value'].dropna().tolist() if 'value' in df.columns else []
+                z_score = self._compute_zscore(value, values)
+
+                # Invert if configured (high VIX = bad, so invert)
+                if config.get('invert', False):
+                    z_score = -z_score if z_score is not None else None
+
+                data = MacroData(
+                    series_id=series_id,
+                    name=config.get('name', series_id),
+                    asof=asof if isinstance(asof, datetime) else now,
+                    value=value,
+                    z_score=z_score,
+                )
+                results.append(data)
+
+            except Exception as e:
+                logger.warning(f"Error fetching {series_id}: {e}")
+                continue
+
+        logger.info(f"Fetched {len(results)}/{len(self.series)} macro series")
+        return results
+
+    def _compute_zscore(self, value: float, historical: List[float]) -> Optional[float]:
+        """Compute z-score of value relative to historical data."""
+        if not historical or len(historical) < 10:
+            return None
+
+        import statistics
+        mean = statistics.mean(historical)
+        stdev = statistics.stdev(historical)
+
+        if stdev == 0:
+            return 0.0
+
+        z = (value - mean) / stdev
+        return round(z, 2)
+
+    def compute_mrs(self, macro_data: List[MacroData]) -> float:
+        """
+        Compute Macro Regime Signal from z-scores.
+
+        MRS is weighted average of z-scores, clipped to [-1, 1].
+        Negative = risk-off, Positive = risk-on.
+
+        Args:
+            macro_data: List of MacroData with z-scores
+
+        Returns:
+            MRS value between -1 and 1
+        """
+        if not macro_data:
+            return 0.0
+
+        total_weight = 0.0
+        weighted_sum = 0.0
+
+        for data in macro_data:
+            if data.z_score is None:
+                continue
+
+            config = self.series.get(data.series_id, {})
+            weight = config.get('weight', 0.2)
+
+            weighted_sum += data.z_score * weight
+            total_weight += weight
+
+        if total_weight == 0:
+            return 0.0
+
+        mrs = weighted_sum / total_weight
+
+        # Clip to [-1, 1]
+        mrs = max(-1.0, min(1.0, mrs))
+
+        return round(mrs, 2)
+
+    def interpret_mrs(self, mrs: float) -> str:
+        """Get human-readable interpretation of MRS."""
+        if mrs < -0.5:
+            return "risk_off"
+        elif mrs < -0.2:
+            return "mildly_risk_off"
+        elif mrs < 0.2:
+            return "neutral"
+        elif mrs < 0.5:
+            return "mildly_risk_on"
+        else:
+            return "risk_on"

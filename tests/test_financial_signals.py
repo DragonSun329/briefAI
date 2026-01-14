@@ -12,6 +12,8 @@ from utils.financial_signals import (
     EquityData,
     TokenFetcher,
     TokenData,
+    MacroFetcher,
+    MacroData,
 )
 
 
@@ -108,6 +110,41 @@ class TestTokenFetcher(unittest.TestCase):
         result = fetcher.fetch()
 
         self.assertIsInstance(result, list)
+
+
+class TestMacroFetcher(unittest.TestCase):
+    """Test DBnomics macro fetcher."""
+
+    def test_macro_data_model(self):
+        """Test MacroData model structure."""
+        data = MacroData(
+            series_id="FRED/VIXCLS",
+            name="VIX Volatility",
+            asof=datetime.now(),
+            value=18.5,
+            z_score=0.3
+        )
+        self.assertEqual(data.series_id, "FRED/VIXCLS")
+        self.assertAlmostEqual(data.value, 18.5)
+
+    def test_fetcher_init(self):
+        """Test MacroFetcher initialization."""
+        fetcher = MacroFetcher()
+        self.assertIsNotNone(fetcher.series)
+        self.assertGreater(len(fetcher.series), 0)
+
+    def test_compute_mrs(self):
+        """Test MRS computation from z-scores."""
+        fetcher = MacroFetcher()
+        macro_data = [
+            MacroData("FRED/VIXCLS", "VIX", datetime.now(), 18.5, z_score=0.3),
+            MacroData("FRED/FEDFUNDS", "Fed Rate", datetime.now(), 5.25, z_score=1.2),
+            MacroData("FRED/UNRATE", "Unemployment", datetime.now(), 3.9, z_score=-0.4),
+        ]
+        mrs = fetcher.compute_mrs(macro_data)
+        self.assertIsInstance(mrs, float)
+        self.assertGreaterEqual(mrs, -1.0)
+        self.assertLessEqual(mrs, 1.0)
 
 
 if __name__ == "__main__":
