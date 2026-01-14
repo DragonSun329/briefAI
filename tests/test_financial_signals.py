@@ -14,6 +14,8 @@ from utils.financial_signals import (
     TokenData,
     MacroFetcher,
     MacroData,
+    BucketSignalAggregator,
+    BucketFinancialSignal,
 )
 
 
@@ -145,6 +147,53 @@ class TestMacroFetcher(unittest.TestCase):
         self.assertIsInstance(mrs, float)
         self.assertGreaterEqual(mrs, -1.0)
         self.assertLessEqual(mrs, 1.0)
+
+
+class TestBucketSignalAggregator(unittest.TestCase):
+    """Test bucket signal aggregation."""
+
+    def test_bucket_signal_model(self):
+        """Test BucketFinancialSignal model."""
+        signal = BucketFinancialSignal(
+            bucket_id="ai-chips",
+            pms=78.0,
+            pms_coverage={"tickers_present": 5, "tickers_total": 6},
+            pms_contributors=[{"ticker": "NVDA", "change_7d_pct": 8.1}],
+            css=None,
+            css_coverage=None,
+        )
+        self.assertEqual(signal.bucket_id, "ai-chips")
+        self.assertEqual(signal.pms, 78.0)
+        self.assertIsNone(signal.css)
+
+    def test_aggregator_computes_pms(self):
+        """Test PMS computation from equity data."""
+        aggregator = BucketSignalAggregator()
+
+        equity_data = [
+            EquityData("NVDA", datetime.now(), 900, 2.0, 8.0, 15.0, 50000000, 40000000, 2200),
+            EquityData("AMD", datetime.now(), 180, 1.5, 5.0, 10.0, 30000000, 25000000, 280),
+        ]
+
+        signals = aggregator.compute_bucket_signals(equity_data=equity_data)
+
+        self.assertIsInstance(signals, dict)
+        self.assertIn("ai-chips", signals)
+        self.assertIsNotNone(signals["ai-chips"].pms)
+
+    def test_aggregator_computes_css(self):
+        """Test CSS computation from token data."""
+        aggregator = BucketSignalAggregator()
+
+        token_data = [
+            TokenData("FET", datetime.now(), 2.15, 5.0, 12.0, -8.0, 180000000),
+        ]
+
+        signals = aggregator.compute_bucket_signals(token_data=token_data)
+
+        self.assertIsInstance(signals, dict)
+        self.assertIn("agent-orchestration", signals)
+        self.assertIsNotNone(signals["agent-orchestration"].css)
 
 
 if __name__ == "__main__":

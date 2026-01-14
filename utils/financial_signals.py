@@ -437,3 +437,232 @@ class MacroFetcher:
             return "mildly_risk_on"
         else:
             return "risk_on"
+
+
+# =============================================================================
+# Bucket Signal Aggregator
+# =============================================================================
+
+@dataclass
+class BucketFinancialSignal:
+    """Financial signals for a single bucket."""
+    bucket_id: str
+
+    # Public Market Signal (from equities)
+    pms: Optional[float] = None
+    pms_coverage: Optional[Dict[str, Any]] = None
+    pms_contributors: List[Dict[str, Any]] = field(default_factory=list)
+
+    # Crypto Sentiment Signal (from tokens)
+    css: Optional[float] = None
+    css_coverage: Optional[Dict[str, Any]] = None
+    css_contributors: List[Dict[str, Any]] = field(default_factory=list)
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary for JSON."""
+        return {
+            "bucket_id": self.bucket_id,
+            "pms": self.pms,
+            "pms_coverage": self.pms_coverage,
+            "pms_contributors": self.pms_contributors,
+            "pms_contributors_text": [
+                f"{c['ticker']} {c['change_7d_pct']:+.1f}%"
+                for c in self.pms_contributors[:3]
+            ] if self.pms_contributors else [],
+            "css": self.css,
+            "css_coverage": self.css_coverage,
+            "css_contributors": self.css_contributors,
+            "css_contributors_text": [
+                f"{c['symbol']} {c['change_7d_pct']:+.1f}%"
+                for c in self.css_contributors[:3]
+            ] if self.css_contributors else [],
+        }
+
+
+class BucketSignalAggregator:
+    """Aggregates equity and token data into bucket-level signals."""
+
+    def __init__(self):
+        self.ticker_buckets = load_ticker_buckets()
+        self.token_buckets = load_token_buckets()
+
+        # Build reverse mappings
+        self.ticker_to_buckets: Dict[str, List[str]] = {}
+        for bucket_id, tickers in self.ticker_buckets.items():
+            for ticker in tickers:
+                if ticker not in self.ticker_to_buckets:
+                    self.ticker_to_buckets[ticker] = []
+                self.ticker_to_buckets[ticker].append(bucket_id)
+
+    def compute_bucket_signals(
+        self,
+        equity_data: Optional[List[EquityData]] = None,
+        token_data: Optional[List[TokenData]] = None,
+    ) -> Dict[str, BucketFinancialSignal]:
+        """
+        Compute PMS and CSS signals per bucket.
+
+        Args:
+            equity_data: List of EquityData from Yahoo Finance
+            token_data: List of TokenData from crypto exchange
+
+        Returns:
+            Dict mapping bucket_id to BucketFinancialSignal
+        """
+        # Get all bucket IDs
+        all_buckets = set(self.ticker_buckets.keys())
+        for token_config in self.token_buckets.values():
+            all_buckets.add(token_config["primary"])
+            all_buckets.update(token_config.get("secondary", []))
+
+        signals: Dict[str, BucketFinancialSignal] = {
+            bucket_id: BucketFinancialSignal(bucket_id=bucket_id)
+            for bucket_id in all_buckets
+        }
+
+        # Compute PMS from equities
+        if equity_data:
+            self._compute_pms(signals, equity_data)
+
+        # Compute CSS from tokens
+        if token_data:
+            self._compute_css(signals, token_data)
+
+        return signals
+
+    def _compute_pms(
+        self,
+        signals: Dict[str, BucketFinancialSignal],
+        equity_data: List[EquityData]
+    ):
+        """Compute PMS (Public Market Signal) for each bucket."""
+        # Group equities by bucket
+        bucket_equities: Dict[str, List[EquityData]] = {}
+        equity_by_ticker = {e.ticker: e for e in equity_data}
+
+        for bucket_id, tickers in self.ticker_buckets.items():
+            bucket_equities[bucket_id] = []
+            for ticker in tickers:
+                if ticker in equity_by_ticker:
+                    bucket_equities[bucket_id].append(equity_by_ticker[ticker])
+
+        # Collect all 7d changes for percentile calculation
+        all_changes = []
+        for equities in bucket_equities.values():
+            if equities:
+                avg_change = sum(e.change_7d_pct for e in equities) / len(equities)
+                all_changes.append(avg_change)
+
+        # Compute PMS per bucket (percentile of average 7d change)
+        for bucket_id, equities in bucket_equities.items():
+            if not equities:
+                continue
+
+            # Average 7d change for this bucket
+            avg_change = sum(e.change_7d_pct for e in equities) / len(equities)
+
+            # Convert to percentile
+            pms = self._to_percentile(avg_change, all_changes)
+
+            # Coverage info
+            expected_tickers = self.ticker_buckets.get(bucket_id, [])
+            present_tickers = [e.ticker for e in equities]
+            missing_tickers = [t for t in expected_tickers if t not in present_tickers]
+
+            # Contributors (sorted by contribution)
+            contributors = sorted(
+                [{"ticker": e.ticker, "change_7d_pct": e.change_7d_pct,
+                  "weight": 1.0/len(equities), "contribution": e.change_7d_pct/len(equities)}
+                 for e in equities],
+                key=lambda x: abs(x["change_7d_pct"]),
+                reverse=True
+            )
+
+            signals[bucket_id].pms = pms
+            signals[bucket_id].pms_coverage = {
+                "tickers_present": len(equities),
+                "tickers_total": len(expected_tickers),
+                "missing": missing_tickers,
+            }
+            signals[bucket_id].pms_contributors = contributors
+
+    def _compute_css(
+        self,
+        signals: Dict[str, BucketFinancialSignal],
+        token_data: List[TokenData]
+    ):
+        """Compute CSS (Crypto Sentiment Signal) for each bucket."""
+        token_by_symbol = {t.symbol: t for t in token_data}
+
+        # Group tokens by bucket (primary and secondary)
+        bucket_tokens: Dict[str, List[tuple]] = {}  # bucket -> [(token, confidence)]
+
+        for symbol, config in self.token_buckets.items():
+            if symbol not in token_by_symbol:
+                continue
+
+            token = token_by_symbol[symbol]
+            confidence = config.get("confidence", 0.7)
+
+            # Primary bucket
+            primary = config["primary"]
+            if primary not in bucket_tokens:
+                bucket_tokens[primary] = []
+            bucket_tokens[primary].append((token, confidence))
+
+            # Secondary buckets (lower weight)
+            for secondary in config.get("secondary", []):
+                if secondary not in bucket_tokens:
+                    bucket_tokens[secondary] = []
+                bucket_tokens[secondary].append((token, confidence * 0.5))
+
+        # Collect all 7d changes for percentile calculation
+        all_changes = []
+        for tokens in bucket_tokens.values():
+            if tokens:
+                weighted_change = sum(t.change_7d_pct * c for t, c in tokens) / sum(c for _, c in tokens)
+                all_changes.append(weighted_change)
+
+        # Compute CSS per bucket
+        for bucket_id, tokens in bucket_tokens.items():
+            if not tokens:
+                continue
+
+            # Confidence-weighted average 7d change
+            total_weight = sum(c for _, c in tokens)
+            weighted_change = sum(t.change_7d_pct * c for t, c in tokens) / total_weight
+
+            # Convert to percentile
+            css = self._to_percentile(weighted_change, all_changes)
+
+            # Coverage info
+            expected_tokens = [s for s, cfg in self.token_buckets.items()
+                            if cfg["primary"] == bucket_id or bucket_id in cfg.get("secondary", [])]
+            present_tokens = [t.symbol for t, _ in tokens]
+            missing_tokens = [t for t in expected_tokens if t not in present_tokens]
+
+            # Contributors
+            contributors = sorted(
+                [{"symbol": t.symbol, "change_7d_pct": t.change_7d_pct,
+                  "weight": c / total_weight, "contribution": t.change_7d_pct * c / total_weight}
+                 for t, c in tokens],
+                key=lambda x: abs(x["change_7d_pct"]),
+                reverse=True
+            )
+
+            signals[bucket_id].css = css
+            signals[bucket_id].css_coverage = {
+                "tokens_present": len(tokens),
+                "tokens_total": len(expected_tokens),
+                "missing": missing_tokens,
+            }
+            signals[bucket_id].css_contributors = contributors
+
+    def _to_percentile(self, value: float, all_values: List[float]) -> float:
+        """Convert value to percentile within all_values."""
+        if not all_values:
+            return 50.0
+
+        below = sum(1 for v in all_values if v < value)
+        percentile = (below / len(all_values)) * 100
+        return round(percentile, 1)
