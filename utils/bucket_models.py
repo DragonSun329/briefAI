@@ -64,6 +64,7 @@ class AlertType(str, Enum):
     ENTERPRISE_PULL = "enterprise_pull"     # EIS offensive rising
     DISRUPTION_PRESSURE = "disruption_pressure"  # EIS defensive spiking
     ROTATION = "rotation"                   # TMS decelerating, market maturing
+    DATA_HEALTH = "data_health"             # Coverage drop, scraper failure, stale data
 
 
 class AlertInterpretation(str, Enum):
@@ -79,6 +80,14 @@ class AlertSeverity(str, Enum):
     INFO = "info"           # Watch - early signal
     WARN = "warn"           # Divergence likely
     CRIT = "crit"           # Divergence + accelerating + persistent
+
+
+class AlertCause(str, Enum):
+    """Root cause category for why an alert was triggered."""
+    DIVERGENCE = "divergence"       # High/low signal divergence (e.g., TMS high, CCS low)
+    INFLECTION = "inflection"       # Velocity/acceleration sign change
+    REGIME_SHIFT = "regime_shift"   # Macro regime change affecting multiple buckets
+    DATA_HEALTH = "data_health"     # Coverage drop, scraper failure, stale data
 
 
 class MissingReason(str, Enum):
@@ -642,6 +651,13 @@ class BucketAlert(BaseModel):
     alert_type: AlertType
     interpretation: AlertInterpretation
     severity: AlertSeverity = AlertSeverity.INFO  # Graded severity
+
+    # === Cause tracking (Task 2: Alert Taxonomy) ===
+    cause: AlertCause = AlertCause.DIVERGENCE    # Root cause category
+    trigger_rule_id: str = ""                     # Which rule triggered (e.g., "alpha_zone_v1")
+    features_used: List[str] = Field(default_factory=list)  # Features that contributed
+    why_now: str = ""                             # Human-readable timing explanation
+    min_signal_coverage: float = 1.0              # Min coverage across triggering signals
 
     # Which scores triggered the alert
     trigger_scores: Dict[str, float]  # {"tms": 92, "ccs": 25}
