@@ -39,7 +39,7 @@ from utils.bucket_tagger import BucketTagger
 # Import alert store and card components for enhanced alert panel
 from utils.alert_store import AlertStore, StoredAlert, AlertSeverity
 from modules.components.alert_card import AlertCardRenderer, build_alert_card_data
-from utils.dashboard_helpers import AlertCardData, format_persistence_text, get_severity_config
+from utils.dashboard_helpers import AlertCardData, format_persistence_text, get_severity_config, get_confidence_style
 
 # Import explainability drawer for enhanced evidence display
 from modules.components.explain_drawer import ExplainDrawerRenderer, build_explain_drawer_data
@@ -828,17 +828,35 @@ def create_enhanced_quadrant(
             # Only show labels for top N buckets (declutter)
             names = [p.bucket_name if p.bucket_id in labeled_bucket_ids else "" for p in cluster_profiles]
 
+            # Confidence-based visual encoding
+            conf_styles = [get_confidence_style(getattr(p, 'signal_confidence', None)) for p in cluster_profiles]
+            opacities = [cs["opacity"] for cs in conf_styles]
+            # Border width: 2 for dashed/low confidence, 1 for solid/high confidence
+            border_widths = [2 if cs["border_style"] == "dashed" else 1 for cs in conf_styles]
+
             hover_texts = _build_hover_texts(cluster_profiles, alert_map, show_pms_css)
 
             fig.add_trace(go.Scatter(
                 x=x_vals, y=y_vals,
                 mode="markers+text",
-                marker=dict(size=sizes, color=color, opacity=0.7, line=dict(width=1, color="white")),
+                marker=dict(size=sizes, color=color, opacity=opacities, line=dict(width=border_widths, color="white")),
                 text=names, textposition="top center", textfont=dict(size=9),
                 hovertemplate="%{customdata}<extra></extra>",
                 customdata=hover_texts,
                 name=cluster_name,
             ))
+
+            # Add "?" annotation for markers with missing confidence
+            for i, p in enumerate(cluster_profiles):
+                if conf_styles[i]["badge"]:
+                    fig.add_annotation(
+                        x=p.tms,
+                        y=p.ccs,
+                        text="?",
+                        font=dict(size=10, color="#666"),
+                        showarrow=False,
+                        yshift=15,
+                    )
     else:
         # Default: lifecycle state grouping
         for state in LifecycleState:
@@ -848,21 +866,39 @@ def create_enhanced_quadrant(
 
             x_vals = [p.tms for p in state_profiles]
             y_vals = [p.ccs for p in state_profiles]
-            sizes = [(p.heat_score or 50) / 3 * p.signal_confidence for p in state_profiles]
+            sizes = [(p.heat_score or 50) / 3 * (getattr(p, 'signal_confidence', None) or 0.5) for p in state_profiles]
             # Only show labels for top N buckets (declutter)
             names = [p.bucket_name if p.bucket_id in labeled_bucket_ids else "" for p in state_profiles]
+
+            # Confidence-based visual encoding
+            conf_styles = [get_confidence_style(getattr(p, 'signal_confidence', None)) for p in state_profiles]
+            opacities = [cs["opacity"] for cs in conf_styles]
+            # Border width: 2 for dashed/low confidence, 1 for solid/high confidence
+            border_widths = [2 if cs["border_style"] == "dashed" else 1 for cs in conf_styles]
 
             hover_texts = _build_hover_texts(state_profiles, alert_map, show_pms_css)
 
             fig.add_trace(go.Scatter(
                 x=x_vals, y=y_vals,
                 mode="markers+text",
-                marker=dict(size=sizes, color=LIFECYCLE_COLORS[state], opacity=0.7, line=dict(width=1, color="white")),
+                marker=dict(size=sizes, color=LIFECYCLE_COLORS[state], opacity=opacities, line=dict(width=border_widths, color="white")),
                 text=names, textposition="top center", textfont=dict(size=9),
                 hovertemplate="%{customdata}<extra></extra>",
                 customdata=hover_texts,
                 name=LIFECYCLE_LABELS["en"][state],
             ))
+
+            # Add "?" annotation for markers with missing confidence
+            for i, p in enumerate(state_profiles):
+                if conf_styles[i]["badge"]:
+                    fig.add_annotation(
+                        x=p.tms,
+                        y=p.ccs,
+                        text="?",
+                        font=dict(size=10, color="#666"),
+                        showarrow=False,
+                        yshift=15,
+                    )
 
     # === PMS/CSS FINANCIAL SIGNAL RINGS (Feature 1) ===
     if show_pms_css and view_mode == "financial":
