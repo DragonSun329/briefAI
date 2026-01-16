@@ -29,6 +29,9 @@ class SparklineData:
     history: List[float]
     sparkline_chars: str
     trend: str
+    # Coverage warning
+    coverage_warning: Optional[str] = None
+    is_reliable: bool = True
 
 
 @dataclass
@@ -102,6 +105,13 @@ def build_explain_drawer_data(
             metadata = profile.get("signal_metadata", {}).get(signal_key, {})
             coverage = metadata.get("coverage", 0.5)
 
+            # Check if coverage is sufficient (default threshold 0.6)
+            coverage_warning = None
+            is_reliable = True
+            if coverage < 0.6:
+                coverage_warning = f"Insufficient data ({coverage:.0%} coverage)"
+                is_reliable = False
+
             sparklines.append(SparklineData(
                 signal_name=signal_key,
                 display_name=SIGNAL_DISPLAY_NAMES.get(signal_key, signal_key.upper()),
@@ -111,6 +121,8 @@ def build_explain_drawer_data(
                 history=history if history else [current],
                 sparkline_chars=spark_data["sparkline_chars"],
                 trend=spark_data["trend"],
+                coverage_warning=coverage_warning,
+                is_reliable=is_reliable,
             ))
 
     # Extract top entities
@@ -175,7 +187,15 @@ class ExplainDrawerRenderer:
 
             with col1:
                 delta_str = f"{'↑' if spark.delta > 0 else '↓' if spark.delta < 0 else '→'}{abs(spark.delta):.0f}"
-                st.markdown(f"**{spark.display_name}:** {spark.current_value:.0f} ({delta_str})")
+                # Show warning if coverage is low
+                if spark.coverage_warning:
+                    st.markdown(
+                        f"**{spark.display_name}:** {spark.current_value:.0f} ({delta_str}) "
+                        f"⚠️ <span style='color:#e74c3c; font-size:0.8em;'>{spark.coverage_warning}</span>",
+                        unsafe_allow_html=True
+                    )
+                else:
+                    st.markdown(f"**{spark.display_name}:** {spark.current_value:.0f} ({delta_str})")
 
             with col2:
                 st.markdown(f"`{spark.sparkline_chars}`")

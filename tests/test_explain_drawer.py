@@ -194,5 +194,32 @@ class TestExplainDrawerRenderer:
         assert callable(renderer.render)
 
 
+class TestCoverageWarnings:
+    """Tests for coverage warning display."""
+
+    def test_low_coverage_warning_displayed(self):
+        """Low coverage signals show warning."""
+        profile = {
+            "bucket_id": "test",
+            "bucket_name": "Test",
+            "tms": 25,  # Low value
+            "signal_metadata": {
+                "tms": {
+                    "value": 25,
+                    "coverage": 0.15,  # Low coverage
+                    "confidence": 0.2,
+                }
+            }
+        }
+
+        drawer_data = build_explain_drawer_data(profile, {})
+
+        # The sparkline should have a warning
+        tms_spark = next((s for s in drawer_data.sparklines if s.signal_name == "tms"), None)
+        assert tms_spark is not None
+        assert tms_spark.coverage_warning is not None
+        assert "insufficient" in tms_spark.coverage_warning.lower()
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
