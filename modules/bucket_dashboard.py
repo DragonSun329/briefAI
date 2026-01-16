@@ -1851,39 +1851,59 @@ def render_bucket_detail(profile: BucketProfile, labels: Dict[str, str], alerts:
 
         st.markdown("---")
 
-        # === SIGNAL SCORES WITH CONFIDENCE ===
-        st.markdown("**Subscores** (with confidence)")
+        # === SIGNAL SCORES WITH CONFIDENCE & HISTORICAL CONTEXT ===
+        st.markdown("**Subscores** (with confidence & historical context)")
+
+        # Try to load historical baselines for percentile context
+        baseline_calc = None
+        try:
+            from utils.historical_baselines import HistoricalBaselineCalculator
+            baseline_calc = HistoricalBaselineCalculator()
+        except Exception:
+            pass
 
         signal_data = [
-            ("tms", labels["tms"], profile.tms, "Technical"),
-            ("ccs", labels["ccs"], profile.ccs, "Capital"),
-            ("eis", labels["eis_off"], profile.eis_offensive, "Enterprise"),
-            ("nas", labels["nas"], profile.nas, "Narrative"),
+            ("tms", labels.get("tms", "TMS"), getattr(profile, 'tms', None)),
+            ("ccs", labels.get("ccs", "CCS"), getattr(profile, 'ccs', None)),
+            ("eis", labels.get("eis_off", "EIS"), getattr(profile, 'eis_offensive', None)),
+            ("nas", labels.get("nas", "NAS"), getattr(profile, 'nas', None)),
         ]
 
-        for signal_key, name, score, signal_type in signal_data:
+        for signal_key, name, score in signal_data:
             if score is not None:
                 # Get confidence from metadata if available
-                meta = profile.signal_metadata.get(signal_key, {})
-                confidence = meta.get("confidence", profile.signal_confidence)
-                coverage = meta.get("coverage", 0.5)
+                meta = getattr(profile, 'signal_metadata', {}).get(signal_key, {})
+                confidence = meta.get("confidence", getattr(profile, 'signal_confidence', 0.5))
                 sources = meta.get("sources", [])
 
-                # Color code confidence
-                if confidence >= 0.7:
-                    conf_color = "#27ae60"
-                    conf_label = "high"
-                elif confidence >= 0.4:
-                    conf_color = "#f39c12"
-                    conf_label = "medium"
-                else:
-                    conf_color = "#e74c3c"
-                    conf_label = "low"
+                # Get historical percentiles
+                percentile_12w = None
+                percentile_26w = None
+                if baseline_calc:
+                    try:
+                        percentile_12w = baseline_calc.compute_historical_percentile(
+                            profile.bucket_id, signal_key, score, window_weeks=12
+                        )
+                        percentile_26w = baseline_calc.compute_historical_percentile(
+                            profile.bucket_id, signal_key, score, window_weeks=26
+                        )
+                    except Exception:
+                        pass
 
-                # Show score with confidence indicator
+                # Color code confidence using get_confidence_style
+                conf_style = get_confidence_style(confidence)
+
+                # Build percentile text
+                percentile_text = ""
+                if percentile_12w is not None:
+                    percentile_text = f" | 12w: p{percentile_12w:.0f}"
+                if percentile_26w is not None:
+                    percentile_text += f" | 26w: p{percentile_26w:.0f}"
+
+                # Show score with confidence indicator and historical percentiles
                 st.markdown(
                     f"**{name}:** {score:.0f} "
-                    f"<span style='color:{conf_color}; font-size:0.8em;'>({conf_label} conf)</span>",
+                    f"<span style='color:{conf_style['color']}; font-size:0.8em;'>({conf_style['label']} conf){percentile_text}</span>",
                     unsafe_allow_html=True
                 )
                 st.progress(score / 100)
