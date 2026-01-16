@@ -47,14 +47,10 @@ class ExplainDrawerData:
     # Alert info
     active_alert_type: Optional[str] = None
     alert_rationale: Optional[str] = None
-    alert_first_detected: Optional[str] = None
-    similar_past_alert: Optional[str] = None
 
     # Data quality
     data_quality_pct: float = 0.0
     signals_available: int = 0
-    total_signals: int = 6
-    last_updated: Optional[str] = None
 
 
 SIGNAL_DISPLAY_NAMES = {
@@ -91,7 +87,7 @@ def build_explain_drawer_data(
     signals_available = 0
 
     # Build sparklines for each signal
-    for signal_key in ["tms", "ccs", "nas", "eis"]:
+    for signal_key in ["tms", "ccs", "nas", "eis", "pms", "css"]:
         current = profile.get(signal_key) or profile.get(f"{signal_key}_offensive")
         history = signal_history.get(signal_key, [])
 
@@ -150,7 +146,6 @@ def build_explain_drawer_data(
         alert_rationale=alert_rationale,
         data_quality_pct=data_quality,
         signals_available=signals_available,
-        last_updated=profile.get("last_updated"),
     )
 
 
@@ -218,5 +213,5 @@ class ExplainDrawerRenderer:
         # Data quality footer
         quality_color = "#27ae60" if data.data_quality_pct > 0.8 else "#f39c12" if data.data_quality_pct > 0.5 else "#e74c3c"
         st_container.markdown(f"""
-        **Data Quality:** {data.data_quality_pct:.0%} | {data.signals_available}/{data.total_signals} signals | {'Fresh' if data.last_updated else 'Unknown age'}
+        **Data Quality:** {data.data_quality_pct:.0%} | {data.signals_available}/6 signals
         """)
