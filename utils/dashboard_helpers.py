@@ -10,8 +10,128 @@ Provides helper functions for:
 
 from typing import Dict, Any, List, Optional
 from dataclasses import dataclass
+from enum import Enum
 
 import plotly.graph_objects as go
+
+
+class CoverageWarning(str, Enum):
+    """Warning types for coverage issues."""
+    INSUFFICIENT_COVERAGE = "insufficient_coverage"
+    STALE_DATA = "stale_data"
+    NO_DATA = "no_data"
+    SCRAPER_FAILURE = "scraper_failure"
+
+
+@dataclass
+class SignalDisplayInfo:
+    """Display information for a signal with coverage context."""
+    display_value: str
+    is_reliable: bool
+    warning: Optional[CoverageWarning] = None
+    warning_text: Optional[str] = None
+    coverage_pct: float = 0.0
+    confidence_label: str = "unknown"
+
+
+def get_signal_display_info(
+    value: Optional[float],
+    confidence: float,
+    coverage: float,
+    missing_reason: Optional[str] = None,
+    coverage_threshold: float = 0.6,
+) -> SignalDisplayInfo:
+    """
+    Get display info for a signal value with coverage context.
+
+    Key behavior: Low value + low coverage = "low due to insufficient data"
+
+    Args:
+        value: Signal value (0-100 scale), or None if missing
+        confidence: Confidence score (0-1)
+        coverage: Data coverage percentage (0-1)
+        missing_reason: Reason for missing data (e.g., "scraper_failure")
+        coverage_threshold: Minimum coverage to consider reliable (default 0.6)
+
+    Returns:
+        SignalDisplayInfo with display value, reliability flag, and warnings
+    """
+    # Handle missing values
+    if value is None:
+        warning = CoverageWarning.NO_DATA
+        if missing_reason == "scraper_failure":
+            warning = CoverageWarning.SCRAPER_FAILURE
+            warning_text = "Data source error"
+        else:
+            warning_text = "No data available"
+
+        return SignalDisplayInfo(
+            display_value="N/A",
+            is_reliable=False,
+            warning=warning,
+            warning_text=warning_text,
+            coverage_pct=coverage,
+            confidence_label="none",
+        )
+
+    # Check coverage
+    is_reliable = coverage >= coverage_threshold
+    warning = None
+    warning_text = None
+
+    if not is_reliable:
+        warning = CoverageWarning.INSUFFICIENT_COVERAGE
+        warning_text = f"Low due to insufficient data ({coverage:.0%} coverage)"
+
+    # Confidence label
+    if confidence >= 0.7:
+        conf_label = "high"
+    elif confidence >= 0.4:
+        conf_label = "medium"
+    else:
+        conf_label = "low"
+
+    return SignalDisplayInfo(
+        display_value=f"{value:.0f}",
+        is_reliable=is_reliable,
+        warning=warning,
+        warning_text=warning_text,
+        coverage_pct=coverage,
+        confidence_label=conf_label,
+    )
+
+
+def get_coverage_badge(coverage: float) -> Dict[str, Any]:
+    """
+    Get badge display info for coverage level.
+
+    Args:
+        coverage: Coverage percentage (0-1)
+
+    Returns:
+        Dict with label, color, bg_color, and show_warning keys
+    """
+    if coverage >= 0.8:
+        return {
+            "label": "GOOD",
+            "color": "#27ae60",
+            "bg_color": "rgba(39, 174, 96, 0.1)",
+            "show_warning": False,
+        }
+    elif coverage >= 0.6:
+        return {
+            "label": "OK",
+            "color": "#f39c12",
+            "bg_color": "rgba(243, 156, 18, 0.1)",
+            "show_warning": False,
+        }
+    else:
+        return {
+            "label": "LOW",
+            "color": "#e74c3c",
+            "bg_color": "rgba(231, 76, 60, 0.1)",
+            "show_warning": True,
+        }
 
 
 # Confidence thresholds from signal_config.json
