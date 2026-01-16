@@ -16,7 +16,7 @@ Four subscores per bucket:
 from __future__ import annotations
 
 from datetime import datetime, date
-from typing import List, Optional, Dict, Any, Literal
+from typing import List, Optional, Dict, Any, Literal, ClassVar
 from enum import Enum
 from pydantic import BaseModel, Field
 import uuid
@@ -28,6 +28,33 @@ class LifecycleState(str, Enum):
     VALIDATING = "validating"       # TMS + CCS both high
     ESTABLISHING = "establishing"   # CCS + EIS high
     MAINSTREAM = "mainstream"       # All stable, consolidating
+
+
+class HypeCyclePhase(str, Enum):
+    """
+    Gartner Hype Cycle phases for technology maturity positioning.
+
+    Maps signal patterns to familiar business analyst framework:
+    - Innovation Trigger: New tech emerges, high technical interest
+    - Peak of Expectations: Hype maximized, capital floods in
+    - Trough of Disillusionment: Reality check, interest wanes
+    - Slope of Enlightenment: Practical applications emerge
+    - Plateau of Productivity: Mainstream adoption, stable market
+    """
+    INNOVATION_TRIGGER = "innovation_trigger"
+    PEAK_EXPECTATIONS = "peak_expectations"
+    TROUGH_DISILLUSIONMENT = "trough_disillusionment"
+    SLOPE_ENLIGHTENMENT = "slope_enlightenment"
+    PLATEAU_PRODUCTIVITY = "plateau_productivity"
+    UNKNOWN = "unknown"  # Insufficient data to determine phase
+
+
+class CoverageBadge(str, Enum):
+    """Data coverage quality badge for signal completeness."""
+    FULL = "full"           # 6/6 signals have data
+    GOOD = "good"           # 4-5/6 signals have data
+    PARTIAL = "partial"     # 2-3/6 signals have data
+    LOW = "low"             # 0-1/6 signals have data
 
 
 class AlertType(str, Enum):
@@ -45,6 +72,374 @@ class AlertInterpretation(str, Enum):
     RISK = "risk"
     SIGNAL = "signal"
     NEUTRAL = "neutral"
+
+
+class AlertSeverity(str, Enum):
+    """Alert severity levels for graded alerting."""
+    INFO = "info"           # Watch - early signal
+    WARN = "warn"           # Divergence likely
+    CRIT = "crit"           # Divergence + accelerating + persistent
+
+
+class MissingReason(str, Enum):
+    """Reason why a signal value is missing or unreliable."""
+    NO_DATA = "no_data"
+    SCRAPER_FAILURE = "scraper_failure"
+    RATE_LIMITED = "rate_limited"
+    STALE_DATA = "stale_data"
+    INSUFFICIENT_COVERAGE = "insufficient_coverage"
+    PLACEHOLDER = "placeholder"
+
+
+class SignalQuality(str, Enum):
+    """Quality tier for signal reliability."""
+    HIGH = "high"
+    MEDIUM = "medium"
+    LOW = "low"
+    INVALID = "invalid"
+
+
+# =============================================================================
+# Signal Confidence & Coverage Model
+# =============================================================================
+
+class SignalMetadata(BaseModel):
+    """
+    Per-signal metadata for robustness tracking.
+
+    Tracks coverage, confidence, and smoothing for each signal.
+
+    Signal Contract:
+    - value: The score (None if missing)
+    - confidence: How reliable is this value (0-1)
+    - coverage: Data completeness (0-1)
+    - freshness_hours: How old is this data
+    - contributors: Which entities drove this score
+    - missing_reason: Why is value None (if applicable)
+    """
+    # Class-level thresholds
+    COVERAGE_THRESHOLD: ClassVar[float] = 0.6  # Below this, signal is unreliable
+    STALE_HOURS: ClassVar[float] = 168.0       # 7 days = stale
+
+    value: Optional[float] = None          # The actual score (0-100 percentile)
+    raw_value: Optional[float] = None      # Pre-percentile raw value
+
+    # Coverage: how many entities observed vs expected baseline
+    coverage: float = 0.0                  # 0-1, where 1 = full expected coverage
+    entity_count: int = 0                  # Actual entities observed
+    expected_baseline: int = 10            # Expected entities for full coverage
+
+    # Confidence: coverage × stability × mapping_confidence
+    confidence: float = 0.5                # 0-1, overall signal confidence
+    mapping_confidence: float = 0.8        # How well entities map to this bucket
+    stability: float = 0.8                 # Low if high week-over-week variance
+
+    # Freshness tracking
+    freshness_hours: float = 0.0           # Hours since last data update
+
+    # Smoothing (for NAS/CSS volatility reduction)
+    ewma_value: Optional[float] = None     # EWMA-smoothed value (alpha=0.35)
+    raw_unsmoothed: Optional[float] = None # Pre-smoothing value
+    is_smoothed: bool = False              # Whether EWMA was applied
+
+    # Source info
+    sources: List[str] = Field(default_factory=list)  # e.g., ["github", "huggingface"]
+    source_failures: List[str] = Field(default_factory=list)  # Failed sources
+
+    # Contributors tracking (entities that contributed to this signal)
+    contributors: List[Dict[str, Any]] = Field(default_factory=list)
+    # Structure: [{"entity": "langchain/langchain", "contribution": 0.3}, ...]
+
+    # Missing data tracking
+    missing_reason: Optional[MissingReason] = None  # Why value is None
+
+    # Percentile computation basis
+    percentile_basis: int = 0              # How many buckets in the percentile comparison
+
+    @property
+    def is_valid(self) -> bool:
+        """True if signal has a value (not missing)."""
+        return self.value is not None
+
+    @property
+    def is_stale(self) -> bool:
+        """True if data is older than STALE_HOURS threshold."""
+        return self.freshness_hours > self.STALE_HOURS
+
+    @property
+    def is_coverage_insufficient(self) -> bool:
+        """True if coverage is below the minimum threshold."""
+        return self.coverage < self.COVERAGE_THRESHOLD
+
+    @property
+    def quality(self) -> SignalQuality:
+        """
+        Compute signal quality tier based on confidence and coverage.
+
+        Quality tiers:
+        - HIGH: confidence >= 0.8 AND coverage >= 0.6
+        - MEDIUM: confidence >= 0.5 OR coverage >= 0.4
+        - LOW: confidence < 0.5 AND coverage < 0.4
+        - INVALID: value is None
+        """
+        if self.value is None:
+            return SignalQuality.INVALID
+
+        # High quality: both confidence and coverage are good
+        if self.confidence >= 0.8 and self.coverage >= 0.6:
+            return SignalQuality.HIGH
+
+        # Medium quality: at least one metric is acceptable
+        if self.confidence >= 0.5 or self.coverage >= 0.4:
+            return SignalQuality.MEDIUM
+
+        # Low quality: both metrics are poor
+        return SignalQuality.LOW
+
+    def get_display_reason(self) -> str:
+        """Get a human-readable reason for signal quality issues."""
+        if self.value is None and self.missing_reason:
+            reason_map = {
+                MissingReason.NO_DATA: "no data available",
+                MissingReason.SCRAPER_FAILURE: "data collection failed",
+                MissingReason.RATE_LIMITED: "API rate limited",
+                MissingReason.STALE_DATA: "data too old",
+                MissingReason.INSUFFICIENT_COVERAGE: "insufficient data points",
+                MissingReason.PLACEHOLDER: "placeholder value",
+            }
+            return reason_map.get(self.missing_reason, "unknown reason")
+
+        if self.is_coverage_insufficient:
+            coverage_pct = int(self.coverage * 100)
+            return f"low coverage ({coverage_pct}%)"
+
+        if self.is_stale:
+            return f"stale data ({int(self.freshness_hours)}h old)"
+
+        if self.confidence < 0.5:
+            return f"low confidence ({int(self.confidence * 100)}%)"
+
+        return "valid"
+
+    def compute_confidence(self) -> float:
+        """Compute overall confidence from components."""
+        # Coverage contribution (0-0.4)
+        coverage_factor = min(self.coverage, 1.0) * 0.4
+
+        # Stability contribution (0-0.3)
+        stability_factor = self.stability * 0.3
+
+        # Mapping contribution (0-0.3)
+        mapping_factor = self.mapping_confidence * 0.3
+
+        self.confidence = coverage_factor + stability_factor + mapping_factor
+        return self.confidence
+
+    def get_confidence_label(self) -> str:
+        """Get human-readable confidence label."""
+        if self.confidence >= 0.7:
+            return "high"
+        elif self.confidence >= 0.4:
+            return "medium"
+        else:
+            return "low"
+
+
+# =============================================================================
+# Confidence Interval Model
+# =============================================================================
+
+class ConfidenceInterval(BaseModel):
+    """
+    Confidence interval for a signal score.
+
+    Provides low/mid/high bounds for percentile scores to communicate
+    uncertainty to business analysts making investment decisions.
+    """
+    low: float = 50.0       # 5th percentile estimate (lower bound)
+    mid: float = 50.0       # Point estimate (observed value)
+    high: float = 50.0      # 95th percentile estimate (upper bound)
+    variance: float = 10.0  # Overall estimated variance
+
+    # Variance components (for transparency)
+    coverage_variance: float = 0.0   # From entity count vs expected baseline
+    source_variance: float = 0.0     # From diversity across data sources
+    temporal_variance: float = 0.0   # From week-over-week volatility
+
+    @property
+    def range(self) -> float:
+        """Width of the confidence interval."""
+        return self.high - self.low
+
+    @property
+    def is_wide(self) -> bool:
+        """True if interval is too wide to be actionable (>30 points)."""
+        return self.range > 30
+
+    @property
+    def is_reliable(self) -> bool:
+        """True if interval is narrow enough for confident decisions (<15 points)."""
+        return self.range < 15
+
+
+# =============================================================================
+# Investment Thesis (5T) Model
+# =============================================================================
+
+class FiveTScore(BaseModel):
+    """
+    Investment Thesis 5T scoring model.
+
+    Provides structured scoring across five dimensions commonly used
+    by VC/investment analysts:
+    - Team: Quality of founders, key hires, prior exits
+    - Technology: Technical momentum and innovation signals
+    - Market: Market size, growth potential, attention
+    - Timing: Is it the right time? Lifecycle position
+    - Traction: Revenue proxies, adoption signals, enterprise interest
+    """
+    # Scores (0-100 percentile)
+    team: float = 50.0
+    technology: float = 50.0
+    market: float = 50.0
+    timing: float = 50.0
+    traction: float = 50.0
+
+    # Per-dimension confidence (0-1)
+    team_confidence: float = 0.5
+    technology_confidence: float = 0.5
+    market_confidence: float = 0.5
+    timing_confidence: float = 0.5
+    traction_confidence: float = 0.5
+
+    # Evidence for each dimension (for explainability)
+    team_evidence: List[str] = Field(default_factory=list)
+    technology_evidence: List[str] = Field(default_factory=list)
+    market_evidence: List[str] = Field(default_factory=list)
+    timing_evidence: List[str] = Field(default_factory=list)
+    traction_evidence: List[str] = Field(default_factory=list)
+
+    @property
+    def composite(self) -> float:
+        """Weighted composite score (equal weights by default)."""
+        return (self.team + self.technology + self.market +
+                self.timing + self.traction) / 5.0
+
+    @property
+    def overall_confidence(self) -> float:
+        """Average confidence across all dimensions."""
+        return (self.team_confidence + self.technology_confidence +
+                self.market_confidence + self.timing_confidence +
+                self.traction_confidence) / 5.0
+
+    def get_strongest_dimension(self) -> str:
+        """Return the highest-scoring dimension."""
+        scores = {
+            "team": self.team,
+            "technology": self.technology,
+            "market": self.market,
+            "timing": self.timing,
+            "traction": self.traction,
+        }
+        return max(scores, key=scores.get)
+
+    def get_weakest_dimension(self) -> str:
+        """Return the lowest-scoring dimension."""
+        scores = {
+            "team": self.team,
+            "technology": self.technology,
+            "market": self.market,
+            "timing": self.timing,
+            "traction": self.traction,
+        }
+        return min(scores, key=scores.get)
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary for JSON serialization."""
+        return {
+            "team": self.team,
+            "technology": self.technology,
+            "market": self.market,
+            "timing": self.timing,
+            "traction": self.traction,
+            "composite": self.composite,
+            "overall_confidence": self.overall_confidence,
+            "strongest": self.get_strongest_dimension(),
+            "weakest": self.get_weakest_dimension(),
+        }
+
+
+# =============================================================================
+# Data Coverage Model
+# =============================================================================
+
+class DataCoverage(BaseModel):
+    """
+    Tracks data coverage for a bucket profile.
+
+    Provides transparency about which signals have actual data vs
+    which are missing/imputed, displayed as coverage badges in UI.
+    """
+    # Per-signal coverage flags
+    has_tms: bool = False
+    has_ccs: bool = False
+    has_eis: bool = False
+    has_nas: bool = False
+    has_pms: bool = False
+    has_css: bool = False
+
+    # Source details for each signal
+    tms_sources: List[str] = Field(default_factory=list)
+    ccs_sources: List[str] = Field(default_factory=list)
+    eis_sources: List[str] = Field(default_factory=list)
+    nas_sources: List[str] = Field(default_factory=list)
+
+    @property
+    def signal_count(self) -> int:
+        """Count of signals with actual data."""
+        return sum([
+            self.has_tms, self.has_ccs, self.has_eis,
+            self.has_nas, self.has_pms, self.has_css
+        ])
+
+    @property
+    def coverage_score(self) -> float:
+        """Coverage score as percentage (0-100)."""
+        return (self.signal_count / 6) * 100
+
+    @property
+    def badge(self) -> CoverageBadge:
+        """Get coverage badge based on signal count."""
+        if self.signal_count >= 6:
+            return CoverageBadge.FULL
+        elif self.signal_count >= 4:
+            return CoverageBadge.GOOD
+        elif self.signal_count >= 2:
+            return CoverageBadge.PARTIAL
+        else:
+            return CoverageBadge.LOW
+
+    def get_missing_signals(self) -> List[str]:
+        """Return list of missing signal names."""
+        missing = []
+        if not self.has_tms: missing.append("TMS")
+        if not self.has_ccs: missing.append("CCS")
+        if not self.has_eis: missing.append("EIS")
+        if not self.has_nas: missing.append("NAS")
+        if not self.has_pms: missing.append("PMS")
+        if not self.has_css: missing.append("CSS")
+        return missing
+
+    def get_available_signals(self) -> List[str]:
+        """Return list of available signal names."""
+        available = []
+        if self.has_tms: available.append("TMS")
+        if self.has_ccs: available.append("CCS")
+        if self.has_eis: available.append("EIS")
+        if self.has_nas: available.append("NAS")
+        if self.has_pms: available.append("PMS")
+        if self.has_css: available.append("CSS")
+        return available
 
 
 # =============================================================================
@@ -168,7 +563,56 @@ class BucketProfile(BaseModel):
     top_capital_entities: List[str] = Field(default_factory=list)
     top_enterprise_entities: List[str] = Field(default_factory=list)
 
+    # === Signal Metadata (robustness tracking) ===
+    # Per-signal confidence and coverage for transparency
+    signal_metadata: Dict[str, Any] = Field(default_factory=dict)
+    # Structure: {
+    #   "tms": {"value": 92, "confidence": 0.85, "coverage": 0.72, "sources": ["github", "huggingface"]},
+    #   "ccs": {"value": 45, "confidence": 0.65, "coverage": 0.50, "sources": ["crunchbase"]},
+    #   ...
+    # }
+
+    # Data integrity issues (for banner display)
+    data_issues: List[str] = Field(default_factory=list)
+    # e.g., ["GitHub API rate limit hit", "SEC parser failed for 2 filings"]
+
+    # === Business Analyst Frameworks ===
+
+    # Gartner Hype Cycle positioning
+    hype_cycle_phase: HypeCyclePhase = HypeCyclePhase.UNKNOWN
+    hype_cycle_confidence: float = 0.5
+    hype_cycle_rationale: str = ""
+
+    # Investment Thesis 5T scoring
+    five_t_score: Optional[FiveTScore] = None
+
+    # Confidence intervals for key signals
+    confidence_intervals: Dict[str, ConfidenceInterval] = Field(default_factory=dict)
+    # Structure: {"tms": ConfidenceInterval(...), "ccs": ConfidenceInterval(...)}
+
+    # Data coverage tracking
+    data_coverage: Optional[DataCoverage] = None
+
+    # Source credibility metrics
+    source_credibility: float = 0.5  # Overall credibility (0-1)
+    source_credibility_by_signal: Dict[str, float] = Field(default_factory=dict)
+    # Structure: {"tms": 0.6, "ccs": 0.85, "nas": 0.72}
+
     created_at: datetime = Field(default_factory=datetime.utcnow)
+
+    def get_signal_confidence(self, signal_name: str) -> float:
+        """Get confidence for a specific signal."""
+        meta = self.signal_metadata.get(signal_name, {})
+        return meta.get("confidence", 0.5)
+
+    def get_overall_confidence(self) -> float:
+        """Compute overall profile confidence from all signals."""
+        confidences = []
+        for signal in ["tms", "ccs", "nas", "eis"]:
+            meta = self.signal_metadata.get(signal, {})
+            if meta.get("value") is not None:
+                confidences.append(meta.get("confidence", 0.5))
+        return sum(confidences) / len(confidences) if confidences else 0.5
 
     def get_radar_data(self) -> Dict[str, float]:
         """Get data for radar/quadrant visualization."""
@@ -197,6 +641,7 @@ class BucketAlert(BaseModel):
     # Alert details
     alert_type: AlertType
     interpretation: AlertInterpretation
+    severity: AlertSeverity = AlertSeverity.INFO  # Graded severity
 
     # Which scores triggered the alert
     trigger_scores: Dict[str, float]  # {"tms": 92, "ccs": 25}
@@ -205,17 +650,86 @@ class BucketAlert(BaseModel):
     # Magnitude of divergence
     divergence_magnitude: float       # Difference between high/low scores
 
+    # Z-score based detection (change-based, not threshold-based)
+    z_score: Optional[float] = None   # How many std devs from baseline
+    velocity_percentile: Optional[float] = None  # Where is velocity vs history
+
     # Evidence
     rationale: str
     supporting_entities: List[str] = Field(default_factory=list)
     evidence_snippets: List[str] = Field(default_factory=list)
+    evidence_count: int = 0           # Number of supporting data points
+
+    # Signal confidence (affects severity)
+    signal_confidence: float = 0.8    # Confidence in triggering signals
+
+    # Suggested action
+    action_hint: Optional[str] = None  # e.g., "investigate keywords: 'Blackwell supply'"
 
     # Persistence
     first_detected: date
     weeks_persistent: int = 1
     resolved_at: Optional[date] = None
 
+    # Cooldown tracking (prevent alert spam)
+    last_shown: Optional[date] = None  # When was this alert last displayed
+    cooldown_days: int = 7             # Don't re-show for N days unless severity increases
+    previous_severity: Optional[AlertSeverity] = None  # Track if severity changed
+
     created_at: datetime = Field(default_factory=datetime.utcnow)
+
+    def should_show(self, today: date) -> bool:
+        """Check if alert should be shown based on cooldown."""
+        if self.last_shown is None:
+            return True
+        days_since = (today - self.last_shown).days
+        # Show if cooldown expired OR severity increased
+        if days_since >= self.cooldown_days:
+            return True
+        if self.previous_severity and self.severity.value > self.previous_severity.value:
+            return True  # Severity escalated
+        return False
+
+    def compute_severity(self) -> AlertSeverity:
+        """Compute severity based on magnitude, persistence, and confidence."""
+        score = 0
+
+        # Magnitude contribution (0-3 points)
+        if self.divergence_magnitude >= 60:
+            score += 3
+        elif self.divergence_magnitude >= 40:
+            score += 2
+        elif self.divergence_magnitude >= 20:
+            score += 1
+
+        # Persistence contribution (0-2 points)
+        if self.weeks_persistent >= 3:
+            score += 2
+        elif self.weeks_persistent >= 2:
+            score += 1
+
+        # Confidence contribution (0-2 points)
+        if self.signal_confidence >= 0.8:
+            score += 2
+        elif self.signal_confidence >= 0.6:
+            score += 1
+
+        # Z-score contribution (0-2 points)
+        if self.z_score is not None:
+            if abs(self.z_score) >= 2.5:
+                score += 2
+            elif abs(self.z_score) >= 2.0:
+                score += 1
+
+        # Map to severity
+        if score >= 6:
+            self.severity = AlertSeverity.CRIT
+        elif score >= 3:
+            self.severity = AlertSeverity.WARN
+        else:
+            self.severity = AlertSeverity.INFO
+
+        return self.severity
 
 
 # =============================================================================
