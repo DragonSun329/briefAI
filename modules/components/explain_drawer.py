@@ -88,7 +88,9 @@ def build_explain_drawer_data(
 
     # Build sparklines for each signal
     for signal_key in ["tms", "ccs", "nas", "eis", "pms", "css"]:
-        current = profile.get(signal_key) or profile.get(f"{signal_key}_offensive")
+        current = profile.get(signal_key)
+        if current is None:
+            current = profile.get(f"{signal_key}_offensive")
         history = signal_history.get(signal_key, [])
 
         if current is not None:

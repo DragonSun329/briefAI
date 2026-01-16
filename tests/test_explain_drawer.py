@@ -163,6 +163,21 @@ class TestExplainDrawerData:
         assert len(spark.sparkline_chars) > 0
         assert spark.trend in ["rising", "falling", "stable"]
 
+    def test_zero_signal_values_processed(self):
+        """Test that zero signal values are processed correctly."""
+        profile = {
+            "bucket_id": "test",
+            "bucket_name": "Test",
+            "tms": 0,
+            "ccs": 50,
+        }
+        drawer_data = build_explain_drawer_data(profile, {})
+
+        assert drawer_data.signals_available == 2
+        tms_spark = next((s for s in drawer_data.sparklines if s.signal_name == "tms"), None)
+        assert tms_spark is not None
+        assert tms_spark.current_value == 0
+
 
 class TestExplainDrawerRenderer:
     """Tests for the renderer class."""
