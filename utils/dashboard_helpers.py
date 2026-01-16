@@ -11,6 +11,8 @@ Provides helper functions for:
 from typing import Dict, Any, List, Optional
 from dataclasses import dataclass
 
+import plotly.graph_objects as go
+
 
 # Confidence thresholds from signal_config.json
 CONFIDENCE_THRESHOLDS = {
@@ -255,3 +257,91 @@ class AlertCardData:
         self.severity_icon = sev_config["icon"]
         self.severity_color = sev_config["color"]
         self.confidence_style = get_confidence_style(self.confidence)
+
+
+def create_sparkline_figure(
+    history: List[float],
+    signal_name: str,
+    coverage: Optional[float] = None,
+    height: int = 60,
+    width: int = 150,
+) -> go.Figure:
+    """
+    Create a Plotly sparkline figure.
+
+    Args:
+        history: List of values (oldest to newest)
+        signal_name: Signal name for label
+        coverage: Optional coverage percentage (0-1)
+        height: Figure height in pixels
+        width: Figure width in pixels
+
+    Returns:
+        Plotly Figure object
+    """
+    if not history:
+        # Return empty figure
+        fig = go.Figure()
+        fig.add_annotation(text="No data", x=0.5, y=0.5, showarrow=False)
+        fig.update_layout(height=height, width=width, margin=dict(l=0, r=0, t=0, b=0))
+        return fig
+
+    # Determine color based on trend
+    delta = history[-1] - history[0] if len(history) > 1 else 0
+    if delta > 5:
+        color = "#27ae60"  # Green for rising
+    elif delta < -5:
+        color = "#e74c3c"  # Red for falling
+    else:
+        color = "#3498db"  # Blue for stable
+
+    fig = go.Figure()
+
+    # Add line trace
+    fig.add_trace(go.Scatter(
+        y=history,
+        mode="lines",
+        line=dict(color=color, width=2),
+        fill="tozeroy",
+        fillcolor=f"rgba{tuple(list(int(color.lstrip('#')[i:i+2], 16) for i in (0, 2, 4)) + [0.2])}",
+        hoverinfo="skip",
+    ))
+
+    # Current value annotation
+    current = history[-1]
+    delta_text = f"{'↑' if delta > 0 else '↓' if delta < 0 else '→'}{abs(delta):.0f}"
+
+    fig.add_annotation(
+        x=len(history) - 1,
+        y=current,
+        text=f"{current:.0f} {delta_text}",
+        showarrow=False,
+        font=dict(size=10, color=color),
+        xanchor="left",
+        xshift=5,
+    )
+
+    # Coverage annotation if provided
+    if coverage is not None:
+        fig.add_annotation(
+            x=0,
+            y=max(history),
+            text=f"{coverage:.0%}",
+            showarrow=False,
+            font=dict(size=8, color="#666"),
+            xanchor="left",
+            yanchor="top",
+        )
+
+    fig.update_layout(
+        height=height,
+        width=width,
+        margin=dict(l=5, r=40, t=5, b=5),
+        showlegend=False,
+        xaxis=dict(visible=False),
+        yaxis=dict(visible=False),
+        plot_bgcolor="rgba(0,0,0,0)",
+        paper_bgcolor="rgba(0,0,0,0)",
+    )
+
+    return fig

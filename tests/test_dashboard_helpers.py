@@ -99,5 +99,29 @@ class TestSeverityConfig:
         assert config["cooldown_days"] == 14
 
 
+class TestSparklineChart:
+    """Tests for Plotly sparkline generation."""
+
+    def test_create_sparkline_figure(self):
+        """Create a Plotly sparkline figure."""
+        from utils.dashboard_helpers import create_sparkline_figure
+
+        history = [50, 55, 60, 65, 70, 72, 75, 78]
+        fig = create_sparkline_figure(history, "TMS")
+
+        assert fig is not None
+        assert len(fig.data) == 1  # One trace
+
+    def test_sparkline_with_coverage(self):
+        """Sparkline with coverage percentage."""
+        from utils.dashboard_helpers import create_sparkline_figure
+
+        history = [50, 55, 60, 65, 70, 72, 75, 78]
+        fig = create_sparkline_figure(history, "TMS", coverage=0.92)
+
+        # Should have coverage annotation
+        assert fig is not None
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
