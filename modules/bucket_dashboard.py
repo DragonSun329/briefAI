@@ -41,6 +41,9 @@ from utils.alert_store import AlertStore, StoredAlert, AlertSeverity
 from modules.components.alert_card import AlertCardRenderer, build_alert_card_data
 from utils.dashboard_helpers import AlertCardData, format_persistence_text, get_severity_config
 
+# Import explainability drawer for enhanced evidence display
+from modules.components.explain_drawer import ExplainDrawerRenderer, build_explain_drawer_data
+
 
 # =============================================================================
 # HYPE CYCLE VISUALIZATION CONSTANTS
@@ -1867,66 +1870,52 @@ def render_bucket_detail(profile: BucketProfile, labels: Dict[str, str], alerts:
         for issue in profile.data_issues:
             st.caption(f"⚠️ {issue}")
 
-    # === EXPLAINABILITY DRAWER ===
+    # === EXPLAINABILITY DRAWER (ENHANCED) ===
     with st.expander("📊 **Evidence & Explainability**", expanded=False):
-        exp_col1, exp_col2 = st.columns(2)
+        # Build signal history from available data
+        signal_history = {}
 
-        with exp_col1:
-            st.markdown("##### Top Technical Entities")
-            if profile.top_technical_entities:
-                for i, entity in enumerate(profile.top_technical_entities[:5], 1):
-                    st.markdown(f"{i}. {entity}")
-            else:
-                st.caption("No technical entities found")
+        # Try to get historical data if available
+        try:
+            from utils.historical_baselines import HistoricalBaselineCalculator
+            baseline_calc = HistoricalBaselineCalculator()
 
-            st.markdown("##### Top Capital Entities")
-            if profile.top_capital_entities:
-                for i, entity in enumerate(profile.top_capital_entities[:5], 1):
-                    st.markdown(f"{i}. {entity}")
-            else:
-                st.caption("No capital entities found")
+            for signal in ["tms", "ccs", "nas", "eis", "pms", "css"]:
+                history = baseline_calc.get_signal_history(profile.bucket_id, signal, weeks=8)
+                if history:
+                    signal_history[signal] = history
+        except Exception:
+            pass  # Gracefully handle missing historical data
 
-        with exp_col2:
-            st.markdown("##### Top Enterprise Entities")
-            if profile.top_enterprise_entities:
-                for i, entity in enumerate(profile.top_enterprise_entities[:5], 1):
-                    st.markdown(f"{i}. {entity}")
-            else:
-                st.caption("No enterprise entities found")
+        # Get alert info if present
+        alert_info = None
+        if alerts:
+            bucket_alerts = [a for a in alerts if a.bucket_id == profile.bucket_id]
+            if bucket_alerts:
+                alert_info = {
+                    "alert_type": bucket_alerts[0].alert_type.value,
+                    "rationale": getattr(bucket_alerts[0], 'rationale', ''),
+                }
 
-            st.markdown("##### Coverage Summary")
-            st.markdown(f"- **Entity Count:** {profile.entity_count}")
+        # Build profile dict for drawer
+        profile_dict = {
+            "bucket_id": profile.bucket_id,
+            "bucket_name": profile.bucket_name,
+            "tms": getattr(profile, 'tms', None),
+            "ccs": getattr(profile, 'ccs', None),
+            "nas": getattr(profile, 'nas', None),
+            "eis": getattr(profile, 'eis_offensive', None),
+            "pms": getattr(profile, 'pms', None),
+            "css": getattr(profile, 'css', None),
+            "signal_confidence": getattr(profile, 'signal_confidence', 0.5),
+            "signal_metadata": getattr(profile, "signal_metadata", {}),
+            "top_technical_entities": getattr(profile, 'top_technical_entities', []),
+            "top_capital_entities": getattr(profile, 'top_capital_entities', []),
+        }
 
-            # Show per-signal coverage if available
-            for signal in ["tms", "ccs", "nas", "eis"]:
-                meta = profile.signal_metadata.get(signal, {})
-                if meta:
-                    cov = meta.get("coverage", 0)
-                    entity_ct = meta.get("entity_count", 0)
-                    st.caption(f"  {signal.upper()}: {cov:.0%} coverage ({entity_ct} entities)")
-
-        # Motion/Trend info
-        st.markdown("##### 4-Week Momentum")
-        tms_d = profile.tms_delta_4w or 0
-        ccs_d = profile.ccs_delta_4w or 0
-
-        motion_desc = []
-        if tms_d > 5:
-            motion_desc.append(f"TMS ↑{tms_d:.0f}")
-        elif tms_d < -5:
-            motion_desc.append(f"TMS ↓{abs(tms_d):.0f}")
-        else:
-            motion_desc.append("TMS stable")
-
-        if ccs_d > 5:
-            motion_desc.append(f"CCS ↑{ccs_d:.0f}")
-        elif ccs_d < -5:
-            motion_desc.append(f"CCS ↓{abs(ccs_d):.0f}")
-        else:
-            motion_desc.append("CCS stable")
-
-        accel_str = "Accelerating" if profile.velocity_accelerating else "Decelerating"
-        st.markdown(f"{' | '.join(motion_desc)} ({accel_str})")
+        drawer_data = build_explain_drawer_data(profile_dict, signal_history, alert_info)
+        drawer_renderer = ExplainDrawerRenderer()
+        drawer_renderer.render(drawer_data, st)
 
     # === BUCKET ALERTS ===
     if alerts:
