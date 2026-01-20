@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
+import Insights from './pages/Insights'
+import Articles from './pages/Articles'
+import Shortlist from './pages/Shortlist'
+import SignalRadar from './pages/SignalRadar'
+import BucketRadar from './pages/BucketRadar'
 
 function App() {
   const [dates, setDates] = useState([])
@@ -70,13 +75,13 @@ function App() {
         {/* Main Content */}
         <main className="max-w-7xl mx-auto px-4 py-6">
           <Routes>
-            <Route path="/" element={<div className="text-gray-600">洞察页面 - 开发中</div>} />
-            <Route path="/news" element={<div className="text-gray-600">新闻页面 - 开发中</div>} />
-            <Route path="/product" element={<div className="text-gray-600">产品页面 - 开发中</div>} />
-            <Route path="/investing" element={<div className="text-gray-600">投资页面 - 开发中</div>} />
-            <Route path="/shortlist" element={<div className="text-gray-600">速查页面 - 开发中</div>} />
-            <Route path="/signals" element={<div className="text-gray-600">信号雷达 - 开发中</div>} />
-            <Route path="/buckets" element={<div className="text-gray-600">趋势桶雷达 - 开发中</div>} />
+            <Route path="/" element={<Insights date={selectedDate} />} />
+            <Route path="/news" element={<Articles date={selectedDate} pipeline="news" />} />
+            <Route path="/product" element={<Articles date={selectedDate} pipeline="product" />} />
+            <Route path="/investing" element={<Articles date={selectedDate} pipeline="investing" />} />
+            <Route path="/shortlist" element={<Shortlist />} />
+            <Route path="/signals" element={<SignalRadar />} />
+            <Route path="/buckets" element={<BucketRadar />} />
           </Routes>
         </main>
       </div>
