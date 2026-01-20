@@ -48,10 +48,12 @@ app.add_middleware(
 from api.routers import insights
 from api.routers import articles
 from api.routers import companies
+from api.routers import signals
 
 app.include_router(insights.router)
 app.include_router(articles.router)
 app.include_router(companies.router)
+app.include_router(signals.router)
 
 
 @app.get("/api/health")
