@@ -7,6 +7,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 # Setup paths
 _api_dir = Path(__file__).parent.resolve()
@@ -62,3 +63,21 @@ app.include_router(buckets.router)
 def health_check():
     """Health check endpoint."""
     return {"status": "ok"}
+
+
+# Serve React frontend in production
+_frontend_dist = _api_dir.parent / "frontend" / "dist"
+
+if _frontend_dist.exists():
+    from fastapi.responses import FileResponse
+
+    # Serve static assets
+    app.mount("/assets", StaticFiles(directory=str(_frontend_dist / "assets")), name="assets")
+
+    @app.get("/{full_path:path}")
+    async def serve_spa(full_path: str):
+        """Serve React SPA - all non-API routes go to index.html."""
+        file_path = _frontend_dist / full_path
+        if file_path.exists() and file_path.is_file():
+            return FileResponse(file_path)
+        return FileResponse(_frontend_dist / "index.html")
