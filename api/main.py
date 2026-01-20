@@ -45,6 +45,11 @@ app.add_middleware(
 )
 
 
+from api.routers import insights
+
+app.include_router(insights.router)
+
+
 @app.get("/api/health")
 def health_check():
     """Health check endpoint."""
