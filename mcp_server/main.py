@@ -16,10 +16,13 @@ from fastmcp import FastMCP
 mcp = FastMCP("briefai-mcp")
 
 # Register tool modules
-from mcp_server.tools import github_tools
+from mcp_server.tools import github_tools, web_scraper, data_tools, search_tools
 from mcp_server.resources import trend_db
 
 github_tools.register(mcp)
+web_scraper.register(mcp)
+data_tools.register(mcp)
+search_tools.register(mcp)
 trend_db.register(mcp)
 
 # Register prompts with dynamic loading
