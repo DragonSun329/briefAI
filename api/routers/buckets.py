@@ -1,10 +1,11 @@
 """Bucket Radar API endpoints."""
 
 import json
-from typing import List, Optional, Dict, Any
+from datetime import date
+from typing import List, Optional, Dict, Any, Literal
 from pathlib import Path
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel
 
 import sys
@@ -16,6 +17,7 @@ if str(_app_dir) not in sys.path:
 router = APIRouter(prefix="/api/buckets", tags=["buckets"])
 
 BUCKET_CACHE_PATH = Path(__file__).parent.parent.parent / "data" / "cache" / "bucket_profiles.json"
+CN_SIGNALS_DIR = Path(__file__).parent.parent.parent / "data" / "alternative_signals"
 
 
 class BucketProfileOut(BaseModel):
@@ -29,6 +31,11 @@ class BucketProfileOut(BaseModel):
     nas: float
     pms: Optional[float] = None
     css: Optional[float] = None
+    # CN market signals
+    pms_cn: Optional[float] = None
+    mrs_cn: Optional[float] = None
+    flow_cn: Optional[float] = None
+    market: str = "us"  # "us" | "cn"
     heat_score: float
     lifecycle_state: str
     hype_cycle_phase: str
@@ -65,6 +72,37 @@ def load_bucket_data() -> Dict[str, Any]:
         with open(BUCKET_CACHE_PATH, "r", encoding="utf-8") as f:
             data = json.load(f)
         return data
+    except Exception:
+        return {}
+
+
+def load_cn_signals(target_date: Optional[date] = None) -> Dict[str, Any]:
+    """Load CN financial signals for a given date."""
+    if target_date is None:
+        target_date = date.today()
+
+    signals_file = CN_SIGNALS_DIR / f"financial_signals_cn_{target_date.strftime('%Y-%m-%d')}.json"
+
+    if not signals_file.exists():
+        return {}
+
+    try:
+        with open(signals_file, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def load_cn_bucket_names() -> Dict[str, str]:
+    """Load CN bucket display names from config."""
+    config_path = Path(__file__).parent.parent.parent / "config" / "financial_mappings_cn.json"
+    if not config_path.exists():
+        return {}
+
+    try:
+        with open(config_path, "r", encoding="utf-8") as f:
+            cfg = json.load(f)
+        return cfg.get("bucket_names", {})
     except Exception:
         return {}
 
@@ -182,3 +220,76 @@ def get_bucket(bucket_id: str):
             )
 
     raise HTTPException(status_code=404, detail=f"Bucket {bucket_id} not found")
+
+
+# =============================================================================
+# CN Market Endpoints
+# =============================================================================
+
+@router.get("/cn/profiles", response_model=BucketsResponse)
+def get_cn_buckets():
+    """Get CN market bucket profiles based on financial signals."""
+    cn_signals = load_cn_signals()
+    bucket_names = load_cn_bucket_names()
+
+    if not cn_signals:
+        return BucketsResponse(profiles=[], generated_at="", week_start="")
+
+    bucket_signals = cn_signals.get("bucket_signals", {})
+    mrs_cn = cn_signals.get("macro_regime_cn", {}).get("mrs_cn", 0)
+
+    profiles = []
+    for bucket_id, signals in bucket_signals.items():
+        pms_cn = signals.get("pms_cn")
+        if pms_cn is None:
+            continue
+
+        profiles.append(BucketProfileOut(
+            bucket_id=bucket_id,
+            bucket_name=signals.get("bucket_name", bucket_names.get(bucket_id, bucket_id)),
+            week_start=cn_signals.get("date", ""),
+            tms=50.0,  # No TMS for CN buckets
+            ccs=50.0,  # No CCS for CN buckets
+            nas=50.0,
+            pms=None,
+            css=None,
+            pms_cn=pms_cn,
+            mrs_cn=mrs_cn,
+            flow_cn=None,  # TODO: add flow signal
+            market="cn",
+            heat_score=pms_cn,  # Use PMS-CN as heat score for CN
+            lifecycle_state="unknown",
+            hype_cycle_phase="unknown",
+            top_technical_entities=[
+                c.get("ticker", "") for c in signals.get("pms_cn_contributors", [])[:3]
+            ],
+            top_capital_entities=[],
+            entity_count=signals.get("pms_cn_coverage", {}).get("tickers_present", 0),
+        ))
+
+    # Sort by PMS-CN descending
+    profiles.sort(key=lambda x: x.pms_cn or 0, reverse=True)
+
+    return BucketsResponse(
+        profiles=profiles,
+        generated_at=cn_signals.get("generated_at", ""),
+        week_start=cn_signals.get("date", ""),
+    )
+
+
+@router.get("/cn/macro")
+def get_cn_macro():
+    """Get CN macro regime signal."""
+    cn_signals = load_cn_signals()
+
+    if not cn_signals:
+        return {"mrs_cn": 0, "interpretation": "unknown", "raw_macro": []}
+
+    macro_regime = cn_signals.get("macro_regime_cn", {})
+    raw_macro = cn_signals.get("raw", {}).get("macro", [])
+
+    return {
+        "mrs_cn": macro_regime.get("mrs_cn", 0),
+        "interpretation": macro_regime.get("interpretation", "unknown"),
+        "raw_macro": raw_macro,
+    }

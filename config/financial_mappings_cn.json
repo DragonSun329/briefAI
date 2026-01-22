@@ -1,0 +1,104 @@
+{
+  "ticker_to_bucket": {
+    "ai-chips-cn": [
+      "688041.SS",
+      "603986.SS",
+      "688256.SS",
+      "002049.SZ",
+      "688008.SS"
+    ],
+    "ai-infrastructure-cn": [
+      "000977.SZ",
+      "300308.SZ",
+      "002230.SZ",
+      "600703.SS"
+    ],
+    "llm-foundation-cn": [
+      "9988.HK",
+      "0700.HK",
+      "3690.HK",
+      "9888.HK",
+      "9961.HK",
+      "BIDU",
+      "BABA",
+      "0020.HK"
+    ],
+    "ai-enterprise-cn": [
+      "688111.SS",
+      "300033.SZ",
+      "002410.SZ",
+      "300253.SZ"
+    ],
+    "robotics-embodied-cn": [
+      "300024.SZ",
+      "688169.SS",
+      "002747.SZ",
+      "300124.SZ"
+    ],
+    "ai-healthcare-cn": [
+      "300760.SZ",
+      "688050.SS",
+      "300347.SZ"
+    ],
+    "autonomous-vehicles-cn": [
+      "002594.SZ",
+      "601127.SS",
+      "9868.HK",
+      "002920.SZ"
+    ],
+    "ai-consumer-cn": [
+      "9999.HK",
+      "1810.HK",
+      "2382.HK",
+      "300418.SZ"
+    ]
+  },
+  "macro_series_cn": {
+    "10y_bond": {
+      "name": "10Y国债收益率",
+      "weight": 0.25,
+      "invert": true,
+      "description": "China 10-year government bond yield"
+    },
+    "shibor_3m": {
+      "name": "3M SHIBOR",
+      "weight": 0.20,
+      "invert": true,
+      "description": "Shanghai Interbank Offered Rate 3-month"
+    },
+    "usd_cny": {
+      "name": "美元兑人民币",
+      "weight": 0.20,
+      "invert": true,
+      "description": "USD/CNY exchange rate"
+    },
+    "csi300_volatility": {
+      "name": "沪深300波动率",
+      "weight": 0.20,
+      "invert": true,
+      "description": "CSI 300 index volatility"
+    },
+    "northbound_flow": {
+      "name": "北向资金净流入",
+      "weight": 0.15,
+      "invert": false,
+      "description": "Northbound capital net inflow"
+    }
+  },
+  "etf_baskets": {
+    "ai-chips-cn": ["159995.SZ", "516160.SS"],
+    "ai-infrastructure-cn": ["512480.SS"],
+    "robotics-cn": ["562500.SS"],
+    "ai-healthcare-cn": ["159883.SZ"]
+  },
+  "bucket_names": {
+    "ai-chips-cn": "AI芯片",
+    "ai-infrastructure-cn": "AI基础设施",
+    "llm-foundation-cn": "大模型基座",
+    "ai-enterprise-cn": "AI企业应用",
+    "robotics-embodied-cn": "机器人/具身智能",
+    "ai-healthcare-cn": "AI医疗",
+    "autonomous-vehicles-cn": "自动驾驶",
+    "ai-consumer-cn": "AI消费"
+  }
+}
