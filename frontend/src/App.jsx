@@ -7,6 +7,7 @@ import SignalRadar from './pages/SignalRadar'
 import BucketRadar from './pages/BucketRadar'
 import Backtest from './pages/Backtest'
 import Conviction from './pages/Conviction'
+import PipelineHealth from './pages/PipelineHealth'
 
 function App() {
   const [dates, setDates] = useState([])
@@ -57,6 +58,7 @@ function App() {
                 { path: '/buckets', label: '趋势桶雷达', icon: '🎯' },
                 { path: '/conviction', label: 'Conviction', icon: '⚖️' },
                 { path: '/backtest', label: 'Backtest', icon: '⏪' },
+                { path: '/health', label: 'Health', icon: '🩺' },
               ].map(({ path, label, icon }) => (
                 <NavLink
                   key={path}
@@ -88,6 +90,7 @@ function App() {
             <Route path="/buckets" element={<BucketRadar />} />
             <Route path="/conviction" element={<Conviction />} />
             <Route path="/backtest" element={<Backtest />} />
+            <Route path="/health" element={<PipelineHealth />} />
           </Routes>
         </main>
       </div>
