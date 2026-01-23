@@ -5,6 +5,7 @@ import Articles from './pages/Articles'
 import Shortlist from './pages/Shortlist'
 import SignalRadar from './pages/SignalRadar'
 import BucketRadar from './pages/BucketRadar'
+import Backtest from './pages/Backtest'
 
 function App() {
   const [dates, setDates] = useState([])
@@ -53,6 +54,7 @@ function App() {
                 { path: '/shortlist', label: 'AI速查', icon: '🏢' },
                 { path: '/signals', label: '信号雷达', icon: '📡' },
                 { path: '/buckets', label: '趋势桶雷达', icon: '🎯' },
+                { path: '/backtest', label: 'Backtest', icon: '⏪' },
               ].map(({ path, label, icon }) => (
                 <NavLink
                   key={path}
@@ -82,6 +84,7 @@ function App() {
             <Route path="/shortlist" element={<Shortlist />} />
             <Route path="/signals" element={<SignalRadar />} />
             <Route path="/buckets" element={<BucketRadar />} />
+            <Route path="/backtest" element={<Backtest />} />
           </Routes>
         </main>
       </div>

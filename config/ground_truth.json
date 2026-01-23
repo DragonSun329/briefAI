@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Curated breakout events for backtest validation",
+    "last_updated": "2026-01-22"
+  },
+  "breakout_events": [
+    {
+      "entity_id": "deepseek",
+      "entity_name": "DeepSeek",
+      "entity_type": "company",
+      "category": "llm_domestic",
+      "early_signal_date": "2024-12-01",
+      "breakout_date": "2025-01-20",
+      "mainstream_sources": [
+        {"source": "techcrunch", "date": "2025-01-21", "url": "https://techcrunch.com/2025/01/21/deepseek-v3/"},
+        {"source": "wired", "date": "2025-01-22"},
+        {"source": "nytimes", "date": "2025-01-23"}
+      ],
+      "expected_signals": ["github_trending", "hf_downloads", "news_velocity_cn"],
+      "notes": "DeepSeek-V3 release caused massive mainstream attention"
+    },
+    {
+      "entity_id": "cursor",
+      "entity_name": "Cursor",
+      "entity_type": "product",
+      "category": "code-ai",
+      "early_signal_date": "2024-10-15",
+      "breakout_date": "2024-12-15",
+      "mainstream_sources": [
+        {"source": "techcrunch", "date": "2024-12-18"}
+      ],
+      "expected_signals": ["github_stars", "twitter_mentions", "news_velocity"],
+      "notes": "AI IDE category breakout"
+    },
+    {
+      "entity_id": "qwen",
+      "entity_name": "Qwen",
+      "entity_type": "model",
+      "category": "llm_domestic",
+      "early_signal_date": "2024-11-15",
+      "breakout_date": "2025-01-10",
+      "mainstream_sources": [
+        {"source": "techcrunch", "date": "2025-01-12"}
+      ],
+      "expected_signals": ["hf_downloads", "github_trending", "news_velocity_cn"],
+      "notes": "Qwen2.5 series adoption surge"
+    },
+    {
+      "entity_id": "windsurf",
+      "entity_name": "Windsurf",
+      "entity_type": "product",
+      "category": "code-ai",
+      "early_signal_date": "2024-12-01",
+      "breakout_date": "2025-01-15",
+      "mainstream_sources": [
+        {"source": "techcrunch", "date": "2025-01-16"}
+      ],
+      "expected_signals": ["twitter_mentions", "github_stars"],
+      "notes": "Codeium's AI IDE launch"
+    }
+  ],
+  "mainstream_outlets": {
+    "tier1": ["nytimes", "wsj", "washingtonpost", "bbc"],
+    "tier2": ["techcrunch", "wired", "theverge", "arstechnica"],
+    "tier3": ["venturebeat", "zdnet", "engadget"]
+  },
+  "detection_window_weeks": 8
+}

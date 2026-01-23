@@ -51,12 +51,16 @@ from api.routers import articles
 from api.routers import companies
 from api.routers import signals
 from api.routers import buckets
+from api.routers import conviction
+from api.routers import backtest
 
 app.include_router(insights.router)
 app.include_router(articles.router)
 app.include_router(companies.router)
 app.include_router(signals.router)
 app.include_router(buckets.router)
+app.include_router(conviction.router)
+app.include_router(backtest.router)
 
 
 @app.get("/api/health")
