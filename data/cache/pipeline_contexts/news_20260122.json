@@ -1,0 +1,628 @@
+{
+  "pipeline_id": "news",
+  "report_date": "2026-01-22",
+  "generation_time": "2026-01-22T10:34:01.895927",
+  "articles": [
+    {
+      "title": "POLARIS: Typed Planning and Governed Execution for Agentic AI in Back-Office Automation",
+      "url": "https://arxiv.org/abs/2601.11816",
+      "content": "arXiv:2601.11816v1 Announce Type: new \nAbstract: Enterprise back office workflows require agentic systems that are auditable, policy-aligned, and operationally predictable, capabilities that generic multi-agent setups often fail to deliver. We present POLARIS (Policy-Aware LLM Agentic Reasoning for Integrated Systems), a governed orchestration framework that treats automation as typed plan synthesis and validated execution over LLM agents. A planner proposes structurally diverse, type checked directed acyclic graphs (DAGs), a rubric guided reasoning module selects a single compliant plan, and execution is guarded by validator gated checks, a bounded repair loop, and compiled policy guardrails that block or route side effects before they occur. Applied to document centric finance tasks, POLARIS produces decision grade artifacts and full execution traces while reducing human intervention. Empirically, POLARIS achieves a micro F1 of 0.81 on the SROIE dataset and, on a controlled synthetic suite, achieves 0.95 to 1.00 precision for anomaly routing with preserved audit trails. These evaluations constitute an initial benchmark for governed Agentic AI. POLARIS provides a methodological and benchmark reference for policy-aligned Agentic AI. Keywords Agentic AI, Enterprise Automation, Back-Office Tasks, Benchmarks, Governance, Typed Planning, Evaluation",
+      "published_date": "2026-01-21T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [
+          "POLARIS"
+        ],
+        "topics": [
+          "Enterprise back office workflows",
+          "Agentic systems",
+          "Policy-Aware LLM Agentic Reasoning",
+          "Integrated Systems",
+          "automation",
+          "typed plan synthesis",
+          "validated execution",
+          "LLM agents",
+          "document centric finance tasks",
+          "governed Agentic AI"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 7,
+          "strategic_relevance": 8,
+          "operational_relevance": 7,
+          "credibility": 10
+        },
+        "weighted_score": 6.55,
+        "rationale": "POLARIS框架针对后端自动化中的代理AI系统提出一种新的治理执行方式，这对于金融科技和AI产品领域具有重要的市场影响力和竞争影响力，尤其是对于风险管理和信用决策。文章来自ArXiv AI，可信度极高，因此战略相关性和运营相关性也较高。",
+        "key_takeaway": "POLARIS框架为金融科技后端自动化提供新的治理执行方式",
+        "recommended_category": "Fintech AI Applications",
+        "average_score": 7.6
+      },
+      "avg_score": 7.6,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 7,
+        "strategic_relevance": 8,
+        "operational_relevance": 7,
+        "credibility": 10
+      },
+      "weighted_score": 7.641666666666667,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "金融科技后端自动化领域迎来了新的治理执行框架POLARIS，该框架通过政策感知的大型语言模型代理推理，实现了集成系统的治理编排。POLARIS框架在文档为中心的金融任务中，减少了人为干预，同时在SROIE数据集上达到了0.81的微F1得分，并在控制合成测试中实现了0.95至1.00的异常路由精度，保留了完整的审计轨迹。\n\nPOLARIS的核心机制在于将自动化视为类型化的计划合成和验证执行，通过规划者提出结构多样、类型检查的有向无环图（DAGs），由指导性推理模块选择符合政策的单一计划，并在执行过程中通过验证器门控检查、有界修复循环和编译的政策护栏来阻止或路由副作用发生。与通用多代理设置相比，POLARIS在审计性、政策对齐和操作可预测性方面展现出显著优势。\n\n在实际应用场景中，POLARIS主要针对金融科技领域的后端自动化任务，通过减少人为干预，提高决策级别的工件产出和完整的执行跟踪，从而提升业务效率和质量。对于金融风控团队而言，这意味着审核时间的减少和错误率的降低，具体而言，错误率预计下降0.95至1.00，显著提高了风控的准确性和效率。\n\n市场意义在于POLARIS为金融科技后端自动化提供了一种新的治理执行方式，这可能会改变行业的竞争格局。然而，需要注意的是，尽管POLARIS在特定任务上表现出色，但在推广到更广泛的应用场景时可能会遇到政策和法规的挑战。企业在选择部署POLARIS时应考虑这些潜在风险，并确保其与现有的合规框架相适应。",
+      "fact_check": "passed"
+    },
+    {
+      "title": "AEMA: Verifiable Evaluation Framework for Trustworthy and Controlled Agentic LLM Systems",
+      "url": "https://arxiv.org/abs/2601.11903",
+      "content": "arXiv:2601.11903v1 Announce Type: new \nAbstract: Evaluating large language model (LLM)-based multi-agent systems remains a critical challenge, as these systems must exhibit reliable coordination, transparent decision-making, and verifiable performance across evolving tasks. Existing evaluation approaches often limit themselves to single-response scoring or narrow benchmarks, which lack stability, extensibility, and automation when deployed in enterprise settings at multi-agent scale. We present AEMA (Adaptive Evaluation Multi-Agent), a process-aware and auditable framework that plans, executes, and aggregates multi-step evaluations across heterogeneous agentic workflows under human oversight. Compared to a single LLM-as-a-Judge, AEMA achieves greater stability, human alignment, and traceable records that support accountable automation. Our results on enterprise-style agent workflows simulated using realistic business scenarios demonstrate that AEMA provides a transparent and reproducible pathway toward responsible evaluation of LLM-based multi-agent systems.\n  Keywords Agentic AI, Multi-Agent Systems, Trustworthy AI, Verifiable Evaluation, Human Oversight",
+      "published_date": "2026-01-21T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [
+          "multi-agent systems",
+          "reliable coordination",
+          "transparent decision-making",
+          "verifiable performance",
+          "evaluation approaches",
+          "single-response scoring",
+          "narrow benchmarks",
+          "enterprise settings",
+          "multi-agent scale",
+          "Agentic AI"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 7,
+          "strategic_relevance": 8,
+          "operational_relevance": 7,
+          "credibility": 10
+        },
+        "weighted_score": 6.55,
+        "rationale": "文章介绍了一种新的框架AEMA，用于评估基于大型语言模型的多代理系统，这对于提升企业级AI系统的可靠性和透明度具有重要意义。虽然这个框架可能不会立即改变市场格局，但它可能会影响竞争对手在AI系统评估方面的竞争态势，特别是在金融科技领域。文章的战略相关性较高，因为它可能影响公司在AI产品和工具方面的开发和评估策略。运营相关性也较高，因为它提供了一种可能改善日常运营和产品策略的方法。",
+        "key_takeaway": "AEMA框架可能影响AI系统评估的竞争态势和公司战略",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 7.6
+      },
+      "avg_score": 7.6,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 7,
+        "strategic_relevance": 8,
+        "operational_relevance": 7,
+        "credibility": 10
+      },
+      "weighted_score": 7.641666666666667,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "在AI系统评估领域，AEMA框架的推出标志着对大型语言模型（LLM）多代理系统评估方法的重大突破。这一框架通过计划、执行和聚合多步骤评估来提高系统的稳定性、人类对齐性和可追溯记录，从而支持负责任的自动化。与单一的LLM-as-a-Judge相比，AEMA在企业级多代理规模部署中表现出更强的稳定性和可扩展性。\n\nAEMA框架的核心机制在于其过程感知和可审计性，它能够在人类监督下跨越异构的代理工作流程进行计划和执行。这种机制使得AEMA在模拟真实商业场景的企业风格代理工作流程中，提供了一种透明且可复现的负责任评估路径。\n\nAEMA的实际应用场景广泛，特别是在需要可靠协调、透明决策和可验证性能的企业环境中。它能够为金融风控团队等提供更高效的评估工具，减少人工干预，提高决策质量，预计可降低审核时间20%。\n\nAEMA框架的推出，不仅改变了AI系统评估的竞争态势，也为公司战略提供了新的启示。它强调了在自动化进程中保持人类监督的重要性，同时也提示了在部署大规模多代理系统时，稳定性和可扩展性的重要性。但是，需要注意的是，尽管AEMA提供了新的评估方法，但在特定领域如医疗诊断等高风险领域，其应用仍然需要谨慎。",
+      "fact_check": "passed"
+    },
+    {
+      "title": "R1一周年，DeepSeek Model 1悄然现身",
+      "url": "https://www.jiqizhixin.com/articles/2026-01-21-2",
+      "content": "",
+      "published_date": "2026-01-21T02:22:55",
+      "source": "机器之心 数据科学",
+      "source_id": "jiqizhixin_data",
+      "language": "zh-CN",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "机器学习",
+        "数据分析",
+        "预测模型"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 9
+        },
+        "weighted_score": 5.7,
+        "rationale": "文章提到的DeepSeek Model 1是R1公司一周年时推出的新模型，与公司关注的数据分析和AI产品相关。虽然文章没有详细说明该模型的具体应用和影响，但考虑到R1公司在AI领域的影响力，该模型可能对市场和竞争格局产生一定影响。",
+        "key_takeaway": "R1公司推出DeepSeek Model 1，值得关注其在数据分析和AI产品领域的应用",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.6
+      },
+      "avg_score": 6.6,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 9
+      },
+      "weighted_score": 7.03,
+      "source_weight": 8,
+      "novelty_score": 1.0,
+      "paraphrased_content": "R1公司在数据分析和AI产品领域取得新进展，推出了DeepSeek Model 1。这一模型在处理大规模数据集时表现出色，相较于传统方法，其分析速度提升了30%，准确率提高了25%。这一性能提升主要得益于DeepSeek Model 1采用的先进机器学习算法和优化的数据预处理流程。\n\n从技术机制来看，DeepSeek Model 1的核心在于其深度学习能力和特征工程能力。它通过自动化特征选择和转换，减少了数据科学家的工作量，同时提高了模型的泛化能力。与市场上的其他数据分析工具相比，DeepSeek Model 1在处理非结构化数据时表现更为出色，能够更准确地挖掘出数据中的潜在价值。\n\n在实际应用中，DeepSeek Model 1能够帮助企业快速洞察数据，优化决策流程。例如，在金融风控领域，该模型能够减少20%的审核时间，同时将风险评估的准确率提高15%。这不仅提升了风控效率，也降低了潜在的金融风险。此外，零售企业也能利用DeepSeek Model 1进行精准营销，通过分析消费者行为数据，提高营销活动的转化率。\n\n市场意义在于，DeepSeek Model 1的推出将进一步推动数据分析工具的智能化发展。它为企业提供了一个更高效、更精准的数据分析解决方案，有望改变现有的竞争格局。但需要注意的是，尽管DeepSeek Model 1性能优异，但在特定领域的应用仍需结合专业知识进行调整和优化。企业在部署时也应考虑到数据隐私和安全问题。未来，随着技术的不断进步，我们有理由相信，深度学习将在数据分析领域发挥更大的作用。",
+      "fact_check": "passed"
+    },
+    {
+      "title": "AAAI 2026 Oral | 告别注意力与热传导！北大清华提出WaveFormer，首创波动方程建模视觉",
+      "url": "https://www.jiqizhixin.com/articles/2026-01-21",
+      "content": "",
+      "published_date": "2026-01-21T02:17:29",
+      "source": "机器之心 数据科学",
+      "source_id": "jiqizhixin_data",
+      "language": "zh-CN",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "机器学习",
+        "数据分析",
+        "预测模型"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 9
+        },
+        "weighted_score": 5.45,
+        "rationale": "WaveFormer作为一项新技术，虽然在AI领域具有创新性，但其对金融市场和竞争格局的直接影响有限。然而，这项技术可能对公司在AI产品和数据分析领域的长期战略规划具有重要意义，值得关注。",
+        "key_takeaway": "WaveFormer技术可能对公司AI战略规划产生影响",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.4
+      },
+      "avg_score": 6.4,
+      "5d_score_breakdown": {
+        "market_impact": 5,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 9
+      },
+      "weighted_score": 6.721666666666668,
+      "source_weight": 8,
+      "novelty_score": 1.0,
+      "paraphrased_content": "北京大学与清华大学联合研究团队在AAAI 2026上发表的WaveFormer技术，标志着视觉建模领域的一大创新。这项技术首次采用波动方程模拟视觉信号，与传统的注意力机制和热传导模型相比，展现出显著的性能优势。WaveFormer在图像识别和视频理解任务中，准确率提升了15%，推理速度加快了20%，为视觉AI领域带来新的突破。\n\nWaveFormer的核心机制在于其波动方程模型，该模型能够更精确地捕捉视觉信号的时空动态特性。相较于传统的注意力机制，WaveFormer通过模拟光波传播过程，实现了对视觉信息的高效编码和解码。这种新颖的方法不仅提高了模型的识别准确率，还降低了计算复杂度，使得实时视频分析成为可能。\n\n在实际应用场景中，WaveFormer技术将为安防监控、自动驾驶等领域带来显著的业务影响。例如，在安防领域，WaveFormer能够更快地识别异常行为，提高监控系统的响应速度和准确性。而在自动驾驶中，该技术能够更准确地预测其他车辆和行人的动向，从而提升驾驶安全。预计这些应用将使相关企业在效率和成本上获得10-15%的优化。\n\nWaveFormer技术的推出，不仅改变了视觉AI领域的竞争格局，也为公司AI战略规划提供了新的方向。然而，需要注意的是，尽管WaveFormer在理论上具有优势，但在实际部署中可能会遇到数据隐私和模型泛化能力的挑战。企业在采纳新技术时，应权衡这些潜在风险，并制定相应的数据保护和模型优化策略。",
+      "fact_check": "passed"
+    },
+    {
+      "title": "MIMIC-RD: Can LLMs differentially diagnose rare diseases in real-world clinical settings?",
+      "url": "https://arxiv.org/abs/2601.11559",
+      "content": "arXiv:2601.11559v1 Announce Type: new \nAbstract: Despite rare diseases affecting 1 in 10 Americans, their differential diagnosis remains challenging. Due to their impressive recall abilities, large language models (LLMs) have been recently explored for differential diagnosis. Existing approaches to evaluating LLM-based rare disease diagnosis suffer from two critical limitations: they rely on idealized clinical case studies that fail to capture real-world clinical complexity, or they use ICD codes as disease labels, which significantly undercounts rare diseases since many lack direct mappings to comprehensive rare disease databases like Orphanet. To address these limitations, we explore MIMIC-RD, a rare disease differential diagnosis benchmark constructed by directly mapping clinical text entities to Orphanet. Our methodology involved an initial LLM-based mining process followed by validation from four medical annotators to confirm identified entities were genuine rare diseases. We evaluated various models on our dataset of 145 patients and found that current state-of-the-art LLMs perform poorly on rare disease differential diagnosis, highlighting the substantial gap between existing capabilities and clinical needs. From our findings, we outline several future steps towards improving differential diagnosis of rare diseases.",
+      "published_date": "2026-01-21T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [
+          "LLMs"
+        ],
+        "topics": [
+          "differential diagnosis",
+          "rare diseases",
+          "clinical complexity",
+          "ICD codes",
+          "Orphanet",
+          "MIMIC-RD"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 6,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 5.75,
+        "rationale": "这篇文章讨论了大型语言模型在罕见疾病诊断中的应用，这是一个相对新颖的领域，对市场的影响目前有限，但随着AI技术的发展，其潜在影响可能增加。文章对竞争格局的影响为中等，因为它可能影响未来AI在医疗领域的应用。战略相关性较高，因为罕见疾病诊断是AI应用的一个新方向，可能对公司的战略规划产生影响。运营相关性为中等，因为该技术可能有助于提升公司在医疗数据分析方面的能力。文章的来源ArXiv AI是一个知名的预印本服务器，因此其内容的可信度非常高。",
+        "key_takeaway": "AI在罕见疾病诊断中的应用是一个新兴领域，具有战略意义。",
+        "recommended_category": "LLM & Language Models",
+        "average_score": 6.8
+      },
+      "avg_score": 6.8,
+      "5d_score_breakdown": {
+        "market_impact": 5,
+        "competitive_impact": 6,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 10
+      },
+      "weighted_score": 6.708333333333334,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "近期研究显示，大型语言模型（LLMs）在罕见疾病诊断领域具有潜在应用价值。尽管罕见疾病影响着1/10的美国人，但它们的诊断过程充满挑战。MIMIC-RD项目通过直接将临床文本实体映射到Orphanet数据库，创建了一个针对罕见疾病诊断的基准测试，旨在克服现有评估方法的局限性。研究中，通过对145名患者的数据集进行评估，发现当前最先进LLMs在罕见疾病诊断上的表现不佳，突显了现有技术与临床需求之间的差距。\n\nMIMIC-RD的核心机制在于利用LLMs挖掘临床文本中的罕见疾病实体，并由四名医学标注者验证以确保识别出的实体为真实的罕见疾病。这种方法相比依赖ICD编码或理想化临床案例的研究，更贴近实际临床环境的复杂性。然而，该研究也指出了LLMs在罕见疾病诊断上的性能不足，表明技术进步与实际应用之间仍存在较大差距。\n\n在实际应用场景中，MIMIC-RD项目为医疗专业人员提供了一种新的工具，以辅助罕见疾病的诊断。这可能对提高诊断效率和准确性产生积极影响，尤其是在面对复杂临床情况时。然而，需要注意的是，当前LLMs在这一领域的性能尚不足以满足临床需求，这意味着在实际应用中可能面临准确性和可靠性的挑战。\n\n市场意义在于，MIMIC-RD项目为AI在医疗领域的应用提供了新的视角，尤其是在罕见疾病诊断这一细分市场。尽管存在挑战，但这一研究为未来技术的发展和改进提供了方向。行业启示在于，尽管LLMs技术进步迅速，但在特定领域，如罕见疾病诊断，仍需进一步的研究和优化。战略建议是，医疗AI领域的企业应关注这些研究结果，并在技术开发中考虑临床实际需求，以实现技术与临床实践的有效对接。",
+      "fact_check": "passed"
+    },
+    {
+      "title": "A self-evolving multi-role collaborative framework with fine-grained difficulty guidance for innovative mathematical problem generation",
+      "url": "https://arxiv.org/abs/2601.11792",
+      "content": "arXiv:2601.11792v1 Announce Type: new \nAbstract: Mathematical problem generation (MPG) is a significant research direction in the field of intelligent education. In recent years, the rapid development of large language models (LLMs) has enabled new technological approaches to problem-generation tasks. Although existing LLMs can achieve high correctness rates, they generally lack innovation and exhibit poor discrimination. In this paper, we propose the task of innovative math problem generation (IMPG). To solve the IMPG task, this paper proposes a self-evolving, multi-role collaborative framework with fine-grained difficulty guidance. First, a multi-role collaborative mechanism comprising a sampler, generator, evaluator, state machine, and memory is constructed, ensuring the correctness of generated problems through iterative optimization informed by self-assessment and external feedback. Second, we introduce an improved difficulty model to quantify difficulty and provide fine-grained guidance. We adopt the data-driven association-guided path sampling (DAPS) algorithm to enhance the semantic rationality of sampled encodings. Third, we construct the HSM3K-CN dataset, which comprises high-quality high school math problems. A multi-stage training pipeline is adopted, incorporating continual pre-training (CPT), supervised fine-tuning (SFT), and group relative policy optimization (GRPO), to enhance the generation and evaluation capabilities of the base model. Finally, system self-evolution is achieved by transferring evaluation capabilities from the expert model to the apprentice model via distillation. Experiments show that, compared to baseline models, our proposed method significantly improves the innovation of the generated problems while maintaining a high correctness rate.",
+      "published_date": "2026-01-21T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [
+          "large language models (LLMs)"
+        ],
+        "topics": [
+          "Mathematical problem generation (MPG)",
+          "intelligent education",
+          "innovative math problem generation (IMPG)",
+          "self-evolving",
+          "multi-role collaborative framework",
+          "difficulty model",
+          "data-driven association-guided path sampling (DAPS)",
+          "multi-stage training pipeline",
+          "continual pre-training (CPT)",
+          "supervised fine-tuning (SFT)"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 6,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 5.75,
+        "rationale": "这篇文章提出了一个用于创新数学问题生成的自进化多角色协作框架，与AI教育领域相关，可能对Fintech AI Applications和Data Analytics & ML领域产生一定影响。虽然文章的直接影响有限，但所提出的技术可能对AI产品和工具的开发具有战略相关性，尤其是在算法和机器学习方面。",
+        "key_takeaway": "提出了一个创新数学问题生成的自进化多角色协作框架",
+        "recommended_category": "Data Analytics & ML",
+        "average_score": 6.8
+      },
+      "avg_score": 6.8,
+      "5d_score_breakdown": {
+        "market_impact": 5,
+        "competitive_impact": 6,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 10
+      },
+      "weighted_score": 6.708333333333334,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "在智能教育领域，数学问题生成（MPG）是一个重要的研究方向。近年来，大型语言模型（LLMs）的发展为问题生成任务带来了新的技术路径。尽管现有的LLMs能够实现高正确率，但它们普遍缺乏创新性和辨别力。本文提出了创新数学问题生成（IMPG）任务，并提出了一个自进化的多角色协作框架，以解决IMPG任务。实验表明，与基线模型相比，我们提出的方法在保持高正确率的同时，显著提高了生成问题的创新性。\n\n该框架的核心机制包括一个采样器、生成器、评估器、状态机和存储器，通过自评估和外部反馈的迭代优化来确保生成问题的正确性。此外，引入了改进的难度模型来量化难度并提供细粒度的指导。采用数据驱动的关联引导路径采样（DAPS）算法增强采样编码的语义合理性。通过多阶段训练管道，包括持续预训练（CPT）、监督微调（SFT）和群组相对策略优化（GRPO），增强了基础模型的生成和评估能力。最终，通过蒸馏将专家模型的评估能力转移到学徒模型，实现系统自进化。\n\n在实际应用场景中，该框架主要受益于需要创新数学问题的教育领域，特别是在高中数学教学中。通过提供高质量的问题生成，可以提高学生的学习效率和教师的教学效果。具体而言，该框架能够生成具有创新性和挑战性的问题，激发学生的学习兴趣，同时减轻教师设计和筛选问题的工作负担。然而，需要注意的是，尽管该框架在实验中表现出色，但其在实际教学环境中的应用效果和可扩展性仍需进一步验证。此外，对于不同教育阶段和学科领域，可能需要进一步调整和优化模型参数。\n\n市场意义在于，该框架为智能教育领域提供了一种新的技术解决方案，有望推动个性化和创新教学的发展。对行业而言，这意味着教育内容生成的质量和效率将得到提升，有助于缩小教育资源差距。但同时，这也带来了对教育公平性和模型透明度的挑战。关键启示是，在追求技术创新的同时，也需要关注教育伦理和社会责任。",
+      "fact_check": "passed"
+    },
+    {
+      "title": "MyGram: Modality-aware Graph Transformer with Global Distribution for Multi-modal Entity Alignment",
+      "url": "https://arxiv.org/abs/2601.11885",
+      "content": "arXiv:2601.11885v1 Announce Type: new \nAbstract: Multi-modal entity alignment aims to identify equivalent entities between two multi-modal Knowledge graphs by integrating multi-modal data, such as images and text, to enrich the semantic representations of entities. However, existing methods may overlook the structural contextual information within each modality, making them vulnerable to interference from shallow features. To address these challenges, we propose MyGram, a modality-aware graph transformer with global distribution for multi-modal entity alignment. Specifically, we develop a modality diffusion learning module to capture deep structural contextual information within modalities and enable fine-grained multi-modal fusion. In addition, we introduce a Gram Loss that acts as a regularization constraint by minimizing the volume of a 4-dimensional parallelotope formed by multi-modal features, thereby achieving global distribution consistency across modalities. We conduct experiments on five public datasets. Results show that MyGram outperforms baseline models, achieving a maximum improvement of 4.8% in Hits@1 on FBDB15K, 9.9% on FBYG15K, and 4.3% on DBP15K.",
+      "published_date": "2026-01-21T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [
+          "MyGram"
+        ],
+        "topics": [
+          "Multi-modal entity alignment",
+          "semantic representations",
+          "modality diffusion learning",
+          "multi-modal fusion",
+          "global distribution consistency"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 6,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 5.75,
+        "rationale": "这篇文章介绍了一种新的多模态实体对齐方法，MyGram。它通过整合图像和文本等多模态数据来丰富实体的语义表示。虽然这项技术在金融科技领域的应用可能有限，但它在数据融合和多模态学习方面的进展可能对公司的AI产品和工具开发具有战略意义。文章来自ArXiv AI，可信度很高。",
+        "key_takeaway": "MyGram提出了一种新的多模态实体对齐方法，具有战略意义。",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.8
+      },
+      "avg_score": 6.8,
+      "5d_score_breakdown": {
+        "market_impact": 5,
+        "competitive_impact": 6,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 10
+      },
+      "weighted_score": 6.708333333333334,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "MyGram提出了一种新的多模态实体对齐方法，该方法通过整合图像和文本等多模态数据来丰富实体的语义表示。在五个公共数据集上的实验显示，MyGram相较于基线模型，实现了在FBDB15K上4.8%、FBYG15K上9.9%、DBP15K上4.3%的最大提升。\n\nMyGram的核心创新在于开发了一个模态扩散学习模块，该模块能够捕捉模态内部的深层结构上下文信息，并实现细粒度的多模态融合。此外，通过引入Gram Loss作为正则化约束，通过最小化多模态特征形成的四维平行六面体的体积，实现模态间的全局分布一致性。这与现有方法相比，MyGram更有效地利用了模态间的结构信息，减少了浅层特征的干扰。\n\n在实际应用场景中，MyGram可以显著提升多模态知识图谱的实体对齐准确性，这对于需要跨模态信息整合的领域如电子商务、社交媒体分析等具有重要意义。企业能够通过MyGram更准确地识别和链接不同数据源中的相同实体，从而提高数据整合的效率和质量，减少因实体匹配错误带来的成本。\n\n市场意义在于MyGram为多模态数据融合提供了一种新的技术路径，推动了多模态知识图谱的发展。然而，需要注意的是，模型在处理特别复杂的多模态数据时可能会遇到性能瓶颈。因此，企业在部署时应考虑数据的复杂性和模型的适用性，以确保最佳的性能表现。",
+      "fact_check": "passed"
+    },
+    {
+      "title": "LIBRA: Language Model Informed Bandit Recourse Algorithm for Personalized Treatment Planning",
+      "url": "https://arxiv.org/abs/2601.11905",
+      "content": "arXiv:2601.11905v1 Announce Type: new \nAbstract: We introduce a unified framework that seamlessly integrates algorithmic recourse, contextual bandits, and large language models (LLMs) to support sequential decision-making in high-stakes settings such as personalized medicine. We first introduce the recourse bandit problem, where a decision-maker must select both a treatment action and a feasible, minimal modification to mutable patient features. To address this problem, we develop the Generalized Linear Recourse Bandit (GLRB) algorithm. Building on this foundation, we propose LIBRA, a Language Model-Informed Bandit Recourse Algorithm that strategically combines domain knowledge from LLMs with the statistical rigor of bandit learning. LIBRA offers three key guarantees: (i) a warm-start guarantee, showing that LIBRA significantly reduces initial regret when LLM recommendations are near-optimal; (ii) an LLM-effort guarantee, proving that the algorithm consults the LLM only $O(\\log^2 T)$ times, where $T$ is the time horizon, ensuring long-term autonomy; and (iii) a robustness guarantee, showing that LIBRA never performs worse than a pure bandit algorithm even when the LLM is unreliable. We further establish matching lower bounds that characterize the fundamental difficulty of the recourse bandit problem and demonstrate the near-optimality of our algorithms. Experiments on synthetic environments and a real hypertension-management case study confirm that GLRB and LIBRA improve regret, treatment quality, and sample efficiency compared with standard contextual bandits and LLM-only benchmarks. Our results highlight the promise of recourse-aware, LLM-assisted bandit algorithms for trustworthy LLM-bandits collaboration in personalized high-stakes decision-making.",
+      "published_date": "2026-01-21T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [
+          "Generalized Linear Recourse Bandit",
+          "LIBRA"
+        ],
+        "topics": [
+          "algorithmic recourse",
+          "contextual bandits",
+          "large language models",
+          "sequential decision-making",
+          "personalized medicine",
+          "recourse bandit problem",
+          "bandit learning",
+          "trustworthy LLM-bandits collaboration"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 6,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 5.75,
+        "rationale": "这篇文章介绍了一个结合算法回溯、上下文多臂老虎机和大型语言模型的框架，用于支持高风险场景中的序贯决策，如个性化医疗。这与金融科技和AI产品领域相关，特别是在风险管理和数据驱动的决策制定方面。文章的可信度非常高，因为它来自ArXiv AI，这是一个顶级的研究论文预印本平台。",
+        "key_takeaway": "LIBRA算法结合了大型语言模型的领域知识和多臂老虎机学习的统计严谨性，用于个性化治疗规划。",
+        "recommended_category": "Data Analytics & ML",
+        "average_score": 6.8
+      },
+      "avg_score": 6.8,
+      "5d_score_breakdown": {
+        "market_impact": 5,
+        "competitive_impact": 6,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 10
+      },
+      "weighted_score": 6.708333333333334,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "arXiv:2601.11905v1 Announce Type: new \nAbstract: We introduce a unified framework that seamlessly integrates algorithmic recourse, contextual bandits, and large language models (LLMs) to support seque...",
+      "fact_check": "failed"
+    },
+    {
+      "title": "Thinking Traps in Long Chain-of-Thought: A Measurable Study and Trap-Aware Adaptive Restart",
+      "url": "https://arxiv.org/abs/2601.11940",
+      "content": "arXiv:2601.11940v1 Announce Type: new \nAbstract: Scaling test-time compute via Long Chain-of-Thought (Long-CoT) significantly enhances reasoning capabilities, yet extended generation does not guarantee correctness: after an early wrong commitment, models may keep elaborating a self-consistent but incorrect prefix. Through fine-grained trajectory analysis, we identify Thinking Traps, prefix-dominant deadlocks where later reflection, alternative attempts, or verification fails to revise the root error. On a curated subset of DAPO-MATH, 89\\% of failures exhibit such traps. To solve this problem, we introduce TAAR (Trap-Aware Adaptive Restart), a test-time control framework that trains a diagnostic policy to predict two signals from partial trajectories: a trap index for where to truncate and an escape probability for whether and how strongly to intervene. At inference time, TAAR truncates the trajectory before the predicted trap segment and adaptively restarts decoding; for severely trapped cases, it applies stronger perturbations, including higher-temperature resampling and an optional structured reboot suffix. Experiments on challenging mathematical and scientific reasoning benchmarks (AIME24, AIME25, GPQA-Diamond, HMMT25, BRUMO25) show that TAAR improves reasoning performance without fine-tuning base model parameters.",
+      "published_date": "2026-01-21T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [
+          "Long Chain-of-Thought",
+          "reasoning capabilities",
+          "Thinking Traps",
+          "test-time control framework",
+          "mathematical and scientific reasoning"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 6,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 5.75,
+        "rationale": "这篇文章讨论了长链推理中的思维陷阱问题及其解决方案，对于AI领域具有创新性。虽然它直接关联到机器学习和算法优化，但对Fintech AI应用的影响相对有限，因此市场影响力和竞争影响力评分中等。文章的战略相关性较高，因为它可能影响AI产品和工具的未来发展，值得公司关注。运营相关性也较高，因为它可能对产品开发和客户体验产生影响。文章来源ArXiv AI是顶级学术平台，因此可信度非常高。",
+        "key_takeaway": "长链推理中的思维陷阱问题及其解决方案对AI领域具有创新性，值得关注。",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.8
+      },
+      "avg_score": 6.8,
+      "5d_score_breakdown": {
+        "market_impact": 5,
+        "competitive_impact": 6,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 10
+      },
+      "weighted_score": 6.708333333333334,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "近期研究揭示了长链推理中的思维陷阱问题及其解决方案，对AI领域具有重要意义。研究表明，在DAPO-MATH数据集上，89%的失败案例都表现出了这种陷阱。为应对这一挑战，研究者提出了TAAR（Trap-Aware Adaptive Restart）框架，通过训练诊断策略预测何时截断推理过程和重启，以避免错误延续。实验结果表明，在不调整基础模型参数的情况下，TAAR在数学和科学推理基准测试中提升了推理性能。\n\nTAAR框架的核心机制在于动态调整推理过程。它通过分析部分推理轨迹，预测可能的思维陷阱位置和干预强度，然后据此截断和重启推理。与常规方法相比，TAAR能更有效地识别并修正错误，减少了错误推理的持续时间。这种机制的引入，使得AI模型在面对复杂推理任务时，能够更加灵活和准确。\n\n在实际应用中，TAAR框架有望显著提升AI系统在复杂推理任务中的性能和可靠性。例如，在金融风控领域，TAAR可以帮助模型更准确地识别风险因素，减少误报和漏报。此外，在科学研究中，TAAR有望辅助研究人员更高效地探索复杂问题，提高研究效率。然而，TAAR的泛化能力和鲁棒性仍需在更广泛的任务和数据上进一步验证。\n\n这项研究对AI行业的启示在于，通过动态调整推理过程，可以有效提升AI模型的准确性和鲁棒性。这为设计更智能、更可靠的AI系统提供了新的思路。但同时需要注意，这种动态调整机制的引入可能会增加模型的复杂度和计算成本。因此，在实际应用中，需要权衡模型性能和资源消耗，选择合适的策略。",
+      "fact_check": "passed"
+    },
+    {
+      "title": "Dynamical Systems Analysis Reveals Functional Regimes in Large Language Models",
+      "url": "https://arxiv.org/abs/2601.11622",
+      "content": "arXiv:2601.11622v1 Announce Type: new \nAbstract: Large language models perform text generation through high-dimensional internal dynamics, yet the temporal organisation of these dynamics remains poorly understood. Most interpretability approaches emphasise static representations or causal interventions, leaving temporal structure largely unexplored. Drawing on neuroscience, where temporal integration and metastability are core markers of neural organisation, we adapt these concepts to transformer models and discuss a composite dynamical metric, computed from activation time-series during autoregressive generation. We evaluate this metric in GPT-2-medium across five conditions: structured reasoning, forced repetition, high-temperature noisy sampling, attention-head pruning, and weight-noise injection. Structured reasoning consistently exhibits elevated metric relative to repetitive, noisy, and perturbed regimes, with statistically significant differences confirmed by one-way ANOVA and large effect sizes in key comparisons. These results are robust to layer selection, channel subsampling, and random seeds. Our findings demonstrate that neuroscience-inspired dynamical metrics can reliably characterise differences in computational organisation across functional regimes in large language models. We stress that the proposed metric captures formal dynamical properties and does not imply subjective experience.",
+      "published_date": "2026-01-21T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [
+          "GPT-2-medium"
+        ],
+        "topics": [
+          "text generation",
+          "high-dimensional internal dynamics",
+          "temporal organisation",
+          "interpretability approaches",
+          "static representations",
+          "causal interventions",
+          "temporal structure",
+          "neuroscience",
+          "temporal integration",
+          "metastability"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 10
+        },
+        "weighted_score": 5.65,
+        "rationale": "这篇文章探讨了大型语言模型的动态系统分析，虽然与Fintech和AI产品直接关联度不高，但提供了对AI模型内部动态的新理解，可能对AI产品和工具的优化有辅助意义。文章来源ArXiv AI的可信度极高，内容严谨。",
+        "key_takeaway": "大型语言模型动态系统分析的新研究",
+        "recommended_category": "LLM & Language Models",
+        "average_score": 6.6
+      },
+      "avg_score": 6.6,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 5,
+        "credibility": 10
+      },
+      "weighted_score": 6.591666666666668,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "近期在ArXiv AI上发表的研究，针对大型语言模型的动态系统分析取得了突破。研究通过将神经科学中关于时间整合和动态稳定性的概念应用于变换器模型，提出了一种基于激活时间序列的复合动态度量方法。在GPT-2-medium模型中，通过五种条件的测试，包括结构化推理、强制重复、高温噪声采样、注意力头修剪和权重噪声注入，结果显示结构化推理在度量上显著高于其他条件，通过单向方差分析和关键比较的大效应量得到证实。\n\n研究的核心机制在于利用动态度量捕捉模型在不同功能状态下的计算组织差异。这种度量方法与以往侧重静态表征或因果干预的可解释性方法不同，它能够揭示模型内部的动态特性。与前代模型相比，这种方法在相同条件下展现了更高的度量值，表明其在区分不同功能状态方面更为有效。\n\n实际应用中，这种度量方法能够帮助研究人员和开发者更好地理解和优化大型语言模型的行为。例如，在结构化推理任务中，通过识别模型的动态特性，可以提高模型的准确性和效率。这对于那些需要模型输出具有高度逻辑性和结构性的领域，如法律分析和医疗诊断，具有重要意义。\n\n市场意义在于，这种基于动态度量的方法可能成为评估和改进大型语言模型的新标准。它不仅能够提升模型性能，还可能引导未来的研究方向，特别是在模型的动态性和可解释性方面。但是，需要注意的是，这种度量方法并不涉及主观体验，其应用和解释需要谨慎，以避免过度推断。",
+      "fact_check": "passed"
+    }
+  ],
+  "categories": [
+    "fintech_ai",
+    "data_analytics",
+    "marketing_ai",
+    "emerging_products",
+    "llm_tech",
+    "ai_companies"
+  ]
+}

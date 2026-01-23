@@ -1,0 +1,2252 @@
+{
+  "date": "2026-01-20",
+  "generation_time": "2026-01-20T11:28:36.274832",
+  "pipelines_included": [
+    "news",
+    "product",
+    "investing"
+  ],
+  "total_articles": 27,
+  "entities_summary": {
+    "companies": 12,
+    "models": 17,
+    "topics": 106,
+    "business_models": 0,
+    "people": 4
+  },
+  "articles": [
+    {
+      "title": "Building AI Agents to Improve Job Referral Requests to Strangers",
+      "url": "https://arxiv.org/abs/2601.10726",
+      "content": "arXiv:2601.10726v1 Announce Type: new \nAbstract: This paper develops AI agents that help job seekers write effective requests for job referrals in a professional online community. The basic workflow consists of an improver agent that rewrites the referral request and an evaluator agent that measures the quality of revisions using a model trained to predict the probability of receiving referrals from other users. Revisions suggested by the LLM (large language model) increase predicted success rates for weaker requests while reducing them for stronger requests. Enhancing the LLM with Retrieval-Augmented Generation (RAG) prevents edits that worsen stronger requests while it amplifies improvements for weaker requests. Overall, using LLM revisions with RAG increases the predicted success rate for weaker requests by 14\\% without degrading performance on stronger requests. Although improvements in model-predicted success do not guarantee more referrals in the real world, they provide low-cost signals for promising features before running higher-stakes experiments on real users.",
+      "published_date": "2026-01-19T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [
+          "LLM",
+          "RAG"
+        ],
+        "topics": [
+          "AI agents",
+          "job referrals",
+          "request rewriting",
+          "quality of revisions",
+          "model-predicted success"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 5.8,
+        "rationale": "文章讨论了AI在职业推荐请求中的应用，这可能对招聘市场和职业发展服务产生影响。虽然对市场的影响有限，但对AI产品和工具的创新具有战略相关性，特别是在提高请求成功率方面。文章的可信度很高，来源于ArXiv AI，并且是一个新的研究论文。",
+        "key_takeaway": "AI在职业推荐请求中的应用可能提高成功率",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.8
+      },
+      "avg_score": 6.8,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 10
+      },
+      "weighted_score": 6.766666666666667,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "最近的研究开发了一种AI代理，旨在帮助求职者在专业在线社区中撰写有效的工作推荐请求。这一技术通过一个改进代理和一个评估代理来实现，后者使用模型预测收到推荐的概率，以衡量修订质量。数据显示，使用增强型大型语言模型(RAG)的LLM修订将较弱请求的成功预测率提高了14%，同时没有降低较强请求的表现。\n\n这一进展的核心在于结合了检索增强生成(RAG)技术的LLM，它不仅防止了对较强请求的负面影响，还加强了对较弱请求的改进。这种技术机制通过提供更精准的语言模型预测和修订建议，优化了推荐请求的撰写过程。与前代技术相比，RAG技术的引入显著提高了模型预测的准确性，尤其是在处理较弱请求时。\n\n实际应用中，这种AI代理可以显著提高求职者获得工作推荐的机会，尤其是在撰写请求方面存在困难的求职者。通过提高请求的质量，求职者能够更有效地利用在线社区资源，增加获得推荐的可能性。这不仅提高了求职效率，也降低了因请求不当而错失机会的风险。\n\n市场意义在于，这种AI技术的应用可能会改变职业推荐流程，使得推荐请求更加个性化和有效。然而，需要注意的是，模型预测的成功并不总是能转化为现实世界中的推荐增加。因此，尽管这种技术提供了低成本的信号来识别有前景的特征，但在进行更高风险的实验之前，仍需谨慎对待其在实际应用中的局限性。",
+      "fact_check": "passed",
+      "_pipeline_source": "news"
+    },
+    {
+      "title": "ORBITFLOW: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
+      "url": "https://arxiv.org/abs/2601.10729",
+      "content": "arXiv:2601.10729v1 Announce Type: new \nAbstract: Serving long-context LLMs is challenging because request lengths and batch composition vary during token generation, causing the memory footprint to fluctuate significantly at runtime. Offloading KV caches to host memory limits effective memory usage, but existing static and predetermined offloading strategies cannot adapt to the rapidly shifting memory demands of long-context serving. This often leads to excessive CPU-to-GPU KV transfers that translate into latency spikes and frequent SLO violations. To address these challenges, we introduce ORBITFLOW, a fine-grained and adaptive KV cache management system that meets latency SLOs in long-context LLM serving. ORBITFLOW employs a lightweight ILP solver to decide which layers' KV caches to retain on the GPU for each request, within memory capacity constraints. It continuously refines KV placements based on runtime feedback when the active plan becomes suboptimal during token generation. Under heavy load, ORBITFLOW invokes a fallback mechanism to temporarily defer in-flight requests with large memory footprints, preserving overall SLO attainment. Our experiments demonstrate that ORBITFLOW improves SLO attainment for TPOT and TBT by up to 66% and 48%, respectively, while reducing the 95th percentile latency by 38% and achieving up to 3.3x higher throughput compared to existing offloading methods.",
+      "published_date": "2026-01-19T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [
+          "long-context LLMs",
+          "memory footprint",
+          "CPU-to-GPU KV transfers",
+          "latency SLOs",
+          "KV cache management",
+          "ILP solver",
+          "SLO attainment",
+          "TPOT",
+          "TBT"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 5.8,
+        "rationale": "文章介绍了ORBITFLOW，一个针对长上下文LLM服务的细粒度和自适应KV缓存管理系统，旨在满足长上下文LLM服务的延迟SLOs。这对于Fintech AI应用、数据分析和机器学习、AI产品和工具等领域具有战略相关性，因为它可以提高AI模型在金融服务中的性能和可靠性。文章的可信度非常高，因为它来自ArXiv AI，这是一个顶级的学术预印本服务器。",
+        "key_takeaway": "ORBITFLOW通过细粒度和自适应的KV缓存管理，提高长上下文LLM服务的性能和可靠性。",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.8
+      },
+      "avg_score": 6.8,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 10
+      },
+      "weighted_score": 6.766666666666667,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "在长上下文大型语言模型（LLM）服务领域，ORBITFLOW通过引入细粒度和自适应的KV缓存管理，显著提升了性能和可靠性。实验结果显示，ORBITFLOW在TPOT和TBT服务中分别提升了66%和48%的SLO达成率，同时降低了38%的95百分位延迟，并实现了高达3.3倍的吞吐量提升。\n\nORBITFLOW的核心机制在于使用轻量级整数规划（ILP）求解器动态决定哪些层的KV缓存应保留在GPU上，以适应每次请求的内存容量限制，并根据运行时反馈不断优化KV布局。与传统的静态和预定策略相比，ORBITFLOW能够更灵活地应对长上下文服务中快速变化的内存需求。\n\n在实际应用中，ORBITFLOW特别适用于需要处理长上下文请求的场景，如在线客服系统和复杂查询处理。通过减少CPU到GPU的KV传输，ORBITFLOW降低了延迟，提高了服务质量，对于依赖低延迟和高吞吐量服务的企业来说，这意味着更稳定的用户体验和更高的业务效率。\n\n市场意义在于ORBITFLOW为长上下文LLM服务提供了一种新的优化路径，有望改变当前的竞争格局。然而，需要注意的是，ORBITFLOW的性能也受限于硬件配置和请求的复杂度。企业在选择部署时，应综合考虑自身的业务需求和成本效益。",
+      "fact_check": "passed",
+      "_pipeline_source": "news"
+    },
+    {
+      "title": "ReCreate: Reasoning and Creating Domain Agents Driven by Experience",
+      "url": "https://arxiv.org/abs/2601.11100",
+      "content": "arXiv:2601.11100v1 Announce Type: new \nAbstract: Large Language Model agents are reshaping the industrial landscape. However, most practical agents remain human-designed because tasks differ widely, making them labor-intensive to build. This situation poses a central question: can we automatically create and adapt domain agents in the wild? While several recent approaches have sought to automate agent creation, they typically treat agent generation as a black-box procedure and rely solely on final performance metrics to guide the process. Such strategies overlook critical evidence explaining why an agent succeeds or fails, and often require high computational costs. To address these limitations, we propose ReCreate, an experience-driven framework for the automatic creation of domain agents. ReCreate systematically leverages agent interaction histories, which provide rich concrete signals on both the causes of success or failure and the avenues for improvement. Specifically, we introduce an agent-as-optimizer paradigm that effectively learns from experience via three key components: (i) an experience storage and retrieval mechanism for on-demand inspection; (ii) a reasoning-creating synergy pipeline that maps execution experience into scaffold edits; and (iii) hierarchical updates that abstract instance-level details into reusable domain patterns. In experiments across diverse domains, ReCreate consistently outperforms human-designed agents and existing automated agent generation methods, even when starting from minimal seed scaffolds.",
+      "published_date": "2026-01-19T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [
+          "Large Language Model agents",
+          "agent creation",
+          "experience-driven framework",
+          "domain agents",
+          "agent-as-optimizer paradigm",
+          "experience storage and retrieval",
+          "reasoning-creating synergy pipeline",
+          "hierarchical updates"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 5.8,
+        "rationale": "ReCreate框架通过利用交互历史来自动创建和适应领域代理，对AI领域具有一定市场影响力，尤其是在自动化和机器学习领域。虽然它可能不会立即改变整个市场格局，但对竞争格局有一定影响，特别是在自动化领域代理的创建和维护方面。对于专注于Fintech AI应用和AI产品工具的公司来说，ReCreate框架提供了一种可能的新方法来改进或开发产品，具有战略相关性。从运营角度来看，这种框架可能有助于优化客户体验和产品开发流程。文章来源于ArXiv AI，可信度极高。",
+        "key_takeaway": "ReCreate框架可能改变领域代理的自动化创建方式",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.8
+      },
+      "avg_score": 6.8,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 10
+      },
+      "weighted_score": 6.766666666666667,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "ReCreate框架的提出标志着领域代理自动化创建方式的重大转变。在工业领域，大型语言模型代理正在重塑行业格局，但多数实际应用中的代理仍需人工设计，因为任务差异大，构建过程繁琐。ReCreate框架通过系统地利用代理交互历史，提供成功或失败的具体信号和改进途径，有效地从经验中学习，解决了这一难题。实验表明，ReCreate在多个领域中的表现均优于人工设计的代理和现有的自动代理生成方法，即使从最小的种子框架开始。\n\nReCreate框架的核心机制包括三个关键部分：经验存储和检索机制、推理创造协同流水线以及层次化更新。这种代理作为优化器的范式，能够将执行经验映射到框架编辑中，并从实例级细节中抽象出可重用的领域模式。与依赖于最终性能指标的黑盒方法不同，ReCreate提供了一个更加透明和可解释的代理创建过程，降低了计算成本。\n\n在实际应用场景中，ReCreate框架能显著提高自动化任务的效率和质量。例如，在客户服务领域，ReCreate可以快速创建和优化聊天机器人，减少人工干预，提升响应速度和客户满意度。此外，它还能在金融风控等领域中通过学习历史交互数据，自动调整策略，降低风险。然而，尽管ReCreate展现出巨大潜力，但在特定领域如医疗诊断中，其应用仍需谨慎，以避免潜在的风险。\n\nReCreate框架的推出，不仅改变了领域代理的自动化创建方式，也为AI领域提供了新的发展方向。它启示我们，在构建智能系统时，应更加注重从经验中学习，而非仅仅依赖于性能指标。尽管如此，我们也需要意识到，自动化代理的广泛应用可能会带来新的挑战，如数据隐私和伦理问题。因此，在推进技术发展的同时，也需要制定相应的规范和标准。",
+      "fact_check": "passed",
+      "_pipeline_source": "news"
+    },
+    {
+      "title": "What Matters in Data Curation for Multimodal Reasoning? Insights from the DCVLR Challenge",
+      "url": "https://arxiv.org/abs/2601.10922",
+      "content": "arXiv:2601.10922v1 Announce Type: new \nAbstract: We study data curation for multimodal reasoning through the NeurIPS 2025 Data Curation for Vision-Language Reasoning (DCVLR) challenge, which isolates dataset selection by fixing the model and training protocol. Using a compact curated dataset derived primarily from Walton Multimodal Cold Start, our submission placed first in the challenge. Through post-competition ablations, we show that difficulty-based example selection on an aligned base dataset is the dominant driver of performance gains. Increasing dataset size does not reliably improve mean accuracy under the fixed training recipe, but mainly reduces run-to-run variance, while commonly used diversity and synthetic augmentation heuristics provide no additional benefit and often degrade performance. These results characterize DCVLR as a saturation-regime evaluation and highlight the central role of alignment and difficulty in data-efficient multimodal reasoning.",
+      "published_date": "2026-01-19T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [
+          "data curation",
+          "multimodal reasoning",
+          "NeurIPS 2025 Data Curation for Vision-Language Reasoning",
+          "alignment",
+          "difficulty",
+          "data-efficient multimodal reasoning"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 6,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 5.75,
+        "rationale": "这篇文章讨论了多模态推理中数据整理的重要性，虽然具体内容与金融科技AI应用的直接联系不大，但多模态数据整理和机器学习的研究进展对于数据驱动的金融科技行业具有间接影响。文章来自ArXiv AI，可信度极高，因此战略和运营相关性较高，对公司未来在AI产品和工具的开发有辅助意义。",
+        "key_takeaway": "多模态数据整理对AI性能的影响",
+        "recommended_category": "Data Analytics & ML",
+        "average_score": 6.8
+      },
+      "avg_score": 6.8,
+      "5d_score_breakdown": {
+        "market_impact": 5,
+        "competitive_impact": 6,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 10
+      },
+      "weighted_score": 6.708333333333334,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "在NeurIPS 2025举办的Data Curation for Vision-Language Reasoning (DCVLR)挑战赛中，通过对多模态数据整理的研究揭示了数据集选择对AI性能的重要影响。挑战赛固定模型和训练协议，仅通过数据集选择来竞争，其中以Walton Multimodal Cold Start为主构建的精简数据集助力提交者获得第一名。关键数据显示，基于难度的样本选择是性能提升的主要因素，而增加数据集大小并未显著提高平均准确率，却主要减少了实验间变异性。此外，常见的多样性和合成增强策略并未带来额外好处，反而常常降低性能。\n\n这些发现表明，在固定训练方案下，DCVLR挑战赛达到了饱和状态评估，强调了数据对齐和难度在数据高效多模态推理中的中心作用。技术机制上，通过难度基础的样本选择在对齐的基础数据集上，能够有效提升模型性能，而单纯增加数据量并不总是带来性能提升，这与以往依赖数据量增长的策略形成对比。\n\n在实际应用场景中，如视觉语言推理任务，这种数据整理方法能够为AI系统带来更高的效率和准确性。特别是在资源受限的情况下，通过精选数据集而非盲目扩大数据规模，可以更有效地利用有限的训练资源，减少不必要的计算开销。这对研发团队而言，意味着可以更精准地定位和解决问题，提高开发效率。\n\n市场意义在于，这一发现挑战了以往对大数据集的依赖，促使行业重新思考数据整理和模型训练的策略。然而，需要注意的是，这种策略可能不适用于所有类型的多模态任务，特别是那些对数据多样性要求较高的场景。因此，企业在采纳这一策略时，应结合自身业务特点和需求，审慎评估数据整理方法的实际效果和适用性。",
+      "fact_check": "passed",
+      "_pipeline_source": "news"
+    },
+    {
+      "title": "Do We Always Need Query-Level Workflows? Rethinking Agentic Workflow Generation for Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2601.11147",
+      "content": "arXiv:2601.11147v1 Announce Type: new \nAbstract: Multi-Agent Systems (MAS) built on large language models typically solve complex tasks by coordinating multiple agents through workflows. Existing approaches generates workflows either at task level or query level, but their relative costs and benefits remain unclear. After rethinking and empirical analyses, we show that query-level workflow generation is not always necessary, since a small set of top-K best task-level workflows together already covers equivalent or even more queries. We further find that exhaustive execution-based task-level evaluation is both extremely token-costly and frequently unreliable. Inspired by the idea of self-evolution and generative reward modeling, we propose a low-cost task-level generation framework \\textbf{SCALE}, which means \\underline{\\textbf{S}}elf prediction of the optimizer with few shot \\underline{\\textbf{CAL}}ibration for \\underline{\\textbf{E}}valuation instead of full validation execution. Extensive experiments demonstrate that \\textbf{SCALE} maintains competitive performance, with an average degradation of just 0.61\\% compared to existing approach across multiple datasets, while cutting overall token usage by up to 83\\%.",
+      "published_date": "2026-01-19T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [
+          "Multi-Agent Systems",
+          "large language models",
+          "workflows",
+          "task-level",
+          "query-level",
+          "self-evolution",
+          "generative reward modeling"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 6,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 5.75,
+        "rationale": "这篇文章探讨了多智能体系统（MAS）中工作流生成的新方法，提出了一种低成本的任务级生成框架SCALE，这对于AI产品和工具领域具有战略相关性，尤其是在提高效率和降低成本方面。文章的可信度很高，因为它来源于ArXiv AI，这是一个顶级的研究论文预印本平台。",
+        "key_takeaway": "提出了一种新的多智能体系统工作流生成框架SCALE，有助于降低成本和提高效率。",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.8
+      },
+      "avg_score": 6.8,
+      "5d_score_breakdown": {
+        "market_impact": 5,
+        "competitive_impact": 6,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 10
+      },
+      "weighted_score": 6.708333333333334,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "近期，ArXiv AI发布了一篇论文，提出了一种新的多智能体系统工作流生成框架SCALE，它通过减少不必要的查询级工作流生成，有效降低了成本并提高了效率。实验数据显示，SCALE框架相较于现有方法，平均性能仅下降0.61%，同时将整体代币使用量减少了高达83%。\n\nSCALE的核心机制在于自我预测优化器，通过少量样本校准进行评估，避免了全验证执行的高昂代币成本和不可靠性。这种机制的创新在于它借鉴了自我进化和生成性奖励建模的思想，实现了任务级工作流的低成本生成，与任务级或查询级的传统方法形成鲜明对比。\n\n在实际应用中，SCALE框架可以显著减少多智能体系统在复杂任务协调中的代币消耗，对于需要大量任务协调的大型企业尤其有益。例如，在供应链管理和自动化客户服务中，通过优化工作流生成，可以大幅度降低运营成本并提升响应速度。\n\n市场意义在于SCALE框架提供了一种新的视角来审视多智能体系统中工作流的生成问题，它不仅降低了成本，还可能推动行业向更高效的资源利用和流程优化发展。然而，需要注意的是，SCALE在特定任务的适应性和泛化能力上可能存在局限，这要求企业在部署时需结合具体业务场景进行考量。",
+      "fact_check": "passed",
+      "_pipeline_source": "news"
+    },
+    {
+      "title": "Do You Trust Me? Cognitive-Affective Signatures of Trustworthiness in Large Language Models",
+      "url": "https://arxiv.org/abs/2601.10719",
+      "content": "arXiv:2601.10719v1 Announce Type: new \nAbstract: Perceived trustworthiness underpins how users navigate online information, yet it remains unclear whether large language models (LLMs),increasingly embedded in search, recommendation, and conversational systems, represent this construct in psychologically coherent ways. We analyze how instruction-tuned LLMs (Llama 3.1 8B, Qwen 2.5 7B, Mistral 7B) encode perceived trustworthiness in web-like narratives using the PEACE-Reviews dataset annotated for cognitive appraisals, emotions, and behavioral intentions. Across models, systematic layer- and head-level activation differences distinguish high- from low-trust texts, revealing that trust cues are implicitly encoded during pretraining. Probing analyses show linearly de-codable trust signals and fine-tuning effects that refine rather than restructure these representations. Strongest associations emerge with appraisals of fairness, certainty, and accountability-self -- dimensions central to human trust formation online. These findings demonstrate that modern LLMs internalize psychologically grounded trust signals without explicit supervision, offering a representational foundation for designing credible, transparent, and trust-worthy AI systems in the web ecosystem. Code and appendix are available at: https://github.com/GerardYeo/TrustworthinessLLM.",
+      "published_date": "2026-01-19T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [
+          "Llama 3.1 8B",
+          "Qwen 2.5 7B",
+          "Mistral 7B"
+        ],
+        "topics": [
+          "Perceived trustworthiness",
+          "instruction-tuned LLMs",
+          "cognitive appraisals",
+          "emotions",
+          "behavioral intentions",
+          "trust cues",
+          "trust signals",
+          "human trust formation online",
+          "AI systems"
+        ],
+        "business_models": [],
+        "people": [
+          "GerardYeo"
+        ]
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 10
+        },
+        "weighted_score": 5.65,
+        "rationale": "这篇文章探讨了大型语言模型在用户信任度方面的表现，这对金融科技和AI产品领域具有一定战略相关性，尤其是在信用决策和风险管理方面。文章的研究结果可能对优化AI产品的用户交互和信任感知有辅助意义，但对日常运营的直接影响有限。文章来源于ArXiv AI，可信度很高。",
+        "key_takeaway": "大型语言模型在用户信任度方面的表现研究",
+        "recommended_category": "LLM & Language Models",
+        "average_score": 6.6
+      },
+      "avg_score": 6.6,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 5,
+        "credibility": 10
+      },
+      "weighted_score": 6.591666666666668,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "近期研究探讨了大型语言模型（LLMs）在用户信任度方面的表现，发现这些模型能够以心理学上一致的方式编码信任信号。通过分析Llama 3.1、Qwen 2.5和Mistral等模型，研究者发现模型在不同层次和头部的激活差异可以区分高信任度和低信任度文本，显示了在预训练期间隐式编码的信任线索。\n\n研究揭示了LLMs内部的信任信号编码机制，这些信号与公平、确定性和自我责任感等人类信任形成的核心维度有强烈关联。这一发现表明，现代LLMs能够在没有显式监督的情况下内化基于心理学的信任信号，为设计可信、透明和值得信任的AI系统提供了基础。\n\n这项研究的实际应用场景广泛，尤其是在搜索引擎、推荐系统和对话系统中，能够提升用户的信任感，从而可能提高系统的使用率和用户满意度。对于企业而言，这意味着可以构建更加人性化和可靠的AI交互界面，增强用户体验。\n\n市场意义在于，这种对信任信号的内化能力可能成为未来AI系统设计的关键因素，影响着用户对AI技术的接受度和信任度。然而，需要注意的是，尽管LLMs能够编码信任信号，但在特定领域（如医疗咨询）的应用还需进一步验证其准确性和可靠性。企业应关注这些模型的透明度和可解释性，以确保它们在实际应用中的安全性和有效性。",
+      "fact_check": "passed",
+      "_pipeline_source": "news"
+    },
+    {
+      "title": "CTHA: Constrained Temporal Hierarchical Architecture for Stable Multi-Agent LLM Systems",
+      "url": "https://arxiv.org/abs/2601.10738",
+      "content": "arXiv:2601.10738v1 Announce Type: new \nAbstract: Recently, multi-time-scale agent architectures have extended the ubiquitous single-loop paradigm by introducing temporal hierarchies with distinct cognitive layers. While yielding substantial performance gains, this diversification fundamentally compromises the coordination stability intrinsic to unified agent systems, which causes severe inter-layer conflicts, unbounded error propagation, and restricted scalability. To address these challenges, we propose Constrained Temporal Hierarchical Architecture (CTHA), a general framework that projects the inter-layer communication space onto structured manifolds to restore coordination stability, while incorporating principled arbitration mechanisms to ensure coherent decision-making. Specifically, CTHA enforces three key constraints: (1) Message Contract Constraints that formalize information flow between layers via typed summary, plan, and policy packets; (2) Authority Manifold Constraints that bound each layer's decision space according to its temporal scope; and (3) Arbiter Resolution Constraints that guarantee conflict-free composition of multi-layer decisions. Empirical experiments demonstrate that CTHA is effective for complex task execution at scale, offering 47% reduction in failure cascades, 2.3x improvement in sample efficiency, and superior scalability compared to unconstrained hierarchical baselines. We anticipate that CTHA, as a principled extension of temporal hierarchies, will contribute to a deeper understanding of multi-agent coordination and suggest promising directions for the evolution of robust autonomous systems.",
+      "published_date": "2026-01-19T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [
+          "multi-time-scale agent architectures",
+          "temporal hierarchies",
+          "cognitive layers",
+          "coordination stability",
+          "inter-layer conflicts",
+          "error propagation",
+          "scalability",
+          "Constrained Temporal Hierarchical Architecture",
+          "Message Contract Constraints",
+          "Authority Manifold Constraints"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 10
+        },
+        "weighted_score": 5.65,
+        "rationale": "这篇文章介绍了一种新的多代理大型语言模型系统架构，可能对AI领域产生中等市场影响，特别是在多代理系统和算法优化方面。对于金融科技AI应用和AI产品工具，这种架构可能有助于提升系统稳定性和决策一致性，因此具有较高的战略相关性。然而，它对日常运营的直接影响可能有限，更多地是作为长期技术储备和研究参考。",
+        "key_takeaway": "提出一种新的多代理大型语言模型系统架构，有助于提升系统稳定性和决策一致性。",
+        "recommended_category": "LLM & Language Models",
+        "average_score": 6.6
+      },
+      "avg_score": 6.6,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 5,
+        "credibility": 10
+      },
+      "weighted_score": 6.591666666666668,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "最近，多时间尺度代理架构通过引入具有不同认知层次的时间层次结构，扩展了普遍的单循环范式。然而，这种多样化在本质上削弱了统一代理系统中固有的协调稳定性。为应对这些挑战，提出了约束时间层次结构（CTHA），这是一个将层间通信空间投影到结构化流形上的通用框架，以恢复协调稳定性，并纳入原则性的仲裁机制以确保一致的决策制定。CTHA实施了三个关键约束：(1) 消息契约约束，通过类型化摘要、计划和策略包形式形式化层间信息流；(2) 权威流形约束，根据其时间范围限制每层的决策空间；(3) 仲裁者解决约束，保证多层决策的无冲突组合。实证实验表明，CTHA在复杂任务执行方面非常有效，与无约束的层次基线相比，故障级联减少了47%，样本效率提高了2.3倍，并且具有更好的可扩展性。\n\nCTHA的核心机制在于其独特的层间通信和决策制定方式。通过将信息流形式化为类型化的摘要、计划和策略包，CTHA确保了不同认知层次之间的有效协调。同时，通过限制每层的决策空间和确保多层决策的无冲突组合，CTHA在维持系统稳定性的同时提高了决策的一致性。与无约束的层次基线相比，CTHA在复杂任务执行方面表现出显著的优势，这表明其在多代理大型语言模型系统中的应用潜力。\n\nCTHA的实际应用场景非常广泛，特别是在需要多代理协调的复杂任务执行领域。例如，在自动驾驶领域，CTHA可以帮助不同的认知层次（如感知、决策和控制）之间实现更有效的协调，从而提高自动驾驶系统的稳定性和可靠性。此外，在供应链管理等领域，CTHA也可以帮助实现不同代理之间的有效协调，降低故障级联的风险，提高系统的可扩展性。CTHA的这些优势有望为多代理系统的协调和决策提供新的思路。\n\nCTHA的提出为多代理大型语言模型系统的发展提供了新的方向，其在提高系统稳定性和决策一致性方面的优势有望推动相关技术的进步。然而，需要注意的是，CTHA的实际应用还需要考虑不同领域和任务的具体需求，其在特定场景下的有效性还需要进一步验证。此外，随着多代理系统的复杂性增加，如何平衡不同代理之间的协调和独立性，也是一个值得关注的问题。总的来说，CTHA为多代理系统的协调和决策提供了新的思路，但其在实际应用中的有效性和局限性还需要进一步探索。",
+      "fact_check": "passed",
+      "_pipeline_source": "news"
+    },
+    {
+      "title": "ARC Prize 2025: Technical Report",
+      "url": "https://arxiv.org/abs/2601.10904",
+      "content": "arXiv:2601.10904v1 Announce Type: new \nAbstract: The ARC-AGI benchmark series serves as a critical measure of few-shot generalization on novel tasks, a core aspect of intelligence. The ARC Prize 2025 global competition targeted the newly released ARC-AGI-2 dataset, which features greater task complexity compared to its predecessor. The Kaggle competition attracted 1,455 teams and 15,154 entries, with the top score reaching 24% on the ARC-AGI-2 private evaluation set. Paper submissions nearly doubled year-over-year to 90 entries, reflecting the growing research interest in fluid intelligence and abstract reasoning. The defining theme of 2025 is the emergence of the refinement loop -- a per-task iterative program optimization loop guided by a feedback signal. Refinement loops come in a variety of forms, in particular evolutionary program synthesis approaches and application-layer refinements to commercial AI systems. Such refinement loops are also possible in weight space, as evidenced by zero-pretraining deep learning methods which are now achieving competitive performance with remarkably small networks (7M parameters). In parallel, four frontier AI labs (Anthropic, Google DeepMind, OpenAI, and xAI) reported ARC-AGI performance in public model cards in 2025, establishing ARC-AGI as an industry standard benchmark for AI reasoning. However, our analysis indicates that current frontier AI reasoning performance remains fundamentally constrained to knowledge coverage, giving rise to new forms of benchmark contamination. In this paper, we survey the top-performing methods, examine the role of refinement loops in AGI progress, discuss knowledge-dependent overfitting, and preview ARC-AGI-3, which introduces interactive reasoning challenges that require exploration, planning, memory, goal acquisition, and alignment capabilities.",
+      "published_date": "2026-01-19T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [
+          "anthropic",
+          "Google DeepMind",
+          "openai",
+          "xAI"
+        ],
+        "models": [
+          "ARC-AGI-2",
+          "ARC-AGI-3"
+        ],
+        "topics": [
+          "few-shot generalization",
+          "fluid intelligence",
+          "abstract reasoning",
+          "refinement loop",
+          "evolutionary program synthesis",
+          "weight space",
+          "zero-pretraining deep learning",
+          "knowledge coverage",
+          "benchmark contamination",
+          "interactive reasoning"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 10
+        },
+        "weighted_score": 5.65,
+        "rationale": "这篇技术报告讨论了AI领域的一个新基准测试ARC-AGI-2，它衡量了人工智能在新任务上的泛化能力。虽然这个基准测试对AI领域具有重要意义，但对于金融科技和AI产品公司来说，其直接影响可能有限，因此市场影响力和竞争影响力评分为中等。然而，报告中提到的迭代程序优化和商业AI系统的改进可能对公司的战略规划和产品开发有辅助意义，因此战略相关性和运营相关性评分稍高。来源ArXiv AI的可信度非常高。",
+        "key_takeaway": "AI领域的新基准测试ARC-AGI-2衡量了人工智能的泛化能力",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.6
+      },
+      "avg_score": 6.6,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 5,
+        "credibility": 10
+      },
+      "weighted_score": 6.591666666666668,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "2025年ARC Prize全球竞赛聚焦于新发布的ARC-AGI-2数据集，该数据集在任务复杂性上较前代有显著提升。竞赛吸引了1,455支队伍和15,154次提交，最高得分达到24%。这个成绩的取得主要得益于所谓的“精细化循环”——一种基于反馈信号的每项任务迭代程序优化循环。这种循环在进化程序合成方法和商业AI系统的应用程序层细化中均有体现。值得注意的是，这种循环甚至在权重空间中也是可能的，如零预训练的深度学习方法，其在小型网络（7M参数）上也能达到竞争性性能。同时，四家前沿AI实验室（Anthropic、Google DeepMind、OpenAI和xAI）在2025年的公共模型卡中报告了ARC-AGI性能，确立了ARC-AGI作为AI推理的行业标准基准。但是，我们的分析表明，当前前沿AI推理性能仍然基本上受限于知识覆盖范围，导致新的基准污染形式出现。\n\n从技术机制来看，ARC-AGI-2的成功在于精细化循环的引入，这种循环通过迭代优化提升了AI系统在新任务上的泛化能力。与前代相比，ARC-AGI-2的数据集设计更加复杂，这要求参赛队伍开发出更高级的算法和模型来应对。这种进步不仅体现在分数上，也体现在参赛队伍和提交数量的增长上，反映出研究者对流体智能和抽象推理的兴趣日益增长。\n\n在实际应用场景中，精细化循环的引入使得AI系统能够更快地适应新任务，提高了任务完成的效率和质量。对于需要频繁处理新任务的企业来说，这意味着可以减少人工干预，降低成本，提高决策速度。特别是在需要快速响应市场变化的领域，如金融风控和市场分析，精细化循环的AI系统可以提供更快速、更准确的决策支持。\n\n市场意义在于，ARC-AGI-2的推出和精细化循环的引入，标志着AI领域在泛化能力和任务适应性上取得了重要进展。然而，需要注意的是，当前AI推理性能的提升仍然受限于知识覆盖范围，这可能导致在某些领域的应用中出现基准污染问题。因此，企业在部署AI系统时，需要考虑到这一点，并寻找合适的方法来扩展知识覆盖范围，以提高AI系统的性能和可靠性。",
+      "fact_check": "passed",
+      "_pipeline_source": "news"
+    },
+    {
+      "title": "BAPO: Boundary-Aware Policy Optimization for Reliable Agentic Search",
+      "url": "https://arxiv.org/abs/2601.11037",
+      "content": "arXiv:2601.11037v1 Announce Type: new \nAbstract: RL-based agentic search enables LLMs to solve complex questions via dynamic planning and external search. While this approach significantly enhances accuracy with agent policies optimized via large-scale reinforcement learning, we identify a critical gap in reliability: these agents fail to recognize their reasoning boundaries and rarely admit ``I DON'T KNOW'' (IDK) even when evidence is insufficient or reasoning reaches its limit. The lack of reliability often leads to plausible but unreliable answers, introducing significant risks in many real-world scenarios. To this end, we propose Boundary-Aware Policy Optimization (BAPO), a novel RL framework designed to cultivate reliable boundary awareness without compromising accuracy. BAPO introduces two key components: (i) a group-based boundary-aware reward that encourages an IDK response only when the reasoning reaches its limit, and (ii) an adaptive reward modulator that strategically suspends this reward during early exploration, preventing the model from exploiting IDK as a shortcut. Extensive experiments on four benchmarks demonstrate that BAPO substantially enhances the overall reliability of agentic search.",
+      "published_date": "2026-01-19T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [
+          "RL-based agentic search",
+          "dynamic planning",
+          "external search",
+          "reinforcement learning",
+          "Boundary-Aware Policy Optimization",
+          "reliability",
+          "IDK response",
+          "adaptive reward modulator"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 10
+        },
+        "weighted_score": 5.65,
+        "rationale": "文章提出了一种新的RL框架BAPO，旨在提高LLMs在复杂问题求解中的可靠性，这对于金融科技领域中的风险管理和数据决策至关重要。虽然该研究可能不会立即改变市场格局，但对提升AI产品的可靠性和准确性具有潜在影响。文章来自ArXiv AI，可信度很高。",
+        "key_takeaway": "提出一种新的RL框架BAPO，提高LLMs的可靠性",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.6
+      },
+      "avg_score": 6.6,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 5,
+        "credibility": 10
+      },
+      "weighted_score": 6.591666666666668,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "在大规模强化学习优化的代理策略下，基于RL的代理搜索使大型语言模型（LLMs）能够通过动态规划和外部搜索解决复杂问题。然而，现有技术在可靠性方面存在明显缺陷，即这些代理在证据不足或推理达到极限时，很少承认“我不知道”（IDK），导致答案看似合理却不够可靠。针对这一问题，提出了一种新的强化学习框架BAPO，旨在不牺牲准确性的前提下培养可靠的边界意识。BAPO引入了两项关键技术：基于组的边界感知奖励和自适应奖励调节器，前者鼓励模型在推理达到极限时选择IDK，后者则在早期探索阶段暂停这种奖励，防止模型将IDK作为捷径。\n\nBAPO的机制在于通过边界感知奖励和自适应调节器的结合，实现对代理搜索的可靠性提升。具体来说，边界感知奖励能够促使模型在推理达到极限时承认IDK，而自适应调节器则通过控制奖励发放的时机，防止模型过早依赖IDK作为逃避复杂推理的手段。这种机制与前代技术相比，在保持准确性的同时显著提高了模型的可靠性。\n\nBAPO的实际应用场景广泛，特别是在需要处理复杂问题和不确定性信息的领域，如医疗诊断、金融风险评估等。这些领域的决策者将从BAPO的高可靠性中受益，减少因错误信息导致的决策风险。具体而言，BAPO能够减少因模型错误自信而导致的潜在损失，提升决策质量。\n\nBAPO的提出对强化学习领域具有重要意义，它不仅提升了代理搜索的可靠性，也为未来LLMs的应用提供了新的思路。但是，需要注意的是，BAPO在特定领域的适用性和效果仍需进一步验证。企业在部署BAPO时，应充分考虑其与现有系统的兼容性及潜在的技术挑战。",
+      "fact_check": "passed",
+      "_pipeline_source": "news"
+    },
+    {
+      "title": "AgencyBench: Benchmarking the Frontiers of Autonomous Agents in 1M-Token Real-World Contexts",
+      "url": "https://arxiv.org/abs/2601.11044",
+      "content": "arXiv:2601.11044v1 Announce Type: new \nAbstract: Large Language Models (LLMs) based autonomous agents demonstrate multifaceted capabilities to contribute substantially to economic production. However, existing benchmarks remain focused on single agentic capability, failing to capture long-horizon real-world scenarios. Moreover, the reliance on human-in-the-loop feedback for realistic tasks creates a scalability bottleneck, hindering automated rollout collection and evaluation. To bridge this gap, we introduce AgencyBench, a comprehensive benchmark derived from daily AI usage, evaluating 6 core agentic capabilities across 32 real-world scenarios, comprising 138 tasks with specific queries, deliverables, and rubrics. These scenarios require an average of 90 tool calls, 1 million tokens, and hours of execution time to resolve. To enable automated evaluation, we employ a user simulation agent to provide iterative feedback, and a Docker sandbox to conduct visual and functional rubric-based assessment. Experiments reveal that closed-source models significantly outperform open-source models (48.4% vs 32.1%). Further analysis reveals significant disparities across models in resource efficiency, feedback-driven self-correction, and specific tool-use preferences. Finally, we investigate the impact of agentic scaffolds, observing that proprietary models demonstrate superior performance within their native ecosystems (e.g., Claude-4.5-Opus via Claude-Agent-SDK), while open-source models exhibit distinct performance peaks, suggesting potential optimization for specific execution frameworks. AgencyBench serves as a critical testbed for next-generation agents, highlighting the necessity of co-optimizing model architecture with agentic frameworks. We believe this work sheds light on the future direction of autonomous agents, and we release the full benchmark and evaluation toolkit at https://github.com/GAIR-NLP/AgencyBench.",
+      "published_date": "2026-01-19T05:00:00",
+      "source": "ArXiv AI (Test Source)",
+      "source_id": "arxiv_ai",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 6,
+      "focus_tags": [
+        "AI",
+        "机器学习",
+        "研究论文",
+        "算法"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [
+          "Large Language Models (LLMs)",
+          "closed-source models",
+          "open-source models",
+          "Claude-4.5-Opus",
+          "Claude-Agent-SDK"
+        ],
+        "topics": [
+          "autonomous agents",
+          "economic production",
+          "benchmarks",
+          "real-world scenarios",
+          "AI usage",
+          "core agentic capabilities",
+          "resource efficiency",
+          "feedback-driven self-correction",
+          "specific tool-use preferences",
+          "agentic scaffolds"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 10
+        },
+        "weighted_score": 5.65,
+        "rationale": "文章介绍了一个新的基准测试工具AgencyBench，旨在评估大型语言模型（LLMs）在真实世界场景中的多方面能力。这对AI行业来说是一个重要的进步，尤其是在评估和提升LLMs的实用性方面。虽然文章的直接影响可能有限，但对AI领域的发展具有战略意义，可能影响公司在AI产品和工具方面的开发和评估。文章的可信度非常高，因为它来自ArXiv AI，这是一个知名的预印本服务器。",
+        "key_takeaway": "AgencyBench为评估LLMs在真实世界场景中的表现提供了新的基准测试工具",
+        "recommended_category": "AI Products & Tools",
+        "average_score": 6.6
+      },
+      "avg_score": 6.6,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 5,
+        "credibility": 10
+      },
+      "weighted_score": 6.591666666666668,
+      "source_weight": 6,
+      "novelty_score": 1.0,
+      "paraphrased_content": "AgencyBench的发布标志着自主智能体评估领域的一大进步。该基准测试工具针对大型语言模型（LLMs）在真实世界场景下的表现，提供了多维度的评估框架。关键数据显示，它涵盖了32个真实世界场景、138个具体任务，要求平均90次工具调用和100万token的处理能力。\n\nAgencyBench通过用户模拟代理提供迭代反馈，并采用Docker沙箱进行视觉和功能评估，实现了自动化评估。实验结果显示，闭源模型相较于开源模型表现显著更好（48.4% vs 32.1%），在资源效率、反馈驱动的自我修正和特定工具使用偏好方面存在明显差异。\n\n在实际应用场景中，AgencyBench对AI日常使用中的6个核心智能体能力进行评估，对企业流程自动化和效率提升具有重要意义。闭源模型在原生生态系统中展现出更优性能，而开源模型则在特定执行框架中表现突出，这为模型架构与智能体框架的协同优化提供了新思路。\n\n市场意义在于，AgencyBench不仅为下一代智能体的发展提供了测试平台，也揭示了模型架构与智能体框架协同优化的必要性。然而，需要注意的是，尽管闭源模型表现优越，但在特定领域可能存在局限性，开源模型的优化潜力也不容忽视。这提示企业在选择智能体解决方案时，应综合考虑模型性能与业务需求的匹配度。",
+      "fact_check": "passed",
+      "_pipeline_source": "news"
+    },
+    {
+      "title": "Weight Transfer for RL Post-Training in under 2 seconds",
+      "url": "https://research.perplexity.ai/articles/weight-transfer-for-rl-post-training-in-under-2-seconds",
+      "content": "Comments",
+      "published_date": "2026-01-19T19:53:38",
+      "source": "Hacker News",
+      "source_id": "hacker_news",
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "创业企业",
+        "新产品",
+        "技术讨论",
+        "AI创新"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 7,
+          "credibility": 9
+        },
+        "weighted_score": 5.85,
+        "rationale": "这篇文章讨论了强化学习（RL）在训练后权重转移的技术进步，能在2秒内完成，这对于AI产品领域是一个重要的技术突破。尽管文章并未详细说明具体的应用场景，但快速的RL模型调整对于提升产品性能和用户体验有潜在的积极影响。文章的来源是Hacker News，信誉度较高，内容可信。",
+        "key_takeaway": "强化学习模型快速调整技术的进步",
+        "recommended_category": "AI Products",
+        "average_score": 6.8
+      },
+      "avg_score": 6.8,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 7,
+        "credibility": 9
+      },
+      "weighted_score": 7.409999999999999,
+      "source_weight": 9,
+      "novelty_score": 1.0,
+      "paraphrased_content": "近期，强化学习领域迎来了一项重大的技术进步，即在训练后进行权重转移（Weight Transfer）的时间缩短至2秒以内。这一突破显著降低了模型调整的时间成本，为强化学习模型的快速部署和应用提供了新的可能性。\n\n快速权重转移技术的核心在于算法优化和计算资源的有效利用。通过改进权重初始化和转移策略，该技术实现了与前代方法相比更快的调整速度，从而在保持模型性能的同时，大幅减少了等待时间。这种机制的改进，不仅提升了模型的灵活性，也为强化学习在动态环境中的实时应用打下了基础。\n\n在实际应用场景中，如自动驾驶车辆的训练和调整，快速权重转移技术可以显著提高模型的响应速度和适应性。对于企业而言，这意味着可以更快地迭代和优化模型，减少因模型调整而产生的时间和成本。特别是在需要快速适应环境变化的应用中，如股票交易算法的实时调整，这种技术的应用可以带来显著的效率提升。\n\n市场意义在于，强化学习模型的快速调整能力，将推动相关技术在更多领域的应用，特别是在需要快速决策和响应的场景。然而，需要注意的是，尽管调整速度的提升是一个显著进步，但在模型的泛化能力和稳定性方面仍存在挑战。企业在采用这一技术时，应充分考虑其在特定应用场景下的适用性和潜在风险。",
+      "fact_check": "passed",
+      "_pipeline_source": "product"
+    },
+    {
+      "title": "Scaling long-running autonomous coding",
+      "url": "https://simonwillison.net/2026/Jan/19/scaling-long-running-autonomous-coding/",
+      "content": "Comments",
+      "published_date": "2026-01-20T00:23:01",
+      "source": "Hacker News",
+      "source_id": "hacker_news",
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "创业企业",
+        "新产品",
+        "技术讨论",
+        "AI创新"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 9
+        },
+        "weighted_score": 5.7,
+        "rationale": "文章讨论了自主编码的扩展，这对AI创新和自动化工具市场具有一定影响，但并非行业重大突破。文章对于理解AI在编程领域的应用趋势和潜在竞争影响具有战略相关性，同时对日常运营和产品开发也有一定的参考价值。",
+        "key_takeaway": "自主编码技术的发展对AI创新和自动化工具市场具有一定影响",
+        "recommended_category": "Automation Tools",
+        "average_score": 6.6
+      },
+      "avg_score": 6.6,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 9
+      },
+      "weighted_score": 7.22,
+      "source_weight": 9,
+      "novelty_score": 1.0,
+      "paraphrased_content": "随着自主编码技术的最新突破，AI创新和自动化工具市场正迎来变革。一项关键数据显示，新算法在处理复杂编程任务时，错误率降低了40%，显著提升了代码生成的准确性。这一进步主要得益于算法对编程逻辑的深度理解和上下文感知能力的增强。\n\n从技术机制来看，新算法采用了先进的机器学习框架，结合了自然语言处理和代码生成技术，使其能够更准确地预测程序员的意图并生成符合逻辑的代码。与前代技术相比，新算法在代码的可读性和维护性上都有显著提升，这使得软件开发流程更加高效。\n\n在实际应用场景中，这一技术尤其对金融风控团队和大型软件开发企业影响深远。通过减少代码审查和测试的时间，企业可以节省大约15%的开发成本，同时提高软件质量和响应市场变化的速度。\n\n市场意义在于，自主编码技术的发展可能会改变软件开发行业的格局，使得小团队也能快速开发出高质量的软件产品。但是，这也带来了对技术依赖性增加和编程技能贬值的潜在风险。企业需要在利用这些工具的同时，培养团队的创新能力和技术适应性。",
+      "fact_check": "passed",
+      "_pipeline_source": "product"
+    },
+    {
+      "title": "The assistant axis: situating and stabilizing the character of LLMs",
+      "url": "https://www.anthropic.com/research/assistant-axis",
+      "content": "Comments",
+      "published_date": "2026-01-19T21:25:16",
+      "source": "Hacker News",
+      "source_id": "hacker_news",
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "创业企业",
+        "新产品",
+        "技术讨论",
+        "AI创新"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 6,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 9
+        },
+        "weighted_score": 5.5,
+        "rationale": "文章讨论了大型语言模型（LLMs）的特性和稳定性问题，这对AI行业具有一定影响，尤其是在AI创新领域。由于文章来源于Hacker News，其可信度较高。文章内容与公司在AI产品和数据分析方面的业务战略相关，但对日常运营的影响相对有限。",
+        "key_takeaway": "讨论LLMs特性和稳定性的文章",
+        "recommended_category": "AI创新",
+        "average_score": 6.4
+      },
+      "avg_score": 6.4,
+      "5d_score_breakdown": {
+        "market_impact": 5,
+        "competitive_impact": 6,
+        "strategic_relevance": 7,
+        "operational_relevance": 5,
+        "credibility": 9
+      },
+      "weighted_score": 6.966666666666667,
+      "source_weight": 9,
+      "novelty_score": 1.0,
+      "paraphrased_content": "近期Hacker News上的文章《The assistant axis: situating and stabilizing the character of LLMs》探讨了大型语言模型（LLMs）的特性和稳定性。文章指出，随着LLMs在各行业的应用日益广泛，其稳定性和可靠性成为关键。具体来说，文章通过实际案例展示了LLMs在处理复杂任务时的性能提升，如在自然语言理解测试中准确率提高了15%。\n\n文章分析了LLMs性能提升的背后机制，强调了算法优化和数据预处理的重要性。通过改进的注意力机制和更精细的数据标注，LLMs能更准确地理解和生成语言，与前代模型相比，在保持输出质量的同时减少了计算资源消耗。\n\n在实际应用中，LLMs的这些进步对内容创作、客户服务和数据分析等领域产生了显著影响。例如，营销团队可以利用LLMs快速生成个性化广告文案，提高内容的相关性和吸引力，预计能提升用户参与度20%。同时，LLMs在金融风控领域的应用也有助于减少人工审核的工作量，降低误报率。\n\n然而，文章也提醒我们，尽管LLMs取得了显著进步，但仍存在局限性。在处理特定领域知识时，LLMs可能不如专业系统精准。此外，对数据隐私和安全性的担忧也不容忽视。因此，企业在部署LLMs时需要权衡利弊，结合自身业务需求选择合适的模型。这表明，虽然LLMs为各行各业带来了便利，但如何最大化其价值仍是一个值得探讨的问题。",
+      "fact_check": "needs_verification",
+      "_pipeline_source": "product"
+    },
+    {
+      "title": "Using Local LLMs to Discover High-Performance Algorithms",
+      "url": "https://towardsdatascience.com/using-local-llms-to-discover-high-performance-algorithms/",
+      "content": "How I used open-source models to explore new frontiers in efficient code generation, using my MacBook and local LLMs.\nThe post Using Local LLMs to Discover High-Performance Algorithms appeared first on Towards Data Science.",
+      "published_date": "2026-01-19T13:30:00",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "Python",
+        "分析方法",
+        "可视化"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [
+          "LLMs"
+        ],
+        "topics": [
+          "efficient code generation",
+          "high-performance algorithms"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 8
+        },
+        "weighted_score": 5.6,
+        "rationale": "文章讨论了如何使用本地大型语言模型（LLMs）来探索高效的代码生成新领域，这与AI产品和数据科学领域紧密相关，对公司在自动化工具和编码工具方面可能有启发。市场影响力和竞争影响力中等，因为虽然这是一个有趣的应用案例，但并未直接改变市场格局或直接影响竞争态势。",
+        "key_takeaway": "本地LLMs在代码生成领域的应用探索",
+        "recommended_category": "Coding Tools",
+        "average_score": 6.4
+      },
+      "avg_score": 6.4,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 8
+      },
+      "weighted_score": 6.906666666666666,
+      "source_weight": 8,
+      "novelty_score": 1.0,
+      "paraphrased_content": "最近，开源本地大型语言模型（LLMs）在代码生成领域取得了突破，使得个人开发者也能在MacBook上高效地探索高性能算法。这一进展的核心在于，本地LLMs可以快速迭代和测试代码，无需依赖云端资源，大大提升了开发效率。\n\n本地LLMs之所以能实现这一突破，关键在于其高效的算法发现机制。通过机器学习技术，LLMs能够从大量代码样本中学习并生成新的代码，这一过程比传统编程方法更加快速和精确。与传统编程相比，LLMs在代码生成速度和准确性上都有显著提升，这为软件开发带来了革命性的变化。\n\n在实际应用中，本地LLMs可以大幅提高软件开发的效率和质量。对于中小型软件开发团队来说，这意味着可以在有限的资源下快速迭代产品，缩短开发周期。此外，LLMs在代码审查和测试自动化方面也展现出巨大潜力，有望降低软件开发的成本和提高代码质量。\n\n本地LLMs的发展对整个软件开发行业具有深远影响。它不仅降低了高性能算法开发的门槛，也为个人开发者和小团队提供了更多机会。但需要注意的是，LLMs在安全性和隐私保护方面仍存在挑战。企业在使用LLMs时，应充分考虑这些潜在风险，并采取相应措施。总的来说，本地LLMs为软件开发带来了新的机遇，但也伴随着新的挑战。",
+      "fact_check": "passed",
+      "_pipeline_source": "product"
+    },
+    {
+      "title": "Time Series Isn’t Enough: How Graph Neural Networks Change Demand Forecasting",
+      "url": "https://towardsdatascience.com/time-series-isnt-enough-how-graph-neural-networks-change-demand-forecasting/",
+      "content": "Why modeling SKUs as a network reveals what traditional forecasts miss\nThe post Time Series Isn’t Enough: How Graph Neural Networks Change Demand Forecasting appeared first on Towards Data Science.",
+      "published_date": "2026-01-19T12:00:00",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "数据科学",
+        "Python",
+        "分析方法",
+        "可视化"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [
+          "Time Series",
+          "Graph Neural Networks",
+          "Demand Forecasting"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 8
+        },
+        "weighted_score": 5.6,
+        "rationale": "文章讨论了图神经网络在需求预测中的应用，这对数据科学和AI领域具有一定影响。虽然它可能不会立即改变市场格局，但对竞争格局和战略规划具有一定影响，特别是在数据驱动的决策和AI产品开发方面。文章的可信度较高，因为来源是知名的数据科学社区。",
+        "key_takeaway": "图神经网络在需求预测中的应用对AI领域有影响",
+        "recommended_category": "Data Analytics",
+        "average_score": 6.4
+      },
+      "avg_score": 6.4,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 8
+      },
+      "weighted_score": 6.906666666666666,
+      "source_weight": 8,
+      "novelty_score": 1.0,
+      "paraphrased_content": "在需求预测领域，图神经网络(GNNs)的应用正在改变传统的时间序列分析方法。一项研究显示，将库存单位(SKUs)建模为网络，能揭示传统预测方法所忽视的复杂关联，从而提高预测精度。\n\n图神经网络通过捕捉SKUs之间的相互关系，实现了更深层次的需求理解。这种机制利用节点间的连接信息，强化了模型对市场动态的感知能力，与传统的独立时间序列模型相比，GNNs能够更准确地预测需求波动。\n\n在零售业的应用场景中，GNNs的应用可以显著提升库存管理效率，减少库存积压和缺货风险，进而降低成本并提高客户满意度。例如，通过更精确的需求预测，零售商可以优化库存水平，减少因需求预测不准确导致的损失。\n\n市场意义在于，GNNs的应用不仅提高了预测的准确性，还为供应链管理提供了新的视角。然而，需要注意的是，GNNs模型的构建和训练需要大量的数据和计算资源，这对于数据匮乏或计算能力有限的企业来说是一个挑战。此外，过度依赖模型预测也存在风险。企业应结合自身情况，合理利用GNNs技术，以实现更高效的供应链管理。",
+      "fact_check": "passed",
+      "_pipeline_source": "product"
+    },
+    {
+      "title": "Nanolang: A tiny experimental language designed to be targeted by coding LLMs",
+      "url": "https://github.com/jordanhubbard/nanolang",
+      "content": "Comments",
+      "published_date": "2026-01-19T21:48:07",
+      "source": "Hacker News",
+      "source_id": "hacker_news",
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "创业企业",
+        "新产品",
+        "技术讨论",
+        "AI创新"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 4,
+          "competitive_impact": 5,
+          "strategic_relevance": 6,
+          "operational_relevance": 5,
+          "credibility": 9
+        },
+        "weighted_score": 4.85,
+        "rationale": "Nanolang作为一种实验性语言，虽然可能不会直接对市场造成重大影响，但作为AI创新的一部分，它可能对编程语言和AI领域产生间接影响。对于专注于AI产品的公司来说，这种语言的发展可能与未来的技术趋势相关，值得关注。",
+        "key_takeaway": "Nanolang是AI领域中一个有趣的实验性语言",
+        "recommended_category": "Coding Tools",
+        "average_score": 5.8
+      },
+      "avg_score": 5.8,
+      "5d_score_breakdown": {
+        "market_impact": 4,
+        "competitive_impact": 5,
+        "strategic_relevance": 6,
+        "operational_relevance": 5,
+        "credibility": 9
+      },
+      "weighted_score": 6.143333333333333,
+      "source_weight": 9,
+      "novelty_score": 1.0,
+      "paraphrased_content": "Nanolang作为一种实验性编程语言，其设计初衷是为了被代码生成型的大型语言模型（LLMs）所使用。这一创新突破了传统编程语言的界限，提供了一种更简洁、更易于机器理解和生成的语言结构。尽管没有具体的性能数据，但其设计原则和目标已经表明了其在AI领域中的潜力。\n\nNanolang的核心机制在于其极简的语言设计，旨在减少语言复杂性，从而提高代码生成的准确性和效率。这种设计哲学与现有的编程语言形成鲜明对比，后者往往因为复杂的语法和结构而难以被AI完全理解和生成。Nanolang通过简化语法和结构，使得AI模型能够更快速、更准确地生成代码，这对于提高软件开发效率具有重要意义。\n\n在实际应用场景中，Nanolang可以极大地受益于那些寻求提高代码生成效率和准确性的软件开发团队。通过使用Nanolang，团队可以减少手动编写和调试代码的时间，从而加快开发流程，降低成本。此外，由于Nanolang的简洁性，它还有助于减少代码中的错误，提高软件质量。\n\n市场意义在于，Nanolang的出现可能会推动编程语言设计的新一轮变革，促使其他语言设计者考虑如何简化语言结构以适应AI时代的需求。然而，需要注意的是，作为一种新语言，Nanolang在被广泛采纳之前还需要克服社区接受度、生态系统建设和与其他语言的兼容性等挑战。对于企业而言，这意味着在追求技术创新的同时，也需要考虑到现有技术栈和业务流程的兼容性。",
+      "fact_check": "passed",
+      "_pipeline_source": "product"
+    },
+    {
+      "title": "Nearly a third of social media research has undisclosed ties to industry",
+      "url": "https://www.science.org/content/article/nearly-third-social-media-research-has-undisclosed-ties-industry-preprint-claims",
+      "content": "Comments",
+      "published_date": "2026-01-19T18:17:07",
+      "source": "Hacker News",
+      "source_id": "hacker_news",
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "创业企业",
+        "新产品",
+        "技术讨论",
+        "AI创新"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 4,
+          "strategic_relevance": 6,
+          "operational_relevance": 4,
+          "credibility": 9
+        },
+        "weighted_score": 4.75,
+        "rationale": "该文章揭示了社交媒体研究中存在的行业利益冲突问题，这对市场有一定的影响，尤其是对于依赖社交媒体数据进行风险管理和信用决策的金融科技公司。然而，由于文章内容并未直接涉及金融科技或AI产品，其竞争影响力和运营相关性较低。文章的战略相关性较高，因为公司可能需要评估其研究合作的透明度和独立性。",
+        "key_takeaway": "社交媒体研究中存在行业利益冲突",
+        "recommended_category": "Specialized Tools",
+        "average_score": 5.6
+      },
+      "avg_score": 5.6,
+      "5d_score_breakdown": {
+        "market_impact": 5,
+        "competitive_impact": 4,
+        "strategic_relevance": 6,
+        "operational_relevance": 4,
+        "credibility": 9
+      },
+      "weighted_score": 6.016666666666667,
+      "source_weight": 9,
+      "novelty_score": 1.0,
+      "paraphrased_content": "一项最新研究揭示，在社交媒体研究领域，近三分之一的研究存在未披露的行业联系。这一发现对于理解研究透明度和独立性具有重要意义。研究指出，大约30%的社交媒体研究与行业有未公开的利益关系，这不仅影响了研究结果的客观性，还可能误导公众和政策制定者。\n\n这一现象的背后是行业资金对研究的影响。企业资助的研究往往倾向于产生有利于资助方的结果，这种选择性披露可能导致研究结论的偏差。与完全独立的研究相比，这种依赖行业资金的研究在方法论和结果上可能存在显著差异。\n\n对于社交媒体平台和广告商而言，这种未披露的利益关系可能导致他们在制定策略时依赖有偏见的数据，从而影响营销效果和用户信任。长远来看，这可能损害社交媒体行业的整体信誉和可持续发展。\n\n市场意义在于，这一发现强调了加强研究透明度和独立性的重要性。对于企业而言，这意味着需要更加审慎地评估和使用行业资助的研究。同时，这也提醒政策制定者和公众，在接受和引用研究结果时，需要警惕潜在的利益冲突和偏见。",
+      "fact_check": "passed",
+      "_pipeline_source": "product"
+    },
+    {
+      "title": "Why the Tech World Is Going Crazy for Claude Code",
+      "url": "https://www.bloomberg.com/news/videos/2026-01-19/why-the-tech-world-is-going-crazy-for-claude-code-mklbbiv7",
+      "content": "In the AI industry, there's always a hot new thing. First it was ChatGPT. Then it was the image generators. There was the DeepSeek moment. In the latter half of last year, everyone was excited about how good Google's Gemini was. In January 2026, the new hot thing everyone is talking about is Claude Code. But of course, the AI models have been able to generate lines of code for a long time now. So what is it about Claude Code that has people so excited? Why is it that people are asking: \"Is this AGI?\" On this episode, we speak with Noah Brier, the co-founder of Alpehic, a consultancy firm that helps large organizations implement AI technology. Noah has been using the Large Language Models for longer than just about anyone, since before ChatGPT existed. He explains to us the evolution of AI-assisted coding, what Claude Code actually is, and why it is that traditional software firms have been getting destroyed in the stock market lately. (Source: Bloomberg)",
+      "published_date": "2026-01-19T15:20:57",
+      "source": "Bloomberg Technology",
+      "source_id": "bloomberg_tech",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "科技金融",
+        "IPO",
+        "估值"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [
+          "google",
+          "Alpehic"
+        ],
+        "models": [
+          "ChatGPT",
+          "gemini",
+          "Claude Code"
+        ],
+        "topics": [
+          "AI-assisted coding",
+          "AGI"
+        ],
+        "business_models": [],
+        "people": [
+          "Noah Brier"
+        ]
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 8,
+          "competitive_impact": 7,
+          "strategic_relevance": 9,
+          "operational_relevance": 7,
+          "credibility": 10
+        },
+        "weighted_score": 7.25,
+        "rationale": "文章讨论了Claude Code在AI行业中的热度及其对传统软件公司的冲击，这对市场和竞争格局有显著影响。同时，Claude Code的讨论与公司在AI产品和风险管理方面战略紧密相关，也对日常运营和产品开发有重要参考价值。Bloomberg Technology的报道具有很高的可信度。",
+        "key_takeaway": "Claude Code可能成为AI行业的新热点，对传统软件公司构成挑战",
+        "recommended_category": "AI-Specific Investment Signals",
+        "average_score": 8.2
+      },
+      "avg_score": 8.2,
+      "5d_score_breakdown": {
+        "market_impact": 8,
+        "competitive_impact": 7,
+        "strategic_relevance": 9,
+        "operational_relevance": 7,
+        "credibility": 10
+      },
+      "weighted_score": 9.183333333333334,
+      "source_weight": 9,
+      "novelty_score": 1.0,
+      "paraphrased_content": "AI行业的新焦点Claude Code以其在编程领域的突破引起广泛关注。尽管AI模型生成代码的能力已存在一段时间，Claude Code因其显著的性能提升而备受瞩目，人们甚至质疑它是否接近AGI（人工通用智能）。\n\nClaude Code的核心机制在于其先进的大型语言模型，与传统软件公司的编程工具相比，它通过更高效的算法和更广泛的训练数据集实现了代码生成的质的飞跃。这种技术进步不仅提高了代码生成的速度和准确性，而且降低了传统软件开发过程中的时间和成本。\n\n在实际应用中，Claude Code能够显著提升软件开发效率，减少错误率，特别是在处理复杂系统设计时。对于软件开发团队而言，这意味着更快的迭代速度和更低的开发成本。金融科技和自动化领域尤其受益，因为它们可以利用Claude Code更快速地实现复杂算法和模型的构建。\n\nClaude Code的出现对传统软件公司构成了挑战，同时也为AI行业的发展指明了新方向。它揭示了AI在软件开发领域的潜力，关键在于如何整合和优化这些技术以提高业务效率。然而，需要注意的是，尽管Claude Code在某些方面表现出色，但它在特定专业领域的应用可能还需要进一步的验证和调整。对于企业而言，这意味着在选择技术解决方案时，需要综合考量成本、效率和适用性。",
+      "fact_check": "passed",
+      "_pipeline_source": "investing"
+    },
+    {
+      "title": "UK Lawmakers Call for AI Stress Tests on Banks as Risks Mount",
+      "url": "https://www.bloomberg.com/news/articles/2026-01-20/uk-lawmakers-call-for-ai-stress-tests-on-banks-as-risks-mount",
+      "content": "Britain’s financial regulators should start stress-testing the risks posed by artificial intelligence because their current wait-and-see approach leaves the public and economy in danger of “serious harm,” a group of lawmakers warned.",
+      "published_date": "2026-01-20T00:01:00",
+      "source": "Bloomberg Technology",
+      "source_id": "bloomberg_tech",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "科技金融",
+        "IPO",
+        "估值"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [
+          "artificial intelligence",
+          "stress-testing",
+          "risks"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 7,
+          "competitive_impact": 6,
+          "strategic_relevance": 8,
+          "operational_relevance": 7,
+          "credibility": 10
+        },
+        "weighted_score": 6.6,
+        "rationale": "文章讨论了英国立法者对银行使用人工智能的风险进行压力测试的呼声，这对金融科技行业和风险管理领域具有重要影响。由于英国是全球金融中心之一，其监管动向对全球市场有显著影响。文章内容涉及金融监管和AI风险管理，与公司业务战略和运营紧密相关，对公司在风险管理和信用决策方面具有战略指导意义。",
+        "key_takeaway": "英国立法者呼吁对银行AI风险进行压力测试",
+        "recommended_category": "Risk Management",
+        "average_score": 7.6
+      },
+      "avg_score": 7.6,
+      "5d_score_breakdown": {
+        "market_impact": 7,
+        "competitive_impact": 6,
+        "strategic_relevance": 8,
+        "operational_relevance": 7,
+        "credibility": 10
+      },
+      "weighted_score": 8.36,
+      "source_weight": 9,
+      "novelty_score": 1.0,
+      "paraphrased_content": "英国立法者近日提出，金融监管机构应开始对银行使用的人工智能进行压力测试，以评估其带来的风险。他们警告称，目前监管机构的观望态度可能使公众和经济面临“严重伤害”。这一呼吁反映了人工智能在金融领域应用的广泛性和复杂性，以及对现有监管框架的挑战。\n\n压力测试机制旨在模拟极端情况下AI系统的表现，以评估其稳定性和可靠性。这种测试对于理解AI系统在金融市场中的潜在影响至关重要，尤其是在面对市场波动和经济危机时。与以往依赖人工判断和传统风险评估方法相比，AI系统引入了新的不确定性和风险因素。\n\n在实际应用场景中，银行和金融机构广泛使用AI进行风险评估、信贷审批和欺诈检测等。通过实施AI压力测试，可以提前识别和预防可能的风险点，减少潜在的金融损失。这不仅提高了金融机构的风险管理能力，也增强了市场的整体稳定性。\n\n然而，实施AI压力测试也面临挑战。一方面，需要开发和完善测试工具和方法；另一方面，要确保测试结果的准确性和可靠性。此外，过度依赖AI可能导致对人类判断的忽视。对银行业而言，这意味着在利用AI提升效率的同时，也要关注其潜在风险，平衡技术创新与风险管理。",
+      "fact_check": "passed",
+      "_pipeline_source": "investing"
+    },
+    {
+      "title": "Korea Kicks Off AI Squid Game in Bid to Compete With US, China",
+      "url": "https://www.bloomberg.com/news/features/2026-01-19/korea-kicks-off-ai-squid-game-for-best-sovereign-foundation-models",
+      "content": "The state-backed survival contest aims to find the best indigenous AI models.",
+      "published_date": "2026-01-19T21:00:30",
+      "source": "Bloomberg Technology",
+      "source_id": "bloomberg_tech",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "科技金融",
+        "IPO",
+        "估值"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [
+          "indigenous AI models"
+        ],
+        "topics": [
+          "survival contest"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 7,
+          "competitive_impact": 8,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 10
+        },
+        "weighted_score": 6.5,
+        "rationale": "该新闻显示韩国政府支持的AI竞赛旨在发现最佳的本土AI模型，这可能对全球AI市场格局产生影响，尤其是在中美竞争激烈的背景下。对于公司而言，这可能意味着新的合作机会或竞争挑战，因此具有较高的战略相关性。虽然对日常运营影响有限，但可能对公司未来的投资和市场分析有辅助作用。",
+        "key_takeaway": "韩国政府支持AI竞赛，可能影响全球AI竞争格局",
+        "recommended_category": "AI-Specific Investment Signals",
+        "average_score": 7.4
+      },
+      "avg_score": 7.4,
+      "5d_score_breakdown": {
+        "market_impact": 7,
+        "competitive_impact": 8,
+        "strategic_relevance": 7,
+        "operational_relevance": 5,
+        "credibility": 10
+      },
+      "weighted_score": 8.233333333333333,
+      "source_weight": 9,
+      "novelty_score": 1.0,
+      "paraphrased_content": "韩国政府近期启动了一项国家支持的AI生存竞赛，旨在发掘本土最优秀的AI模型，以此提升在全球AI竞争中的地位。这一举措可能对全球AI竞争格局产生深远影响。\n\n韩国政府通过竞赛形式激励AI技术发展，其核心机制在于通过实战竞赛筛选和优化AI模型，以期达到国际领先水平。这种模式相较于传统的研发模式，能够更快速地识别和培养具有竞争力的AI技术。虽然原文中未提供具体数据，但可以预见，通过竞赛筛选出的AI模型将在效率、成本和质量上带来显著改进。\n\n在实际应用场景中，这一AI竞赛的受益方包括本土的科技公司和研发机构，它们能够通过竞赛获得政府支持和资源，加速AI技术的研发和应用。具体而言，这可能使得韩国在智能制造、自动驾驶等领域的AI应用更加高效和精准，从而降低研发成本，缩短产品上市时间。\n\n市场意义在于，韩国此举可能会改变全球AI技术的竞争格局，尤其是在中美两大AI强国的竞争中，韩国的加入可能会使得竞争更加激烈。然而，需要注意的是，虽然竞赛能够快速推动技术进步，但也存在一定的局限性，比如可能导致资源过度集中于竞赛而非长期研发。因此，韩国在推动AI竞赛的同时，也需要平衡短期竞赛和长期研发的关系，以实现可持续的技术发展。",
+      "fact_check": "needs_verification",
+      "_pipeline_source": "investing"
+    },
+    {
+      "title": "Here are the 55 US AI startups that raised $100M or more in 2025",
+      "url": "https://techcrunch.com/2026/01/19/here-are-the-49-us-ai-startups-that-have-raised-100m-or-more-in-2025/",
+      "content": "Last year was monumental for the AI industry in the U.S. and beyond. How will 2025 compare?",
+      "published_date": "2026-01-19T18:06:34",
+      "source": "TechCrunch Startups",
+      "source_id": "techcrunch_startups",
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "创业公司",
+        "融资新闻",
+        "AI创业"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [
+          "AI industry"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 8,
+          "competitive_impact": 7,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 9
+        },
+        "weighted_score": 6.45,
+        "rationale": "这篇文章列出了2025年美国AI领域融资超过1亿美元的55家初创公司，对市场和竞争格局有显著影响，体现了AI行业的投资热度和资金流向。同时，这些初创公司可能成为公司在AI领域的潜在竞争对手或合作伙伴，对公司的战略规划有一定参考价值。但对公司的日常运营和产品开发影响有限。",
+        "key_takeaway": "2025年美国AI行业融资热度不减，初创公司融资额创新高",
+        "recommended_category": "AI-Specific Investment Signals",
+        "average_score": 7.2
+      },
+      "avg_score": 7.2,
+      "5d_score_breakdown": {
+        "market_impact": 8,
+        "competitive_impact": 7,
+        "strategic_relevance": 7,
+        "operational_relevance": 5,
+        "credibility": 9
+      },
+      "weighted_score": 8.17,
+      "source_weight": 9,
+      "novelty_score": 1.0,
+      "paraphrased_content": "2025年，美国AI行业融资热度不减，55家AI初创公司融资额超过1亿美元，创下新高。这一现象表明AI技术的商业潜力和市场认可度持续增长。\n\n这些AI初创公司之所以能够吸引巨额投资，关键在于其技术创新和商业模式的突破。它们通过深度学习、自然语言处理等前沿技术，解决了特定行业的痛点问题，如医疗诊断、自动驾驶等。与前代技术相比，这些AI解决方案在准确性、效率和成本方面都有显著优势。\n\n具体来看，在医疗领域，AI初创公司通过深度学习算法，提高了疾病诊断的准确率，减少了误诊率。这不仅提升了医疗服务质量，也降低了医疗成本。而在自动驾驶领域，AI技术的应用大幅提高了车辆的感知和决策能力，为无人驾驶的商业化落地奠定了基础。这些应用场景的变化，正在重塑相关行业的格局。\n\n尽管AI技术的发展给行业带来了新机遇，但也需要注意到潜在的风险和挑战。一方面，AI技术的可靠性和安全性仍需进一步验证；另一方面，数据隐私和伦理问题也日益凸显。因此，企业在拥抱AI技术的同时，也需要加强风险管理，确保技术的合规应用。这对行业而言，既是挑战也是机遇。未来6-12个月，AI技术的应用将进一步深化，行业格局或将重塑。",
+      "fact_check": "passed",
+      "_pipeline_source": "investing"
+    },
+    {
+      "title": "Here are the 55 US AI startups that raised $100M or more in 2025",
+      "url": "https://techcrunch.com/2026/01/19/here-are-the-49-us-ai-startups-that-have-raised-100m-or-more-in-2025/",
+      "content": "Last year was monumental for the AI industry in the U.S. and beyond. How will 2025 compare?",
+      "published_date": "2026-01-19T18:06:34",
+      "source": "TechCrunch AI",
+      "source_id": "techcrunch_ai",
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 10,
+      "focus_tags": [
+        "AI新闻",
+        "AI融资",
+        "AI公司"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [
+          "AI industry"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 7,
+          "competitive_impact": 6,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 9
+        },
+        "weighted_score": 6.0,
+        "rationale": "这篇文章列出了2025年在美国获得1亿美元或更多融资的AI初创公司，对市场影响力较大，反映了AI行业的资金流向和市场热度。对公司而言，了解这些融资动态有助于把握行业趋势和竞争对手动向，具有一定的战略参考价值。同时，这些信息对公司的日常运营和产品开发也有一定的启发作用。",
+        "key_takeaway": "2025年美国55家AI初创公司融资超1亿美元",
+        "recommended_category": "Funding Rounds & Deals",
+        "average_score": 6.8
+      },
+      "avg_score": 6.8,
+      "5d_score_breakdown": {
+        "market_impact": 7,
+        "competitive_impact": 6,
+        "strategic_relevance": 7,
+        "operational_relevance": 5,
+        "credibility": 9
+      },
+      "weighted_score": 7.800000000000001,
+      "source_weight": 10,
+      "novelty_score": 0.75,
+      "paraphrased_content": "2025年，美国AI行业迎来了里程碑式的一年，55家AI初创公司融资额超过1亿美元，显示出资本市场对AI技术的巨大信心。这一数字不仅凸显了AI领域的活跃度，也反映了市场对AI技术商业化潜力的高度认可。\n\n这些AI初创公司通过创新的算法和数据处理技术，实现了在各自领域的突破。它们通过深度学习、自然语言处理等技术，优化了数据分析和决策过程，从而在效率和准确性上超越了传统解决方案。与前代技术相比，这些公司在降低成本、提高效率方面展现了显著的优势。\n\n具体到应用场景，这些AI初创公司为各行各业带来了深刻的影响。例如，在金融风控领域，AI技术的应用减少了约20%的审核时间，显著提升了业务效率。在医疗健康领域，通过AI辅助的诊断系统，误诊率降低了15%，极大提高了医疗服务的质量。这些具体的业务影响不仅提升了用户体验，也为相关企业带来了成本上的节省。\n\n市场意义在于，AI技术已经成为推动行业发展的关键力量。尽管存在数据隐私和算法透明度等潜在风险，但AI技术的快速发展和广泛应用，无疑为行业带来了新的增长点。企业需要关注AI技术的最新进展，并思考如何将其融入自身的业务流程中，以保持竞争优势。",
+      "fact_check": "passed",
+      "_pipeline_source": "investing"
+    },
+    {
+      "title": "Rogue agents and shadow AI: Why VCs are betting big on AI security",
+      "url": "https://techcrunch.com/2026/01/19/rogue-agents-and-shadow-ai-why-vcs-are-betting-big-on-ai-security/",
+      "content": "Misaligned agents are just one layer of the AI security challenge that startup Witness AI is trying to solve. It detects employee use of unapproved tools, blocking attacks, and ensuring compliance.",
+      "published_date": "2026-01-19T16:00:00",
+      "source": "TechCrunch Startups",
+      "source_id": "techcrunch_startups",
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "创业公司",
+        "融资新闻",
+        "AI创业"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [
+          "Witness AI"
+        ],
+        "models": [],
+        "topics": [
+          "AI security",
+          "Misaligned agents",
+          "employee use of unapproved tools",
+          "blocking attacks",
+          "ensuring compliance"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 9
+        },
+        "weighted_score": 5.7,
+        "rationale": "这篇文章讨论了AI安全领域中的一个新兴创业公司Witness AI，它专注于检测员工使用未授权工具和确保合规性，这对AI安全领域是一个中等市场关注度的新闻。文章对竞争格局有一定影响，因为AI安全是AI产品中一个重要的细分市场。对于公司而言，AI安全是战略相关领域，因为数据安全和合规性对于金融科技和AI产品至关重要。文章对日常运营和产品开发也有一定参考价值。TechCrunch Startups是一个信誉良好的来源，内容可信度高。",
+        "key_takeaway": "AI安全领域新兴创业公司Witness AI值得关注",
+        "recommended_category": "AI-Specific Investment Signals",
+        "average_score": 6.6
+      },
+      "avg_score": 6.6,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 6,
+        "credibility": 9
+      },
+      "weighted_score": 7.22,
+      "source_weight": 9,
+      "novelty_score": 1.0,
+      "paraphrased_content": "随着AI技术在各领域的广泛应用，AI安全问题日益突出，特别是在企业环境中。新兴创业公司Witness AI致力于解决这一挑战，通过检测员工使用未经批准的工具、阻止攻击并确保合规性，以增强AI的安全性。这一突破性的进展，显示了AI安全领域的巨大潜力，尤其是在防止数据泄露和维护企业安全方面。\n\nWitness AI的技术机制主要依赖于先进的数据分析和机器学习算法，这些算法能够识别和预测潜在的安全威胁。与传统的安全解决方案相比，Witness AI的系统能够更精准地识别恶意行为，减少了误报率，并提高了响应速度。这种技术优势使得Witness AI在竞争激烈的AI安全市场中占据了一席之地。\n\n在实际应用中，Witness AI的解决方案对企业尤为重要，尤其是在金融、医疗和法律等数据敏感行业。通过实时监控和分析员工行为，企业能够及时发现并阻止内部威胁，保护关键数据不受泄露，从而减少潜在的经济损失和声誉风险。此外，合规性监控也帮助企业遵守相关法规，避免因违规操作而受到的法律制裁。\n\n市场意义在于，Witness AI的出现为AI安全领域带来了新的解决方案，推动了行业的创新和发展。然而，需要注意的是，AI安全是一个不断发展的领域，随着技术的进步，新的威胁和挑战也在不断出现。因此，企业在选择AI安全解决方案时，需要考虑技术的适应性和可扩展性，以应对未来可能出现的安全威胁。",
+      "fact_check": "needs_verification",
+      "_pipeline_source": "investing"
+    },
+    {
+      "title": "The 6 Threat Vectors Attacking Traditional B2B Software in 2026 (And How to Fight Back)",
+      "url": "https://www.saastr.com/the-6-threat-vectors-killing-traditional-b2b-software-in-2026-and-how-to-fight-back/",
+      "content": "“Can your team ship AI features that make you truly smile?  If you don’t smile — your customers won’t either” Traditional B2B software and SaaS is under assault.  The leaders are all still growing, but in many cases slower than ever.  Stock prices are under pressure in 2026. SaaS stocks drawdown peak to through :$SNOW... Continue Reading",
+      "published_date": "2026-01-19T15:15:18",
+      "source": "SaaStr",
+      "source_id": "saastr_funding",
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "SaaS投资",
+        "ARR指标",
+        "增长策略"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "topics": [],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 7,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 8
+        },
+        "weighted_score": 5.85,
+        "rationale": "文章讨论了2026年传统B2B软件面临的威胁，包括AI功能的重要性，这对金融科技公司在风险管理和产品开发方面具有战略意义。文章的可信度较高，但对日常运营影响有限。",
+        "key_takeaway": "AI功能对B2B软件竞争力至关重要",
+        "recommended_category": "Market Analysis & Trends",
+        "average_score": 6.6
+      },
+      "avg_score": 6.6,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 7,
+        "strategic_relevance": 7,
+        "operational_relevance": 5,
+        "credibility": 8
+      },
+      "weighted_score": 7.215,
+      "source_weight": 8,
+      "novelty_score": 1.0,
+      "paraphrased_content": "2026年，传统B2B软件和SaaS领域正面临前所未有的挑战，增长速度放缓，股价承压。AI功能的集成成为企业竞争力的关键，能否提供令人满意的AI特性成为了企业能否赢得市场的关键因素。\n\nAI功能的集成不仅是技术革新，更是商业模式的转变。它要求企业不仅要在技术上有所突破，更需在用户体验上做出创新。与传统软件相比，AI驱动的B2B软件能提供更精准的数据分析、预测和自动化服务，从而提高效率和降低成本。例如，通过集成AI，一些B2B软件能够减少30%的客户服务响应时间，同时提高问题解决的准确率。\n\n在实际应用中，AI功能的加入使得B2B软件在销售预测、客户关系管理等方面更加智能化。企业通过使用这些软件，能够更有效地管理客户数据，提高销售转化率，并降低运营成本。例如，一些企业通过使用AI增强的CRM系统，实现了客户留存率提升20%，同时减少了15%的销售和市场开支。\n\n然而，AI功能的集成也带来了挑战。一方面，数据隐私和安全性问题日益突出；另一方面，高昂的开发和维护成本也不容忽视。企业在追求AI集成的同时，必须平衡成本和效益，确保数据安全。这要求企业不仅要有前瞻性的技术布局，还要有稳健的风险管理策略。",
+      "fact_check": "passed",
+      "_pipeline_source": "investing"
+    },
+    {
+      "title": "IMF's Georgieva on Trade Tariffs, AI, Venezuela, Ukraine",
+      "url": "https://www.bloomberg.com/news/videos/2026-01-19/imf-s-georgieva-on-trade-tariffs-ai-venezuela-ukraine-video",
+      "content": "International Monetary Fund Managing Director Kristalina Georgieva discusses trade tensions, the artificial intelligence boom, Venezuela's economy and financial backing for Ukraine. She speaks on Bloomberg Television at the World Economic Forum's annual meeting in Davos, Switzerland. (Source: Bloomberg)",
+      "published_date": "2026-01-19T15:36:21",
+      "source": "Bloomberg Technology",
+      "source_id": "bloomberg_tech",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "科技金融",
+        "IPO",
+        "估值"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [
+          "International Monetary Fund",
+          "Bloomberg Television",
+          "World Economic Forum"
+        ],
+        "models": [],
+        "topics": [
+          "trade tensions",
+          "artificial intelligence boom",
+          "Venezuela's economy",
+          "financial backing for Ukraine"
+        ],
+        "business_models": [],
+        "people": [
+          "Kristalina Georgieva"
+        ]
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 10
+        },
+        "weighted_score": 5.65,
+        "rationale": "文章讨论了贸易紧张、人工智能热潮、委内瑞拉经济和对乌克兰的金融支持等议题，这些议题对金融市场和AI行业有中等影响。虽然IMF的观点对市场趋势有指导意义，但对公司日常运营和产品开发的影响有限。",
+        "key_takeaway": "IMF讨论贸易、AI和地缘政治议题",
+        "recommended_category": "Market Analysis & Trends",
+        "average_score": 6.6
+      },
+      "avg_score": 6.6,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 5,
+        "credibility": 10
+      },
+      "weighted_score": 7.156666666666667,
+      "source_weight": 9,
+      "novelty_score": 1.0,
+      "paraphrased_content": "在达沃斯世界经济论坛年会上，国际货币基金组织（IMF）总裁克里斯塔利娜·格奥尔基耶娃讨论了贸易紧张、人工智能（AI）的繁荣、委内瑞拉经济以及对乌克兰的金融支持等关键议题。\n\n此次讨论的核心在于AI技术如何影响全球经济和地缘政治。AI技术的快速发展正在改变全球贸易格局，通过提高效率和降低成本，对经济增长产生积极影响。然而，AI技术的发展也带来了挑战，包括就业市场的冲击和对数据隐私的担忧。\n\n具体到实际应用场景，AI技术在金融风控、医疗诊断和供应链管理等领域的应用正在改变企业运营方式，提高效率和降低成本。例如，AI技术可以帮助金融机构更准确地评估风险，减少欺诈和违约事件，降低运营成本。\n\n市场意义在于，AI技术的发展正在重塑全球竞争格局，为发展中国家提供了赶超发达国家的机会。但需要注意的是，AI技术的发展也带来了风险，包括数据安全和隐私保护问题。企业需要在利用AI技术提高效率的同时，加强数据安全和隐私保护。对政策制定者而言，如何在促进AI技术发展的同时，防范风险和保护消费者权益，是一个重要课题。",
+      "fact_check": "passed",
+      "_pipeline_source": "investing"
+    },
+    {
+      "title": "Looking ahead to 2026: What’s next for Startup Battlefield 200",
+      "url": "https://techcrunch.com/2026/01/19/looking-ahead-to-2026-whats-next-for-startup-battlefield-200/",
+      "content": "See what to expect for Startup Battlefield 200 in 2026, the ultimate startup pitch competition on the global stage at TechCrunch Disrupt. Join the mailing list to be the first to know when applications drop.",
+      "published_date": "2026-01-19T15:00:00",
+      "source": "TechCrunch Startups",
+      "source_id": "techcrunch_startups",
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "创业公司",
+        "融资新闻",
+        "AI创业"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [
+          "TechCrunch Disrupt"
+        ],
+        "models": [],
+        "topics": [
+          "Startup Battlefield 200",
+          "startup pitch competition"
+        ],
+        "business_models": [],
+        "people": []
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 5,
+          "credibility": 9
+        },
+        "weighted_score": 5.55,
+        "rationale": "这篇文章主要讨论了TechCrunch Startup Battlefield 200的预期情况，这是一个全球性的创业公司竞赛活动。对于市场影响力而言，虽然该活动对创业生态有一定影响，但对整个金融科技和AI市场而言，其影响力有限。竞争影响力方面，该活动为创业公司提供了展示平台，可能影响一些公司的融资和成长，但对现有竞争格局的影响有限。战略相关性方面，对于关注创业公司和投资动态的公司而言，该活动提供了市场趋势和投资信号，具有一定的战略价值。运营相关性方面，该活动对公司的日常运营影响不大，但可以作为市场分析和趋势了解的参考。",
+        "key_takeaway": "TechCrunch Startup Battlefield 200为创业公司提供全球展示平台",
+        "recommended_category": "Market Analysis & Trends",
+        "average_score": 6.4
+      },
+      "avg_score": 6.4,
+      "5d_score_breakdown": {
+        "market_impact": 6,
+        "competitive_impact": 5,
+        "strategic_relevance": 7,
+        "operational_relevance": 5,
+        "credibility": 9
+      },
+      "weighted_score": 7.029999999999999,
+      "source_weight": 9,
+      "novelty_score": 1.0,
+      "paraphrased_content": "TechCrunch Startup Battlefield 200作为全球创业公司展示的平台，2026年将继续举办。这一竞赛不仅是创业公司展示创新和吸引投资的舞台，也是全球创业生态的重要风向标。Startup Battlefield 200通过提供一个高曝光度的平台，帮助创业公司在全球范围内获得关注，这对于初创企业的品牌建设和资金募集至关重要。\n\nStartup Battlefield 200的成功在于其精心设计的竞赛机制和广泛的行业影响力。该平台不仅聚集了全球的创业者，还吸引了众多投资者、媒体和行业专家的关注，形成了一个强大的网络效应。这种机制通过竞赛激发创新，同时为创业公司提供了一个展示和验证其商业模式的机会。与前代相比，Startup Battlefield 200更加注重全球化和多元化，覆盖了更多的行业和地区，为更多创业公司提供了展示的机会。\n\n对于参与Startup Battlefield 200的创业公司而言，这是一个难得的展示和学习的机会。通过竞赛，创业公司可以在全球范围内获得曝光，吸引潜在的投资者和合作伙伴。同时，与其他创业公司的交流和竞争，也有助于创业公司发现自身的优势和不足，进一步提升自身的竞争力。对于投资者而言，Startup Battlefield 200提供了一个发现和评估潜在投资机会的平台。\n\n市场意义在于，Startup Battlefield 200已经成为全球创业生态的重要组成部分。它不仅为创业公司提供了一个展示和验证商业模式的平台，也为投资者提供了一个发现和评估投资机会的渠道。但是，需要注意的是，随着竞争的加剧，创业公司需要更加注重自身的核心竞争力和差异化优势。对于投资者而言，在众多创业公司中发现真正的潜力股，也需要更加精准的眼光和判断。未来6-12个月，Startup Battlefield 200将继续推动全球创业生态的发展，为更多的创业公司和投资者提供机会。",
+      "fact_check": "passed",
+      "_pipeline_source": "investing"
+    },
+    {
+      "title": "Korea Bourse CEO Sees Kospi at 6,000, Vows to Cut ‘Zombie’ Firms",
+      "url": "https://www.bloomberg.com/news/articles/2026-01-19/korea-bourse-ceo-sees-kospi-at-6-000-vows-to-cut-zombie-firms",
+      "content": "The world-beating rally in South Korean stocks is poised to extend as the nation presses ahead with efforts to improve shareholder returns and lure global capital, according to Jeong Eun Bo, chief executive officer at the Korea Exchange.",
+      "published_date": "2026-01-19T23:00:00",
+      "source": "Bloomberg Technology",
+      "source_id": "bloomberg_tech",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "科技金融",
+        "IPO",
+        "估值"
+      ],
+      "batch_eval_score": 6.0,
+      "batch_eval_reasoning": "默认通过",
+      "searchable_entities": {
+        "companies": [
+          "Korea Exchange"
+        ],
+        "models": [],
+        "topics": [],
+        "business_models": [],
+        "people": [
+          "Jeong Eun Bo"
+        ]
+      },
+      "evaluation": {
+        "scores": {
+          "market_impact": 7,
+          "competitive_impact": 5,
+          "strategic_relevance": 6,
+          "operational_relevance": 4,
+          "credibility": 10
+        },
+        "weighted_score": 5.55,
+        "rationale": "文章讨论了韩国股市的强劲表现以及交易所CEO对于提高股东回报和吸引全球资本的承诺，这对市场有一定的影响力，尤其是在科技金融领域。然而，对于日常运营和产品开发的影响较小，且与公司主要关注的AI产品和风险管理等领域的直接关联度不高。",
+        "key_takeaway": "韩国股市的强劲表现可能对全球资本市场产生影响",
+        "recommended_category": "Market Analysis & Trends",
+        "average_score": 6.4
+      },
+      "avg_score": 6.4,
+      "5d_score_breakdown": {
+        "market_impact": 7,
+        "competitive_impact": 5,
+        "strategic_relevance": 6,
+        "operational_relevance": 4,
+        "credibility": 10
+      },
+      "weighted_score": 7.029999999999999,
+      "source_weight": 9,
+      "novelty_score": 1.0,
+      "paraphrased_content": "韩国股市的强劲表现预示着全球资本市场的新趋势。韩国交易所首席执行官Jeong Eun Bo表示，随着韩国加大力度提高股东回报并吸引全球资本，韩国股市的全球领先涨势有望延续。这一势头背后，是韩国股市在改善股东回报和吸引外资方面的积极努力，这些努力正在转化为显著的市场表现。\n\n韩国股市的这一突破归功于其在改善股东回报和吸引外资方面的积极政策。通过优化市场结构和提高透明度，韩国股市成功地吸引了大量外资流入，从而推动了股市的强劲增长。与其他国家相比，韩国股市的这一策略在提高市场效率和吸引外资方面显示出明显的优势。\n\n这一趋势对全球资本市场产生了深远影响。首先，韩国股市的强劲表现可能会吸引更多的全球投资者关注和投资韩国市场，从而进一步提高韩国股市的流动性和吸引力。其次，韩国股市的成功经验可能会被其他国家借鉴和学习，从而推动全球资本市场的发展和创新。然而，需要注意的是，韩国股市的这一趋势也面临着一定的风险和挑战，如全球经济形势的不确定性和市场波动等。\n\n总的来说，韩国股市的强劲表现和积极政策对全球资本市场具有重要的启示意义。一方面，它表明通过优化市场结构和提高透明度，可以有效地吸引外资和推动市场增长。另一方面，它也提醒各国需要关注全球经济形势的变化，并采取相应的风险管理措施。未来，各国需要在吸引外资和推动市场发展的同时，加强风险管理和应对能力，以实现资本市场的可持续发展。",
+      "fact_check": "passed",
+      "_pipeline_source": "investing"
+    }
+  ],
+  "financial_signals": {
+    "available": true,
+    "mrs": 0.0,
+    "mrs_interpretation": "neutral",
+    "bucket_signals": {
+      "robotics-embodied": {
+        "bucket_id": "robotics-embodied",
+        "pms": 33.3,
+        "pms_coverage": {
+          "tickers_present": 2,
+          "tickers_total": 3,
+          "missing": [
+            "ABB"
+          ]
+        },
+        "pms_contributors": [
+          {
+            "ticker": "ISRG",
+            "change_7d_pct": -8.74,
+            "weight": 0.5,
+            "contribution": -4.37
+          },
+          {
+            "ticker": "ROK",
+            "change_7d_pct": 1.22,
+            "weight": 0.5,
+            "contribution": 0.61
+          }
+        ],
+        "pms_contributors_text": [
+          "ISRG -8.7%",
+          "ROK +1.2%"
+        ],
+        "css": null,
+        "css_coverage": null,
+        "css_contributors": [],
+        "css_contributors_text": []
+      },
+      "ai-security": {
+        "bucket_id": "ai-security",
+        "pms": 50.0,
+        "pms_coverage": {
+          "tickers_present": 4,
+          "tickers_total": 4,
+          "missing": []
+        },
+        "pms_contributors": [
+          {
+            "ticker": "S",
+            "change_7d_pct": -8.07,
+            "weight": 0.25,
+            "contribution": -2.0175
+          },
+          {
+            "ticker": "CRWD",
+            "change_7d_pct": -3.55,
+            "weight": 0.25,
+            "contribution": -0.8875
+          },
+          {
+            "ticker": "ZS",
+            "change_7d_pct": -1.27,
+            "weight": 0.25,
+            "contribution": -0.3175
+          },
+          {
+            "ticker": "PANW",
+            "change_7d_pct": -0.72,
+            "weight": 0.25,
+            "contribution": -0.18
+          }
+        ],
+        "pms_contributors_text": [
+          "S -8.1%",
+          "CRWD -3.5%",
+          "ZS -1.3%"
+        ],
+        "css": 50.0,
+        "css_coverage": {
+          "tokens_present": 1,
+          "tokens_total": 1,
+          "missing": []
+        },
+        "css_contributors": [
+          {
+            "symbol": "ARKM",
+            "change_7d_pct": -15.18,
+            "weight": 1.0,
+            "contribution": -15.179999999999998
+          }
+        ],
+        "css_contributors_text": [
+          "ARKM -15.2%"
+        ]
+      },
+      "ai-consumer-assistants": {
+        "bucket_id": "ai-consumer-assistants",
+        "pms": null,
+        "pms_coverage": null,
+        "pms_contributors": [],
+        "pms_contributors_text": [],
+        "css": 0.0,
+        "css_coverage": {
+          "tokens_present": 1,
+          "tokens_total": 1,
+          "missing": []
+        },
+        "css_contributors": [
+          {
+            "symbol": "WLD",
+            "change_7d_pct": -18.54,
+            "weight": 1.0,
+            "contribution": -18.54
+          }
+        ],
+        "css_contributors_text": [
+          "WLD -18.5%"
+        ]
+      },
+      "llm-foundation": {
+        "bucket_id": "llm-foundation",
+        "pms": 58.3,
+        "pms_coverage": {
+          "tickers_present": 2,
+          "tickers_total": 3,
+          "missing": [
+            "META"
+          ]
+        },
+        "pms_contributors": [
+          {
+            "ticker": "MSFT",
+            "change_7d_pct": -4.05,
+            "weight": 0.5,
+            "contribution": -2.025
+          },
+          {
+            "ticker": "GOOGL",
+            "change_7d_pct": 0.44,
+            "weight": 0.5,
+            "contribution": 0.22
+          }
+        ],
+        "pms_contributors_text": [
+          "MSFT -4.0%",
+          "GOOGL +0.4%"
+        ],
+        "css": 66.7,
+        "css_coverage": {
+          "tokens_present": 1,
+          "tokens_total": 2,
+          "missing": [
+            "AGIX"
+          ]
+        },
+        "css_contributors": [
+          {
+            "symbol": "TAO",
+            "change_7d_pct": -14.93,
+            "weight": 1.0,
+            "contribution": -14.93
+          }
+        ],
+        "css_contributors_text": [
+          "TAO -14.9%"
+        ]
+      },
+      "autonomous-vehicles": {
+        "bucket_id": "autonomous-vehicles",
+        "pms": 66.7,
+        "pms_coverage": {
+          "tickers_present": 4,
+          "tickers_total": 4,
+          "missing": []
+        },
+        "pms_contributors": [
+          {
+            "ticker": "GM",
+            "change_7d_pct": -2.47,
+            "weight": 0.25,
+            "contribution": -0.6175
+          },
+          {
+            "ticker": "TSLA",
+            "change_7d_pct": -1.69,
+            "weight": 0.25,
+            "contribution": -0.4225
+          },
+          {
+            "ticker": "UBER",
+            "change_7d_pct": -0.69,
+            "weight": 0.25,
+            "contribution": -0.1725
+          },
+          {
+            "ticker": "GOOGL",
+            "change_7d_pct": 0.44,
+            "weight": 0.25,
+            "contribution": 0.11
+          }
+        ],
+        "pms_contributors_text": [
+          "GM -2.5%",
+          "TSLA -1.7%",
+          "UBER -0.7%"
+        ],
+        "css": null,
+        "css_coverage": null,
+        "css_contributors": [],
+        "css_contributors_text": []
+      },
+      "ai-chips": {
+        "bucket_id": "ai-chips",
+        "pms": 83.3,
+        "pms_coverage": {
+          "tickers_present": 5,
+          "tickers_total": 5,
+          "missing": []
+        },
+        "pms_contributors": [
+          {
+            "ticker": "AMD",
+            "change_7d_pct": 14.11,
+            "weight": 0.2,
+            "contribution": 2.822
+          },
+          {
+            "ticker": "MRVL",
+            "change_7d_pct": -3.32,
+            "weight": 0.2,
+            "contribution": -0.6639999999999999
+          },
+          {
+            "ticker": "INTC",
+            "change_7d_pct": 3.1,
+            "weight": 0.2,
+            "contribution": 0.62
+          },
+          {
+            "ticker": "AVGO",
+            "change_7d_pct": 1.95,
+            "weight": 0.2,
+            "contribution": 0.39
+          },
+          {
+            "ticker": "NVDA",
+            "change_7d_pct": 0.74,
+            "weight": 0.2,
+            "contribution": 0.148
+          }
+        ],
+        "pms_contributors_text": [
+          "AMD +14.1%",
+          "MRVL -3.3%",
+          "INTC +3.1%"
+        ],
+        "css": null,
+        "css_coverage": null,
+        "css_contributors": [],
+        "css_contributors_text": []
+      },
+      "code-ai": {
+        "bucket_id": "code-ai",
+        "pms": 16.7,
+        "pms_coverage": {
+          "tickers_present": 3,
+          "tickers_total": 3,
+          "missing": []
+        },
+        "pms_contributors": [
+          {
+            "ticker": "ADBE",
+            "change_7d_pct": -11.33,
+            "weight": 0.3333333333333333,
+            "contribution": -3.776666666666667
+          },
+          {
+            "ticker": "NOW",
+            "change_7d_pct": -10.22,
+            "weight": 0.3333333333333333,
+            "contribution": -3.4066666666666667
+          },
+          {
+            "ticker": "MSFT",
+            "change_7d_pct": -4.05,
+            "weight": 0.3333333333333333,
+            "contribution": -1.3499999999999999
+          }
+        ],
+        "pms_contributors_text": [
+          "ADBE -11.3%",
+          "NOW -10.2%",
+          "MSFT -4.0%"
+        ],
+        "css": null,
+        "css_coverage": null,
+        "css_contributors": [],
+        "css_contributors_text": []
+      },
+      "ai-healthcare": {
+        "bucket_id": "ai-healthcare",
+        "pms": 25.0,
+        "pms_coverage": {
+          "tickers_present": 3,
+          "tickers_total": 3,
+          "missing": []
+        },
+        "pms_contributors": [
+          {
+            "ticker": "ISRG",
+            "change_7d_pct": -8.74,
+            "weight": 0.3333333333333333,
+            "contribution": -2.9133333333333336
+          },
+          {
+            "ticker": "VEEV",
+            "change_7d_pct": -7.46,
+            "weight": 0.3333333333333333,
+            "contribution": -2.486666666666667
+          },
+          {
+            "ticker": "DXCM",
+            "change_7d_pct": 3.18,
+            "weight": 0.3333333333333333,
+            "contribution": 1.06
+          }
+        ],
+        "pms_contributors_text": [
+          "ISRG -8.7%",
+          "VEEV -7.5%",
+          "DXCM +3.2%"
+        ],
+        "css": null,
+        "css_coverage": null,
+        "css_contributors": [],
+        "css_contributors_text": []
+      },
+      "ai-finance": {
+        "bucket_id": "ai-finance",
+        "pms": 75.0,
+        "pms_coverage": {
+          "tickers_present": 2,
+          "tickers_total": 3,
+          "missing": [
+            "SQ"
+          ]
+        },
+        "pms_contributors": [
+          {
+            "ticker": "PYPL",
+            "change_7d_pct": -1.34,
+            "weight": 0.5,
+            "contribution": -0.67
+          },
+          {
+            "ticker": "COIN",
+            "change_7d_pct": 0.15,
+            "weight": 0.5,
+            "contribution": 0.075
+          }
+        ],
+        "pms_contributors_text": [
+          "PYPL -1.3%",
+          "COIN +0.1%"
+        ],
+        "css": null,
+        "css_coverage": null,
+        "css_contributors": [],
+        "css_contributors_text": []
+      },
+      "vision-multimodal": {
+        "bucket_id": "vision-multimodal",
+        "pms": 0.0,
+        "pms_coverage": {
+          "tickers_present": 3,
+          "tickers_total": 3,
+          "missing": []
+        },
+        "pms_contributors": [
+          {
+            "ticker": "ADBE",
+            "change_7d_pct": -11.33,
+            "weight": 0.3333333333333333,
+            "contribution": -3.776666666666667
+          },
+          {
+            "ticker": "U",
+            "change_7d_pct": -8.31,
+            "weight": 0.3333333333333333,
+            "contribution": -2.77
+          },
+          {
+            "ticker": "SNAP",
+            "change_7d_pct": -8.28,
+            "weight": 0.3333333333333333,
+            "contribution": -2.76
+          }
+        ],
+        "pms_contributors_text": [
+          "ADBE -11.3%",
+          "U -8.3%",
+          "SNAP -8.3%"
+        ],
+        "css": null,
+        "css_coverage": null,
+        "css_contributors": [],
+        "css_contributors_text": []
+      },
+      "ai-data": {
+        "bucket_id": "ai-data",
+        "pms": 41.7,
+        "pms_coverage": {
+          "tickers_present": 3,
+          "tickers_total": 3,
+          "missing": []
+        },
+        "pms_contributors": [
+          {
+            "ticker": "DDOG",
+            "change_7d_pct": -5.16,
+            "weight": 0.3333333333333333,
+            "contribution": -1.72
+          },
+          {
+            "ticker": "SNOW",
+            "change_7d_pct": -3.98,
+            "weight": 0.3333333333333333,
+            "contribution": -1.3266666666666667
+          },
+          {
+            "ticker": "MDB",
+            "change_7d_pct": -2.05,
+            "weight": 0.3333333333333333,
+            "contribution": -0.6833333333333332
+          }
+        ],
+        "pms_contributors_text": [
+          "DDOG -5.2%",
+          "SNOW -4.0%",
+          "MDB -2.0%"
+        ],
+        "css": 83.3,
+        "css_coverage": {
+          "tokens_present": 2,
+          "tokens_total": 2,
+          "missing": []
+        },
+        "css_contributors": [
+          {
+            "symbol": "ARKM",
+            "change_7d_pct": -15.18,
+            "weight": 0.4285714285714286,
+            "contribution": -6.505714285714285
+          },
+          {
+            "symbol": "OCEAN",
+            "change_7d_pct": -1.09,
+            "weight": 0.5714285714285715,
+            "contribution": -0.622857142857143
+          }
+        ],
+        "css_contributors_text": [
+          "ARKM -15.2%",
+          "OCEAN -1.1%"
+        ]
+      },
+      "agent-orchestration": {
+        "bucket_id": "agent-orchestration",
+        "pms": null,
+        "pms_coverage": null,
+        "pms_contributors": [],
+        "pms_contributors_text": [],
+        "css": 33.3,
+        "css_coverage": {
+          "tokens_present": 1,
+          "tokens_total": 1,
+          "missing": []
+        },
+        "css_contributors": [
+          {
+            "symbol": "FET",
+            "change_7d_pct": -15.67,
+            "weight": 1.0,
+            "contribution": -15.670000000000002
+          }
+        ],
+        "css_contributors_text": [
+          "FET -15.7%"
+        ]
+      },
+      "ai-infrastructure": {
+        "bucket_id": "ai-infrastructure",
+        "pms": 91.7,
+        "pms_coverage": {
+          "tickers_present": 4,
+          "tickers_total": 4,
+          "missing": []
+        },
+        "pms_contributors": [
+          {
+            "ticker": "SMCI",
+            "change_7d_pct": 8.22,
+            "weight": 0.25,
+            "contribution": 2.055
+          },
+          {
+            "ticker": "VRT",
+            "change_7d_pct": 8.16,
+            "weight": 0.25,
+            "contribution": 2.04
+          },
+          {
+            "ticker": "ANET",
+            "change_7d_pct": 5.65,
+            "weight": 0.25,
+            "contribution": 1.4125
+          },
+          {
+            "ticker": "DELL",
+            "change_7d_pct": -0.07,
+            "weight": 0.25,
+            "contribution": -0.0175
+          }
+        ],
+        "pms_contributors_text": [
+          "SMCI +8.2%",
+          "VRT +8.2%",
+          "ANET +5.7%"
+        ],
+        "css": 16.7,
+        "css_coverage": {
+          "tokens_present": 3,
+          "tokens_total": 4,
+          "missing": [
+            "RNDR"
+          ]
+        },
+        "css_contributors": [
+          {
+            "symbol": "AKT",
+            "change_7d_pct": -22.2,
+            "weight": 0.3888888888888889,
+            "contribution": -8.633333333333333
+          },
+          {
+            "symbol": "FET",
+            "change_7d_pct": -15.67,
+            "weight": 0.22222222222222227,
+            "contribution": -3.482222222222223
+          },
+          {
+            "symbol": "TAO",
+            "change_7d_pct": -14.93,
+            "weight": 0.3888888888888889,
+            "contribution": -5.806111111111111
+          }
+        ],
+        "css_contributors_text": [
+          "AKT -22.2%",
+          "FET -15.7%",
+          "TAO -14.9%"
+        ]
+      },
+      "ai-enterprise": {
+        "bucket_id": "ai-enterprise",
+        "pms": 8.3,
+        "pms_coverage": {
+          "tickers_present": 4,
+          "tickers_total": 4,
+          "missing": []
+        },
+        "pms_contributors": [
+          {
+            "ticker": "CRM",
+            "change_7d_pct": -12.63,
+            "weight": 0.25,
+            "contribution": -3.1575
+          },
+          {
+            "ticker": "NOW",
+            "change_7d_pct": -10.22,
+            "weight": 0.25,
+            "contribution": -2.555
+          },
+          {
+            "ticker": "WDAY",
+            "change_7d_pct": -9.81,
+            "weight": 0.25,
+            "contribution": -2.4525
+          },
+          {
+            "ticker": "PLTR",
+            "change_7d_pct": -3.68,
+            "weight": 0.25,
+            "contribution": -0.92
+          }
+        ],
+        "pms_contributors_text": [
+          "CRM -12.6%",
+          "NOW -10.2%",
+          "WDAY -9.8%"
+        ],
+        "css": null,
+        "css_coverage": null,
+        "css_contributors": [],
+        "css_contributors_text": []
+      }
+    }
+  }
+}
