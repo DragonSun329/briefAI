@@ -16,14 +16,17 @@ from fastmcp import FastMCP
 mcp = FastMCP("briefai-mcp")
 
 # Register tool modules
-from mcp_server.tools import github_tools, web_scraper, data_tools, search_tools
-from mcp_server.resources import trend_db
+from mcp_server.tools import github_tools, web_scraper, data_tools, search_tools, cache_tools
+from mcp_server.resources import trend_db, signals_db, context
 
 github_tools.register(mcp)
 web_scraper.register(mcp)
 data_tools.register(mcp)
 search_tools.register(mcp)
+cache_tools.register(mcp)
 trend_db.register(mcp)
+signals_db.register(mcp)
+context.register(mcp)
 
 # Register prompts with dynamic loading
 from mcp_server.prompts import load_prompt
@@ -62,6 +65,26 @@ def arbiter(bull_thesis: str, bear_thesis: str) -> str:
     """
     template = load_prompt("arbiter.md")
     return template.format(bull_thesis=bull_thesis, bear_thesis=bear_thesis)
+
+
+@mcp.prompt()
+def evaluator(company_context: str = "") -> str:
+    """Article evaluation persona for 5D scoring.
+
+    Args:
+        company_context: Optional company context for relevance evaluation
+    """
+    template = load_prompt("evaluator.md")
+    context_section = ""
+    if company_context:
+        context_section = f"""
+## Company Context
+
+{company_context}
+
+Evaluate relevance and impact with special consideration for the above business context.
+"""
+    return template.format(company_context=context_section)
 
 
 if __name__ == "__main__":
