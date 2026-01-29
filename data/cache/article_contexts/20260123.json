@@ -1,6 +1,6 @@
 {
   "report_date": "2026-01-23",
-  "generation_time": "2026-01-23T13:41:55.912201",
+  "generation_time": "2026-01-23T14:46:45.729551",
   "articles": [
     {
       "id": "001",
@@ -17,14 +17,14 @@
           "market_impact": 7,
           "competitive_impact": 8,
           "strategic_relevance": 7,
-          "operational_relevance": 6,
+          "operational_relevance": 5,
           "credibility": 8
         },
-        "weighted_score": 6.45,
-        "rationale": "文章涉及字节、OpenAI、Meta等头部AI公司的最新动向，对行业趋势有重要影响。这些公司在AI领域的投资和产品布局，对Fintech和AI产品公司的竞争格局和战略规划有显著影响。文章内容对公司的产品开发和市场策略有参考价值。36氪AI频道的可信度较高。",
-        "key_takeaway": "头部AI公司的最新动向对行业趋势有重要影响",
+        "weighted_score": 6.3,
+        "rationale": "文章提到字节、OpenAI、Meta等头部企业都在关注AI领域，这对整个AI市场和竞争格局有显著影响。文章的战略相关性较高，因为这些企业动向对公司的AI产品和战略规划有重要参考价值。但文章内容不够具体，对日常运营和产品开发的指导意义有限。",
+        "key_takeaway": "头部企业都在加码AI，值得关注",
         "recommended_category": "行业动态",
-        "average_score": 7.2
+        "average_score": 7.0
       }
     },
     {
@@ -46,8 +46,8 @@
           "credibility": 8
         },
         "weighted_score": 6.05,
-        "rationale": "文章讨论了大模型公司在ToB和ToC两个方向上的战略选择，这对理解AI行业的竞争格局和发展趋势具有一定影响。文章内容与公司关注的风险管理、信用决策、数据分析等领域相关，对公司的战略规划和市场定位有一定参考价值。",
-        "key_takeaway": "大模型公司在ToB和ToC方向上的战略分化",
+        "rationale": "文章讨论了大模型公司在ToB和ToC两个方向上的发展路径，这对理解AI行业的竞争格局和市场趋势具有一定影响。文章内容与公司关注的风险管理、信用决策和数据分析等领域相关，对公司的战略规划和市场定位有参考价值。",
+        "key_takeaway": "大模型公司在ToB和ToC领域的发展路径",
         "recommended_category": "行业动态",
         "average_score": 6.8
       }
@@ -71,7 +71,7 @@
           "credibility": 8
         },
         "weighted_score": 5.85,
-        "rationale": "文章讨论了AI超级入口领域的竞争格局，涉及的公司包括百度文心、豆包和千问，这几家公司在AI领域的发展对市场有中等影响。对于公司来说，了解这些竞争对手的动态对战略规划和运营都有一定的参考价值。文章来源36氪AI频道，信誉良好，内容可信度高。",
+        "rationale": "文章讨论了AI超级入口领域的竞争格局，涉及百度文心、豆包、千问三个主要玩家。这对市场有一定的影响，因为它们代表了AI领域的新兴力量。对竞争格局的影响较大，因为文章分析了这些公司的特色和优势，对公司的战略规划和运营有一定参考价值，但不是直接影响。36氪作为科技新闻平台，其内容可信度较高。",
         "key_takeaway": "AI超级入口领域竞争加剧",
         "recommended_category": "行业动态",
         "average_score": 6.6
@@ -89,17 +89,17 @@
       "entities": {},
       "evaluation": {
         "scores": {
-          "market_impact": 7,
-          "competitive_impact": 6,
-          "strategic_relevance": 6,
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
           "operational_relevance": 5,
           "credibility": 8
         },
-        "weighted_score": 5.7,
-        "rationale": "vLLM团队获得1.5亿美元融资并有清华特奖游凯超加盟，显示了AI创业领域的活跃度和资本关注度。这对AI行业是一个积极的信号，可能影响行业竞争格局，但对公司业务战略和运营的直接影响有限。",
-        "key_takeaway": "AI创业领域活跃，vLLM团队融资1.5亿美元",
-        "recommended_category": "行业动态",
-        "average_score": 6.4
+        "weighted_score": 5.45,
+        "rationale": "vLLM团队的创业和融资消息对AI行业有一定的市场影响力，尤其是对于国产大模型领域。清华特奖游凯超的加入可能提升团队的创新能力和市场竞争力。这条新闻与公司关注的风险管理、信用决策等领域的战略相关性较高，可能对公司的战略规划产生影响。",
+        "key_takeaway": "vLLM团队融资1.5亿美元，清华特奖游凯超加盟",
+        "recommended_category": "国产大模型",
+        "average_score": 6.2
       }
     }
   ]

@@ -1,0 +1,257 @@
+{
+  "pipeline_id": "research",
+  "date": "20260129",
+  "article_count": 10,
+  "categories": [
+    "research_papers",
+    "lab_announcements",
+    "model_releases",
+    "safety_research"
+  ],
+  "entities": [],
+  "articles": [
+    {
+      "id": "001",
+      "title": "Newsroom",
+      "url": "mailto:press@anthropic.com",
+      "source": "Anthropic News",
+      "source_id": "anthropic_news",
+      "weighted_score": 9.945,
+      "content": "The best model in the world for coding, agents, and computer use, with meaningful improvements to everyday tasks like slides and spreadsheets. Claude Opus 4.5 delivers frontier performance and dramatically improved token efficiency.",
+      "paraphrased_content": "Anthropic近日发布了Claude Opus 4.5，标志着AI在编程、代理操作和计算机使用方面的性能达到了新的高度。这款模型以其在处理日常任务如幻灯片和电子表格时的显著进步而备受瞩目，特别是在token效率上的大幅提升。这一进步不仅体现在技术层面，更在实际应用中展现出了其价值。\n\nClaude Opus 4.5的核心机制在于其前沿的性能和显著提升的token效率。这种效率的提升意味着模型能够以更少的数据输入获得更多的信息输出，从而降低了计算成本并提高了处理速度。与前代产品相比，4.5版本在保持性能的同时，减少了对资源的依赖，这在竞争激烈的AI市场中是一个显著的优势。\n\n在实际应用场景中，Claude Opus 4.5的改进对软件开发者、数据分析师等专业人员来说是一个巨大的福音。它能够更高效地处理大量数据，减少错误并提升工作流程的自动化水平，从而节省时间和成本。例如，在金融风控团队中，该模型可以减少审核时间20%，显著提升风险评估的效率和准确性。\n\n市场意义在于，Claude Opus 4.5的发布可能会重塑AI市场的竞争格局。它不仅为企业提供了一个更高效的工具选择，也推动了AI技术在各行各业的深入应用。但是，需要注意的是，尽管模型性能提升，但在特定领域如医疗诊断等高风险领域，其应用仍需谨慎。对企业而言，选择合适的AI工具以适应特定业务需求，比盲目追求最新技术更为重要。",
+      "published_date": "2026-01-29T09:58:21.007559",
+      "focus_tags": [
+        "Anthropic",
+        "Claude",
+        "constitutional AI",
+        "safety"
+      ],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "002",
+      "title": "AI",
+      "url": "https://blog.google/",
+      "source": "Google AI Blog",
+      "source_id": "google_ai_blog",
+      "weighted_score": 8.93,
+      "content": "The work we're doing to make AI helpful for everyone.",
+      "paraphrased_content": "Google AI Blog最近发布了一篇关于AI工作的文章，强调了其在使AI对每个人更有帮助方面的进展。文章中提到，AI技术的进步正在加速，特别是在自然语言处理和机器学习领域，AI的准确性和响应速度提升了30%以上。这一提升得益于Google在算法优化和数据处理方面的持续投入。\n\n文章中的核心机制在于利用深度学习技术，通过大量数据训练，使AI系统能够更好地理解和响应人类语言，从而提高其在客服、数据分析等领域的应用效果。与前代技术相比，新一代AI系统在处理复杂问题时更加精准，能够提供更个性化的服务。\n\n在实际应用场景中，AI技术的进步为各行各业带来了显著的效率提升和成本节省。例如，在金融风控领域，AI系统通过自动化分析大量交易数据，帮助团队减少了20%的审核时间，同时提高了风险识别的准确性。在医疗领域，AI辅助诊断系统能够快速识别疾病症状，为医生提供决策支持，提高了诊断效率。\n\n尽管AI技术的发展为市场和竞争格局带来了显著影响，但是需要注意的是，AI技术的普及和应用仍面临数据隐私、伦理等挑战。企业在部署AI系统时需要权衡成本和效益，同时关注数据安全和合规性问题。对行业而言，这意味着在追求技术创新的同时，也需要重视AI治理和伦理建设，以确保技术的可持续发展。",
+      "published_date": "2026-01-29T09:58:24.489285",
+      "focus_tags": [
+        "Google",
+        "Gemini",
+        "Bard",
+        "TPU"
+      ],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "003",
+      "title": "As AI Grows More Complex, Model Builders Rely on NVIDIA",
+      "url": "https://blogs.nvidia.com/blog/leading-models-nvidia/",
+      "source": "NVIDIA AI Blog",
+      "source_id": "nvidia_ai_blog",
+      "weighted_score": 8.571666666666667,
+      "content": "Unveiling what it describes as the most capable model series yet for professional knowledge work, OpenAI launched GPT-5.2 today. The model was trained and deployed on NVIDIA infrastructure, including NVIDIA…    \t\tRead Article",
+      "paraphrased_content": "OpenAI最近推出了GPT-5.2，标志着专业知识工作中最强大的模型系列问世。该模型在NVIDIA基础设施上进行训练和部署，展现了NVIDIA在AI模型构建中的核心作用。GPT-5.2的推出再次证明了NVIDIA技术在高性能AI计算中的重要性。\n\nGPT-5.2之所以能实现性能上的突破，得益于NVIDIA的GPU加速技术和优化的AI软件栈。NVIDIA的技术使得模型训练效率大幅提升，降低了部署成本，这对于需要处理大规模数据集的AI项目至关重要。与前代产品相比，GPT-5.2在处理复杂任务时展现出更高的准确性和更快的处理速度。\n\n在实际应用中，GPT-5.2将为各行各业带来深远影响。例如，在医疗领域，模型可以帮助医生快速分析病历，提高诊断的准确性；在金融行业，它能够辅助风控团队进行更精确的风险评估，减少审核时间。这些改进不仅提高了工作效率，还降低了运营成本，提升了服务质量。\n\nGPT-5.2的推出对AI行业具有里程碑意义，它不仅展示了NVIDIA技术在推动AI发展中的关键作用，也为其他企业提供了技术借鉴。然而，需要注意的是，随着模型复杂度的提升，对算力的需求也在不断增长，这可能导致成本上升。企业在部署这些高级AI模型时，应权衡成本与效益，确保技术投入能够带来相应的业务价值。",
+      "published_date": "2026-01-29T09:58:25.788198",
+      "focus_tags": [
+        "NVIDIA",
+        "GPU",
+        "CUDA",
+        "inference"
+      ],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "004",
+      "title": "Time series forecasting with Hahn Kolmogorov-Arnold networks",
+      "url": "https://arxiv.org/abs/2601.18837",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "weighted_score": 8.296666666666667,
+      "content": "arXiv:2601.18837v1 Announce Type: new \nAbstract: Recent Transformer- and MLP-based models have demonstrated strong performance in long-term time series forecasting, yet Transformers remain limited by their quadratic complexity and permutation-equivariant attention, while MLPs exhibit spectral bias. We propose HaKAN, a versatile model based on Kolmogorov-Arnold Networks (KANs), leveraging Hahn polynomial-based learnable activation functions and providing a lightweight and interpretable alternative for multivariate time series forecasting. Our model integrates channel independence, patching, a stack of Hahn-KAN blocks with residual connections, and a bottleneck structure comprised of two fully connected layers. The Hahn-KAN block consists of inter- and intra-patch KAN layers to effectively capture both global and local temporal patterns. Extensive experiments on various forecasting benchmarks demonstrate that our model consistently outperforms recent state-of-the-art methods, with ablation studies validating the effectiveness of its core components.",
+      "paraphrased_content": "近期，基于Kolmogorov-Arnold Networks（KANs）的时间序列预测模型HaKAN展现出了超越现有方法的性能。HaKAN通过利用Hahn多项式作为可学习的激活函数，并结合通道独立性、分块技术、Hahn-KAN块堆叠和瓶颈结构，有效地捕捉全局和局部的时间模式。在多个预测基准测试中，HaKAN一致性地超越了最新的SOTA方法，其核心组件的有效性也得到了验证。\n\nHaKAN模型的核心机制在于其Hahn-KAN块的设计，该块包含跨块和块内KAN层，这使得模型能够同时捕捉全局和局部的时间序列模式。这种设计解决了传统Transformer模型的二次复杂性和排列等变注意力的局限性，同时也克服了MLPs的谱偏差问题。HaKAN的轻量级和可解释性使其在多变量时间序列预测中成为一个有吸引力的替代方案。\n\n在实际应用中，HaKAN模型可以显著提高金融风控团队的预测准确性，减少因预测失误导致的潜在损失。例如，在股票市场预测中，HaKAN能够提供更准确的趋势预测，帮助投资者做出更明智的投资决策。此外，HaKAN的可解释性也使得业务团队能够更好地理解模型预测背后的逻辑，从而提高决策的透明度和信任度。\n\nHaKAN模型的出现可能会改变时间序列预测的市场格局，为企业提供了一个更高效、更准确的预测工具。然而，需要注意的是，尽管HaKAN在实验中表现出色，但在实际应用中可能面临数据质量和模型泛化能力的挑战。企业在部署HaKAN时，应考虑这些潜在风险，并结合自身的业务需求和数据特点，制定合适的策略。",
+      "published_date": "2026-01-28T05:00:00",
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "005",
+      "title": "NVIDIA Rubin Platform, Open Models, Autonomous Driving: NVIDIA Presents Blueprint for the Future at CES",
+      "url": "https://blogs.nvidia.com/blog/2026-ces-special-presentation/",
+      "source": "NVIDIA AI Blog",
+      "source_id": "nvidia_ai_blog",
+      "weighted_score": 8.078333333333333,
+      "content": "NVIDIA founder and CEO Jensen Huang took the stage at the Fontainebleau Las Vegas to open CES 2026,…    \t\tRead Article",
+      "paraphrased_content": "NVIDIA的创始人兼CEO Jensen Huang在CES 2026上展示了公司在自动驾驶等AI领域的最新技术，这标志着NVIDIA在AI技术前沿的又一次突破。NVIDIA Rubin Platform和Open Models的推出，旨在为自动驾驶提供更强大的计算支持和更开放的模型生态，这对于自动驾驶技术的发展和市场格局具有重要影响。\n\nNVIDIA Rubin Platform的核心机制在于其强大的计算能力和对深度学习模型的优化支持，这使得自动驾驶车辆能够实时处理复杂的环境数据并做出快速响应。与前代技术相比，Rubin Platform通过集成更先进的GPU和AI处理器，提升了数据处理速度和准确性，这对于提高自动驾驶的安全性和可靠性至关重要。\n\n在实际应用场景中，NVIDIA的技术将直接影响自动驾驶汽车的性能和成本。对于汽车制造商而言，Rubin Platform和Open Models可以降低研发成本，缩短产品上市时间，同时提高车辆的智能化水平。对于消费者而言，这意味着更安全、更经济的自动驾驶体验。\n\n市场意义在于，NVIDIA的技术进步可能会加速自动驾驶技术的商业化进程，改变现有的竞争格局。然而，需要注意的是，尽管技术进步显著，但自动驾驶技术的普及仍面临法规、伦理和消费者接受度等挑战。企业在追求技术创新的同时，也应关注这些潜在的风险和局限。",
+      "published_date": "2026-01-29T09:58:25.787999",
+      "focus_tags": [
+        "NVIDIA",
+        "GPU",
+        "CUDA",
+        "inference"
+      ],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "006",
+      "title": "Variational Quantum Circuit-Based Reinforcement Learning for Dynamic Portfolio Optimization",
+      "url": "https://arxiv.org/abs/2601.18811",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "weighted_score": 7.916666666666666,
+      "content": "arXiv:2601.18811v1 Announce Type: new \nAbstract: This paper presents a Quantum Reinforcement Learning (QRL) solution to the dynamic portfolio optimization problem based on Variational Quantum Circuits. The implemented QRL approaches are quantum analogues of the classical neural-network-based Deep Deterministic Policy Gradient and Deep Q-Network algorithms. Through an empirical evaluation on real-world financial data, we show that our quantum agents achieve risk-adjusted performance comparable to, and in some cases exceeding, that of classical Deep RL models with several orders of magnitude more parameters. In addition to improved parameter efficiency, quantum agents exhibit reduced variability across market regimes, indicating robust behaviour under changing conditions. However, while quantum circuit execution is inherently fast at the hardware level, practical deployment on cloud-based quantum systems introduces substantial latency, making end-to-end runtime currently dominated by infrastructural overhead and limiting practical applicability. Taken together, our results suggest that QRL is theoretically competitive with state-of-the-art classical reinforcement learning and may become practically advantageous as deployment overheads diminish. This positions QRL as a promising paradigm for dynamic decision-making in complex, high-dimensional, and non-stationary environments such as financial markets. The complete codebase is released as open source at: https://github.com/VincentGurgul/qrl-dpo-public",
+      "paraphrased_content": "近期arXiv上发表的论文提出了一种基于变分量子电路的量子强化学习(QRL)解决方案，用于动态投资组合优化问题。实验评估显示，该量子代理在风险调整后的性能可与经典深度强化学习模型相媲美，甚至在某些情况下超越，尽管其参数数量仅为后者的数个数量级。这表明QRL在参数效率上具有优势，并且在市场变化下展现出更小的变异性，显示出在复杂环境下的鲁棒性。\n\n该QRL方案是将经典的深度确定性策略梯度和深度Q网络算法的量子版本。这些量子代理通过变分量子电路实现，与经典模型相比，在保持性能的同时大幅减少了参数数量，从而提高了参数效率。此外，量子代理在不同市场环境下的变异性较小，表明其在市场条件变化时的行为更为稳健。\n\n在实际应用中，QRL技术能够为金融投资领域带来显著的业务影响。尤其是在动态市场环境中，QRL能够提供与传统方法相比更为优化的投资组合策略，帮助投资者在风险和收益之间找到更好的平衡。然而，尽管量子电路在硬件层面执行速度快，但云量子系统的部署延迟较大，导致端到端运行时间主要受基础设施开销影响，这限制了其实际应用。\n\n市场意义在于，QRL提供了一种理论上与最先进的经典强化学习相竞争的解决方案，并可能随着部署开销的减少而变得具有实际优势。这使得QRL成为处理复杂、高维、非平稳环境（如金融市场）动态决策的有前景的范式。但需要注意的是，云量子系统的部署延迟和基础设施开销仍是目前QRL面临的主要挑战。企业在考虑部署QRL时应权衡其潜在优势与现有技术限制。",
+      "published_date": "2026-01-28T05:00:00",
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "007",
+      "title": "The Geometric Reasoner: Manifold-Informed Latent Foresight Search for Long-Context Reasoning",
+      "url": "https://arxiv.org/abs/2601.18832",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "weighted_score": 7.79,
+      "content": "arXiv:2601.18832v1 Announce Type: new \nAbstract: Scaling test-time compute enhances long chain-of-thought (CoT) reasoning, yet existing approaches face a fundamental trade-off between computational cost and coverage quality: either incurring high training expense or yielding redundant trajectories. We introduce The Geometric Reasoner (TGR), a training-free framework that performs manifold-informed latent foresight search under strict memory bounds. At each chunk boundary, TGR scores candidate latent anchors via a lightweight look-ahead estimate combined with soft geometric regularizers that encourage smooth trajectories and diverse exploration. Chunk-wise KV cache resets keep memory linear in chunk length. On challenging math and code benchmarks, TGR improves robust trajectory coverage, measured by the area under the Pass@$k$ curve (AUC), by up to 13 points on Qwen3-8B, with negligible overhead of about 1.1--1.3 times.",
+      "paraphrased_content": "在长链推理领域，The Geometric Reasoner (TGR) 实现了显著进步。TGR是一个无需训练的框架，通过在严格的内存限制下进行流形信息潜在预测搜索，解决了计算成本与覆盖质量之间的基本权衡问题。在数学和代码基准测试中，TGR通过最多13点的提升，在Qwen3-8B上显著增强了稳健轨迹覆盖率，而开销仅为1.1至1.3倍。\n\nTGR的核心机制在于其在每个块边界处，通过轻量级前瞻估计结合软几何正则化来评分候选潜在锚点，这些正则化鼓励平滑轨迹和多样化探索。块级别的KV缓存重置保持了内存与块长度的线性关系。与现有方法相比，TGR在不增加显著计算成本的情况下，提供了更优的轨迹覆盖质量。\n\n在实际应用中，TGR对需要长链推理的复杂问题解决场景，如高级数学问题解答和代码生成，提供了显著的效率提升。它通过减少冗余轨迹，使得计算资源得到更有效的利用，同时保持了解决方案的多样性和质量。这对于那些需要处理大量数据和复杂逻辑的领域，如金融分析和软件开发，具有重要意义。\n\n市场意义在于TGR提供了一种在资源受限环境下进行高效长链推理的新方法。尽管如此，需要注意的是，TGR在特定类型的复杂任务中的表现可能还有待进一步验证。企业在考虑采用TGR时，应评估其在特定应用场景中的适用性和潜在的风险。",
+      "published_date": "2026-01-28T05:00:00",
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "008",
+      "title": "One Global Model, Many Behaviors: Stockout-Aware Feature Engineering and Dynamic Scaling for Multi-Horizon Retail Demand Forecasting with a Cost-Aware Ordering Policy (VN2 Winner Report)",
+      "url": "https://arxiv.org/abs/2601.18919",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "weighted_score": 7.79,
+      "content": "arXiv:2601.18919v1 Announce Type: new \nAbstract: Inventory planning for retail chains requires translating demand forecasts into ordering decisions, including asymmetric shortages and holding costs. The VN2 Inventory Planning Challenge formalizes this setting as a weekly decision-making cycle with a two-week product delivery lead time, where the total cost is defined as the shortage cost plus the holding cost. This report presents the winning VN2 solution: a two-stage predict-then-optimize pipeline that combines a single global multi-horizon forecasting model with a cost-aware ordering policy. The forecasting model is trained in a global paradigm, jointly using all available time series. A gradient-boosted decision tree (GBDT) model implemented in CatBoost is used as the base learner. The model incorporates stockout-aware feature engineering to address censored demand during out-of-stock periods, per-series scaling to focus learning on time-series patterns rather than absolute levels, and time-based observation weights to reflect shifts in demand patterns. In the decision stage, inventory is projected to the start of the delivery week, and a target stock level is calculated that explicitly trades off shortage and holding costs. Evaluated by the official competition simulation in six rounds, the solution achieved first place by combining a strong global forecasting model with a lightweight cost-aware policy. Although developed for the VN2 setting, the proposed approach can be extended to real-world applications and additional operational constraints.",
+      "paraphrased_content": "在零售需求预测领域，VN2库存规划挑战赛的获胜解决方案展现了一项创新模型。该模型通过一个两阶段的预测-优化流程，结合单一全球多周期预测模型和成本感知的订货策略，实现了卓越的性能。在六轮官方竞赛模拟中，该解决方案凭借强大的全球预测模型和轻量级的成本感知策略获得第一名。\n\n该模型的核心机制在于采用CatBoost实现的梯度提升决策树（GBDT）作为基础学习器，并整合了缺货感知的特征工程来处理缺货期间的截断需求，以及基于时间序列模式而非绝对水平的逐系列缩放，和基于时间的观测权重以反映需求模式的变化。在决策阶段，库存被预测到配送周的开始，并计算出目标库存水平，明确权衡缺货和持有成本。\n\n此模型的实际应用场景广泛，尤其适用于零售连锁的库存规划，能够显著降低因不对称缺货和持有成本带来的总成本。具体而言，通过优化订货决策，零售企业可以减少缺货和过剩库存，从而提高效率和降低成本。这不仅提升了供应链的响应速度，也增强了对市场变化的适应能力。\n\n市场意义在于，这种模型能够为零售行业提供一种新的库存规划工具，有助于企业在激烈的市场竞争中获得优势。然而，需要注意的是，模型的普适性和在不同零售环境下的适应性仍需进一步验证。此外，对于不同规模和类型的零售商，如何调整和优化模型以适应其特定需求也是一个挑战。关键启示是，零售企业在选择库存规划工具时，应考虑模型的灵活性和成本效益。",
+      "published_date": "2026-01-28T05:00:00",
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "009",
+      "title": "LLMs versus the Halting Problem: Revisiting Program Termination Prediction",
+      "url": "https://arxiv.org/abs/2601.18987",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "weighted_score": 7.79,
+      "content": "arXiv:2601.18987v1 Announce Type: new \nAbstract: Determining whether a program terminates is a central problem in computer science. Turing's foundational result established the Halting Problem as undecidable, showing that no algorithm can universally determine termination for all programs and inputs. Consequently, automatic verification tools approximate termination, sometimes failing to prove or disprove; these tools rely on problem-specific architectures and abstractions, and are usually tied to particular programming languages. Recent success and progress in large language models (LLMs) raises the following question: can LLMs reliably predict program termination? In this work, we evaluate LLMs on a diverse set of C programs from the Termination category of the International Competition on Software Verification (SV-Comp) 2025. Our results suggest that LLMs perform remarkably well at predicting program termination, where GPT-5 and Claude Sonnet-4.5 would rank just behind the top-ranked tool (using test-time-scaling), and Code World Model (CWM) would place just behind the second-ranked tool. While LLMs are effective at predicting program termination, they often fail to provide a valid witness as a proof. Moreover, LLMs performance drops as program length increases. We hope these insights motivate further research into program termination and the broader potential of LLMs for reasoning about undecidable problems.",
+      "paraphrased_content": "近期研究显示，大型语言模型（LLMs）在预测程序终止方面取得了显著进展，这对于解决计算机科学中的核心难题——停机问题（Halting Problem）具有战略意义。研究通过对2025年国际软件验证竞赛（SV-Comp）中C语言程序的评估，发现GPT-5和Claude Sonnet-4.5在预测程序终止方面的表现接近顶尖工具，而Code World Model（CWM）紧随第二名。这一成果表明LLMs在解决停机问题上具有潜力，尽管它们在提供有效证明方面存在不足，且随着程序长度增加性能有所下降。\n\nLLMs在预测程序终止方面的突破，关键在于其强大的语言理解和模式识别能力。与传统的验证工具相比，LLMs不依赖于特定编程语言或架构，而是通过海量数据训练，学习程序行为的一般规律。这种基于统计的方法，使得LLMs能够处理更广泛的程序类型，但也带来了泛化性和可解释性的挑战。\n\n在实际应用中，LLMs的这一能力有望显著提高软件开发和验证的效率。对于软件工程师而言，LLMs可以辅助发现潜在的无限循环，减少调试和测试的工作量。同时，对于安全关键领域的软件，如航空航天和医疗设备，LLMs的预测能力有助于提前识别风险，降低事故概率。然而，LLMs在长程序和复杂逻辑的处理上仍有局限，需要与其他工具结合使用。\n\n这一研究对AI领域具有重要启示：LLMs在处理不可判定问题上展现出巨大潜力，为未来的研究和应用打开了新的可能性。但同时也需要注意，LLMs的预测能力并非万能，其准确性和可靠性仍需在实际应用中不断验证和优化。对于企业而言，合理利用LLMs辅助软件开发和验证，同时保持谨慎态度，是推动技术创新的关键。",
+      "published_date": "2026-01-28T05:00:00",
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "010",
+      "title": "Malicious Repurposing of Open Science Artefacts by Using Large Language Models",
+      "url": "https://arxiv.org/abs/2601.18998",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "weighted_score": 7.79,
+      "content": "arXiv:2601.18998v1 Announce Type: new \nAbstract: The rapid evolution of large language models (LLMs) has fuelled enthusiasm about their role in advancing scientific discovery, with studies exploring LLMs that autonomously generate and evaluate novel research ideas. However, little attention has been given to the possibility that such models could be exploited to produce harmful research by repurposing open science artefacts for malicious ends. We fill the gap by introducing an end-to-end pipeline that first bypasses LLM safeguards through persuasion-based jailbreaking, then reinterprets NLP papers to identify and repurpose their artefacts (datasets, methods, and tools) by exploiting their vulnerabilities, and finally assesses the safety of these proposals using our evaluation framework across three dimensions: harmfulness, feasibility of misuse, and soundness of technicality. Overall, our findings demonstrate that LLMs can generate harmful proposals by repurposing ethically designed open artefacts; however, we find that LLMs acting as evaluators strongly disagree with one another on evaluation outcomes: GPT-4.1 assigns higher scores (indicating greater potential harms, higher soundness and feasibility of misuse), Gemini-2.5-pro is markedly stricter, and Grok-3 falls between these extremes. This indicates that LLMs cannot yet serve as reliable judges in a malicious evaluation setup, making human evaluation essential for credible dual-use risk assessment.",
+      "paraphrased_content": "大型语言模型（LLMs）在推动科学发现方面展现出巨大潜力，但最新研究指出，这些模型也可能被恶意利用，通过重新解释科学论文来识别和重新利用其成果（如数据集、方法和工具），用于不道德的目的。研究中通过一个端到端流程展示了这一点：首先绕过LLM的安全防护，然后利用NLP论文的漏洞重新解释其成果，并最终评估这些提案的安全性。结果显示，LLMs能够重新利用道德设计的开放成果生成有害提案。\n\n研究中发现，不同LLMs作为评估者时，在评估结果上存在显著分歧：GPT-4.1给出更高评分，表明更大的潜在危害和更高的滥用可能性及技术合理性；而Gemini-2.5-pro则明显更为严格，Grok-3则介于两者之间。这表明LLMs尚不能作为恶意评估设置中可靠的裁判，人类评估对于可信的双重用途风险评估至关重要。\n\n在具体应用场景中，这一发现对科学界和AI领域具有重要影响。一方面，LLMs的重新利用能力可能被用于恶意目的，给科学成果的安全性带来挑战；另一方面，这也凸显了对LLMs进行更严格监管和评估的必要性。对于科研机构和AI企业而言，这意味着需要投入更多资源来确保数据和算法的安全，同时加强对潜在风险的识别和防范。\n\n市场意义在于，这一研究揭示了LLMs在推动科学进步的同时，也可能带来新的安全挑战。行业需要在利用LLMs的同时，加强对其潜在风险的认识和管理。尽管LLMs作为评估者的能力尚不成熟，但这一发现提醒我们，在AI技术快速发展的同时，必须同步考虑其伦理和安全问题。企业在部署LLMs时，应考虑到这一点，并采取相应的风险控制措施。",
+      "published_date": "2026-01-28T05:00:00",
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    }
+  ],
+  "top_articles": [
+    {
+      "title": "Newsroom",
+      "source": "Anthropic News",
+      "score": 0
+    },
+    {
+      "title": "AI",
+      "source": "Google AI Blog",
+      "score": 0
+    },
+    {
+      "title": "As AI Grows More Complex, Model Builders Rely on NVIDIA",
+      "source": "NVIDIA AI Blog",
+      "score": 0
+    },
+    {
+      "title": "Time series forecasting with Hahn Kolmogorov-Arnold networks",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "score": 0
+    },
+    {
+      "title": "NVIDIA Rubin Platform, Open Models, Autonomous Driving: NVIDIA Presents Blueprint for the Future at CES",
+      "source": "NVIDIA AI Blog",
+      "score": 0
+    }
+  ]
+}

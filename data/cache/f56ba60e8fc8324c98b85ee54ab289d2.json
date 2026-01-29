@@ -1,0 +1,326 @@
+{
+  "timestamp": "2026-01-29T09:58:22.251172",
+  "key": "source_arxiv_cs_lg_7days",
+  "value": [
+    {
+      "title": "NavFormer: IGRF Forecasting in Moving Coordinate Frames",
+      "url": "https://arxiv.org/abs/2601.18800",
+      "content": "arXiv:2601.18800v1 Announce Type: new \nAbstract: Triad magnetometer components change with sensor attitude even when the IGRF total intensity target stays invariant. NavFormer forecasts this invariant target with rotation invariant scalar features and a Canonical SPD module that stabilizes the spectrum of window level second moments of the triads without sign discontinuities. The module builds a canonical frame from a Gram matrix per window and applies state dependent spectral scaling in the original coordinates. Experiments across five flights show lower error than strong baselines in standard training, few shot training, and zero shot transfer. The code is available at: https://anonymous.4open.science/r/NavFormer-Robust-IGRF-Forecasting-for-Autonomous-Navigators-0765",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "Latent Structural Similarity Networks for Unsupervised Discovery in Multivariate Time Series",
+      "url": "https://arxiv.org/abs/2601.18803",
+      "content": "arXiv:2601.18803v1 Announce Type: new \nAbstract: This paper proposes a task-agnostic discovery layer for multivariate time series that constructs a relational hypothesis graph over entities without assuming linearity, stationarity, or a downstream objective. The method learns window-level sequence representations using an unsupervised sequence-to-sequence autoencoder, aggregates these representations into entity-level embeddings, and induces a sparse similarity network by thresholding a latent-space similarity measure. This network is intended as an analyzable abstraction that compresses the pairwise search space and exposes candidate relationships for further investigation, rather than as a model optimized for prediction, trading, or any decision rule. The framework is demonstrated on a challenging real-world dataset of hourly cryptocurrency returns, illustrating how latent similarity induces coherent network structure; a classical econometric relation is also reported as an external diagnostic lens to contextualize discovered edges.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "Variational Quantum Circuit-Based Reinforcement Learning for Dynamic Portfolio Optimization",
+      "url": "https://arxiv.org/abs/2601.18811",
+      "content": "arXiv:2601.18811v1 Announce Type: new \nAbstract: This paper presents a Quantum Reinforcement Learning (QRL) solution to the dynamic portfolio optimization problem based on Variational Quantum Circuits. The implemented QRL approaches are quantum analogues of the classical neural-network-based Deep Deterministic Policy Gradient and Deep Q-Network algorithms. Through an empirical evaluation on real-world financial data, we show that our quantum agents achieve risk-adjusted performance comparable to, and in some cases exceeding, that of classical Deep RL models with several orders of magnitude more parameters. In addition to improved parameter efficiency, quantum agents exhibit reduced variability across market regimes, indicating robust behaviour under changing conditions. However, while quantum circuit execution is inherently fast at the hardware level, practical deployment on cloud-based quantum systems introduces substantial latency, making end-to-end runtime currently dominated by infrastructural overhead and limiting practical applicability. Taken together, our results suggest that QRL is theoretically competitive with state-of-the-art classical reinforcement learning and may become practically advantageous as deployment overheads diminish. This positions QRL as a promising paradigm for dynamic decision-making in complex, high-dimensional, and non-stationary environments such as financial markets. The complete codebase is released as open source at: https://github.com/VincentGurgul/qrl-dpo-public",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "VAE with Hyperspherical Coordinates: Improving Anomaly Detection from Hypervolume-Compressed Latent Space",
+      "url": "https://arxiv.org/abs/2601.18823",
+      "content": "arXiv:2601.18823v1 Announce Type: new \nAbstract: Variational autoencoders (VAE) encode data into lower-dimensional latent vectors before decoding those vectors back to data. Once trained, one can hope to detect out-of-distribution (abnormal) latent vectors, but several issues arise when the latent space is high dimensional. This includes an exponential growth of the hypervolume with the dimension, which severely affects the generative capacity of the VAE. In this paper, we draw insights from high dimensional statistics: in these regimes, the latent vectors of a standard VAE are distributed on the `equators' of a hypersphere, challenging the detection of anomalies. We propose to formulate the latent variables of a VAE using hyperspherical coordinates, which allows compressing the latent vectors towards a given direction on the hypersphere, thereby allowing for a more expressive approximate posterior. We show that this improves both the fully unsupervised and OOD anomaly detection ability of the VAE, achieving the best performance on the datasets we considered, outperforming existing methods. For the unsupervised and OOD modalities, respectively, these are: i) detecting unusual landscape from the Mars Rover camera and unusual Galaxies from ground based imagery (complex, real world datasets); ii) standard benchmarks like Cifar10 and subsets of ImageNet as the in-distribution (ID) class.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "IPBC: An Interactive Projection-Based Framework for Human-in-the-Loop Semi-Supervised Clustering of High-Dimensional Data",
+      "url": "https://arxiv.org/abs/2601.18828",
+      "content": "arXiv:2601.18828v1 Announce Type: new \nAbstract: High-dimensional datasets are increasingly common across scientific and industrial domains, yet they remain difficult to cluster effectively due to the diminishing usefulness of distance metrics and the tendency of clusters to collapse or overlap when projected into lower dimensions. Traditional dimensionality reduction techniques generate static 2D or 3D embeddings that provide limited interpretability and do not offer a mechanism to leverage the analyst's intuition during exploration. To address this gap, we propose Interactive Project-Based Clustering (IPBC), a framework that reframes clustering as an iterative human-guided visual analysis process. IPBC integrates a nonlinear projection module with a feedback loop that allows users to modify the embedding by adjusting viewing angles and supplying simple constraints such as must-link or cannot-link relationships. These constraints reshape the objective of the projection model, gradually pulling semantically related points closer together and pushing unrelated points further apart. As the projection becomes more structured and expressive through user interaction, a conventional clustering algorithm operating on the optimized 2D layout can more reliably identify distinct groups. An additional explainability component then maps each discovered cluster back to the original feature space, producing interpretable rules or feature rankings that highlight what distinguishes each cluster. Experiments on various benchmark datasets show that only a small number of interactive refinement steps can substantially improve cluster quality. Overall, IPBC turns clustering into a collaborative discovery process in which machine representation and human insight reinforce one another.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "CP Loss: Channel-wise Perceptual Loss for Time Series Forecasting",
+      "url": "https://arxiv.org/abs/2601.18829",
+      "content": "arXiv:2601.18829v1 Announce Type: new \nAbstract: Multi-channel time-series data, prevalent across diverse applications, is characterized by significant heterogeneity in its different channels. However, existing forecasting models are typically guided by channel-agnostic loss functions like MSE, which apply a uniform metric across all channels. This often leads to fail to capture channel-specific dynamics such as sharp fluctuations or trend shifts. To address this, we propose a Channel-wise Perceptual Loss (CP Loss). Its core idea is to learn a unique perceptual space for each channel that is adapted to its characteristics, and to compute the loss within this space. Specifically, we first design a learnable channel-wise filter that decomposes the raw signal into disentangled multi-scale representations, which form the basis of our perceptual space. Crucially, the filter is optimized jointly with the main forecasting model, ensuring that the learned perceptual space is explicitly oriented towards the prediction task. Finally, losses are calculated within these perception spaces to optimize the model. Code is available at https://github.com/zyh16143998882/CP_Loss.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "How Much Temporal Modeling is Enough? A Systematic Study of Hybrid CNN-RNN Architectures for Multi-Label ECG Classification",
+      "url": "https://arxiv.org/abs/2601.18830",
+      "content": "arXiv:2601.18830v1 Announce Type: new \nAbstract: Accurate multi-label classification of electrocardiogram (ECG) signals remains challenging due to the coexistence of multiple cardiac conditions, pronounced class imbalance, and long-range temporal dependencies in multi-lead recordings. Although recent studies increasingly rely on deep and stacked recurrent architectures, the necessity and clinical justification of such architectural complexity have not been rigorously examined. In this work, we perform a systematic comparative evaluation of convolutional neural networks (CNNs) combined with multiple recurrent configurations, including LSTM, GRU, Bidirectional LSTM (BiLSTM), and their stacked variants, for multi-label ECG classification on the PTB-XL dataset comprising 23 diagnostic categories. The CNN component serves as a morphology-driven baseline, while recurrent layers are progressively integrated to assess their contribution to temporal modeling and generalization performance. Experimental results indicate that a CNN integrated with a single BiLSTM layer achieves the most favorable trade-off between predictive performance and model complexity. This configuration attains superior Hamming loss (0.0338), macro-AUPRC (0.4715), micro-F1 score (0.6979), and subset accuracy (0.5723) compared with deeper recurrent combinations. Although stacked recurrent models occasionally improve recall for specific rare classes, our results provide empirical evidence that increasing recurrent depth yields diminishing returns and may degrade generalization due to reduced precision and overfitting. These findings suggest that architectural alignment with the intrinsic temporal structure of ECG signals, rather than increased recurrent depth, is a key determinant of robust performance and clinically relevant deployment.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "The Geometric Reasoner: Manifold-Informed Latent Foresight Search for Long-Context Reasoning",
+      "url": "https://arxiv.org/abs/2601.18832",
+      "content": "arXiv:2601.18832v1 Announce Type: new \nAbstract: Scaling test-time compute enhances long chain-of-thought (CoT) reasoning, yet existing approaches face a fundamental trade-off between computational cost and coverage quality: either incurring high training expense or yielding redundant trajectories. We introduce The Geometric Reasoner (TGR), a training-free framework that performs manifold-informed latent foresight search under strict memory bounds. At each chunk boundary, TGR scores candidate latent anchors via a lightweight look-ahead estimate combined with soft geometric regularizers that encourage smooth trajectories and diverse exploration. Chunk-wise KV cache resets keep memory linear in chunk length. On challenging math and code benchmarks, TGR improves robust trajectory coverage, measured by the area under the Pass@$k$ curve (AUC), by up to 13 points on Qwen3-8B, with negligible overhead of about 1.1--1.3 times.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "Time series forecasting with Hahn Kolmogorov-Arnold networks",
+      "url": "https://arxiv.org/abs/2601.18837",
+      "content": "arXiv:2601.18837v1 Announce Type: new \nAbstract: Recent Transformer- and MLP-based models have demonstrated strong performance in long-term time series forecasting, yet Transformers remain limited by their quadratic complexity and permutation-equivariant attention, while MLPs exhibit spectral bias. We propose HaKAN, a versatile model based on Kolmogorov-Arnold Networks (KANs), leveraging Hahn polynomial-based learnable activation functions and providing a lightweight and interpretable alternative for multivariate time series forecasting. Our model integrates channel independence, patching, a stack of Hahn-KAN blocks with residual connections, and a bottleneck structure comprised of two fully connected layers. The Hahn-KAN block consists of inter- and intra-patch KAN layers to effectively capture both global and local temporal patterns. Extensive experiments on various forecasting benchmarks demonstrate that our model consistently outperforms recent state-of-the-art methods, with ablation studies validating the effectiveness of its core components.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "Analysis of Control Bellman Residual Minimization for Markov Decision Problem",
+      "url": "https://arxiv.org/abs/2601.18840",
+      "content": "arXiv:2601.18840v1 Announce Type: new \nAbstract: Markov decision problems are most commonly solved via dynamic programming. Another approach is Bellman residual minimization, which directly minimizes the squared Bellman residual objective function. However, compared to dynamic programming, this approach has received relatively less attention, mainly because it is often less efficient in practice and can be more difficult to extend to model-free settings such as reinforcement learning. Nonetheless, Bellman residual minimization has several advantages that make it worth investigating, such as more stable convergence with function approximation for value functions. While Bellman residual methods for policy evaluation have been widely studied, methods for policy optimization (control tasks) have been scarcely explored. In this paper, we establish foundational results for the control Bellman residual minimization for policy optimization.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "Representational Homomorphism Predicts and Improves Compositional Generalization In Transformer Language Model",
+      "url": "https://arxiv.org/abs/2601.18858",
+      "content": "arXiv:2601.18858v1 Announce Type: new \nAbstract: Compositional generalization-the ability to interpret novel combinations of familiar components-remains a persistent challenge for neural networks. Behavioral evaluations reveal when models fail but offer limited insight into why failures arise at the representational level. We introduce Homomorphism Error (HE), a structural metric that quantifies deviations from approximate homomorphisms between the expression algebra and a model's hidden-state space. We instantiate HE for two compositional operators in SCAN-style tasks: modifier HE for unary composition and sequence HE for binary composition, measured by learning representation-level operators that predict composed representations from their parts. Across controlled experiments with small decoder-only Transformers, HE predicts out-of-distribution (OOD) compositional generalization under noise injection, achieving R^2 = 0.73 correlation between modifier HE and OOD accuracy. Ablations show that model depth has minimal effect on either HE or OOD accuracy, training data coverage exhibits threshold effects (insufficient coverage sharply increases HE and degrades OOD performance), and randomly inserted noise tokens systematically increase HE. Finally, we test if HE-regularized training improves OOD accuracy. Experiment shows that explicitly enforcing low modifier HE during training significantly reduces modifier HE (p = 1.1x10-4) and sequence HE (p = 0.001) and yields a statistically significant improvement in OOD accuracy (p = 0.023). Together, these results indicate the potential of HE to be both a diagnostic and an actionable training signal for improving compositional generalization. Code to reproduce our experiments is open-sourced.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "How Is Uncertainty Propagated in Knowledge Distillation?",
+      "url": "https://arxiv.org/abs/2601.18909",
+      "content": "arXiv:2601.18909v1 Announce Type: new \nAbstract: Knowledge distillation transfers behavior from a teacher to a student model, but the process is inherently stochastic: teacher outputs, student training, and student inference can all be random. Collapsing these uncertainties to a single point estimate can distort what is learned. We systematically study how uncertainty propagates through knowledge distillation across three representative model classes--linear regression, feed-forward neural networks, and large language models (LLMs)--and propose simple corrections. We distinguish inter-student uncertainty (variance across independently distilled students) from intra-student uncertainty (variance of a single student's predictive distribution), showing that standard single-response knowledge distillation suppresses intra-student variance while leaving substantial inter-student variability. To address these mismatches, we introduce two variance-aware strategies: averaging multiple teacher responses, which reduces noise at rate $O(1/k)$, and variance-weighting, which combines teacher and student estimates via inverse-variance weighting to yield a minimum-variance estimator. We provide formal guarantees in linear regression, validate the methods in neural networks, and demonstrate empirical gains in LLM distillation, including reduced systematic noise and hallucination. These results reframe knowledge distillation as an uncertainty transformation and show that variance-aware distillation produces more stable students that better reflect teacher uncertainty.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "ASEHybrid: When Geometry Matters Beyond Homophily in Graph Neural Networks",
+      "url": "https://arxiv.org/abs/2601.18912",
+      "content": "arXiv:2601.18912v1 Announce Type: new \nAbstract: Standard message-passing graph neural networks (GNNs) often struggle on graphs with low homophily, yet homophily alone does not explain this behavior, as graphs with similar homophily levels can exhibit markedly different performance and some heterophilous graphs remain easy for vanilla GCNs. Recent work suggests that label informativeness (LI), the mutual information between labels of adjacent nodes, provides a more faithful characterization of when graph structure is useful. In this work, we develop a unified theoretical framework that connects curvature-guided rewiring and positional geometry through the lens of label informativeness, and instantiate it in a practical geometry-aware architecture, ASEHybrid. Our analysis provides a necessary-and-sufficient characterization of when geometry-aware GNNs can improve over feature-only baselines: such gains are possible if and only if graph structure carries label-relevant information beyond node features. Theoretically, we relate adjusted homophily and label informativeness to the spectral behavior of label signals under Laplacian smoothing, show that degree-based Forman curvature does not increase expressivity beyond the one-dimensional Weisfeiler--Lehman test but instead reshapes information flow, and establish convergence and Lipschitz stability guarantees for a curvature-guided rewiring process. Empirically, we instantiate ASEHybrid using Forman curvature and Laplacian positional encodings and conduct controlled ablations on Chameleon, Squirrel, Texas, Tolokers, and Minesweeper, observing gains precisely on label-informative heterophilous benchmarks where graph structure provides label-relevant information beyond node features, and no meaningful improvement in high-baseline regimes.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "GraIP: A Benchmarking Framework For Neural Graph Inverse Problems",
+      "url": "https://arxiv.org/abs/2601.18917",
+      "content": "arXiv:2601.18917v1 Announce Type: new \nAbstract: A wide range of graph learning tasks, such as structure discovery, temporal graph analysis, and combinatorial optimization, focus on inferring graph structures from data, rather than making predictions on given graphs. However, the respective methods to solve such problems are often developed in an isolated, task-specific manner and thus lack a unifying theoretical foundation. Here, we provide a stepping stone towards the formation of such a foundation and further development by introducing the Neural Graph Inverse Problem (GraIP) conceptual framework, which formalizes and reframes a broad class of graph learning tasks as inverse problems. Unlike discriminative approaches that directly predict target variables from given graph inputs, the GraIP paradigm addresses inverse problems, i.e., it relies on observational data and aims to recover the underlying graph structure by reversing the forward process, such as message passing or network dynamics, that produced the observed outputs. We demonstrate the versatility of GraIP across various graph learning tasks, including rewiring, causal discovery, and neural relational inference. We also propose benchmark datasets and metrics for each GraIP domain considered, and characterize and empirically evaluate existing baseline methods used to solve them. Overall, our unifying perspective bridges seemingly disparate applications and provides a principled approach to structural learning in constrained and combinatorial settings while encouraging cross-pollination of existing methods across graph inverse problems.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "One Global Model, Many Behaviors: Stockout-Aware Feature Engineering and Dynamic Scaling for Multi-Horizon Retail Demand Forecasting with a Cost-Aware Ordering Policy (VN2 Winner Report)",
+      "url": "https://arxiv.org/abs/2601.18919",
+      "content": "arXiv:2601.18919v1 Announce Type: new \nAbstract: Inventory planning for retail chains requires translating demand forecasts into ordering decisions, including asymmetric shortages and holding costs. The VN2 Inventory Planning Challenge formalizes this setting as a weekly decision-making cycle with a two-week product delivery lead time, where the total cost is defined as the shortage cost plus the holding cost. This report presents the winning VN2 solution: a two-stage predict-then-optimize pipeline that combines a single global multi-horizon forecasting model with a cost-aware ordering policy. The forecasting model is trained in a global paradigm, jointly using all available time series. A gradient-boosted decision tree (GBDT) model implemented in CatBoost is used as the base learner. The model incorporates stockout-aware feature engineering to address censored demand during out-of-stock periods, per-series scaling to focus learning on time-series patterns rather than absolute levels, and time-based observation weights to reflect shifts in demand patterns. In the decision stage, inventory is projected to the start of the delivery week, and a target stock level is calculated that explicitly trades off shortage and holding costs. Evaluated by the official competition simulation in six rounds, the solution achieved first place by combining a strong global forecasting model with a lightweight cost-aware policy. Although developed for the VN2 setting, the proposed approach can be extended to real-world applications and additional operational constraints.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "Toward Learning POMDPs Beyond Full-Rank Actions and State Observability",
+      "url": "https://arxiv.org/abs/2601.18930",
+      "content": "arXiv:2601.18930v1 Announce Type: new \nAbstract: We are interested in enabling autonomous agents to learn and reason about systems with hidden states, such as furniture with hidden locking mechanisms. We cast this problem as learning the parameters of a discrete Partially Observable Markov Decision Process (POMDP). The agent begins with knowledge of the POMDP's actions and observation spaces, but not its state space, transitions, or observation models. These properties must be constructed from action-observation sequences. Spectral approaches to learning models of partially observable domains, such as learning Predictive State Representations (PSRs), are known to directly estimate the number of hidden states. These methods cannot, however, yield direct estimates of transition and observation likelihoods, which are important for many downstream reasoning tasks. Other approaches leverage tensor decompositions to estimate transition and observation likelihoods but often assume full state observability and full-rank transition matrices for all actions. To relax these assumptions, we study how PSRs learn transition and observation matrices up to a similarity transform, which may be estimated via tensor methods. Our method learns observation matrices and transition matrices up to a partition of states, where the states in a single partition have the same observation distributions corresponding to actions whose transition matrices are full-rank. Our experiments suggest that these partition-level transition models learned by our method, with a sufficient amount of data, meets the performance of PSRs as models to be used by standard sampling-based POMDP solvers. Furthermore, the explicit observation and transition likelihoods can be leveraged to specify planner behavior after the model has been learned.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "Bi-Level Online Provisioning and Scheduling with Switching Costs and Cross-Level Constraints",
+      "url": "https://arxiv.org/abs/2601.18936",
+      "content": "arXiv:2601.18936v1 Announce Type: new \nAbstract: We study a bi-level online provisioning and scheduling problem motivated by network resource allocation, where provisioning decisions are made at a slow time scale while queue-/state-dependent scheduling is performed at a fast time scale. We model this two-time-scale interaction using an upper-level online convex optimization (OCO) problem and a lower-level constrained Markov decision process (CMDP). Existing OCO typically assumes stateless decisions and thus cannot capture MDP network dynamics such as queue evolution. Meanwhile, CMDP algorithms typically assume a fixed constraint threshold, whereas in provisioning-and-scheduling systems, the threshold varies with online budget decisions. To address these gaps, we study bi-level OCO-CMDP learning under switching costs (budget reprovisioning/system reconfiguration) and cross-level constraints that couple budgets to scheduling decisions. Our new algorithm solves this learning problem via several non-trivial developments, including a carefully designed dual feedback that returns the budget multiplier as sensitivity information for the upper-level update and a lower level that solves a budget-adaptive safe exploration problem via an extended occupancy-measure linear program. We establish near-optimal regret and high-probability satisfaction of the cross-level constraints.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "FSD-CAP: Fractional Subgraph Diffusion with Class-Aware Propagation for Graph Feature Imputation",
+      "url": "https://arxiv.org/abs/2601.18938",
+      "content": "arXiv:2601.18938v1 Announce Type: new \nAbstract: Imputing missing node features in graphs is challenging, particularly under high missing rates. Existing methods based on latent representations or global diffusion often fail to produce reliable estimates, and may propagate errors across the graph. We propose FSD-CAP, a two-stage framework designed to improve imputation quality under extreme sparsity. In the first stage, a graph-distance-guided subgraph expansion localizes the diffusion process. A fractional diffusion operator adjusts propagation sharpness based on local structure. In the second stage, imputed features are refined using class-aware propagation, which incorporates pseudo-labels and neighborhood entropy to promote consistency. We evaluated FSD-CAP on multiple datasets. With $99.5\\%$ of features missing across five benchmark datasets, FSD-CAP achieves average accuracies of $80.06\\%$ (structural) and $81.01\\%$ (uniform) in node classification, close to the $81.31\\%$ achieved by a standard GCN with full features. For link prediction under the same setting, it reaches AUC scores of $91.65\\%$ (structural) and $92.41\\%$ (uniform), compared to $95.06\\%$ for the fully observed case. Furthermore, FSD-CAP demonstrates superior performance on both large-scale and heterophily datasets when compared to other models.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "A Few Bad Neurons: Isolating and Surgically Correcting Sycophancy",
+      "url": "https://arxiv.org/abs/2601.18939",
+      "content": "arXiv:2601.18939v1 Announce Type: new \nAbstract: Behavioral alignment in large language models (LLMs) is often achieved through broad fine-tuning, which can result in undesired side effects like distributional shift and low interpretability. We propose a method for alignment that identifies and updates only the neurons most responsible for a given behavior, a targeted approach that allows for fine-tuning with significantly less data. Using sparse autoencoders (SAEs) and linear probes, we isolate the 3% of MLP neurons most predictive of a target behavior, decode them into residual space, and fine-tune only those neurons using gradient masking. We demonstrate this approach on the task of reducing sycophantic behavior, where our method matches or exceeds state-of-the-art performance on four benchmarks (Syco-Bench, NLP, POLI, PHIL) using Gemma-2-2B and 9B models. Our results show that sparse, neuron-level updates offer a scalable and precise alternative to full-model fine-tuning, remaining effective even in situations when little data is available",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    },
+    {
+      "title": "Vector-Valued Distributional Reinforcement Learning Policy Evaluation: A Hilbert Space Embedding Approach",
+      "url": "https://arxiv.org/abs/2601.18952",
+      "content": "arXiv:2601.18952v1 Announce Type: new \nAbstract: We propose an (offline) multi-dimensional distributional reinforcement learning framework (KE-DRL) that leverages Hilbert space mappings to estimate the kernel mean embedding of the multi-dimensional value distribution under a proposed target policy. In our setting, the state-action variables are multi-dimensional and continuous. By mapping probability measures into a reproducing kernel Hilbert space via kernel mean embeddings, our method replaces Wasserstein metrics with an integral probability metric. This enables efficient estimation in multi-dimensional state-action spaces and reward settings, where direct computation of Wasserstein distances is computationally challenging. Theoretically, we establish contraction properties of the distributional Bellman operator under our proposed metric involving the Matern family of kernels and provide uniform convergence guarantees. Simulations and empirical results demonstrate robust off-policy evaluation and recovery of the kernel mean embedding under mild assumptions, namely, Lipschitz continuity and boundedness of the kernels, highlighting the potential of embedding-based approaches in complex real-world decision-making scenarios and risk evaluation.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.LG (Machine Learning)",
+      "source_id": "arxiv_cs_lg",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks"
+      ]
+    }
+  ]
+}

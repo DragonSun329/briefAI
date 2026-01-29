@@ -1,0 +1,346 @@
+{
+  "timestamp": "2026-01-29T09:58:21.615701",
+  "key": "source_arxiv_cs_cl_7days",
+  "value": [
+    {
+      "title": "Language Family Matters: Evaluating LLM-Based ASR Across Linguistic Boundaries",
+      "url": "https://arxiv.org/abs/2601.18899",
+      "content": "arXiv:2601.18899v1 Announce Type: new \nAbstract: Large Language Model (LLM)-powered Automatic Speech Recognition (ASR) systems achieve strong performance with limited resources by linking a frozen speech encoder to a pretrained LLM via a lightweight connector. Prior work trains a separate connector per language, overlooking linguistic relatedness. We propose an efficient and novel connector-sharing strategy based on linguistic family membership, enabling one connector per family, and empirically validate its effectiveness across two multilingual LLMs and two real-world corpora spanning curated and crowd-sourced speech. Our results show that family-based connectors reduce parameter count while improving generalization across domains, offering a practical and scalable strategy for multilingual ASR deployment.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "Self-Aware Knowledge Probing: Evaluating Language Models' Relational Knowledge through Confidence Calibration",
+      "url": "https://arxiv.org/abs/2601.18901",
+      "content": "arXiv:2601.18901v1 Announce Type: new \nAbstract: Knowledge probing quantifies how much relational knowledge a language model (LM) has acquired during pre-training. Existing knowledge probes evaluate model capabilities through metrics like prediction accuracy and precision. Such evaluations fail to account for the model's reliability, reflected in the calibration of its confidence scores. In this paper, we propose a novel calibration probing framework for relational knowledge, covering three modalities of model confidence: (1) intrinsic confidence, (2) structural consistency and (3) semantic grounding. Our extensive analysis of ten causal and six masked language models reveals that most models, especially those pre-trained with the masking objective, are overconfident. The best-calibrated scores come from confidence estimates that account for inconsistencies due to statement rephrasing. Moreover, even the largest pre-trained models fail to encode the semantics of linguistic confidence expressions accurately.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "Flatter Tokens are More Valuable for Speculative Draft Model Training",
+      "url": "https://arxiv.org/abs/2601.18902",
+      "content": "arXiv:2601.18902v1 Announce Type: new \nAbstract: Speculative Decoding (SD) is a key technique for accelerating Large Language Model (LLM) inference, but it typically requires training a draft model on a large dataset. We approach this problem from a data-centric perspective, finding that not all training samples contribute equally to the SD acceptance rate. Specifically, our theoretical analysis and empirical validation reveals that tokens inducing flatter predictive distributions from the target model are more valuable than those yielding sharply peaked distributions. Based on this insight, we propose flatness, a new metric to quantify this property, and develop the Sample-level-flatness-based Dataset Distillation (SFDD) approach, which filters the training data to retain only the most valuable samples. Experiments on the EAGLE framework demonstrate that SFDD can achieve over 2$\\times$ training speedup using only 50% of the data, while keeping the final model's inference speedup within 4% of the full-dataset baseline. This work introduces an effective, data-centric approach that substantially improves the training efficiency for Speculative Decoding. Our code is available at https://anonymous.4open.science/r/Flatness.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "BabyReasoningBench: Generating Developmentally-Inspired Reasoning Tasks for Evaluating Baby Language Models",
+      "url": "https://arxiv.org/abs/2601.18933",
+      "content": "arXiv:2601.18933v1 Announce Type: new \nAbstract: Traditional evaluations of reasoning capabilities of language models are dominated by adult-centric benchmarks that presuppose broad world knowledge, complex instruction following, and mature pragmatic competence. These assumptions are mismatched to baby language models trained on developmentally plausible input such as child-directed speech and early-childhood narratives, and they obscure which reasoning abilities (if any) emerge under such constraints. We introduce BabyReasoningBench, a GPT-5.2 generated benchmark of 19 reasoning tasks grounded in classic paradigms from developmental psychology, spanning theory of mind, analogical and relational reasoning, causal inference and intervention selection, and core reasoning primitives that are known to be confounded by memory and pragmatics. We find that two GPT-2 based baby language models (pretrained on 10M and 100M of child-directed speech text) show overall low but uneven performance, with dissociations across task families: scaling improves several causal and physical reasoning tasks, while belief attribution and pragmatics-sensitive tasks remain challenging. BabyReasoningBench provides a developmentally grounded lens for analyzing what kinds of reasoning are supported by child-like training distributions, and for testing mechanistic hypotheses about how such abilities emerge.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "LLMs versus the Halting Problem: Revisiting Program Termination Prediction",
+      "url": "https://arxiv.org/abs/2601.18987",
+      "content": "arXiv:2601.18987v1 Announce Type: new \nAbstract: Determining whether a program terminates is a central problem in computer science. Turing's foundational result established the Halting Problem as undecidable, showing that no algorithm can universally determine termination for all programs and inputs. Consequently, automatic verification tools approximate termination, sometimes failing to prove or disprove; these tools rely on problem-specific architectures and abstractions, and are usually tied to particular programming languages. Recent success and progress in large language models (LLMs) raises the following question: can LLMs reliably predict program termination? In this work, we evaluate LLMs on a diverse set of C programs from the Termination category of the International Competition on Software Verification (SV-Comp) 2025. Our results suggest that LLMs perform remarkably well at predicting program termination, where GPT-5 and Claude Sonnet-4.5 would rank just behind the top-ranked tool (using test-time-scaling), and Code World Model (CWM) would place just behind the second-ranked tool. While LLMs are effective at predicting program termination, they often fail to provide a valid witness as a proof. Moreover, LLMs performance drops as program length increases. We hope these insights motivate further research into program termination and the broader potential of LLMs for reasoning about undecidable problems.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "Malicious Repurposing of Open Science Artefacts by Using Large Language Models",
+      "url": "https://arxiv.org/abs/2601.18998",
+      "content": "arXiv:2601.18998v1 Announce Type: new \nAbstract: The rapid evolution of large language models (LLMs) has fuelled enthusiasm about their role in advancing scientific discovery, with studies exploring LLMs that autonomously generate and evaluate novel research ideas. However, little attention has been given to the possibility that such models could be exploited to produce harmful research by repurposing open science artefacts for malicious ends. We fill the gap by introducing an end-to-end pipeline that first bypasses LLM safeguards through persuasion-based jailbreaking, then reinterprets NLP papers to identify and repurpose their artefacts (datasets, methods, and tools) by exploiting their vulnerabilities, and finally assesses the safety of these proposals using our evaluation framework across three dimensions: harmfulness, feasibility of misuse, and soundness of technicality. Overall, our findings demonstrate that LLMs can generate harmful proposals by repurposing ethically designed open artefacts; however, we find that LLMs acting as evaluators strongly disagree with one another on evaluation outcomes: GPT-4.1 assigns higher scores (indicating greater potential harms, higher soundness and feasibility of misuse), Gemini-2.5-pro is markedly stricter, and Grok-3 falls between these extremes. This indicates that LLMs cannot yet serve as reliable judges in a malicious evaluation setup, making human evaluation essential for credible dual-use risk assessment.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "FROST: Filtering Reasoning Outliers with Attention for Efficient Reasoning",
+      "url": "https://arxiv.org/abs/2601.19001",
+      "content": "arXiv:2601.19001v1 Announce Type: new \nAbstract: We propose FROST, an attention-aware method for efficient reasoning. Unlike traditional approaches, FROST leverages attention weights to prune uncritical reasoning paths, yielding shorter and more reliable reasoning trajectories. Methodologically, we introduce the concept of reasoning outliers and design an attention-based mechanism to remove them. Theoretically, FROST preserves and enhances the model's reasoning capacity while eliminating outliers at the sentence level. Empirically, we validate FROST on four benchmarks using two strong reasoning models (Phi-4-Reasoning and GPT-OSS-20B), outperforming state-of-the-art methods such as TALE and ThinkLess. Notably, FROST achieves an average 69.68% reduction in token usage and a 26.70% improvement in accuracy over the base model. Furthermore, in evaluations of attention outlier metrics, FROST reduces the maximum infinity norm by 15.97% and the average kurtosis by 91.09% compared to the base model. Code is available at https://github.com/robinzixuan/FROST",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "Optimizing Conversational Quality in Spoken Dialogue Systems with Reinforcement Learning from AI Feedback",
+      "url": "https://arxiv.org/abs/2601.19063",
+      "content": "arXiv:2601.19063v1 Announce Type: new \nAbstract: Reinforcement learning from human or AI feedback (RLHF/RLAIF) for speech-in/speech-out dialogue systems (SDS) remains underexplored, with prior work largely limited to single semantic rewards applied at the utterance level. Such setups overlook the multi-dimensional and multi-modal nature of conversational quality, which encompasses semantic coherence, audio naturalness, speaker consistency, emotion alignment, and turn-taking behavior. Moreover, they are fundamentally mismatched with duplex spoken dialogue systems that generate responses incrementally, where agents must make decisions based on partial utterances. We address these limitations with the first multi-reward RLAIF framework for SDS, combining semantic, audio-quality, and emotion-consistency rewards. To align utterance-level preferences with incremental, blockwise decoding in duplex models, we apply turn-level preference sampling and aggregate per-block log-probabilities within a single DPO objective. We present the first systematic study of preference learning for improving SDS quality in both multi-turn Chain-of-Thought and blockwise duplex models, and release a multi-reward DPO dataset to support reproducible research. Experiments show that single-reward RLAIF selectively improves its targeted metric, while joint multi-reward training yields consistent gains across semantic quality and audio naturalness. These results highlight the importance of holistic, multi-reward alignment for practical conversational SDS.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "PsyProbe: Proactive and Interpretable Dialogue through User State Modeling for Exploratory Counseling",
+      "url": "https://arxiv.org/abs/2601.19096",
+      "content": "arXiv:2601.19096v1 Announce Type: new \nAbstract: Recent advances in large language models have enabled mental health dialogue systems, yet existing approaches remain predominantly reactive, lacking systematic user state modeling for proactive therapeutic exploration. We introduce PsyProbe, a dialogue system designed for the exploration phase of counseling that systematically tracks user psychological states through the PPPPPI framework (Presenting, Predisposing, Precipitating, Perpetuating, Protective, Impact) augmented with cognitive error detection. PsyProbe combines State Builder for extracting structured psychological profiles, Memory Construction for tracking information gaps, Strategy Planner for Motivational Interviewing behavioral codes, and Response Generator with Question Ideation and Critic/Revision modules to generate contextually appropriate, proactive questions. We evaluate PsyProbe with 27 participants in real-world Korean counseling scenarios, including automatic evaluation across ablation modes, user evaluation, and expert evaluation by a certified counselor. The full PsyProbe model consistently outperforms baseline and ablation modes in automatic evaluation. User evaluation demonstrates significantly increased engagement intention and improved naturalness compared to baseline. Expert evaluation shows that PsyProbe substantially improves core issue understanding and achieves question rates comparable to professional counselors, validating the effectiveness of systematic state modeling and proactive questioning for therapeutic exploration.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "Leveraging Sentence-oriented Augmentation and Transformer-Based Architecture for Vietnamese-Bahnaric Translation",
+      "url": "https://arxiv.org/abs/2601.19124",
+      "content": "arXiv:2601.19124v1 Announce Type: new \nAbstract: The Bahnar people, an ethnic minority in Vietnam with a rich ancestral heritage, possess a language of immense cultural and historical significance. The government places a strong emphasis on preserving and promoting the Bahnaric language by making it accessible online and encouraging communication across generations. Recent advancements in artificial intelligence, such as Neural Machine Translation (NMT), have brought about a transformation in translation by improving accuracy and fluency. This, in turn, contributes to the revival of the language through educational efforts, communication, and documentation. Specifically, NMT is pivotal in enhancing accessibility for Bahnaric speakers, making information and content more readily available. Nevertheless, the translation of Vietnamese into Bahnaric faces practical challenges due to resource constraints, especially given the limited resources available for the Bahnaric language. To address this, we employ state-of-the-art techniques in NMT along with two augmentation strategies for domain-specific Vietnamese-Bahnaric translation task. Importantly, both approaches are flexible and can be used with various neural machine translation models. Additionally, they do not require complex data preprocessing steps, the training of additional systems, or the acquisition of extra data beyond the existing training parallel corpora.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "Transparency-First Medical Language Models: Datasheets, Model Cards, and End-to-End Data Provenance for Clinical NLP",
+      "url": "https://arxiv.org/abs/2601.19191",
+      "content": "arXiv:2601.19191v1 Announce Type: new \nAbstract: We introduce TeMLM, a set of transparency-first release artifacts for clinical language models. TeMLM unifies provenance, data transparency, modeling transparency, and governance into a single, machine-checkable release bundle. We define an artifact suite (TeMLM-Card, TeMLM-Datasheet, TeMLM-Provenance) and a lightweight conformance checklist for repeatable auditing. We instantiate the artifacts on Technetium-I, a large-scale synthetic clinical NLP dataset with 498,000 notes, 7.74M PHI entity annotations across 10 types, and ICD-9-CM diagnosis labels, and report reference results for ProtactiniumBERT (about 100 million parameters) on PHI de-identification (token classification) and top-50 ICD-9 code extraction (multi-label classification). We emphasize that synthetic benchmarks are valuable for tooling and process validation, but models should be validated on real clinical data prior to deployment.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "Do Images Speak Louder than Words? Investigating the Effect of Textual Misinformation in VLMs",
+      "url": "https://arxiv.org/abs/2601.19202",
+      "content": "arXiv:2601.19202v1 Announce Type: new \nAbstract: Vision-Language Models (VLMs) have shown strong multimodal reasoning capabilities on Visual-Question-Answering (VQA) benchmarks. However, their robustness against textual misinformation remains under-explored. While existing research has studied the effect of misinformation in text-only domains, it is not clear how VLMs arbitrate between contradictory information from different modalities. To bridge the gap, we first propose the CONTEXT-VQA (i.e., Conflicting Text) dataset, consisting of image-question pairs together with systematically generated persuasive prompts that deliberately conflict with visual evidence. Then, a thorough evaluation framework is designed and executed to benchmark the susceptibility of various models to these conflicting multimodal inputs. Comprehensive experiments over 11 state-of-the-art VLMs reveal that these models are indeed vulnerable to misleading textual prompts, often overriding clear visual evidence in favor of the conflicting text, and show an average performance drop of over 48.2% after only one round of persuasive conversation. Our findings highlight a critical limitation in current VLMs and underscore the need for improved robustness against textual manipulation.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "How Do Transformers Learn to Associate Tokens: Gradient Leading Terms Bring Mechanistic Interpretability",
+      "url": "https://arxiv.org/abs/2601.19208",
+      "content": "arXiv:2601.19208v1 Announce Type: new \nAbstract: Semantic associations such as the link between \"bird\" and \"flew\" are foundational for language modeling as they enable models to go beyond memorization and instead generalize and generate coherent text. Understanding how these associations are learned and represented in language models is essential for connecting deep learning with linguistic theory and developing a mechanistic foundation for large language models. In this work, we analyze how these associations emerge from natural language data in attention-based language models through the lens of training dynamics. By leveraging a leading-term approximation of the gradients, we develop closed-form expressions for the weights at early stages of training that explain how semantic associations first take shape. Through our analysis, we reveal that each set of weights of the transformer has closed-form expressions as simple compositions of three basis functions (bigram, token-interchangeability, and context mappings), reflecting the statistics of the text corpus and uncovering how each component of the transformer captures semantic associations based on these compositions. Experiments on real-world LLMs demonstrate that our theoretical weight characterizations closely match the learned weights, and qualitative analyses further show how our theorem shines light on interpreting the learned associations in transformers.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "A Hybrid Supervised-LLM Pipeline for Actionable Suggestion Mining in Unstructured Customer Reviews",
+      "url": "https://arxiv.org/abs/2601.19214",
+      "content": "arXiv:2601.19214v1 Announce Type: new \nAbstract: Extracting actionable suggestions from customer reviews is essential for operational decision-making, yet these directives are often embedded within mixed-intent, unstructured text. Existing approaches either classify suggestion-bearing sentences or generate high-level summaries, but rarely isolate the precise improvement instructions businesses need. We evaluate a hybrid pipeline combining a high-recall RoBERTa classifier trained with a precision-recall surrogate to reduce unrecoverable false negatives with a controlled, instruction-tuned LLM for suggestion extraction, categorization, clustering, and summarization. Across real-world hospitality and food datasets, the hybrid system outperforms prompt-only, rule-based, and classifier-only baselines in extraction accuracy and cluster coherence. Human evaluations further confirm that the resulting suggestions and summaries are clear, faithful, and interpretable. Overall, our results show that hybrid reasoning architectures achieve meaningful improvements fine-grained actionable suggestion mining while highlighting challenges in domain adaptation and efficient local deployment.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "DREAMSTATE: Diffusing States and Parameters for Recurrent Large Language Models",
+      "url": "https://arxiv.org/abs/2601.19221",
+      "content": "arXiv:2601.19221v1 Announce Type: new \nAbstract: Modern Recurrent Neural Networks (RNNs), such as RWKV, are distinguished by their powerful short-range modeling capabilities and efficient fixed-size states, which constitute a core advantage over standard Transformers. However, there is a significant lack of research into their internal state as an editable knowledge representation. To fill this gap, we first explore the representational properties of the RWKV state by proposing the DREAMSTATE framework. This framework utilizes a conditional Diffusion Transformer (DiT) to directly model the probability manifold of the state, enabling its generation and editing. The structural nature of this representation is validated through t-SNE visualizations and controlled generation experiments. After successfully uncovering and modeling the state's representational potential, we further propose a novel hybrid architecture that combines the local advantages of RNNs with global context adaptability. This architecture features a parallel DiT that processes a variable-length global context to dynamically generate and adjust the core recurrent module's WKV parameters, transforming the fixed recurrence mechanism into a context-aware dynamic function. Experiments demonstrate that this hybrid model can be trained stably via a multi-objective loss, validating its design feasibility. Our work not only opens a new research direction for RNN state representation but also provides a concrete architectural reference for future model design. The code is publicly available at: https://huggingface.co/2dgx41s/DreamState.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "RPO-RAG: Aligning Small LLMs with Relation-aware Preference Optimization for Knowledge Graph Question Answering",
+      "url": "https://arxiv.org/abs/2601.19225",
+      "content": "arXiv:2601.19225v1 Announce Type: new \nAbstract: Large Language Models (LLMs) have recently demonstrated remarkable reasoning abilities, yet hallucinate on knowledge-intensive tasks. Retrieval-augmented generation (RAG) mitigates this issue by grounding answers in external sources, e.g., knowledge graphs (KGs). However, existing KG-based RAG approaches rely on semantics-unaware path sampling and are weakly aligned with KG reasoning objectives, which limits further accuracy gains. They also feed retrieved paths directly into the reasoner without organizing them into answer-centered reasoning paths, hindering small LLMs' ability to leverage the retrieved knowledge. Furthermore, prior works predominantly rely on large LLMs (e.g., ChatGPT/GPT-4) or assume backbones above 7B parameters, leaving sub-7B models underexplored. We address this gap with RPO-RAG, the first KG-based RAG framework specifically designed for small LLMs, to the best of our knowledge. RPO-RAG introduces three key innovations: (1) a query-path semantic sampling strategy that provides informative supervisory signals; (2) a relation-aware preference optimization that aligns training with intermediate KG reasoning signals (e.g., relation); and (3) an answer-centered prompt design that organizes entities and reasoning paths in an interpretable format. Extensive experiments on two benchmark Knowledge Graph Question Answering (KGQA) datasets, WebQSP and CWQ, demonstrate that RPO-RAG effectively bridges the performance gap between small and large language models. On WebQSP, it improves F1 by up to 8.8%, reflecting enhanced answer precision, while on CWQ it achieves new state-of-the-art results among models under 8B parameters in both Hit and F1. Overall, RPO-RAG substantially improves the reasoning capability of small LLMs, even under 3B parameters-highlighting their potential for resource-efficient and practical on-device KGQA applications.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "DiaDem: Advancing Dialogue Descriptions in Audiovisual Video Captioning for Multimodal Large Language Models",
+      "url": "https://arxiv.org/abs/2601.19267",
+      "content": "arXiv:2601.19267v1 Announce Type: new \nAbstract: Accurate dialogue description in audiovisual video captioning is crucial for downstream understanding and generation tasks. However, existing models generally struggle to produce faithful dialogue descriptions within audiovisual captions. To mitigate this limitation, we propose DiaDem, a powerful audiovisual video captioning model capable of generating captions with more precise dialogue descriptions while maintaining strong overall performance. We first synthesize a high-quality dataset for SFT, then employ a difficulty-partitioned two-stage GRPO strategy to further enhance dialogue descriptions. To enable systematic evaluation of dialogue description capabilities, we introduce DiaDemBench, a comprehensive benchmark designed to evaluate models across diverse dialogue scenarios, emphasizing both speaker attribution accuracy and utterance transcription fidelity in audiovisual captions. Extensive experiments on DiaDemBench reveal even commercial models still exhibit substantial room for improvement in dialogue-aware captioning. Notably, DiaDem not only outperforms the Gemini series in dialogue description accuracy but also achieves competitive performance on general audiovisual captioning benchmarks, demonstrating its overall effectiveness.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "Riddle Quest : The Enigma of Words",
+      "url": "https://arxiv.org/abs/2601.19273",
+      "content": "arXiv:2601.19273v1 Announce Type: new \nAbstract: Riddles are concise linguistic puzzles that describe an object or idea through indirect, figurative, or playful clues. They are a longstanding form of creative expression, requiring the solver to interpret hints, recognize patterns, and draw inferences to identify the answers. In this work, we introduce a simple pipeline for creating and evaluating analogy-based riddles. The system includes a triples creator that builds structured facts about a concept, a semantic mapper that selects attributes useful for analogy, a stylized generator that turns them into riddle clues, and a validator that collects all possible answers the riddle could point to. We use this validator to study whether large language models can recover the full answer set for different riddle types. Our case study shows that while models often guess the main intended answer, they frequently miss other valid interpretations. This highlights the value of riddles as a lightweight tool for examining reasoning coverage and ambiguity handling in language models.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference",
+      "url": "https://arxiv.org/abs/2601.19278",
+      "content": "arXiv:2601.19278v1 Announce Type: new \nAbstract: Speculative decoding is an effective and lossless approach for accelerating LLM inference. However, existing widely adopted model-based draft designs, such as EAGLE3, improve accuracy at the cost of multi-step autoregressive inference, resulting in high drafting latency and ultimately rendering the drafting stage itself a performance bottleneck. Inspired by diffusion-based large language models (dLLMs), we propose DART, which leverages parallel generation to reduce drafting latency. DART predicts logits for multiple future masked positions in parallel within a single forward pass based on hidden states of the target model, thereby eliminating autoregressive rollouts in the draft model while preserving a lightweight design. Based on these parallel logit predictions, we further introduce an efficient tree pruning algorithm that constructs high-quality draft token trees with N-gram-enforced semantic continuity. DART substantially reduces draft-stage overhead while preserving high draft accuracy, leading to significantly improved end-to-end decoding speed. Experimental results demonstrate that DART achieves a 2.03x--3.44x wall-clock time speedup across multiple datasets, surpassing EAGLE3 by 30% on average and offering a practical speculative decoding framework. Code is released at https://github.com/fvliang/DART.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    },
+    {
+      "title": "ReToP: Learning to Rewrite Electronic Health Records for Clinical Prediction",
+      "url": "https://arxiv.org/abs/2601.19286",
+      "content": "arXiv:2601.19286v1 Announce Type: new \nAbstract: Electronic Health Records (EHRs) provide crucial information for clinical decision-making. However, their high-dimensionality, heterogeneity, and sparsity make clinical prediction challenging. Large Language Models (LLMs) allowed progress towards addressing this challenge by leveraging parametric medical knowledge to enhance EHR data for clinical prediction tasks. Despite the significant achievements made so far, most of the existing approaches are fundamentally task-agnostic in the sense that they deploy LLMs as EHR encoders or EHR completion modules without fully integrating signals from the prediction tasks. This naturally hinders task performance accuracy. In this work, we propose Rewrite-To-Predict (ReToP), an LLM-based framework that addresses this limitation through an end-to-end training of an EHR rewriter and a clinical predictor. To cope with the lack of EHR rewrite training data, we generate synthetic pseudo-labels using clinical-driven feature selection strategies to create diverse patient rewrites for fine-tuning the EHR rewriter. ReToP aligns the rewriter with prediction objectives using a novel Classifier Supervised Contribution (CSC) score that enables the EHR rewriter to generate clinically relevant rewrites that directly enhance prediction. Our ReToP framework surpasses strong baseline models across three clinical tasks on MIMIC-IV. Moreover, the analysis of ReToP shows its generalizability to unseen datasets and tasks with minimal fine-tuning while preserving faithful rewrites and emphasizing task-relevant predictive features.",
+      "published_date": "2026-01-28T05:00:00",
+      "source": "arXiv cs.CL (NLP)",
+      "source_id": "arxiv_cs_cl",
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "NLP",
+        "LLM",
+        "language models",
+        "transformers"
+      ]
+    }
+  ]
+}
