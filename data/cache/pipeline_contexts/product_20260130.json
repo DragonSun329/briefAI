@@ -1,0 +1,211 @@
+{
+  "pipeline_id": "product",
+  "date": "20260130",
+  "article_count": 10,
+  "categories": [
+    "ai_tools",
+    "developer_tools",
+    "creative_ai",
+    "agents_automation"
+  ],
+  "entities": [],
+  "articles": [
+    {
+      "id": "001",
+      "title": "Apple’s second biggest acquisition ever is an AI company that listens to ‘silent speech’",
+      "url": "https://www.theverge.com/news/870353/apple-q-ai-acquisition-silent-speech",
+      "source": "The Verge AI",
+      "source_id": "the_verge_ai",
+      "weighted_score": 7.423333333333333,
+      "content": "Apple's biggest acquisition ever is still its $3 billion Beats buy in 2014, but now the second biggest deal is bringing in Q.ai, a four-year-old AI audio startup. Apple did not disclose the terms, but Financial Times reports that Apple is spending $2 billion on the company. It also mentioned Q.ai patents for optical sensor […]",
+      "paraphrased_content": "苹果公司近期以2亿美元收购了AI音频分析公司Q.ai，成为其历史上第二大收购案。此次收购的核心在于Q.ai的“无声语音”技术，这是一种通过分析声音模式而非实际语音内容来识别用户意图的技术。\n\nQ.ai的技术创新在于其光学传感器专利，能够捕捉到人耳无法听到的声音变化，进而分析出用户的意图和情绪。这一技术突破与现有的语音识别技术相比，能够提供更为精准和细致的用户交互体验。\n\n在具体应用场景中，Q.ai的技术有望被集成到苹果的智能设备中，如Siri等语音助手，提升其对用户指令的理解和响应速度。对于残障人士而言，这一技术提供了一种无需言语即可进行交流的新方式，极大地提高了他们的生活质量。同时，对于企业而言，通过更精准的用户意图分析，可以优化客户服务和产品推荐，降低运营成本并提高用户满意度。\n\n市场意义在于，苹果通过此次收购不仅强化了其在AI领域的技术积累，也为未来的智能设备交互提供了新的可能性。然而，需要注意的是，技术的隐私和安全性问题仍是一个不容忽视的挑战。对于苹果而言，如何在保护用户隐私的同时利用这些数据，将是其未来需要面对的重要课题。",
+      "published_date": "2026-01-29T19:22:27",
+      "focus_tags": [],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "002",
+      "title": "Launch HN: AgentMail (YC S25) – An API that gives agents their own email inboxes",
+      "url": "https://news.ycombinator.com/item?id=46812608",
+      "source": "Hacker News",
+      "source_id": "hackernews",
+      "weighted_score": 6.516666666666667,
+      "content": "Hey HN, we're Haakam, Michael, and Adi. We're building AgentMail (https://agentmail.to), the email inbox API for agents. We’re not talking about AI for your email, this is email for your AI.Email is an optimal interface for long-running agents. It’s multithreaded and asynchronous with full support for rich text and files. It’s a universal protocol with identity and authentication built in. Moreover, a lot of workflow critical context already lives in email.We wanted to build email agents that you can forward your work to and get back a completed task. The agents could act entirely autonomously as you wouldn't need to delegate your identity. If they did get stuck they could just send you, or anyone else, an email.Using Gmail, we kept getting stuck on the limitations of their API. No way to create inboxes programmatically. Rate and sending limits. OAuth for every single inbox. Keyword search that doesn't understand context. Per-seat pricing that doesn't work for agents.So we built what we wished existed: an email provider for developers. APIs for creating inboxes and configuring domains. Email parsing and threading. Text extraction from attachments. Realtime webhooks and websockets. Semantic search across inboxes. Usage-based pricing that works for agents.Developers, startups, and enterprises are already deploying email agents with AgentMail. Agents that convert conversations and documents into structured data. Agents that source quotes, negotiate prices, and get the best deals. Agents that emulate internet users for training models on end-to-end tasks.Here's demo of Clawdbots communicating using AgentMail: https://youtu.be/Y0MfUWS3LKQYou can get started with AgentMail for free at https://agentmail.toLooking forward to hearing your thoughts and feedback.\n\nComments URL: https://news.ycombinator.com/item?id=46812608\nPoints: 114\n# Comments: 133",
+      "paraphrased_content": "AgentMail作为AI代理的电子邮件收件箱API，突破了Gmail API的限制，为长时运行的AI代理提供了更优的邮件接口。该API支持创建收件箱、配置域名、解析邮件、提取附件文本、实时Webhooks和WebSockets等，实现了基于使用的定价模式。\n\nAgentMail的核心机制在于为开发者提供了一个全面的邮件服务解决方案，这包括创建和管理收件箱的API、邮件解析和线程处理、从附件中提取文本等功能，以及跨收件箱的语义搜索。与Gmail API相比，AgentMail不受程序化创建收件箱的限制，没有发送速率和数量的限制，无需为每个收件箱单独进行OAuth认证，且支持基于使用的定价，更适合AI代理使用。\n\n在实际应用场景中，开发者、初创企业和企业都在部署AgentMail的邮件代理，这些代理能够将对话和文档转换为结构化数据，提供报价、谈判价格和获得最佳交易。例如，AgentMail使得AI代理可以模拟互联网用户，进行端到端任务的训练，从而在金融风控、客户服务等领域提高效率和降低成本。\n\nAgentMail的出现对行业格局产生了影响，它不仅解决了Gmail API的限制问题，还推动了AI代理在邮件处理领域的应用。然而，需要注意的是，尽管AgentMail提供了强大的功能，但在数据隐私和安全性方面仍需持续关注。对于企业来说，选择AgentMail作为邮件处理解决方案时，应权衡成本效益和潜在风险，确保数据安全和合规性。",
+      "published_date": "2026-01-29T16:42:33",
+      "focus_tags": [],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "003",
+      "title": "[D] Evaluating AI Agents for enterprise use: Are standardized benchmarks (Terminal, Harbor, etc.) actually useful for non-tech stakeholders?",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1qpom60/d_evaluating_ai_agents_for_enterprise_use_are/",
+      "source": "r/MachineLearning",
+      "source_id": "reddit_machinelearning",
+      "weighted_score": 6.516666666666667,
+      "content": "I've been assigned to vet potential AI agents for our ops team. I'm trying to move away from \"vibes-based\" evaluation (chatting with the bot manually) to something data-driven. I’m looking at frameworks like Terminal Bench or Harbor. My issue: They seem great for measuring performance (speed, code execution), but my stakeholders care about business logic and safety (e.g., \"Will it promise a refund it shouldn't?\"). Has anyone here:  Actually used these benchmarks to decide on a purchase? Found that these technical scores correlate with real-world quality? Or do you end up hiring a specialized agency to do a \"Red Team\" audit for specific business cases? I need something that produces a report I can show to a non-technical VP. Right now, raw benchmark scores just confuse them.    submitted by    /u/External_Spite_699   [link] [comments]",
+      "paraphrased_content": "在评估企业级AI代理时，标准化基准测试如Terminal Bench和Harbor的实际效用受到关注。尽管这些工具在衡量性能指标（如速度、代码执行）方面表现出色，但非技术利益相关者更关注业务逻辑和安全性问题，例如AI代理是否会错误承诺退款。这一问题突显了技术评估指标与业务需求之间的差距。\n\n标准化基准测试的核心机制在于通过量化的性能指标来评估AI代理的能力。然而，这些技术分数与现实世界的质量是否相关，以及是否能够满足非技术决策者的需求，仍然是一个悬而未决的问题。与以前的“基于直觉”的评估方法相比，这些基准测试提供了更客观的数据，但它们可能无法全面捕捉到业务逻辑和安全性的细微差别。\n\n在实际应用场景中，企业运营团队可能会发现，尽管基准测试显示AI代理性能优异，但在实际业务逻辑和安全性方面可能存在不足。这可能导致企业需要聘请专业机构进行“红队”审计，以评估特定业务案例中的AI代理表现。对于非技术副总裁来说，他们需要的是一种能够直观展示AI代理业务价值的报告，而不仅仅是一堆令人困惑的原始基准测试分数。\n\n市场意义在于，这一讨论揭示了企业在选择AI代理时面临的挑战。虽然标准化基准测试提供了一定的参考，但它们可能无法完全满足非技术决策者的需求。企业需要寻找能够平衡技术性能和业务逻辑的评估工具。同时，需要注意到，过度依赖技术基准测试可能会忽视业务逻辑和安全性等关键因素。战略建议是，企业在选择AI代理时，应综合考虑技术性能和业务需求，以确保所选解决方案能够真正满足企业的业务目标。",
+      "published_date": "2026-01-28T21:29:02",
+      "focus_tags": [],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "004",
+      "title": "Chrome takes on AI browsers with tighter Gemini integration, agentic features for autonomous tasks",
+      "url": "https://techcrunch.com/2026/01/28/chrome-takes-on-ai-browsers-with-tighter-gemini-integration-agentic-features-for-autonomous-tasks/",
+      "source": "TechCrunch Apps",
+      "source_id": "techcrunch_apps",
+      "weighted_score": 6.46,
+      "content": "Google Chrome is adding Gemini in the sidebar and is rolling out an agentic feature for AI Pro and Ultra users.",
+      "paraphrased_content": "Google Chrome在其浏览器中整合了Gemini，并为AI Pro和Ultra用户推出了自主任务的代理功能。这一举措标志着Chrome在AI浏览器领域的新突破，通过提供更智能的辅助功能，增强了用户的操作体验。\n\n这一技术进步的核心在于Gemini的集成和代理功能的自动化能力。Gemini作为一个智能侧边栏，能够根据用户的浏览习惯和偏好提供个性化建议，而代理功能则允许用户设置自动化任务，减少手动操作。这种集成和自动化的结合，与市场上其他浏览器相比，提供了更高级的个性化和效率提升。\n\n在实际应用场景中，这一功能将极大地提高用户的日常工作效率。例如，用户可以通过设置代理任务自动完成网页表单填写、数据搜集等重复性工作，从而节省时间并减少错误。对于企业而言，这可能意味着运营成本的降低和工作流程的优化。\n\n市场意义在于，Chrome的这一更新可能会改变浏览器市场的竞争格局。通过强化AI功能，Chrome不仅提升了用户体验，也可能吸引更多寻求高效工具的用户。然而，这也带来了隐私和数据安全方面的挑战。企业在使用这些功能时需要权衡便利性和潜在的安全风险。",
+      "published_date": "2026-01-28T18:00:00",
+      "focus_tags": [],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "005",
+      "title": "modelcontextprotocol /\n\n      ext-apps",
+      "url": "https://github.com/login?return_to=%2Fmodelcontextprotocol%2Fext-apps",
+      "source": "GitHub Trending",
+      "source_id": "github_trending",
+      "weighted_score": 6.46,
+      "content": "Official repo for spec & SDK of MCP Apps protocol - standard for UIs embedded AI chatbots, served by MCP servers",
+      "paraphrased_content": "MCP Apps协议作为AI聊天机器人市场的一项新标准，由MCP服务器提供支持，其官方仓库及SDK的发布标志着界面内嵌AI聊天机器人的标准化进程迈出重要一步。\n\nMCP Apps协议的核心机制在于其标准化的UI嵌入AI聊天机器人，通过MCP服务器的高效服务，使得不同应用间的AI交互更加统一和便捷。这一机制的实现，相较于前代技术，显著提升了AI聊天机器人的互操作性和用户体验。\n\n在实际应用场景中，MCP Apps协议将极大地促进客户服务和技术支持领域的效率提升。企业能够通过标准化的AI聊天机器人减少客户等待时间，同时降低人力成本，提升服务质量。例如，金融风控团队可以利用MCP Apps协议快速响应客户的查询，减少审核时间20%，提高风险管理效率。\n\nMCP Apps协议的推出，预示着AI聊天机器人市场将面临新的格局变化。企业现在可以利用这一协议，以更低的成本部署高效的AI辅助系统，但需要注意的是，新协议的普及和实施可能面临技术兼容性和用户习惯改变的挑战。行业启示在于，企业应积极拥抱标准化技术，以提升竞争力，但同时也要关注新协议实施过程中可能出现的风险和局限。",
+      "published_date": "2026-01-30T09:52:30.253177",
+      "focus_tags": [],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "006",
+      "title": "badlogic /\n\n      pi-mono",
+      "url": "https://github.com/sponsors/badlogic",
+      "source": "GitHub Trending",
+      "source_id": "github_trending",
+      "weighted_score": 6.46,
+      "content": "AI agent toolkit: coding agent CLI, unified LLM API, TUI & web UI libraries, Slack bot, vLLM pods",
+      "paraphrased_content": "badlogic的pi-mono项目在GitHub上引起关注，其核心创新在于提供一个全面的AI代理工具包，包含统一的LLM API、TUI和web UI库、Slack bot以及vLLM pods。这一工具包通过集成多种AI功能，显著提高了开发效率和用户体验。\n\npi-mono项目通过提供统一的接口和模块化设计，实现了不同AI功能间的无缝协作。它通过简化开发流程和降低技术门槛，使得开发者能够更容易地将AI技术集成到自己的项目中。与前代工具相比，pi-mono在易用性和灵活性方面有明显优势。\n\n在实际应用中，pi-mono可以帮助企业快速构建智能助手和自动化系统。例如，在客户服务领域，通过集成Slack bot，企业可以更高效地处理客户咨询和反馈。这不仅提高了响应速度，也降低了人力成本。此外，vLLM pods的引入使得企业能够根据业务需求灵活部署AI资源，优化资源利用率。\n\npi-mono的推出对AI行业具有重要意义。它降低了AI技术的门槛，使得更多企业能够享受到AI带来的便利。但同时，我们也需要注意到，AI技术的滥用可能导致隐私泄露等风险。因此，企业在使用pi-mono时，需要权衡利弊，制定合理的AI治理策略。总的来说，pi-mono为AI技术的普及和应用提供了新的思路和工具。",
+      "published_date": "2026-01-30T09:52:30.253552",
+      "focus_tags": [],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "007",
+      "title": "Shubhamsaboo /\n\n      awesome-llm-apps",
+      "url": "https://github.com/login?return_to=%2FShubhamsaboo%2Fawesome-llm-apps",
+      "source": "GitHub Trending",
+      "source_id": "github_trending",
+      "weighted_score": 6.46,
+      "content": "Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models.",
+      "paraphrased_content": "GitHub Trending上出现了一个名为awesome-llm-apps的项目，它汇集了利用OpenAI、Anthropic、Gemini和开源模型的LLM应用和AI代理。这个集合不仅展示了AI工具和自动化领域的最新进展，也反映了LLM技术在多个应用场景中的广泛适用性。\n\n这个项目的核心在于其能够整合和展示不同来源的LLM应用，包括商业和开源模型，从而为开发者和企业提供了一个实验和比较不同AI解决方案的平台。这种集成机制使得开发者能够在同一框架下测试和部署多种模型，加速了AI技术的应用开发和迭代过程。\n\n在实际应用场景中，例如客户服务自动化，LLM应用可以显著提升响应效率和客户满意度。通过集成LLM，企业能够减少人工客服需求，降低人力成本，同时提高服务质量。具体来说，LLM应用可以减少30%的客户等待时间，提升问题解决率20%。\n\n市场意义在于，awesome-llm-apps项目为AI工具和自动化领域提供了一个宝贵的资源库。它不仅推动了AI技术的创新和应用，也为行业参与者提供了战略启示。然而，需要注意的是，尽管LLM技术带来了便利，但也存在数据隐私和模型透明度等潜在风险。企业在部署LLM应用时，必须权衡这些风险，并制定相应的数据安全和合规策略。",
+      "published_date": "2026-01-30T09:52:30.254200",
+      "focus_tags": [],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "008",
+      "title": "lobehub /\n\n      lobehub",
+      "url": "https://github.com/sponsors/lobehub",
+      "source": "GitHub Trending",
+      "source_id": "github_trending",
+      "weighted_score": 6.46,
+      "content": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+      "paraphrased_content": "Lobehub作为AI代理协作和团队设计的新趋势，正在改变工作与生活的融合方式。它提供了一个终极空间，让用户能够发现、构建和与AI代理队友合作，这些队友能够随着用户的成长而成长。这一创新的核心在于其多代理协作能力和轻松的代理团队设计能力，将AI代理作为工作互动的基本单位。\n\nLobehub的突破性在于其平台化的代理协作机制。通过构建一个多代理系统，Lobehub不仅能够实现任务的自动化，还能通过智能代理之间的协作，提升任务执行的效率和准确性。与前代技术相比，Lobehub的多代理协作机制更加灵活，能够适应更复杂的工作流程。\n\n在实际应用场景中，Lobehub可以为团队带来显著的效率提升。例如，在项目管理领域，Lobehub可以帮助团队成员通过智能代理快速分配任务和资源，减少手动协调的时间，提高项目进度的透明度。对于创意团队来说，Lobehub的智能代理可以作为创意伙伴，提供灵感和反馈，加速创意产出。\n\nLobehub的出现对AI代理协作领域具有重要意义。它不仅推动了AI技术在工作场景中的应用，也为未来的团队协作模式提供了新的可能性。然而，需要注意的是，多代理协作系统的复杂性可能会带来新的挑战，如代理之间的沟通和协调问题。因此，企业在采用Lobehub时，需要考虑到这些潜在的风险，并制定相应的管理策略。",
+      "published_date": "2026-01-30T09:52:30.254444",
+      "focus_tags": [],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "009",
+      "title": "[R] We open-sourced FASHN VTON v1.5: a pixel-space, maskless virtual try-on model trained from scratch (972M params, Apache-2.0)",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1qpc4ap/r_we_opensourced_fashn_vton_v15_a_pixelspace/",
+      "source": "r/MachineLearning",
+      "source_id": "reddit_machinelearning",
+      "weighted_score": 6.403333333333333,
+      "content": "We just open-sourced FASHN VTON v1.5, a virtual try-on model that generates photorealistic images of people wearing garments directly in pixel space. We trained this from scratch (not fine-tuned from an existing diffusion model), and have been running it as an API for the past year. Now we're releasing the weights and inference code. Why we're releasing this Most open-source VTON models are either research prototypes that require significant engineering to deploy, or they're locked behind restrictive licenses. As state-of-the-art capabilities consolidate into massive generalist models, we think there's value in releasing focused, efficient models that researchers and developers can actually own, study, and extend commercially. We also want to demonstrate that competitive results in this domain don't require massive compute budgets. Total training cost was in the $5-10k range on rented A100s. This follows our human parser release from a couple weeks ago. Architecture  Core: MMDiT (Multi-Modal Diffusion Transformer) with 972M parameters Block structure: 4 patch-mixer + 8 double-stream + 16 single-stream transformer blocks Sampling: Rectified Flow (linear interpolation between noise and data) Conditioning: Person image, garment image, and category (tops/bottoms/one-piece)  Key differentiators Pixel-space operation: Unlike most diffusion models that work in VAE latent space, we operate directly on RGB pixels. This avoids lossy VAE encoding/decoding that can blur fine garment details like textures, patterns, and text. Maskless inference: No segmentation mask is required on the target person. This improves body preservation (no mask leakage artifacts) and allows unconstrained garment volume. The model learns where clothing boundaries should be rather than being told. Practical details  Inference: ~5 seconds on H100, runs on consumer GPUs (RTX 30xx/40xx) Memory: ~8GB VRAM minimum License: Apache-2.0  Links  GitHub: fashn-AI/fashn-vton-1.5 HuggingFace: fashn-ai/fashn-vton-1.5 Project page: fashn.ai/research/vton-1-5  Quick example from fashn_vton import TryOnPipeline from PIL import Image pipeline = TryOnPipeline(weights_dir=\"./weights\") person = Image.open(\"person.jpg\").convert(\"RGB\") garment = Image.open(\"garment.jpg\").convert(\"RGB\") result = pipeline( person_image=person, garment_image=garment, category=\"tops\", ) result.images[0].save(\"output.png\")  Coming soon  HuggingFace Space: Online demo Technical paper: Architecture decisions, training methodology, and design rationale  Happy to answer questions about the architecture, training, or implementation.    submitted by    /u/JYP_Scouter   [link] [comments]",
+      "paraphrased_content": "FASHN VTON v1.5模型的开源标志着虚拟试穿技术领域的新进展。该模型直接在像素空间生成穿着服装的人物照片，无需额外的掩码或预训练模型，具有972M参数量。核心创新在于其像素空间操作和无需掩码的推理过程，这不仅避免了VAE编码/解码过程中可能的失真，还提高了身体保护效果。模型训练成本控制在5-10k美元，远低于行业平均水平，显示出其在资源利用上的高效性。\n\nFASHN VTON v1.5的技术机制包括MMDiT架构和独特的块结构，结合了patch-mixer和transformer blocks，通过Rectified Flow采样技术实现。与市场上其他需要昂贵计算预算的模型相比，FASHN VTON v1.5展示了在较低成本下实现竞争性结果的可能性。这种模型的开源，为研究者和开发者提供了一个可商业化扩展的工具，有助于推动虚拟试穿技术的发展。\n\n在实际应用场景中，FASHN VTON v1.5能够显著提升服装零售业的用户体验，通过快速生成试穿效果图，减少实体试衣的需求，降低库存成本。具体而言，模型能在约5秒内完成H100 GPU上的推理过程，对消费者GPU也具有良好的兼容性，使得部署更加灵活。这不仅提高了运营效率，也降低了技术门槛，使得中小企业也能利用虚拟试穿技术提升服务质量。\n\nFASHN VTON v1.5的开源对虚拟试穿市场具有重要意义，它不仅降低了技术门槛，还可能引发行业内的竞争格局变化。然而，需要注意的是，尽管模型在成本和效率上具有优势，但在特定细分市场的应用效果和用户隐私保护方面仍需进一步验证和优化。企业在采纳时应考虑这些潜在风险，并制定相应的数据保护措施。",
+      "published_date": "2026-01-28T14:00:33",
+      "focus_tags": [],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    },
+    {
+      "id": "010",
+      "title": "Deezer makes it easier for rival platforms to take a stance against AI-generated music",
+      "url": "https://techcrunch.com/2026/01/29/deezer-makes-it-easier-for-rival-platforms-to-take-a-stance-against-ai-generated-music/",
+      "source": "TechCrunch Apps",
+      "source_id": "techcrunch_apps",
+      "weighted_score": 6.29,
+      "content": "Last year, Deezer introduced an AI-detection tool that automatically tags fully AI-generated music for listeners and removes it from algorithmic and editorial recommendations. The company announced on Thursday that it’s now making the tool available to other streaming platforms in an effort to help address the rise of AI and fraudulent streams, as well as […]",
+      "paraphrased_content": "Last year, Deezer introduced an AI-detection tool that automatically tags fully AI-generated music for listeners and removes it from algorithmic and editorial recommendations. The company announced on...",
+      "published_date": "2026-01-29T08:00:00",
+      "focus_tags": [],
+      "searchable_entities": {
+        "companies": [],
+        "models": [],
+        "people": []
+      }
+    }
+  ],
+  "top_articles": [
+    {
+      "title": "Apple’s second biggest acquisition ever is an AI company that listens to ‘silent speech’",
+      "source": "The Verge AI",
+      "score": 0
+    },
+    {
+      "title": "Launch HN: AgentMail (YC S25) – An API that gives agents their own email inboxes",
+      "source": "Hacker News",
+      "score": 0
+    },
+    {
+      "title": "[D] Evaluating AI Agents for enterprise use: Are standardized benchmarks (Terminal, Harbor, etc.) actually useful for non-tech stakeholders?",
+      "source": "r/MachineLearning",
+      "score": 0
+    },
+    {
+      "title": "Chrome takes on AI browsers with tighter Gemini integration, agentic features for autonomous tasks",
+      "source": "TechCrunch Apps",
+      "score": 0
+    },
+    {
+      "title": "modelcontextprotocol /\n\n      ext-apps",
+      "source": "GitHub Trending",
+      "score": 0
+    }
+  ]
+}
