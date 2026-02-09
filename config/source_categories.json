@@ -1,0 +1,179 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "generated_at": "2026-01-21",
+    "description": "Source category mappings for validation diversity scoring. Groups sources by independence level."
+  },
+
+  "categories": {
+    "technical": {
+      "description": "Developer/engineering activity signals",
+      "sources": ["github", "huggingface", "arxiv", "paperswithcode"],
+      "weight": 1.0,
+      "independence_level": "high"
+    },
+    "social": {
+      "description": "Community discussion and buzz",
+      "sources": ["reddit", "hackernews", "twitter"],
+      "weight": 0.8,
+      "independence_level": "medium"
+    },
+    "financial": {
+      "description": "Capital movement and corporate signals",
+      "sources": ["sec", "crunchbase", "openbook_vc"],
+      "weight": 1.0,
+      "independence_level": "high"
+    },
+    "predictive": {
+      "description": "Market expectations and forecasts",
+      "sources": ["polymarket", "manifold", "metaculus"],
+      "weight": 0.9,
+      "independence_level": "high"
+    },
+    "media": {
+      "description": "News and press coverage",
+      "sources": ["news", "ai_labs_news"],
+      "weight": 0.7,
+      "independence_level": "low"
+    }
+  },
+
+  "source_metadata": {
+    "github": {
+      "category": "technical",
+      "match_fields": ["owner", "repo_name", "description"],
+      "freshness_days": 7,
+      "reliability": 0.95,
+      "default_match_tier_cap": 2,
+      "tier_1_requires": ["domain_coherence", "readme_mention"]
+    },
+    "huggingface": {
+      "category": "technical",
+      "match_fields": ["author", "model_id", "tags"],
+      "freshness_days": 7,
+      "reliability": 0.95,
+      "default_match_tier_cap": 2,
+      "tier_1_requires": ["model_card_mention", "namespace_match"]
+    },
+    "arxiv": {
+      "category": "technical",
+      "match_fields": ["title", "authors", "abstract"],
+      "freshness_days": 14,
+      "reliability": 0.9,
+      "default_match_tier_cap": 2,
+      "tier_1_requires": ["author_affiliation"]
+    },
+    "paperswithcode": {
+      "category": "technical",
+      "match_fields": ["title", "abstract", "methods"],
+      "freshness_days": 14,
+      "reliability": 0.9,
+      "default_match_tier_cap": 2,
+      "tier_1_requires": []
+    },
+    "reddit": {
+      "category": "social",
+      "match_fields": ["title", "selftext", "subreddit"],
+      "freshness_days": 3,
+      "reliability": 0.7,
+      "default_match_tier_cap": 3,
+      "tier_1_requires": []
+    },
+    "hackernews": {
+      "category": "social",
+      "match_fields": ["title", "url", "text"],
+      "freshness_days": 3,
+      "reliability": 0.8,
+      "default_match_tier_cap": 3,
+      "tier_1_requires": []
+    },
+    "twitter": {
+      "category": "social",
+      "match_fields": ["text", "user"],
+      "freshness_days": 1,
+      "reliability": 0.6,
+      "default_match_tier_cap": 3,
+      "tier_1_requires": []
+    },
+    "sec": {
+      "category": "financial",
+      "match_fields": ["company_name", "filing_type"],
+      "freshness_days": 30,
+      "reliability": 1.0,
+      "default_match_tier_cap": 1,
+      "tier_1_requires": []
+    },
+    "crunchbase": {
+      "category": "financial",
+      "match_fields": ["name", "short_description"],
+      "freshness_days": 30,
+      "reliability": 0.95,
+      "default_match_tier_cap": 1,
+      "tier_1_requires": []
+    },
+    "openbook_vc": {
+      "category": "financial",
+      "match_fields": ["name", "portfolio_companies"],
+      "freshness_days": 30,
+      "reliability": 0.85,
+      "default_match_tier_cap": 1,
+      "tier_1_requires": []
+    },
+    "polymarket": {
+      "category": "predictive",
+      "match_fields": ["title", "description"],
+      "freshness_days": 7,
+      "reliability": 0.75,
+      "default_match_tier_cap": 3,
+      "tier_1_requires": []
+    },
+    "manifold": {
+      "category": "predictive",
+      "match_fields": ["question", "description"],
+      "freshness_days": 7,
+      "reliability": 0.7,
+      "default_match_tier_cap": 3,
+      "tier_1_requires": []
+    },
+    "metaculus": {
+      "category": "predictive",
+      "match_fields": ["title", "description"],
+      "freshness_days": 7,
+      "reliability": 0.8,
+      "default_match_tier_cap": 3,
+      "tier_1_requires": []
+    },
+    "news": {
+      "category": "media",
+      "match_fields": ["title", "content", "entities"],
+      "freshness_days": 7,
+      "reliability": 0.8,
+      "default_match_tier_cap": 2,
+      "tier_1_requires": ["entity_extraction"]
+    },
+    "ai_labs_news": {
+      "category": "media",
+      "match_fields": ["title", "content"],
+      "freshness_days": 7,
+      "reliability": 0.85,
+      "default_match_tier_cap": 2,
+      "tier_1_requires": []
+    }
+  },
+
+  "diversity_bonuses": {
+    "technical_financial": 0.15,
+    "technical_predictive": 0.10,
+    "financial_predictive": 0.12,
+    "social_financial": 0.08,
+    "any_three_categories": 0.20,
+    "all_four_categories": 0.30
+  },
+
+  "validation_thresholds": {
+    "high_confidence": 0.7,
+    "validated": 0.5,
+    "min_sources_for_validated": 2,
+    "min_tier_for_count": 2
+  }
+}
