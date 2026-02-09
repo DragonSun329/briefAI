@@ -195,6 +195,10 @@ def main():
     parser.add_argument('--min-relevance', type=float, default=0.0, 
                         help='Min AI relevance to include (default 0 = all)')
     parser.add_argument('--verbose', '-v', action='store_true', help='Verbose output')
+    parser.add_argument('--with-signals', action='store_true', 
+                        help='Run signal tracking after feed generation')
+    parser.add_argument('--no-signal-embeddings', action='store_true',
+                        help='Disable embeddings for signal tracking (overlap-only)')
     args = parser.parse_args()
     
     date_str = args.date or datetime.now().strftime('%Y-%m-%d')
@@ -284,6 +288,39 @@ def main():
               f"max={debug_event.get('similarity_distribution', {}).get('max', 0):.3f}")
         print(f"THEME similarity: p50={debug_theme.get('similarity_distribution', {}).get('p50', 0):.3f}, "
               f"max={debug_theme.get('similarity_distribution', {}).get('max', 0):.3f}")
+    
+    # 9. Optional: Signal tracking
+    if args.with_signals:
+        print("\n--- Signal Tracking ---")
+        try:
+            from utils.signal_tracker import SignalTracker
+            
+            signals_dir = output_dir / "signals"
+            tracker = SignalTracker(
+                signals_dir=signals_dir,
+                use_embeddings=not args.no_signal_embeddings,
+            )
+            
+            stats = tracker.update_from_dual_feed(feed, date_str)
+            
+            print(f"Signals created: {stats['signals_created']}")
+            print(f"Signals updated: {stats['signals_updated']}")
+            
+            summary = tracker.get_signal_summary()
+            print(f"Total signals: {summary['total']} (active: {summary['active']})")
+            
+            # Top signals
+            active = tracker.get_active_signals()[:3]
+            if active:
+                print("Top signals:")
+                for s in active:
+                    print(f"  [{s.status}] {s.name} (conf={s.metrics.confidence:.2f})")
+                    
+        except Exception as e:
+            logger.error(f"Signal tracking failed: {e}")
+            if args.verbose:
+                import traceback
+                traceback.print_exc()
     
     return 0
 
