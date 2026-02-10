@@ -677,7 +677,8 @@ class TestMechanismDetection:
         detections = detect_mechanisms(meta, taxonomy)
         
         assert len(detections) > 0
-        primary_mech, hits, keywords, sources = detections[0]
+        # v2.1: Now returns 5-tuple (mech_id, hits, keywords, primary_sources, secondary_sources)
+        primary_mech, hits, keywords, primary_src, secondary_src = detections[0]
         assert primary_mech in ['pricing_cost_down', 'pricing_cost_up']
         assert hits >= MIN_MECHANISM_KEYWORDS
     
@@ -689,7 +690,8 @@ class TestMechanismDetection:
         detections = detect_mechanisms(meta, taxonomy)
         
         assert len(detections) > 0
-        primary_mech, hits, keywords, sources = detections[0]
+        # v2.1: Now returns 5-tuple
+        primary_mech, hits, keywords, primary_src, secondary_src = detections[0]
         assert primary_mech == 'enterprise_adoption'
     
     def test_weak_meta_low_hits(self):
@@ -701,29 +703,33 @@ class TestMechanismDetection:
         
         # May find some matches but should be weak
         if detections:
-            _, hits, _, _ = detections[0]
+            # v2.1: Now returns 5-tuple
+            _, hits, _, _, _ = detections[0]
             assert hits < 5
     
     def test_returns_evidence_sources(self):
-        """Should track evidence sources (v2.0)."""
+        """Should track evidence sources (v2.0 + v2.1)."""
         taxonomy = load_mechanism_taxonomy()
         meta = make_pricing_meta()
         
         detections = detect_mechanisms(meta, taxonomy)
         
         assert len(detections) > 0
-        _, _, _, sources = detections[0]
-        assert len(sources) > 0
+        # v2.1: Now returns 5-tuple with split sources
+        _, _, _, primary_src, secondary_src = detections[0]
+        # Combined sources should be non-empty
+        assert len(primary_src) > 0 or len(secondary_src) > 0
 
 
 class TestMechanismTrace:
-    """Test mechanism trace building (v2.0)."""
+    """Test mechanism trace building (v2.0 + v2.1)."""
     
     def test_builds_trace_correctly(self):
         """Should build trace with all candidates."""
+        # v2.1: Now uses 5-tuple with primary/secondary sources
         detections = [
-            ('enterprise_adoption', 4, ['enterprise', 'adoption', 'deployment', 'contract'], ['meta_insight', 'bucket_tags']),
-            ('pricing_cost_down', 2, ['pricing', 'cost'], ['description']),
+            ('enterprise_adoption', 4, ['enterprise', 'adoption', 'deployment', 'contract'], ['meta_insight', 'bucket_tags'], ['naming_reason']),
+            ('pricing_cost_down', 2, ['pricing', 'cost'], ['description'], []),
         ]
         
         trace = build_mechanism_trace(detections, 'enterprise_adoption', 'highest_score')
@@ -731,8 +737,12 @@ class TestMechanismTrace:
         assert trace.candidate_scores['enterprise_adoption'] == 4
         assert trace.candidate_scores['pricing_cost_down'] == 2
         assert 'enterprise' in trace.matched_terms
+        # v2.0 compat: evidence_sources still exists
         assert 'meta_insight' in trace.evidence_sources
         assert trace.selection_reason == 'highest_score'
+        # v2.1: check primary/secondary split
+        assert 'meta_insight' in trace.evidence_sources_primary
+        assert 'naming_reason' in trace.evidence_sources_secondary
 
 
 class TestNullHypothesisCompetition:
@@ -1106,14 +1116,14 @@ class TestHypothesisEngineIntegration:
         assert 'top_mechanisms' in result['summary']
         assert 'metas_requiring_review' in result['summary']
     
-    def test_version_is_2_0(self):
-        """Should output version 2.0."""
+    def test_version_is_2_1(self):
+        """Should output version 2.1 (upgraded from 2.0)."""
         engine = HypothesisEngine()
         metas = [make_strong_meta()]
         
         result = engine.process_meta_signals(metas, date='2026-02-09')
         
-        assert result['version'] == '2.0'
+        assert result['version'] == '2.1'
     
     def test_bundles_have_watchlist(self):
         """Bundles should have what_to_watch_next (v2.0)."""
@@ -1381,7 +1391,7 @@ def run_tests():
     t = TestHypothesisEngineIntegration()
     t.test_processes_multiple_metas()
     t.test_summary_stats_populated()
-    t.test_version_is_2_0()
+    t.test_version_is_2_1()
     t.test_bundles_have_watchlist()
     t.test_bundles_have_mechanism_trace()
     t.test_report_section_formatting()

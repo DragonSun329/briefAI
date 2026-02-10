@@ -1,0 +1,340 @@
+{
+  "_version": "1.0",
+  "_description": "Canonical metric vocabulary for observable predictions. Maps free-form metrics to controlled types.",
+  
+  "categories": {
+    "financial": {
+      "metrics": {
+        "arr": {
+          "display_name": "Annual Recurring Revenue",
+          "aliases": ["revenue", "arr_growth", "recurring_revenue"],
+          "default_source": "sec",
+          "default_aggregation": "sum",
+          "default_window_days": 30
+        },
+        "bookings": {
+          "display_name": "Bookings",
+          "aliases": ["booking", "orders", "deal_flow"],
+          "default_source": "earnings_call",
+          "default_aggregation": "sum",
+          "default_window_days": 30
+        },
+        "contract_count": {
+          "display_name": "Contract Count",
+          "aliases": ["contracts", "contract", "deals", "deal_count"],
+          "default_source": "press_release",
+          "default_aggregation": "count",
+          "default_window_days": 30
+        },
+        "deal_value": {
+          "display_name": "Deal Value",
+          "aliases": ["deal_size", "contract_value", "transaction_value"],
+          "default_source": "sec",
+          "default_aggregation": "sum",
+          "default_window_days": 30
+        },
+        "earnings_mentions": {
+          "display_name": "Earnings Call Mentions",
+          "aliases": ["earnings", "earnings_call", "mention_count"],
+          "default_source": "earnings_call",
+          "default_aggregation": "count",
+          "default_window_days": 90
+        },
+        "guidance_raise": {
+          "display_name": "Guidance Raise",
+          "aliases": ["guidance", "forecast", "outlook"],
+          "default_source": "sec",
+          "default_aggregation": "count",
+          "default_window_days": 90
+        },
+        "funding_amount": {
+          "display_name": "Funding Amount",
+          "aliases": ["funding", "raise", "investment", "round"],
+          "default_source": "crunchbase",
+          "default_aggregation": "sum",
+          "default_window_days": 30
+        },
+        "valuation": {
+          "display_name": "Valuation",
+          "aliases": ["valuation_change", "market_cap"],
+          "default_source": "pitchbook",
+          "default_aggregation": "latest",
+          "default_window_days": 30
+        },
+        "partnership_count": {
+          "display_name": "Partnership Announcements",
+          "aliases": ["partnership", "partnerships", "alliance", "collaboration"],
+          "default_source": "press_release",
+          "default_aggregation": "count",
+          "default_window_days": 30
+        },
+        "price_change": {
+          "display_name": "Price Change",
+          "aliases": ["price", "pricing", "cost"],
+          "default_source": "pricing_page",
+          "default_aggregation": "delta",
+          "default_window_days": 14
+        }
+      }
+    },
+    
+    "technical": {
+      "metrics": {
+        "repo_stars": {
+          "display_name": "Repository Stars",
+          "aliases": ["stars", "star_count", "github_stars"],
+          "default_source": "github",
+          "default_aggregation": "count",
+          "default_window_days": 7
+        },
+        "repo_forks": {
+          "display_name": "Repository Forks",
+          "aliases": ["forks", "fork_count"],
+          "default_source": "github",
+          "default_aggregation": "count",
+          "default_window_days": 7
+        },
+        "sdk_release": {
+          "display_name": "SDK Release",
+          "aliases": ["sdk", "library_release", "package_release", "release"],
+          "default_source": "github",
+          "default_aggregation": "count",
+          "default_window_days": 14
+        },
+        "api_release": {
+          "display_name": "API Release",
+          "aliases": ["api", "api_update", "endpoint"],
+          "default_source": "company_blog",
+          "default_aggregation": "count",
+          "default_window_days": 14
+        },
+        "certification": {
+          "display_name": "Certification",
+          "aliases": ["compliance", "audit", "soc2", "iso"],
+          "default_source": "company_blog",
+          "default_aggregation": "count",
+          "default_window_days": 30
+        },
+        "docs_update": {
+          "display_name": "Documentation Update",
+          "aliases": ["docs", "documentation", "readme"],
+          "default_source": "docs",
+          "default_aggregation": "count",
+          "default_window_days": 7
+        },
+        "enterprise_feature_release": {
+          "display_name": "Enterprise Feature Release",
+          "aliases": ["enterprise_feature", "enterprise", "feature_release"],
+          "default_source": "company_blog",
+          "default_aggregation": "count",
+          "default_window_days": 30
+        },
+        "benchmark_score": {
+          "display_name": "Benchmark Score",
+          "aliases": ["benchmark", "performance", "accuracy", "score"],
+          "default_source": "arxiv",
+          "default_aggregation": "max",
+          "default_window_days": 14
+        },
+        "download_count": {
+          "display_name": "Download Count",
+          "aliases": ["downloads", "download", "installs"],
+          "default_source": "pypi",
+          "default_aggregation": "sum",
+          "default_window_days": 7
+        },
+        "model_release": {
+          "display_name": "Model Release",
+          "aliases": ["model", "weights", "checkpoint"],
+          "default_source": "huggingface",
+          "default_aggregation": "count",
+          "default_window_days": 14
+        }
+      }
+    },
+    
+    "social": {
+      "metrics": {
+        "job_postings_count": {
+          "display_name": "Job Postings Count",
+          "aliases": ["job_postings", "jobs", "hiring", "postings"],
+          "default_source": "linkedin",
+          "default_aggregation": "count",
+          "default_window_days": 14
+        },
+        "job_postings_share": {
+          "display_name": "Job Postings Share",
+          "aliases": ["hiring_share", "job_share"],
+          "default_source": "linkedin",
+          "default_aggregation": "ratio",
+          "default_window_days": 14
+        },
+        "keyword_frequency": {
+          "display_name": "Keyword Frequency",
+          "aliases": ["mentions", "buzz", "frequency", "volume"],
+          "default_source": "twitter",
+          "default_aggregation": "count",
+          "default_window_days": 7
+        },
+        "sentiment_score": {
+          "display_name": "Sentiment Score",
+          "aliases": ["sentiment", "mood", "tone"],
+          "default_source": "twitter",
+          "default_aggregation": "mean",
+          "default_window_days": 7
+        },
+        "engagement_rate": {
+          "display_name": "Engagement Rate",
+          "aliases": ["engagement", "interaction", "reactions"],
+          "default_source": "twitter",
+          "default_aggregation": "mean",
+          "default_window_days": 7
+        },
+        "discussion_volume": {
+          "display_name": "Discussion Volume",
+          "aliases": ["discussions", "threads", "comments", "posts"],
+          "default_source": "hackernews",
+          "default_aggregation": "count",
+          "default_window_days": 7
+        }
+      }
+    },
+    
+    "predictive": {
+      "metrics": {
+        "probability_change": {
+          "display_name": "Probability Change",
+          "aliases": ["probability", "odds", "likelihood"],
+          "default_source": "polymarket",
+          "default_aggregation": "delta",
+          "default_window_days": 7
+        },
+        "market_volume": {
+          "display_name": "Market Volume",
+          "aliases": ["volume", "trading_volume", "bet_volume"],
+          "default_source": "polymarket",
+          "default_aggregation": "sum",
+          "default_window_days": 7
+        },
+        "open_interest": {
+          "display_name": "Open Interest",
+          "aliases": ["interest", "positions"],
+          "default_source": "polymarket",
+          "default_aggregation": "sum",
+          "default_window_days": 7
+        },
+        "forecast_update": {
+          "display_name": "Forecast Update",
+          "aliases": ["forecast", "prediction_update"],
+          "default_source": "metaculus",
+          "default_aggregation": "latest",
+          "default_window_days": 14
+        }
+      }
+    },
+    
+    "media": {
+      "metrics": {
+        "article_count": {
+          "display_name": "Article Count",
+          "aliases": ["articles", "coverage", "stories", "news"],
+          "default_source": "techmeme",
+          "default_aggregation": "count",
+          "default_window_days": 7
+        },
+        "headline_mentions": {
+          "display_name": "Headline Mentions",
+          "aliases": ["headlines", "front_page"],
+          "default_source": "techmeme",
+          "default_aggregation": "count",
+          "default_window_days": 7
+        }
+      }
+    }
+  },
+  
+  "source_query_templates": {
+    "sec": {
+      "query_template": "filings:{entity} type:{filing_type}",
+      "aggregations": ["count", "sum", "latest"]
+    },
+    "earnings_call": {
+      "query_template": "transcript:{entity} mentions:{keyword}",
+      "aggregations": ["count", "frequency"]
+    },
+    "press_release": {
+      "query_template": "company:{entity} type:announcement",
+      "aggregations": ["count"]
+    },
+    "github": {
+      "query_template": "repo:{entity} metric:{metric}",
+      "aggregations": ["count", "sum", "delta"]
+    },
+    "company_blog": {
+      "query_template": "site:{entity} category:{category}",
+      "aggregations": ["count"]
+    },
+    "linkedin": {
+      "query_template": "company:{entity} jobs:{keyword}",
+      "aggregations": ["count", "ratio"]
+    },
+    "twitter": {
+      "query_template": "keyword:{keyword} from:{entity}",
+      "aggregations": ["count", "mean"]
+    },
+    "hackernews": {
+      "query_template": "search:{keyword}",
+      "aggregations": ["count", "score"]
+    },
+    "polymarket": {
+      "query_template": "market:{keyword}",
+      "aggregations": ["delta", "sum", "latest"]
+    },
+    "metaculus": {
+      "query_template": "question:{keyword}",
+      "aggregations": ["latest", "delta"]
+    },
+    "techmeme": {
+      "query_template": "search:{keyword}",
+      "aggregations": ["count"]
+    },
+    "arxiv": {
+      "query_template": "search:{keyword} cat:cs.AI",
+      "aggregations": ["count", "max"]
+    },
+    "crunchbase": {
+      "query_template": "company:{entity}",
+      "aggregations": ["sum", "latest"]
+    },
+    "pitchbook": {
+      "query_template": "company:{entity}",
+      "aggregations": ["latest"]
+    },
+    "huggingface": {
+      "query_template": "model:{keyword}",
+      "aggregations": ["count", "sum"]
+    },
+    "pypi": {
+      "query_template": "package:{keyword}",
+      "aggregations": ["sum", "delta"]
+    },
+    "glassdoor": {
+      "query_template": "company:{entity} jobs:{keyword}",
+      "aggregations": ["count"]
+    },
+    "indeed": {
+      "query_template": "company:{entity} jobs:{keyword}",
+      "aggregations": ["count"]
+    },
+    "docs": {
+      "query_template": "site:{entity}/docs",
+      "aggregations": ["count"]
+    },
+    "pricing_page": {
+      "query_template": "site:{entity}/pricing",
+      "aggregations": ["delta", "latest"]
+    }
+  },
+  
+  "fallback_metric": "custom_metric"
+}
