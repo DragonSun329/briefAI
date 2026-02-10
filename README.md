@@ -1,6 +1,6 @@
 # BriefAI - Multi-Pipeline AI Intelligence Platform
 
-An intelligent multi-pipeline system for AI industry intelligence, featuring automated news briefings, trend radar, investment tracking, and Chinese AI ecosystem monitoring.
+An intelligent multi-pipeline system for AI industry intelligence, featuring automated news briefings, trend radar, investment tracking, Chinese AI ecosystem monitoring, and adversarial analysis agents.
 
 ## Overview
 
@@ -14,6 +14,7 @@ An intelligent multi-pipeline system for AI industry intelligence, featuring aut
 | **Financial Signals** | Tracks stock momentum, funding rounds, CB Rank trends | PMS/MRS scores |
 | **Market Sentiment** | Aggregates G2, Capterra, Product Hunt reviews | Consensus NPS |
 | **Entity Tracking** | Cross-pipeline company/model mentions | Trend Radar heatmaps |
+| **Adversarial Analysis** | Bull vs Bear agent debate, synthesized by Arbiter | Hype-filtered insights |
 
 The result: A single dashboard that answers "What moved in AI today?" in under 60 seconds.
 
@@ -27,6 +28,20 @@ graph TD
         Scrape[Web Scrapers]
     end
 
+    subgraph Pipeline["⚙️ Pipeline Framework"]
+        Base[BasePipeline Interface]
+        Registry[PipelineRegistry]
+        RunStore[RunStore SQLite]
+    end
+
+    subgraph Agents["🤖 Agent Framework"]
+        AgentBase[BaseAgent Interface]
+        AgentReg[AgentRegistry]
+        HypeMan[HypeMan - Bull]
+        Skeptic[Skeptic - Bear]
+        Arbiter[Arbiter - Judge]
+    end
+
     subgraph Core["🧠 Processing Engine"]
         Dedup[Semantic Deduplication]
         Score[Multi-Dimensional Scoring]
@@ -37,22 +52,27 @@ graph TD
     subgraph Output["📊 Intelligence Layer"]
         Brief[Executive Briefings]
         Radar[Trend Radar]
-        Alerts[Smart Alerts]
+        SSE[SSE Streaming]
         Dashboard[React Dashboard]
     end
 
-    RSS --> Dedup
-    API --> Dedup
-    Scrape --> Dedup
+    RSS --> Base
+    API --> Base
+    Scrape --> Base
+    Base --> Registry
+    Base --> Dedup
     Dedup --> Score
     Score --> NER
     NER --> Cluster
     Cluster --> Brief
     Cluster --> Radar
-    Cluster --> Alerts
-    Radar --> Dashboard
-    Brief --> Dashboard
-    Alerts --> Dashboard
+    Brief --> SSE
+    Radar --> SSE
+    SSE --> Dashboard
+    Base --> RunStore
+    HypeMan --> Arbiter
+    Skeptic --> Arbiter
+    AgentBase --> AgentReg
 ```
 
 ## Key Features
@@ -64,6 +84,19 @@ graph TD
 | **product** | AI product launches | Product Hunt, Hacker News, etc. | `product_briefing_*.md` |
 | **investing** | VC/funding intelligence | Crunchbase, SEC filings, etc. | `investing_briefing_*.md` |
 | **china_ai** | Chinese AI ecosystem | 机器之心, 量子位, 36氪, etc. | `china_ai_briefing_*.md` |
+
+### Pipeline Framework
+All pipelines inherit from `BasePipeline`, providing:
+- **Streaming events** — Real-time SSE progress updates (`stage_start`, `stage_end`, `item`, `error`, `done`)
+- **Run persistence** — Every pipeline run is stored in SQLite with full event history
+- **Registry pattern** — Pipelines self-register via `PipelineRegistry` for automatic API discovery
+
+### Agent Framework
+Adversarial analysis agents built on `BaseAgent`:
+- **HypeMan** 🐂 — Builds the bull case from GitHub stars, HF downloads, paper citations, news volume
+- **Skeptic** 🐻 — Challenges with SEC filings, VC portfolios, revenue data, deployment metrics
+- **Arbiter** ⚖️ — Synthesizes both sides, only surfaces trends where Skeptic fails to refute
+- Each agent exposes an `AgentCard` with capabilities, accepted inputs, and output schema
 
 ### Trend Radar
 - Cross-pipeline entity tracking
@@ -165,9 +198,16 @@ briefAI/
 │       ├── briefings.py            # Briefing report endpoints
 │       ├── companies.py            # Company data + stock prices
 │       ├── trends.py               # Trend radar endpoints
-│       └── alerts.py               # Alert management
+│       ├── alerts.py               # Alert management
+│       ├── pipeline_runs.py        # Pipeline SSE streaming endpoints
+│       └── agents.py               # Agent discovery and invocation endpoints
 ├── pipeline/                       # Pipeline orchestration
-│   └── orchestrator.py             # Multi-pipeline runner
+│   ├── orchestrator.py             # Multi-pipeline runner
+│   ├── base.py                     # BasePipeline ABC, PipelineRegistry, event types
+│   ├── news_pipeline.py            # Reference pipeline implementation
+│   └── run_store.py                # SQLite persistence for pipeline runs
+├── agents/                         # Adversarial analysis agents
+│   └── base.py                     # BaseAgent ABC, AgentCard, AgentRegistry
 ├── modules/                        # Core pipeline modules
 │   ├── web_scraper.py              # RSS/HTML scraping
 │   ├── news_evaluator.py           # Article scoring
@@ -186,9 +226,11 @@ briefAI/
 │   ├── entity_extractor.py         # spaCy + Claude NER
 │   ├── scoring_engine.py           # Weighted scoring
 │   ├── signal_store.py             # SQLite signal storage
-│   └── alert_store.py              # Alert persistence
+│   ├── alert_store.py              # Alert persistence
+│   └── model_config.py             # Model config manager
 ├── config/
 │   ├── pipelines.json              # Pipeline definitions
+│   ├── models.yaml                 # Per-pipeline model configuration
 │   ├── sources.json                # News sources (general)
 │   ├── sources_china_ai.json       # Chinese AI sources
 │   ├── categories.json             # Category taxonomy
@@ -198,6 +240,7 @@ briefAI/
 │   ├── reports/                    # Generated briefings
 │   ├── trend_radar.db              # Company/entity tracking
 │   ├── alerts.db                   # Alert storage
+│   ├── pipeline_runs.db            # Pipeline run history
 │   ├── kaggle/                     # Crunchbase CSV data
 │   └── alternative_signals/        # Scraped signals (JSON)
 └── docs/
@@ -205,6 +248,8 @@ briefAI/
 ```
 
 ## API Endpoints
+
+### Briefings & Data
 
 | Endpoint | Description |
 |----------|-------------|
@@ -214,6 +259,25 @@ briefAI/
 | `GET /api/companies/{id}/stock` | Get stock price data |
 | `GET /api/trends/rising` | Get rising entities |
 | `GET /api/alerts` | Get active alerts |
+
+### Pipeline Management
+
+| Endpoint | Description |
+|----------|-------------|
+| `GET /api/v1/pipelines` | List registered pipelines |
+| `POST /api/v1/pipelines/run` | Trigger pipeline with SSE streaming |
+| `GET /api/v1/pipelines/runs` | List past pipeline runs |
+| `GET /api/v1/pipelines/runs/{id}` | Get run details + events |
+| `GET /api/v1/pipelines/stats` | Aggregate run statistics |
+| `GET /api/v1/pipelines/active` | Currently running pipelines |
+
+### Agent System
+
+| Endpoint | Description |
+|----------|-------------|
+| `GET /api/v1/agents` | List agents with capability cards |
+| `GET /api/v1/agents/{id}` | Get agent capability card |
+| `POST /api/v1/agents/{id}/run` | Invoke agent with input |
 
 ## Data Sources
 
@@ -278,6 +342,34 @@ Chinese AI news sources:
 }
 ```
 
+### Model Configuration (`config/models.yaml`)
+
+Per-pipeline and per-task model selection with fallback chains:
+
+```yaml
+pipelines:
+  news:
+    model: haiku           # Fast, cost-effective for daily briefings
+  investing:
+    model: sonnet           # Higher reasoning for financial analysis
+  product:
+    model: haiku
+  china_ai:
+    model: haiku
+
+tasks:
+  deep_research:
+    model: sonnet           # Complex multi-step reasoning
+  entity_extraction:
+    model: gemini-flash     # Fast structured extraction
+  adversarial_analysis:
+    model: sonnet           # Nuanced argumentation
+```
+
+- **Pipelines**: news (Haiku), investing (Sonnet), product (Haiku), china_ai (Haiku)
+- **Tasks**: deep_research (Sonnet), entity_extraction (Gemini Flash), adversarial_analysis (Sonnet)
+- **Override via environment variables**: `BRIEFAI_{PIPELINE}_MODEL` (e.g., `BRIEFAI_NEWS_MODEL=sonnet`)
+
 ## Development
 
 ### Run Tests
@@ -291,11 +383,18 @@ pyright
 ```
 
 ### Add New Pipeline
-1. Create `config/sources_<pipeline>.json`
-2. Create `config/categories_<pipeline>.json`
-3. Add pipeline config to `config/pipelines.json`
-4. Create report template `config/report_template_<pipeline>.md`
-5. Run: `python pipeline/orchestrator.py --pipeline <pipeline>`
+
+1. Create a class inheriting from `pipeline.base.BasePipeline`
+2. Implement `pipeline_id`, `display_name`, and `async def run(config)`
+3. Add source/category configs in `config/`
+4. Register in `api/routers/pipeline_runs.py::_register_defaults()`
+5. Add model config in `config/models.yaml`
+
+### Add New Agent
+
+1. Create a class with a `card` property returning `AgentCard` and `async def run(input)`
+2. Register in `api/routers/agents.py::_register_defaults()`
+3. Add model task config in `config/models.yaml` under `tasks:`
 
 ## Roadmap
 
@@ -308,28 +407,18 @@ pyright
 - [x] React dashboard with company detail views
 - [x] CB Rank trend tracking
 - [x] China market signals (PMS-CN, MRS-CN) with US/CN market toggle
+- [x] Pipeline interface (BasePipeline) with streaming events
+- [x] Pipeline run persistence (SQLite run store)
+- [x] SSE streaming for live pipeline progress
+- [x] Agent interface (BaseAgent) with capability cards
+- [x] Agent registry and API endpoints
+- [x] Per-pipeline model configuration (YAML)
+- [x] Adversarial analysis agents (HypeMan, Skeptic, Arbiter)
 
 ### In Progress
 - [ ] Real-time alert system
 
 ### Agentic Architecture (Next Phase)
-
-#### Devil's Advocate Workflow
-Multi-agent adversarial analysis to filter hype from substance:
-
-```
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│   Hype-Man      │     │    Skeptic      │     │    Arbiter      │
-│   Agent         │────▶│    Agent        │────▶│    (Synthesis)  │
-│                 │     │                 │     │                 │
-│ • GitHub stars  │     │ • SEC filings   │     │ Only surfaces   │
-│ • HF downloads  │     │ • VC portfolios │     │ trends where    │
-│ • Paper cites   │     │ • Revenue data  │     │ Skeptic fails   │
-│ • News volume   │     │ • Deployment    │     │ to refute       │
-└─────────────────┘     └─────────────────┘     └─────────────────┘
-```
-
-**Why:** Mimics an investment committee. Filters "noisy" trends with high volume but low substance.
 
 #### JIT Context Loading (MCP Integration)
 Dynamic tool invocation to reduce context pollution:
@@ -355,7 +444,6 @@ python backtest.py --date 2025-07-01 --predict-horizon 90d
 - Tune signal weights based on accuracy
 
 ### Future Vision
-- [ ] **Adversarial Analysis**: Hype-Man vs Skeptic agent personas
 - [ ] **MCP Integration**: Just-in-time context loading for anomaly deep-dives
 - [ ] **Backtesting Engine**: Shadow mode to validate trend predictions
 - [ ] **Predictive Alerts**: Early warning system based on signal convergence
@@ -367,4 +455,4 @@ This project is provided as-is for demonstration and internal evaluation.
 
 ---
 
-**Last Updated**: January 22, 2026 | **Version**: 3.2 (Agentic Roadmap)
+**Last Updated**: February 4, 2026 | **Version**: 4.0 (Pipeline & Agent Framework)

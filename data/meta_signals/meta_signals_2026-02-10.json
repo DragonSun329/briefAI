@@ -1,0 +1,68 @@
+{
+  "date": "2026-02-10",
+  "meta_signals": [
+    {
+      "meta_id": "meta_nvidia_compute_demand",
+      "concept_name": "NVIDIA Compute Demand Acceleration",
+      "confidence": 0.87,
+      "velocity": 1.3,
+      "independence_score": 0.82,
+      "categories": [
+        "financial",
+        "technical",
+        "infrastructure"
+      ],
+      "key_evidence": [
+        "Blackwell ramp ahead of schedule",
+        "H100 allocation still constrained"
+      ]
+    },
+    {
+      "meta_id": "meta_enterprise_ai_adoption",
+      "concept_name": "Enterprise AI Adoption Accelerating",
+      "confidence": 0.79,
+      "velocity": 1.1,
+      "independence_score": 0.75,
+      "categories": [
+        "enterprise",
+        "financial",
+        "technical"
+      ],
+      "key_evidence": [
+        "Fortune 500 AI budgets up 40% YoY",
+        "Enterprise API usage growing 25% MoM"
+      ]
+    },
+    {
+      "meta_id": "meta_model_commoditization",
+      "concept_name": "Foundation Model Commoditization",
+      "confidence": 0.72,
+      "velocity": 0.9,
+      "independence_score": 0.68,
+      "categories": [
+        "competitive",
+        "pricing",
+        "technical"
+      ],
+      "key_evidence": [
+        "Open-weight models closing capability gap",
+        "API pricing down 60% in 12 months"
+      ]
+    },
+    {
+      "meta_id": "meta_datacenter_capex",
+      "concept_name": "Hyperscaler Datacenter CapEx Surge",
+      "confidence": 0.85,
+      "velocity": 1.2,
+      "independence_score": 0.8,
+      "categories": [
+        "financial",
+        "infrastructure"
+      ],
+      "key_evidence": [
+        "$150B combined 2026 capex guidance",
+        "Power infrastructure bottleneck emerging"
+      ]
+    }
+  ]
+}

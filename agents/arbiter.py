@@ -88,6 +88,59 @@ class ArbiterAgent:
         """
         self.llm_client = llm_client
 
+    @property
+    def card(self):
+        """Agent capability card for discovery/registration."""
+        from agents.base import AgentCard
+        return AgentCard(
+            agent_id="arbiter",
+            name="Arbiter (The Judge)",
+            description="Synthesizes conflicting Bull/Bear data into conviction scores and recommendations",
+            input_schema={"entity_name": "str", "context.hypeman": "HypeManOutput", "context.skeptic": "SkepticOutput"},
+            output_schema={"conviction_score": "int", "recommendation": "str", "verdict": "dict"},
+            capabilities=["synthesis", "conviction_scoring", "recommendation"],
+            model_task="adversarial_analysis",
+        )
+
+    async def run(self, input):
+        """
+        BaseAgent-compatible async entry point.
+
+        Expects input.context to contain 'hypeman' and 'skeptic' outputs.
+
+        Args:
+            input: AgentInput with entity_name and context containing agent outputs.
+
+        Returns:
+            AgentOutput with Arbiter synthesis results.
+        """
+        from agents.base import AgentOutput
+
+        # Extract sub-agent outputs from context
+        hypeman_data = input.context.get("hypeman", {})
+        skeptic_data = input.context.get("skeptic", {})
+
+        hypeman_output = HypeManOutput(
+            entity=hypeman_data.get("entity", input.entity_name),
+            bull_thesis=hypeman_data.get("bull_thesis", ""),
+            momentum_signals=hypeman_data.get("momentum_signals", []),
+            technical_velocity_score=hypeman_data.get("technical_velocity_score", 50),
+        )
+        skeptic_output = SkepticOutput(
+            entity_type=skeptic_data.get("entity_type", "UNKNOWN"),
+            risk_assessment=skeptic_data.get("risk_assessment", {}),
+            skeptic_verdict=skeptic_data.get("skeptic_verdict", {}),
+            missing_critical_signals=skeptic_data.get("missing_critical_signals", []),
+            confidence_in_assessment=skeptic_data.get("confidence_in_assessment", "LOW"),
+        )
+
+        result = self.synthesize(input.entity_name, hypeman_output, skeptic_output)
+        return AgentOutput(
+            agent_id="arbiter",
+            status="completed",
+            data=result.to_dict(),
+        )
+
     def _get_llm_client(self):
         """Lazy load LLM client."""
         if self.llm_client is None:

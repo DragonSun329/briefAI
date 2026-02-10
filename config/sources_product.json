@@ -1,0 +1,177 @@
+{
+  "sources": [
+    {
+      "id": "producthunt",
+      "name": "Product Hunt",
+      "url": "https://www.producthunt.com",
+      "type": "rss",
+      "rss_url": "https://www.producthunt.com/feed",
+      "enabled": true,
+      "categories": ["ai_tools", "developer_tools", "creative_ai", "agents_automation"],
+      "language": "en",
+      "credibility_score": 8,
+      "weight": 1.2
+    },
+    {
+      "id": "theresanai",
+      "name": "There's An AI For That",
+      "url": "https://theresanaiforthat.com",
+      "type": "rss",
+      "rss_url": "https://theresanaiforthat.com/rss/",
+      "enabled": true,
+      "categories": ["ai_tools", "creative_ai", "writing_content"],
+      "language": "en",
+      "credibility_score": 7,
+      "weight": 1.0
+    },
+    {
+      "id": "aitoolsdirectory",
+      "name": "AI Tools Directory",
+      "url": "https://aitoolsdirectory.com",
+      "type": "web",
+      "enabled": true,
+      "categories": ["ai_tools", "developer_tools"],
+      "language": "en",
+      "credibility_score": 6,
+      "weight": 0.8
+    },
+    {
+      "id": "techcrunch_apps",
+      "name": "TechCrunch Apps",
+      "url": "https://techcrunch.com/category/apps/",
+      "type": "rss",
+      "rss_url": "https://techcrunch.com/category/apps/feed/",
+      "enabled": true,
+      "categories": ["ai_tools", "agents_automation"],
+      "language": "en",
+      "credibility_score": 9,
+      "weight": 1.3
+    },
+    {
+      "id": "betalist",
+      "name": "BetaList",
+      "url": "https://betalist.com",
+      "type": "rss",
+      "rss_url": "https://betalist.com/feed",
+      "enabled": true,
+      "categories": ["ai_tools", "developer_tools"],
+      "language": "en",
+      "credibility_score": 7,
+      "weight": 0.9
+    },
+    {
+      "id": "hackernews",
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com",
+      "type": "rss",
+      "rss_url": "https://hnrss.org/frontpage",
+      "enabled": true,
+      "categories": ["developer_tools", "ai_tools", "agents_automation"],
+      "language": "en",
+      "credibility_score": 8,
+      "weight": 1.1
+    },
+    {
+      "id": "venturebeat_ai",
+      "name": "VentureBeat AI",
+      "url": "https://venturebeat.com/category/ai/",
+      "type": "rss",
+      "rss_url": "https://venturebeat.com/category/ai/feed/",
+      "enabled": true,
+      "categories": ["ai_tools", "developer_tools", "agents_automation"],
+      "language": "en",
+      "credibility_score": 8,
+      "weight": 1.0
+    },
+    {
+      "id": "bensbites",
+      "name": "Ben's Bites",
+      "url": "https://bensbites.beehiiv.com",
+      "type": "rss",
+      "rss_url": "https://bensbites.beehiiv.com/feed",
+      "enabled": true,
+      "categories": ["ai_tools", "creative_ai", "writing_content"],
+      "language": "en",
+      "credibility_score": 8,
+      "weight": 1.1
+    },
+    {
+      "id": "aiweekly",
+      "name": "AI Weekly",
+      "url": "https://aiweekly.co",
+      "type": "rss",
+      "rss_url": "https://aiweekly.co/feed",
+      "enabled": true,
+      "categories": ["ai_tools", "developer_tools"],
+      "language": "en",
+      "credibility_score": 7,
+      "weight": 0.9
+    },
+    {
+      "id": "the_verge_ai",
+      "name": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence",
+      "type": "rss",
+      "rss_url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "enabled": true,
+      "categories": ["ai_tools", "creative_ai"],
+      "language": "en",
+      "credibility_score": 9,
+      "weight": 1.2
+    },
+    {
+      "id": "ars_ai",
+      "name": "Ars Technica AI",
+      "url": "https://arstechnica.com/ai/",
+      "type": "rss",
+      "rss_url": "https://feeds.arstechnica.com/arstechnica/technology-lab",
+      "enabled": true,
+      "categories": ["ai_tools", "developer_tools"],
+      "language": "en",
+      "credibility_score": 9,
+      "weight": 1.1
+    },
+    {
+      "id": "github_trending",
+      "name": "GitHub Trending",
+      "url": "https://github.com/trending",
+      "type": "web",
+      "enabled": true,
+      "categories": ["developer_tools", "agents_automation"],
+      "language": "en",
+      "credibility_score": 9,
+      "weight": 1.2
+    },
+    {
+      "id": "reddit_singularity",
+      "name": "r/singularity",
+      "url": "https://www.reddit.com/r/singularity/",
+      "type": "rss",
+      "rss_url": "https://www.reddit.com/r/singularity/.rss",
+      "enabled": true,
+      "categories": ["ai_tools", "agents_automation"],
+      "language": "en",
+      "credibility_score": 6,
+      "weight": 0.8
+    },
+    {
+      "id": "reddit_machinelearning",
+      "name": "r/MachineLearning",
+      "url": "https://www.reddit.com/r/MachineLearning/",
+      "type": "rss",
+      "rss_url": "https://www.reddit.com/r/MachineLearning/.rss",
+      "enabled": true,
+      "categories": ["developer_tools", "ai_tools"],
+      "language": "en",
+      "credibility_score": 7,
+      "weight": 0.9
+    }
+  ],
+  "default_enabled_count": 14,
+  "scraping_config": {
+    "max_articles_per_source": 20,
+    "days_back": 7,
+    "timeout_seconds": 30,
+    "retry_count": 2
+  }
+}

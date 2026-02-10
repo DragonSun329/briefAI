@@ -1,0 +1,118 @@
+{
+  "version": "1.0",
+  "description": "Entity-specific calibration profiles for improved signal accuracy",
+  "last_updated": "2026-01-27T10:00:00Z",
+
+  "volatility_profiles": {
+    "high_beta": {
+      "description": "High volatility stocks that move more than market",
+      "sentiment_multiplier": 1.3,
+      "direction_threshold_bullish": 5.5,
+      "direction_threshold_bearish": 4.5,
+      "decay_half_life_hours": 12,
+      "confidence_boost": 0.1,
+      "entities": ["nvda", "nvidia", "amd", "smci", "mstr", "tsla", "tesla"]
+    },
+    "mega_cap_stable": {
+      "description": "Large cap tech with lower volatility",
+      "sentiment_multiplier": 0.8,
+      "direction_threshold_bullish": 6.5,
+      "direction_threshold_bearish": 3.5,
+      "decay_half_life_hours": 36,
+      "confidence_boost": 0.0,
+      "entities": ["msft", "microsoft", "aapl", "apple", "googl", "google", "alphabet"]
+    },
+    "ai_pure_play": {
+      "description": "AI-focused companies highly sensitive to AI news",
+      "sentiment_multiplier": 1.2,
+      "direction_threshold_bullish": 5.8,
+      "direction_threshold_bearish": 4.2,
+      "decay_half_life_hours": 16,
+      "confidence_boost": 0.15,
+      "entities": ["openai", "anthropic", "deepmind", "cohere", "mistral", "huggingface"]
+    },
+    "social_media": {
+      "description": "Social platforms with mixed AI exposure",
+      "sentiment_multiplier": 1.0,
+      "direction_threshold_bullish": 6.2,
+      "direction_threshold_bearish": 3.8,
+      "decay_half_life_hours": 24,
+      "confidence_boost": 0.05,
+      "entities": ["meta", "snap", "pins", "pinterest", "twtr", "twitter", "x"]
+    },
+    "cloud_providers": {
+      "description": "Cloud infrastructure with AI compute exposure",
+      "sentiment_multiplier": 0.9,
+      "direction_threshold_bullish": 6.0,
+      "direction_threshold_bearish": 4.0,
+      "decay_half_life_hours": 28,
+      "confidence_boost": 0.0,
+      "entities": ["amzn", "amazon", "aws", "gcp", "azure"]
+    },
+    "china_ai": {
+      "description": "Chinese AI companies with regulatory sensitivity",
+      "sentiment_multiplier": 1.4,
+      "direction_threshold_bullish": 5.2,
+      "direction_threshold_bearish": 4.8,
+      "decay_half_life_hours": 8,
+      "confidence_boost": -0.1,
+      "entities": ["baba", "alibaba", "bidu", "baidu", "bytedance", "tencent", "deepseek", "minimax", "zhipu", "moonshot", "baichuan"]
+    },
+    "crypto_ai": {
+      "description": "Crypto/AI intersection - extremely volatile",
+      "sentiment_multiplier": 1.8,
+      "direction_threshold_bullish": 5.0,
+      "direction_threshold_bearish": 5.0,
+      "decay_half_life_hours": 6,
+      "confidence_boost": -0.2,
+      "entities": ["render", "rndr", "akash", "akt", "fetch", "fet", "ocean", "worldcoin", "wld"]
+    }
+  },
+
+  "default_profile": {
+    "sentiment_multiplier": 1.0,
+    "direction_threshold_bullish": 6.0,
+    "direction_threshold_bearish": 4.0,
+    "decay_half_life_hours": 24,
+    "confidence_boost": 0.0
+  },
+
+  "sector_decay_rates": {
+    "news": {
+      "half_life_hours": 12,
+      "description": "News signals decay quickly"
+    },
+    "github": {
+      "half_life_hours": 168,
+      "description": "GitHub stars/activity persists longer"
+    },
+    "funding": {
+      "half_life_hours": 720,
+      "description": "Funding news relevant for weeks"
+    },
+    "earnings": {
+      "half_life_hours": 504,
+      "description": "Earnings impact lasts until next report"
+    },
+    "product_launch": {
+      "half_life_hours": 336,
+      "description": "Product launches have 2-week impact window"
+    },
+    "regulatory": {
+      "half_life_hours": 1440,
+      "description": "Regulatory news has long-lasting impact"
+    },
+    "social_sentiment": {
+      "half_life_hours": 8,
+      "description": "Social buzz is highly ephemeral"
+    }
+  },
+
+  "notes": [
+    "sentiment_multiplier: Amplifies sentiment deviation from neutral (5.0)",
+    "direction_threshold: Score needed to classify as bullish/bearish",
+    "decay_half_life_hours: Signal importance halves every N hours",
+    "confidence_boost: Added to base confidence for this entity type",
+    "Profiles are matched by entity_id or canonical name (lowercase)"
+  ]
+}

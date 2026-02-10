@@ -78,6 +78,7 @@ class PipelineStatusCollector:
         "reddit": ("data/cache/*reddit*.json", 24),
         "arxiv": ("data/cache/*arxiv*.json", 72),
         "techcrunch": ("data/cache/*techcrunch*.json", 24),
+        "podcasts": ("data/cache/podcasts_*.json", 168),  # Weekly freshness
     }
 
     # Pipeline configurations: name -> (output_pattern, table_name)

@@ -7,7 +7,7 @@
       "metrics": {
         "arr": {
           "display_name": "Annual Recurring Revenue",
-          "aliases": ["revenue", "arr_growth", "recurring_revenue"],
+          "aliases": ["revenue", "arr_growth", "recurring_revenue", "mrr", "monthly_recurring"],
           "default_source": "sec",
           "default_aggregation": "sum",
           "default_window_days": 30
@@ -21,7 +21,7 @@
         },
         "contract_count": {
           "display_name": "Contract Count",
-          "aliases": ["contracts", "contract", "deals", "deal_count"],
+          "aliases": ["contracts", "contract", "deals", "deal_count", "enterprise_contract", "customer_count"],
           "default_source": "press_release",
           "default_aggregation": "count",
           "default_window_days": 30
@@ -33,9 +33,16 @@
           "default_aggregation": "sum",
           "default_window_days": 30
         },
+        "filing_mentions": {
+          "display_name": "SEC Filing Mentions",
+          "aliases": ["capex", "infrastructure_investment", "datacenter_investment", "buildout", "lead_times", "capital_expenditure", "investment_mentions", "capex_mentions", "filing_count"],
+          "default_source": "sec",
+          "default_aggregation": "count",
+          "default_window_days": 30
+        },
         "earnings_mentions": {
           "display_name": "Earnings Call Mentions",
-          "aliases": ["earnings", "earnings_call", "mention_count"],
+          "aliases": ["earnings", "earnings_call", "mention_count", "transcript_mentions"],
           "default_source": "earnings_call",
           "default_aggregation": "count",
           "default_window_days": 90
@@ -94,9 +101,16 @@
           "default_aggregation": "count",
           "default_window_days": 7
         },
+        "repo_activity": {
+          "display_name": "Repository Activity",
+          "aliases": ["deployment_guide", "reference_architecture", "sdk_update", "docs_update", "release", "hardware_specs", "deployment_architectures", "commit_activity", "pr_count"],
+          "default_source": "github",
+          "default_aggregation": "count",
+          "default_window_days": 14
+        },
         "sdk_release": {
           "display_name": "SDK Release",
-          "aliases": ["sdk", "library_release", "package_release", "release"],
+          "aliases": ["sdk", "library_release", "package_release", "release", "enterprise_sdk"],
           "default_source": "github",
           "default_aggregation": "count",
           "default_window_days": 14
@@ -110,7 +124,7 @@
         },
         "certification": {
           "display_name": "Certification",
-          "aliases": ["compliance", "audit", "soc2", "iso"],
+          "aliases": ["compliance", "audit", "soc2", "iso", "hipaa", "fedramp"],
           "default_source": "company_blog",
           "default_aggregation": "count",
           "default_window_days": 30
@@ -121,6 +135,13 @@
           "default_source": "docs",
           "default_aggregation": "count",
           "default_window_days": 7
+        },
+        "paper_count": {
+          "display_name": "Paper Count",
+          "aliases": ["papers", "publications", "arxiv_papers", "research_papers"],
+          "default_source": "arxiv",
+          "default_aggregation": "count",
+          "default_window_days": 14
         },
         "enterprise_feature_release": {
           "display_name": "Enterprise Feature Release",
@@ -157,7 +178,7 @@
       "metrics": {
         "job_postings_count": {
           "display_name": "Job Postings Count",
-          "aliases": ["job_postings", "jobs", "hiring", "postings"],
+          "aliases": ["job_postings", "jobs", "hiring", "postings", "ai_integration_roles", "ml_engineer_jobs", "mlops_postings"],
           "default_source": "linkedin",
           "default_aggregation": "count",
           "default_window_days": 14
@@ -171,7 +192,7 @@
         },
         "keyword_frequency": {
           "display_name": "Keyword Frequency",
-          "aliases": ["mentions", "buzz", "frequency", "volume"],
+          "aliases": ["mentions", "buzz", "frequency", "volume", "coverage", "reporting", "discussion_volume", "social_mentions", "mention_count"],
           "default_source": "twitter",
           "default_aggregation": "count",
           "default_window_days": 7
@@ -185,14 +206,14 @@
         },
         "engagement_rate": {
           "display_name": "Engagement Rate",
-          "aliases": ["engagement", "interaction", "reactions"],
+          "aliases": ["engagement", "interaction", "reactions", "likes", "retweets", "shares"],
           "default_source": "twitter",
           "default_aggregation": "mean",
           "default_window_days": 7
         },
         "discussion_volume": {
           "display_name": "Discussion Volume",
-          "aliases": ["discussions", "threads", "comments", "posts"],
+          "aliases": ["discussions", "threads", "comments", "posts", "thread_count", "comment_count", "reaction"],
           "default_source": "hackernews",
           "default_aggregation": "count",
           "default_window_days": 7
@@ -237,14 +258,14 @@
       "metrics": {
         "article_count": {
           "display_name": "Article Count",
-          "aliases": ["articles", "coverage", "stories", "news"],
+          "aliases": ["articles", "coverage", "stories", "news", "number_of_articles", "article_volume", "news_count", "story_count", "press_coverage", "media_mentions"],
           "default_source": "techmeme",
           "default_aggregation": "count",
           "default_window_days": 7
         },
         "headline_mentions": {
           "display_name": "Headline Mentions",
-          "aliases": ["headlines", "front_page"],
+          "aliases": ["headlines", "front_page", "top_stories"],
           "default_source": "techmeme",
           "default_aggregation": "count",
           "default_window_days": 7

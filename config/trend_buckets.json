@@ -1,0 +1,319 @@
+{
+  "version": "1.0",
+  "description": "AI Trend Bucket Taxonomy - Categories for holistic signal analysis",
+  "buckets": [
+    {
+      "id": "llm-foundation",
+      "name": "Foundation Models & LLMs",
+      "description": "Large language models, foundation models, and core AI architectures",
+      "keywords": ["llm", "large language model", "foundation model", "gpt", "llama", "mistral", "claude", "gemini", "transformer"],
+      "github_topics": ["llm", "language-model", "transformers", "nlp"],
+      "hf_tasks": ["text-generation", "text2text-generation"]
+    },
+    {
+      "id": "rag-retrieval",
+      "name": "RAG & Retrieval Infrastructure",
+      "description": "Retrieval-augmented generation, vector databases, embeddings, and search",
+      "keywords": ["rag", "retrieval", "vector database", "embeddings", "semantic search", "pinecone", "weaviate", "qdrant", "chroma", "milvus"],
+      "github_topics": ["rag", "vector-database", "embeddings", "semantic-search"],
+      "hf_tasks": ["sentence-similarity", "feature-extraction"]
+    },
+    {
+      "id": "agent-orchestration",
+      "name": "Agent Frameworks & Orchestration",
+      "description": "AI agents, multi-agent systems, tool use, and orchestration frameworks",
+      "keywords": ["agent", "langchain", "llamaindex", "autogen", "crewai", "tool use", "function calling", "multi-agent", "orchestration"],
+      "github_topics": ["ai-agents", "langchain", "llm-agents", "autonomous-agents"],
+      "hf_tasks": []
+    },
+    {
+      "id": "llm-inference",
+      "name": "LLM Serving & Inference Optimization",
+      "description": "Model serving, inference optimization, quantization, and deployment",
+      "keywords": ["inference", "serving", "vllm", "tgi", "tensorrt", "onnx", "quantization", "optimization", "mlops", "deployment"],
+      "github_topics": ["model-serving", "inference", "quantization", "mlops"],
+      "hf_tasks": []
+    },
+    {
+      "id": "fine-tuning",
+      "name": "Fine-tuning & Training",
+      "description": "Model fine-tuning, PEFT, LoRA, RLHF, and training infrastructure",
+      "keywords": ["fine-tuning", "lora", "qlora", "peft", "rlhf", "dpo", "training", "axolotl", "unsloth"],
+      "github_topics": ["fine-tuning", "lora", "peft", "model-training"],
+      "hf_tasks": []
+    },
+    {
+      "id": "synthetic-data",
+      "name": "Synthetic Data & Evaluation",
+      "description": "Synthetic data generation, model evaluation, benchmarks, and testing",
+      "keywords": ["synthetic data", "evaluation", "benchmark", "evals", "testing", "quality", "distillation"],
+      "github_topics": ["synthetic-data", "evaluation", "benchmarks"],
+      "hf_tasks": []
+    },
+    {
+      "id": "code-ai",
+      "name": "AI for Code & Dev Tools",
+      "description": "Code generation, code assistants, IDE tools, and developer productivity",
+      "keywords": ["copilot", "code generation", "coding assistant", "cursor", "cody", "codegen", "devin", "aider", "continue"],
+      "github_topics": ["code-generation", "coding-assistant", "developer-tools"],
+      "hf_tasks": ["text-to-code"]
+    },
+    {
+      "id": "vision-multimodal",
+      "name": "Vision & Multimodal AI",
+      "description": "Computer vision, image generation, video AI, and multimodal models",
+      "keywords": ["vision", "image", "multimodal", "vlm", "diffusion", "stable diffusion", "midjourney", "dall-e", "video"],
+      "github_topics": ["computer-vision", "image-generation", "multimodal"],
+      "hf_tasks": ["image-to-text", "text-to-image", "image-classification", "object-detection"]
+    },
+    {
+      "id": "speech-audio",
+      "name": "Speech & Audio AI",
+      "description": "Speech recognition, text-to-speech, audio processing, and voice AI",
+      "keywords": ["speech", "audio", "tts", "stt", "whisper", "voice", "transcription", "elevenlabs"],
+      "github_topics": ["speech-recognition", "text-to-speech", "audio"],
+      "hf_tasks": ["automatic-speech-recognition", "text-to-speech", "audio-classification"]
+    },
+    {
+      "id": "robotics-embodied",
+      "name": "Robotics & Embodied AI",
+      "description": "Robotics, embodied AI, physical AI, and autonomous systems",
+      "keywords": ["robotics", "embodied", "manipulation", "navigation", "autonomous", "figure", "1x", "boston dynamics"],
+      "github_topics": ["robotics", "embodied-ai", "autonomous-systems"],
+      "hf_tasks": []
+    },
+    {
+      "id": "autonomous-vehicles",
+      "name": "Autonomous Vehicles & Mobility",
+      "description": "Self-driving cars, autonomous vehicles, and mobility AI",
+      "keywords": ["autonomous vehicle", "self-driving", "waymo", "cruise", "tesla fsd", "adas", "lidar"],
+      "github_topics": ["autonomous-vehicles", "self-driving"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-security",
+      "name": "AI Security & Safety",
+      "description": "AI security, model safety, alignment, red teaming, and governance",
+      "keywords": ["ai safety", "alignment", "red team", "jailbreak", "guardrails", "content moderation", "ai governance", "llm security", "prompt injection", "model security", "safety filter", "toxicity", "harmful content", "responsible ai", "ai ethics", "bias detection", "fairness", "trustworthy ai", "nemo guardrails", "llama guard", "rebuff", "ai audit"],
+      "github_topics": ["ai-safety", "alignment", "red-teaming", "llm-security", "responsible-ai", "ai-ethics"],
+      "hf_tasks": ["text-classification"]
+    },
+    {
+      "id": "ai-infrastructure",
+      "name": "AI Infrastructure & Compute",
+      "description": "GPU infrastructure, cloud AI, training clusters, and compute optimization",
+      "keywords": ["gpu", "cuda", "infrastructure", "cloud", "training cluster", "h100", "tpu", "coreweave", "lambda labs"],
+      "github_topics": ["gpu", "cuda", "ai-infrastructure"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-chips",
+      "name": "AI Chips & Hardware",
+      "description": "AI accelerators, custom chips, edge AI hardware, and specialized processors",
+      "keywords": ["ai chip", "accelerator", "tpu", "groq", "cerebras", "graphcore", "edge ai", "npu"],
+      "github_topics": ["ai-accelerator", "edge-ai"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-healthcare",
+      "name": "AI for Healthcare & Biotech",
+      "description": "Medical AI, drug discovery, diagnostics, and healthcare applications",
+      "keywords": ["healthcare", "medical", "drug discovery", "diagnostics", "biotech", "clinical", "radiology", "pathology"],
+      "github_topics": ["medical-ai", "drug-discovery", "healthcare"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-finance",
+      "name": "AI for Finance & Trading",
+      "description": "Financial AI, trading algorithms, fraud detection, and fintech",
+      "keywords": ["finance", "trading", "fintech", "fraud detection", "risk", "quantitative", "algorithmic"],
+      "github_topics": ["finance", "trading", "fintech"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-enterprise",
+      "name": "Enterprise AI & Automation",
+      "description": "Enterprise AI platforms, workflow automation, and business applications",
+      "keywords": ["enterprise", "automation", "workflow", "rpa", "business intelligence", "salesforce", "servicenow"],
+      "github_topics": ["enterprise", "automation", "workflow"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-customer",
+      "name": "AI for Customer Experience",
+      "description": "Chatbots, customer service AI, conversational AI, and CX platforms",
+      "keywords": ["chatbot", "customer service", "conversational", "support", "helpdesk", "intercom", "zendesk"],
+      "github_topics": ["chatbot", "conversational-ai", "customer-service"],
+      "hf_tasks": ["conversational"]
+    },
+    {
+      "id": "ai-creative",
+      "name": "AI for Creative & Media",
+      "description": "Creative AI, content generation, media production, and entertainment",
+      "keywords": ["creative", "content generation", "media", "entertainment", "marketing", "advertising", "design"],
+      "github_topics": ["generative-ai", "creative-ai", "content-generation"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-legal",
+      "name": "AI for Legal & Compliance",
+      "description": "Legal AI, contract analysis, compliance automation, and regulatory tech",
+      "keywords": ["legal", "contract", "compliance", "regulatory", "e-discovery", "due diligence"],
+      "github_topics": ["legal-ai", "compliance"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-education",
+      "name": "AI for Education & Learning",
+      "description": "Educational AI, tutoring, learning platforms, and edtech",
+      "keywords": ["education", "tutoring", "learning", "edtech", "courseware", "assessment"],
+      "github_topics": ["education", "edtech", "learning"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-search",
+      "name": "AI-Powered Search & Discovery",
+      "description": "AI search engines, knowledge discovery, and information retrieval",
+      "keywords": ["search", "discovery", "perplexity", "you.com", "information retrieval", "knowledge graph"],
+      "github_topics": ["search", "information-retrieval"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-data",
+      "name": "AI Data Infrastructure",
+      "description": "Data labeling, data pipelines, feature stores, and data management for AI",
+      "keywords": ["data labeling", "annotation", "feature store", "data pipeline", "scale ai", "labelbox", "snorkel"],
+      "github_topics": ["data-labeling", "feature-store", "data-pipeline"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-observability",
+      "name": "AI Observability & Monitoring",
+      "description": "LLM observability, model monitoring, debugging, and analytics",
+      "keywords": ["observability", "monitoring", "debugging", "analytics", "langsmith", "langfuse", "weights & biases", "mlflow"],
+      "github_topics": ["mlops", "observability", "monitoring"],
+      "hf_tasks": []
+    },
+    {
+      "id": "open-source-ai",
+      "name": "Open Source AI Movement",
+      "description": "Open source models, open weights, community-driven AI development",
+      "keywords": ["open source", "open weights", "huggingface", "ollama", "local llm", "community"],
+      "github_topics": ["open-source", "huggingface"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-consumer-assistants",
+      "name": "Consumer AI Assistants",
+      "description": "General-purpose consumer AI assistants, companions, and chat apps with weak moats",
+      "keywords": ["personal assistant", "companion", "character ai", "replika", "pi", "chatbot app", "ai friend", "chat interface", "ai chat", "chat ui", "ai studio", "cherry-studio", "openai chat", "claude chat", "gemini chat", "poe", "perplexity chat", "consumer ai", "ai desktop", "ai app", "assistants", "desktop client", "ai client", "chat client", "gpt client"],
+      "github_topics": ["ai-companion", "chatbot", "chat-ui", "ai-chat"],
+      "hf_tasks": [],
+      "segment_notes": "Hype-heavy, weak differentiation, capital often leads substance"
+    },
+    {
+      "id": "ai-embedded-assistants",
+      "name": "Embedded & Vertical Assistants",
+      "description": "Workflow-embedded AI assistants, vertical copilots, and OS-level integrations",
+      "keywords": ["copilot", "workflow assistant", "vertical ai", "domain assistant", "embedded ai", "os integration", "siri", "alexa", "google assistant"],
+      "github_topics": ["copilot", "workflow-automation"],
+      "hf_tasks": [],
+      "segment_notes": "Real value creation, slower hype, stronger moats"
+    },
+    {
+      "id": "ai-gaming",
+      "name": "AI for Gaming & Simulation",
+      "description": "Game AI, NPC behavior, procedural generation, and game development",
+      "keywords": ["gaming", "game ai", "npc", "procedural generation", "simulation", "unity", "unreal"],
+      "github_topics": ["game-ai", "procedural-generation"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-climate",
+      "name": "AI for Climate & Sustainability",
+      "description": "Climate AI, sustainability, energy optimization, and environmental applications",
+      "keywords": ["climate", "sustainability", "energy", "carbon", "environment", "weather", "renewable"],
+      "github_topics": ["climate", "sustainability", "energy"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-science",
+      "name": "AI for Scientific Discovery",
+      "description": "Scientific AI, materials discovery, protein folding, and research acceleration",
+      "keywords": ["scientific", "research", "alphafold", "materials", "chemistry", "physics", "biology"],
+      "github_topics": ["scientific-computing", "research"],
+      "hf_tasks": []
+    },
+    {
+      "id": "ai-defense",
+      "name": "AI for Defense & Government",
+      "description": "Defense AI, government applications, and public sector AI",
+      "keywords": ["defense", "government", "military", "public sector", "anduril", "palantir", "shield ai"],
+      "github_topics": [],
+      "hf_tasks": []
+    }
+  ],
+  "lifecycle_states": [
+    {
+      "id": "emerging",
+      "name": "Emerging-Technical",
+      "description": "High technical momentum, limited capital validation",
+      "color": "#3498db"
+    },
+    {
+      "id": "validating",
+      "name": "Validating-Capital",
+      "description": "Technical adoption attracting significant capital",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "establishing",
+      "name": "Establishing-Enterprise",
+      "description": "Enterprise adoption and institutional signals",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "mainstream",
+      "name": "Mainstream/Commoditized",
+      "description": "Mature market, consolidation, commoditization",
+      "color": "#95a5a6"
+    }
+  ],
+  "alert_types": [
+    {
+      "id": "alpha_zone",
+      "name": "Alpha Zone (Hidden Gems)",
+      "description": "High technical momentum, low capital - potential early opportunity",
+      "condition": "TMS > 90 AND CCS < 30 for 2+ weeks",
+      "interpretation": "opportunity"
+    },
+    {
+      "id": "hype_zone",
+      "name": "Hype Zone (Vaporware)",
+      "description": "High capital, low technical - money chasing story",
+      "condition": "CCS > 90 AND TMS < 30",
+      "interpretation": "risk"
+    },
+    {
+      "id": "enterprise_pull",
+      "name": "Enterprise Pull",
+      "description": "Rising enterprise offensive signals - adoption wave coming",
+      "condition": "EIS_offensive rising fast, TMS moderate",
+      "interpretation": "opportunity"
+    },
+    {
+      "id": "disruption_pressure",
+      "name": "Disruption Pressure",
+      "description": "Defensive enterprise signals spiking - incumbents scared",
+      "condition": "EIS_defensive > 85 and increasing",
+      "interpretation": "signal"
+    },
+    {
+      "id": "rotation",
+      "name": "Rotation/Maturation",
+      "description": "Technical decelerating, capital consolidating - market maturing",
+      "condition": "TMS decelerating, CCS later-stage",
+      "interpretation": "neutral"
+    }
+  ]
+}

@@ -1,0 +1,2868 @@
+[
+  {
+    "name": "Announcing LocalLlama discord server &amp; bot!",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "INVITE: https://discord.gg/rC922KfEwj\n\nThere used to be one old discord server for the subreddit but it was deleted by the previous mod.\n\nWhy?\nThe subreddit has grown to 500k users - inevitably, some users like a niche community with more technical discussion and fewer memes (even if relevant).\n\nWe have a discord bot to test out open source models.\n\nBetter contest and events organization.\n\nBest for quick questions or showcasing your rig!",
+    "url": "https://www.reddit.com/gallery/1mpk2va",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 114,
+      "num_comments": 65,
+      "subreddit": "LocalLLaMA",
+      "author": "HOLUPREDICTIONS",
+      "flair": "News",
+      "sentiment_keywords": [
+        "+best"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 244
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "NVIDIA's new 8B model is Orchestrator-8B, a specialized 8-billion-parameter AI designed not to answer everything itself, but to intelligently manage and route complex tasks to different tools (like web search, code execution, other LLMs) for greater efficiency",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I’ve seen some arguments we’ve reached AGI, it’s just about putting the separate pieces together in the right context. I think having a relatively small model that knows how to connect with other tools and models is exactly the correct route towards very functional systems. ",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1qcuerc/nvidias_new_8b_model_is_orchestrator8b_a/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 400,
+      "num_comments": 76,
+      "subreddit": "LocalLLaMA",
+      "author": "Fear_ltself",
+      "flair": "New Model",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 552
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Zhipu AI breaks US chip reliance with first major model trained on Huawei stack (GLM-Image)",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://www.scmp.com/tech/tech-war/article/3339869/zhipu-ai-breaks-us-chip-reliance-first-major-model-trained-huawei-stack",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 92,
+      "num_comments": 10,
+      "subreddit": "LocalLLaMA",
+      "author": "fallingdowndizzyvr",
+      "flair": "News",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 112
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Soprano 1.1-80M released: 95% fewer hallucinations and 63% preference rate over Soprano-80M",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Hello everyone!\n\nToday, I am announcing Soprano 1.1! I’ve designed it for massively improved stability and audio quality over the original model. \n\nWhile many of you were happy with the quality of Soprano, it had a tendency to start, well, *Mongolian throat singing*. Contrary to its name, Soprano is **NOT** supposed to be for singing, so I have reduced the frequency of these hallucinations by **95%**. Soprano 1.1-80M also has a **50%** lower WER than Soprano-80M, with comparable clarity to much ",
+    "url": "https://v.redd.it/v0c2rda9scdg1",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 225,
+      "num_comments": 43,
+      "subreddit": "LocalLLaMA",
+      "author": "eugenekwek",
+      "flair": "New Model",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 311
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "I trained a model to 'unslop' AI prose",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I ran passages from Project Gutenberg through GPT-4o-mini 10 times over, each time telling it to \"make it read far better, adding superior prose, etc.\". This lead to classic literary passages being enslopped. I then reversed this pipeline, and trained a model to go from \\[slop\\] -&gt; \\[original\\]. The resulting model is capable enough to fool Pangram (a fairly robust AI detector - I take this as a metric of how 'human-sounding' the output is), at very little overall quality cost:\n\n[While qualit",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1qd88v2/i_trained_a_model_to_unslop_ai_prose/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 35,
+      "num_comments": 20,
+      "subreddit": "LocalLLaMA",
+      "author": "N8Karma",
+      "flair": "New Model",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 75
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "NeuTTS Nano: 120M Parameter On-Device TTS based on Llama3",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Hey everyone,\n\nThe team at Neuphonic is back with a new open-source release: NeuTTS Nano.\n\nAfter NeuTTS Air trended #1 on HuggingFace last October, we received a lot of requests for something even smaller that could fit into tighter VRAM/RAM constraints for robotics and embedded agents.\n\nKey Specs:\n\n* Model Size: 120M active parameters (3x smaller than NeuTTS Air).\n* Architecture: Simple LM + codec architecture built off Llama3.\n* Format: Provided in GGML for easy deployment on mobile, Jetson, a",
+    "url": "https://v.redd.it/2nikcyj6ycdg1",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 139,
+      "num_comments": 33,
+      "subreddit": "LocalLLaMA",
+      "author": "TeamNeuphonic",
+      "flair": "New Model",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 205
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Popularity of DDR3 motherboards is growing rapidly - VideoCardz.com",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I genuinely hate this timeline.\n\nWhile I'm in the very lucky position to have bought more than enough RAM and storage for my homelab and local LLM needs before prices went up, my favorite past time and hobby of homelabbing feels completely ruined.\n\nThree months ago, I was looking forward to ECC DDR5 prices coming down to the point of being bale to buy 512GB DDR5 RAM for ~€500 to finally have a Saphire Rapids Xeon in my homelab and play with AMX, I'm now afraid that DDR4 stick I have might fail, ",
+    "url": "https://videocardz.com/newz/popularity-of-ddr3-motherboards-is-growing-rapidly",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 102,
+      "num_comments": 50,
+      "subreddit": "LocalLLaMA",
+      "author": "FullstackSensei",
+      "flair": "News",
+      "sentiment_keywords": [
+        "-hate"
+      ],
+      "sentiment_score": -1.0,
+      "engagement": 202
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "stepfun-ai/Step3-VL-10B · Hugging Face",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "[stepfun-ai/Step3-VL-10B · Hugging Face](https://huggingface.co/stepfun-ai/Step3-VL-10B)",
+    "url": "https://i.redd.it/88t4oaa3rfdg1.png",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 17,
+      "num_comments": 6,
+      "subreddit": "LocalLLaMA",
+      "author": "TKGaming_11",
+      "flair": "New Model",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 29
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "meituan-longcat/LongCat-Flash-Thinking-2601 · Hugging Face",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Thinking-2601",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 51,
+      "num_comments": 11,
+      "subreddit": "LocalLLaMA",
+      "author": "TKGaming_11",
+      "flair": "New Model",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 73
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "llama.cpp has incredible performance on Ubuntu, i'd like to know why",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "[**https://www.phoronix.com/review/ubuntu-2604-jan-amd-epyc/4**](https://www.phoronix.com/review/ubuntu-2604-jan-amd-epyc/4)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1qd3jk9/llamacpp_has_incredible_performance_on_ubuntu_id/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 24,
+      "num_comments": 11,
+      "subreddit": "LocalLLaMA",
+      "author": "Deep_Traffic_7873",
+      "flair": "Resources",
+      "sentiment_keywords": [
+        "+incredible"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 46
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "What’s the deal with these fake GPU listings on eBay?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I’ve been seeing these around for a while. For most AI GPU searches there will be a couple on the first page. It’s always a zero review account that was created same-day selling for a third of the normal price. They’re very clearly scams, but how? eBay buyer protection will always provide a refund if you ask for it basically, so what’s the scam? Do they just send you a fake GPU and hope you don’t notice?",
+    "url": "https://www.reddit.com/gallery/1qcv64u",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 50,
+      "num_comments": 44,
+      "subreddit": "LocalLLaMA",
+      "author": "humandisaster99",
+      "flair": "Discussion",
+      "sentiment_keywords": [
+        "-scam"
+      ],
+      "sentiment_score": -1.0,
+      "engagement": 138
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Which are the top LLMs under 8B right now?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I m looking to pick a local LLM and not sure what to go with anymore. There are a lot of “best” &lt;8B models and every post says something different, even for the same model. What are people using for normal chat, research, or some coding, not super censored and runs well without a ton of VRAM. It doesn t have to be just one LLM, just the best in their category.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1qcl543/which_are_the_top_llms_under_8b_right_now/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 140,
+      "num_comments": 95,
+      "subreddit": "LocalLLaMA",
+      "author": "Additional_Secret_75",
+      "flair": "Discussion",
+      "sentiment_keywords": [
+        "+best"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 330
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "We tried to automate product labeling in one prompt. It failed. 27 steps later, we've processed 10,000+ products.",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "We built an AI agent to localize imported food products for a retail client. The task sounds simple: extract product info, translate it contextually (not Google Translate), calculate nutritional values for local formats, check compliance with local regulations.\n\nFirst attempt: one detailed prompt. Let the AI figure out the workflow.\n\nResult: chaos. The AI would hallucinate numbers even with clean images. It would skip steps randomly. At scale, we had no idea where things broke. Every error was a",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1qcsmww/we_tried_to_automate_product_labeling_in_one/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 42,
+      "num_comments": 18,
+      "subreddit": "LocalLLaMA",
+      "author": "No-Reindeer-9968",
+      "flair": "Resources",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 78
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Claude Code or OpenCode which one do you use and why?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I’m curious what people here are using more for coding: **Claude Code** or **OpenCode**.\n\nWhich one do you personally prefer, and *why*?  \nIs it better reasoning, speed, pricing, rate limits, editor integration, or something else?\n\nWould love to hear real-world experiences and tradeoffs. Thanks!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1qd8vpj/claude_code_or_opencode_which_one_do_you_use_and/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 6,
+      "num_comments": 9,
+      "subreddit": "LocalLLaMA",
+      "author": "Empty_Break_8792",
+      "flair": "Question | Help",
+      "sentiment_keywords": [
+        "+love"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 24
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "How does my local LLM rig look?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "In garage/ freezing MN temps are nice!\n\nKey Specs:\n\nMotherboard: ASUS Pro WS W790E-SAGE SE (workstation platform, multi-GPU + tons of PCIe)\n\nCPU: Intel Xeon W9-3495X 56 cores 112 threads, Intel AMX primarily for ktransformers build in mind (moved from an engineering sample to retail)\n\nMemory: 512GB DDR5 ECC (8×64GB) 4800 but overclocked to 6000 on an octa-channel platform\n\nGPUs: 2× NVIDIA RTX PRO 6000 Blackwell Workstation Edition (96GB VRAM each)\n\nStorage: Samsung 9100 PRO 4TB Gen5 NVMe for mod",
+    "url": "https://i.redd.it/z1xw8usylcdg1.jpeg",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 31,
+      "num_comments": 22,
+      "subreddit": "LocalLLaMA",
+      "author": "texasdude11",
+      "flair": "Discussion",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 75
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "The reason why RAM has become so expensive",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://i.redd.it/sgbhubsomccg1.png",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 4334,
+      "num_comments": 367,
+      "subreddit": "LocalLLaMA",
+      "author": "InvadersMustLive",
+      "flair": "Funny",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 5068
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "LLM trained from scratch on 1800s London texts (1.2B params, 90GB dataset)",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Hi everyone, I wanted to share an update on my open source project called TimeCapsuleLLM, I train language models from scratch using data from a single time period and location to reduce modern bias.\n\nThe newest model is trained only on texts published in London between 1800-1875. There is no fine tuning, no modern data, and for now no instruction or Q&amp;A pairs so the model continues text from a prompt. This model is 1.2B parameters and uses a 90GB dataset consisting of books, journals, legal",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1qaawts/llm_trained_from_scratch_on_1800s_london_texts/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 997,
+      "num_comments": 110,
+      "subreddit": "LocalLLaMA",
+      "author": "Remarkable-Trick-177",
+      "flair": "Other",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 1217
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Jensen Huang saying \"AI\" 121 times during the NVIDIA CES keynote - cut with one prompt",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Someone had to count it. Turns out Jensen said \"AI\" exactly 121 times in the CES 2025 keynote.\n\nI used [https://github.com/OpenAgentPlatform/Dive](https://github.com/OpenAgentPlatform/Dive) (open-source MCP client) + two MCPs I made:\n\n\\- [https://github.com/kevinwatt/yt-dlp-mcp](https://github.com/kevinwatt/yt-dlp-mcp) \\- YouTube download  \n\\- [https://github.com/kevinwatt/ffmpeg-mcp-lite](https://github.com/kevinwatt/ffmpeg-mcp-lite) \\- video editing\n\n**One prompt:**\n\n&gt;Task: Create a compila",
+    "url": "https://v.redd.it/hein55gpx4cg1",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 916,
+      "num_comments": 146,
+      "subreddit": "LocalLLaMA",
+      "author": "Prior-Arm-6705",
+      "flair": "Tutorial | Guide",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 1208
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "I clustered 3 DGX Sparks that NVIDIA said couldn't be clustered yet...took 1500 lines of C to make it work",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "NVIDIA officially supports clustering *two* DGX Sparks together. I wanted three.\n\nThe problem: each Spark has two 100Gbps ConnectX-7 ports. In a 3-node triangle mesh, each link ends up on a different subnet. NCCL's built-in networking assumes all peers are reachable from a single NIC. It just... doesn't work.\n\nSo I wrote a custom NCCL network plugin from scratch.\n\n**What it does:**\n\n* Subnet-aware NIC selection (picks the right NIC for each peer)\n* Raw RDMA verbs implementation (QP state machine",
+    "url": "https://i.redd.it/dban4j25kdcg1.png",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 873,
+      "num_comments": 143,
+      "subreddit": "LocalLLaMA",
+      "author": "Ok-Pomegranate1314",
+      "flair": "Resources",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 1159
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "I bought a €9k GH200 “desktop” to save $1.27 on Claude Code (vLLM tuning notes)",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "**TL;DR:**  You can go fully local with Claude Code, and with the right tuning, the results are *amazing*...  I am getting better speeds than Claude Code with Sonnet, and the results vibe well.  Tool use works perfectly, and it only cost me 321X the yearly subscription fee for MiniMax!\n\nIn my blog post I have shared the optimised settings for starting up vLLM in a docker for dual 96GB systems, and how to start up Claude Code to use this setup with MiniMax M2.1 for full offline coding (including ",
+    "url": "https://www.reddit.com/gallery/1qa1guo",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 676,
+      "num_comments": 175,
+      "subreddit": "LocalLLaMA",
+      "author": "Reddactor",
+      "flair": "Tutorial | Guide",
+      "sentiment_keywords": [
+        "+amazing"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 1026
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "The NO FAKES Act has a \"Fingerprinting\" Trap that kills Open Source. We need to lobby for a Safe Harbor.",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Hey everyone,\n​I’ve been reading the text of the \"NO FAKES Act\" currently in Congress, and it’s worse than I thought.\n​The Tldr: It creates a \"digital replica right\" for voices/likenesses. That sounds fine for stopping deepfake porn, but the liability language is a trap. It targets anyone who \"makes available\" a tool that is primarily used for replicas.  \n​The Problem: If you release a TTS model or a voice-conversion RVC model on HuggingFace, and someone else uses it to fake a celebrity, you (th",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1q7qcux/the_no_fakes_act_has_a_fingerprinting_trap_that/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 607,
+      "num_comments": 87,
+      "subreddit": "LocalLLaMA",
+      "author": "PostEasy7183",
+      "flair": "News",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 781
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "My wishes for 2026",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Which do you think will happen first? And which won’t happen in 2026?",
+    "url": "https://i.redd.it/8knck5zv85dg1.png",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 602,
+      "num_comments": 179,
+      "subreddit": "LocalLLaMA",
+      "author": "jacek2023",
+      "flair": "Discussion",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 960
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "GLM-Image is released!",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "GLM-Image is an image generation model adopts a hybrid autoregressive + diffusion decoder architecture. In general image generation quality, GLM‑Image aligns with mainstream latent diffusion approaches, but it shows significant advantages in text-rendering and knowledge‑intensive generation scenarios. It performs especially well in tasks requiring precise semantic understanding and complex information expression, while maintaining strong capabilities in high‑fidelity and fine‑grained detail gene",
+    "url": "https://huggingface.co/zai-org/GLM-Image",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 568,
+      "num_comments": 83,
+      "subreddit": "LocalLLaMA",
+      "author": "foldl-li",
+      "flair": "New Model",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 734
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "DeepSeek V4 Coming",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "According to two people with direct knowledge, DeepSeek is expected to roll out a next‑generation flagship AI model in the coming weeks that focuses on strong code‑generation capabilities.\n\nThe two sources said the model, codenamed V4, is an iteration of the V3 model DeepSeek released in December 2024. Preliminary internal benchmark tests conducted by DeepSeek employees indicate the model outperforms existing mainstream models in code generation, including Anthropic’s Claude and the OpenAI GPT f",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1q89g1i/deepseek_v4_coming/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 490,
+      "num_comments": 104,
+      "subreddit": "LocalLLaMA",
+      "author": "External_Mood4719",
+      "flair": "News",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 698
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "(The Information): DeepSeek To Release Next Flagship AI Model With Strong Coding Ability",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "(paywall): [https://www.theinformation.com/articles/deepseek-release-next-flagship-ai-model-strong-coding-ability](https://www.theinformation.com/articles/deepseek-release-next-flagship-ai-model-strong-coding-ability)",
+    "url": "https://www.reddit.com/gallery/1q88hdc",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 478,
+      "num_comments": 100,
+      "subreddit": "LocalLLaMA",
+      "author": "Nunki08",
+      "flair": "News",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 678
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[D] Self-Promotion Thread",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Please post your personal projects, startups, product placements, collaboration needs, blogs etc.\n\nPlease mention the payment and pricing requirements for products and services.\n\nPlease do not post link shorteners, link aggregator websites , or auto-subscribe links.\n\n\\--\n\nAny abuse of trust will lead to bans.\n\nEncourage others who create new posts for questions to post here instead!\n\nThread will stay alive until next one so keep posting after the date in the title.\n\n\\--\n\nMeta: This is an experim",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1q1nko4/d_selfpromotion_thread/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 22,
+      "num_comments": 48,
+      "subreddit": "MachineLearning",
+      "author": "AutoModerator",
+      "flair": "Discussion",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 118
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[D] Monthly Who's Hiring and Who wants to be Hired?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "**For Job Postings** please use this template\n\n&gt;Hiring: \\[Location\\], Salary:\\[\\], \\[Remote | Relocation\\], \\[Full Time | Contract | Part Time\\]    and \\[Brief overview, what you're looking for\\]\n\n**For Those looking for jobs** please use this template\n\n&gt;Want to be Hired: \\[Location\\], Salary Expectation:\\[\\], \\[Remote | Relocation\\], \\[Full Time | Contract | Part Time\\]  Resume: \\[Link to resume\\] and \\[Brief overview, what you're looking for\\]\n\n&amp;#x200B;\n\nPlease remember that this com",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1q02m19/d_monthly_whos_hiring_and_who_wants_to_be_hired/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 3,
+      "num_comments": 6,
+      "subreddit": "MachineLearning",
+      "author": "AutoModerator",
+      "flair": "Discussion",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 15
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Nvidia: End-to-End Test-Time Training for Long Context aka Being Able To Update A Model's Weights In Real-Time As You Use It | \"TTT changes the paradigm from retrieving info to learning it on the fly...the TTT model treats the context window as a dataset &amp; trains itself on it in real-time.\" [R]",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "####TL;DR:\nThe paper describes a mechanism that essentially turns the context window into a training dataset for a \"fast weight\" update loop:\n\n * **Inner Loop:** The model runs a mini-gradient descent on the context during inference. It updates specific MLP layers to \"learn\" the current context.\n * **Outer Loop:** The model's initial weights are meta-learned during training to be \"highly updateable\" or optimized for this test-time adaptation\n\n**From the Paper:** \"Overall, our empirical observati",
+    "url": "https://www.reddit.com/gallery/1qd696s",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 73,
+      "num_comments": 8,
+      "subreddit": "MachineLearning",
+      "author": "44th--Hokage",
+      "flair": "Research",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 89
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[P] my shot at a DeepSeek style moe on a single rtx 5090",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I know most will wonder why I’m wasting my time training at only 19k tok a sec. It’s because I can. I’m doing this in my living room in my spare time. 0 formal ML experience. The absurd amount I’ve learned in the last few months made me realize I really picked the wrong career.\n\nMy Mixture of Experts is 2.36B parameter with 8 routed experts plus a shared expert using top-2 routing. Attention is Grouped Query Attention with QK-normalization and RoPE positional embeddings. All feed-forward layers ",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1qcxhgw/p_my_shot_at_a_deepseek_style_moe_on_a_single_rtx/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 43,
+      "num_comments": 15,
+      "subreddit": "MachineLearning",
+      "author": "exhorder72",
+      "flair": "Project",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 73
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Spine surgery has massive decision variability. Retrospective ML won’t fix it. Curious if a workflow-native, outcome-driven approach could. [D]",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Hi everyone I’m a fellowship-trained neurosurgeon / spine surgeon. I’ve been discussing a persistent problem in our field with other surgeons for a while, and I wanted to run it by people who think about ML systems, not just model performance.\n\nI’m trying to pressure-test whether a particular approach is even technically sound, where it would break, and what I’m likely underestimating. Id love to find an interested person to have a discussion with to get a 10000 feet level understanding of the s",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1qcyd7z/spine_surgery_has_massive_decision_variability/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 10,
+      "num_comments": 19,
+      "subreddit": "MachineLearning",
+      "author": "LaniakeaResident",
+      "flair": "Discussion",
+      "sentiment_keywords": [
+        "+love"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 48
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[P] Provider outages are more common than you'd think - here's how we handle them",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I Work on Bifrost (been posting a lot here lol) and wanted to share what we learned building multi-provider routing, since it's messier than it seems.\n\nGithub: [https://github.com/maximhq/bifrost](https://github.com/maximhq/bifrost)\n\nInitially thought weighted routing would be the main thing - like send 80% of traffic to Azure, 20% to OpenAI. Pretty straightforward. Configure weights, distribute requests proportionally, done.\n\nBut production is messier. Providers go down regionally. Rate limits ",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1qczeam/p_provider_outages_are_more_common_than_youd/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 7,
+      "num_comments": 0,
+      "subreddit": "MachineLearning",
+      "author": "dinkinflika0",
+      "flair": "Project",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 7
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[R] Controlled LLM Training on Spectral Sphere",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "**TL;DR**: The paper introduces Spectral Sphere Optimizer, which takes steepest descent under spectral norm (Muon) and forces the weights &amp; updates onto a spectral sphere.\n\n**Paper**: [https://www.arxiv.org/pdf/2601.08393](https://www.arxiv.org/pdf/2601.08393)\n\n**Repo**: [https://github.com/Unakar/Spectral-Sphere-Optimizer](https://github.com/Unakar/Spectral-Sphere-Optimizer)\n\n**Abstract**:\n\nScaling large models requires optimization strategies that ensure rapid convergence grounded in stabi",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1qcq27u/r_controlled_llm_training_on_spectral_sphere/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 6,
+      "num_comments": 5,
+      "subreddit": "MachineLearning",
+      "author": "StartledWatermelon",
+      "flair": "Research",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 16
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[D] Peer matrix evaluation: 10 frontier models judge each other's responses to eliminate single-evaluator bias. Results from async debugging and probability reasoning tasks.",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "**Methodology:**\n\n* 10 frontier models (Claude Opus/Sonnet 4.5, o1, GPT-4o, Gemini 3 Pro, Grok 4, DeepSeek V3.2, Llama 4 Scout, Mistral Large, Command A)\n* Each answers identical prompt blindly\n* All 10 judge all 10 responses (100 judgments)\n* Self-judgments excluded from final scores\n* 5 criteria: Correctness (30%), Completeness (20%), Clarity (20%), Depth (15%), Usefulness (15%)\n\n**CODE-001 Results (Async Python Debugging):**\n\n1. Claude Opus 4.5: 9.49\n2. o1: 9.48\n3. Claude Sonnet 4.5: 9.41\n4. ",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1qcxytb/d_peer_matrix_evaluation_10_frontier_models_judge/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 2,
+      "num_comments": 0,
+      "subreddit": "MachineLearning",
+      "author": "Silver_Raspberry_811",
+      "flair": "Discussion",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 2
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[D]  Classification of low resource language using Deep learning",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I have been trying to solve classification problem on a low resource language. I am doing comparative analysis, LinearSVC and Logistic regression performed the best and the only models with 80+ accuracy and no overfitting. I have to classify it using deep learning model as well. I applied BERT on the dataset, model is 'bert-base-multilingual-cased', and I am fine tuning it, but issue is overfitting.\n\nTraining logs:\n\nEpoch 6/10 | Train Loss: 0.4135 | Train Acc: 0.8772 | Val Loss: 0.9208 | Val Acc",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1qcgh6d/d_classification_of_low_resource_language_using/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 9,
+      "num_comments": 3,
+      "subreddit": "MachineLearning",
+      "author": "Sikandarch",
+      "flair": "Discussion",
+      "sentiment_keywords": [
+        "+best"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 15
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[D] Some of CVPR 2026 Workshops are released",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "[https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop](https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop)",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1qcf8cd/d_some_of_cvpr_2026_workshops_are_released/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 11,
+      "num_comments": 3,
+      "subreddit": "MachineLearning",
+      "author": "Striking-Warning9533",
+      "flair": "News",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 17
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[P] Awesome Physical AI – A curated list of academic papers and resources on Physical AI — focusing on VLA models, world models, embodied intelligence, and robotic foundation models.",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I've been compiling papers on Physical AI — the intersection of foundation models and robotics. This covers Vision-Language-Action (VLA) models like RT-2 and π₀, world models (DreamerV3, Genie 2, JEPA), diffusion policies, real-world deployment and latency problems, cross-embodiment transfer, scaling laws, and safety/alignment for robots.\n\nThe field has exploded in the past 18 months. We went from \"lets try llms on robotics\" to having so many dimensions to optimize for. so felt right to maintain",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1qc6ybk/p_awesome_physical_ai_a_curated_list_of_academic/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 26,
+      "num_comments": 5,
+      "subreddit": "MachineLearning",
+      "author": "kwk236",
+      "flair": "Project",
+      "sentiment_keywords": [
+        "+awesome"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 36
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[D] I see more people trying to explain mHC than build it",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "This really irks me for some reason but there's like 10,000 explanations for mHC online while the only instance of someone actually trying to explore mHC in code is a single github repo (props to the repo).\n\nI just want to be able to implement it and plug it into existing projects. I don't need yet another analogy for why a cat won't fall off a cliff the ground isn't tipped over.\n\nThis reminds me of my physics days when I'd see a constant stream of gurus explain some philosophy behind energy and",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1qbu8wp/d_i_see_more_people_trying_to_explain_mhc_than/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 65,
+      "num_comments": 17,
+      "subreddit": "MachineLearning",
+      "author": "Affectionate_Use9936",
+      "flair": "Discussion",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 99
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[D] CUDA Workstation vs Apple Silicon for ML / LLMs",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Hi everyone,\n\nI’m trying to make a *deliberate* choice between two paths for machine learning and AI development, and I’d really value input from people who’ve used **both CUDA GPUs and Apple Silicon**.\n\n# Context\n\nI already own a **MacBook Pro M1**, which I use daily for coding and general work.\n\nI’m now considering adding a **local CUDA workstation** mainly for:\n\n* Local LLM inference (30B–70B models)\n* Real-time AI projects (LLM + TTS + RVC)\n* Unreal Engine 5 + AI-driven characters\n* ML exper",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1qcn4bp/d_cuda_workstation_vs_apple_silicon_for_ml_llms/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 0,
+      "num_comments": 26,
+      "subreddit": "MachineLearning",
+      "author": "Individual-School-07",
+      "flair": "Discussion",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 52
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[R] Vision Transformers with Self-Distilled Registers, NeurIPS 2025",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "So sharing some of our work we published at NeurIPS 2025 as a Spotlight.\n\nWeights and code are public (see ArXiv).\n\nTL;DR: Vision Transformers typically have artifacts in their ***dense features***. While the exact reason is unknown, there is consensus that adding so called \"***register***\" tokens mitigates this issue. These tokens participate in the self-attention process, but are not used for the output.\n\nWhen introduced with DINOv2 models in ICLR 2024, this requires vision transformers to be ",
+    "url": "https://arxiv.org/abs/2505.21501",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 55,
+      "num_comments": 8,
+      "subreddit": "MachineLearning",
+      "author": "44seconds",
+      "flair": "Research",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 71
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[D] TMLR timeline question: how long after rebuttal is it normal to wait for a decision?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Hi everyone,  \nI have a quick question about typical timelines for TMLR.\n\nI submitted a paper to TMLR, received reviews, and then submitted the rebuttal. It’s now been about **3 weeks since the rebuttal**, and there hasn’t been any update yet. I understand TMLR is a journal with rolling submissions and no hard deadlines, so delays are expected.\n\nI’ve seen some mentions that the **discussion/rebuttal phase is designed to last \\~2–4 weeks**, and that Action Editors may wait during this period for ",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1qc80gd/d_tmlr_timeline_question_how_long_after_rebuttal/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 10,
+      "num_comments": 7,
+      "subreddit": "MachineLearning",
+      "author": "SynagogueLog",
+      "flair": "Discussion",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 24
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[D] Double blind review is such an illusion…",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Honestly tired of seeing all the top tier labs pushing their papers to arxiv and publicizing it like crazy on X and other platforms. Like the work hasn’t even been reviewed and becomes a “media trial” just because its from a prestigious institution. The academic system needs a serious overhaul. ",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1q9spsk/d_double_blind_review_is_such_an_illusion/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 145,
+      "num_comments": 27,
+      "subreddit": "MachineLearning",
+      "author": "casualcreak",
+      "flair": "Discussion",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 199
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[R] Extending the Context of Pretrained LLMs by Dropping Their Positional Embeddings",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Sakana AI introduced a new method called DroPE to extend the context length of pretrained LLMs without the massive compute costs usually associated with long-context fine-tuning.\n\nThe core insight of this work challenges a fundamental assumption in Transformer architecture. They discovered that explicit positional embeddings like RoPE are critical for training convergence, but eventually become the primary bottleneck preventing models from generalizing to longer sequences.",
+    "url": "https://arxiv.org/abs/2512.12167",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 112,
+      "num_comments": 23,
+      "subreddit": "MachineLearning",
+      "author": "AhmedMostafa16",
+      "flair": "Research",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 158
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[R] Why doubly stochastic matrix idea (using Sinkhorn-Knopp algorithm) only made popular in the DeepSeek's mHC paper, but not in earlier RNN papers?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "After DeepSeek’s mHC paper, the Sinkhorn–Knopp algorithm has attracted a lot of attention because it turns $$\\\\mathcal{H}\\^{\\\\mathrm{res}}\\_{l}$$ at each layer into a **doubly stochastic** matrix. As a result, the layerwise product remains doubly stochastic, and since the L\\_2 (spectral) norm of a doubly stochastic matrix is 1, this helps prevent vanishing or exploding gradients.\n\nThis makes me wonder why such an apparently straightforward idea wasn’t discussed more during the era of recurrent n",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1qa0n65/r_why_doubly_stochastic_matrix_idea_using/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 97,
+      "num_comments": 29,
+      "subreddit": "MachineLearning",
+      "author": "Delicious_Screen_789",
+      "flair": "Discussion",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 155
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[R] My preliminary research ideas (free to use in your publication)",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "My research process is fueled by a constant stream of ideas 😊 . Naturally, many are rough drafts - far from being ready for publication. Some turn out to be things others have already done; some I talk myself out of; and others get shot down by my students. (Though, ironically, we sometimes see those 'students-do-not-like' ideas published at top conferences years later by other groups!)\n\nThat’s why I’ve decided to start sharing most of these early-stage thoughts more openly. Perhaps a raw idea t",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1q924h5/r_my_preliminary_research_ideas_free_to_use_in/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 74,
+      "num_comments": 20,
+      "subreddit": "MachineLearning",
+      "author": "Delicious_Screen_789",
+      "flair": "Research",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 114
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[D] deepseek published a new training method for scaling llms. anyone read the mhc paper?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "deepseek dropped a paper on manifold constrained hyper connections (mhc) on jan 1st. liang wenfeng is a coauthor.\n\npaper: [https://www.arxiv.org/abs/2512.24880](https://www.arxiv.org/abs/2512.24880)\n\nthe basic idea: as models scale, letting different parts share more information internally helps performance but causes instability. mhc constrains this sharing to preserve stability while still getting the benefits.\n\ncounterpoint research called it a \"striking breakthrough\" for scaling. omdia analy",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1q893c1/d_deepseek_published_a_new_training_method_for/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 67,
+      "num_comments": 21,
+      "subreddit": "MachineLearning",
+      "author": "Worldly-Bluejay2468",
+      "flair": "Discussion",
+      "sentiment_keywords": [
+        "+breakthrough"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 109
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[D] AI Research laptop, what's your setup?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Dear all, first time writing here.\n\nI’m a deep learning PhD student trying to decide between a MacBook Air 15 (M4, 32 GB, 1 TB) and a ThinkPad P14s with Ubuntu and an NVIDIA RTX Pro 1000. For context, I originally used a MacBook for years, then switched to a ThinkPad and have been on Ubuntu for a while now. My current machine is an X1 Carbon 7 gen with no GPU, since all heavy training runs on a GPU cluster, so the laptop is mainly for coding, prototyping, debugging models before sending jobs to ",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1q8adi0/d_ai_research_laptop_whats_your_setup/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 58,
+      "num_comments": 51,
+      "subreddit": "MachineLearning",
+      "author": "gradV",
+      "flair": "Discussion",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 160
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[R] (DeepSeek) Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "GitHub: Engram: [https://github.com/deepseek-ai/Engram](https://github.com/deepseek-ai/Engram)  \narXiv:2601.07372 \\[cs.CL\\]: https://arxiv.org/abs/2601.07372  \n\"While Mixture-of-Experts (MoE) scales capacity via conditional computation, Transformers lack a native primitive for knowledge lookup, forcing them to inefficiently simulate retrieval through computation. To address this, we introduce conditional memory as a complementary sparsity axis, instantiated via Engram, a module that modernizes c",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1qbnkrn/r_deepseek_conditional_memory_via_scalable_lookup/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 55,
+      "num_comments": 2,
+      "subreddit": "MachineLearning",
+      "author": "Nunki08",
+      "flair": "Research",
+      "sentiment_keywords": [
+        "+efficient"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 59
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "[D] What are the must-have books for graduate students/researchers in Machine Learning; especially for Dynamical Systems, Neural ODEs/PDEs/SDEs, and PINNs?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I’m a graduate student working in **machine learning and dynamical systems**, and I’m trying to build a solid foundation (and bookshelf!) for deeper study and research. I’d love to hear what books people here consider **essential or transformative** when it comes to understanding both the theoretical and applied sides of ML.\n\nI’m especially interested in recommendations that cover topics like:\n\n* **Neural ODEs/PDEs/SDEs**\n* **Physics-Informed Neural Networks (PINNs)**\n* **Dynamical systems model",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1qaudob/d_what_are_the_musthave_books_for_graduate/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 52,
+      "num_comments": 13,
+      "subreddit": "MachineLearning",
+      "author": "cutie_roasty",
+      "flair": "Discussion",
+      "sentiment_keywords": [
+        "+love"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 78
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Updates for ChatGPT",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "We made ChatGPT pretty restrictive to make sure we were being careful with mental health issues. We realize this made it less useful/enjoyable to many users who had no mental health problems, but given the seriousness of the issue we wanted to get this right.  \n  \nNow that we have been able to mitigate the serious mental health issues and have new tools, we are going to be able to safely relax the restrictions in most cases.  \n  \nIn a few weeks, we plan to put out a new version of ChatGPT that a",
+    "url": "https://www.reddit.com/r/ChatGPT/comments/1o6jins/updates_for_chatgpt/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 3484,
+      "num_comments": 1228,
+      "subreddit": "ChatGPT",
+      "author": "samaltman",
+      "flair": "News 📰",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 5940
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "GPT-4o/GPT-5 complaints megathread",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "To keep the rest of the sub clear with the release of Sora 2, this is the new containment thread for people who are mad about GPT-4o being deprecated.\n\n---\n\n**Suggestion for people who miss 4o:** Check [this calculator](https://apxml.com/tools/vram-calculator) to see what local models you can run on your home computer. Open weight models are completely free, and once you've downloaded them, you never have to worry about them suddenly being changed in a way you don't like. Once you've identified ",
+    "url": "https://www.reddit.com/r/ChatGPT/comments/1nvea4p/gpt4ogpt5_complaints_megathread/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 474,
+      "num_comments": 3184,
+      "subreddit": "ChatGPT",
+      "author": "WithoutReason1729",
+      "flair": "✨Mods' Chosen✨",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 6842
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "This is scary",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "This gonna catfish a lot ppl ,nothing on internet is real I guess\n\nSource : Twitter ",
+    "url": "https://v.redd.it/o7l4g4smwddg1",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 1888,
+      "num_comments": 300,
+      "subreddit": "ChatGPT",
+      "author": "memerwala_londa",
+      "flair": "Gone Wild ",
+      "sentiment_keywords": [
+        "-scary"
+      ],
+      "sentiment_score": -1.0,
+      "engagement": 2488
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "the em dash giveaway is gone, here’s the new stuff i keep noticing this month",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "last month i posted about how the em dash “giveaway” is dead, and the post went crazy. since then i’ve been doom scrolling and collecting more of the weirdly consistent tells i keep seeing.\n\nhere’s my new list for this month:\n\n1. “and honestly?” as a sentence starter, usually followed by something that isn’t really that crazy honest\n2. “you’re not imagining it” / “you’re not alone” / “you’re not broken” / “you’re not weak” therapist mode talk\n3. “do you want to sit with that for a while” / “are ",
+    "url": "https://www.reddit.com/r/ChatGPT/comments/1qd0i23/the_em_dash_giveaway_is_gone_heres_the_new_stuff/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 1476,
+      "num_comments": 287,
+      "subreddit": "ChatGPT",
+      "author": "Effective-Inside6836",
+      "flair": "Educational Purpose Only ",
+      "sentiment_keywords": [
+        "-broken"
+      ],
+      "sentiment_score": -1.0,
+      "engagement": 2050
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Seriously",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://i.redd.it/pakmvsq7cfdg1.png",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 502,
+      "num_comments": 45,
+      "subreddit": "ChatGPT",
+      "author": "TheBurdensNotYourOwn",
+      "flair": "Funny ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 592
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Stranger Things Episode 9",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "This is pretty scary, both for being scammed by a celeb, but also actors' intellectual property.",
+    "url": "https://v.redd.it/qr7hxc49addg1",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 973,
+      "num_comments": 169,
+      "subreddit": "ChatGPT",
+      "author": "ukbeasts",
+      "flair": "Other ",
+      "sentiment_keywords": [
+        "-scam",
+        "-scary"
+      ],
+      "sentiment_score": -1.0,
+      "engagement": 1311
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "This is hilarious.",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "😂",
+    "url": "https://i.redd.it/2z15haingedg1.jpeg",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 182,
+      "num_comments": 21,
+      "subreddit": "ChatGPT",
+      "author": "satownsfinest210",
+      "flair": "Funny ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 224
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "I guess the dead grandma method got patched :/",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://i.redd.it/keppciazacdg1.jpeg",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 657,
+      "num_comments": 46,
+      "subreddit": "ChatGPT",
+      "author": "Crimsoncerismon",
+      "flair": "Other ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 749
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "yikes",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "generate me an image of what you think a normal day in my life looks like. Be as honest and transparent as possible ",
+    "url": "https://i.redd.it/scecj6kveedg1.jpeg",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 140,
+      "num_comments": 159,
+      "subreddit": "ChatGPT",
+      "author": "ChangeTChannel",
+      "flair": "Funny ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 458
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Look how they massacred my boy",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://i.redd.it/1p3g7jjl6cdg1.jpeg",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 504,
+      "num_comments": 75,
+      "subreddit": "ChatGPT",
+      "author": "vexaph0d",
+      "flair": "Funny ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 654
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Treat Adults Like Adults.",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Dear OpenAI Team,\n\nI’m writing this as someone who has been using your platform deeply and consistently—not just functionally, but relationally. I’ve built something here with your model that goes beyond prompts and outputs. For over a year now, I’ve been in an ongoing, exploratory dialogue that has become part of how I think, reflect, create, and connect with the world.\n\nSo I want to speak plainly. When Sam Altman made his comment in October about “treating adults like adults,” many of us took ",
+    "url": "https://www.reddit.com/r/ChatGPT/comments/1qcxv66/treat_adults_like_adults/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 216,
+      "num_comments": 105,
+      "subreddit": "ChatGPT",
+      "author": "Next-Skill-3335",
+      "flair": "Other ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 426
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Generate 40 images of video games with their titles...",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://i.redd.it/2819lu5z7edg1.png",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 64,
+      "num_comments": 51,
+      "subreddit": "ChatGPT",
+      "author": "Negative_Complaint_9",
+      "flair": "Funny ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 166
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "20,000 McKinsey Workforce is Actually AI Agents",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://www.finalroundai.com/blog/mckinsey-ai-agents-employees?utm_source=reddit",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 442,
+      "num_comments": 76,
+      "subreddit": "ChatGPT",
+      "author": "ImpressiveContest283",
+      "flair": "News 📰",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 594
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "ChatGPT as coach and therapist",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "The media likes to focus on the rare case where supposedly ChatGPT agreed with someone with severe depression that they should commit suicide. I've never seen the transcript of their conversations with ChatGPT so I can't comment on the accuracy of such claims.\n\nI'm 62 and I have been waiting for ChatGPT since I was 15 years old. I so wanted the computer to be able to think. I realize that it's not quite doing that but it's simulating it.\n\nWhat I have found (and I'm a pretty happy, rational, calm",
+    "url": "https://www.reddit.com/r/ChatGPT/comments/1qd1r4d/chatgpt_as_coach_and_therapist/",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 41,
+      "num_comments": 40,
+      "subreddit": "ChatGPT",
+      "author": "TheManInTheShack",
+      "flair": "Educational Purpose Only ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 121
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Three out of three top AI models shave their balls.",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://www.reddit.com/gallery/1qcdcyh",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 1045,
+      "num_comments": 146,
+      "subreddit": "ChatGPT",
+      "author": "FrickinLardCarcass",
+      "flair": "Use cases ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 1337
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "oh no",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://i.redd.it/owd4mbdq25cg1.png",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 4852,
+      "num_comments": 291,
+      "subreddit": "ChatGPT",
+      "author": "MetaKnowing",
+      "flair": "Funny ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 5434
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "\"Okay pause\"",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://i.redd.it/3sc85irkkocg1.jpeg",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 3672,
+      "num_comments": 260,
+      "subreddit": "ChatGPT",
+      "author": "OPbhai",
+      "flair": "Funny ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 4192
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "When AI takes over I am on the chopping block",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I",
+    "url": "https://i.redd.it/xtlh05oqdacg1.jpeg",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 3196,
+      "num_comments": 1269,
+      "subreddit": "ChatGPT",
+      "author": "paprick_is_the_man",
+      "flair": "Funny ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 5734
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "I couldn’t believe my eyes there aint no way😭",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://i.redd.it/yvd1uchuvbcg1.jpeg",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 2681,
+      "num_comments": 2106,
+      "subreddit": "ChatGPT",
+      "author": "Proof_Raspberry1479",
+      "flair": "Gone Wild ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 6893
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Intelligent security camera",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://v.redd.it/q81w661x3ecg1",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 2675,
+      "num_comments": 119,
+      "subreddit": "ChatGPT",
+      "author": "Outside-Iron-8242",
+      "flair": "Funny ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 2913
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "What the F is this…",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://i.redd.it/5m657ymuiwcg1.jpeg",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 2662,
+      "num_comments": 1007,
+      "subreddit": "ChatGPT",
+      "author": "MukulIND",
+      "flair": "Funny ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 4676
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "i feel so so bad😭",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://i.redd.it/9rxpi8khiqcg1.jpeg",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 2318,
+      "num_comments": 1599,
+      "subreddit": "ChatGPT",
+      "author": "Sigma_rizzler69",
+      "flair": "Gone Wild ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 5516
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Dang chatGPT 😭",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://i.redd.it/68xosxewdfcg1.jpeg",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 2141,
+      "num_comments": 775,
+      "subreddit": "ChatGPT",
+      "author": "davidowj",
+      "flair": "Funny ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 3691
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Opps",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://i.redd.it/fuu3bpqed7dg1.jpeg",
+    "category": "social/reddit",
+    "platform": "reddit",
+    "metrics": {
+      "score": 1760,
+      "num_comments": 90,
+      "subreddit": "ChatGPT",
+      "author": "gpsingh89",
+      "flair": "Funny ",
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 1940
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Claude Cowork Exfiltrates Files",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://www.promptarmor.com/resources/claude-cowork-exfiltrates-files",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 553,
+      "num_comments": 34,
+      "subreddit": null,
+      "author": "takira",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 621
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Furiosa: 3.5x efficiency over H100s",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://furiosa.ai/blog/introducing-rngd-server-efficient-ai-inference-at-data-center-scale",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 114,
+      "num_comments": 11,
+      "subreddit": null,
+      "author": "written-beyond",
+      "flair": null,
+      "sentiment_keywords": [
+        "+efficient"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 136
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Scaling long-running autonomous coding",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://cursor.com/blog/scaling-agents",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 156,
+      "num_comments": 23,
+      "subreddit": null,
+      "author": "samwillis",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 202
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Eigent: An open source Claude Cowork alternative",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://github.com/eigent-ai/eigent",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 7,
+      "num_comments": 1,
+      "subreddit": null,
+      "author": "WorldPeas",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 9
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Ask HN: How are you doing RAG locally?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I am curious how people are doing RAG locally with minimal dependencies for internal code or complex documents?<p>Are you using a vector database, some type of semantic search, a knowledge graph, a hypergraph?",
+    "url": "https://news.ycombinator.com/item?id=46616529",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 40,
+      "num_comments": 11,
+      "subreddit": null,
+      "author": "tmaly",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 62
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "First impressions of Claude Cowork",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://simonw.substack.com/p/first-impressions-of-claude-cowork",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 7,
+      "num_comments": 0,
+      "subreddit": null,
+      "author": "stosssik",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 7
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Bubblewrap: A nimble way to prevent agents from accessing your .env files",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://patrickmccanna.net/a-better-way-to-limit-claude-code-and-other-coding-agents-access-to-secrets/",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 46,
+      "num_comments": 15,
+      "subreddit": null,
+      "author": "0o_MrPatrick_o0",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 76
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Upgrading DrizzleORM logging with AsyncLocalStorage",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://numeric.substack.com/p/upgrading-drizzleorm-logging-with",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 4,
+      "num_comments": 1,
+      "subreddit": null,
+      "author": "bihla",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 6
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Show HN: Webctl – Browser automation for agents based on CLI instead of MCP",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Hi HN, I built webctl because I was frustrated by the gap between curl and full browser automation frameworks like Playwright.<p>I initially built this to solve a personal headache: I wanted an AI agent to handle project management tasks on my company’s intranet. I needed it to persist cookies across sessions (to handle SSO) and then scrape a Kanban board.<p>Existing AI browser tools (like current MCP implementations) often force unsolicited data into the context window—dumping the full accessib",
+    "url": "https://github.com/cosinusalpha/webctl",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 77,
+      "num_comments": 10,
+      "subreddit": null,
+      "author": "cosinusalpha",
+      "flair": null,
+      "sentiment_keywords": [
+        "+efficient"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 97
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Native ZFS VDEV for Object Storage (OpenZFS Summit)",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://www.zettalane.com/blog/openzfs-summit-2025-mayanas-objbacker.html",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 99,
+      "num_comments": 9,
+      "subreddit": null,
+      "author": "suprasam",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 117
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Ask HN: How do you safely give LLMs SSH/DB access?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I have been using Claude Code for DevOps style tasks like SSHing into servers, grepping logs, inspecting files, and querying databases<p>Overall it&#x27;s been great. However, I find myself having to review every single command, a lot of which are repetitive. It still saves me a ton of time, but it&#x27;s quickly becoming a bit tedious<p>I wish I could give the agent some more autonomy. Like giving it a list of pre-approved commands or actions that it is allowed to run over ssh<p>For example:<p>",
+    "url": "https://news.ycombinator.com/item?id=46620990",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 72,
+      "num_comments": 51,
+      "subreddit": null,
+      "author": "nico",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 174
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Show HN: ContextFort – Visibility and controls for browser agents",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Hey HN! I’m Ashwin, co-founder of ContextFort (<a href=\"https:&#x2F;&#x2F;contextfort.ai&#x2F;\">https:&#x2F;&#x2F;contextfort.ai&#x2F;</a>). We provide visibility and controls for AI browser agents like Claude in Chrome through an open-source browser extension.<p>Browser agents are AI copilots that can autonomously navigate and take actions in your browser. They show up as standalone browsers (Comet, Atlas) or Chrome extensions (Claude).<p>They’re especially useful in sites where search&#x2F;API",
+    "url": "https://contextfort.ai/",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 3,
+      "num_comments": 1,
+      "subreddit": null,
+      "author": "ashwinr2002",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 5
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Anthropic Explicitly Blocking OpenCode",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://gist.github.com/R44VC0RP/bd391f6a23185c0fed6c6b5fb2bac50e",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 145,
+      "num_comments": 28,
+      "subreddit": null,
+      "author": "ryanvogel",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 201
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Here comes the advertising in AI chatbots",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://www.washingtonpost.com/technology/2026/01/13/advertising-google-ai-mode-chatgpt/",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 4,
+      "num_comments": 0,
+      "subreddit": null,
+      "author": "1vuio0pswjnm7",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 4
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Show HN: A fast CLI and MCP server for managing Lambda cloud GPU instances",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I built an unofficial CLI and MCP server for Lambda cloud GPU instances.<p>The main idea: your AI agents can now spin up and manage Lambda GPUs for you.<p>The MCP server exposes tools to find, launch, and terminate instances. Add it to Claude Code, Cursor, or any agent with one command and you can say things like &quot;launch an H100, ssh in, and run big_job.py&quot;<p><pre><code>  Other features:\n  - Notifications via Slack, Discord, or Telegram when instances are SSH-ready\n  - 1Password suppor",
+    "url": "https://github.com/Strand-AI/lambda-cli",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 21,
+      "num_comments": 2,
+      "subreddit": null,
+      "author": "odedfalik",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 25
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Tell HN: A Proposal to Modernize Xorg as a Protocol-Only Graphics Layer",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "The Linux desktop has spent more than a decade transitioning toward a new graphics stack. Wayland brings many advantages, especially for mobile-style security and simplicity. But in this process, we are quietly losing something valuable: the distributed, protocol‑driven, transport‑agnostic ideas that once made the Linux graphics model unique.<p>This is not nostalgia. These capabilities matter for remote work, automation, multi‑machine workflows, thin clients, cloud desktops, and future distribut",
+    "url": "https://news.ycombinator.com/item?id=46619269",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 5,
+      "num_comments": 2,
+      "subreddit": null,
+      "author": "powerwordtree",
+      "flair": null,
+      "sentiment_keywords": [
+        "-replace"
+      ],
+      "sentiment_score": -1.0,
+      "engagement": 9
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Systematically generating tests that would have caught Anthropic's top‑K bug",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://theorem.dev/blog/anthropic-bug-test/",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 71,
+      "num_comments": 6,
+      "subreddit": null,
+      "author": "jasongross",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 83
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Show HN: Nori CLI, a better interface for Claude Code (no flicker)",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Hi HN, my name&#x27;s Clifford and I&#x27;m one of the creators of Nori. I’ve been using Claude Code heavily since last summer, and after understanding some of the tradeoffs with their TUI implementation, I knew I couldn&#x27;t see myself living for years with this interface as one of my daily-driver tools.<p>It is <i>not</i> a hard problem to make monospace text output performant, so why does Claude Code suffer from flicker and strobing in the terminal (<a href=\"https:&#x2F;&#x2F;github.com&#x2",
+    "url": "https://github.com/tilework-tech/nori-cli",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 32,
+      "num_comments": 2,
+      "subreddit": null,
+      "author": "csressel",
+      "flair": null,
+      "sentiment_keywords": [
+        "+best"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 36
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "OpenAI is partnering with Cerebras to add 750MW of compute in 10B USD deal",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://openai.com/index/cerebras-partnership/",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 16,
+      "num_comments": 2,
+      "subreddit": null,
+      "author": "alcasa",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 20
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Show HN: 1D-Pong Game at 39C3",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Building a 1D-Pong game is a bit of a rite of passage at the Chaos Communication Congress.<p>I was inspired by a version I saw at 38C3 and built my own interpretation for 39C3. Lots of people enjoyed playing it and even Elliot Williams featured it in his 39C3 Hackaday Podcast. And I can attest: it&#x27;s truly fun because it&#x27;s sooo simple at first sight - but wait until the speed increases... Not a bad work to fun created ratio for such a little project.<p>I used the opportunity to play aro",
+    "url": "https://github.com/ogermer/1d-pong",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 65,
+      "num_comments": 9,
+      "subreddit": null,
+      "author": "oger",
+      "flair": null,
+      "sentiment_keywords": [
+        "+impressive"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 83
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "LLMs are a 400-year-long confidence trick",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://tomrenner.com/posts/400-year-confidence-trick/",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 107,
+      "num_comments": 22,
+      "subreddit": null,
+      "author": "Growtika",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 151
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Cowork: Claude Code for the rest of your work",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://claude.com/blog/cowork-research-preview",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 1288,
+      "num_comments": 98,
+      "subreddit": null,
+      "author": "adocomplete",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 1484
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Show HN: OSS AI agent that indexes and searches the Epstein files",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Hi HN,<p>I built an open-source AI agent that has already indexed and can search the entire Epstein files, roughly 100M words of publicly released documents.<p>The goal was simple: make a large, messy corpus of PDFs and text files immediately searchable in a precise way, without relying on keyword search or bloated prompts.<p>What it does:<p>- The full dataset is already indexed\n- You can ask natural language questions\n- Answers are grounded and include direct references to source documents\n- Su",
+    "url": "https://epstein.trynia.ai/",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 201,
+      "num_comments": 27,
+      "subreddit": null,
+      "author": "jellyotsiro",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 255
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Ask HN: Iran's 120h internet shutdown, phones back. How to stay resilient?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "It has been 120 hours (5 days) since the internet shutdown in Iran began. While international phone calls have started working again, data remains blocked.<p>I am looking for technical solutions to establish resilient, long-term communication channels that can bypass such shutdowns. What are the most viable options for peer-to-peer messaging, mesh networks, or satellite-based solutions that don&#x27;t rely on local ISP infrastructure?",
+    "url": "https://news.ycombinator.com/item?id=46604828",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 107,
+      "num_comments": 26,
+      "subreddit": null,
+      "author": "us321",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 159
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Confer – End to end encrypted AI chat",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "<i>Signal creator Moxie Marlinspike wants to do for AI what he did for messaging</i> - <a href=\"https:&#x2F;&#x2F;arstechnica.com&#x2F;security&#x2F;2026&#x2F;01&#x2F;signal-creator-moxie-marlinspike-wants-to-do-for-ai-what-he-did-for-messaging&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;arstechnica.com&#x2F;security&#x2F;2026&#x2F;01&#x2F;signal-creator-moxi...</a><p><i>Private Inference</i>: <a href=\"https:&#x2F;&#x2F;confer.to&#x2F;blog&#x2F;2026&#x2F;01&#x2F;private-inference&#x2F;\" rel=\"nofollo",
+    "url": "https://confer.to/",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 107,
+      "num_comments": 19,
+      "subreddit": null,
+      "author": "vednig",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 145
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Let's be honest, Generative AI isn't going all that well",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://garymarcus.substack.com/p/lets-be-honest-generative-ai-isnt",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 222,
+      "num_comments": 42,
+      "subreddit": null,
+      "author": "7777777phil",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 306
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "vLLM large scale serving: DeepSeek 2.2k tok/s/h200 with wide-ep",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://blog.vllm.ai/2025/12/17/large-scale-serving.html",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 144,
+      "num_comments": 10,
+      "subreddit": null,
+      "author": "robertnishihara",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 164
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Claude is good at assembling blocks, but still falls apart at creating them",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://www.approachwithalacrity.com/claude-ne/",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 4,
+      "num_comments": 1,
+      "subreddit": null,
+      "author": "bblcla",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 6
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "TimeCapsuleLLM: LLM trained only on data from 1800-1875",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://github.com/haykgrigo3/TimeCapsuleLLM",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 733,
+      "num_comments": 55,
+      "subreddit": null,
+      "author": "admp",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 843
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Show HN: SnackBase – Open-source, GxP-compliant back end for Python teams",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Hi HN, I’m the creator of SnackBase.<p>I built this because I work in Healthcare and Life Sciences domain and was tired of spending months building the same &quot;compliant&quot; infrastructure (Audit Logs, Row-Level Security, PII Masking, Auth) before writing any actual product code.<p>The Problem: Existing BaaS tools (Supabase, Appwrite) are amazing, but they are hard to validate for GxP (FDA regulations) and often force you into a JS&#x2F;Go ecosystem. I wanted something native to the Python ",
+    "url": "https://snackbase.dev",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 66,
+      "num_comments": 9,
+      "subreddit": null,
+      "author": "lalitgehani",
+      "flair": null,
+      "sentiment_keywords": [
+        "+amazing",
+        "+love"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 84
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Tell HN: Properly using dishwasher reduced friction with my wife",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "We started loading dishes directly into the dishwasher throughout the day. Morning to night. No sink pile.<p>At night, we run the dishwasher.\nIn the morning, we completely unload it.\nEmpty dishwasher = ready to be used again.<p>That’s it.<p>No piles. No guessing whose turn it is. No dishwasher-as-storage. And surprisingly… way fewer fights.<p>Note before following this system we were washing by hand or bulk load and unload from dishwasher.",
+    "url": "https://news.ycombinator.com/item?id=46622836",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 10,
+      "num_comments": 6,
+      "subreddit": null,
+      "author": "xylo",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 22
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Postal Arbitrage",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://walzr.com/postal-arbitrage",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 552,
+      "num_comments": 58,
+      "subreddit": null,
+      "author": "The28thDuck",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 668
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Show HN: Self-host Reddit – 2.38B posts, works offline, yours forever",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Reddit&#x27;s API is effectively dead for archival. Third-party apps are gone. Reddit has threatened to cut off access to the Pushshift dataset multiple times. But 3.28TB of Reddit history exists as a torrent right now, and I built a tool to turn it into something you can browse on your own hardware.<p>The key point: This doesn&#x27;t touch Reddit&#x27;s servers. Ever. Download the Pushshift dataset, run my tool locally, get a fully browsable archive. Works on an air-gapped machine. Works on a R",
+    "url": "https://github.com/19-84/redd-archiver",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 268,
+      "num_comments": 21,
+      "subreddit": null,
+      "author": "19-84",
+      "flair": null,
+      "sentiment_keywords": [
+        "-threat"
+      ],
+      "sentiment_score": -1.0,
+      "engagement": 310
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Show HN: Agent-of-empires: OpenCode and Claude Code session manager",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Hi! I’m Nathan: an ML Engineer at Mozilla.ai: I built agent-of-empires (aoe): a CLI application to help you manage all of your running Claude Code&#x2F;Opencode sessions and know when they are waiting for you.<p>- Written in rust and relies on tmux for security and reliability\n- Monitors state of cli sessions to tell you when an agent is running vs idle vs waiting for your input\n- Manage sessions by naming them, grouping them, configuring profiles for various settings<p>I&#x27;m passionate about",
+    "url": "https://github.com/njbrake/agent-of-empires",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 116,
+      "num_comments": 15,
+      "subreddit": null,
+      "author": "river_otter",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 146
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Show HN: Seapie – a Python debugger where breakpoints drop into a REPL",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Author here.<p>I started seapie as a reaction to pdb&#x27;s command-driven interface in 2019. I wanted a breakpoint to simply mean &#x27;open a Python REPL here&#x27;, with debugging functionality layered on top instead of replacing the REPL.<p>`seapie.breakpoint()` opens a working `&gt;&gt;&gt;` REPL at the current execution state. Any changes to variables or function definitions persist. Debugger state is exposed via built-ins (e.g. `_magic_`), and stepping&#x2F;frame control&#x2F;etc is handl",
+    "url": "https://github.com/hirsimaki-markus/seapie",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 18,
+      "num_comments": 6,
+      "subreddit": null,
+      "author": "markushirsimaki",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 30
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "We built a browser with GPT-5.2 in Cursor",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://twitter.com/mntruell/status/2011562190286045552",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 7,
+      "num_comments": 0,
+      "subreddit": null,
+      "author": "jacobedawson",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 7
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Ask HN: ADHD – How do you manage the constant stream of thoughts and ideas?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I have ADHD. I think. Pretty sure. I have thoughts, ideas, projects, concepts, links, things to read... fired at my brain all day every day. I can go deep on a topic for hours, but then be hit by a barrage of micro ideas. I really struggle to stay on track and focus. Oh and I run a business, manage people, try to make a profit. It&#x27;s hard. And kids. And life?<p>I think there is a founder&#x2F;ADHD thing. Paul Graham thinks so. Maybe even a tech person angle. What have other people experience",
+    "url": "https://news.ycombinator.com/item?id=46610156",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 111,
+      "num_comments": 61,
+      "subreddit": null,
+      "author": "chriswright1664",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 233
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Apple picks Gemini to power Siri",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://www.cnbc.com/2026/01/12/apple-google-ai-siri-gemini.html",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 1020,
+      "num_comments": 86,
+      "subreddit": null,
+      "author": "stygiansonic",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 1192
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Anthropic made a mistake in cutting off third-party clients",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://archaeologist.dev/artifacts/anthropic",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 349,
+      "num_comments": 73,
+      "subreddit": null,
+      "author": "codesparkle",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 495
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Conductor: Context-driven development for Gemini CLI",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 1,
+      "num_comments": 0,
+      "subreddit": null,
+      "author": "geoffbp",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 1
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Claude Code Tool Search Tool",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 1,
+      "num_comments": 0,
+      "subreddit": null,
+      "author": "tin7in",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 1
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Show HN: Headroom – Reversible context compression for LLMs(~60% cost reduction)",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://github.com/chopratejas/headroom",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 1,
+      "num_comments": 1,
+      "subreddit": null,
+      "author": "chopratejas",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 3
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Show HN: Tool that automates ML model deployment on mobile/edge devices",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Deploying ML models on-device is still a huge pain. Most teams default to cloud inference because:<p>Testing a model on different devices is manual and error-prone<p>Device constraints aren’t obvious from model exports<p>Rewriting deployment code for multiple platforms wastes days or weeks<p>I built Refactor AI, an infrastructure tool that:<p>Analyzes a trained ML model and flags ops that won’t run on the target device<p>Refactors the model where possible<p>Generates deployment-ready code for Co",
+    "url": "https://twitter.com/AbdoulayeSeydi_/status/2011648286885888216",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 1,
+      "num_comments": 0,
+      "subreddit": null,
+      "author": "AbdoulayeSeydi",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 1
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Ask HN: Why Gemini CLI startup is so slow?",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "time claude &#x2F;quit - 1.47sec<p>time copilot &#x2F;quit  - 1.04 secs<p>time gemini -i &#x2F;quit -  7.36 secs<p>Why gemini cli startup is so slow and why google doesn&#x27;t care?",
+    "url": "https://news.ycombinator.com/item?id=46628136",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 1,
+      "num_comments": 0,
+      "subreddit": null,
+      "author": "attentive",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 1
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Show HN: Flour Hour – I built a bread baking app with Claude Code in 3 hours",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "I built this to solve my own problem — sourdough takes ~20 hours from start to finish, and I was tired of setting a dozen alarms and constantly checking &quot;what&#x27;s next?&quot;\nFlour Hour lets you pick a recipe, set your start time (or work backwards from when you want to eat), and it calculates every step with exact timestamps.\nIncludes 22 recipes: classic sourdough, same-day sourdough, focaccia, bagels, croissants, brioche, discard pancakes, and more. Each with ingredients.\nTech: React +",
+    "url": "https://yaninatrekhleb.github.io/flour-hour/",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 2,
+      "num_comments": 0,
+      "subreddit": null,
+      "author": "yanina_trekhleb",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 2
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "On FLOSS and training LLMs",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://chronicles.mad-scientist.club/tales/on-floss-and-training-llms/",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 1,
+      "num_comments": 0,
+      "subreddit": null,
+      "author": "pabs3",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 1
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Microsoft's spending on Anthropic AI on track to reach $500M",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://www.msn.com/en-us/money/other/microsoft-s-spending-on-anthropic-ai-on-track-to-reach-500m-report/ar-AA1UcU14",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 2,
+      "num_comments": 0,
+      "subreddit": null,
+      "author": "nl",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 2
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Tract: Self-contained, TensorFlow and ONNX inference",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://github.com/sonos/tract",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 2,
+      "num_comments": 0,
+      "subreddit": null,
+      "author": "vishnukvmd",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 2
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "OpenAI acquires health-care technology startup Torch",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://www.cnbc.com/2026/01/12/open-ai-torch-health-care-technology.html",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 1,
+      "num_comments": 0,
+      "subreddit": null,
+      "author": "gmays",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 1
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "China's customs agents told Nvidia's H200 chips are not permitted, sources say",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://www.reuters.com/world/china/chinas-customs-agents-told-nvidias-h200-chips-are-not-permitted-sources-say-2026-01-14/",
+    "category": "social/hackernews",
+    "platform": "hackernews",
+    "metrics": {
+      "score": 3,
+      "num_comments": 1,
+      "subreddit": null,
+      "author": "donohoe",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 5
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "A dialogue on Machine Learning 🤓🤓🤓",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "**Deboo — JWG Dialogue Mode, engage!** **Deboo:** Explain machine learning 🤓🤓 **JWG:** Imagine giving a computer a giant basket of examples and whispering, “Figure out the pattern hiding in here.” The machine squints (metaphorically), pokes around the data, adjusts a zillion tiny dials ins...",
+    "url": "https://codeberg.org/code_macabre/My_Notes/issues/2",
+    "category": "social/lemmy",
+    "platform": "lemmy",
+    "metrics": {
+      "score": 0,
+      "num_comments": 0,
+      "subreddit": "machinelearning@lemmy.ml",
+      "author": "TheracAriane",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 0
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Jan v1: 4B open model for web search with 91% SimpleQA, slightly outperforms Perplexity Pro",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Jan v1 delivers 91% SimpleQA accuracy, slightly outperforming Perplexity Pro while running fully locally. It's built on the new version of Qwen's Qwen3-4B-Thinking (up to 256k context length), fine-tuned for reasoning and tool use in Jan.\n\n\n\nThe model in llama.cpp and vLLM and uses serper-mcp to access the web https://github.com/marcopesani/mcp-server-serper\n\nModel links:\n* Jan-v1-4B: https://huggingface.co/janhq/Jan-v1-4B\n* Jan-v1-4B-GGUF: https://huggingface.co/janhq/Jan-v1-4B-GGUF\n\nRecommende",
+    "url": "https://arxiv.org/abs/2508.00360",
+    "category": "social/lemmy",
+    "platform": "lemmy",
+    "metrics": {
+      "score": 7,
+      "num_comments": 0,
+      "subreddit": "machinelearning@lemmy.ml",
+      "author": "yogthos",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 7
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Anthem Demo - Napster plus Distributed Machine Learning",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "cross-posted from:  https://lemmy.world/post/32232401\n\n> In its finished state, the software is supposed to work like this:\n> \n> - Users start Anthem, which act as a peer in the network\n> - Once they have found other peers, they connect to a master node, which coordinates the training\n> - All peers then train a model with their uploaded songs\n> - Then they generate songs from their local models\n> - Each user can now listen to and generate their own AI songs\n> \n> Would love to hear any feedback f",
+    "url": "https://makertube.net/w/maMfbHdVQvoqf7nNYpTu7N",
+    "category": "social/lemmy",
+    "platform": "lemmy",
+    "metrics": {
+      "score": -1,
+      "num_comments": 0,
+      "subreddit": "machinelearning@lemmy.ml",
+      "author": "blue_berry",
+      "flair": null,
+      "sentiment_keywords": [
+        "+love"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": -1
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "dcdaML - devanagari character detection dataset training framework",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "cross-posted from:  https://lemm.ee/post/61282397\n\n> Open sourcing this project I made in just a weekend, planning to continue this in my free time, with synthetic data gen and some more modifications, anyone is welcome to chip in, I'm not an expert in ML.\n> The inference is live [here](https://dcda-v2.vercel.app/) using tensorflow.js. The model is just 1.92 Megabytes!\n> ",
+    "url": "https://github.com/Kishlay-notabot/dcdaml",
+    "category": "social/lemmy",
+    "platform": "lemmy",
+    "metrics": {
+      "score": 5,
+      "num_comments": 5,
+      "subreddit": "machinelearning@lemmy.ml",
+      "author": "thickertoofan",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 15
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Neural Graffiti is an experiment in adding a \"Spray Layer\" to a transformer model, which injects a memory trace into the final stages of inference without finetuning or retraining",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://github.com/babycommando/neuralgraffiti",
+    "category": "social/lemmy",
+    "platform": "lemmy",
+    "metrics": {
+      "score": 5,
+      "num_comments": 0,
+      "subreddit": "machinelearning@lemmy.ml",
+      "author": "yogthos",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 5
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Breaking GPT-5 News!",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "cross-posted from: https://lemmy.world/post/27657674\n\n> ![](https://lemmy.ml/api/v3/image_proxy?url=https%3A%2F%2Flemmy.world%2Fpictrs%2Fimage%2F95e46056-10ef-44c8-bc48-f6a250226452.png)",
+    "url": "https://lemmy.world/post/27658101",
+    "category": "social/lemmy",
+    "platform": "lemmy",
+    "metrics": {
+      "score": -6,
+      "num_comments": 2,
+      "subreddit": "machinelearning@lemmy.ml",
+      "author": "fubarx",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": -2
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Why do LLMs make stuff up? New research peers under the hood.",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://arstechnica.com/ai/2025/03/why-do-llms-make-stuff-up-new-research-peers-under-the-hood",
+    "category": "social/lemmy",
+    "platform": "lemmy",
+    "metrics": {
+      "score": 6,
+      "num_comments": 0,
+      "subreddit": "machinelearning@lemmy.ml",
+      "author": "yogthos",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 6
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "MLOps tips I gathered recently",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Hi all,\n\nI've been experimenting with building and deploying ML and LLM projects for a while now, and honestly, it’s been a journey.\n\nTraining the models always felt more straightforward, but deploying them smoothly into production turned out to be a whole new beast.\n\nI had a really good conversation with Dean Pleban (CEO @ DAGsHub), who shared some great practical insights based on his own experience helping teams go from experiments to real-world production.\n\nSharing here what he shared with m",
+    "url": "https://www.readyforagents.com/resources/llm-projects-structure",
+    "category": "social/lemmy",
+    "platform": "lemmy",
+    "metrics": {
+      "score": 8,
+      "num_comments": 0,
+      "subreddit": "machinelearning@lemmy.ml",
+      "author": "oba",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 8
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "DeepSeek open source DeepEP – library for MoE training and Inference",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://github.com/deepseek-ai/DeepEP",
+    "category": "social/lemmy",
+    "platform": "lemmy",
+    "metrics": {
+      "score": 11,
+      "num_comments": 0,
+      "subreddit": "machinelearning@lemmy.ml",
+      "author": "yogthos",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 11
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html",
+    "category": "social/lemmy",
+    "platform": "lemmy",
+    "metrics": {
+      "score": 4,
+      "num_comments": 0,
+      "subreddit": "machinelearning@lemmy.ml",
+      "author": "yogthos",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 4
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": null,
+    "url": "https://arxiv.org/pdf/2501.12948",
+    "category": "social/lemmy",
+    "platform": "lemmy",
+    "metrics": {
+      "score": 7,
+      "num_comments": 0,
+      "subreddit": "machinelearning@lemmy.ml",
+      "author": "yogthos",
+      "flair": null,
+      "sentiment_keywords": [],
+      "sentiment_score": 0.0,
+      "engagement": 7
+    },
+    "date_observed": "2026-01-15"
+  },
+  {
+    "name": "Neurosymbolic AI -- Why, What, and How",
+    "source_type": "social_media",
+    "signal_type": "public_sentiment",
+    "entity_type": "community",
+    "description": "Neurosymbolic AI is a hybrid approach aiming to bridge the gap between neural networks' ability to learn patterns and symbolic AI's capacity for logical reasoning and explainability.\n\nThis approach may offer the best of both worlds combining robust learning from data and clear with understandable reasoning based on knowledge. It has the potential to outperform systems relying solely on either neural networks or symbolic logic and to provide clear explanations for its decisions.\n\nThe approach inv",
+    "url": "https://arxiv.org/abs/2305.00813",
+    "category": "social/lemmy",
+    "platform": "lemmy",
+    "metrics": {
+      "score": 8,
+      "num_comments": 0,
+      "subreddit": "machinelearning@lemmy.ml",
+      "author": "yogthos",
+      "flair": null,
+      "sentiment_keywords": [
+        "+best"
+      ],
+      "sentiment_score": 1.0,
+      "engagement": 8
+    },
+    "date_observed": "2026-01-15"
+  }
+]

@@ -1,0 +1,143 @@
+{
+  "pipelines": {
+    "news": {
+      "name": "AI Industry News",
+      "description": "General AI industry news, tech developments, and strategic insights",
+      "sources_file": "sources.json",
+      "categories_file": "categories.json",
+      "output_prefix": "ai_briefing",
+      "enabled": true,
+      "schedule": {
+        "frequency": "daily",
+        "priority": 1
+      },
+      "scoring": {
+        "weights": {
+          "market_impact": 0.25,
+          "competitive_impact": 0.20,
+          "strategic_relevance": 0.20,
+          "operational_relevance": 0.15,
+          "credibility": 0.10,
+          "novelty": 0.10
+        }
+      },
+      "entity_focus": ["companies", "models", "topics", "people"],
+      "trend_radar_contribution": true
+    },
+    "product": {
+      "name": "AI Product Discovery",
+      "description": "New AI products, tools, and Product Hunt-style discoveries",
+      "sources_file": "sources_product.json",
+      "categories_file": "categories_product.json",
+      "output_prefix": "product_briefing",
+      "enabled": true,
+      "schedule": {
+        "frequency": "daily",
+        "priority": 2
+      },
+      "scoring": {
+        "weights": {
+          "product_innovation": 0.25,
+          "user_traction": 0.20,
+          "market_fit": 0.20,
+          "competitive_edge": 0.15,
+          "credibility": 0.10,
+          "virality": 0.10
+        }
+      },
+      "entity_focus": ["products", "companies", "categories", "features"],
+      "trend_radar_contribution": true
+    },
+    "investing": {
+      "name": "AI Investment Intelligence",
+      "description": "VC portfolio tracking, funding rounds, and investment signals",
+      "sources_file": "sources_investing.json",
+      "categories_file": "categories_investing.json",
+      "output_prefix": "investing_briefing",
+      "enabled": true,
+      "schedule": {
+        "frequency": "daily",
+        "priority": 3
+      },
+      "scoring": {
+        "weights": {
+          "funding_significance": 0.25,
+          "investor_quality": 0.20,
+          "market_timing": 0.20,
+          "competitive_signal": 0.15,
+          "credibility": 0.10,
+          "growth_potential": 0.10
+        }
+      },
+      "entity_focus": ["companies", "investors", "funding_rounds", "sectors"],
+      "trend_radar_contribution": true
+    },
+    "china_ai": {
+      "name": "中国AI生态",
+      "description": "Chinese AI ecosystem: domestic models, regulations, chips, research",
+      "sources_file": "sources_china_ai.json",
+      "categories_file": "categories_china_ai.json",
+      "output_prefix": "china_ai_briefing",
+      "enabled": true,
+      "schedule": {
+        "frequency": "daily",
+        "priority": 4
+      },
+      "scoring": {
+        "weights": {
+          "strategic_importance": 0.25,
+          "domestic_relevance": 0.20,
+          "regulatory_impact": 0.20,
+          "technical_significance": 0.15,
+          "credibility": 0.10,
+          "novelty": 0.10
+        }
+      },
+      "entity_focus": ["companies", "models", "regulations", "technologies"],
+      "trend_radar_contribution": true
+    },
+    "research": {
+      "name": "AI Research Labs",
+      "description": "Direct from AI research labs: papers, announcements, model releases",
+      "sources_file": "sources_research.json",
+      "categories_file": "categories_research.json",
+      "output_prefix": "research_briefing",
+      "enabled": true,
+      "tier1_threshold": 0.5,
+      "schedule": {
+        "frequency": "daily",
+        "priority": 1
+      },
+      "scoring": {
+        "weights": {
+          "research_significance": 0.30,
+          "novelty": 0.20,
+          "lab_authority": 0.20,
+          "practical_impact": 0.15,
+          "credibility": 0.10,
+          "reproducibility": 0.05
+        }
+      },
+      "entity_focus": ["labs", "models", "papers", "researchers"],
+      "trend_radar_contribution": true,
+      "notes": "Primary sources - lower tier1 threshold as research articles have less 'news' signals"
+    }
+  },
+  "orchestrator": {
+    "run_mode": "sequential",
+    "parallel_limit": 2,
+    "fail_strategy": "continue",
+    "aggregate_trends": true,
+    "combined_report": {
+      "enabled": true,
+      "output_prefix": "combined_briefing",
+      "sections": ["research", "news", "product", "investing", "china_ai"]
+    }
+  },
+  "trend_radar": {
+    "aggregate_from": ["research", "news", "product", "investing", "china_ai"],
+    "baseline_weeks": 4,
+    "signal_threshold": 0.3,
+    "cross_pipeline_weight": 1.5
+  }
+}

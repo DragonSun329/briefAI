@@ -1,0 +1,234 @@
+{
+  "description": "Additional Tech News Sources - Jan 28, 2026",
+  "version": "1.0.0",
+  
+  "rss_feeds_to_add": [
+    {
+      "id": "reuters_tech",
+      "name": "Reuters Technology",
+      "url": "https://www.reuters.com/technology/",
+      "rss_url": "https://www.reuters.com/technology/rss",
+      "credibility": 10,
+      "type": "news_agency"
+    },
+    {
+      "id": "bloomberg_tech",
+      "name": "Bloomberg Technology",
+      "url": "https://www.bloomberg.com/technology",
+      "note": "May require Bloomberg Terminal or subscription",
+      "credibility": 10,
+      "type": "financial_news"
+    },
+    {
+      "id": "wsj_tech",
+      "name": "WSJ Tech",
+      "url": "https://www.wsj.com/tech",
+      "note": "Paywalled but high quality",
+      "credibility": 10,
+      "type": "financial_news"
+    },
+    {
+      "id": "cnbc_tech",
+      "name": "CNBC Tech",
+      "url": "https://www.cnbc.com/technology/",
+      "rss_url": "https://www.cnbc.com/id/19854910/device/rss/rss.html",
+      "credibility": 8,
+      "type": "financial_news"
+    },
+    {
+      "id": "zdnet_ai",
+      "name": "ZDNet AI",
+      "url": "https://www.zdnet.com/topic/artificial-intelligence/",
+      "rss_url": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml",
+      "credibility": 7,
+      "type": "tech_news"
+    },
+    {
+      "id": "infoworld",
+      "name": "InfoWorld",
+      "url": "https://www.infoworld.com/",
+      "rss_url": "https://www.infoworld.com/index.rss",
+      "credibility": 7,
+      "type": "enterprise_tech"
+    },
+    {
+      "id": "computerworld",
+      "name": "Computerworld",
+      "url": "https://www.computerworld.com/",
+      "rss_url": "https://www.computerworld.com/index.rss",
+      "credibility": 7,
+      "type": "enterprise_tech"
+    },
+    {
+      "id": "engadget",
+      "name": "Engadget",
+      "url": "https://www.engadget.com/ai/",
+      "rss_url": "https://www.engadget.com/rss.xml",
+      "credibility": 7,
+      "type": "consumer_tech"
+    },
+    {
+      "id": "protocol",
+      "name": "Protocol (now merged into Politico)",
+      "url": "https://www.politico.com/technology",
+      "note": "Protocol was acquired, content now on Politico",
+      "credibility": 8,
+      "type": "policy_tech"
+    },
+    {
+      "id": "the_register",
+      "name": "The Register",
+      "url": "https://www.theregister.com/software/ai_ml/",
+      "rss_url": "https://www.theregister.com/software/ai_ml/headlines.atom",
+      "credibility": 7,
+      "type": "tech_news"
+    },
+    {
+      "id": "ieee_spectrum",
+      "name": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/topic/artificial-intelligence/",
+      "rss_url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss",
+      "credibility": 9,
+      "type": "engineering"
+    },
+    {
+      "id": "fortune_ai",
+      "name": "Fortune AI",
+      "url": "https://fortune.com/tag/artificial-intelligence/",
+      "credibility": 8,
+      "type": "business"
+    },
+    {
+      "id": "fast_company_tech",
+      "name": "Fast Company Tech",
+      "url": "https://www.fastcompany.com/technology",
+      "rss_url": "https://www.fastcompany.com/technology/rss",
+      "credibility": 7,
+      "type": "business_tech"
+    }
+  ],
+  
+  "china_sources": [
+    {
+      "id": "technode",
+      "name": "TechNode",
+      "url": "https://technode.com/",
+      "rss_url": "https://technode.com/feed/",
+      "credibility": 8,
+      "type": "china_tech",
+      "language": "en",
+      "focus": "China tech ecosystem in English"
+    },
+    {
+      "id": "pandaily",
+      "name": "Pandaily",
+      "url": "https://pandaily.com/",
+      "rss_url": "https://pandaily.com/feed/",
+      "credibility": 7,
+      "type": "china_tech",
+      "language": "en"
+    },
+    {
+      "id": "kr_asia",
+      "name": "KrASIA",
+      "url": "https://kr-asia.com/",
+      "rss_url": "https://kr-asia.com/feed",
+      "credibility": 8,
+      "type": "asia_tech",
+      "language": "en"
+    }
+  ],
+  
+  "research_sources": [
+    {
+      "id": "arxiv_cs_lg",
+      "name": "ArXiv Machine Learning",
+      "rss_url": "http://arxiv.org/rss/cs.LG",
+      "credibility": 10,
+      "type": "research"
+    },
+    {
+      "id": "arxiv_cs_cl",
+      "name": "ArXiv Computation and Language (NLP)",
+      "rss_url": "http://arxiv.org/rss/cs.CL",
+      "credibility": 10,
+      "type": "research"
+    },
+    {
+      "id": "arxiv_cs_cv",
+      "name": "ArXiv Computer Vision",
+      "rss_url": "http://arxiv.org/rss/cs.CV",
+      "credibility": 10,
+      "type": "research"
+    },
+    {
+      "id": "distill",
+      "name": "Distill.pub",
+      "url": "https://distill.pub/",
+      "note": "High quality ML explainers (not frequently updated)",
+      "credibility": 10,
+      "type": "research"
+    }
+  ],
+  
+  "podcasts_video": [
+    {
+      "id": "lex_fridman",
+      "name": "Lex Fridman Podcast",
+      "url": "https://lexfridman.com/podcast/",
+      "rss_url": "https://lexfridman.com/feed/podcast/",
+      "credibility": 8,
+      "type": "podcast",
+      "note": "Long-form AI researcher interviews"
+    },
+    {
+      "id": "latent_space",
+      "name": "Latent Space Podcast",
+      "url": "https://www.latent.space/",
+      "rss_url": "https://api.substack.com/feed/podcast/1084089.rss",
+      "credibility": 9,
+      "type": "podcast",
+      "note": "AI engineering focused"
+    },
+    {
+      "id": "practical_ai",
+      "name": "Practical AI",
+      "url": "https://changelog.com/practicalai",
+      "rss_url": "https://changelog.com/practicalai/feed",
+      "credibility": 8,
+      "type": "podcast"
+    },
+    {
+      "id": "gradient_dissent",
+      "name": "Gradient Dissent (Weights & Biases)",
+      "url": "https://wandb.ai/gradient-dissent",
+      "credibility": 8,
+      "type": "podcast"
+    }
+  ],
+  
+  "vc_blogs": [
+    {
+      "id": "a16z_ai",
+      "name": "a16z AI Blog",
+      "url": "https://a16z.com/ai/",
+      "credibility": 9,
+      "type": "vc_insights"
+    },
+    {
+      "id": "sequoia_ai",
+      "name": "Sequoia AI Insights",
+      "url": "https://www.sequoiacap.com/",
+      "credibility": 9,
+      "type": "vc_insights"
+    },
+    {
+      "id": "first_round_review",
+      "name": "First Round Review",
+      "url": "https://review.firstround.com/",
+      "rss_url": "https://review.firstround.com/feed.xml",
+      "credibility": 8,
+      "type": "startup_insights"
+    }
+  ]
+}

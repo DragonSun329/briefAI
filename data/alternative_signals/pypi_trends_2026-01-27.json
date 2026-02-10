@@ -1,0 +1,307 @@
+{
+  "source": "pypi_trends",
+  "timestamp": "2026-01-27T17:17:00.149929",
+  "packages": [
+    {
+      "package": "numpy",
+      "downloads_last_day": 23015757,
+      "downloads_last_week": 155094564,
+      "downloads_last_month": 621657282,
+      "growth_rate": -0.21,
+      "momentum": "stable",
+      "adoption_score": 10.0
+    },
+    {
+      "package": "pandas",
+      "downloads_last_day": 17181828,
+      "downloads_last_week": 112760196,
+      "downloads_last_month": 455504033,
+      "growth_rate": -0.98,
+      "momentum": "stable",
+      "adoption_score": 7.27
+    },
+    {
+      "package": "langchain",
+      "downloads_last_day": 8832529,
+      "downloads_last_week": 57115291,
+      "downloads_last_month": 133284876,
+      "growth_rate": 71.41,
+      "momentum": "surging",
+      "adoption_score": 3.68
+    },
+    {
+      "package": "scikit-learn",
+      "downloads_last_day": 5135941,
+      "downloads_last_week": 36236956,
+      "downloads_last_month": 147218091,
+      "growth_rate": -1.54,
+      "momentum": "stable",
+      "adoption_score": 2.34
+    },
+    {
+      "package": "openai",
+      "downloads_last_day": 5492889,
+      "downloads_last_week": 33560018,
+      "downloads_last_month": 127331055,
+      "growth_rate": 5.43,
+      "momentum": "growing",
+      "adoption_score": 2.16
+    },
+    {
+      "package": "langsmith",
+      "downloads_last_day": 3993810,
+      "downloads_last_week": 26660205,
+      "downloads_last_month": 109761358,
+      "growth_rate": -2.84,
+      "momentum": "stable",
+      "adoption_score": 1.72
+    },
+    {
+      "package": "transformers",
+      "downloads_last_day": 3217728,
+      "downloads_last_week": 23502930,
+      "downloads_last_month": 92933902,
+      "growth_rate": 1.16,
+      "momentum": "stable",
+      "adoption_score": 1.52
+    },
+    {
+      "package": "tokenizers",
+      "downloads_last_day": 3533038,
+      "downloads_last_week": 22120885,
+      "downloads_last_month": 88800852,
+      "growth_rate": -0.36,
+      "momentum": "stable",
+      "adoption_score": 1.43
+    },
+    {
+      "package": "tiktoken",
+      "downloads_last_day": 3154701,
+      "downloads_last_week": 18308040,
+      "downloads_last_month": 72790390,
+      "growth_rate": 0.61,
+      "momentum": "stable",
+      "adoption_score": 1.18
+    },
+    {
+      "package": "torch",
+      "downloads_last_day": 2388069,
+      "downloads_last_week": 16869964,
+      "downloads_last_month": 63645707,
+      "growth_rate": 6.02,
+      "momentum": "growing",
+      "adoption_score": 1.09
+    },
+    {
+      "package": "anthropic",
+      "downloads_last_day": 1936812,
+      "downloads_last_week": 10178709,
+      "downloads_last_month": 35504685,
+      "growth_rate": 14.67,
+      "momentum": "growing",
+      "adoption_score": 0.66
+    },
+    {
+      "package": "polars",
+      "downloads_last_day": 1343127,
+      "downloads_last_week": 9296592,
+      "downloads_last_month": 35073962,
+      "growth_rate": 6.02,
+      "momentum": "growing",
+      "adoption_score": 0.6
+    },
+    {
+      "package": "xgboost",
+      "downloads_last_day": 1160642,
+      "downloads_last_week": 7950515,
+      "downloads_last_month": 33053634,
+      "growth_rate": -3.79,
+      "momentum": "stable",
+      "adoption_score": 0.51
+    },
+    {
+      "package": "tensorflow",
+      "downloads_last_day": 704452,
+      "downloads_last_week": 5298810,
+      "downloads_last_month": 21343426,
+      "growth_rate": -0.69,
+      "momentum": "stable",
+      "adoption_score": 0.34
+    },
+    {
+      "package": "accelerate",
+      "downloads_last_day": 759124,
+      "downloads_last_week": 5154854,
+      "downloads_last_month": 18402526,
+      "growth_rate": 12.05,
+      "momentum": "growing",
+      "adoption_score": 0.33
+    },
+    {
+      "package": "sentence-transformers",
+      "downloads_last_day": 616461,
+      "downloads_last_week": 3928952,
+      "downloads_last_month": 14932990,
+      "growth_rate": 5.24,
+      "momentum": "growing",
+      "adoption_score": 0.25
+    },
+    {
+      "package": "jax",
+      "downloads_last_day": 531948,
+      "downloads_last_week": 3703476,
+      "downloads_last_month": 12750542,
+      "growth_rate": 16.18,
+      "momentum": "growing",
+      "adoption_score": 0.24
+    },
+    {
+      "package": "diffusers",
+      "downloads_last_day": 349924,
+      "downloads_last_week": 3176645,
+      "downloads_last_month": 9135606,
+      "growth_rate": 39.09,
+      "momentum": "surging",
+      "adoption_score": 0.2
+    },
+    {
+      "package": "peft",
+      "downloads_last_day": 353029,
+      "downloads_last_week": 2708089,
+      "downloads_last_month": 9205506,
+      "growth_rate": 17.67,
+      "momentum": "growing",
+      "adoption_score": 0.17
+    },
+    {
+      "package": "weaviate-client",
+      "downloads_last_day": 361025,
+      "downloads_last_week": 2704435,
+      "downloads_last_month": 20327253,
+      "growth_rate": -46.78,
+      "momentum": "declining",
+      "adoption_score": 0.17
+    },
+    {
+      "package": "lightgbm",
+      "downloads_last_day": 400521,
+      "downloads_last_week": 2670157,
+      "downloads_last_month": 10652662,
+      "growth_rate": 0.26,
+      "momentum": "stable",
+      "adoption_score": 0.17
+    },
+    {
+      "package": "chromadb",
+      "downloads_last_day": 387146,
+      "downloads_last_week": 2486275,
+      "downloads_last_month": 9330144,
+      "growth_rate": 6.59,
+      "momentum": "growing",
+      "adoption_score": 0.16
+    },
+    {
+      "package": "qdrant-client",
+      "downloads_last_day": 253233,
+      "downloads_last_week": 1905027,
+      "downloads_last_month": 10221429,
+      "growth_rate": -25.45,
+      "momentum": "declining",
+      "adoption_score": 0.12
+    },
+    {
+      "package": "llama-index",
+      "downloads_last_day": 250889,
+      "downloads_last_week": 1539183,
+      "downloads_last_month": 6231978,
+      "growth_rate": -1.21,
+      "momentum": "stable",
+      "adoption_score": 0.1
+    },
+    {
+      "package": "bitsandbytes",
+      "downloads_last_day": 164610,
+      "downloads_last_week": 1308847,
+      "downloads_last_month": 5150089,
+      "growth_rate": 1.66,
+      "momentum": "stable",
+      "adoption_score": 0.08
+    },
+    {
+      "package": "catboost",
+      "downloads_last_day": 173989,
+      "downloads_last_week": 1122359,
+      "downloads_last_month": 5041499,
+      "growth_rate": -10.95,
+      "momentum": "declining",
+      "adoption_score": 0.07
+    },
+    {
+      "package": "elevenlabs",
+      "downloads_last_day": 169233,
+      "downloads_last_week": 972157,
+      "downloads_last_month": 3390462,
+      "growth_rate": 14.69,
+      "momentum": "growing",
+      "adoption_score": 0.06
+    },
+    {
+      "package": "crewai",
+      "downloads_last_day": 147583,
+      "downloads_last_week": 958745,
+      "downloads_last_month": 2936455,
+      "growth_rate": 30.6,
+      "momentum": "surging",
+      "adoption_score": 0.06
+    },
+    {
+      "package": "trl",
+      "downloads_last_day": 76621,
+      "downloads_last_week": 507369,
+      "downloads_last_month": 1967569,
+      "growth_rate": 3.15,
+      "momentum": "stable",
+      "adoption_score": 0.03
+    },
+    {
+      "package": "pinecone-client",
+      "downloads_last_day": 34927,
+      "downloads_last_week": 244254,
+      "downloads_last_month": 954128,
+      "growth_rate": 2.4,
+      "momentum": "stable",
+      "adoption_score": 0.02
+    },
+    {
+      "package": "autogen",
+      "downloads_last_day": 4584,
+      "downloads_last_week": 30307,
+      "downloads_last_month": 128571,
+      "growth_rate": -5.71,
+      "momentum": "declining",
+      "adoption_score": 0.0
+    },
+    {
+      "package": "stability-sdk",
+      "downloads_last_day": 983,
+      "downloads_last_week": 5488,
+      "downloads_last_month": 26007,
+      "growth_rate": -15.59,
+      "momentum": "declining",
+      "adoption_score": 0.0
+    }
+  ],
+  "summary": {
+    "total_packages": 32,
+    "surging": 3,
+    "growing": 10,
+    "declining": 5,
+    "top_5": [
+      "numpy",
+      "pandas",
+      "langchain",
+      "scikit-learn",
+      "openai"
+    ]
+  }
+}

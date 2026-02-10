@@ -1,0 +1,58 @@
+{
+  "date": "2026-02-10",
+  "clusters": [
+    {
+      "title": "NVIDIA Blackwell Production Ramp",
+      "confidence": 0.89,
+      "signal_count": 12,
+      "summary": "Multiple sources report NVIDIA's next-gen Blackwell architecture entering mass production at TSMC, with datacenter shipments expected Q2 2026.",
+      "sources": [
+        "Reuters",
+        "DigiTimes",
+        "SemiAnalysis"
+      ]
+    },
+    {
+      "title": "OpenAI Enterprise Expansion",
+      "confidence": 0.82,
+      "signal_count": 8,
+      "summary": "OpenAI announces expanded enterprise tier with dedicated compute, SOC2 compliance, and custom model fine-tuning for Fortune 500 clients.",
+      "sources": [
+        "TechCrunch",
+        "The Information",
+        "OpenAI Blog"
+      ]
+    },
+    {
+      "title": "Cloud GPU Shortage Easing",
+      "confidence": 0.75,
+      "signal_count": 6,
+      "summary": "AWS, Azure, and GCP all report improved H100 availability. Wait times for GPU instances down 60% from December peak.",
+      "sources": [
+        "AWS Blog",
+        "The Information",
+        "SemiAnalysis"
+      ]
+    },
+    {
+      "title": "Anthropic Series D Closing",
+      "confidence": 0.71,
+      "signal_count": 5,
+      "summary": "Anthropic reportedly closing $2B Series D at $60B valuation, led by Google and Spark Capital.",
+      "sources": [
+        "Bloomberg",
+        "The Information"
+      ]
+    },
+    {
+      "title": "Meta AI Research Restructure",
+      "confidence": 0.68,
+      "signal_count": 4,
+      "summary": "Meta consolidating FAIR and GenAI teams under single leadership, signaling increased focus on product integration.",
+      "sources": [
+        "The Verge",
+        "Bloomberg"
+      ]
+    }
+  ]
+}

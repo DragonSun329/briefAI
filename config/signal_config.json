@@ -1,0 +1,195 @@
+{
+  "ewma": {
+    "nas": {
+      "alpha": 0.3,
+      "enabled": true,
+      "description": "Narrative Attention Signal - volatile, needs smoothing"
+    },
+    "css": {
+      "alpha": 0.25,
+      "enabled": true,
+      "description": "Crypto Sentiment Signal - high volatility"
+    },
+    "tms": {
+      "alpha": 0.5,
+      "enabled": false,
+      "description": "Technical Momentum Signal - already stable"
+    },
+    "ccs": {
+      "alpha": 0.5,
+      "enabled": false,
+      "description": "Capital Conviction Signal - slow moving"
+    },
+    "eis": {
+      "alpha": 0.4,
+      "enabled": false,
+      "description": "Enterprise Institutional Signal - infrequent updates"
+    },
+    "pms": {
+      "alpha": 0.35,
+      "enabled": true,
+      "description": "Public Market Signal - market volatility"
+    }
+  },
+  "winsorization": {
+    "enabled": true,
+    "lower_percentile": 5,
+    "upper_percentile": 95,
+    "apply_to": ["nas", "css", "pms"]
+  },
+  "freshness": {
+    "half_life_hours": {
+      "news": 48,
+      "hackernews": 36,
+      "reddit": 48,
+      "github": 168,
+      "huggingface": 168,
+      "arxiv": 336,
+      "polymarket": 24,
+      "manifold": 24,
+      "metaculus": 72,
+      "sec": 336,
+      "crunchbase": 168
+    },
+    "stale_threshold_days": 7,
+    "stale_penalty": 0.5
+  },
+  "cooldowns": {
+    "INFO": 3,
+    "WARN": 7,
+    "CRIT": 14
+  },
+  "baselines": {
+    "short_window_weeks": 12,
+    "long_window_weeks": 26,
+    "min_weeks_required": 4,
+    "snapshot_directory": "data/historical"
+  },
+  "dedup": {
+    "simhash_threshold": 3,
+    "enabled": true,
+    "lsh_bands": 16,
+    "lsh_rows": 4,
+    "min_content_length": 100
+  },
+  "source_health": {
+    "circuit_breaker_threshold": 3,
+    "circuit_breaker_reset_hours": 1,
+    "max_retries": 3,
+    "base_delay_seconds": 1.0,
+    "max_delay_seconds": 60.0
+  },
+  "alerts": {
+    "alpha_zone": {
+      "name": "Alpha Zone (Hidden Gem)",
+      "description": "High technical momentum but low capital conviction - potential opportunity",
+      "rules": [
+        {"signal": "tms", "operator": ">=", "threshold": 90},
+        {"signal": "ccs", "operator": "<=", "threshold": 30}
+      ],
+      "default_severity": "WARN",
+      "category": "OPPORTUNITY",
+      "action_hint": "Monitor for capital inflow signals in coming weeks"
+    },
+    "hype_zone": {
+      "name": "Hype Zone",
+      "description": "High narrative attention but weak fundamentals - potential overexposure",
+      "rules": [
+        {"signal": "nas", "operator": ">=", "threshold": 85},
+        {"signal": "tms", "operator": "<=", "threshold": 40}
+      ],
+      "default_severity": "WARN",
+      "category": "CAUTION",
+      "action_hint": "Exercise caution - sentiment may not match substance"
+    },
+    "enterprise_breakout": {
+      "name": "Enterprise Breakout",
+      "description": "Enterprise adoption surge with strong fundamentals",
+      "rules": [
+        {"signal": "eis", "operator": ">=", "threshold": 80},
+        {"signal": "tms", "operator": ">=", "threshold": 70}
+      ],
+      "default_severity": "CRIT",
+      "category": "OPPORTUNITY",
+      "action_hint": "Strong enterprise signal - consider deep dive"
+    },
+    "disruption_signal": {
+      "name": "Disruption Signal",
+      "description": "Technical momentum with low enterprise adoption - potential disruptor",
+      "rules": [
+        {"signal": "tms", "operator": ">=", "threshold": 85},
+        {"signal": "eis", "operator": "<=", "threshold": 25}
+      ],
+      "default_severity": "INFO",
+      "category": "WATCH",
+      "action_hint": "Early-stage trend - monitor for enterprise adoption"
+    },
+    "rotation_signal": {
+      "name": "Rotation Signal",
+      "description": "Declining momentum with rising capital - potential rotation target",
+      "rules": [
+        {"signal": "tms", "operator": "<=", "threshold": 40},
+        {"signal": "ccs", "operator": ">=", "threshold": 70}
+      ],
+      "default_severity": "INFO",
+      "category": "MONITOR",
+      "action_hint": "Capital may be rotating - watch for momentum recovery"
+    }
+  },
+  "confidence": {
+    "weights": {
+      "coverage": 0.3,
+      "source_diversity": 0.25,
+      "freshness": 0.25,
+      "temporal_stability": 0.2
+    },
+    "thresholds": {
+      "high": 0.8,
+      "medium": 0.5,
+      "low": 0.3
+    }
+  },
+  "signals": {
+    "tms": {
+      "name": "Technical Momentum Signal",
+      "description": "Developer activity, GitHub stars, HuggingFace downloads",
+      "sources": ["github", "huggingface", "paperswithcode"],
+      "weight": 1.0
+    },
+    "ccs": {
+      "name": "Capital Conviction Signal",
+      "description": "Funding rounds, M&A activity, investor interest",
+      "sources": ["crunchbase", "sec", "news"],
+      "weight": 1.0
+    },
+    "eis": {
+      "name": "Enterprise Institutional Signal",
+      "description": "Enterprise adoption, partnerships, job postings",
+      "sources": ["news", "linkedin", "job_boards"],
+      "weight": 0.9
+    },
+    "nas": {
+      "name": "Narrative Attention Signal",
+      "description": "Social media buzz, news coverage, discussion volume",
+      "sources": ["hackernews", "reddit", "news", "twitter"],
+      "weight": 0.8
+    },
+    "pms": {
+      "name": "Public Market Signal",
+      "description": "Stock movements of related public companies",
+      "sources": ["market_data"],
+      "weight": 0.7
+    },
+    "css": {
+      "name": "Crypto Sentiment Signal",
+      "description": "Prediction market odds, crypto token sentiment",
+      "sources": ["polymarket", "manifold", "metaculus"],
+      "weight": 0.6
+    }
+  },
+  "bucket_coverage_baseline": {
+    "min_entities": 5,
+    "min_sources": 3,
+    "min_articles_per_week": 10
+  }
+}

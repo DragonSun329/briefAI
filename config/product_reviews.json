@@ -1,0 +1,276 @@
+{
+  "product_mappings": {
+    "openai": {
+      "products": ["ChatGPT", "ChatGPT Enterprise", "OpenAI API", "GPT-4", "DALL-E", "Whisper"],
+      "aliases": ["open ai", "openai"]
+    },
+    "anthropic": {
+      "products": ["Claude", "Claude Pro", "Claude API"],
+      "aliases": ["anthropic ai"]
+    },
+    "google": {
+      "products": ["Google Gemini", "Gemini Pro", "Google AI Studio", "Vertex AI", "Bard"],
+      "aliases": ["google ai", "deepmind"]
+    },
+    "microsoft": {
+      "products": ["Microsoft Copilot", "GitHub Copilot", "Azure OpenAI", "Bing Chat"],
+      "aliases": ["msft"]
+    },
+    "meta": {
+      "products": ["Llama", "Llama 2", "Llama 3", "Meta AI"],
+      "aliases": ["facebook ai"]
+    },
+    "cohere": {
+      "products": ["Cohere", "Cohere API", "Command", "Embed"],
+      "aliases": []
+    },
+    "stability-ai": {
+      "products": ["Stable Diffusion", "DreamStudio", "Stable Audio"],
+      "aliases": ["stability.ai"]
+    },
+    "midjourney": {
+      "products": ["Midjourney"],
+      "aliases": []
+    },
+    "jasper": {
+      "products": ["Jasper AI", "Jasper"],
+      "aliases": ["jasper.ai"]
+    },
+    "copy-ai": {
+      "products": ["Copy.ai"],
+      "aliases": ["copyai"]
+    },
+    "notion": {
+      "products": ["Notion AI", "Notion"],
+      "aliases": []
+    },
+    "grammarly": {
+      "products": ["Grammarly", "GrammarlyGO"],
+      "aliases": []
+    },
+    "canva": {
+      "products": ["Canva AI", "Magic Design", "Canva"],
+      "aliases": []
+    },
+    "adobe": {
+      "products": ["Adobe Firefly", "Adobe Sensei", "Photoshop AI"],
+      "aliases": []
+    },
+    "figma": {
+      "products": ["Figma AI"],
+      "aliases": []
+    },
+    "cursor": {
+      "products": ["Cursor", "Cursor IDE"],
+      "aliases": []
+    },
+    "replit": {
+      "products": ["Replit AI", "Ghostwriter", "Replit"],
+      "aliases": []
+    },
+    "codeium": {
+      "products": ["Codeium", "Windsurf"],
+      "aliases": []
+    },
+    "tabnine": {
+      "products": ["Tabnine"],
+      "aliases": []
+    },
+    "huggingface": {
+      "products": ["Hugging Face", "Hugging Face Hub", "Transformers"],
+      "aliases": ["hugging face", "hf"]
+    },
+    "runway": {
+      "products": ["Runway", "Gen-2", "Gen-3"],
+      "aliases": ["runwayml"]
+    },
+    "elevenlabs": {
+      "products": ["ElevenLabs", "Eleven Labs"],
+      "aliases": []
+    },
+    "synthesia": {
+      "products": ["Synthesia"],
+      "aliases": []
+    },
+    "descript": {
+      "products": ["Descript"],
+      "aliases": []
+    },
+    "otter-ai": {
+      "products": ["Otter.ai", "Otter"],
+      "aliases": []
+    },
+    "fireflies": {
+      "products": ["Fireflies.ai", "Fireflies"],
+      "aliases": []
+    },
+    "mem": {
+      "products": ["Mem.ai", "Mem"],
+      "aliases": []
+    },
+    "perplexity": {
+      "products": ["Perplexity AI", "Perplexity"],
+      "aliases": []
+    },
+    "you-com": {
+      "products": ["You.com", "YouChat"],
+      "aliases": []
+    },
+    "character-ai": {
+      "products": ["Character.AI", "Character AI"],
+      "aliases": ["c.ai"]
+    },
+    "inflection": {
+      "products": ["Pi", "Inflection AI"],
+      "aliases": []
+    },
+    "writesonic": {
+      "products": ["Writesonic", "Chatsonic"],
+      "aliases": []
+    },
+    "scale-ai": {
+      "products": ["Scale AI", "Scale"],
+      "aliases": []
+    },
+    "weights-biases": {
+      "products": ["Weights & Biases", "W&B", "Wandb"],
+      "aliases": ["wandb"]
+    },
+    "databricks": {
+      "products": ["Databricks", "Mosaic ML", "MLflow"],
+      "aliases": []
+    },
+    "datarobot": {
+      "products": ["DataRobot"],
+      "aliases": []
+    },
+    "h2o-ai": {
+      "products": ["H2O.ai", "H2O"],
+      "aliases": []
+    },
+    "deepgram": {
+      "products": ["Deepgram"],
+      "aliases": []
+    },
+    "assembly-ai": {
+      "products": ["AssemblyAI", "Assembly AI"],
+      "aliases": []
+    },
+    "deepl": {
+      "products": ["DeepL", "DeepL Translator"],
+      "aliases": []
+    }
+  },
+  "source_configs": {
+    "g2": {
+      "base_url": "https://www.g2.com",
+      "search_path": "/search?query=",
+      "product_path": "/products/",
+      "weight": 1.0,
+      "scrape_enabled": false
+    },
+    "capterra": {
+      "base_url": "https://www.capterra.com",
+      "search_path": "/search/?search=",
+      "weight": 0.9,
+      "scrape_enabled": false
+    },
+    "producthunt": {
+      "base_url": "https://www.producthunt.com",
+      "search_path": "/search?q=",
+      "weight": 0.7,
+      "scrape_enabled": true
+    },
+    "trustradius": {
+      "base_url": "https://www.trustradius.com",
+      "search_path": "/search?q=",
+      "weight": 0.8,
+      "scrape_enabled": false
+    }
+  },
+  "scoring_config": {
+    "min_reviews_high_confidence": 500,
+    "min_reviews_medium_confidence": 50,
+    "min_sources_high_confidence": 2,
+    "rating_to_nps_formula": "linear",
+    "weight_by_review_count": true
+  },
+  "cached_reviews": {
+    "last_updated": "2026-01-22",
+    "data": {
+      "openai": {
+        "g2": {"rating": 4.7, "reviews": 2847, "url": "https://www.g2.com/products/chatgpt/reviews"},
+        "capterra": {"rating": 4.6, "reviews": 1523, "url": "https://www.capterra.com/p/chatgpt/reviews"},
+        "trustradius": {"rating": 8.5, "reviews": 342, "url": "https://www.trustradius.com/products/chatgpt/reviews", "max_rating": 10}
+      },
+      "anthropic": {
+        "g2": {"rating": 4.5, "reviews": 342, "url": "https://www.g2.com/products/claude/reviews"}
+      },
+      "microsoft": {
+        "g2": {"rating": 4.5, "reviews": 1876, "url": "https://www.g2.com/products/github-copilot/reviews"},
+        "capterra": {"rating": 4.4, "reviews": 654, "url": "https://www.capterra.com/p/github-copilot/reviews"}
+      },
+      "notion": {
+        "g2": {"rating": 4.6, "reviews": 5234, "url": "https://www.g2.com/products/notion/reviews"},
+        "capterra": {"rating": 4.7, "reviews": 2341, "url": "https://www.capterra.com/p/notion/reviews"}
+      },
+      "grammarly": {
+        "g2": {"rating": 4.7, "reviews": 8921, "url": "https://www.g2.com/products/grammarly/reviews"},
+        "capterra": {"rating": 4.7, "reviews": 6842, "url": "https://www.capterra.com/p/grammarly/reviews"}
+      },
+      "cursor": {
+        "producthunt": {"rating": 4.9, "reviews": 4521, "url": "https://www.producthunt.com/products/cursor"},
+        "g2": {"rating": 4.6, "reviews": 234, "url": "https://www.g2.com/products/cursor/reviews"}
+      },
+      "perplexity": {
+        "producthunt": {"rating": 4.8, "reviews": 3421, "url": "https://www.producthunt.com/products/perplexity"}
+      },
+      "midjourney": {
+        "producthunt": {"rating": 4.8, "reviews": 5234, "url": "https://www.producthunt.com/products/midjourney"}
+      },
+      "jasper": {
+        "g2": {"rating": 4.7, "reviews": 1234, "url": "https://www.g2.com/products/jasper/reviews"},
+        "capterra": {"rating": 4.6, "reviews": 1876, "url": "https://www.capterra.com/p/jasper/reviews"}
+      },
+      "copy-ai": {
+        "g2": {"rating": 4.7, "reviews": 892, "url": "https://www.g2.com/products/copy-ai/reviews"}
+      },
+      "elevenlabs": {
+        "producthunt": {"rating": 4.7, "reviews": 2341, "url": "https://www.producthunt.com/products/elevenlabs"},
+        "g2": {"rating": 4.5, "reviews": 187, "url": "https://www.g2.com/products/elevenlabs/reviews"}
+      },
+      "runway": {
+        "g2": {"rating": 4.5, "reviews": 187, "url": "https://www.g2.com/products/runway/reviews"},
+        "producthunt": {"rating": 4.6, "reviews": 1234, "url": "https://www.producthunt.com/products/runway"}
+      },
+      "huggingface": {
+        "g2": {"rating": 4.6, "reviews": 421, "url": "https://www.g2.com/products/hugging-face/reviews"}
+      },
+      "databricks": {
+        "g2": {"rating": 4.5, "reviews": 1234, "url": "https://www.g2.com/products/databricks/reviews"},
+        "trustradius": {"rating": 8.7, "reviews": 567, "url": "https://www.trustradius.com/products/databricks/reviews", "max_rating": 10}
+      },
+      "scale-ai": {
+        "g2": {"rating": 4.4, "reviews": 87, "url": "https://www.g2.com/products/scale-ai/reviews"}
+      },
+      "weights-biases": {
+        "g2": {"rating": 4.8, "reviews": 342, "url": "https://www.g2.com/products/weights-biases/reviews"}
+      },
+      "deepl": {
+        "g2": {"rating": 4.6, "reviews": 567, "url": "https://www.g2.com/products/deepl/reviews"},
+        "capterra": {"rating": 4.8, "reviews": 1234, "url": "https://www.capterra.com/p/deepl/reviews"}
+      },
+      "otter-ai": {
+        "g2": {"rating": 4.4, "reviews": 892, "url": "https://www.g2.com/products/otter-ai/reviews"},
+        "capterra": {"rating": 4.3, "reviews": 654, "url": "https://www.capterra.com/p/otter-ai/reviews"}
+      },
+      "synthesia": {
+        "g2": {"rating": 4.7, "reviews": 432, "url": "https://www.g2.com/products/synthesia/reviews"}
+      },
+      "descript": {
+        "g2": {"rating": 4.5, "reviews": 654, "url": "https://www.g2.com/products/descript/reviews"},
+        "capterra": {"rating": 4.6, "reviews": 876, "url": "https://www.capterra.com/p/descript/reviews"}
+      }
+    }
+  }
+}

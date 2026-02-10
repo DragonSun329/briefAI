@@ -100,6 +100,7 @@ export default function Backtest() {
   const [valDate, setValDate] = useState('2025-01-20')
   const [selectedRun, setSelectedRun] = useState(null)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
 
   const { data: runs, refetch: refetchRuns } = useApi('/api/backtest/runs')
   const { data: scorecard, loading: loadingScorecard } = useApi(
@@ -108,16 +109,26 @@ export default function Backtest() {
 
   const runBacktest = async () => {
     setLoading(true)
+    setError(null)
     try {
       const resp = await fetch(
         `/api/backtest/runs?prediction_date=${predDate}&validation_date=${valDate}&top_k=20`,
         { method: 'POST' }
       )
+      if (!resp.ok) {
+        const errText = await resp.text()
+        throw new Error(`HTTP ${resp.status}: ${errText}`)
+      }
       const data = await resp.json()
-      setSelectedRun(data.run_id)
-      refetchRuns()
+      if (data.run_id) {
+        setSelectedRun(data.run_id)
+        refetchRuns()
+      } else {
+        setError('No run_id in response')
+      }
     } catch (err) {
       console.error('Backtest failed:', err)
+      setError(err.message)
     } finally {
       setLoading(false)
     }
@@ -160,6 +171,11 @@ export default function Backtest() {
             {loading ? 'Running...' : 'Run Backtest'}
           </button>
         </div>
+        {error && (
+          <div className="mt-3 p-3 bg-red-50 text-red-700 rounded">
+            Error: {error}
+          </div>
+        )}
       </div>
 
       {/* Previous Runs */}

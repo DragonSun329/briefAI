@@ -65,6 +65,9 @@ class HypeManAgent:
     """
     The Bull - identifies breakout velocity and adoption signals.
 
+    Implements the BaseAgent interface via card + async run(),
+    while keeping the legacy analyze() method for backward compat.
+
     Input Data Sources:
     - GitHub stars/forks from github_enhanced_scraper
     - HuggingFace downloads/likes from huggingface_scraper
@@ -85,6 +88,38 @@ class HypeManAgent:
         self.use_fallback = use_fallback
         self.provider_switcher = None
         self.system_prompt = HYPEMAN_SYSTEM_PROMPT
+
+    @property
+    def card(self):
+        """Agent capability card for discovery/registration."""
+        from agents.base import AgentCard
+        return AgentCard(
+            agent_id="hypeman",
+            name="Hype-Man (The Bull)",
+            description="Identifies breakout velocity and adoption signals for trending AI entities",
+            input_schema={"entity_name": "str", "signals": "dict (optional)"},
+            output_schema={"bull_thesis": "str", "momentum_signals": "list", "technical_velocity_score": "int"},
+            capabilities=["momentum_analysis", "adoption_scoring", "signal_gathering"],
+            model_task="adversarial_analysis",
+        )
+
+    async def run(self, input):
+        """
+        BaseAgent-compatible async entry point.
+
+        Args:
+            input: AgentInput with entity_name and optional signals.
+
+        Returns:
+            AgentOutput with HypeMan analysis results.
+        """
+        from agents.base import AgentOutput
+        result = self.analyze(input.entity_name, signals=input.signals or None)
+        return AgentOutput(
+            agent_id="hypeman",
+            status="completed",
+            data=result.to_dict(),
+        )
 
     def _get_provider_switcher(self):
         """Lazy load provider switcher with free model fallback."""

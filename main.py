@@ -67,8 +67,8 @@ class BriefingAgent:
         tier1_threshold = float(os.getenv('TIER1_SCORE_THRESHOLD', '3.0'))
         self.article_filter = ArticleFilter(score_threshold=tier1_threshold)
 
-        # Tier 2: Batch evaluate (increased batch size from 10 to 15 for 15% speed improvement)
-        tier2_batch_size = int(os.getenv('TIER2_BATCH_SIZE', '15'))
+        # Tier 2: Batch evaluate (reduced to 5 for free model compatibility)
+        tier2_batch_size = int(os.getenv('TIER2_BATCH_SIZE', '5'))
         tier2_pass_score = float(os.getenv('TIER2_PASS_SCORE', '6.0'))
         self.batch_evaluator = BatchEvaluator(
             llm_client=self.llm_client,
@@ -1035,7 +1035,7 @@ Examples:
     parser.add_argument(
         '--pipelines',
         nargs='+',
-        choices=['news', 'product', 'investing'],
+        choices=['news', 'product', 'investing', 'china_ai', 'research'],
         help='Specific pipelines to run in multi-pipeline mode (default: all enabled)'
     )
 

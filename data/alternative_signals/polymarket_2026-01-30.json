@@ -1,0 +1,58 @@
+{
+  "scraped_at": "2026-01-30T10:01:24.156084",
+  "total_markets": 500,
+  "ai_markets": 3,
+  "markets": [
+    {
+      "id": "546612",
+      "question": "Will OpenAI launch a new consumer hardware product by March 31, 2026?",
+      "description": "This market will resolve to \"Yes\" if OpenAI publicly announces and launches a new consumer hardware product by March 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\". \n\nA \"consumer hardware product\" is defined as a physical device intended for direct use by individual consumers, rather than enterprise or developer tools. The product must be newly introduced and not a rebrand, update, or iteration of any previously released device.\n\nExamples that would qualify include an AI-powe",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_probabilities": {
+        "Yes": 9.35,
+        "No": 90.64999999999999
+      },
+      "volume": 47066.34837,
+      "volume_24h": 38.53,
+      "liquidity": 5504.86998,
+      "start_date": "2025-05-22T14:50:07.243348Z",
+      "end_date": null,
+      "slug": "will-openai-launch-a-new-consumer-hardware-product-by-march-31-2026",
+      "active": true,
+      "spread": 0.031,
+      "bucket": "llm-foundation"
+    }
+  ],
+  "bucket_signals": {
+    "llm-foundation": {
+      "market_count": 1,
+      "total_volume": 47066.34837,
+      "total_liquidity": 5504.86998,
+      "total_confidence": 38264.94122481,
+      "bullish_confidence": 0,
+      "bearish_confidence": 38264.94122481,
+      "markets": [
+        {
+          "question": "Will OpenAI launch a new consumer hardware product by March 31, 2026?",
+          "volume": 47066.34837,
+          "outcome_probabilities": {
+            "Yes": 9.35,
+            "No": 90.64999999999999
+          },
+          "sentiment": {
+            "yes_probability": 9.35,
+            "direction": "bearish",
+            "sentiment_score": 0.813,
+            "confidence_score": 38264.94122481,
+            "volume": 47066.34837
+          }
+        }
+      ],
+      "weighted_sentiment": -1.0,
+      "signal_interpretation": "Strong bearish consensus"
+    }
+  }
+}

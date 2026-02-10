@@ -1,0 +1,559 @@
+{
+  "date": "2026-02-09",
+  "generated_at": "2026-02-10T10:41:59.685363",
+  "version": "2.1",
+  "summary": {
+    "total_metas": 2,
+    "total_bundles": 2,
+    "total_hypotheses": 3,
+    "top_mechanisms": {
+      "distribution_shift": 1,
+      "null_hypothesis": 1
+    },
+    "metas_requiring_review": 2
+  },
+  "bundles": [
+    {
+      "meta_id": "52f11143cbd4",
+      "concept_slug": "f869cf725b27",
+      "concept_name": "Mixed Signals Review",
+      "maturity_stage": "emerging",
+      "hypotheses": [
+        {
+          "hypothesis_id": "66a137e1d3439066",
+          "title": "Emerging Distribution Channel Shifting",
+          "mechanism": "distribution_shift",
+          "claim": "Mixed Signals Review indicates changing distribution channels reshaping market access.",
+          "why_now": "Signal is accelerating, emerging pattern.",
+          "evidence_used": {
+            "supporting_signals": [
+              "79f88a9ab05a",
+              "406761560557",
+              "709bc63a75a5",
+              "399bf415e1ce"
+            ],
+            "source_categories": [
+              "media"
+            ],
+            "key_entities": [
+              "opus",
+              "china",
+              "anthropic",
+              "claude",
+              "api"
+            ],
+            "key_quotes": [
+              "Rolls fast mode cost dynamics shifting in ai market",
+              "Unveils pay-per-use pricing cost dynamics shifting in ai market"
+            ]
+          },
+          "predicted_next_signals": [
+            {
+              "category": "financial",
+              "description": "Partnership announcements or revenue share changes indicating increase or decline",
+              "example_sources": [
+                "sec",
+                "press_release",
+                "earnings_call"
+              ],
+              "expected_timeframe_days": 14,
+              "metric": "revenue",
+              "direction": "change",
+              "speculative": true,
+              "canonical_metric": "arr",
+              "observable_query": {
+                "source": "sec",
+                "query": "filings:{entity} type:{filing_type}",
+                "aggregation": "sum",
+                "window_days": 14,
+                "expected_direction": "up"
+              }
+            },
+            {
+              "category": "technical",
+              "description": "New API integrations or platform releases indicating increase or decline",
+              "example_sources": [
+                "github",
+                "company_blog",
+                "docs"
+              ],
+              "expected_timeframe_days": 14,
+              "metric": "api",
+              "direction": "change",
+              "speculative": true,
+              "canonical_metric": "api_release",
+              "observable_query": {
+                "source": "github",
+                "query": "repo:{entity} metric:api_release",
+                "aggregation": "count",
+                "window_days": 14,
+                "expected_direction": "up"
+              }
+            }
+          ],
+          "falsifiers": [
+            "Direct channels outperform partnerships",
+            "Platform terms become unfavorable",
+            "User preference for standalone products"
+          ],
+          "confidence": 0.278,
+          "confidence_breakdown": {
+            "base_from_meta_confidence": 0.248,
+            "diversity_bonus": 0.05,
+            "persistence_bonus": 0.02,
+            "independence_bonus": 0.04,
+            "specificity_bonus": 0.02,
+            "penalties_applied": [
+              "weak_mechanism:-0.1"
+            ],
+            "final": 0.278
+          },
+          "review_required": true,
+          "debug": {
+            "rules_fired": [
+              "base_from_meta:0.45",
+              "category_diversity:1",
+              "persistence_days:1",
+              "independence:0.40",
+              "mechanism_hits:1",
+              "penalty:weak_mechanism"
+            ],
+            "scoring_terms": {
+              "meta_confidence": 0.45,
+              "category_count": 1,
+              "persistence_days": 1,
+              "independence_score": 0.4,
+              "evidence_strength": 0.33
+            },
+            "mechanism_keyword_hits": 1,
+            "mechanism_keywords_matched": [
+              "api"
+            ]
+          },
+          "mechanism_trace": {
+            "candidate_scores": {
+              "distribution_shift": 1
+            },
+            "matched_terms": [
+              "api"
+            ],
+            "evidence_sources": [
+              "signal_name",
+              "entity_tags"
+            ],
+            "selection_reason": "best_available",
+            "evidence_sources_primary": [
+              "signal_name",
+              "entity_tags"
+            ]
+          },
+          "confidence_inputs": {
+            "meta_confidence_raw": 0.45,
+            "meta_to_hypothesis_scaling": 0.55
+          },
+          "confidence_debug": {
+            "base_scaled": 0.2475,
+            "base_raw": 0.45,
+            "scaling_factor": 0.55
+          },
+          "falsifiers_v2": [
+            {
+              "text": "Direct channels outperform partnerships",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            },
+            {
+              "text": "Platform terms become unfavorable",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            },
+            {
+              "text": "User preference for standalone products",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            }
+          ]
+        },
+        {
+          "hypothesis_id": "79e142730eed5085",
+          "title": "Alternative: Media Attention Spike",
+          "mechanism": "media_attention_spike",
+          "claim": "Mixed Signals Review shows elevated media attention without clear underlying mechanism.",
+          "why_now": "Signal is accelerating, emerging pattern.",
+          "evidence_used": {
+            "supporting_signals": [
+              "79f88a9ab05a",
+              "406761560557",
+              "709bc63a75a5",
+              "399bf415e1ce"
+            ],
+            "source_categories": [
+              "media"
+            ],
+            "key_entities": [
+              "opus",
+              "china",
+              "anthropic",
+              "claude",
+              "api"
+            ],
+            "key_quotes": [
+              "Rolls fast mode cost dynamics shifting in ai market",
+              "Unveils pay-per-use pricing cost dynamics shifting in ai market"
+            ]
+          },
+          "predicted_next_signals": [
+            {
+              "category": "media",
+              "description": "Continued coverage or follow-up stories (watch for metric changes) indicating increase or decline",
+              "example_sources": [
+                "techmeme",
+                "twitter",
+                "reddit"
+              ],
+              "expected_timeframe_days": 7,
+              "metric": "metric",
+              "direction": "change",
+              "speculative": true,
+              "canonical_metric": "custom_metric",
+              "observable_query": {
+                "source": "techmeme",
+                "query": "search:custom_metric",
+                "aggregation": "count",
+                "window_days": 7,
+                "expected_direction": "up"
+              }
+            },
+            {
+              "category": "social",
+              "description": "Social engagement metrics and discussions indicating increase or decline",
+              "example_sources": [
+                "twitter",
+                "reddit",
+                "hackernews"
+              ],
+              "expected_timeframe_days": 7,
+              "metric": "metric",
+              "direction": "change",
+              "speculative": true,
+              "canonical_metric": "custom_metric",
+              "observable_query": {
+                "source": "twitter",
+                "query": "keyword:custom_metric from:{entity}",
+                "aggregation": "count",
+                "window_days": 7,
+                "expected_direction": "up"
+              }
+            }
+          ],
+          "falsifiers": [
+            "Attention fades without substantive developments",
+            "Story debunked or corrected",
+            "Other events dominate news cycle"
+          ],
+          "confidence": 0.278,
+          "confidence_breakdown": {
+            "base_from_meta_confidence": 0.248,
+            "diversity_bonus": 0.05,
+            "persistence_bonus": 0.02,
+            "independence_bonus": 0.04,
+            "specificity_bonus": 0.02,
+            "penalties_applied": [
+              "weak_mechanism:-0.1"
+            ],
+            "final": 0.278
+          },
+          "review_required": true,
+          "debug": {
+            "rules_fired": [
+              "base_from_meta:0.45",
+              "category_diversity:1",
+              "persistence_days:1",
+              "independence:0.40",
+              "mechanism_hits:1",
+              "penalty:weak_mechanism"
+            ],
+            "scoring_terms": {
+              "meta_confidence": 0.45,
+              "category_count": 1,
+              "persistence_days": 1,
+              "independence_score": 0.4,
+              "evidence_strength": 0.33
+            },
+            "mechanism_keyword_hits": 1,
+            "mechanism_keywords_matched": [
+              "media"
+            ]
+          },
+          "mechanism_trace": {
+            "candidate_scores": {
+              "media_attention_spike": 1
+            },
+            "matched_terms": [
+              "media-only",
+              "weak-mechanism"
+            ],
+            "evidence_sources": [
+              "structural_analysis"
+            ],
+            "selection_reason": "competing_null_hypothesis:weak_evidence",
+            "evidence_sources_secondary": [
+              "structural_analysis"
+            ]
+          },
+          "confidence_inputs": {
+            "meta_confidence_raw": 0.45,
+            "meta_to_hypothesis_scaling": 0.55
+          },
+          "confidence_debug": {
+            "base_scaled": 0.2475,
+            "base_raw": 0.45,
+            "scaling_factor": 0.55
+          },
+          "falsifiers_v2": [
+            {
+              "text": "Attention fades without substantive developments",
+              "observable": {
+                "metric": "keyword_frequency",
+                "direction": "down",
+                "window_days": 7,
+                "available": true
+              }
+            },
+            {
+              "text": "Story debunked or corrected",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            },
+            {
+              "text": "Other events dominate news cycle",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            }
+          ]
+        }
+      ],
+      "selected_hypothesis_id": "66a137e1d3439066",
+      "bundle_confidence": 0.278,
+      "generated_at": "2026-02-10T10:41:59.684680",
+      "version": "2.1",
+      "what_to_watch_next": [
+        "Partnership announcements or revenue share changes indicating increase or decline",
+        "New API integrations or platform releases indicating increase or decline",
+        "Continued coverage or follow-up stories"
+      ],
+      "watch_items": [
+        {
+          "description": "Partnership announcements or revenue share changes indicating increase or decline",
+          "watch_priority_score": 0.5388,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.28",
+            "measurable:True",
+            "timeframe:14d"
+          ],
+          "timeframe_bucket": "14d"
+        },
+        {
+          "description": "New API integrations or platform releases indicating increase or decline",
+          "watch_priority_score": 0.5388,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.28",
+            "measurable:True",
+            "timeframe:14d"
+          ],
+          "timeframe_bucket": "14d"
+        },
+        {
+          "description": "Continued coverage or follow-up stories",
+          "watch_priority_score": 0.4888,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.28",
+            "measurable:False",
+            "timeframe:7d"
+          ],
+          "timeframe_bucket": "7d"
+        }
+      ]
+    },
+    {
+      "meta_id": "8186e6034b36",
+      "concept_slug": "dc3dc2aa8662",
+      "concept_name": "Mixed Signals Review",
+      "maturity_stage": "emerging",
+      "hypotheses": [
+        {
+          "hypothesis_id": "db11c15e09ac397b",
+          "title": "Emerging Noise / Insufficient",
+          "mechanism": "null_hypothesis",
+          "claim": "Mixed Signals Review lacks clear causal mechanism; may be noise or early signal.",
+          "why_now": "Signal is accelerating, emerging pattern, from independent sources.",
+          "evidence_used": {
+            "supporting_signals": [
+              "5ea6131d17bb",
+              "93edcce77570",
+              "b9adcb79e600"
+            ],
+            "source_categories": [
+              "financial",
+              "media"
+            ],
+            "key_entities": [
+              "section",
+              "meta",
+              "google",
+              "china",
+              "us",
+              "apple's",
+              "pro",
+              "alphabet",
+              "apple",
+              "amazon"
+            ],
+            "key_quotes": [
+              "Ai ecosystem dynamics shifting"
+            ]
+          },
+          "predicted_next_signals": [
+            {
+              "category": "media",
+              "description": "Monitor for substantive developments (watch for metric changes) indicating increase or decline",
+              "example_sources": [
+                "techmeme",
+                "twitter"
+              ],
+              "expected_timeframe_days": 7,
+              "metric": "metric",
+              "direction": "change",
+              "speculative": true,
+              "canonical_metric": "custom_metric",
+              "observable_query": {
+                "source": "techmeme",
+                "query": "search:custom_metric",
+                "aggregation": "count",
+                "window_days": 7,
+                "expected_direction": "up"
+              }
+            }
+          ],
+          "falsifiers": [
+            "Pattern resolves into clear mechanism",
+            "Additional corroborating signals emerge"
+          ],
+          "confidence": 0.343,
+          "confidence_breakdown": {
+            "base_from_meta_confidence": 0.248,
+            "diversity_bonus": 0.1,
+            "persistence_bonus": 0.02,
+            "independence_bonus": 0.075,
+            "specificity_bonus": 0.0,
+            "penalties_applied": [
+              "weak_mechanism:-0.1"
+            ],
+            "final": 0.343
+          },
+          "review_required": true,
+          "debug": {
+            "rules_fired": [
+              "base_from_meta:0.45",
+              "category_diversity:2",
+              "persistence_days:1",
+              "independence:0.75",
+              "mechanism_hits:0",
+              "penalty:weak_mechanism"
+            ],
+            "scoring_terms": {
+              "meta_confidence": 0.45,
+              "category_count": 2,
+              "persistence_days": 1,
+              "independence_score": 0.753,
+              "evidence_strength": 0.33
+            },
+            "mechanism_keyword_hits": 0,
+            "mechanism_keywords_matched": []
+          },
+          "mechanism_trace": {
+            "candidate_scores": {
+              "null_hypothesis": 0
+            },
+            "matched_terms": [],
+            "evidence_sources": [
+              "no_mechanism_match"
+            ],
+            "selection_reason": "null_hypothesis:no_mechanism_detected",
+            "evidence_sources_secondary": [
+              "no_mechanism_match"
+            ]
+          },
+          "confidence_inputs": {
+            "meta_confidence_raw": 0.45,
+            "meta_to_hypothesis_scaling": 0.55
+          },
+          "confidence_debug": {
+            "base_scaled": 0.2475,
+            "base_raw": 0.45,
+            "scaling_factor": 0.55
+          },
+          "falsifiers_v2": [
+            {
+              "text": "Pattern resolves into clear mechanism",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            },
+            {
+              "text": "Additional corroborating signals emerge",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            }
+          ]
+        }
+      ],
+      "selected_hypothesis_id": "db11c15e09ac397b",
+      "bundle_confidence": 0.343,
+      "generated_at": "2026-02-10T10:41:59.685315",
+      "version": "2.1",
+      "what_to_watch_next": [
+        "Monitor for substantive developments"
+      ],
+      "watch_items": [
+        {
+          "description": "Monitor for substantive developments",
+          "watch_priority_score": 0.5214,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.34",
+            "measurable:False",
+            "timeframe:7d"
+          ],
+          "timeframe_bucket": "7d"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-01-27T17:39:56.651687",
+  "rules": [
+    {
+      "id": "alpha_zone",
+      "name": "Alpha Zone (Hidden Gem)",
+      "description": "High technical momentum but low capital conviction - potential opportunity for early movers",
+      "conditions": {
+        "logic": "AND",
+        "conditions": [
+          {
+            "signal": "tms",
+            "operator": ">=",
+            "value": 85
+          },
+          {
+            "signal": "ccs",
+            "operator": "<=",
+            "value": 35
+          }
+        ]
+      },
+      "alert_type": "divergence",
+      "severity": "high",
+      "category": "opportunity",
+      "channels": [
+        "discord",
+        "file"
+      ],
+      "entity_filter": null,
+      "entity_whitelist": [],
+      "entity_blacklist": [],
+      "enabled": true,
+      "priority": 80,
+      "cooldown_hours": 48,
+      "active_hours": null,
+      "title_template": "{entity_name}: Hidden Gem Detected 💎",
+      "message_template": "Strong technical adoption (TMS: {tms:.0f}) without proportional funding (CCS: {ccs:.0f}). Potential early-stage opportunity.",
+      "created_at": "2026-01-27T17:39:36.407678",
+      "updated_at": "2026-01-27T17:39:36.407680",
+      "created_by": "system",
+      "times_triggered": 5,
+      "last_triggered": "2026-01-27T17:39:56.644447"
+    },
+    {
+      "id": "hype_zone",
+      "name": "Hype Zone Warning",
+      "description": "High narrative attention but weak technical fundamentals - potential overvaluation risk",
+      "conditions": {
+        "logic": "AND",
+        "conditions": [
+          {
+            "signal": "nas",
+            "operator": ">=",
+            "value": 80
+          },
+          {
+            "signal": "tms",
+            "operator": "<=",
+            "value": 40
+          }
+        ]
+      },
+      "alert_type": "divergence",
+      "severity": "high",
+      "category": "risk",
+      "channels": [
+        "discord",
+        "file"
+      ],
+      "entity_filter": null,
+      "entity_whitelist": [],
+      "entity_blacklist": [],
+      "enabled": true,
+      "priority": 80,
+      "cooldown_hours": 48,
+      "active_hours": null,
+      "title_template": "{entity_name}: Hype Zone Alert ⚠️",
+      "message_template": "High media buzz (NAS: {nas:.0f}) without technical substance (TMS: {tms:.0f}). Exercise caution.",
+      "created_at": "2026-01-27T17:39:36.407701",
+      "updated_at": "2026-01-27T17:39:36.407701",
+      "created_by": "system",
+      "times_triggered": 0,
+      "last_triggered": null
+    },
+    {
+      "id": "momentum_surge",
+      "name": "Momentum Surge",
+      "description": "Significant positive momentum detected - trend acceleration",
+      "conditions": {
+        "logic": "AND",
+        "conditions": [
+          {
+            "signal": "momentum_7d",
+            "operator": ">=",
+            "value": 30
+          }
+        ]
+      },
+      "alert_type": "momentum",
+      "severity": "medium",
+      "category": "opportunity",
+      "channels": [
+        "file"
+      ],
+      "entity_filter": null,
+      "entity_whitelist": [],
+      "entity_blacklist": [],
+      "enabled": true,
+      "priority": 60,
+      "cooldown_hours": 24,
+      "active_hours": null,
+      "title_template": "{entity_name}: Momentum Surge 📈",
+      "message_template": "7-day momentum is {momentum_7d:+.1f}%. Strong upward trend detected.",
+      "created_at": "2026-01-27T17:39:36.407713",
+      "updated_at": "2026-01-27T17:39:36.407714",
+      "created_by": "system",
+      "times_triggered": 2,
+      "last_triggered": "2026-01-27T17:39:47.428357"
+    },
+    {
+      "id": "momentum_crash",
+      "name": "Momentum Crash",
+      "description": "Significant negative momentum detected - potential decline",
+      "conditions": {
+        "logic": "AND",
+        "conditions": [
+          {
+            "signal": "momentum_7d",
+            "operator": "<=",
+            "value": -30
+          }
+        ]
+      },
+      "alert_type": "momentum",
+      "severity": "high",
+      "category": "risk",
+      "channels": [
+        "discord",
+        "file"
+      ],
+      "entity_filter": null,
+      "entity_whitelist": [],
+      "entity_blacklist": [],
+      "enabled": true,
+      "priority": 75,
+      "cooldown_hours": 24,
+      "active_hours": null,
+      "title_template": "{entity_name}: Momentum Crash 📉",
+      "message_template": "7-day momentum is {momentum_7d:+.1f}%. Sharp decline detected.",
+      "created_at": "2026-01-27T17:39:36.407721",
+      "updated_at": "2026-01-27T17:39:36.407721",
+      "created_by": "system",
+      "times_triggered": 0,
+      "last_triggered": null
+    },
+    {
+      "id": "enterprise_breakout",
+      "name": "Enterprise Breakout",
+      "description": "Enterprise adoption surge with strong fundamentals - major opportunity",
+      "conditions": {
+        "logic": "AND",
+        "conditions": [
+          {
+            "signal": "eis",
+            "operator": ">=",
+            "value": 75
+          },
+          {
+            "signal": "tms",
+            "operator": ">=",
+            "value": 65
+          }
+        ]
+      },
+      "alert_type": "divergence",
+      "severity": "critical",
+      "category": "opportunity",
+      "channels": [
+        "discord",
+        "email",
+        "file"
+      ],
+      "entity_filter": null,
+      "entity_whitelist": [],
+      "entity_blacklist": [],
+      "enabled": true,
+      "priority": 90,
+      "cooldown_hours": 72,
+      "active_hours": null,
+      "title_template": "{entity_name}: Enterprise Breakout 🚀",
+      "message_template": "Strong enterprise adoption (EIS: {eis:.0f}) backed by solid technical momentum (TMS: {tms:.0f}). High conviction signal.",
+      "created_at": "2026-01-27T17:39:36.407729",
+      "updated_at": "2026-01-27T17:39:36.407729",
+      "created_by": "system",
+      "times_triggered": 6,
+      "last_triggered": "2026-01-27T17:39:56.636785"
+    },
+    {
+      "id": "high_divergence",
+      "name": "High Signal Divergence",
+      "description": "Large divergence between signal types - requires investigation",
+      "conditions": {
+        "logic": "AND",
+        "conditions": [
+          {
+            "signal": "divergence_score",
+            "operator": ">=",
+            "value": 0.5
+          }
+        ]
+      },
+      "alert_type": "divergence",
+      "severity": "medium",
+      "category": "watch",
+      "channels": [
+        "file"
+      ],
+      "entity_filter": null,
+      "entity_whitelist": [],
+      "entity_blacklist": [],
+      "enabled": true,
+      "priority": 50,
+      "cooldown_hours": 24,
+      "active_hours": null,
+      "title_template": "{entity_name}: Signal Divergence",
+      "message_template": "Significant divergence detected between signal categories (score: {divergence_score:.2f}). Further analysis recommended.",
+      "created_at": "2026-01-27T17:39:36.407735",
+      "updated_at": "2026-01-27T17:39:36.407736",
+      "created_by": "system",
+      "times_triggered": 2,
+      "last_triggered": "2026-01-27T17:39:47.436310"
+    },
+    {
+      "id": "capital_inflow",
+      "name": "Capital Conviction Spike",
+      "description": "Sudden increase in funding/capital signals",
+      "conditions": {
+        "logic": "AND",
+        "conditions": [
+          {
+            "signal": "ccs",
+            "operator": ">=",
+            "value": 80
+          }
+        ]
+      },
+      "alert_type": "threshold",
+      "severity": "medium",
+      "category": "informational",
+      "channels": [
+        "file"
+      ],
+      "entity_filter": null,
+      "entity_whitelist": [],
+      "entity_blacklist": [],
+      "enabled": true,
+      "priority": 55,
+      "cooldown_hours": 72,
+      "active_hours": null,
+      "title_template": "{entity_name}: Strong Capital Signal",
+      "message_template": "Capital Conviction Signal at {ccs:.0f}. Significant funding/investor activity detected.",
+      "created_at": "2026-01-27T17:39:36.407742",
+      "updated_at": "2026-01-27T17:39:36.407742",
+      "created_by": "system",
+      "times_triggered": 0,
+      "last_triggered": null
+    },
+    {
+      "id": "technical_leader",
+      "name": "Technical Leadership",
+      "description": "Exceptional technical momentum - category leader",
+      "conditions": {
+        "logic": "AND",
+        "conditions": [
+          {
+            "signal": "tms",
+            "operator": ">=",
+            "value": 90
+          }
+        ]
+      },
+      "alert_type": "threshold",
+      "severity": "high",
+      "category": "opportunity",
+      "channels": [
+        "discord",
+        "file"
+      ],
+      "entity_filter": null,
+      "entity_whitelist": [],
+      "entity_blacklist": [],
+      "enabled": true,
+      "priority": 70,
+      "cooldown_hours": 168,
+      "active_hours": null,
+      "title_template": "{entity_name}: Technical Leader 🏆",
+      "message_template": "Technical Momentum Signal at {tms:.0f}. Industry-leading developer adoption and technical activity.",
+      "created_at": "2026-01-27T17:39:36.407748",
+      "updated_at": "2026-01-27T17:39:36.407748",
+      "created_by": "system",
+      "times_triggered": 5,
+      "last_triggered": "2026-01-27T17:39:56.651583"
+    },
+    {
+      "id": "funding_no_tech",
+      "name": "Funding Without Tech Traction",
+      "description": "High funding but low technical adoption - burn risk",
+      "conditions": {
+        "logic": "AND",
+        "conditions": [
+          {
+            "signal": "ccs",
+            "operator": ">=",
+            "value": 70
+          },
+          {
+            "signal": "tms",
+            "operator": "<=",
+            "value": 30
+          }
+        ]
+      },
+      "alert_type": "divergence",
+      "severity": "high",
+      "category": "risk",
+      "channels": [
+        "discord",
+        "file"
+      ],
+      "entity_filter": null,
+      "entity_whitelist": [],
+      "entity_blacklist": [],
+      "enabled": true,
+      "priority": 75,
+      "cooldown_hours": 72,
+      "active_hours": null,
+      "title_template": "{entity_name}: Funding-Tech Mismatch 💰⚠️",
+      "message_template": "Strong funding signals (CCS: {ccs:.0f}) but weak technical traction (TMS: {tms:.0f}). Potential burn rate concern.",
+      "created_at": "2026-01-27T17:39:36.407754",
+      "updated_at": "2026-01-27T17:39:36.407754",
+      "created_by": "system",
+      "times_triggered": 0,
+      "last_triggered": null
+    },
+    {
+      "id": "composite_top",
+      "name": "Top Composite Score",
+      "description": "Entity reaches top-tier composite score",
+      "conditions": {
+        "logic": "AND",
+        "conditions": [
+          {
+            "signal": "composite_score",
+            "operator": ">=",
+            "value": 85
+          }
+        ]
+      },
+      "alert_type": "threshold",
+      "severity": "medium",
+      "category": "informational",
+      "channels": [
+        "file"
+      ],
+      "entity_filter": null,
+      "entity_whitelist": [],
+      "entity_blacklist": [],
+      "enabled": true,
+      "priority": 50,
+      "cooldown_hours": 168,
+      "active_hours": null,
+      "title_template": "{entity_name}: Elite Status 🌟",
+      "message_template": "Composite score reached {composite_score:.0f}. Top-tier entity across all signal dimensions.",
+      "created_at": "2026-01-27T17:39:36.407759",
+      "updated_at": "2026-01-27T17:39:36.407759",
+      "created_by": "system",
+      "times_triggered": 1,
+      "last_triggered": "2026-01-27T17:39:56.575571"
+    }
+  ]
+}

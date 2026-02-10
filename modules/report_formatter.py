@@ -16,6 +16,7 @@ from dotenv import load_dotenv
 
 from utils.llm_client_enhanced import LLMClient
 from utils.scoring_engine import ScoringEngine
+from utils.market_context import MarketContext
 
 load_dotenv()
 
@@ -48,6 +49,7 @@ class ReportFormatter:
         self.company_context = company_context or {}
         self.include_5d_scores = include_5d_scores
         self.scoring_engine = ScoringEngine()
+        self.market_context = MarketContext()
 
         # Load company context from categories config if not provided
         if not self.company_context:
@@ -210,6 +212,13 @@ class ReportFormatter:
             business = self.company_context.get('business', '')
             context_info = f"\n\n**公司背景**: {business}"
 
+        # Add risk alerts from institutional outlook
+        risk_alerts = self.market_context.get_risk_alerts()
+        high_priority_risks = [r for r in risk_alerts if r.get('level') == 'high']
+        if high_priority_risks:
+            risk_text = "\n".join([f"⚠️ {r['title']}: {r['detail']}" for r in high_priority_risks])
+            context_info += f"\n\n**重要风险提示**:\n{risk_text}"
+
         system_prompt = f"""你是一位专业的高管简报撰写人,为CEO撰写每周AI行业概述。
 {context_info}
 
@@ -264,6 +273,11 @@ class ReportFormatter:
             business = self.company_context.get('business', '')
             focus_areas = self.company_context.get('focus_areas', [])
             context_info = f"\n\n**公司背景**: {business}\n**关注领域**: {', '.join(focus_areas)}"
+
+        # Add institutional market context
+        market_ctx = self.market_context.get_full_context_for_prompt()
+        if market_ctx:
+            context_info += f"\n\n**机构市场观点 (Goldman/JPM/BlackRock等)**:\n{market_ctx}"
 
         system_prompt = f"""你是一位战略分析师,从AI行业新闻中识别关键洞察。
 {context_info}

@@ -1,0 +1,79 @@
+# Model configuration for briefAI pipelines
+# Each pipeline/task can specify its preferred model and fallbacks
+
+defaults:
+  provider: openrouter
+  temperature: 0.3
+  max_tokens: 4096
+
+pipelines:
+  news:
+    # News evaluation needs good judgment but high throughput
+    primary:
+      provider: openrouter
+      model: anthropic/claude-haiku-4.5
+      temperature: 0.3
+      max_tokens: 4096
+    fallback:
+      provider: openrouter
+      model: google/gemini-2.0-flash-001
+      temperature: 0.3
+      max_tokens: 4096
+
+  product:
+    primary:
+      provider: openrouter
+      model: anthropic/claude-haiku-4.5
+      temperature: 0.3
+      max_tokens: 4096
+
+  investing:
+    # Investment analysis needs higher quality reasoning
+    primary:
+      provider: openrouter
+      model: anthropic/claude-sonnet-4
+      temperature: 0.2
+      max_tokens: 8192
+    fallback:
+      provider: openrouter
+      model: anthropic/claude-haiku-4.5
+      temperature: 0.3
+      max_tokens: 4096
+
+  china_ai:
+    primary:
+      provider: openrouter
+      model: anthropic/claude-haiku-4.5
+      temperature: 0.3
+      max_tokens: 4096
+
+tasks:
+  # Specific task overrides (used by agents, evaluators, etc.)
+  article_evaluation:
+    primary:
+      provider: openrouter
+      model: anthropic/claude-haiku-4.5
+      temperature: 0.2
+      max_tokens: 2048
+
+  deep_research:
+    primary:
+      provider: openrouter
+      model: anthropic/claude-sonnet-4
+      temperature: 0.3
+      max_tokens: 16384
+
+  entity_extraction:
+    primary:
+      provider: openrouter
+      model: google/gemini-2.0-flash-001
+      temperature: 0.1
+      max_tokens: 4096
+
+  adversarial_analysis:
+    # Arbiter needs strong reasoning
+    primary:
+      provider: openrouter
+      model: anthropic/claude-sonnet-4
+      temperature: 0.3
+      max_tokens: 8192

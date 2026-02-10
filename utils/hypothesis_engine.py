@@ -1,11 +1,28 @@
 """
-Hypothesis Engine v2.1 - Observability & Auditability Upgrade.
+Hypothesis Engine v2.3 - Prediction Verification Integration.
 
 Part of Gravity Engine v2.7: Predictive Foresight Layer.
 
 This module sits AFTER meta-signals are generated and BEFORE UI/report output.
 It converts structural meta-signals into testable causal hypotheses with
 predicted next signals.
+
+v2.3 Improvements:
+- Prediction Verification Integration: Auto-registers predictions for tracking
+- Calibration Feedback Loop: Predictions evaluated against observed data
+- register_predictions flag in run_hypothesis_engine()
+
+v2.2.1 Improvements:
+- Entity Binding Correctness: Concept entity is always primary in queries
+- Query Traceability: query_terms field shows exactly how query was built
+- Runtime Measurability: source availability check for measurable status
+- Anti-Hijack Guards: Prevents wrong entity substitution in observable queries
+
+v2.2 Improvements:
+- Measurable and measurable_reason fields on predictions
+- Deterministic query term resolution from meta context
+- No description mutation on observable gate failure
+- Template-provided canonical_metric and query_hints
 
 v2.1 Improvements:
 - Confidence Transparency: confidence_inputs + confidence_debug fields
@@ -56,6 +73,8 @@ from loguru import logger
 DEFAULT_TAXONOMY_PATH = Path(__file__).parent.parent / "config" / "mechanism_taxonomy.json"
 DEFAULT_ENTITY_REGISTRY_PATH = Path(__file__).parent.parent / "config" / "entity_registry.json"
 DEFAULT_OBSERVABLE_METRICS_PATH = Path(__file__).parent.parent / "config" / "observable_metrics.json"
+DEFAULT_SOURCE_CAPABILITIES_PATH = Path(__file__).parent.parent / "config" / "source_capabilities.json"
+DEFAULT_AMBIGUOUS_ENTITIES_PATH = Path(__file__).parent.parent / "config" / "ambiguous_entities.json"
 
 # Confidence formula weights
 CONFIDENCE_WEIGHTS = {
@@ -145,6 +164,9 @@ OBSERVABLE_TERMS = MEASURABLE_TERMS
 _TAXONOMY_CACHE = None
 _ENTITY_NAMES_CACHE = None
 _OBSERVABLE_METRICS_CACHE = None
+_SOURCE_CAPABILITIES_CACHE = None
+_AMBIGUOUS_ENTITIES_CACHE = None
+_ENTITY_REGISTRY_CACHE = None
 
 
 def load_mechanism_taxonomy(config_path: Path = None) -> Dict[str, Any]:
@@ -300,6 +322,223 @@ def get_source_query_template(source: str) -> Dict[str, Any]:
 
 
 # =============================================================================
+# SOURCE CAPABILITIES & ENTITY RESOLUTION (v2.2.1)
+# =============================================================================
+
+def load_source_capabilities(config_path: Path = None) -> Dict[str, Any]:
+    """Load source capabilities config with caching (v2.2.1)."""
+    global _SOURCE_CAPABILITIES_CACHE
+    
+    if _SOURCE_CAPABILITIES_CACHE is not None:
+        return _SOURCE_CAPABILITIES_CACHE
+    
+    if config_path is None:
+        config_path = DEFAULT_SOURCE_CAPABILITIES_PATH
+    
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            _SOURCE_CAPABILITIES_CACHE = json.load(f)
+            return _SOURCE_CAPABILITIES_CACHE
+    except Exception as e:
+        logger.warning(f"Failed to load source_capabilities.json: {e}")
+        return {'sources': {}, 'default_available': True}
+
+
+def load_ambiguous_entities(config_path: Path = None) -> Dict[str, Any]:
+    """Load ambiguous entities config with caching (v2.2.1)."""
+    global _AMBIGUOUS_ENTITIES_CACHE
+    
+    if _AMBIGUOUS_ENTITIES_CACHE is not None:
+        return _AMBIGUOUS_ENTITIES_CACHE
+    
+    if config_path is None:
+        config_path = DEFAULT_AMBIGUOUS_ENTITIES_PATH
+    
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            _AMBIGUOUS_ENTITIES_CACHE = json.load(f)
+            return _AMBIGUOUS_ENTITIES_CACHE
+    except Exception as e:
+        logger.debug(f"Could not load ambiguous_entities.json: {e}")
+        return {'ambiguous': {}, 'stopwords': []}
+
+
+def load_entity_registry(config_path: Path = None) -> Dict[str, Any]:
+    """Load full entity registry with caching (v2.2.1)."""
+    global _ENTITY_REGISTRY_CACHE
+    
+    if _ENTITY_REGISTRY_CACHE is not None:
+        return _ENTITY_REGISTRY_CACHE
+    
+    if config_path is None:
+        config_path = DEFAULT_ENTITY_REGISTRY_PATH
+    
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            _ENTITY_REGISTRY_CACHE = json.load(f)
+            return _ENTITY_REGISTRY_CACHE
+    except Exception as e:
+        logger.warning(f"Failed to load entity_registry.json: {e}")
+        return {}
+
+
+def is_source_supported(source: str) -> bool:
+    """
+    Check if a data source is available at runtime (v2.2.1).
+    
+    Args:
+        source: Source identifier (e.g., 'sec', 'github', 'twitter')
+    
+    Returns:
+        True if source is available for querying
+    """
+    capabilities = load_source_capabilities()
+    source_info = capabilities.get('sources', {}).get(source)
+    
+    if source_info is not None:
+        return source_info.get('available', False)
+    
+    return capabilities.get('default_available', False)
+
+
+def normalize_entity_name(name: str) -> str:
+    """
+    Normalize an entity name for matching (v2.2.1).
+    
+    Rules:
+    - lowercase
+    - strip punctuation
+    - remove common suffixes (inc, ai, labs, corp, co, llc)
+    
+    Args:
+        name: Raw entity name
+    
+    Returns:
+        Normalized name for matching
+    """
+    if not name:
+        return ''
+    
+    # Lowercase
+    normalized = name.lower().strip()
+    
+    # Strip punctuation
+    normalized = re.sub(r'[^\w\s-]', '', normalized)
+    
+    # Remove common suffixes
+    suffixes = ['inc', 'corp', 'ai', 'labs', 'co', 'llc', 'ltd', 'gmbh', 'ag']
+    words = normalized.split()
+    if words and words[-1] in suffixes:
+        words = words[:-1]
+    
+    normalized = ' '.join(words).strip()
+    
+    # Also remove suffix if it's part of the name (e.g., "openai" -> "open")
+    # But only for specific cases, not all
+    return normalized
+
+
+def extract_concept_entity(concept_name: str) -> Optional[str]:
+    """
+    Extract the canonical entity from a concept name (v2.2.1).
+    
+    Uses entity_registry to find the canonical entity key.
+    Handles disambiguation of product names to company names.
+    
+    Args:
+        concept_name: The meta-signal concept name (e.g., "NVIDIA Agent Chip Demand Surge")
+    
+    Returns:
+        Canonical entity key (e.g., "nvidia") or None if not resolvable
+    """
+    if not concept_name:
+        return None
+    
+    registry = load_entity_registry()
+    ambiguous = load_ambiguous_entities()
+    stopwords = set(ambiguous.get('stopwords', []))
+    ambiguous_map = ambiguous.get('ambiguous', {})
+    
+    # Normalize concept name
+    concept_lower = concept_name.lower()
+    concept_clean = re.sub(r'[^\w\s-]', ' ', concept_lower)
+    words = [w for w in concept_clean.split() if w not in stopwords and len(w) > 1]
+    
+    # Try to match each word against entity registry
+    for word in words:
+        normalized_word = normalize_entity_name(word)
+        
+        # Check if word is ambiguous (product name)
+        if normalized_word in ambiguous_map:
+            return ambiguous_map[normalized_word].get('disambiguation')
+        
+        # Direct match in registry keys
+        if normalized_word in registry and not normalized_word.startswith('_'):
+            return normalized_word
+        
+        # Check against aliases
+        for key, entity in registry.items():
+            if key.startswith('_'):
+                continue
+            
+            # Match canonical_key
+            if normalized_word == key:
+                return key
+            
+            # Match canonical_name (normalized)
+            if 'canonical_name' in entity:
+                if normalized_word == normalize_entity_name(entity['canonical_name']):
+                    return key
+            
+            # Match aliases
+            for alias in entity.get('aliases', []):
+                if normalized_word == normalize_entity_name(alias):
+                    return key
+            
+            # Match products (but return company, not product)
+            for product in entity.get('products', []):
+                if normalized_word == normalize_entity_name(product):
+                    return key
+    
+    return None
+
+
+def get_entity_frequency(entities: List[str]) -> Dict[str, int]:
+    """
+    Count entity frequency for priority resolution (v2.2.1).
+    
+    Args:
+        entities: List of entity names from supporting signals
+    
+    Returns:
+        Dict mapping normalized entity names to frequency counts
+    """
+    freq = Counter()
+    registry = load_entity_registry()
+    
+    for entity in entities:
+        normalized = normalize_entity_name(entity)
+        
+        # Try to canonicalize
+        if normalized in registry:
+            freq[normalized] += 1
+        else:
+            # Check aliases
+            for key, info in registry.items():
+                if key.startswith('_'):
+                    continue
+                aliases = [normalize_entity_name(a) for a in info.get('aliases', [])]
+                if normalized in aliases:
+                    freq[key] += 1
+                    break
+            else:
+                # Keep as-is
+                freq[normalized] += 1
+    
+    return dict(freq)
+
+
+# =============================================================================
 # DATA STRUCTURES
 # =============================================================================
 
@@ -353,24 +592,34 @@ class ConfidenceDebug:
 @dataclass
 class ObservableQuery:
     """
-    Machine-testable observable for a prediction (v2.1).
+    Machine-testable observable for a prediction (v2.1 + v2.2.1).
     
     Describes how the system WOULD test this prediction later.
+    
+    v2.2.1 additions:
+    - query_terms: Structured trace showing how query was constructed
+    - available: Whether the source is available at runtime
     """
     source: str                          # e.g., 'sec', 'github', 'linkedin'
     query: str                           # Query template filled in
     aggregation: str                     # e.g., 'count', 'sum', 'delta'
     window_days: int                     # Observation window
     expected_direction: str              # 'up', 'down', 'increase', 'decrease'
+    query_terms: Dict[str, Any] = field(default_factory=dict)  # v2.2.1: Trace
+    available: bool = True               # v2.2.1: Runtime source availability
     
     def to_dict(self) -> Dict[str, Any]:
-        return {
+        result = {
             'source': self.source,
             'query': self.query,
             'aggregation': self.aggregation,
             'window_days': self.window_days,
             'expected_direction': self.expected_direction,
+            'available': self.available,
         }
+        if self.query_terms:
+            result['query_terms'] = self.query_terms
+        return result
     
     @classmethod
     def from_dict(cls, d: Dict[str, Any]) -> 'ObservableQuery':
@@ -380,18 +629,24 @@ class ObservableQuery:
             aggregation=d.get('aggregation', 'count'),
             window_days=d.get('window_days', 14),
             expected_direction=d.get('expected_direction', 'up'),
+            query_terms=d.get('query_terms', {}),
+            available=d.get('available', True),
         )
 
 
 @dataclass
 class WatchItem:
     """
-    Structured watchlist item with priority scoring (v2.1).
+    Structured watchlist item with priority scoring (v2.1 + v2.2).
+    
+    v2.2: Added timeframe_days (numeric) alongside timeframe_bucket.
     """
     description: str
     watch_priority_score: float
     watch_priority_reason: List[str]
     timeframe_bucket: str                # '7d', '14d', '30d', '60d'
+    timeframe_days: int = 14             # v2.2: Numeric timeframe
+    measurable: bool = True              # v2.2: Whether underlying prediction is measurable
     
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -399,6 +654,8 @@ class WatchItem:
             'watch_priority_score': round(self.watch_priority_score, 4),
             'watch_priority_reason': self.watch_priority_reason,
             'timeframe_bucket': self.timeframe_bucket,
+            'timeframe_days': self.timeframe_days,
+            'measurable': self.measurable,
         }
     
     @classmethod
@@ -408,6 +665,8 @@ class WatchItem:
             watch_priority_score=d.get('watch_priority_score', 0.0),
             watch_priority_reason=d.get('watch_priority_reason', []),
             timeframe_bucket=d.get('timeframe_bucket', '14d'),
+            timeframe_days=d.get('timeframe_days', 14),
+            measurable=d.get('measurable', True),
         )
 
 
@@ -504,10 +763,25 @@ class MechanismTrace:
         )
 
 
+# =============================================================================
+# MEASURABLE REASON CODES (v2.2)
+# =============================================================================
+
+class MeasurableReason:
+    """Reason codes for why a prediction is/isn't measurable (v2.2 + v2.2.1)."""
+    OK = "ok"
+    NO_CANONICAL_METRIC_MATCH = "no_canonical_metric_match"
+    UNBOUND_PLACEHOLDERS = "unbound_placeholders"
+    INSUFFICIENT_QUERY_TERMS = "insufficient_query_terms"
+    UNSUPPORTED_SOURCE = "unsupported_source"
+    SOURCE_UNAVAILABLE = "source_unavailable"  # v2.2.1: Runtime source check
+    OBSERVABLE_GATE_FAILED = "observable_gate_failed"
+
+
 @dataclass
 class PredictedSignal:
     """
-    A predicted future signal to watch for (v2.0 + v2.1 enhanced).
+    A predicted future signal to watch for (v2.0 + v2.1 + v2.2 enhanced).
     
     v2.0 fields:
     - metric: Measurable variable to track
@@ -517,9 +791,13 @@ class PredictedSignal:
     v2.1 fields:
     - canonical_metric: Controlled vocabulary metric
     - observable_query: Machine-testable observable
+    
+    v2.2 fields:
+    - measurable: Whether this prediction has a testable observable
+    - measurable_reason: Reason code if not measurable
     """
     category: str                                # technical/social/financial/predictive/media
-    description: str                             # Concrete, observable description
+    description: str                             # Concrete, observable description (STABLE - never mutated)
     example_sources: List[str]                   # e.g., ['github', 'arxiv']
     expected_timeframe_days: int                 # 7/14/30/etc
     metric: str = ""                             # Measurable variable (v2.0)
@@ -527,6 +805,8 @@ class PredictedSignal:
     speculative: bool = False                    # Weak evidence marker (v2.0)
     canonical_metric: str = ""                   # Controlled vocabulary metric (v2.1)
     observable_query: Optional[ObservableQuery] = None  # v2.1
+    measurable: bool = True                      # v2.2: Whether this is testable
+    measurable_reason: str = MeasurableReason.OK # v2.2: Reason code
     
     def to_dict(self) -> Dict[str, Any]:
         result = {
@@ -547,6 +827,10 @@ class PredictedSignal:
             result['canonical_metric'] = self.canonical_metric
         if self.observable_query:
             result['observable_query'] = self.observable_query.to_dict()
+        # v2.2 fields
+        result['measurable'] = self.measurable
+        if self.measurable_reason != MeasurableReason.OK:
+            result['measurable_reason'] = self.measurable_reason
         return result
     
     @classmethod
@@ -564,6 +848,8 @@ class PredictedSignal:
             speculative=d.get('speculative', False),
             canonical_metric=d.get('canonical_metric', ''),
             observable_query=observable_query,
+            measurable=d.get('measurable', True),
+            measurable_reason=d.get('measurable_reason', MeasurableReason.OK),
         )
 
 
@@ -970,15 +1256,145 @@ def get_timeframe_bucket(days: int) -> str:
         return '60d'
 
 
+# =============================================================================
+# QUERY TERM RESOLUTION (v2.2 + v2.2.1)
+# =============================================================================
+
+def resolve_query_terms(
+    meta: Dict[str, Any],
+    mechanism_terms: List[str],
+    query_hints: List[str] = None,
+    max_entities: int = 3,
+    max_mechanism_terms: int = 6,
+    max_hints: int = 4,
+) -> Dict[str, Any]:
+    """
+    Resolve query terms from meta-signal context (v2.2 + v2.2.1).
+    
+    v2.2.1 Changes:
+    - Deterministic entity resolution with concept entity priority
+    - Concept entity from concept_name is ALWAYS the primary entity
+    - Anti-hijack: other entities cannot substitute concept entity
+    
+    Entity Priority Order:
+    1. Entity extracted from meta["concept_name"] via extract_concept_entity()
+    2. Most frequent entity across supporting signals
+    3. Fallback: first key_entity
+    
+    Args:
+        meta: Meta-signal dict
+        mechanism_terms: Matched mechanism keywords
+        query_hints: Optional hints from prediction template
+        max_entities: Maximum entities to extract
+        max_mechanism_terms: Maximum mechanism terms to include
+        max_hints: Maximum query hints to include
+    
+    Returns:
+        Dict with resolved terms:
+        - entities: List[str] - prioritized entities (concept entity first)
+        - primary_entity: str - the primary entity for queries (v2.2.1)
+        - concept_entity: Optional[str] - entity from concept_name (v2.2.1)
+        - mechanism_terms: List[str] - matched mechanism keywords
+        - query_hints: List[str] - template hints
+        - bucket_terms: List[str] - from meta bucket_tags
+        - all_keywords: List[str] - combined unique keywords
+    """
+    concept_name = meta.get('concept_name', '')
+    
+    # v2.2.1: Extract concept entity FIRST (this is the priority entity)
+    concept_entity = extract_concept_entity(concept_name)
+    
+    # Collect all entities from supporting insights
+    insight_entities = []
+    for insight in meta.get('supporting_insights', []):
+        for entity in insight.get('entities', []):
+            insight_entities.append(entity.lower().strip())
+    
+    # Get entity frequency for priority resolution
+    entity_freq = get_entity_frequency(insight_entities)
+    
+    # v2.2.1: Build entity list with strict priority
+    entities_list = []
+    seen_entities = set()
+    
+    # Priority 1: Concept entity (MUST be first if present)
+    if concept_entity:
+        entities_list.append(concept_entity)
+        seen_entities.add(concept_entity)
+    
+    # Priority 2: Most frequent entities from signals
+    sorted_by_freq = sorted(entity_freq.items(), key=lambda x: x[1], reverse=True)
+    for entity, _ in sorted_by_freq:
+        if entity not in seen_entities and len(entities_list) < max_entities:
+            entities_list.append(entity)
+            seen_entities.add(entity)
+    
+    # Priority 3: Fallback - raw insight entities
+    for entity in insight_entities:
+        normalized = normalize_entity_name(entity)
+        if normalized and normalized not in seen_entities and len(entities_list) < max_entities:
+            entities_list.append(normalized)
+            seen_entities.add(normalized)
+    
+    # v2.2.1: Primary entity is ALWAYS the first (concept entity if available)
+    primary_entity = entities_list[0] if entities_list else ''
+    
+    # Extract bucket terms from supporting insights
+    bucket_terms = set()
+    for insight in meta.get('supporting_insights', []):
+        for bucket in insight.get('buckets', []):
+            bucket_terms.add(bucket.lower().strip())
+    bucket_terms_list = list(bucket_terms)[:3]
+    
+    # Limit mechanism terms
+    mech_terms = [t.lower() for t in mechanism_terms[:max_mechanism_terms]]
+    
+    # Process query hints
+    hints = []
+    if query_hints:
+        hints = [h.lower().strip() for h in query_hints[:max_hints]]
+    
+    # Build combined unique keywords (prioritized order)
+    all_keywords = []
+    seen = set()
+    
+    # Priority: query_hints > mechanism_terms > bucket_terms
+    # (entities are handled separately for query binding)
+    for source_list in [hints, mech_terms, bucket_terms_list]:
+        for term in source_list:
+            if term not in seen and len(term) > 1:
+                all_keywords.append(term)
+                seen.add(term)
+    
+    return {
+        'entities': entities_list,
+        'primary_entity': primary_entity,       # v2.2.1
+        'concept_entity': concept_entity,       # v2.2.1
+        'mechanism_terms': mech_terms,
+        'query_hints': hints,
+        'bucket_terms': bucket_terms_list,
+        'all_keywords': all_keywords,
+    }
+
+
+def has_unbound_placeholders(query: str) -> bool:
+    """Check if a query string has unbound placeholders (v2.2)."""
+    return '{' in query or '}' in query
+
+
 def build_observable_query(
     category: str,
     metric: str,
     direction: str,
     sources: List[str],
     timeframe_days: int,
-) -> ObservableQuery:
+    resolved_terms: Dict[str, Any] = None,
+) -> Tuple[ObservableQuery, bool, str]:
     """
-    Build a machine-testable observable query (v2.1).
+    Build a machine-testable observable query (v2.1 + v2.2 + v2.2.1 enhanced).
+    
+    v2.2: Fully binds queries using resolved_terms. Returns measurable status.
+    v2.2.1: Adds query_terms trace, source availability check, anti-hijack guards.
     
     Args:
         category: Prediction category
@@ -986,12 +1402,22 @@ def build_observable_query(
         direction: Expected direction
         sources: Example sources list
         timeframe_days: Expected timeframe
+        resolved_terms: Dict from resolve_query_terms()
     
     Returns:
-        ObservableQuery object
+        Tuple of (ObservableQuery, measurable: bool, measurable_reason: str)
     """
     # Get canonical metric
     canonical, _ = get_canonical_metric(metric, category)
+    
+    # Track measurability
+    measurable = True
+    measurable_reason = MeasurableReason.OK
+    
+    # Check for custom_metric fallback
+    if canonical == 'custom_metric':
+        measurable = False
+        measurable_reason = MeasurableReason.NO_CANONICAL_METRIC_MATCH
     
     # Get defaults for this metric
     defaults = get_metric_defaults(canonical, category)
@@ -999,12 +1425,81 @@ def build_observable_query(
     # Determine source (prefer from sources list, fallback to defaults)
     source = sources[0] if sources else defaults.get('default_source', 'unknown')
     
+    # v2.2.1: Check source availability
+    source_available = is_source_supported(source)
+    
     # Get query template
     template_info = get_source_query_template(source)
     query_template = template_info.get('query_template', 'search:{keyword}')
     
-    # Fill in template
-    query = query_template.replace('{keyword}', canonical).replace('{metric}', canonical)
+    # Resolve terms if not provided
+    if resolved_terms is None:
+        resolved_terms = {
+            'entities': [],
+            'primary_entity': '',
+            'concept_entity': None,
+            'mechanism_terms': [],
+            'query_hints': [],
+            'bucket_terms': [],
+            'all_keywords': [canonical],
+        }
+    
+    # Build fully-bound query
+    query = query_template
+    
+    # v2.2.1: Use primary_entity (guaranteed to be concept entity if available)
+    entity = resolved_terms.get('primary_entity', '')
+    if not entity:
+        entity = resolved_terms['entities'][0] if resolved_terms['entities'] else ''
+    
+    # Get keywords for query (combine hints and mechanism terms)
+    keywords = resolved_terms['all_keywords'][:6]
+    
+    # Build keyword group
+    if keywords:
+        keyword_group = ' OR '.join(keywords)
+        if len(keywords) > 1:
+            keyword_group = f"({keyword_group})"
+    else:
+        keyword_group = canonical
+    
+    # Substitute placeholders
+    query = query.replace('{entity}', entity)
+    query = query.replace('{keyword}', keyword_group)
+    query = query.replace('{metric}', canonical)
+    query = query.replace('{category}', category)
+    
+    # Handle special source templates
+    if source == 'sec':
+        # SEC filings: (keywords) AND (entity) if entity present
+        if entity and keywords:
+            query = f"({keyword_group}) AND ({entity})"
+        elif keywords:
+            query = keyword_group
+        else:
+            query = canonical
+        query = query.replace('{filing_type}', '10-K OR 10-Q OR 8-K')
+    
+    # Final placeholder guard (v2.2)
+    if has_unbound_placeholders(query):
+        measurable = False
+        measurable_reason = MeasurableReason.UNBOUND_PLACEHOLDERS
+        # Strip remaining placeholders to produce valid query
+        query = re.sub(r'\{[^}]+\}', '', query).strip()
+        query = re.sub(r'\s+', ' ', query)  # Clean up whitespace
+        if not query:
+            query = canonical
+    
+    # Check if we have enough terms
+    if not keywords and not entity:
+        if measurable:  # Don't override more specific reason
+            measurable = False
+            measurable_reason = MeasurableReason.INSUFFICIENT_QUERY_TERMS
+    
+    # v2.2.1: Check source availability for measurability
+    if not source_available and measurable:
+        measurable = False
+        measurable_reason = MeasurableReason.SOURCE_UNAVAILABLE
     
     # Determine aggregation
     aggregation = defaults.get('default_aggregation', 'count')
@@ -1012,13 +1507,29 @@ def build_observable_query(
     # Normalize direction
     expected_direction = normalize_direction(direction)
     
-    return ObservableQuery(
+    # v2.2.1: Build query_terms trace for explainability
+    query_terms = {
+        'entities': resolved_terms.get('entities', []),
+        'primary_entity': entity,
+        'concept_entity': resolved_terms.get('concept_entity'),
+        'mechanism_terms': resolved_terms.get('mechanism_terms', []),
+        'query_hints': resolved_terms.get('query_hints', []),
+        'bucket_terms': resolved_terms.get('bucket_terms', []),
+        'canonical_metric': canonical,
+        'template_used': query_template,
+    }
+    
+    observable = ObservableQuery(
         source=source,
         query=query,
         aggregation=aggregation,
         window_days=timeframe_days,
         expected_direction=expected_direction,
+        query_terms=query_terms,
+        available=source_available,
     )
+    
+    return observable, measurable, measurable_reason
 
 
 def generate_hypothesis_id(concept_slug: str, mechanism: str, claim: str) -> str:
@@ -1342,14 +1853,32 @@ def build_predicted_signals(
     mechanism_info: Dict[str, Any],
     meta: Dict[str, Any],
     evidence_strength: str = 'moderate',
+    mechanism_terms: List[str] = None,
 ) -> List[PredictedSignal]:
     """
-    Build predicted next signals from mechanism templates (v2.0 + v2.1 enhanced).
+    Build predicted next signals from mechanism templates (v2.0 + v2.1 + v2.2 enhanced).
     
-    Now includes canonical metrics and observable queries.
+    v2.2 changes:
+    - Uses template-provided canonical_metric, metric, direction, window_days, query_hints
+    - Does NOT mutate descriptions (keeps them stable)
+    - Uses resolve_query_terms for fully-bound observable queries
+    - Properly sets measurable and measurable_reason fields
+    
+    Args:
+        mechanism_id: The mechanism ID
+        mechanism_info: Mechanism config from taxonomy
+        meta: Meta-signal dict
+        evidence_strength: 'weak', 'moderate', or 'strong'
+        mechanism_terms: Matched mechanism keywords for query resolution
+    
+    Returns:
+        List of PredictedSignal objects
     """
     predicted = []
     templates = mechanism_info.get('predicted_signals', {})
+    
+    if mechanism_terms is None:
+        mechanism_terms = []
     
     # Get limits based on evidence strength
     min_pred, max_pred, max_timeframe = get_prediction_limits(evidence_strength)
@@ -1367,45 +1896,63 @@ def build_predicted_signals(
     for category, template in templates.items():
         if len(predicted) >= max_pred:
             break
-            
+        
+        # v2.2: Use template-provided values, with fallbacks
         description = template.get('description', f"Monitor {category} signals")
         sources = template.get('example_sources', [])
-        base_tf = base_timeframes.get(category, 14)
+        
+        # v2.2: Prefer template-provided metric/direction/canonical_metric
+        metric = template.get('metric', '')
+        direction = template.get('direction', '')
+        template_canonical = template.get('canonical_metric', '')
+        query_hints = template.get('query_hints', [])
+        template_window = template.get('window_days')
+        
+        # Fallback: extract from description if template didn't provide
+        if not metric or not direction:
+            desc_metric, desc_direction = extract_metric_and_direction(description)
+            metric = metric or desc_metric
+            direction = direction or desc_direction
         
         # Apply timeframe limits based on evidence strength
+        base_tf = template_window if template_window else base_timeframes.get(category, 14)
         if evidence_strength == 'weak':
             timeframe = min(base_tf, 14)  # 7-14 days max
         else:
             timeframe = min(base_tf, max_timeframe)
         
-        # Extract metric and direction (v2.0)
-        metric, direction = extract_metric_and_direction(description)
+        # v2.2: Resolve query terms from context
+        resolved_terms = resolve_query_terms(
+            meta=meta,
+            mechanism_terms=mechanism_terms,
+            query_hints=query_hints,
+        )
         
-        # Apply observable gate - enhance description if needed
-        if not passes_observable_gate(description):
-            # Try to add measurable/directional context
-            if not metric:
-                description = f"{description} (watch for metric changes)"
-                metric = "metric"
-            if not direction:
-                description = f"{description} indicating increase or decline"
-                direction = "change"
+        # v2.2: Get canonical metric - prefer template, then lookup
+        if template_canonical:
+            canonical_metric = template_canonical
+        else:
+            canonical_metric, _ = get_canonical_metric(metric or 'metric', category)
         
-        # v2.1: Get canonical metric
-        canonical_metric, _ = get_canonical_metric(metric, category)
-        
-        # v2.1: Build observable query
-        observable_query = build_observable_query(
+        # v2.2: Build observable query with resolved terms
+        observable_query, measurable, measurable_reason = build_observable_query(
             category=category,
             metric=metric or canonical_metric,
             direction=direction or 'up',
             sources=sources,
             timeframe_days=timeframe,
+            resolved_terms=resolved_terms,
         )
+        
+        # v2.2: Check observable gate (but DON'T mutate description!)
+        if not passes_observable_gate(description) and not metric:
+            if measurable:  # Don't override more specific reason
+                measurable = False
+                measurable_reason = MeasurableReason.OBSERVABLE_GATE_FAILED
         
         predicted.append(PredictedSignal(
             category=category,
-            description=description,
+            description=description,  # STABLE - never mutated
             example_sources=sources,
             expected_timeframe_days=timeframe,
             metric=metric,
@@ -1413,6 +1960,8 @@ def build_predicted_signals(
             speculative=is_speculative,
             canonical_metric=canonical_metric,
             observable_query=observable_query,
+            measurable=measurable,
+            measurable_reason=measurable_reason,
         ))
     
     # Ensure minimum predictions (only for moderate/strong evidence)
@@ -1420,58 +1969,71 @@ def build_predicted_signals(
         missing = ['technical', 'social', 'media']
         for cat in missing:
             if cat not in [p.category for p in predicted]:
-                metric = 'volume'
-                direction = 'increase'
+                metric = 'keyword_frequency'
+                direction = 'up'
                 canonical, _ = get_canonical_metric(metric, cat)
+                
+                resolved = resolve_query_terms(
+                    meta=meta,
+                    mechanism_terms=mechanism_terms,
+                    query_hints=[],
+                )
+                
+                obs_query, meas, meas_reason = build_observable_query(
+                    category=cat,
+                    metric=metric,
+                    direction=direction,
+                    sources=['twitter', 'hackernews'] if cat == 'social' else ['techmeme'],
+                    timeframe_days=min(base_timeframes.get(cat, 14), max_timeframe),
+                    resolved_terms=resolved,
+                )
                 
                 predicted.append(PredictedSignal(
                     category=cat,
-                    description=f"Monitor {cat} channels for related volume increase",
+                    description=f"Monitor {cat} channels for related discussion volume",
                     example_sources=['twitter', 'hackernews'] if cat == 'social' else ['techmeme'],
                     expected_timeframe_days=min(base_timeframes.get(cat, 14), max_timeframe),
                     metric=metric,
                     direction=direction,
                     speculative=is_speculative,
                     canonical_metric=canonical,
-                    observable_query=build_observable_query(
-                        category=cat,
-                        metric=metric,
-                        direction=direction,
-                        sources=['twitter', 'hackernews'] if cat == 'social' else ['techmeme'],
-                        timeframe_days=min(base_timeframes.get(cat, 14), max_timeframe),
-                    ),
+                    observable_query=obs_query,
+                    measurable=meas,
+                    measurable_reason=meas_reason,
                 ))
                 if len(predicted) >= min_pred:
                     break
     
-    # Final filter: reject predictions without measurable metric (v2.0)
-    valid_predictions = []
-    for pred in predicted:
-        # Re-check with strict gate
-        if passes_observable_gate(pred.description) or pred.metric:
-            valid_predictions.append(pred)
-    
-    # Ensure we have at least 1 prediction
-    if not valid_predictions:
-        valid_predictions.append(PredictedSignal(
+    # Ensure we have at least 1 prediction (fallback)
+    if not predicted:
+        resolved = resolve_query_terms(
+            meta=meta,
+            mechanism_terms=mechanism_terms,
+            query_hints=[],
+        )
+        obs_query, meas, meas_reason = build_observable_query(
             category='media',
-            description='Monitor for substantive developments with volume increase',
+            metric='article_count',
+            direction='up',
+            sources=['techmeme', 'twitter'],
+            timeframe_days=14,
+            resolved_terms=resolved,
+        )
+        predicted.append(PredictedSignal(
+            category='media',
+            description='Monitor for related news coverage',
             example_sources=['techmeme', 'twitter'],
             expected_timeframe_days=14,
-            metric='volume',
-            direction='increase',
+            metric='article_count',
+            direction='up',
             speculative=True,
-            canonical_metric='keyword_frequency',
-            observable_query=build_observable_query(
-                category='media',
-                metric='volume',
-                direction='increase',
-                sources=['techmeme', 'twitter'],
-                timeframe_days=14,
-            ),
+            canonical_metric='article_count',
+            observable_query=obs_query,
+            measurable=meas,
+            measurable_reason=meas_reason,
         ))
     
-    return valid_predictions[:max_pred]
+    return predicted[:max_pred]
 
 
 def build_falsifiers(mechanism_id: str, mechanism_info: Dict[str, Any]) -> Tuple[List[str], List[MeasurableFalsifier]]:
@@ -1718,19 +2280,17 @@ def generate_hypothesis(
         key_quotes=key_quotes,
     )
     
-    # Build predicted signals with strength conditioning (v2.0 + v2.1)
+    # Build predicted signals with strength conditioning (v2.0 + v2.1 + v2.2)
     predicted = build_predicted_signals(
         mechanism_id, 
         mechanism_info, 
         meta,
         evidence_strength=evidence_strength,
+        mechanism_terms=matched_keywords,  # v2.2: Pass mechanism terms for query resolution
     )
     
-    # Check if predictions are observable
-    predictions_observable = all(
-        passes_observable_gate(p.description) or p.metric 
-        for p in predicted
-    )
+    # Check if predictions are observable (v2.2: Use measurable field)
+    predictions_observable = any(p.measurable for p in predicted)
     
     # Build falsifiers (v2.0 + v2.1)
     falsifiers, falsifiers_v2 = build_falsifiers(mechanism_id, mechanism_info)
@@ -1864,9 +2424,8 @@ def build_watch_items(hypotheses: List[Hypothesis], top_n: int = 3) -> Tuple[Lis
     
     for hyp in hypotheses:
         for pred in hyp.predicted_next_signals:
-            # Measurability score
-            is_canonical = pred.canonical_metric and pred.canonical_metric != 'custom_metric'
-            measurability_score = 1.0 if is_canonical else 0.5
+            # v2.2: Use measurable field directly
+            measurability_score = 1.0 if pred.measurable else 0.5
             
             # Time proximity score
             time_proximity_score = 1.0 / (pred.expected_timeframe_days / 7)
@@ -1879,20 +2438,24 @@ def build_watch_items(hypotheses: List[Hypothesis], top_n: int = 3) -> Tuple[Lis
                 time_proximity_score * 0.2
             )
             
-            # Build reasons
+            # Build reasons (v2.2: Include measurable_reason if not OK)
             reasons = []
             reasons.append(f"hypothesis_confidence:{hyp.confidence:.2f}")
-            reasons.append(f"measurable:{is_canonical}")
+            reasons.append(f"measurable:{pred.measurable}")
+            if not pred.measurable and pred.measurable_reason != MeasurableReason.OK:
+                reasons.append(f"reason:{pred.measurable_reason}")
             reasons.append(f"timeframe:{pred.expected_timeframe_days}d")
             
             # Timeframe bucket
             bucket = get_timeframe_bucket(pred.expected_timeframe_days)
             
             candidates.append(WatchItem(
-                description=pred.description.split('(')[0].strip(),  # Clean up
+                description=pred.description,  # v2.2: Don't strip - descriptions are now stable
                 watch_priority_score=score,
                 watch_priority_reason=reasons,
                 timeframe_bucket=bucket,
+                timeframe_days=pred.expected_timeframe_days,  # v2.2
+                measurable=pred.measurable,  # v2.2
             ))
     
     # Sort by score descending
@@ -2194,6 +2757,7 @@ def run_hypothesis_engine(
     meta_signals_path: Path = None,
     output_dir: Path = None,
     date: str = None,
+    register_predictions: bool = True,
 ) -> Dict[str, Any]:
     """
     Run hypothesis engine on meta-signals file.
@@ -2202,6 +2766,7 @@ def run_hypothesis_engine(
         meta_signals_path: Path to meta_signals JSON file
         output_dir: Output directory for hypotheses
         date: Date string
+        register_predictions: If True, register predictions for verification (v2.3)
     
     Returns:
         Result dict with bundles and stats
@@ -2229,6 +2794,16 @@ def run_hypothesis_engine(
     # Run engine
     engine = HypothesisEngine(output_dir=output_dir)
     result = engine.process_meta_signals(meta_signals, date)
+    
+    # v2.3: Register predictions for verification
+    if register_predictions and 'bundles' in result:
+        try:
+            from utils.prediction_integration import on_hypotheses_generated
+            on_hypotheses_generated(result)
+        except ImportError:
+            logger.debug("Prediction integration module not available")
+        except Exception as e:
+            logger.warning(f"Failed to register predictions: {e}")
     
     return result
 

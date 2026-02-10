@@ -1,0 +1,883 @@
+{
+  "source": "package_downloads",
+  "scraped_at": "2026-02-05T10:12:52.063045",
+  "total_packages": 51,
+  "packages": [
+    {
+      "package": "numpy",
+      "platform": "pypi",
+      "downloads_last_day": 28482008,
+      "downloads_last_week": 164261505,
+      "downloads_last_month": 681308663,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.0469,
+      "daily_avg": 23465929
+    },
+    {
+      "package": "pandas",
+      "platform": "pypi",
+      "downloads_last_day": 19779046,
+      "downloads_last_week": 116711236,
+      "downloads_last_month": 490850588,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.0642,
+      "daily_avg": 16673033
+    },
+    {
+      "package": "langchain",
+      "platform": "pypi",
+      "downloads_last_day": 7844152,
+      "downloads_last_week": 51710747,
+      "downloads_last_month": 176321969,
+      "bucket": "ai-agents",
+      "wow_growth_rate": 0.2449,
+      "daily_avg": 7387249
+    },
+    {
+      "package": "huggingface-hub",
+      "platform": "pypi",
+      "downloads_last_day": 6800542,
+      "downloads_last_week": 40483354,
+      "downloads_last_month": 166504334,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.0363,
+      "daily_avg": 5783336
+    },
+    {
+      "package": "scikit-learn",
+      "platform": "pypi",
+      "downloads_last_day": 6420852,
+      "downloads_last_week": 37001295,
+      "downloads_last_month": 158853482,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.089,
+      "daily_avg": 5285899
+    },
+    {
+      "package": "openai",
+      "platform": "pypi",
+      "downloads_last_day": 6286861,
+      "downloads_last_week": 34891239,
+      "downloads_last_month": 144597521,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.0459,
+      "daily_avg": 4984462
+    },
+    {
+      "package": "transformers",
+      "platform": "pypi",
+      "downloads_last_day": 4719699,
+      "downloads_last_week": 28792951,
+      "downloads_last_month": 103413961,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0.1576,
+      "daily_avg": 4113278
+    },
+    {
+      "package": "tokenizers",
+      "platform": "pypi",
+      "downloads_last_day": 4182106,
+      "downloads_last_week": 24295216,
+      "downloads_last_month": 99647271,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.0327,
+      "daily_avg": 3470745
+    },
+    {
+      "package": "langchain-core",
+      "platform": "pypi",
+      "downloads_last_day": 3458203,
+      "downloads_last_week": 19935845,
+      "downloads_last_month": 80746834,
+      "bucket": "ai-agents",
+      "wow_growth_rate": -0.0165,
+      "daily_avg": 2847977
+    },
+    {
+      "package": "tiktoken",
+      "platform": "pypi",
+      "downloads_last_day": 3424564,
+      "downloads_last_week": 18563129,
+      "downloads_last_month": 79322836,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.0834,
+      "daily_avg": 2651875
+    },
+    {
+      "package": "torch",
+      "platform": "pypi",
+      "downloads_last_day": 2904465,
+      "downloads_last_week": 16779731,
+      "downloads_last_month": 70172048,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.0572,
+      "daily_avg": 2397104
+    },
+    {
+      "package": "datasets",
+      "platform": "pypi",
+      "downloads_last_day": 2018055,
+      "downloads_last_week": 12770080,
+      "downloads_last_month": 58958471,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.1706,
+      "daily_avg": 1824297
+    },
+    {
+      "package": "anthropic",
+      "platform": "pypi",
+      "downloads_last_day": 2133321,
+      "downloads_last_week": 11021174,
+      "downloads_last_month": 42486823,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0.0508,
+      "daily_avg": 1574453
+    },
+    {
+      "package": "opencv-python",
+      "platform": "pypi",
+      "downloads_last_day": 1694126,
+      "downloads_last_week": 10777774,
+      "downloads_last_month": 43402162,
+      "bucket": "computer-vision",
+      "wow_growth_rate": -0.0089,
+      "daily_avg": 1539682
+    },
+    {
+      "package": "openai",
+      "platform": "npm",
+      "downloads_last_day": 1423774,
+      "downloads_last_week": 9966424,
+      "downloads_last_month": 43326988,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.1038,
+      "daily_avg": 1423774
+    },
+    {
+      "package": "xgboost",
+      "platform": "pypi",
+      "downloads_last_day": 1347527,
+      "downloads_last_week": 8431440,
+      "downloads_last_month": 34950325,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.0462,
+      "daily_avg": 1204491
+    },
+    {
+      "package": "ai",
+      "platform": "npm",
+      "downloads_last_day": 829044,
+      "downloads_last_week": 5803308,
+      "downloads_last_month": 26781722,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.1701,
+      "daily_avg": 829044
+    },
+    {
+      "package": "tensorflow",
+      "platform": "pypi",
+      "downloads_last_day": 749844,
+      "downloads_last_week": 4868585,
+      "downloads_last_month": 22272521,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.1608,
+      "daily_avg": 695512
+    },
+    {
+      "package": "@anthropic-ai/sdk",
+      "platform": "npm",
+      "downloads_last_day": 637385,
+      "downloads_last_week": 4461701,
+      "downloads_last_month": 17802934,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0.0033,
+      "daily_avg": 637385
+    },
+    {
+      "package": "sentence-transformers",
+      "platform": "pypi",
+      "downloads_last_day": 716224,
+      "downloads_last_week": 4237440,
+      "downloads_last_month": 16906094,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0.0034,
+      "daily_avg": 605348
+    },
+    {
+      "package": "jax",
+      "platform": "pypi",
+      "downloads_last_day": 757197,
+      "downloads_last_week": 3976518,
+      "downloads_last_month": 15550149,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0.0308,
+      "daily_avg": 568074
+    },
+    {
+      "package": "keras",
+      "platform": "pypi",
+      "downloads_last_day": 593735,
+      "downloads_last_week": 3905508,
+      "downloads_last_month": 17581733,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.1433,
+      "daily_avg": 557929
+    },
+    {
+      "package": "weaviate-client",
+      "platform": "pypi",
+      "downloads_last_day": 454162,
+      "downloads_last_week": 3285783,
+      "downloads_last_month": 17903928,
+      "bucket": "ai-infrastructure",
+      "wow_growth_rate": -0.3257,
+      "daily_avg": 469397
+    },
+    {
+      "package": "chromadb",
+      "platform": "pypi",
+      "downloads_last_day": 524543,
+      "downloads_last_week": 2832956,
+      "downloads_last_month": 10856891,
+      "bucket": "ai-infrastructure",
+      "wow_growth_rate": 0.0592,
+      "daily_avg": 404708
+    },
+    {
+      "package": "lightgbm",
+      "platform": "pypi",
+      "downloads_last_day": 443212,
+      "downloads_last_week": 2785866,
+      "downloads_last_month": 11734975,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.0661,
+      "daily_avg": 397980
+    },
+    {
+      "package": "optuna",
+      "platform": "pypi",
+      "downloads_last_day": 438315,
+      "downloads_last_week": 2532153,
+      "downloads_last_month": 10110776,
+      "bucket": "ai-general",
+      "wow_growth_rate": 0.0024,
+      "daily_avg": 361736
+    },
+    {
+      "package": "timm",
+      "platform": "pypi",
+      "downloads_last_day": 424486,
+      "downloads_last_week": 2522106,
+      "downloads_last_month": 12852595,
+      "bucket": "computer-vision",
+      "wow_growth_rate": -0.2676,
+      "daily_avg": 360300
+    },
+    {
+      "package": "faiss-cpu",
+      "platform": "pypi",
+      "downloads_last_day": 365164,
+      "downloads_last_week": 2216918,
+      "downloads_last_month": 9150110,
+      "bucket": "ai-infrastructure",
+      "wow_growth_rate": -0.0407,
+      "daily_avg": 316702
+    },
+    {
+      "package": "@langchain/core",
+      "platform": "npm",
+      "downloads_last_day": 303015,
+      "downloads_last_week": 2121109,
+      "downloads_last_month": 10608439,
+      "bucket": "ai-agents",
+      "wow_growth_rate": -0.2503,
+      "daily_avg": 303015
+    },
+    {
+      "package": "qdrant-client",
+      "platform": "pypi",
+      "downloads_last_day": 336490,
+      "downloads_last_week": 1867996,
+      "downloads_last_month": 9740934,
+      "bucket": "ai-infrastructure",
+      "wow_growth_rate": -0.2882,
+      "daily_avg": 266856
+    },
+    {
+      "package": "llama-index",
+      "platform": "pypi",
+      "downloads_last_day": 346832,
+      "downloads_last_week": 1798933,
+      "downloads_last_month": 7051800,
+      "bucket": "ai-agents",
+      "wow_growth_rate": 0.0274,
+      "daily_avg": 256990
+    },
+    {
+      "package": "ultralytics",
+      "platform": "pypi",
+      "downloads_last_day": 244631,
+      "downloads_last_week": 1720451,
+      "downloads_last_month": 7136620,
+      "bucket": "computer-vision",
+      "wow_growth_rate": -0.047,
+      "daily_avg": 245778
+    },
+    {
+      "package": "@langchain/openai",
+      "platform": "npm",
+      "downloads_last_day": 237256,
+      "downloads_last_week": 1660794,
+      "downloads_last_month": 8046384,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.2197,
+      "daily_avg": 237256
+    },
+    {
+      "package": "crewai",
+      "platform": "pypi",
+      "downloads_last_day": 402129,
+      "downloads_last_week": 1436100,
+      "downloads_last_month": 4053610,
+      "bucket": "ai-agents",
+      "wow_growth_rate": 0.646,
+      "daily_avg": 205157
+    },
+    {
+      "package": "langchain",
+      "platform": "npm",
+      "downloads_last_day": 185458,
+      "downloads_last_week": 1298208,
+      "downloads_last_month": 6304112,
+      "bucket": "ai-agents",
+      "wow_growth_rate": -0.222,
+      "daily_avg": 185458
+    },
+    {
+      "package": "catboost",
+      "platform": "pypi",
+      "downloads_last_day": 188991,
+      "downloads_last_week": 1125525,
+      "downloads_last_month": 5134536,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.1578,
+      "daily_avg": 160789
+    },
+    {
+      "package": "flax",
+      "platform": "pypi",
+      "downloads_last_day": 174207,
+      "downloads_last_week": 773374,
+      "downloads_last_month": 3228823,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.0551,
+      "daily_avg": 110482
+    },
+    {
+      "package": "tiktoken",
+      "platform": "npm",
+      "downloads_last_day": 107174,
+      "downloads_last_week": 750220,
+      "downloads_last_month": 3741227,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.2475,
+      "daily_avg": 107174
+    },
+    {
+      "package": "onnxruntime-web",
+      "platform": "npm",
+      "downloads_last_day": 92549,
+      "downloads_last_week": 647848,
+      "downloads_last_month": 2905782,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.1392,
+      "daily_avg": 92549
+    },
+    {
+      "package": "onnxruntime-node",
+      "platform": "npm",
+      "downloads_last_day": 89287,
+      "downloads_last_week": 625010,
+      "downloads_last_month": 2793035,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.1351,
+      "daily_avg": 89287
+    },
+    {
+      "package": "@pinecone-database/pinecone",
+      "platform": "npm",
+      "downloads_last_day": 48943,
+      "downloads_last_week": 342607,
+      "downloads_last_month": 1669852,
+      "bucket": "ai-infrastructure",
+      "wow_growth_rate": -0.2256,
+      "daily_avg": 48943
+    },
+    {
+      "package": "pinecone-client",
+      "platform": "pypi",
+      "downloads_last_day": 46831,
+      "downloads_last_week": 240107,
+      "downloads_last_month": 1059203,
+      "bucket": "ai-infrastructure",
+      "wow_growth_rate": -0.1206,
+      "daily_avg": 34301
+    },
+    {
+      "package": "@tensorflow/tfjs",
+      "platform": "npm",
+      "downloads_last_day": 29532,
+      "downloads_last_week": 206724,
+      "downloads_last_month": 958968,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.1756,
+      "daily_avg": 29532
+    },
+    {
+      "package": "chromadb",
+      "platform": "npm",
+      "downloads_last_day": 15233,
+      "downloads_last_week": 106634,
+      "downloads_last_month": 408833,
+      "bucket": "ai-infrastructure",
+      "wow_growth_rate": 0.0586,
+      "daily_avg": 15233
+    },
+    {
+      "package": "gpt-3-encoder",
+      "platform": "npm",
+      "downloads_last_day": 11773,
+      "downloads_last_week": 82411,
+      "downloads_last_month": 413852,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.2541,
+      "daily_avg": 11773
+    },
+    {
+      "package": "@tensorflow/tfjs-node",
+      "platform": "npm",
+      "downloads_last_day": 9469,
+      "downloads_last_week": 66283,
+      "downloads_last_month": 308930,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.1805,
+      "daily_avg": 9469
+    },
+    {
+      "package": "llamaindex",
+      "platform": "npm",
+      "downloads_last_day": 7995,
+      "downloads_last_week": 55967,
+      "downloads_last_month": 258071,
+      "bucket": "ai-agents",
+      "wow_growth_rate": -0.1692,
+      "daily_avg": 7995
+    },
+    {
+      "package": "autogen",
+      "platform": "pypi",
+      "downloads_last_day": 6346,
+      "downloads_last_week": 33083,
+      "downloads_last_month": 141382,
+      "bucket": "ai-agents",
+      "wow_growth_rate": -0.0836,
+      "daily_avg": 4726
+    },
+    {
+      "package": "guidance",
+      "platform": "pypi",
+      "downloads_last_day": 982,
+      "downloads_last_week": 4809,
+      "downloads_last_month": 21345,
+      "bucket": "ai-agents",
+      "wow_growth_rate": -0.1275,
+      "daily_avg": 687
+    },
+    {
+      "package": "ml5",
+      "platform": "npm",
+      "downloads_last_day": 433,
+      "downloads_last_week": 3033,
+      "downloads_last_month": 11565,
+      "bucket": "ai-general",
+      "wow_growth_rate": 0.0665,
+      "daily_avg": 433
+    },
+    {
+      "package": "brain.js",
+      "platform": "npm",
+      "downloads_last_day": 319,
+      "downloads_last_week": 2236,
+      "downloads_last_month": 10926,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.2281,
+      "daily_avg": 319
+    }
+  ],
+  "signals": {
+    "bucket_signals": {
+      "ai-general": {
+        "total_weekly_downloads": 352782946,
+        "package_count": 14,
+        "avg_growth_rate": -0.10703571428571428,
+        "top_packages": [
+          {
+            "package": "numpy",
+            "platform": "pypi",
+            "weekly_downloads": 164261505,
+            "growth_rate": -0.0469
+          },
+          {
+            "package": "pandas",
+            "platform": "pypi",
+            "weekly_downloads": 116711236,
+            "growth_rate": -0.0642
+          },
+          {
+            "package": "scikit-learn",
+            "platform": "pypi",
+            "weekly_downloads": 37001295,
+            "growth_rate": -0.089
+          },
+          {
+            "package": "datasets",
+            "platform": "pypi",
+            "weekly_downloads": 12770080,
+            "growth_rate": -0.1706
+          },
+          {
+            "package": "xgboost",
+            "platform": "pypi",
+            "weekly_downloads": 8431440,
+            "growth_rate": -0.0462
+          }
+        ],
+        "signal_interpretation": "Declining - potential shift away"
+      },
+      "ai-agents": {
+        "total_weekly_downloads": 78394801,
+        "package_count": 9,
+        "avg_growth_rate": 0.005466666666666668,
+        "top_packages": [
+          {
+            "package": "langchain",
+            "platform": "pypi",
+            "weekly_downloads": 51710747,
+            "growth_rate": 0.2449
+          },
+          {
+            "package": "langchain-core",
+            "platform": "pypi",
+            "weekly_downloads": 19935845,
+            "growth_rate": -0.0165
+          },
+          {
+            "package": "@langchain/core",
+            "platform": "npm",
+            "weekly_downloads": 2121109,
+            "growth_rate": -0.2503
+          },
+          {
+            "package": "llama-index",
+            "platform": "pypi",
+            "weekly_downloads": 1798933,
+            "growth_rate": 0.0274
+          },
+          {
+            "package": "crewai",
+            "platform": "pypi",
+            "weekly_downloads": 1436100,
+            "growth_rate": 0.646
+          }
+        ],
+        "signal_interpretation": "Stable growth - steady adoption"
+      },
+      "llm-foundation": {
+        "total_weekly_downloads": 209700365,
+        "package_count": 18,
+        "avg_growth_rate": -0.07199444444444444,
+        "top_packages": [
+          {
+            "package": "huggingface-hub",
+            "platform": "pypi",
+            "weekly_downloads": 40483354,
+            "growth_rate": -0.0363
+          },
+          {
+            "package": "openai",
+            "platform": "pypi",
+            "weekly_downloads": 34891239,
+            "growth_rate": -0.0459
+          },
+          {
+            "package": "transformers",
+            "platform": "pypi",
+            "weekly_downloads": 28792951,
+            "growth_rate": 0.1576
+          },
+          {
+            "package": "tokenizers",
+            "platform": "pypi",
+            "weekly_downloads": 24295216,
+            "growth_rate": -0.0327
+          },
+          {
+            "package": "tiktoken",
+            "platform": "pypi",
+            "weekly_downloads": 18563129,
+            "growth_rate": -0.0834
+          }
+        ],
+        "signal_interpretation": "Declining - potential shift away"
+      },
+      "computer-vision": {
+        "total_weekly_downloads": 15020331,
+        "package_count": 3,
+        "avg_growth_rate": -0.10783333333333334,
+        "top_packages": [
+          {
+            "package": "opencv-python",
+            "platform": "pypi",
+            "weekly_downloads": 10777774,
+            "growth_rate": -0.0089
+          },
+          {
+            "package": "timm",
+            "platform": "pypi",
+            "weekly_downloads": 2522106,
+            "growth_rate": -0.2676
+          },
+          {
+            "package": "ultralytics",
+            "platform": "pypi",
+            "weekly_downloads": 1720451,
+            "growth_rate": -0.047
+          }
+        ],
+        "signal_interpretation": "Declining - potential shift away"
+      },
+      "ai-infrastructure": {
+        "total_weekly_downloads": 10893001,
+        "package_count": 7,
+        "avg_growth_rate": -0.12614285714285714,
+        "top_packages": [
+          {
+            "package": "weaviate-client",
+            "platform": "pypi",
+            "weekly_downloads": 3285783,
+            "growth_rate": -0.3257
+          },
+          {
+            "package": "chromadb",
+            "platform": "pypi",
+            "weekly_downloads": 2832956,
+            "growth_rate": 0.0592
+          },
+          {
+            "package": "faiss-cpu",
+            "platform": "pypi",
+            "weekly_downloads": 2216918,
+            "growth_rate": -0.0407
+          },
+          {
+            "package": "qdrant-client",
+            "platform": "pypi",
+            "weekly_downloads": 1867996,
+            "growth_rate": -0.2882
+          },
+          {
+            "package": "@pinecone-database/pinecone",
+            "platform": "npm",
+            "weekly_downloads": 342607,
+            "growth_rate": -0.2256
+          }
+        ],
+        "signal_interpretation": "Declining - potential shift away"
+      }
+    },
+    "platform_totals": {
+      "pypi": 638590927,
+      "npm": 28200517
+    }
+  },
+  "bucket_signals": {
+    "ai-general": {
+      "total_weekly_downloads": 352782946,
+      "package_count": 14,
+      "avg_growth_rate": -0.10703571428571428,
+      "top_packages": [
+        {
+          "package": "numpy",
+          "platform": "pypi",
+          "weekly_downloads": 164261505,
+          "growth_rate": -0.0469
+        },
+        {
+          "package": "pandas",
+          "platform": "pypi",
+          "weekly_downloads": 116711236,
+          "growth_rate": -0.0642
+        },
+        {
+          "package": "scikit-learn",
+          "platform": "pypi",
+          "weekly_downloads": 37001295,
+          "growth_rate": -0.089
+        },
+        {
+          "package": "datasets",
+          "platform": "pypi",
+          "weekly_downloads": 12770080,
+          "growth_rate": -0.1706
+        },
+        {
+          "package": "xgboost",
+          "platform": "pypi",
+          "weekly_downloads": 8431440,
+          "growth_rate": -0.0462
+        }
+      ],
+      "signal_interpretation": "Declining - potential shift away"
+    },
+    "ai-agents": {
+      "total_weekly_downloads": 78394801,
+      "package_count": 9,
+      "avg_growth_rate": 0.005466666666666668,
+      "top_packages": [
+        {
+          "package": "langchain",
+          "platform": "pypi",
+          "weekly_downloads": 51710747,
+          "growth_rate": 0.2449
+        },
+        {
+          "package": "langchain-core",
+          "platform": "pypi",
+          "weekly_downloads": 19935845,
+          "growth_rate": -0.0165
+        },
+        {
+          "package": "@langchain/core",
+          "platform": "npm",
+          "weekly_downloads": 2121109,
+          "growth_rate": -0.2503
+        },
+        {
+          "package": "llama-index",
+          "platform": "pypi",
+          "weekly_downloads": 1798933,
+          "growth_rate": 0.0274
+        },
+        {
+          "package": "crewai",
+          "platform": "pypi",
+          "weekly_downloads": 1436100,
+          "growth_rate": 0.646
+        }
+      ],
+      "signal_interpretation": "Stable growth - steady adoption"
+    },
+    "llm-foundation": {
+      "total_weekly_downloads": 209700365,
+      "package_count": 18,
+      "avg_growth_rate": -0.07199444444444444,
+      "top_packages": [
+        {
+          "package": "huggingface-hub",
+          "platform": "pypi",
+          "weekly_downloads": 40483354,
+          "growth_rate": -0.0363
+        },
+        {
+          "package": "openai",
+          "platform": "pypi",
+          "weekly_downloads": 34891239,
+          "growth_rate": -0.0459
+        },
+        {
+          "package": "transformers",
+          "platform": "pypi",
+          "weekly_downloads": 28792951,
+          "growth_rate": 0.1576
+        },
+        {
+          "package": "tokenizers",
+          "platform": "pypi",
+          "weekly_downloads": 24295216,
+          "growth_rate": -0.0327
+        },
+        {
+          "package": "tiktoken",
+          "platform": "pypi",
+          "weekly_downloads": 18563129,
+          "growth_rate": -0.0834
+        }
+      ],
+      "signal_interpretation": "Declining - potential shift away"
+    },
+    "computer-vision": {
+      "total_weekly_downloads": 15020331,
+      "package_count": 3,
+      "avg_growth_rate": -0.10783333333333334,
+      "top_packages": [
+        {
+          "package": "opencv-python",
+          "platform": "pypi",
+          "weekly_downloads": 10777774,
+          "growth_rate": -0.0089
+        },
+        {
+          "package": "timm",
+          "platform": "pypi",
+          "weekly_downloads": 2522106,
+          "growth_rate": -0.2676
+        },
+        {
+          "package": "ultralytics",
+          "platform": "pypi",
+          "weekly_downloads": 1720451,
+          "growth_rate": -0.047
+        }
+      ],
+      "signal_interpretation": "Declining - potential shift away"
+    },
+    "ai-infrastructure": {
+      "total_weekly_downloads": 10893001,
+      "package_count": 7,
+      "avg_growth_rate": -0.12614285714285714,
+      "top_packages": [
+        {
+          "package": "weaviate-client",
+          "platform": "pypi",
+          "weekly_downloads": 3285783,
+          "growth_rate": -0.3257
+        },
+        {
+          "package": "chromadb",
+          "platform": "pypi",
+          "weekly_downloads": 2832956,
+          "growth_rate": 0.0592
+        },
+        {
+          "package": "faiss-cpu",
+          "platform": "pypi",
+          "weekly_downloads": 2216918,
+          "growth_rate": -0.0407
+        },
+        {
+          "package": "qdrant-client",
+          "platform": "pypi",
+          "weekly_downloads": 1867996,
+          "growth_rate": -0.2882
+        },
+        {
+          "package": "@pinecone-database/pinecone",
+          "platform": "npm",
+          "weekly_downloads": 342607,
+          "growth_rate": -0.2256
+        }
+      ],
+      "signal_interpretation": "Declining - potential shift away"
+    }
+  }
+}

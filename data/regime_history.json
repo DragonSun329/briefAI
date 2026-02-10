@@ -1,0 +1,83 @@
+[
+  {
+    "timestamp": "2026-01-27T10:00:00",
+    "regime": "bull",
+    "confidence": 0.75,
+    "momentum_score": 0.45,
+    "volatility_score": 0.35,
+    "trend_score": 0.5,
+    "breadth_score": 0.0,
+    "sp500_return_1m": 0.032,
+    "sp500_return_3m": 0.085,
+    "vix_level": 17.5,
+    "vix_percentile": 45.0,
+    "yield_curve_10y2y": 0.15,
+    "tech_vs_spy_1m": 0.012,
+    "semis_vs_spy_1m": 0.025,
+    "defensive_vs_spy_1m": -0.018,
+    "notes": [
+      "Positive momentum + above MA + moderate volatility",
+      "Risk-on rotation: Tech/semis outperforming"
+    ]
+  },
+  {
+    "timestamp": "2026-01-27T16:28:17.207355",
+    "regime": "sideways",
+    "confidence": 0.5,
+    "momentum_score": 0.0,
+    "volatility_score": 0.2,
+    "trend_score": 0.3,
+    "breadth_score": 0.0,
+    "sp500_return_1m": 0.0026,
+    "sp500_return_3m": 0.0233,
+    "vix_level": 16.15,
+    "vix_percentile": 40.4,
+    "yield_curve_10y2y": 0.0,
+    "tech_vs_spy_1m": -0.0041,
+    "semis_vs_spy_1m": 0.0925,
+    "defensive_vs_spy_1m": -0.0012,
+    "notes": [
+      "Mixed signals - range-bound"
+    ]
+  },
+  {
+    "timestamp": "2026-01-27T16:31:38.974077",
+    "regime": "sideways",
+    "confidence": 0.5,
+    "momentum_score": 0.0,
+    "volatility_score": 0.2,
+    "trend_score": 0.3,
+    "breadth_score": 0.0,
+    "sp500_return_1m": 0.0026,
+    "sp500_return_3m": 0.0233,
+    "vix_level": 15.99,
+    "vix_percentile": 40.0,
+    "yield_curve_10y2y": 0.0,
+    "tech_vs_spy_1m": -0.0041,
+    "semis_vs_spy_1m": 0.0925,
+    "defensive_vs_spy_1m": -0.0012,
+    "notes": [
+      "Mixed signals - range-bound"
+    ]
+  },
+  {
+    "timestamp": "2026-01-27T16:34:16.471478",
+    "regime": "sideways",
+    "confidence": 0.5,
+    "momentum_score": 0.0,
+    "volatility_score": 0.2,
+    "trend_score": 0.3,
+    "breadth_score": 0.0,
+    "sp500_return_1m": 0.0026,
+    "sp500_return_3m": 0.0233,
+    "vix_level": 16.02,
+    "vix_percentile": 40.1,
+    "yield_curve_10y2y": 0.0,
+    "tech_vs_spy_1m": -0.0041,
+    "semis_vs_spy_1m": 0.0925,
+    "defensive_vs_spy_1m": -0.0012,
+    "notes": [
+      "Mixed signals - range-bound"
+    ]
+  }
+]

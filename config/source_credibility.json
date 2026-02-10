@@ -1,0 +1,234 @@
+{
+  "version": "2.0",
+  "description": "Source credibility tiers for signal weighting - now includes accuracy-based weights and signal-type decay",
+  "last_updated": "2026-01-27T10:00:00Z",
+
+  "tiers": {
+    "tier_1": {
+      "weight": 1.0,
+      "description": "Highest credibility - institutional sources, official filings, tier-1 publications",
+      "sources": {
+        "vc": [
+          "sequoia",
+          "a16z",
+          "andreessen horowitz",
+          "benchmark",
+          "greylock",
+          "founders fund",
+          "kleiner perkins",
+          "accel",
+          "bessemer",
+          "general catalyst"
+        ],
+        "news": [
+          "techcrunch",
+          "wsj",
+          "wall street journal",
+          "nytimes",
+          "new york times",
+          "ft",
+          "financial times",
+          "bloomberg",
+          "reuters",
+          "the information"
+        ],
+        "official": [
+          "sec_10k",
+          "sec_s1",
+          "sec_10q",
+          "company_ir",
+          "press_release",
+          "earnings_call"
+        ]
+      }
+    },
+    "tier_2": {
+      "weight": 0.8,
+      "description": "High credibility - established data providers, business publications",
+      "sources": {
+        "vc": [
+          "tiger global",
+          "softbank",
+          "lightspeed",
+          "index ventures",
+          "insight partners",
+          "coatue",
+          "iconiq"
+        ],
+        "news": [
+          "forbes",
+          "fortune",
+          "wired",
+          "axios",
+          "business insider",
+          "cnbc",
+          "fast company"
+        ],
+        "data": [
+          "crunchbase",
+          "pitchbook",
+          "cbinsights",
+          "dealroom",
+          "tracxn"
+        ]
+      }
+    },
+    "tier_3": {
+      "weight": 0.6,
+      "description": "Medium credibility - tech news, platform trending data",
+      "sources": {
+        "news": [
+          "venturebeat",
+          "zdnet",
+          "arstechnica",
+          "hackernews",
+          "ycombinator",
+          "the verge",
+          "engadget"
+        ],
+        "tech": [
+          "github_trending",
+          "huggingface_trending",
+          "producthunt",
+          "paperswithcode"
+        ],
+        "sec": [
+          "sec_8k",
+          "sec_def14a"
+        ]
+      }
+    },
+    "tier_4": {
+      "weight": 0.4,
+      "description": "Lower credibility - social media, crypto, user-generated content",
+      "sources": {
+        "social": [
+          "twitter",
+          "x",
+          "reddit",
+          "linkedin",
+          "discord"
+        ],
+        "crypto": [
+          "kraken",
+          "coingecko",
+          "coinmarketcap",
+          "dextools"
+        ],
+        "blogs": [
+          "medium",
+          "substack",
+          "dev.to",
+          "hashnode"
+        ]
+      }
+    }
+  },
+
+  "default_weight": 0.5,
+
+  "signal_source_mappings": {
+    "tms": {
+      "default_tier": "tier_3",
+      "sources": {
+        "github": "tier_3",
+        "huggingface": "tier_3",
+        "paperswithcode": "tier_3"
+      }
+    },
+    "ccs": {
+      "default_tier": "tier_2",
+      "sources": {
+        "crunchbase": "tier_2",
+        "pitchbook": "tier_2",
+        "news": "tier_2"
+      }
+    },
+    "eis": {
+      "default_tier": "tier_1",
+      "sources": {
+        "sec_10k": "tier_1",
+        "sec_10q": "tier_1",
+        "sec_s1": "tier_1",
+        "sec_8k": "tier_3"
+      }
+    },
+    "nas": {
+      "default_tier": "tier_3",
+      "sources": {
+        "techcrunch": "tier_1",
+        "bloomberg": "tier_1",
+        "venturebeat": "tier_3",
+        "reddit": "tier_4"
+      }
+    },
+    "pms": {
+      "default_tier": "tier_1",
+      "sources": {
+        "yahoo_finance": "tier_1",
+        "bloomberg": "tier_1"
+      }
+    },
+    "css": {
+      "default_tier": "tier_4",
+      "sources": {
+        "kraken": "tier_4",
+        "coingecko": "tier_4"
+      }
+    }
+  },
+
+  "aggregation": {
+    "method": "weighted_average",
+    "min_sources_for_confidence": 2,
+    "diversity_bonus": 0.1
+  },
+
+  "accuracy_weights": {
+    "_note": "Auto-updated by scripts/source_accuracy_audit.py based on historical accuracy",
+    "_placeholder": "Run audit to populate with accuracy-based weights"
+  },
+
+  "signal_type_decay": {
+    "news": {
+      "half_life_hours": 12,
+      "max_age_hours": 72,
+      "description": "News signals decay quickly as market digests information"
+    },
+    "social_sentiment": {
+      "half_life_hours": 8,
+      "max_age_hours": 48,
+      "description": "Social buzz is highly ephemeral"
+    },
+    "github": {
+      "half_life_hours": 168,
+      "max_age_hours": 720,
+      "description": "Technical adoption signals persist longer"
+    },
+    "funding": {
+      "half_life_hours": 720,
+      "max_age_hours": 2160,
+      "description": "Funding news relevant for weeks/months"
+    },
+    "earnings": {
+      "half_life_hours": 504,
+      "max_age_hours": 2160,
+      "description": "Earnings impact lasts until next report cycle"
+    },
+    "product_launch": {
+      "half_life_hours": 336,
+      "max_age_hours": 720,
+      "description": "Product launches have 2-week impact window"
+    },
+    "regulatory": {
+      "half_life_hours": 1440,
+      "max_age_hours": 4320,
+      "description": "Regulatory news has long-lasting impact"
+    },
+    "default": {
+      "half_life_hours": 24,
+      "max_age_hours": 168,
+      "description": "Default decay for unknown signal types"
+    }
+  }
+}

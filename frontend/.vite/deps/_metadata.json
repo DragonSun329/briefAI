@@ -1,0 +1,46 @@
+{
+  "hash": "c9e93417",
+  "configHash": "53497cbb",
+  "lockfileHash": "11043bd1",
+  "browserHash": "74767b70",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "ef111225",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "192f12f9",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "c78544d3",
+      "needsInterop": false
+    },
+    "recharts": {
+      "src": "../../node_modules/recharts/es6/index.js",
+      "file": "recharts.js",
+      "fileHash": "3015b0ee",
+      "needsInterop": false
+    },
+    "@tanstack/react-table": {
+      "src": "../../node_modules/@tanstack/react-table/build/lib/index.mjs",
+      "file": "@tanstack_react-table.js",
+      "fileHash": "0e87f6da",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-YBFRUR3B": {
+      "file": "chunk-YBFRUR3B.js"
+    },
+    "chunk-JRE55LYH": {
+      "file": "chunk-JRE55LYH.js"
+    }
+  }
+}

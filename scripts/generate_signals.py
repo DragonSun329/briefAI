@@ -5,15 +5,20 @@ Generate Signals - Signal Persistence Engine CLI
 Links daily THEME clusters from dual feeds into persistent signals,
 tracking momentum/velocity/acceleration across days.
 
+Optionally synthesizes meta-signals (higher-level conceptual trends)
+from the persistent signals.
+
 Usage:
     python scripts/generate_signals.py
     python scripts/generate_signals.py --date 2026-02-09
     python scripts/generate_signals.py --days 7
     python scripts/generate_signals.py --no-embeddings
+    python scripts/generate_signals.py --with-meta
 
 Output:
     data/gravity/signals/signals_state.json (canonical state)
     data/gravity/signals/signals_snapshot_YYYY-MM-DD.json (daily snapshots)
+    data/meta_signals/meta_signals_YYYY-MM-DD.json (meta-signals, if --with-meta)
 """
 
 import sys
@@ -107,8 +112,14 @@ def main():
     parser.add_argument('--days', type=int, default=1, help='Process last N days (default: 1)')
     parser.add_argument('--no-embeddings', action='store_true', help='Disable embeddings (overlap-only mode)')
     parser.add_argument('--reset', action='store_true', help='Reset signals state before processing')
+    parser.add_argument('--with-meta', action='store_true', help='Generate meta-signals (conceptual trends)')
+    parser.add_argument('--with-hypotheses', action='store_true', help='Generate hypotheses from meta-signals (implies --with-meta)')
     parser.add_argument('--verbose', '-v', action='store_true', help='Verbose output')
     args = parser.parse_args()
+    
+    # --with-hypotheses implies --with-meta (need meta-signals first)
+    if args.with_hypotheses:
+        args.with_meta = True
     
     dual_feed_dir = Path(__file__).parent.parent / "data" / "gravity"
     signals_dir = dual_feed_dir / "signals"
@@ -157,6 +168,118 @@ def main():
         snapshot = tracker.snapshot_file(date)
         if snapshot.exists():
             print(f"  Snapshot: {snapshot}")
+    
+    # Optional: Generate meta-signals
+    if args.with_meta:
+        print(f"\n{'='*60}")
+        print("META-SIGNAL SYNTHESIS (Conceptual Trends)")
+        print(f"{'='*60}\n")
+        
+        try:
+            from utils.meta_signal_engine import MetaSignalEngine
+            
+            meta_engine = MetaSignalEngine(use_embeddings=not args.no_embeddings)
+            
+            # Use the last processed date
+            target_date = dates[-1] if dates else datetime.now().strftime('%Y-%m-%d')
+            
+            # Process signals into meta-signals
+            result = meta_engine.process_from_tracker(tracker, target_date)
+            
+            print(f"Insights generated: {result['stats']['insights_generated']}")
+            print(f"Meta-signals found: {result['stats']['meta_signals_found']}")
+            
+            # Print meta-signals
+            if result['meta_signals']:
+                print(f"\nMeta-signals (conceptual trends):")
+                for i, meta in enumerate(result['meta_signals'][:5]):
+                    print(f"  {i+1}. [{meta['maturity_stage'].upper()}] {meta['concept_name']}")
+                    print(f"      signals={len(meta['supporting_signals'])}, "
+                          f"conf={meta['concept_confidence']:.2f}, "
+                          f"accel={meta['acceleration']:.2f}")
+                    if args.verbose:
+                        print(f"      {meta['description'][:60]}...")
+            else:
+                print("\nNo meta-signals detected (need more diverse signals)")
+            
+            print(f"\nMeta-signal output: {meta_engine.output_file(target_date)}")
+            
+            # Optional: Generate hypotheses from meta-signals
+            if args.with_hypotheses and result['meta_signals']:
+                print(f"\n{'='*60}")
+                print("HYPOTHESIS ENGINE (Causal Predictions)")
+                print(f"{'='*60}\n")
+                
+                try:
+                    from utils.hypothesis_engine import HypothesisEngine
+                    
+                    hyp_engine = HypothesisEngine()
+                    hyp_result = hyp_engine.process_meta_signals(
+                        result['meta_signals'],
+                        date=target_date
+                    )
+                    
+                    print(f"Meta-signals processed: {hyp_result['summary']['total_metas']}")
+                    print(f"Hypothesis bundles: {hyp_result['summary']['total_bundles']}")
+                    print(f"Total hypotheses: {hyp_result['summary']['total_hypotheses']}")
+                    print(f"Requiring review: {hyp_result['summary']['metas_requiring_review']}")
+                    
+                    if hyp_result['summary']['top_mechanisms']:
+                        print(f"\nTop mechanisms:")
+                        for mech, count in hyp_result['summary']['top_mechanisms'].items():
+                            print(f"  {mech}: {count}")
+                    
+                    # Print top hypotheses
+                    if hyp_result['bundles']:
+                        print(f"\nTop hypotheses:")
+                        for i, bundle in enumerate(hyp_result['bundles'][:3]):
+                            if bundle['hypotheses']:
+                                top_hyp = bundle['hypotheses'][0]
+                                print(f"  {i+1}. {bundle['concept_name']}")
+                                print(f"      → {top_hyp['title']} (conf={top_hyp['confidence']:.0%})")
+                                print(f"      What to watch:")
+                                for pred in top_hyp['predicted_next_signals'][:2]:
+                                    print(f"        - [{pred['category']}] {pred['description'][:50]}...")
+                    
+                    print(f"\nHypothesis output: {hyp_engine.output_dir / f'hypotheses_{target_date}.json'}")
+                    
+                except Exception as e:
+                    logger.error(f"Hypothesis generation failed: {e}")
+                    if args.verbose:
+                        import traceback
+                        traceback.print_exc()
+            
+        except Exception as e:
+            logger.error(f"Meta-signal generation failed: {e}")
+            if args.verbose:
+                import traceback
+                traceback.print_exc()
+    
+    # Standalone hypothesis generation (when --with-hypotheses but not --with-meta)
+    elif args.with_hypotheses:
+        print(f"\n{'='*60}")
+        print("HYPOTHESIS ENGINE (Causal Predictions)")
+        print(f"{'='*60}\n")
+        
+        try:
+            from utils.hypothesis_engine import run_hypothesis_engine
+            
+            target_date = dates[-1] if dates else datetime.now().strftime('%Y-%m-%d')
+            result = run_hypothesis_engine(date=target_date)
+            
+            if 'error' in result:
+                print(f"Error: {result['error']}")
+                print(f"Path: {result.get('path', 'unknown')}")
+                print("\nHint: Run with --with-meta first to generate meta-signals.")
+            else:
+                print(f"Meta-signals processed: {result['summary']['total_metas']}")
+                print(f"Total hypotheses: {result['summary']['total_hypotheses']}")
+                
+        except Exception as e:
+            logger.error(f"Hypothesis generation failed: {e}")
+            if args.verbose:
+                import traceback
+                traceback.print_exc()
     
     return 0
 

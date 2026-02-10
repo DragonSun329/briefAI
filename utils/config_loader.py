@@ -40,6 +40,11 @@ def load_ticker_buckets() -> Dict[str, List[str]]:
     return load_financial_mappings().get("ticker_to_bucket", {})
 
 
+def load_ticker_to_company() -> Dict[str, str]:
+    """Load ticker-to-company canonical_id mappings."""
+    return load_financial_mappings().get("ticker_to_company", {})
+
+
 def load_token_buckets() -> Dict[str, Dict[str, Any]]:
     """Load token-to-bucket mappings."""
     return load_financial_mappings().get("token_to_bucket", {})

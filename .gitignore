@@ -215,3 +215,12 @@ __marimo__/
 
 # Git worktrees
 .worktrees/
+
+# Temp files
+tmp_*.json
+tmpclaude-*
+*_detail.json
+*_detail*.json
+*_check.json
+*_check*.json
+nul

@@ -154,6 +154,38 @@ class SkepticAgent:
         self.provider_switcher = None
         self.system_prompt = SKEPTIC_SYSTEM_PROMPT
 
+    @property
+    def card(self):
+        """Agent capability card for discovery/registration."""
+        from agents.base import AgentCard
+        return AgentCard(
+            agent_id="skeptic",
+            name="Skeptic (The Bear)",
+            description="Forensic analysis of commercial maturity, code health, and risk factors",
+            input_schema={"entity_name": "str", "signals": "dict (optional)"},
+            output_schema={"entity_type": "str", "risk_assessment": "dict", "skeptic_verdict": "dict"},
+            capabilities=["risk_analysis", "commercial_maturity", "brand_safety"],
+            model_task="adversarial_analysis",
+        )
+
+    async def run(self, input):
+        """
+        BaseAgent-compatible async entry point.
+
+        Args:
+            input: AgentInput with entity_name and optional signals.
+
+        Returns:
+            AgentOutput with Skeptic analysis results.
+        """
+        from agents.base import AgentOutput
+        result = self.analyze(input.entity_name, signals=input.signals or None)
+        return AgentOutput(
+            agent_id="skeptic",
+            status="completed",
+            data=result.to_dict(),
+        )
+
     def _get_provider_switcher(self):
         """Lazy load provider switcher with free model fallback."""
         if self.provider_switcher is None:

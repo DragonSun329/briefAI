@@ -1,0 +1,223 @@
+{
+  "generated_at": "2026-01-30T10:30:59.586390",
+  "total_entities": 2,
+  "summary": {
+    "average_validation_score": 0.422,
+    "direction_aligned_pct": 50.0,
+    "technical_confirmed_pct": 0.0
+  },
+  "grade_distribution": {
+    "A": 0,
+    "B": 0,
+    "C": 1,
+    "D": 0,
+    "F": 1
+  },
+  "top_validated": [
+    {
+      "entity_id": "META",
+      "ticker": "META",
+      "timestamp": "2026-01-30T10:30:45.158786",
+      "briefai_signal": {
+        "sentiment": 8.92,
+        "momentum": "bullish",
+        "confidence": 0.691
+      },
+      "market_reality": {
+        "current_price": 738.3099975585938,
+        "price_change_1d": "10.40%",
+        "price_change_5d": "14.00%",
+        "price_change_20d": "10.87%"
+      },
+      "technicals": {
+        "rsi_14": 72.05,
+        "macd_histogram": null,
+        "bollinger_position": null,
+        "sma_20_distance": "13.73%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": false,
+        "score": 0.592,
+        "grade": "C",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move",
+          "RSI overbought (72.1)"
+        ]
+      }
+    },
+    {
+      "entity_id": "AMD",
+      "ticker": "AMD",
+      "timestamp": "2026-01-30T10:30:59.586310",
+      "briefai_signal": {
+        "sentiment": 6.15,
+        "momentum": "bullish",
+        "confidence": 0.687
+      },
+      "market_reality": {
+        "current_price": 252.17999267578125,
+        "price_change_1d": "-0.22%",
+        "price_change_5d": "-0.61%",
+        "price_change_20d": "17.11%"
+      },
+      "technicals": {
+        "rsi_14": 84.73,
+        "macd_histogram": null,
+        "bollinger_position": null,
+        "sma_20_distance": "9.49%"
+      },
+      "validation": {
+        "direction_aligned": false,
+        "magnitude_aligned": true,
+        "technical_confirmed": false,
+        "score": 0.253,
+        "grade": "F",
+        "notes": [
+          "Neutral conditions",
+          "RSI overbought (84.7)"
+        ]
+      }
+    }
+  ],
+  "lowest_validated": [
+    {
+      "entity_id": "AMD",
+      "ticker": "AMD",
+      "timestamp": "2026-01-30T10:30:59.586310",
+      "briefai_signal": {
+        "sentiment": 6.15,
+        "momentum": "bullish",
+        "confidence": 0.687
+      },
+      "market_reality": {
+        "current_price": 252.17999267578125,
+        "price_change_1d": "-0.22%",
+        "price_change_5d": "-0.61%",
+        "price_change_20d": "17.11%"
+      },
+      "technicals": {
+        "rsi_14": 84.73,
+        "macd_histogram": null,
+        "bollinger_position": null,
+        "sma_20_distance": "9.49%"
+      },
+      "validation": {
+        "direction_aligned": false,
+        "magnitude_aligned": true,
+        "technical_confirmed": false,
+        "score": 0.253,
+        "grade": "F",
+        "notes": [
+          "Neutral conditions",
+          "RSI overbought (84.7)"
+        ]
+      }
+    },
+    {
+      "entity_id": "META",
+      "ticker": "META",
+      "timestamp": "2026-01-30T10:30:45.158786",
+      "briefai_signal": {
+        "sentiment": 8.92,
+        "momentum": "bullish",
+        "confidence": 0.691
+      },
+      "market_reality": {
+        "current_price": 738.3099975585938,
+        "price_change_1d": "10.40%",
+        "price_change_5d": "14.00%",
+        "price_change_20d": "10.87%"
+      },
+      "technicals": {
+        "rsi_14": 72.05,
+        "macd_histogram": null,
+        "bollinger_position": null,
+        "sma_20_distance": "13.73%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": false,
+        "score": 0.592,
+        "grade": "C",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move",
+          "RSI overbought (72.1)"
+        ]
+      }
+    }
+  ],
+  "all_results": [
+    {
+      "entity_id": "META",
+      "ticker": "META",
+      "timestamp": "2026-01-30T10:30:45.158786",
+      "briefai_signal": {
+        "sentiment": 8.92,
+        "momentum": "bullish",
+        "confidence": 0.691
+      },
+      "market_reality": {
+        "current_price": 738.3099975585938,
+        "price_change_1d": "10.40%",
+        "price_change_5d": "14.00%",
+        "price_change_20d": "10.87%"
+      },
+      "technicals": {
+        "rsi_14": 72.05,
+        "macd_histogram": null,
+        "bollinger_position": null,
+        "sma_20_distance": "13.73%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": false,
+        "score": 0.592,
+        "grade": "C",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move",
+          "RSI overbought (72.1)"
+        ]
+      }
+    },
+    {
+      "entity_id": "AMD",
+      "ticker": "AMD",
+      "timestamp": "2026-01-30T10:30:59.586310",
+      "briefai_signal": {
+        "sentiment": 6.15,
+        "momentum": "bullish",
+        "confidence": 0.687
+      },
+      "market_reality": {
+        "current_price": 252.17999267578125,
+        "price_change_1d": "-0.22%",
+        "price_change_5d": "-0.61%",
+        "price_change_20d": "17.11%"
+      },
+      "technicals": {
+        "rsi_14": 84.73,
+        "macd_histogram": null,
+        "bollinger_position": null,
+        "sma_20_distance": "9.49%"
+      },
+      "validation": {
+        "direction_aligned": false,
+        "magnitude_aligned": true,
+        "technical_confirmed": false,
+        "score": 0.253,
+        "grade": "F",
+        "notes": [
+          "Neutral conditions",
+          "RSI overbought (84.7)"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-01-26T14:49:41.642657",
+  "total_entities": 5,
+  "summary": {
+    "average_validation_score": 0.44,
+    "direction_aligned_pct": 60.0,
+    "technical_confirmed_pct": 40.0
+  },
+  "grade_distribution": {
+    "A": 0,
+    "B": 0,
+    "C": 2,
+    "D": 1,
+    "F": 2
+  },
+  "top_validated": [
+    {
+      "entity_id": "microsoft",
+      "ticker": "MSFT",
+      "timestamp": "2026-01-26T14:49:26.678494",
+      "briefai_signal": {
+        "sentiment": 8.618567354839836,
+        "momentum": "bullish",
+        "confidence": 0.55681320824993
+      },
+      "market_reality": {
+        "current_price": 465.95001220703125,
+        "price_change_1d": "3.28%",
+        "price_change_5d": "2.03%",
+        "price_change_20d": "-4.29%"
+      },
+      "technicals": {
+        "rsi_14": 45.67,
+        "macd_histogram": null,
+        "bollinger_position": null,
+        "sma_20_distance": "-1.27%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": false,
+        "score": 0.545,
+        "grade": "C",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move"
+        ]
+      }
+    },
+    {
+      "entity_id": "meta",
+      "ticker": "META",
+      "timestamp": "2026-01-26T14:49:37.130250",
+      "briefai_signal": {
+        "sentiment": 6.428469276337162,
+        "momentum": "neutral",
+        "confidence": 0.510945912418862
+      },
+      "market_reality": {
+        "current_price": 658.760009765625,
+        "price_change_1d": "1.72%",
+        "price_change_5d": "6.11%",
+        "price_change_20d": "-0.93%"
+      },
+      "technicals": {
+        "rsi_14": 52.86,
+        "macd_histogram": null,
+        "bollinger_position": null,
+        "sma_20_distance": "2.24%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": 

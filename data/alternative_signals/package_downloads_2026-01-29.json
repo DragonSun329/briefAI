@@ -1,0 +1,903 @@
+{
+  "source": "package_downloads",
+  "scraped_at": "2026-01-29T10:11:51.883386",
+  "total_packages": 51,
+  "packages": [
+    {
+      "package": "numpy",
+      "platform": "pypi",
+      "downloads_last_day": 24822742,
+      "downloads_last_week": 155078481,
+      "downloads_last_month": 638697272,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.038,
+      "daily_avg": 22154068
+    },
+    {
+      "package": "huggingface-hub",
+      "platform": "pypi",
+      "downloads_last_day": 6271651,
+      "downloads_last_week": 38087444,
+      "downloads_last_month": 151619840,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0.0064,
+      "daily_avg": 5441063
+    },
+    {
+      "package": "scikit-learn",
+      "platform": "pypi",
+      "downloads_last_day": 5955824,
+      "downloads_last_week": 36308526,
+      "downloads_last_month": 151388190,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.0535,
+      "daily_avg": 5186932
+    },
+    {
+      "package": "openai",
+      "platform": "pypi",
+      "downloads_last_day": 5919287,
+      "downloads_last_week": 34713996,
+      "downloads_last_month": 132954465,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0.0601,
+      "daily_avg": 4959142
+    },
+    {
+      "package": "langchain-core",
+      "platform": "pypi",
+      "downloads_last_day": 3180679,
+      "downloads_last_week": 19618586,
+      "downloads_last_month": 74676388,
+      "bucket": "ai-agents",
+      "wow_growth_rate": 0.069,
+      "daily_avg": 2802655
+    },
+    {
+      "package": "tiktoken",
+      "platform": "pypi",
+      "downloads_last_day": 3038716,
+      "downloads_last_week": 18846669,
+      "downloads_last_month": 75412833,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.0005,
+      "daily_avg": 2692381
+    },
+    {
+      "package": "torch",
+      "platform": "pypi",
+      "downloads_last_day": 2735415,
+      "downloads_last_week": 17047237,
+      "downloads_last_month": 65659393,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0.052,
+      "daily_avg": 2435319
+    },
+    {
+      "package": "anthropic",
+      "platform": "pypi",
+      "downloads_last_day": 1664799,
+      "downloads_last_week": 10642613,
+      "downloads_last_month": 37653234,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0.182,
+      "daily_avg": 1520373
+    },
+    {
+      "package": "openai",
+      "platform": "npm",
+      "downloads_last_day": 1330356,
+      "downloads_last_week": 9312496,
+      "downloads_last_month": 37029781,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0.0079,
+      "daily_avg": 1330356
+    },
+    {
+      "package": "ai",
+      "platform": "npm",
+      "downloads_last_day": 786337,
+      "downloads_last_week": 5504364,
+      "downloads_last_month": 22840851,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.0475,
+      "daily_avg": 786337
+    },
+    {
+      "package": "tensorflow",
+      "platform": "pypi",
+      "downloads_last_day": 689304,
+      "downloads_last_week": 4843437,
+      "downloads_last_month": 21497145,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.1275,
+      "daily_avg": 691919
+    },
+    {
+      "package": "@anthropic-ai/sdk",
+      "platform": "npm",
+      "downloads_last_day": 555759,
+      "downloads_last_week": 3890315,
+      "downloads_last_month": 14905971,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0.0595,
+      "daily_avg": 555759
+    },
+    {
+      "package": "lightgbm",
+      "platform": "pypi",
+      "downloads_last_day": 465705,
+      "downloads_last_week": 2724136,
+      "downloads_last_month": 11048910,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.0183,
+      "daily_avg": 389162
+    },
+    {
+      "package": "chromadb",
+      "platform": "pypi",
+      "downloads_last_day": 429235,
+      "downloads_last_week": 2582100,
+      "downloads_last_month": 9735440,
+      "bucket": "ai-infrastructure",
+      "wow_growth_rate": 0.0829,
+      "daily_avg": 368871
+    },
+    {
+      "package": "@langchain/core",
+      "platform": "npm",
+      "downloads_last_day": 352132,
+      "downloads_last_week": 2464930,
+      "downloads_last_month": 9392431,
+      "bucket": "ai-agents",
+      "wow_growth_rate": 0.0675,
+      "daily_avg": 352132
+    },
+    {
+      "package": "faiss-cpu",
+      "platform": "pypi",
+      "downloads_last_day": 355032,
+      "downloads_last_week": 2161872,
+      "downloads_last_month": 8563513,
+      "bucket": "ai-infrastructure",
+      "wow_growth_rate": 0.0131,
+      "daily_avg": 308838
+    },
+    {
+      "package": "@langchain/openai",
+      "platform": "npm",
+      "downloads_last_day": 256382,
+      "downloads_last_week": 1794680,
+      "downloads_last_month": 7109865,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0.013,
+      "daily_avg": 256382
+    },
+    {
+      "package": "qdrant-client",
+      "platform": "pypi",
+      "downloads_last_day": 279174,
+      "downloads_last_week": 1707976,
+      "downloads_last_month": 10128817,
+      "bucket": "ai-infrastructure",
+      "wow_growth_rate": -0.3915,
+      "daily_avg": 243996
+    },
+    {
+      "package": "langchain",
+      "platform": "npm",
+      "downloads_last_day": 199774,
+      "downloads_last_week": 1398419,
+      "downloads_last_month": 5569568,
+      "bucket": "ai-agents",
+      "wow_growth_rate": 0.0058,
+      "daily_avg": 199774
+    },
+    {
+      "package": "tiktoken",
+      "platform": "npm",
+      "downloads_last_day": 113741,
+      "downloads_last_week": 796187,
+      "downloads_last_month": 3403816,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.084,
+      "daily_avg": 113741
+    },
+    {
+      "package": "onnxruntime-web",
+      "platform": "npm",
+      "downloads_last_day": 88186,
+      "downloads_last_week": 617304,
+      "downloads_last_month": 2581206,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.057,
+      "daily_avg": 88186
+    },
+    {
+      "package": "onnxruntime-node",
+      "platform": "npm",
+      "downloads_last_day": 87452,
+      "downloads_last_week": 612166,
+      "downloads_last_month": 2463650,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.0081,
+      "daily_avg": 87452
+    },
+    {
+      "package": "@pinecone-database/pinecone",
+      "platform": "npm",
+      "downloads_last_day": 58112,
+      "downloads_last_week": 406786,
+      "downloads_last_month": 1493752,
+      "bucket": "ai-infrastructure",
+      "wow_growth_rate": 0.1227,
+      "daily_avg": 58112
+    },
+    {
+      "package": "@tensorflow/tfjs",
+      "platform": "npm",
+      "downloads_last_day": 28102,
+      "downloads_last_week": 196718,
+      "downloads_last_month": 871110,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.1249,
+      "daily_avg": 28102
+    },
+    {
+      "package": "chromadb",
+      "platform": "npm",
+      "downloads_last_day": 12500,
+      "downloads_last_week": 87501,
+      "downloads_last_month": 324715,
+      "bucket": "ai-infrastructure",
+      "wow_growth_rate": 0.1066,
+      "daily_avg": 12500
+    },
+    {
+      "package": "gpt-3-encoder",
+      "platform": "npm",
+      "downloads_last_day": 11838,
+      "downloads_last_week": 82868,
+      "downloads_last_month": 375126,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.1494,
+      "daily_avg": 11838
+    },
+    {
+      "package": "@tensorflow/tfjs-node",
+      "platform": "npm",
+      "downloads_last_day": 9049,
+      "downloads_last_week": 63345,
+      "downloads_last_month": 291410,
+      "bucket": "llm-foundation",
+      "wow_growth_rate": -0.1668,
+      "daily_avg": 9049
+    },
+    {
+      "package": "llamaindex",
+      "platform": "npm",
+      "downloads_last_day": 7691,
+      "downloads_last_week": 53837,
+      "downloads_last_month": 220789,
+      "bucket": "ai-agents",
+      "wow_growth_rate": -0.0326,
+      "daily_avg": 7691
+    },
+    {
+      "package": "autogen",
+      "platform": "pypi",
+      "downloads_last_day": 5209,
+      "downloads_last_week": 31233,
+      "downloads_last_month": 132807,
+      "bucket": "ai-agents",
+      "wow_growth_rate": -0.0775,
+      "daily_avg": 4461
+    },
+    {
+      "package": "ml5",
+      "platform": "npm",
+      "downloads_last_day": 395,
+      "downloads_last_week": 2766,
+      "downloads_last_month": 9562,
+      "bucket": "ai-general",
+      "wow_growth_rate": 0.221,
+      "daily_avg": 395
+    },
+    {
+      "package": "brain.js",
+      "platform": "npm",
+      "downloads_last_day": 319,
+      "downloads_last_week": 2235,
+      "downloads_last_month": 11045,
+      "bucket": "ai-general",
+      "wow_growth_rate": -0.2389,
+      "daily_avg": 319
+    },
+    {
+      "package": "keras",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/keras/recent",
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "jax",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/jax/recent",
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "flax",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/flax/recent",
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "transformers",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/transformers/recent",
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "langchain",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/langchain/recent",
+      "bucket": "ai-agents",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "llama-index",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/llama-index/recent",
+      "bucket": "ai-agents",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "sentence-transformers",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/sentence-transformers/recent",
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "tokenizers",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/tokenizers/recent",
+      "bucket": "llm-foundation",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "crewai",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/crewai/recent",
+      "bucket": "ai-agents",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "guidance",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/guidance/recent",
+      "bucket": "ai-agents",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "pinecone-client",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/pinecone-client/recent",
+      "bucket": "ai-infrastructure",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "weaviate-client",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/weaviate-client/recent",
+      "bucket": "ai-infrastructure",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "xgboost",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/xgboost/recent",
+      "bucket": "ai-general",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "catboost",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/catboost/recent",
+      "bucket": "ai-general",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "optuna",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/optuna/recent",
+      "bucket": "ai-general",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "opencv-python",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/opencv-python/recent",
+      "bucket": "computer-vision",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "ultralytics",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/ultralytics/recent",
+      "bucket": "computer-vision",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "timm",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/timm/recent",
+      "bucket": "computer-vision",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "pandas",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/pandas/recent",
+      "bucket": "ai-general",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    },
+    {
+      "package": "datasets",
+      "platform": "pypi",
+      "downloads_last_day": 0,
+      "downloads_last_week": 0,
+      "downloads_last_month": 0,
+      "error": "429 Client Error: TOO MANY REQUESTS for url: https://pypistats.org/api/packages/datasets/recent",
+      "bucket": "ai-general",
+      "wow_growth_rate": 0,
+      "daily_avg": 0
+    }
+  ],
+  "signals": {
+    "bucket_signals": {
+      "ai-general": {
+        "total_weekly_downloads": 200932846,
+        "package_count": 14,
+        "avg_growth_rate": -0.027835714285714287,
+        "top_packages": [
+          {
+            "package": "numpy",
+            "platform": "pypi",
+            "weekly_downloads": 155078481,
+            "growth_rate": -0.038
+          },
+          {
+            "package": "scikit-learn",
+            "platform": "pypi",
+            "weekly_downloads": 36308526,
+            "growth_rate": -0.0535
+          },
+          {
+            "package": "ai",
+            "platform": "npm",
+            "weekly_downloads": 5504364,
+            "growth_rate": -0.0475
+          },
+          {
+            "package": "lightgbm",
+            "platform": "pypi",
+            "weekly_downloads": 2724136,
+            "growth_rate": -0.0183
+          },
+          {
+            "package": "onnxruntime-web",
+            "platform": "npm",
+            "weekly_downloads": 617304,
+            "growth_rate": -0.057
+          }
+        ],
+        "signal_interpretation": "Flat - mature/saturated"
+      },
+      "llm-foundation": {
+        "total_weekly_downloads": 140235137,
+        "package_count": 18,
+        "avg_growth_rate": -0.0068222222222222234,
+        "top_packages": [
+          {
+            "package": "huggingface-hub",
+            "platform": "pypi",
+            "weekly_downloads": 38087444,
+            "growth_rate": 0.0064
+          },
+          {
+            "package": "openai",
+            "platform": "pypi",
+            "weekly_downloads": 34713996,
+            "growth_rate": 0.0601
+          },
+          {
+            "package": "tiktoken",
+            "platform": "pypi",
+            "weekly_downloads": 18846669,
+            "growth_rate": -0.0005
+          },
+          {
+            "package": "torch",
+            "platform": "pypi",
+            "weekly_downloads": 17047237,
+            "growth_rate": 0.052
+          },
+          {
+            "package": "anthropic",
+            "platform": "pypi",
+            "weekly_downloads": 10642613,
+            "growth_rate": 0.182
+          }
+        ],
+        "signal_interpretation": "Flat - mature/saturated"
+      },
+      "ai-agents": {
+        "total_weekly_downloads": 23567005,
+        "package_count": 9,
+        "avg_growth_rate": 0.003577777777777779,
+        "top_packages": [
+          {
+            "package": "langchain-core",
+            "platform": "pypi",
+            "weekly_downloads": 19618586,
+            "growth_rate": 0.069
+          },
+          {
+            "package": "@langchain/core",
+            "platform": "npm",
+            "weekly_downloads": 2464930,
+            "growth_rate": 0.0675
+          },
+          {
+            "package": "langchain",
+            "platform": "npm",
+            "weekly_downloads": 1398419,
+            "growth_rate": 0.0058
+          },
+          {
+            "package": "llamaindex",
+            "platform": "npm",
+            "weekly_downloads": 53837,
+            "growth_rate": -0.0326
+          },
+          {
+            "package": "autogen",
+            "platform": "pypi",
+            "weekly_downloads": 31233,
+            "growth_rate": -0.0775
+          }
+        ],
+        "signal_interpretation": "Stable growth - steady adoption"
+      },
+      "ai-infrastructure": {
+        "total_weekly_downloads": 6946235,
+        "package_count": 7,
+        "avg_growth_rate": -0.009457142857142858,
+        "top_packages": [
+          {
+            "package": "chromadb",
+            "platform": "pypi",
+            "weekly_downloads": 2582100,
+            "growth_rate": 0.0829
+          },
+          {
+            "package": "faiss-cpu",
+            "platform": "pypi",
+            "weekly_downloads": 2161872,
+            "growth_rate": 0.0131
+          },
+          {
+            "package": "qdrant-client",
+            "platform": "pypi",
+            "weekly_downloads": 1707976,
+            "growth_rate": -0.3915
+          },
+          {
+            "package": "@pinecone-database/pinecone",
+            "platform": "npm",
+            "weekly_downloads": 406786,
+            "growth_rate": 0.1227
+          },
+          {
+            "package": "chromadb",
+            "platform": "npm",
+            "weekly_downloads": 87501,
+            "growth_rate": 0.1066
+          }
+        ],
+        "signal_interpretation": "Flat - mature/saturated"
+      },
+      "computer-vision": {
+        "total_weekly_downloads": 0,
+        "package_count": 3,
+        "avg_growth_rate": 0.0,
+        "top_packages": [
+          {
+            "package": "opencv-python",
+            "platform": "pypi",
+            "weekly_downloads": 0,
+            "growth_rate": 0
+          },
+          {
+            "package": "ultralytics",
+            "platform": "pypi",
+            "weekly_downloads": 0,
+            "growth_rate": 0
+          },
+          {
+            "package": "timm",
+            "platform": "pypi",
+            "weekly_downloads": 0,
+            "growth_rate": 0
+          }
+        ],
+        "signal_interpretation": "Flat - mature/saturated"
+      }
+    },
+    "platform_totals": {
+      "pypi": 344394306,
+      "npm": 27286917
+    }
+  },
+  "bucket_signals": {
+    "ai-general": {
+      "total_weekly_downloads": 200932846,
+      "package_count": 14,
+      "avg_growth_rate": -0.027835714285714287,
+      "top_packages": [
+        {
+          "package": "numpy",
+          "platform": "pypi",
+          "weekly_downloads": 155078481,
+          "growth_rate": -0.038
+        },
+        {
+          "package": "scikit-learn",
+          "platform": "pypi",
+          "weekly_downloads": 36308526,
+          "growth_rate": -0.0535
+        },
+        {
+          "package": "ai",
+          "platform": "npm",
+          "weekly_downloads": 5504364,
+          "growth_rate": -0.0475
+        },
+        {
+          "package": "lightgbm",
+          "platform": "pypi",
+          "weekly_downloads": 2724136,
+          "growth_rate": -0.0183
+        },
+        {
+          "package": "onnxruntime-web",
+          "platform": "npm",
+          "weekly_downloads": 617304,
+          "growth_rate": -0.057
+        }
+      ],
+      "signal_interpretation": "Flat - mature/saturated"
+    },
+    "llm-foundation": {
+      "total_weekly_downloads": 140235137,
+      "package_count": 18,
+      "avg_growth_rate": -0.0068222222222222234,
+      "top_packages": [
+        {
+          "package": "huggingface-hub",
+          "platform": "pypi",
+          "weekly_downloads": 38087444,
+          "growth_rate": 0.0064
+        },
+        {
+          "package": "openai",
+          "platform": "pypi",
+          "weekly_downloads": 34713996,
+          "growth_rate": 0.0601
+        },
+        {
+          "package": "tiktoken",
+          "platform": "pypi",
+          "weekly_downloads": 18846669,
+          "growth_rate": -0.0005
+        },
+        {
+          "package": "torch",
+          "platform": "pypi",
+          "weekly_downloads": 17047237,
+          "growth_rate": 0.052
+        },
+        {
+          "package": "anthropic",
+          "platform": "pypi",
+          "weekly_downloads": 10642613,
+          "growth_rate": 0.182
+        }
+      ],
+      "signal_interpretation": "Flat - mature/saturated"
+    },
+    "ai-agents": {
+      "total_weekly_downloads": 23567005,
+      "package_count": 9,
+      "avg_growth_rate": 0.003577777777777779,
+      "top_packages": [
+        {
+          "package": "langchain-core",
+          "platform": "pypi",
+          "weekly_downloads": 19618586,
+          "growth_rate": 0.069
+        },
+        {
+          "package": "@langchain/core",
+          "platform": "npm",
+          "weekly_downloads": 2464930,
+          "growth_rate": 0.0675
+        },
+        {
+          "package": "langchain",
+          "platform": "npm",
+          "weekly_downloads": 1398419,
+          "growth_rate": 0.0058
+        },
+        {
+          "package": "llamaindex",
+          "platform": "npm",
+          "weekly_downloads": 53837,
+          "growth_rate": -0.0326
+        },
+        {
+          "package": "autogen",
+          "platform": "pypi",
+          "weekly_downloads": 31233,
+          "growth_rate": -0.0775
+        }
+      ],
+      "signal_interpretation": "Stable growth - steady adoption"
+    },
+    "ai-infrastructure": {
+      "total_weekly_downloads": 6946235,
+      "package_count": 7,
+      "avg_growth_rate": -0.009457142857142858,
+      "top_packages": [
+        {
+          "package": "chromadb",
+          "platform": "pypi",
+          "weekly_downloads": 2582100,
+          "growth_rate": 0.0829
+        },
+        {
+          "package": "faiss-cpu",
+          "platform": "pypi",
+          "weekly_downloads": 2161872,
+          "growth_rate": 0.0131
+        },
+        {
+          "package": "qdrant-client",
+          "platform": "pypi",
+          "weekly_downloads": 1707976,
+          "growth_rate": -0.3915
+        },
+        {
+          "package": "@pinecone-database/pinecone",
+          "platform": "npm",
+          "weekly_downloads": 406786,
+          "growth_rate": 0.1227
+        },
+        {
+          "package": "chromadb",
+          "platform": "npm",
+          "weekly_downloads": 87501,
+          "growth_rate": 0.1066
+        }
+      ],
+      "signal_interpretation": "Flat - mature/saturated"
+    },
+    "computer-vision": {
+      "total_weekly_downloads": 0,
+      "package_count": 3,
+      "avg_growth_rate": 0.0,
+      "top_packages": [
+        {
+          "package": "opencv-python",
+          "platform": "pypi",
+          "weekly_downloads": 0,
+          "growth_rate": 0
+        },
+        {
+          "package": "ultralytics",
+          "platform": "pypi",
+          "weekly_downloads": 0,
+          "growth_rate": 0
+        },
+        {
+          "package": "timm",
+          "platform": "pypi",
+          "weekly_downloads": 0,
+          "growth_rate": 0
+        }
+      ],
+      "signal_interpretation": "Flat - mature/saturated"
+    }
+  }
+}

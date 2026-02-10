@@ -76,11 +76,15 @@ class EnhancedLLMClient:
             # Get model name if it's OpenRouter
             if provider_id.startswith('openrouter.'):
                 tier = provider_id.split('.')[1]
-                current_idx = (self.switcher.tier_model_indices.get(tier, 0) - 1) % len(
-                    self.switcher.config['providers'][1]['tiers'][tier]['models']
-                )
-                model = self.switcher.config['providers'][1]['tiers'][tier]['models'][current_idx]
-                return {"provider": provider_name, "model": model}
+                openrouter_config = self.switcher._get_openrouter_config()
+                if openrouter_config and 'tiers' in openrouter_config and tier in openrouter_config['tiers']:
+                    current_idx = (self.switcher.tier_model_indices.get(tier, 0) - 1) % len(
+                        openrouter_config['tiers'][tier]['models']
+                    )
+                    model = openrouter_config['tiers'][tier]['models'][current_idx]
+                    return {"provider": provider_name, "model": model}
+                else:
+                    return {"provider": provider_name, "model": "unknown"}
             else:
                 return {"provider": provider_name, "model": "moonshot-v1-8k"}
         else:
@@ -118,49 +122,40 @@ class EnhancedLLMClient:
                 use_cache=use_cache
             )
 
-        # Try with provider switching
-        try:
-            logger.debug("[KIMI] Attempting request with primary provider")
-            return self.kimi_client.chat(
-                system_prompt=system_prompt,
-                user_message=user_message,
-                temperature=temperature,
-                max_tokens=max_tokens,
-                use_cache=use_cache
-            )
-
-        except RateLimitError as e:
-            logger.warning(f"[KIMI] Rate limited (429), switching to OpenRouter...")
-
-            # Switch to next provider
-            next_provider = self.switcher.switch_to_next_provider()
-            if not next_provider:
-                logger.error("All providers exhausted!")
-                raise RuntimeError("All LLM providers exhausted")
-
-            # Try with fallback provider
+        # Use switcher's current provider (may be OpenRouter if Kimi disabled)
+        max_attempts = 10
+        last_error = None
+        
+        for attempt in range(max_attempts):
+            current_provider = self.switcher.get_current_provider()
+            provider_info = self.get_current_provider_info()
+            provider_display = f"{provider_info['provider']} ({provider_info['model']})"
+            
             try:
-                provider_info = self.get_current_provider_info()
-                provider_display = f"{provider_info['provider']} ({provider_info['model']})"
-                logger.info(f"[FALLBACK] Attempting with {provider_display}...")
-
-                response, usage = next_provider.chat(
+                logger.debug(f"[{provider_info['provider']}] Attempting request...")
+                
+                response, usage = current_provider.chat(
                     system_prompt=system_prompt,
                     user_message=user_message,
                     temperature=temperature or 0.3,
                     max_tokens=max_tokens or 4096
                 )
 
-                logger.info(f"[✓ SUCCESS] Completed with {provider_display}")
+                logger.debug(f"[✓ SUCCESS] Completed with {provider_display}")
                 return response
 
-            except Exception as fallback_error:
-                logger.error(f"[FALLBACK] Provider also failed: {fallback_error}")
-                raise
+            except Exception as e:
+                last_error = e
+                logger.warning(f"[{provider_info['provider']}] Failed: {e}, trying next...")
 
-        except Exception as e:
-            logger.error(f"[ERROR] Unexpected error: {e}")
-            raise
+                # Switch to next provider
+                next_provider = self.switcher.switch_to_next_provider()
+                if not next_provider:
+                    logger.error("All providers exhausted!")
+                    raise RuntimeError("All LLM providers exhausted") from last_error
+                continue
+
+        raise RuntimeError("All LLM providers exhausted") from last_error
 
     def chat_structured(
         self,
@@ -185,8 +180,11 @@ class EnhancedLLMClient:
         Returns:
             Parsed JSON response
         """
-        try:
-            logger.debug("[KIMI] Attempting structured request")
+        import json as json_module
+        
+        # If no switcher, use Kimi directly
+        if not self.switcher:
+            logger.debug("[KIMI] Attempting structured request (no switcher)")
             return self.kimi_client.chat_structured(
                 system_prompt=system_prompt,
                 user_message=user_message,
@@ -196,59 +194,76 @@ class EnhancedLLMClient:
                 use_cache=use_cache
             )
 
-        except (RateLimitError, APIError) as e:
-            # Handle both rate limits (429) and moderation blocks (403)
-            error_code = getattr(e, 'status_code', None)
-            if error_code == 403:
-                logger.warning(f"[KIMI] Content flagged by moderation (403), switching to next model...")
-            elif error_code == 429:
-                logger.warning(f"[KIMI] Rate limited (429), switching to OpenRouter...")
-            else:
-                logger.warning(f"[KIMI] Error occurred, switching to fallback...")
-
-            if not self.switcher:
-                raise
-
-            next_provider = self.switcher.switch_to_next_provider()
-            if not next_provider:
-                logger.error("All providers exhausted!")
-                raise RuntimeError("All LLM providers exhausted")
-
+        # Use switcher's current provider with retry loop
+        max_attempts = 10
+        last_error = None
+        
+        for attempt in range(max_attempts):
+            current_provider = self.switcher.get_current_provider()
+            provider_info = self.get_current_provider_info()
+            provider_display = f"{provider_info['provider']} ({provider_info['model']})"
+            
             try:
-                provider_info = self.get_current_provider_info()
-                provider_display = f"{provider_info['provider']} ({provider_info['model']})"
-                logger.info(f"[FALLBACK] Attempting structured request with {provider_display}...")
+                logger.debug(f"[{provider_info['provider']}] Attempting structured request...")
 
-                # Get response from fallback
-                response, usage = next_provider.chat(
-                    system_prompt=system_prompt + "\n\nIMPORTANT: Return your response as valid JSON format.",
+                # Get response from current provider
+                response, usage = current_provider.chat(
+                    system_prompt=system_prompt + "\n\nIMPORTANT: Return your response as valid JSON format only. No markdown, no explanation, just the JSON object.",
                     user_message=user_message,
                     temperature=temperature or 0.3,
                     max_tokens=max_tokens or 4096
                 )
 
                 # Parse JSON
-                import json
                 try:
+                    # Handle markdown code blocks
                     if "```json" in response:
                         json_start = response.find("```json") + 7
                         json_end = response.find("```", json_start)
-                        parsed = json.loads(response[json_start:json_end])
+                        parsed = json_module.loads(response[json_start:json_end].strip())
+                    elif "```" in response:
+                        json_start = response.find("```") + 3
+                        json_end = response.find("```", json_start)
+                        parsed = json_module.loads(response[json_start:json_end].strip())
                     else:
-                        parsed = json.loads(response)
-                    logger.info(f"[✓ SUCCESS] Structured request completed with {provider_display}")
+                        # Try to find JSON object/array in response
+                        response_stripped = response.strip()
+                        if response_stripped.startswith('{') or response_stripped.startswith('['):
+                            parsed = json_module.loads(response_stripped)
+                        else:
+                            # Try to extract JSON from response
+                            start = response.find('{')
+                            if start == -1:
+                                start = response.find('[')
+                            if start != -1:
+                                parsed = json_module.loads(response[start:])
+                            else:
+                                raise json_module.JSONDecodeError("No JSON found", response, 0)
+                    
+                    logger.debug(f"[✓ SUCCESS] Structured request completed with {provider_display}")
                     return parsed
-                except json.JSONDecodeError:
-                    logger.error(f"Failed to parse JSON response: {response[:100]}")
-                    raise
+                    
+                except json_module.JSONDecodeError as je:
+                    logger.error(f"Failed to parse JSON response: {response[:200] if response else '(empty)'}")
+                    last_error = je
+                    # Try next provider
+                    next_provider = self.switcher.switch_to_next_provider()
+                    if not next_provider:
+                        raise RuntimeError("All LLM providers exhausted") from last_error
+                    continue
 
-            except Exception as fallback_error:
-                logger.error(f"[FALLBACK] Provider failed: {fallback_error}")
-                raise
+            except Exception as e:
+                last_error = e
+                logger.warning(f"[{provider_info['provider']}] Failed: {e}, trying next...")
 
-        except Exception as e:
-            logger.error(f"[ERROR] Unexpected error: {e}")
-            raise
+                # Switch to next provider
+                next_provider = self.switcher.switch_to_next_provider()
+                if not next_provider:
+                    logger.error("All providers exhausted!")
+                    raise RuntimeError("All LLM providers exhausted") from last_error
+                continue
+
+        raise RuntimeError("All LLM providers exhausted") from last_error
 
     def get_provider_stats(self) -> Dict[str, Any]:
         """Get statistics from all providers"""

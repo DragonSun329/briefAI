@@ -1,0 +1,233 @@
+{
+  "version": "2.0",
+  "description": "Unified AI Radar - Tech Buckets + Industry Verticals + Hype Cycle",
+  "last_updated": "2026-01-28",
+  
+  "data_sources": {
+    "description": "All scrapers feeding the radar",
+    "sources": [
+      {"id": "tech_news_rss", "name": "Tech News RSS", "frequency": "daily", "count": 14},
+      {"id": "newsletters", "name": "AI Newsletters", "frequency": "daily", "count": 13},
+      {"id": "reddit", "name": "Reddit", "frequency": "daily", "count": 28},
+      {"id": "sec_filings", "name": "SEC Filings", "frequency": "daily", "count": 24},
+      {"id": "patents", "name": "USPTO Patents", "frequency": "weekly", "count": 20},
+      {"id": "job_postings", "name": "Job Boards", "frequency": "daily", "count": 23},
+      {"id": "earnings", "name": "Earnings News", "frequency": "daily", "count": 16},
+      {"id": "product_hunt", "name": "Product Hunt", "frequency": "daily", "count": 1},
+      {"id": "package_stats", "name": "PyPI/npm", "frequency": "weekly", "count": 45},
+      {"id": "app_rankings", "name": "App Store", "frequency": "weekly", "count": 10},
+      {"id": "app_reviews", "name": "App Reviews + LLM", "frequency": "weekly", "count": 8},
+      {"id": "research_papers", "name": "ArXiv Papers", "frequency": "daily", "count": 7},
+      {"id": "policy", "name": "Gov Policy", "frequency": "weekly", "count": 5},
+      {"id": "china_tech", "name": "China Tech", "frequency": "daily", "count": 5},
+      {"id": "glassdoor", "name": "Glassdoor", "frequency": "weekly", "count": 16},
+      {"id": "salary_data", "name": "Salary Data", "frequency": "monthly", "count": 11},
+      {"id": "ai_verticals", "name": "Vertical Analysis", "frequency": "weekly", "count": 26}
+    ]
+  },
+  
+  "layers": {
+    "description": "Three-layer analysis framework",
+    
+    "layer_1_tech_stack": {
+      "name": "AI Technology Stack",
+      "description": "Core AI technologies and infrastructure",
+      "buckets": [
+        {"id": "llm-foundation", "name": "Foundation Models"},
+        {"id": "rag-retrieval", "name": "RAG & Retrieval"},
+        {"id": "agent-orchestration", "name": "Agents & Orchestration"},
+        {"id": "llm-inference", "name": "Inference & Serving"},
+        {"id": "fine-tuning", "name": "Fine-tuning & Training"},
+        {"id": "code-ai", "name": "AI for Code"},
+        {"id": "vision-multimodal", "name": "Vision & Multimodal"},
+        {"id": "speech-audio", "name": "Speech & Audio"},
+        {"id": "ai-chips", "name": "AI Hardware"},
+        {"id": "ai-infrastructure", "name": "AI Infrastructure"}
+      ]
+    },
+    
+    "layer_2_verticals": {
+      "name": "AI Industry Verticals",
+      "description": "AI applications by industry",
+      "verticals": [
+        {"id": "ai_healthcare", "name": "Healthcare", "icon": "🏥"},
+        {"id": "ai_drug_discovery", "name": "Drug Discovery", "icon": "💊"},
+        {"id": "ai_fintech", "name": "Fintech", "icon": "💰"},
+        {"id": "ai_education", "name": "Education", "icon": "📚"},
+        {"id": "ai_legal", "name": "Legal", "icon": "⚖️"},
+        {"id": "ai_creative", "name": "Creative", "icon": "🎨"},
+        {"id": "ai_robotics", "name": "Robotics", "icon": "🤖"},
+        {"id": "ai_autonomous_vehicles", "name": "Autonomous Vehicles", "icon": "🚗"},
+        {"id": "ai_cybersecurity", "name": "Cybersecurity", "icon": "🔒"},
+        {"id": "ai_hr", "name": "HR/Recruiting", "icon": "👥"},
+        {"id": "ai_sales", "name": "Sales", "icon": "📈"},
+        {"id": "ai_customer_service", "name": "Customer Service", "icon": "💬"},
+        {"id": "ai_supply_chain", "name": "Supply Chain", "icon": "📦"},
+        {"id": "ai_manufacturing", "name": "Manufacturing", "icon": "🏭"},
+        {"id": "ai_agriculture", "name": "Agriculture", "icon": "🌾"},
+        {"id": "ai_real_estate", "name": "Real Estate", "icon": "🏠"},
+        {"id": "ai_insurance", "name": "Insurance", "icon": "🛡️"},
+        {"id": "ai_construction", "name": "Construction", "icon": "🏗️"},
+        {"id": "ai_gaming", "name": "Gaming", "icon": "🎮"},
+        {"id": "ai_climate", "name": "Climate/Energy", "icon": "🌍"},
+        {"id": "ai_defense", "name": "Defense/Gov", "icon": "🏛️"},
+        {"id": "ai_retail", "name": "Retail", "icon": "🛒"},
+        {"id": "ai_space", "name": "Space", "icon": "🚀"},
+        {"id": "ai_science", "name": "Scientific Discovery", "icon": "🔬"},
+        {"id": "ai_marketing", "name": "Marketing", "icon": "📣"},
+        {"id": "ai_trading", "name": "Trading/Quant", "icon": "📊"}
+      ]
+    },
+    
+    "layer_3_market_signals": {
+      "name": "Market & Capital Signals",
+      "description": "Investment and market indicators",
+      "signals": [
+        {"id": "funding", "name": "Funding Rounds"},
+        {"id": "ma", "name": "M&A Activity"},
+        {"id": "ipo", "name": "IPO Pipeline"},
+        {"id": "hiring", "name": "Hiring Trends"},
+        {"id": "salaries", "name": "Salary Trends"},
+        {"id": "patents", "name": "Patent Activity"},
+        {"id": "research", "name": "Research Output"}
+      ]
+    }
+  },
+  
+  "hype_cycle": {
+    "description": "Gartner-style hype cycle positioning",
+    "phases": [
+      {
+        "id": "innovation_trigger",
+        "name": "Innovation Trigger",
+        "x_range": [0, 20],
+        "characteristics": "Early R&D, few products, high uncertainty",
+        "current_verticals": ["ai_robotics", "ai_gaming", "ai_construction"]
+      },
+      {
+        "id": "peak_expectations",
+        "name": "Peak of Inflated Expectations",
+        "x_range": [20, 40],
+        "characteristics": "Media hype, VC frenzy, unrealistic expectations",
+        "current_verticals": ["ai_drug_discovery", "ai_education", "ai_creative", "ai_marketing"]
+      },
+      {
+        "id": "trough_disillusionment",
+        "name": "Trough of Disillusionment",
+        "x_range": [40, 55],
+        "characteristics": "Failures publicized, consolidation, survivors emerge",
+        "current_verticals": ["ai_autonomous_vehicles", "ai_real_estate", "ai_retail"]
+      },
+      {
+        "id": "slope_enlightenment",
+        "name": "Slope of Enlightenment",
+        "x_range": [55, 80],
+        "characteristics": "Best practices emerge, ROI proven, enterprise adoption",
+        "current_verticals": ["ai_healthcare", "ai_fintech", "ai_manufacturing", "ai_agriculture", "ai_insurance", "ai_hr", "ai_supply_chain"]
+      },
+      {
+        "id": "plateau_productivity",
+        "name": "Plateau of Productivity",
+        "x_range": [80, 100],
+        "characteristics": "Mainstream adoption, market leaders clear",
+        "current_verticals": ["ai_trading", "ai_cybersecurity"]
+      }
+    ]
+  },
+  
+  "quadrant_analysis": {
+    "description": "2x2 matrix for opportunity identification",
+    "axes": {
+      "x": {"name": "Technical Maturity", "low": "Emerging", "high": "Mature"},
+      "y": {"name": "Capital/Hype", "low": "Under-hyped", "high": "Over-hyped"}
+    },
+    "quadrants": [
+      {
+        "id": "alpha_zone",
+        "name": "Alpha Zone (Hidden Gems)",
+        "position": "high_tech_low_hype",
+        "interpretation": "Best opportunities - proven tech, not crowded",
+        "action": "Invest/Build"
+      },
+      {
+        "id": "hot_zone",
+        "name": "Hot Zone (Competitive)",
+        "position": "high_tech_high_hype",
+        "interpretation": "Crowded market, need differentiation",
+        "action": "Differentiate or Avoid"
+      },
+      {
+        "id": "hype_zone",
+        "name": "Hype Zone (Vaporware)",
+        "position": "low_tech_high_hype",
+        "interpretation": "Money chasing story, high risk",
+        "action": "Be Cautious"
+      },
+      {
+        "id": "emerging_zone",
+        "name": "Emerging Zone (Watch)",
+        "position": "low_tech_low_hype",
+        "interpretation": "Too early, monitor for breakouts",
+        "action": "Research & Monitor"
+      }
+    ]
+  },
+  
+  "scoring_methodology": {
+    "technical_momentum_score": {
+      "components": [
+        {"name": "GitHub Stars Velocity", "weight": 0.15},
+        {"name": "Paper Citations", "weight": 0.10},
+        {"name": "Package Downloads", "weight": 0.20},
+        {"name": "HuggingFace Activity", "weight": 0.15},
+        {"name": "Developer Surveys", "weight": 0.10},
+        {"name": "Job Postings", "weight": 0.15},
+        {"name": "Patent Activity", "weight": 0.15}
+      ]
+    },
+    "capital_confidence_score": {
+      "components": [
+        {"name": "Funding Volume", "weight": 0.25},
+        {"name": "Funding Velocity", "weight": 0.20},
+        {"name": "M&A Activity", "weight": 0.15},
+        {"name": "Enterprise Contracts", "weight": 0.20},
+        {"name": "VC Sentiment", "weight": 0.20}
+      ]
+    },
+    "enterprise_adoption_score": {
+      "components": [
+        {"name": "Fortune 500 Usage", "weight": 0.30},
+        {"name": "Enterprise Contracts", "weight": 0.25},
+        {"name": "Integration Partnerships", "weight": 0.20},
+        {"name": "Compliance/Security Certs", "weight": 0.25}
+      ]
+    }
+  },
+  
+  "alerts": [
+    {
+      "id": "alpha_opportunity",
+      "name": "Alpha Opportunity",
+      "condition": "tech_score > 70 AND hype_score < 40",
+      "description": "Undervalued opportunity with strong technical foundation"
+    },
+    {
+      "id": "hype_warning",
+      "name": "Hype Bubble Warning",
+      "condition": "hype_score > 80 AND tech_score < 30",
+      "description": "Dangerous hype without technical substance"
+    },
+    {
+      "id": "breakout",
+      "name": "Breakout Signal",
+      "condition": "tech_score_delta > 20 in 30 days",
+      "description": "Rapid technical momentum increase"
+    },
+    {
+      "id": "maturation",
+      "name": "Market Maturation",
+      "condition": "moving from slope to plateau",
+      "description": "Market entering mainstream phase"
+    }
+  ]
+}

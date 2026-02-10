@@ -93,7 +93,7 @@ class BaseLLMProvider(ABC):
     def detect_rate_limit(self, error: Exception) -> bool:
         """
         Detect if error is a rate limit or fallback-triggering error.
-        Treats 403 moderation blocks and 429 rate limits the same way - triggers fallback.
+        Treats 403 moderation, 429 rate limits, and 404 model not found the same way.
         """
         # Direct rate limit errors
         if isinstance(error, RateLimitError):
@@ -103,6 +103,17 @@ class BaseLLMProvider(ABC):
         if hasattr(error, 'status_code') and error.status_code == 429:
             return True
 
+        # HTTP 404 (model not found / no endpoints)
+        if hasattr(error, 'status_code') and error.status_code == 404:
+            logger.warning(f"Model not found (404), will try next model")
+            return True
+
+        # Check error message for 404 patterns
+        error_str = str(error).lower()
+        if '404' in error_str or 'no endpoints found' in error_str or 'not found' in error_str:
+            logger.warning(f"Model endpoint not found, will try next model")
+            return True
+
         # HTTP 403 (moderation blocked, content blocked, etc.)
         # This should trigger fallback to next model
         if hasattr(error, 'status_code') and error.status_code == 403:
@@ -110,7 +121,6 @@ class BaseLLMProvider(ABC):
                 logger.warning(f"Model flagged content, will try next model")
                 return True
             # Check in error body for moderation messages
-            error_str = str(error).lower()
             if 'moderation' in error_str or 'flagged' in error_str or 'blocked' in error_str:
                 return True
 
@@ -226,7 +236,7 @@ class OpenRouterProvider(BaseLLMProvider):
     def __init__(
         self,
         api_key: Optional[str] = None,
-        model: str = "meta-llama/llama-3.3-8b-instruct:free"
+        model: str = "meta-llama/llama-3.3-70b-instruct:free"
     ):
         """
         Initialize OpenRouter provider
@@ -331,6 +341,128 @@ class OpenRouterProvider(BaseLLMProvider):
         self.stats["total_cost"] += input_cost + output_cost
 
 
+class Kimi25Provider(BaseLLMProvider):
+    """Kimi 2.5 provider — Claude-compatible API at api.kimi.com"""
+
+    def __init__(
+        self,
+        api_key: Optional[str] = None,
+        model: str = "kimi-2.5",
+    ):
+        api_key = api_key or os.getenv("KIMI25_API_KEY")
+        if not api_key:
+            raise ValueError("KIMI25_API_KEY not found in environment")
+
+        # Don't call super().__init__ with base_url — we use requests, not openai client
+        self.provider_id = "kimi25"
+        self.api_key = api_key
+        self.base_url = "https://api.kimi.com/coding/v1"
+        self.current_model = model
+        self.is_available = True
+        self.last_error = None
+        self.client = None  # Not using OpenAI SDK
+
+        self.stats = {
+            "total_calls": 0,
+            "successful_calls": 0,
+            "failed_calls": 0,
+            "rate_limit_errors": 0,
+            "total_input_tokens": 0,
+            "total_output_tokens": 0,
+            "total_cost": 0.0,
+        }
+
+        logger.info(f"Initialized Kimi 2.5 provider with model: {model}")
+
+    def get_pricing(self, model: str) -> Dict[str, float]:
+        return {"input": 0.0, "output": 0.0}  # Included with subscription
+
+    def chat(
+        self,
+        system_prompt: str,
+        user_message: str,
+        model: Optional[str] = None,
+        temperature: float = 0.3,
+        max_tokens: int = 4096,
+    ) -> tuple[str, Dict[str, int]]:
+        """Send a chat request via Anthropic-compatible messages API."""
+        import requests as _requests
+
+        model = model or self.current_model
+        self.stats["total_calls"] += 1
+
+        headers = {
+            "x-api-key": self.api_key,
+            "anthropic-version": "2023-06-01",
+            "Content-Type": "application/json",
+        }
+
+        payload = {
+            "model": model,
+            "max_tokens": max_tokens,
+            "system": system_prompt,
+            "messages": [{"role": "user", "content": user_message}],
+        }
+        # Only add temperature if not 0 (some endpoints reject 0)
+        if temperature > 0:
+            payload["temperature"] = temperature
+
+        try:
+            resp = _requests.post(
+                f"{self.base_url}/messages",
+                headers=headers,
+                json=payload,
+                timeout=120,
+            )
+
+            if resp.status_code == 429:
+                self.stats["rate_limit_errors"] += 1
+                self.stats["failed_calls"] += 1
+                err = RateLimitError(
+                    message=resp.text,
+                    response=resp,
+                    body=resp.json() if resp.text else {},
+                )
+                self.last_error = err
+                logger.warning(f"Kimi 2.5 rate limit: {resp.text[:200]}")
+                raise err
+
+            if resp.status_code != 200:
+                self.stats["failed_calls"] += 1
+                raise APIError(
+                    message=f"Kimi 2.5 API error {resp.status_code}: {resp.text[:300]}",
+                    request=resp.request,
+                    body=resp.json() if resp.text else {},
+                )
+
+            data = resp.json()
+            content = data["content"][0]["text"]
+            usage_raw = data.get("usage", {})
+            usage = {
+                "prompt_tokens": usage_raw.get("input_tokens", 0),
+                "completion_tokens": usage_raw.get("output_tokens", 0),
+            }
+
+            self.stats["successful_calls"] += 1
+            self._update_stats(usage, model)
+            self.last_error = None
+            self.is_available = True
+
+            return content, usage
+
+        except (RateLimitError, APIError):
+            raise
+        except Exception as e:
+            self.stats["failed_calls"] += 1
+            self.last_error = e
+            logger.error(f"Kimi 2.5 API error: {e}")
+            raise
+
+    def _update_stats(self, usage: Dict[str, int], model: str):
+        self.stats["total_input_tokens"] += usage.get("prompt_tokens", 0)
+        self.stats["total_output_tokens"] += usage.get("completion_tokens", 0)
+
+
 def create_provider(
     provider_id: str,
     api_key: Optional[str] = None,
@@ -340,19 +472,21 @@ def create_provider(
     Factory function to create provider instances
 
     Args:
-        provider_id: 'kimi' or 'openrouter'
+        provider_id: 'kimi', 'kimi25', or 'openrouter'
         api_key: API key (optional, uses env vars if not provided)
         model: Model to use
 
     Returns:
         Provider instance
     """
-    if provider_id == "kimi":
+    if provider_id == "kimi25":
+        return Kimi25Provider(api_key=api_key, model=model or "kimi-2.5")
+    elif provider_id == "kimi":
         return KimiProvider(api_key=api_key, model=model or "moonshot-v1-8k")
     elif provider_id == "openrouter":
         return OpenRouterProvider(
             api_key=api_key,
-            model=model or "meta-llama/llama-3.3-8b-instruct:free"
+            model=model or "meta-llama/llama-3.3-70b-instruct:free"
         )
     else:
         raise ValueError(f"Unknown provider: {provider_id}")

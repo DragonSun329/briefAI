@@ -1,0 +1,91 @@
+{
+  "last_updated": "2026-01-29",
+  "sources": ["Goldman Sachs", "J.P. Morgan", "Morgan Stanley", "BlackRock", "PwC"],
+  
+  "macro": {
+    "global_growth": {
+      "forecast": "2.8%",
+      "source": "Goldman Sachs",
+      "vs_consensus": "+0.3%",
+      "key_driver": "AI capital spending"
+    },
+    "us_growth": {
+      "forecast": "2.6%",
+      "source": "Goldman Sachs",
+      "vs_consensus": "+0.6%",
+      "risk": "Sticky inflation near 3%"
+    },
+    "dollar": {
+      "direction": "Weakening",
+      "consensus": "Goldman, JPM, BlackRock all bearish",
+      "eur_usd_target": 1.20
+    },
+    "fed": {
+      "cuts_expected": "1-2 cuts (50-75bps)",
+      "terminal_rate": "3.5%",
+      "constraint": "US inflation staying near 3%"
+    }
+  },
+  
+  "ai_investment": {
+    "cycle_stage": "Year 2-3 of 10+ year adoption cycle",
+    "source": "J.P. Morgan",
+    "comparison": "Like smartphones, cloud (8-10 years each)",
+    
+    "capex_2026": {
+      "meta": "$115-135B",
+      "meta_vs_2025": "+60-88%",
+      "meta_context": "0.4% of US GDP, 15% of US military budget",
+      "msft_q2_run_rate": "$150B annualized",
+      "key_constraint": "Power/energy, not compute"
+    },
+    
+    "key_themes": [
+      "AI models = new operating systems",
+      "Context is the new frontier (better memory > larger models)",
+      "Rise of the personal agent",
+      "Agent-as-a-service economy (billing by tokens)",
+      "Power is the new capital (175% data center growth by 2030)"
+    ]
+  },
+  
+  "risks": {
+    "deepseek": {
+      "event": "DeepSeek R2/V4 release",
+      "timing": "February 2026 (around Spring Festival)",
+      "precedent": "R1 triggered $500B+ NVIDIA drop, 7-18% tech sympathy sells",
+      "expected_performance": "Match Claude Opus 4.5"
+    },
+    "monetization": {
+      "concern": "CapEx front-loaded, revenues back-loaded",
+      "source": "BlackRock, JPM Credit"
+    },
+    "inflation": {
+      "concern": "US inflation staying near 3%",
+      "impact": "Limits Fed cutting room"
+    }
+  },
+  
+  "equity_views": {
+    "us": {
+      "view": "Constructive",
+      "upside": "10-25%",
+      "preference": "Large caps + growth style (AI theme)",
+      "broadening": "S&P 493 had best earnings growth in years (+12% Q3)"
+    },
+    "europe": {
+      "view": "Contrarian opportunity",
+      "discount": "23% to US (could narrow to single digits)",
+      "sectors_long": ["Banks", "Defense", "Utilities"],
+      "sectors_short": ["Autos", "Chemicals", "Luxury"]
+    },
+    "em_picks": ["Korea (semis)", "India (friendshoring)", "Brazil (commodities)"]
+  },
+  
+  "sentiment": {
+    "apac_wealth_leaders": "87.5% see soft landing",
+    "positioning": "Pivoting from defense to modernized 60/40",
+    "additions": ["Private credit", "Gold"],
+    "contrarian_view": "Overhyped short-term (2026-2030), underhyped long-term"
+  }
+}

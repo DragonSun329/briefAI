@@ -168,13 +168,20 @@ class TestObservableQuery:
     
     def test_observable_query_creation(self):
         """Observable query should be created correctly."""
-        query = build_observable_query(
+        # v2.2: build_observable_query now returns (ObservableQuery, measurable, measurable_reason)
+        result = build_observable_query(
             category='financial',
             metric='revenue',
             direction='increase',
             sources=['sec', 'earnings_call'],
             timeframe_days=30,
         )
+        
+        # Handle both old (ObservableQuery) and new (tuple) return types
+        if isinstance(result, tuple):
+            query, measurable, measurable_reason = result
+        else:
+            query = result
         
         assert isinstance(query, ObservableQuery)
         assert query.source in ['sec', 'earnings_call']

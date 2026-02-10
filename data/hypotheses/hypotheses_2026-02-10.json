@@ -1,0 +1,110 @@
+{
+  "date": "2026-02-10",
+  "bundles": [
+    {
+      "meta_id": "meta_nvidia_compute_demand",
+      "concept_name": "NVIDIA Compute Demand Acceleration",
+      "hypotheses": [
+        {
+          "hypothesis_id": "hyp_nvidia_infra_001",
+          "title": "Infrastructure Scaling Continues",
+          "mechanism": "infra_scaling",
+          "confidence": 0.84,
+          "predicted_next_signals": [
+            {
+              "category": "financial",
+              "description": "NVIDIA datacenter revenue beats estimates",
+              "expected_timeframe_days": 45,
+              "measurable": true,
+              "canonical_metric": "earnings_mentions"
+            },
+            {
+              "category": "technical",
+              "description": "Blackwell benchmark results published",
+              "expected_timeframe_days": 30,
+              "measurable": true,
+              "canonical_metric": "repo_activity"
+            }
+          ],
+          "falsifiers": [
+            {
+              "description": "H100 inventory builds at channel partners"
+            },
+            {
+              "description": "Cloud GPU pricing drops >30% in 30 days"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "meta_id": "meta_enterprise_ai_adoption",
+      "concept_name": "Enterprise AI Adoption Accelerating",
+      "hypotheses": [
+        {
+          "hypothesis_id": "hyp_enterprise_001",
+          "title": "Enterprise Deployment Acceleration",
+          "mechanism": "enterprise_adoption",
+          "confidence": 0.76,
+          "predicted_next_signals": [
+            {
+              "category": "technical",
+              "description": "Enterprise SDK downloads increase",
+              "expected_timeframe_days": 14,
+              "measurable": true,
+              "canonical_metric": "repo_activity"
+            },
+            {
+              "category": "financial",
+              "description": "AI-related job postings increase",
+              "expected_timeframe_days": 30,
+              "measurable": true,
+              "canonical_metric": "job_postings_count"
+            }
+          ],
+          "falsifiers": [
+            {
+              "description": "Enterprise API usage flattens"
+            },
+            {
+              "description": "AI budget cuts announced at major enterprises"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "meta_id": "meta_datacenter_capex",
+      "concept_name": "Hyperscaler Datacenter CapEx Surge",
+      "hypotheses": [
+        {
+          "hypothesis_id": "hyp_capex_001",
+          "title": "CapEx Beneficiary Rally",
+          "mechanism": "capex_acceleration",
+          "confidence": 0.81,
+          "predicted_next_signals": [
+            {
+              "category": "financial",
+              "description": "Datacenter REIT occupancy increases",
+              "expected_timeframe_days": 60,
+              "measurable": true,
+              "canonical_metric": "filing_mentions"
+            },
+            {
+              "category": "technical",
+              "description": "Power infrastructure orders increase",
+              "expected_timeframe_days": 45,
+              "measurable": true,
+              "canonical_metric": "contract_count"
+            }
+          ],
+          "falsifiers": [
+            {
+              "description": "Hyperscaler capex guidance reduced"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

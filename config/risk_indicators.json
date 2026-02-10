@@ -1,0 +1,225 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-01-27",
+  "description": "Risk indicators for briefAI signal interpretation",
+  
+  "geopolitical": {
+    "us_china_tech": {
+      "description": "US-China technology tensions",
+      "current_level": "elevated",
+      "key_factors": [
+        "Semiconductor export controls",
+        "AI chip restrictions (H100, A100 bans)",
+        "Entity list additions",
+        "CHIPS Act implementation",
+        "TikTok regulatory pressure",
+        "China domestic chip development push"
+      ],
+      "affected_entities": [
+        "nvidia",
+        "amd",
+        "intel",
+        "qualcomm",
+        "micron",
+        "applied_materials",
+        "lam_research",
+        "asml"
+      ],
+      "monitoring_keywords": [
+        "export controls",
+        "chip ban",
+        "entity list",
+        "CHIPS Act",
+        "semiconductor sanctions",
+        "Huawei",
+        "SMIC",
+        "trade war"
+      ]
+    },
+    
+    "ai_regulation": {
+      "description": "Global AI regulation developments",
+      "current_level": "moderate",
+      "key_factors": [
+        "EU AI Act implementation",
+        "US executive orders on AI",
+        "China AI regulations",
+        "Copyright/IP concerns",
+        "AI safety requirements"
+      ],
+      "affected_entities": [
+        "openai",
+        "anthropic",
+        "google",
+        "microsoft",
+        "meta"
+      ],
+      "monitoring_keywords": [
+        "AI regulation",
+        "AI safety",
+        "AI Act",
+        "AI governance",
+        "AI ethics",
+        "AI liability"
+      ]
+    },
+    
+    "supply_chain": {
+      "description": "Tech supply chain risks",
+      "current_level": "moderate",
+      "key_factors": [
+        "Taiwan semiconductor concentration",
+        "Rare earth dependencies",
+        "Manufacturing reshoring",
+        "Logistics disruptions"
+      ],
+      "affected_entities": [
+        "tsmc",
+        "apple",
+        "nvidia",
+        "amd",
+        "intel"
+      ],
+      "monitoring_keywords": [
+        "TSMC",
+        "Taiwan",
+        "supply chain",
+        "chip shortage",
+        "fab capacity",
+        "reshoring"
+      ]
+    }
+  },
+  
+  "macro_risk": {
+    "interest_rate_sensitivity": {
+      "description": "Rate-sensitive growth stocks",
+      "high_sensitivity_entities": [
+        "ark_stocks",
+        "unprofitable_tech",
+        "high_growth_saas"
+      ],
+      "rate_impact": {
+        "rising_rates": "negative",
+        "falling_rates": "positive",
+        "threshold_fed_funds": 4.5
+      }
+    },
+    
+    "credit_conditions": {
+      "description": "Credit market stress indicators",
+      "thresholds": {
+        "bbb_spread_warning": 2.0,
+        "bbb_spread_stress": 3.0,
+        "hy_spread_warning": 4.0,
+        "hy_spread_stress": 6.0
+      }
+    },
+    
+    "volatility_regimes": {
+      "description": "VIX-based volatility regimes",
+      "levels": {
+        "complacent": {"max": 15, "signal_reliability": 0.95},
+        "normal": {"min": 15, "max": 20, "signal_reliability": 1.0},
+        "elevated": {"min": 20, "max": 25, "signal_reliability": 0.85},
+        "high": {"min": 25, "max": 30, "signal_reliability": 0.7},
+        "fear": {"min": 30, "max": 40, "signal_reliability": 0.55},
+        "extreme": {"min": 40, "signal_reliability": 0.4}
+      }
+    }
+  },
+  
+  "sector_specific": {
+    "ai_infrastructure": {
+      "description": "AI infrastructure/chips",
+      "key_indicators": [
+        "Data center capex trends",
+        "Cloud spending growth",
+        "GPU supply/demand",
+        "AI model training costs"
+      ],
+      "leading_indicators": [
+        "NVIDIA earnings/guidance",
+        "Hyperscaler capex",
+        "AI startup funding"
+      ]
+    },
+    
+    "ai_software": {
+      "description": "AI software/applications",
+      "key_indicators": [
+        "Enterprise AI adoption",
+        "SaaS AI feature rollouts",
+        "AI API usage growth",
+        "Developer adoption metrics"
+      ]
+    },
+    
+    "semiconductors": {
+      "description": "Semiconductor cycle",
+      "key_indicators": [
+        "Memory pricing trends",
+        "Inventory levels",
+        "Fab utilization",
+        "Equipment orders"
+      ],
+      "cycle_stages": ["trough", "recovery", "expansion", "peak", "contraction"]
+    }
+  },
+  
+  "signal_adjustments": {
+    "description": "How to adjust signals based on risk levels",
+    
+    "geopolitical_elevated": {
+      "china_exposed_entities": -0.15,
+      "domestic_focused": 0.0,
+      "confidence_modifier": 0.9
+    },
+    
+    "geopolitical_high": {
+      "china_exposed_entities": -0.25,
+      "domestic_focused": 0.05,
+      "confidence_modifier": 0.8
+    },
+    
+    "vix_elevated": {
+      "sentiment_weight_reduction": 0.15,
+      "momentum_weight_increase": 0.1,
+      "confidence_modifier": 0.85
+    },
+    
+    "vix_crisis": {
+      "sentiment_weight_reduction": 0.3,
+      "all_signals_discount": 0.2,
+      "confidence_modifier": 0.6
+    },
+    
+    "rate_rising_fast": {
+      "growth_stock_penalty": -0.1,
+      "value_stock_boost": 0.05,
+      "confidence_modifier": 0.9
+    }
+  },
+  
+  "monitoring_sources": {
+    "news": [
+      "Reuters",
+      "Bloomberg", 
+      "Financial Times",
+      "WSJ",
+      "SCMP (South China Morning Post)"
+    ],
+    "government": [
+      "Commerce Department",
+      "USTR",
+      "White House",
+      "EU Commission"
+    ],
+    "market_data": [
+      "VIX",
+      "Credit spreads",
+      "FXI/KWEB ETFs",
+      "Treasury yields"
+    ]
+  }
+}

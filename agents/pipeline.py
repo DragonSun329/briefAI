@@ -159,12 +159,14 @@ class AdversarialPipeline:
 
         except sqlite3.OperationalError as e:
             logger.warning(f"Could not query entity_trends: {e}")
-            # Fallback to companies table
+            # Fallback to companies table - use source_count (more VC mentions = more interesting)
             cursor.execute("""
-                SELECT name, total_funding
+                SELECT name, source_count
                 FROM companies
                 WHERE name IS NOT NULL
-                ORDER BY total_funding DESC NULLS LAST
+                  AND description IS NOT NULL
+                  AND description != ''
+                ORDER BY source_count DESC, updated_at DESC
                 LIMIT ?
             """, (limit,))
 

@@ -1,0 +1,108 @@
+{
+  "categories": [
+    {
+      "id": "ai_tools",
+      "name": "AI Tools & Productivity",
+      "aliases": [
+        "ai tool", "productivity", "workflow", "automation", "copilot",
+        "assistant", "chatbot", "generate", "ai-powered", "llm tool",
+        "no-code", "low-code", "saas", "app", "platform"
+      ],
+      "priority": 10,
+      "description": "AI驱动的工具和生产力应用：智能助手、自动化工具、AI SaaS平台"
+    },
+    {
+      "id": "developer_tools",
+      "name": "Developer & Code Tools",
+      "aliases": [
+        "developer", "code", "coding", "programming", "ide", "github",
+        "api", "sdk", "framework", "library", "devtool", "cursor",
+        "replit", "codeium", "tabnine", "sourcegraph"
+      ],
+      "priority": 10,
+      "description": "开发者工具：AI代码助手、IDE插件、API平台、开发框架"
+    },
+    {
+      "id": "creative_ai",
+      "name": "Creative & Design AI",
+      "aliases": [
+        "design", "creative", "image", "video", "audio", "music",
+        "art", "midjourney", "dall-e", "stable diffusion", "runway",
+        "canva", "figma", "adobe", "generative", "text-to-image"
+      ],
+      "priority": 9,
+      "description": "创意AI工具：图像生成、视频编辑、音乐创作、设计辅助"
+    },
+    {
+      "id": "writing_content",
+      "name": "Writing & Content Creation",
+      "aliases": [
+        "writing", "content", "copywriting", "blog", "seo", "marketing",
+        "jasper", "copy.ai", "writesonic", "notion ai", "grammarly",
+        "social media", "newsletter", "article"
+      ],
+      "priority": 9,
+      "description": "内容创作工具：AI写作、营销文案、SEO优化、社交媒体内容"
+    },
+    {
+      "id": "data_analytics",
+      "name": "Data & Analytics AI",
+      "aliases": [
+        "data", "analytics", "visualization", "dashboard", "bi",
+        "insights", "reporting", "sql", "database", "etl",
+        "tableau", "power bi", "looker", "dbt"
+      ],
+      "priority": 8,
+      "description": "数据分析AI：智能分析、数据可视化、商业智能、自动报表"
+    },
+    {
+      "id": "customer_support",
+      "name": "Customer Support & CX",
+      "aliases": [
+        "customer support", "customer service", "cx", "helpdesk",
+        "ticketing", "live chat", "chatbot", "zendesk", "intercom",
+        "freshdesk", "conversational ai", "voice ai"
+      ],
+      "priority": 8,
+      "description": "客户服务AI：智能客服、对话机器人、工单系统、语音助手"
+    },
+    {
+      "id": "search_research",
+      "name": "Search & Research Tools",
+      "aliases": [
+        "search", "research", "perplexity", "you.com", "phind",
+        "knowledge", "qa", "retrieval", "rag", "semantic search",
+        "document", "pdf", "summarize"
+      ],
+      "priority": 8,
+      "description": "搜索与研究工具：AI搜索引擎、知识问答、文档总结、RAG应用"
+    },
+    {
+      "id": "agents_automation",
+      "name": "AI Agents & Automation",
+      "aliases": [
+        "agent", "agents", "autonomous", "auto-gpt", "langchain",
+        "workflow automation", "zapier", "make", "n8n",
+        "rpa", "robotic process", "orchestration"
+      ],
+      "priority": 9,
+      "description": "AI代理与自动化：自主代理、工作流自动化、RPA、AI编排"
+    }
+  ],
+  "default_categories": [
+    "ai_tools",
+    "developer_tools",
+    "creative_ai",
+    "agents_automation"
+  ],
+  "scoring": {
+    "weights": {
+      "product_innovation": 0.25,
+      "user_traction": 0.20,
+      "market_fit": 0.20,
+      "competitive_edge": 0.15,
+      "credibility": 0.10,
+      "virality": 0.10
+    }
+  }
+}

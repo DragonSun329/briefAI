@@ -921,6 +921,144 @@
         "技术趋势",
         "市场洞察"
       ]
+    },
+    {
+      "id": "uspto_patents",
+      "name": "USPTO AI Patents",
+      "url": "https://api.patentsview.org",
+      "type": "api",
+      "enabled": true,
+      "categories": [
+        "llm_tech",
+        "emerging_products",
+        "strategic_insights"
+      ],
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "专利申请",
+        "研发投资",
+        "技术创新",
+        "公司竞争"
+      ],
+      "api_key_required": false,
+      "notes": "PatentsView API - free, no key needed"
+    },
+    {
+      "id": "package_downloads",
+      "name": "PyPI/npm AI Package Downloads",
+      "url": "https://pypistats.org/api",
+      "type": "api",
+      "enabled": true,
+      "categories": [
+        "tech_stack",
+        "llm_tech",
+        "emerging_products"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "开发者采用",
+        "框架流行度",
+        "增长趋势",
+        "技术栈"
+      ],
+      "api_key_required": false,
+      "notes": "PyPI stats free API, npm downloads API - no keys needed"
+    },
+    {
+      "id": "stackoverflow_trends",
+      "name": "Stack Overflow AI Trends",
+      "url": "https://api.stackexchange.com",
+      "type": "api",
+      "enabled": true,
+      "categories": [
+        "tech_stack",
+        "llm_tech",
+        "data_analytics"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "开发者问题",
+        "技术热度",
+        "学习曲线",
+        "社区活跃度"
+      ],
+      "api_key_required": false,
+      "notes": "Stack Exchange API - 300 req/day without key, 10000/day with key"
+    },
+    {
+      "id": "yc_companies",
+      "name": "Y Combinator AI Startups",
+      "url": "https://www.ycombinator.com/companies",
+      "type": "web",
+      "enabled": true,
+      "categories": [
+        "emerging_products",
+        "strategic_insights",
+        "fintech_ai"
+      ],
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": [
+        "YC创业公司",
+        "AI初创",
+        "融资信号",
+        "硅谷趋势"
+      ],
+      "api_key_required": false,
+      "notes": "Public YC directory via Algolia search"
+    },
+    {
+      "id": "app_store_rankings",
+      "name": "App Store AI Rankings",
+      "url": "https://itunes.apple.com/search",
+      "type": "api",
+      "enabled": true,
+      "categories": [
+        "emerging_products",
+        "daily_use",
+        "ai_products"
+      ],
+      "language": "en",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "消费者采用",
+        "AI应用排名",
+        "移动AI",
+        "用户评价"
+      ],
+      "api_key_required": false,
+      "notes": "iTunes Search API - free, no key needed"
+    },
+    {
+      "id": "earnings_ai_mentions",
+      "name": "Earnings Call AI Mentions",
+      "url": "https://data.sec.gov",
+      "type": "api",
+      "enabled": true,
+      "categories": [
+        "strategic_insights",
+        "fintech_ai",
+        "llm_tech"
+      ],
+      "language": "en",
+      "credibility_score": 10,
+      "relevance_weight": 10,
+      "focus_tags": [
+        "企业AI战略",
+        "高管发言",
+        "AI投资",
+        "市场信号"
+      ],
+      "api_key_required": false,
+      "notes": "SEC EDGAR API - free, tracks AI mentions in 8-K/10-Q/10-K filings"
     }
   ],
   "weighting_config": {

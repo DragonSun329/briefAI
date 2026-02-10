@@ -1,0 +1,147 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "description": "Runtime source capability configuration. Determines which data sources are available for observable query validation.",
+    "updated_at": "2026-02-10"
+  },
+  
+  "sources": {
+    "sec": {
+      "available": true,
+      "description": "SEC EDGAR filings (10-K, 10-Q, 8-K)",
+      "refresh_frequency": "daily"
+    },
+    "earnings_call": {
+      "available": true,
+      "description": "Earnings call transcripts",
+      "refresh_frequency": "quarterly"
+    },
+    "press_release": {
+      "available": true,
+      "description": "Company press releases",
+      "refresh_frequency": "realtime"
+    },
+    "github": {
+      "available": true,
+      "description": "GitHub repository metrics and activity",
+      "refresh_frequency": "hourly"
+    },
+    "company_blog": {
+      "available": true,
+      "description": "Company blog posts and announcements",
+      "refresh_frequency": "daily"
+    },
+    "docs": {
+      "available": true,
+      "description": "Documentation updates",
+      "refresh_frequency": "daily"
+    },
+    "arxiv": {
+      "available": true,
+      "description": "arXiv research papers",
+      "refresh_frequency": "daily"
+    },
+    "linkedin": {
+      "available": true,
+      "description": "LinkedIn job postings and activity",
+      "refresh_frequency": "daily"
+    },
+    "glassdoor": {
+      "available": true,
+      "description": "Glassdoor company reviews and jobs",
+      "refresh_frequency": "weekly"
+    },
+    "indeed": {
+      "available": true,
+      "description": "Indeed job postings",
+      "refresh_frequency": "daily"
+    },
+    "twitter": {
+      "available": true,
+      "description": "Twitter/X social signals",
+      "refresh_frequency": "realtime"
+    },
+    "reddit": {
+      "available": true,
+      "description": "Reddit discussions",
+      "refresh_frequency": "hourly"
+    },
+    "hackernews": {
+      "available": true,
+      "description": "Hacker News discussions",
+      "refresh_frequency": "hourly"
+    },
+    "techmeme": {
+      "available": true,
+      "description": "Techmeme aggregated coverage",
+      "refresh_frequency": "hourly"
+    },
+    "crunchbase": {
+      "available": true,
+      "description": "Crunchbase funding and company data",
+      "refresh_frequency": "daily"
+    },
+    "pitchbook": {
+      "available": false,
+      "description": "PitchBook private company data (requires subscription)",
+      "refresh_frequency": "daily"
+    },
+    "polymarket": {
+      "available": true,
+      "description": "Polymarket prediction markets",
+      "refresh_frequency": "realtime"
+    },
+    "metaculus": {
+      "available": true,
+      "description": "Metaculus forecasting platform",
+      "refresh_frequency": "daily"
+    },
+    "manifold": {
+      "available": true,
+      "description": "Manifold Markets predictions",
+      "refresh_frequency": "daily"
+    },
+    "huggingface": {
+      "available": true,
+      "description": "HuggingFace model hub metrics",
+      "refresh_frequency": "hourly"
+    },
+    "pypi": {
+      "available": true,
+      "description": "PyPI package downloads",
+      "refresh_frequency": "daily"
+    },
+    "pricing_page": {
+      "available": false,
+      "description": "Direct pricing page scraping (manual)",
+      "refresh_frequency": "manual"
+    },
+    "semafor": {
+      "available": true,
+      "description": "Semafor tech coverage",
+      "refresh_frequency": "daily"
+    },
+    "theinformation": {
+      "available": false,
+      "description": "The Information (requires subscription)",
+      "refresh_frequency": "daily"
+    },
+    "bloomberg": {
+      "available": false,
+      "description": "Bloomberg Terminal (requires subscription)",
+      "refresh_frequency": "realtime"
+    },
+    "reuters": {
+      "available": true,
+      "description": "Reuters news coverage",
+      "refresh_frequency": "realtime"
+    },
+    "nvidia_blog": {
+      "available": true,
+      "description": "NVIDIA developer blog",
+      "refresh_frequency": "weekly"
+    }
+  },
+  
+  "default_available": false
+}

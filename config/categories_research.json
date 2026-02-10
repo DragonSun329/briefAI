@@ -1,0 +1,47 @@
+{
+  "categories": [
+    {
+      "id": "research_papers",
+      "name": "Research Papers",
+      "description": "New academic papers, preprints, and research breakthroughs",
+      "keywords": ["paper", "research", "arxiv", "preprint", "study", "findings", "benchmark"],
+      "priority": 1
+    },
+    {
+      "id": "lab_announcements",
+      "name": "Lab Announcements",
+      "description": "Official announcements from AI research labs (OpenAI, DeepMind, Anthropic, etc.)",
+      "keywords": ["announce", "release", "launch", "introducing", "new model", "available"],
+      "priority": 1
+    },
+    {
+      "id": "model_releases",
+      "name": "Model Releases",
+      "description": "New model releases, weights, and checkpoints",
+      "keywords": ["model", "release", "weights", "checkpoint", "fine-tune", "open source"],
+      "priority": 2
+    },
+    {
+      "id": "safety_research",
+      "name": "AI Safety Research",
+      "description": "Alignment, interpretability, safety, and responsible AI research",
+      "keywords": ["safety", "alignment", "interpretability", "bias", "fairness", "responsible"],
+      "priority": 2
+    },
+    {
+      "id": "benchmarks",
+      "name": "Benchmarks & Evaluations",
+      "description": "New benchmarks, leaderboards, and model evaluations",
+      "keywords": ["benchmark", "evaluation", "leaderboard", "SOTA", "performance", "score"],
+      "priority": 3
+    },
+    {
+      "id": "infrastructure",
+      "name": "AI Infrastructure",
+      "description": "Training infrastructure, inference optimization, hardware",
+      "keywords": ["GPU", "TPU", "training", "inference", "optimization", "hardware", "cluster"],
+      "priority": 3
+    }
+  ],
+  "default_categories": ["research_papers", "lab_announcements", "model_releases", "safety_research"]
+}

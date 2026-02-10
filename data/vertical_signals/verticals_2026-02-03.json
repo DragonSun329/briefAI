@@ -1,0 +1,1081 @@
+{
+  "scraped_at": "2026-02-03T02:21:41.070561+00:00",
+  "verticals": {
+    "ai_healthcare": {
+      "vertical_id": "ai_healthcare",
+      "name": "AI + Healthcare",
+      "maturity": 0.7,
+      "hype_phase": "slope_enlightenment",
+      "tech_momentum_score": 70.0,
+      "hype_score": 70,
+      "investment_score": 80,
+      "companies": [
+        "Tempus",
+        "PathAI",
+        "Viz.ai",
+        "Paige",
+        "Rad AI",
+        "Abridge"
+      ]
+    },
+    "ai_drug_discovery": {
+      "vertical_id": "ai_drug_discovery",
+      "name": "AI + Drug Discovery",
+      "maturity": 0.4,
+      "hype_phase": "peak_expectations",
+      "tech_momentum_score": 40.0,
+      "hype_score": 95,
+      "investment_score": 55,
+      "companies": [
+        "Isomorphic Labs",
+        "Recursion",
+        "Insilico Medicine",
+        "Generate Bio",
+        "Exscientia"
+      ]
+    },
+    "ai_fintech": {
+      "vertical_id": "ai_fintech",
+      "name": "AI + Fintech",
+      "maturity": 0.65,
+      "hype_phase": "slope_enlightenment",
+      "tech_momentum_score": 65.0,
+      "hype_score": 70,
+      "investment_score": 80,
+      "companies": [
+        "Upstart",
+        "Zest AI",
+        "Socure",
+        "Alloy",
+        "Ramp",
+        "Brex"
+      ]
+    },
+    "ai_trading": {
+      "vertical_id": "ai_trading",
+      "name": "AI + Trading/Quant",
+      "maturity": 0.85,
+      "hype_phase": "plateau_productivity",
+      "tech_momentum_score": 85.0,
+      "hype_score": 50,
+      "investment_score": 100,
+      "companies": [
+        "Two Sigma",
+        "Citadel",
+        "DE Shaw",
+        "Renaissance",
+        "Jane Street"
+      ]
+    },
+    "ai_education": {
+      "vertical_id": "ai_education",
+      "name": "AI + Education",
+      "maturity": 0.35,
+      "hype_phase": "peak_expectations",
+      "tech_momentum_score": 35.0,
+      "hype_score": 95,
+      "investment_score": 55,
+      "companies": [
+        "Khanmigo",
+        "Duolingo",
+        "Synthesis",
+        "Speak",
+        "Quizlet"
+      ]
+    },
+    "ai_legal": {
+      "vertical_id": "ai_legal",
+      "name": "AI + Legal",
+      "maturity": 0.45,
+      "hype_phase": "validating",
+      "tech_momentum_score": 45.0,
+      "hype_score": 50,
+      "investment_score": 100,
+      "companies": [
+        "Harvey",
+        "Casetext",
+        "Spellbook",
+        "EvenUp",
+        "Ironclad"
+      ]
+    },
+    "ai_creative": {
+      "vertical_id": "ai_creative",
+      "name": "AI + Creative/Media",
+      "maturity": 0.4,
+      "hype_phase": "peak_expectations",
+      "tech_momentum_score": 40.0,
+      "hype_score": 95,
+      "investment_score": 55,
+      "companies": [
+        "Runway",
+        "Pika",
+        "Suno",
+        "Udio",
+        "ElevenLabs",
+        "Midjourney"
+      ]
+    },
+    "ai_robotics": {
+      "vertical_id": "ai_robotics",
+      "name": "AI + Robotics",
+      "maturity": 0.25,
+      "hype_phase": "innovation_trigger",
+      "tech_momentum_score": 25.0,
+      "hype_score": 40,
+      "investment_score": 90,
+      "companies": [
+        "Figure",
+        "1X",
+        "Covariant",
+        "Boston Dynamics",
+        "Physical Intelligence"
+      ]
+    },
+    "ai_manufacturing": {
+      "vertical_id": "ai_manufacturing",
+      "name": "AI + Manufacturing",
+      "maturity": 0.55,
+      "hype_phase": "slope_enlightenment",
+      "tech_momentum_score": 55.0,
+      "hype_score": 70,
+      "investment_score": 80,
+      "companies": [
+        "Bright Machines",
+        "Machina Labs",
+        "Landing AI",
+        "Instrumental"
+      ]
+    },
+    "ai_autonomous_vehicles": {
+      "vertical_id": "ai_autonomous_vehicles",
+      "name": "AI + Autonomous Vehicles",
+      "maturity": 0.5,
+      "hype_phase": "trough_disillusionment",
+      "tech_momentum_score": 50.0,
+      "hype_score": 30,
+      "investment_score": 80,
+      "companies": [
+        "Waymo",
+        "Cruise",
+        "Tesla",
+        "Aurora",
+        "Nuro",
+        "Zoox"
+      ]
+    },
+    "ai_agriculture": {
+      "vertical_id": "ai_agriculture",
+      "name": "AI + Agriculture",
+      "maturity": 0.5,
+      "hype_phase": "slope_enlightenment",
+      "tech_momentum_score": 50.0,
+      "hype_score": 70,
+      "investment_score": 80,
+      "companies": [
+        "John Deere",
+        "Prospera",
+        "Taranis",
+        "Aigen",
+        "Bowery"
+      ]
+    },
+    "ai_real_estate": {
+      "vertical_id": "ai_real_estate",
+      "name": "AI + Real Estate",
+      "maturity": 0.45,
+      "hype_phase": "trough_disillusionment",
+      "tech_momentum_score": 45.0,
+      "hype_score": 30,
+      "investment_score": 80,
+      "companies": [
+        "Zillow",
+        "Opendoor",
+        "Redfin",
+        "Cherre",
+        "Entera"
+      ]
+    },
+    "ai_insurance": {
+      "vertical_id": "ai_insurance",
+      "name": "AI + Insurance",
+      "maturity": 0.55,
+      "hype_phase": "slope_enlightenment",
+      "tech_momentum_score": 55.0,
+      "hype_score": 70,
+      "investment_score": 80,
+      "companies": [
+        "Lemonade",
+        "Tractable",
+        "Shift Technology",
+        "Coalition",
+        "Cape Analytics"
+      ]
+    },
+    "ai_cybersecurity": {
+      "vertical_id": "ai_cybersecurity",
+      "name": "AI + Cybersecurity",
+      "maturity": 0.7,
+      "hype_phase": "establishing",
+      "tech_momentum_score": 70.0,
+      "hype_score": 50,
+      "investment_score": 100,
+      "companies": [
+        "CrowdStrike",
+        "SentinelOne",
+        "Darktrace",
+        "Abnormal",
+        "Snyk"
+      ]
+    },
+    "ai_hr": {
+      "vertical_id": "ai_hr",
+      "name": "AI + HR/Recruiting",
+      "maturity": 0.55,
+      "hype_phase": "slope_enlightenment",
+      "tech_momentum_score": 55.0,
+      "hype_score": 70,
+      "investment_score": 80,
+      "companies": [
+        "Eightfold",
+        "Phenom",
+        "Beamery",
+        "Lattice",
+        "HireVue"
+      ]
+    },
+    "ai_sales": {
+      "vertical_id": "ai_sales",
+      "name": "AI + Sales",
+      "maturity": 0.6,
+      "hype_phase": "establishing",
+      "tech_momentum_score": 60.0,
+      "hype_score": 50,
+      "investment_score": 100,
+      "companies": [
+        "Gong",
+        "Clari",
+        "Outreach",
+        "11x",
+        "Apollo"
+      ]
+    },
+    "ai_marketing": {
+      "vertical_id": "ai_marketing",
+      "name": "AI + Marketing",
+      "maturity": 0.45,
+      "hype_phase": "peak_expectations",
+      "tech_momentum_score": 45.0,
+      "hype_score": 95,
+      "investment_score": 55,
+      "companies": [
+        "Jasper",
+        "Copy.ai",
+        "Persado",
+        "Albert",
+        "Mutiny"
+      ]
+    },
+    "ai_customer_service": {
+      "vertical_id": "ai_customer_service",
+      "name": "AI + Customer Service",
+      "maturity": 0.65,
+      "hype_phase": "establishing",
+      "tech_momentum_score": 65.0,
+      "hype_score": 50,
+      "investment_score": 100,
+      "companies": [
+        "Intercom",
+        "Ada",
+        "Forethought",
+        "Sierra",
+        "Decagon"
+      ]
+    },
+    "ai_supply_chain": {
+      "vertical_id": "ai_supply_chain",
+      "name": "AI + Supply Chain",
+      "maturity": 0.55,
+      "hype_phase": "slope_enlightenment",
+      "tech_momentum_score": 55.0,
+      "hype_score": 70,
+      "investment_score": 80,
+      "companies": [
+        "Flexport",
+        "Project44",
+        "FourKites",
+        "o9",
+        "Altana"
+      ]
+    },
+    "ai_construction": {
+      "vertical_id": "ai_construction",
+      "name": "AI + Construction",
+      "maturity": 0.3,
+      "hype_phase": "innovation_trigger",
+      "tech_momentum_score": 30.0,
+      "hype_score": 40,
+      "investment_score": 90,
+      "companies": [
+        "Procore",
+        "Built Robotics",
+        "Dusty Robotics",
+        "OpenSpace",
+        "ICON"
+      ]
+    },
+    "ai_gaming": {
+      "vertical_id": "ai_gaming",
+      "name": "AI + Gaming",
+      "maturity": 0.25,
+      "hype_phase": "innovation_trigger",
+      "tech_momentum_score": 25.0,
+      "hype_score": 40,
+      "investment_score": 90,
+      "companies": [
+        "Inworld AI",
+        "Convai",
+        "Scenario",
+        "modl.ai"
+      ]
+    },
+    "ai_climate": {
+      "vertical_id": "ai_climate",
+      "name": "AI + Climate/Energy",
+      "maturity": 0.35,
+      "hype_phase": "validating",
+      "tech_momentum_score": 35.0,
+      "hype_score": 50,
+      "investment_score": 100,
+      "companies": [
+        "ClimateAI",
+        "Pachama",
+        "Tomorrow.io",
+        "Kayrros"
+      ]
+    },
+    "ai_science": {
+      "vertical_id": "ai_science",
+      "name": "AI + Scientific Discovery",
+      "maturity": 0.4,
+      "hype_phase": "validating",
+      "tech_momentum_score": 40.0,
+      "hype_score": 50,
+      "investment_score": 100,
+      "companies": [
+        "DeepMind",
+        "Microsoft Research",
+        "Google Research"
+      ]
+    },
+    "ai_defense": {
+      "vertical_id": "ai_defense",
+      "name": "AI + Defense/Gov",
+      "maturity": 0.55,
+      "hype_phase": "establishing",
+      "tech_momentum_score": 55.0,
+      "hype_score": 50,
+      "investment_score": 100,
+      "companies": [
+        "Anduril",
+        "Palantir",
+        "Shield AI",
+        "Scale AI Gov"
+      ]
+    },
+    "ai_retail": {
+      "vertical_id": "ai_retail",
+      "name": "AI + Retail",
+      "maturity": 0.5,
+      "hype_phase": "trough_disillusionment",
+      "tech_momentum_score": 50.0,
+      "hype_score": 30,
+      "investment_score": 80,
+      "companies": [
+        "Amazon",
+        "Standard AI",
+        "Grabango",
+        "Vue.ai"
+      ]
+    },
+    "ai_space": {
+      "vertical_id": "ai_space",
+      "name": "AI + Space",
+      "maturity": 0.35,
+      "hype_phase": "validating",
+      "tech_momentum_score": 35.0,
+      "hype_score": 50,
+      "investment_score": 100,
+      "companies": [
+        "Planet Labs",
+        "Spire",
+        "Orbital Sidekick",
+        "SpaceX"
+      ]
+    }
+  },
+  "hype_cycle": [
+    {
+      "id": "ai_healthcare",
+      "name": "AI + Healthcare",
+      "x": 73,
+      "y": 43.6536797272788,
+      "phase": "slope_enlightenment",
+      "phase_name": "Slope of Enlightenment",
+      "maturity": 0.7,
+      "companies": [
+        "Tempus",
+        "PathAI",
+        "Viz.ai",
+        "Paige",
+        "Rad AI"
+      ]
+    },
+    {
+      "id": "ai_drug_discovery",
+      "name": "AI + Drug Discovery",
+      "x": 26,
+      "y": 90.17334137140232,
+      "phase": "peak_expectations",
+      "phase_name": "Peak of Inflated Expectations",
+      "maturity": 0.4,
+      "companies": [
+        "Isomorphic Labs",
+        "Recursion",
+        "Insilico Medicine",
+        "Generate Bio",
+        "Exscientia"
+      ]
+    },
+    {
+      "id": "ai_fintech",
+      "name": "AI + Fintech",
+      "x": 66,
+      "y": 46.6536797272788,
+      "phase": "slope_enlightenment",
+      "phase_name": "Slope of Enlightenment",
+      "maturity": 0.65,
+      "companies": [
+        "Upstart",
+        "Zest AI",
+        "Socure",
+        "Alloy",
+        "Ramp"
+      ]
+    },
+    {
+      "id": "ai_trading",
+      "name": "AI + Trading/Quant",
+      "x": 93,
+      "y": 57.42325777782026,
+      "phase": "plateau_productivity",
+      "phase_name": "Plateau of Productivity",
+      "maturity": 0.85,
+      "companies": [
+        "Two Sigma",
+        "Citadel",
+        "DE Shaw",
+        "Renaissance",
+        "Jane Street"
+      ]
+    },
+    {
+      "id": "ai_education",
+      "name": "AI + Education",
+      "x": 30,
+      "y": 88.17334137140232,
+      "phase": "peak_expectations",
+      "phase_name": "Peak of Inflated Expectations",
+      "maturity": 0.35,
+      "companies": [
+        "Khanmigo",
+        "Duolingo",
+        "Synthesis",
+        "Speak",
+        "Quizlet"
+      ]
+    },
+    {
+      "id": "ai_legal",
+      "name": "AI + Legal",
+      "x": 39,
+      "y": 57.45857235762044,
+      "phase": "validating",
+      "phase_name": "Validating",
+      "maturity": 0.45,
+      "companies": [
+        "Harvey",
+        "Casetext",
+        "Spellbook",
+        "EvenUp",
+        "Ironclad"
+      ]
+    },
+    {
+      "id": "ai_creative",
+      "name": "AI + Creative/Media",
+      "x": 29,
+      "y": 89.17334137140232,
+      "phase": "peak_expectations",
+      "phase_name": "Peak of Inflated Expectations",
+      "maturity": 0.4,
+      "companies": [
+        "Runway",
+        "Pika",
+        "Suno",
+        "Udio",
+        "ElevenLabs"
+      ]
+    },
+    {
+      "id": "ai_robotics",
+      "name": "AI + Robotics",
+      "x": 7,
+      "y": 35.19602351300968,
+      "phase": "innovation_trigger",
+      "phase_name": "Innovation Trigger",
+      "maturity": 0.25,
+      "companies": [
+        "Figure",
+        "1X",
+        "Covariant",
+        "Boston Dynamics",
+        "Physical Intelligence"
+      ]
+    },
+    {
+      "id": "ai_manufacturing",
+      "name": "AI + Manufacturing",
+      "x": 65,
+      "y": 41.6536797272788,
+      "phase": "slope_enlightenment",
+      "phase_name": "Slope of Enlightenment",
+      "maturity": 0.55,
+      "companies": [
+        "Bright Machines",
+        "Machina Labs",
+        "Landing AI",
+        "Instrumental"
+      ]
+    },
+    {
+      "id": "ai_autonomous_vehicles",
+      "name": "AI + Autonomous Vehicles",
+      "x": 48,
+      "y": 19.698541908866197,
+      "phase": "trough_disillusionment",
+      "phase_name": "Trough of Disillusionment",
+      "maturity": 0.5,
+      "companies": [
+        "Waymo",
+        "Cruise",
+        "Tesla",
+        "Aurora",
+        "Nuro"
+      ]
+    },
+    {
+      "id": "ai_agriculture",
+      "name": "AI + Agriculture",
+      "x": 66,
+      "y": 44.6536797272788,
+      "phase": "slope_enlightenment",
+      "phase_name": "Slope of Enlightenment",
+      "maturity": 0.5,
+      "companies": [
+        "John Deere",
+        "Prospera",
+        "Taranis",
+        "Aigen",
+        "Bowery"
+      ]
+    },
+    {
+      "id": "ai_real_estate",
+      "name": "AI + Real Estate",
+      "x": 53,
+      "y": 20.698541908866197,
+      "phase": "trough_disillusionment",
+      "phase_name": "Trough of Disillusionment",
+      "maturity": 0.45,
+      "companies": [
+        "Zillow",
+        "Opendoor",
+        "Redfin",
+        "Cherre",
+        "Entera"
+      ]
+    },
+    {
+      "id": "ai_insurance",
+      "name": "AI + Insurance",
+      "x": 73,
+      "y": 41.6536797272788,
+      "phase": "slope_enlightenment",
+      "phase_name": "Slope of Enlightenment",
+      "maturity": 0.55,
+      "companies": [
+        "Lemonade",
+        "Tractable",
+        "Shift Technology",
+        "Coalition",
+        "Cape Analytics"
+      ]
+    },
+    {
+      "id": "ai_cybersecurity",
+      "name": "AI + Cybersecurity",
+      "x": 69,
+      "y": 39.34944208526845,
+      "phase": "establishing",
+      "phase_name": "Establishing",
+      "maturity": 0.7,
+      "companies": [
+        "CrowdStrike",
+        "SentinelOne",
+        "Darktrace",
+        "Abnormal",
+        "Snyk"
+      ]
+    },
+    {
+      "id": "ai_hr",
+      "name": "AI + HR/Recruiting",
+      "x": 72,
+      "y": 42.6536797272788,
+      "phase": "slope_enlightenment",
+      "phase_name": "Slope of Enlightenment",
+      "maturity": 0.55,
+      "companies": [
+        "Eightfold",
+        "Phenom",
+        "Beamery",
+        "Lattice",
+        "HireVue"
+      ]
+    },
+    {
+      "id": "ai_sales",
+      "name": "AI + Sales",
+      "x": 69,
+      "y": 39.34944208526845,
+      "phase": "establishing",
+      "phase_name": "Establishing",
+      "maturity": 0.6,
+      "companies": [
+        "Gong",
+        "Clari",
+        "Outreach",
+        "11x",
+        "Apollo"
+      ]
+    },
+    {
+      "id": "ai_marketing",
+      "name": "AI + Marketing",
+      "x": 32,
+      "y": 92.17334137140232,
+      "phase": "peak_expectations",
+      "phase_name": "Peak of Inflated Expectations",
+      "maturity": 0.45,
+      "companies": [
+        "Jasper",
+        "Copy.ai",
+        "Persado",
+        "Albert",
+        "Mutiny"
+      ]
+    },
+    {
+      "id": "ai_customer_service",
+      "name": "AI + Customer Service",
+      "x": 68,
+      "y": 36.34944208526845,
+      "phase": "establishing",
+      "phase_name": "Establishing",
+      "maturity": 0.65,
+      "companies": [
+        "Intercom",
+        "Ada",
+        "Forethought",
+        "Sierra",
+        "Decagon"
+      ]
+    },
+    {
+      "id": "ai_supply_chain",
+      "name": "AI + Supply Chain",
+      "x": 70,
+      "y": 44.6536797272788,
+      "phase": "slope_enlightenment",
+      "phase_name": "Slope of Enlightenment",
+      "maturity": 0.55,
+      "companies": [
+        "Flexport",
+        "Project44",
+        "FourKites",
+        "o9",
+        "Altana"
+      ]
+    },
+    {
+      "id": "ai_construction",
+      "name": "AI + Construction",
+      "x": 12,
+      "y": 40.19602351300968,
+      "phase": "innovation_trigger",
+      "phase_name": "Innovation Trigger",
+      "maturity": 0.3,
+      "companies": [
+        "Procore",
+        "Built Robotics",
+        "Dusty Robotics",
+        "OpenSpace",
+        "ICON"
+      ]
+    },
+    {
+      "id": "ai_gaming",
+      "name": "AI + Gaming",
+      "x": 6,
+      "y": 40.19602351300968,
+      "phase": "innovation_trigger",
+      "phase_name": "Innovation Trigger",
+      "maturity": 0.25,
+      "companies": [
+        "Inworld AI",
+        "Convai",
+        "Scenario",
+        "modl.ai"
+      ]
+    },
+    {
+      "id": "ai_climate",
+      "name": "AI + Climate/Energy",
+      "x": 44,
+      "y": 60.45857235762044,
+      "phase": "validating",
+      "phase_name": "Validating",
+      "maturity": 0.35,
+      "companies": [
+        "ClimateAI",
+        "Pachama",
+        "Tomorrow.io",
+        "Kayrros"
+      ]
+    },
+    {
+      "id": "ai_science",
+      "name": "AI + Scientific Discovery",
+      "x": 39,
+      "y": 61.45857235762044,
+      "phase": "validating",
+      "phase_name": "Validating",
+      "maturity": 0.4,
+      "companies": [
+        "DeepMind",
+        "Microsoft Research",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "ai_defense",
+      "name": "AI + Defense/Gov",
+      "x": 62,
+      "y": 40.34944208526845,
+      "phase": "establishing",
+      "phase_name": "Establishing",
+      "maturity": 0.55,
+      "companies": [
+        "Anduril",
+        "Palantir",
+        "Shield AI",
+        "Scale AI Gov"
+      ]
+    },
+    {
+      "id": "ai_retail",
+      "name": "AI + Retail",
+      "x": 47,
+      "y": 20.698541908866197,
+      "phase": "trough_disillusionment",
+      "phase_name": "Trough of Disillusionment",
+      "maturity": 0.5,
+      "companies": [
+        "Amazon",
+        "Standard AI",
+        "Grabango",
+        "Vue.ai"
+      ]
+    },
+    {
+      "id": "ai_space",
+      "name": "AI + Space",
+      "x": 41,
+      "y": 61.45857235762044,
+      "phase": "validating",
+      "phase_name": "Validating",
+      "maturity": 0.35,
+      "companies": [
+        "Planet Labs",
+        "Spire",
+        "Orbital Sidekick",
+        "SpaceX"
+      ]
+    }
+  ],
+  "quadrant_data": [
+    {
+      "id": "ai_healthcare",
+      "name": "AI + Healthcare",
+      "x": 70.0,
+      "y": 70,
+      "size": 18,
+      "phase": "slope_enlightenment",
+      "quadrant": "hot"
+    },
+    {
+      "id": "ai_drug_discovery",
+      "name": "AI + Drug Discovery",
+      "x": 40.0,
+      "y": 95,
+      "size": 15,
+      "phase": "peak_expectations",
+      "quadrant": "hyped"
+    },
+    {
+      "id": "ai_fintech",
+      "name": "AI + Fintech",
+      "x": 65.0,
+      "y": 70,
+      "size": 18,
+      "phase": "slope_enlightenment",
+      "quadrant": "hot"
+    },
+    {
+      "id": "ai_trading",
+      "name": "AI + Trading/Quant",
+      "x": 85.0,
+      "y": 50,
+      "size": 15,
+      "phase": "plateau_productivity",
+      "quadrant": "hot"
+    },
+    {
+      "id": "ai_education",
+      "name": "AI + Education",
+      "x": 35.0,
+      "y": 95,
+      "size": 15,
+      "phase": "peak_expectations",
+      "quadrant": "hyped"
+    },
+    {
+      "id": "ai_legal",
+      "name": "AI + Legal",
+      "x": 45.0,
+      "y": 50,
+      "size": 15,
+      "phase": "validating",
+      "quadrant": "hyped"
+    },
+    {
+      "id": "ai_creative",
+      "name": "AI + Creative/Media",
+      "x": 40.0,
+      "y": 95,
+      "size": 18,
+      "phase": "peak_expectations",
+      "quadrant": "hyped"
+    },
+    {
+      "id": "ai_robotics",
+      "name": "AI + Robotics",
+      "x": 25.0,
+      "y": 40,
+      "size": 15,
+      "phase": "innovation_trigger",
+      "quadrant": "emerging"
+    },
+    {
+      "id": "ai_manufacturing",
+      "name": "AI + Manufacturing",
+      "x": 55.0,
+      "y": 70,
+      "size": 12,
+      "phase": "slope_enlightenment",
+      "quadrant": "hot"
+    },
+    {
+      "id": "ai_autonomous_vehicles",
+      "name": "AI + Autonomous Vehicles",
+      "x": 50.0,
+      "y": 30,
+      "size": 18,
+      "phase": "trough_disillusionment",
+      "quadrant": "mature"
+    },
+    {
+      "id": "ai_agriculture",
+      "name": "AI + Agriculture",
+      "x": 50.0,
+      "y": 70,
+      "size": 15,
+      "phase": "slope_enlightenment",
+      "quadrant": "hot"
+    },
+    {
+      "id": "ai_real_estate",
+      "name": "AI + Real Estate",
+      "x": 45.0,
+      "y": 30,
+      "size": 15,
+      "phase": "trough_disillusionment",
+      "quadrant": "emerging"
+    },
+    {
+      "id": "ai_insurance",
+      "name": "AI + Insurance",
+      "x": 55.0,
+      "y": 70,
+      "size": 15,
+      "phase": "slope_enlightenment",
+      "quadrant": "hot"
+    },
+    {
+      "id": "ai_cybersecurity",
+      "name": "AI + Cybersecurity",
+      "x": 70.0,
+      "y": 50,
+      "size": 15,
+      "phase": "establishing",
+      "quadrant": "hot"
+    },
+    {
+      "id": "ai_hr",
+      "name": "AI + HR/Recruiting",
+      "x": 55.0,
+      "y": 70,
+      "size": 15,
+      "phase": "slope_enlightenment",
+      "quadrant": "hot"
+    },
+    {
+      "id": "ai_sales",
+      "name": "AI + Sales",
+      "x": 60.0,
+      "y": 50,
+      "size": 15,
+      "phase": "establishing",
+      "quadrant": "hot"
+    },
+    {
+      "id": "ai_marketing",
+      "name": "AI + Marketing",
+      "x": 45.0,
+      "y": 95,
+      "size": 15,
+      "phase": "peak_expectations",
+      "quadrant": "hyped"
+    },
+    {
+      "id": "ai_customer_service",
+      "name": "AI + Customer Service",
+      "x": 65.0,
+      "y": 50,
+      "size": 15,
+      "phase": "establishing",
+      "quadrant": "hot"
+    },
+    {
+      "id": "ai_supply_chain",
+      "name": "AI + Supply Chain",
+      "x": 55.0,
+      "y": 70,
+      "size": 15,
+      "phase": "slope_enlightenment",
+      "quadrant": "hot"
+    },
+    {
+      "id": "ai_construction",
+      "name": "AI + Construction",
+      "x": 30.0,
+      "y": 40,
+      "size": 15,
+      "phase": "innovation_trigger",
+      "quadrant": "emerging"
+    },
+    {
+      "id": "ai_gaming",
+      "name": "AI + Gaming",
+      "x": 25.0,
+      "y": 40,
+      "size": 12,
+      "phase": "innovation_trigger",
+      "quadrant": "emerging"
+    },
+    {
+      "id": "ai_climate",
+      "name": "AI + Climate/Energy",
+      "x": 35.0,
+      "y": 50,
+      "size": 12,
+      "phase": "validating",
+      "quadrant": "hyped"
+    },
+    {
+      "id": "ai_science",
+      "name": "AI + Scientific Discovery",
+      "x": 40.0,
+      "y": 50,
+      "size": 9,
+      "phase": "validating",
+      "quadrant": "hyped"
+    },
+    {
+      "id": "ai_defense",
+      "name": "AI + Defense/Gov",
+      "x": 55.0,
+      "y": 50,
+      "size": 12,
+      "phase": "establishing",
+      "quadrant": "hot"
+    },
+    {
+      "id": "ai_retail",
+      "name": "AI + Retail",
+      "x": 50.0,
+      "y": 30,
+      "size": 12,
+      "phase": "trough_disillusionment",
+      "quadrant": "mature"
+    },
+    {
+      "id": "ai_space",
+      "name": "AI + Space",
+      "x": 35.0,
+      "y": 50,
+      "size": 12,
+      "phase": "validating",
+      "quadrant": "hyped"
+    }
+  ],
+  "news": [],
+  "summary": {
+    "by_phase": {
+      "Slope of Enlightenment": 7,
+      "Peak of Inflated Expectations": 4,
+      "Plateau of Productivity": 1,
+      "Validating": 4,
+      "Innovation Trigger": 3,
+      "Trough of Disillusionment": 3,
+      "Establishing": 4
+    },
+    "by_quadrant": {
+      "hot": 12,
+      "hyped": 8,
+      "emerging": 4,
+      "mature": 2
+    }
+  }
+}

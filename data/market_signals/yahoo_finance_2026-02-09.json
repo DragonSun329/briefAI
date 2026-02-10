@@ -1,0 +1,57 @@
+{
+  "scraped_at": "2026-02-09T14:00:38.671916",
+  "stocks": [
+    {
+      "ticker": "AAPL",
+      "current_price": 278.12,
+      "previous_close": 275.91,
+      "day_change_pct": 0.8,
+      "range_5d_position": 100.0,
+      "signal": "neutral",
+      "score": 0,
+      "signal_type": "stock_price",
+      "source": "yahoo_finance",
+      "scraped_at": "2026-02-09T14:00:57.085184"
+    },
+    {
+      "ticker": "NVDA",
+      "current_price": 185.41,
+      "previous_close": 171.88,
+      "day_change_pct": 7.87,
+      "range_5d_position": 98.5,
+      "signal": "bullish",
+      "score": 0.79,
+      "signal_type": "stock_price",
+      "source": "yahoo_finance",
+      "scraped_at": "2026-02-09T14:00:57.086026"
+    },
+    {
+      "ticker": "MSFT",
+      "current_price": 401.14,
+      "previous_close": 393.67,
+      "day_change_pct": 1.9,
+      "range_5d_position": 25.2,
+      "signal": "neutral",
+      "score": 0,
+      "signal_type": "stock_price",
+      "source": "yahoo_finance",
+      "scraped_at": "2026-02-09T14:00:57.086802"
+    }
+  ],
+  "movers": [
+    {
+      "ticker": "NVDA",
+      "change_pct": 7.87,
+      "signal": "bullish"
+    }
+  ],
+  "fundamentals": [
+    {
+      "ticker": "NVDA",
+      "market_cap": 4514177359161.377,
+      "pe_ratio": null,
+      "fifty_two_week_low": null,
+      "fifty_two_week_high": null
+    }
+  ]
+}

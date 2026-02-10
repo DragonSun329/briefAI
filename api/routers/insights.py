@@ -36,9 +36,10 @@ class DateResponse(BaseModel):
 
 
 class PipelineStats(BaseModel):
-    news: int
-    product: int
-    investing: int
+    news: int = 0
+    product: int = 0
+    investing: int = 0
+    china_ai: int = 0
 
 
 class TopEntity(BaseModel):

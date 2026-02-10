@@ -1,0 +1,408 @@
+{
+  "version": "1.0",
+  "description": "Event detection patterns for business event extraction",
+  
+  "event_types": {
+    "funding_round": {
+      "enabled": true,
+      "priority": 1,
+      "headline_patterns": [
+        "raises?\\s+\\$?[\\d,\\.]+\\s*(million|billion|M|B|mn|bn)",
+        "secures?\\s+\\$?[\\d,\\.]+\\s*(million|billion|M|B)",
+        "closes?\\s+(on\\s+)?\\$?[\\d,\\.]+\\s*(million|billion)",
+        "announces?\\s+(a\\s+)?\\$?[\\d,\\.]+\\s*(series|seed|funding)",
+        "(series\\s+[A-F]|seed\\s+round|pre-seed)\\s*(funding|round)?",
+        "funding\\s+round\\s+(led|from)",
+        "valuation\\s+(of|at|reaches?)\\s+\\$?[\\d,\\.]+\\s*(billion|million)",
+        "获得?\\s*[\\d,\\.]+\\s*(亿|万)?(美元|人民币)?(融资|投资)",
+        "完成\\s*(新一轮|[A-F]\\s*轮)?\\s*[\\d,\\.]*\\s*(亿|万)?\\s*(美元|人民币)?\\s*融资",
+        "[\\d,\\.]+\\s*(亿|万)\\s*(美元|人民币)?\\s*融资"
+      ],
+      "content_patterns": [
+        "led by ([A-Z][\\w\\s&]+)(?:,|\\.|and)",
+        "participated.*(?:including|such as)\\s+([A-Z][\\w\\s,&]+)",
+        "valued at \\$?([\\d,\\.]+)\\s*(billion|million)",
+        "(pre-money|post-money) valuation",
+        "cap table",
+        "equity financing"
+      ],
+      "stage_patterns": {
+        "pre_seed": ["pre-seed", "pre seed", "angel"],
+        "seed": ["seed round", "seed funding", "seed stage"],
+        "series_a": ["series a", "series-a", "A轮"],
+        "series_b": ["series b", "series-b", "B轮"],
+        "series_c": ["series c", "series-c", "C轮"],
+        "series_d": ["series d", "series-d", "D轮"],
+        "series_e_plus": ["series e", "series f", "series g", "late stage"],
+        "bridge": ["bridge round", "bridge financing", "extension"],
+        "debt": ["debt financing", "venture debt", "credit facility"]
+      },
+      "amount_extraction": {
+        "patterns": [
+          "\\$([\\d,\\.]+)\\s*(million|billion|M|B|mn|bn)",
+          "([\\d,\\.]+)\\s*(million|billion|M|B)\\s*dollars?",
+          "([\\d,\\.]+)\\s*(亿|万)\\s*(美元|人民币|USD|RMB)"
+        ],
+        "multipliers": {
+          "million": 1000000,
+          "billion": 1000000000,
+          "M": 1000000,
+          "B": 1000000000,
+          "mn": 1000000,
+          "bn": 1000000000,
+          "亿": 100000000,
+          "万": 10000
+        }
+      }
+    },
+    
+    "acquisition": {
+      "enabled": true,
+      "priority": 1,
+      "headline_patterns": [
+        "acquires?\\s+([A-Z][\\w\\s]+)",
+        "acquired\\s+by\\s+([A-Z][\\w\\s]+)",
+        "to\\s+(acquire|buy|purchase)\\s+([A-Z][\\w\\s]+)",
+        "acquisition\\s+of\\s+([A-Z][\\w\\s]+)",
+        "merger\\s+(with|between)",
+        "acqui-?hire",
+        "收购|并购|被收购"
+      ],
+      "content_patterns": [
+        "deal\\s+(valued?|worth)\\s+at\\s+\\$?([\\d,\\.]+)",
+        "(all-cash|cash-and-stock|stock)\\s+deal",
+        "acquisition\\s+agreement",
+        "definitive\\s+agreement",
+        "closing\\s+(is\\s+)?expected"
+      ],
+      "exclude_patterns": [
+        "talent acquisition",
+        "customer acquisition",
+        "user acquisition"
+      ]
+    },
+    
+    "product_launch": {
+      "enabled": true,
+      "priority": 2,
+      "headline_patterns": [
+        "launches?\\s+([A-Z][\\w\\s\\d\\.]+)",
+        "announces?\\s+([A-Z][\\w\\s\\d\\.]+)",
+        "introduces?\\s+([A-Z][\\w\\s\\d\\.]+)",
+        "unveils?\\s+([A-Z][\\w\\s\\d\\.]+)",
+        "releases?\\s+([A-Z][\\w\\s\\d\\.]+)",
+        "rolls?\\s+out\\s+([A-Z][\\w\\s\\d\\.]+)",
+        "debuts?\\s+([A-Z][\\w\\s\\d\\.]+)",
+        "发布|推出|上线"
+      ],
+      "model_patterns": [
+        "GPT-?[\\d\\.]+",
+        "Claude\\s*[\\d\\.]*",
+        "Llama\\s*[\\d\\.]*",
+        "Gemini\\s*(Pro|Ultra|Nano)?",
+        "Mistral\\s*[\\d\\.]*",
+        "\\w+-?[\\d]+[\\w]*\\s*(model|version|release)"
+      ],
+      "content_patterns": [
+        "now available",
+        "general availability",
+        "public beta",
+        "early access",
+        "API access",
+        "open source",
+        "parameters",
+        "context window",
+        "benchmark"
+      ]
+    },
+    
+    "partnership": {
+      "enabled": true,
+      "priority": 2,
+      "headline_patterns": [
+        "partners?\\s+with\\s+([A-Z][\\w\\s]+)",
+        "partnership\\s+(with|between)",
+        "collaborates?\\s+with\\s+([A-Z][\\w\\s]+)",
+        "collaboration\\s+(with|between)",
+        "teams?\\s+up\\s+with\\s+([A-Z][\\w\\s]+)",
+        "joins?\\s+forces\\s+with\\s+([A-Z][\\w\\s]+)",
+        "strategic\\s+(partnership|alliance)",
+        "合作|战略伙伴"
+      ],
+      "content_patterns": [
+        "multi-year (deal|agreement|partnership)",
+        "exclusive (partnership|agreement)",
+        "joint venture",
+        "licensing (deal|agreement)",
+        "distribution (deal|agreement|partnership)"
+      ]
+    },
+    
+    "leadership_change": {
+      "enabled": true,
+      "priority": 2,
+      "headline_patterns": [
+        "(CEO|CTO|CFO|COO|CPO|CMO|President|Chairman)\\s+(steps?\\s+down|resigns?|departs?|leaves?|exits?)",
+        "names?\\s+([A-Z][\\w\\s]+)\\s+as\\s+(CEO|CTO|CFO|COO|President)",
+        "appoints?\\s+([A-Z][\\w\\s]+)\\s+(as\\s+)?(CEO|CTO|CFO)",
+        "hires?\\s+([A-Z][\\w\\s]+)\\s+(as\\s+|from\\s+)",
+        "([A-Z][\\w\\s]+)\\s+joins?\\s+as\\s+(CEO|CTO|CFO)",
+        "([A-Z][\\w\\s]+)\\s+to\\s+(lead|head)\\s+",
+        "leadership\\s+(change|transition|shuffle)",
+        "returns?\\s+(as|to)\\s+[\\w\\s]*?(CEO|CTO|CFO|COO|President)",
+        "([A-Z][\\w\\s]+)\\s+returns?\\s+as\\s+[\\w\\s]*?(CEO|CTO|CFO)",
+        "reinstated\\s+as\\s+[\\w\\s]*?(CEO|CTO|CFO)",
+        "back\\s+as\\s+[\\w\\s]*?(CEO|CTO|CFO)",
+        "任命|离职|加入|回归"
+      ],
+      "role_patterns": [
+        "CEO|Chief Executive",
+        "CTO|Chief Technology",
+        "CFO|Chief Financial",
+        "COO|Chief Operating",
+        "CPO|Chief Product",
+        "President",
+        "Chairman|Chairwoman",
+        "Board of Directors",
+        "VP of|Vice President",
+        "Head of"
+      ],
+      "change_type_indicators": {
+        "hired": ["joins", "hires", "appoints", "names", "brings on"],
+        "departed": ["leaves", "departs", "steps down", "resigns", "exits"],
+        "promoted": ["promotes", "elevated", "promoted"],
+        "demoted": ["demoted", "moved to", "reassigned"]
+      }
+    },
+    
+    "ipo": {
+      "enabled": true,
+      "priority": 1,
+      "headline_patterns": [
+        "files?\\s+(for\\s+)?IPO",
+        "goes?\\s+public",
+        "IPO\\s+(filing|plans?|preparations?)",
+        "direct\\s+listing",
+        "SPAC\\s+(merger|deal)",
+        "S-1\\s+(filing|registration)",
+        "公开上市|IPO申请"
+      ],
+      "content_patterns": [
+        "SEC filing",
+        "prospectus",
+        "NYSE|NASDAQ|stock exchange",
+        "underwriters?",
+        "pricing\\s+(range|expected)",
+        "shares?\\s+to\\s+be\\s+offered"
+      ]
+    },
+    
+    "layoff": {
+      "enabled": true,
+      "priority": 2,
+      "headline_patterns": [
+        "lays?\\s+off\\s+([\\d,]+|\\d+%)",
+        "layoffs?\\s+(of\\s+)?([\\d,]+|\\d+%)",
+        "cuts?\\s+([\\d,]+|\\d+%)\\s+(jobs?|employees?|staff|workforce)",
+        "reduces?\\s+workforce",
+        "job\\s+cuts?",
+        "downsiz(es?|ing)",
+        "restructur(es?|ing)",
+        "裁员|削减人员"
+      ],
+      "content_patterns": [
+        "severance",
+        "workforce reduction",
+        "cost cutting",
+        "reorganization",
+        "affected employees",
+        "impacted positions"
+      ],
+      "number_extraction": {
+        "patterns": [
+          "([\\d,]+)\\s*(employees?|workers?|jobs?|people|staff)",
+          "([\\d]+)\\s*%\\s*(of\\s+)?(workforce|staff|employees)"
+        ]
+      }
+    },
+    
+    "pivot": {
+      "enabled": true,
+      "priority": 3,
+      "headline_patterns": [
+        "pivots?\\s+(to|from|towards?)",
+        "shifts?\\s+(focus|strategy)\\s+(to|towards?)",
+        "repositions?",
+        "new\\s+(direction|strategy)",
+        "transforms?\\s+(into|business)",
+        "转型|战略调整"
+      ],
+      "content_patterns": [
+        "business model",
+        "strategic pivot",
+        "new market",
+        "core business",
+        "shutdown.*launch",
+        "discontinue.*focus"
+      ]
+    },
+    
+    "regulatory": {
+      "enabled": true,
+      "priority": 2,
+      "headline_patterns": [
+        "(FTC|SEC|DOJ|EU|FCC|FDA)\\s+(investigates?|probes?|sues?|fines?)",
+        "antitrust\\s+(probe|investigation|lawsuit)",
+        "regulatory\\s+(action|scrutiny|investigation)",
+        "compliance\\s+(issues?|violations?)",
+        "data\\s+privacy\\s+(violations?|breach)",
+        "监管|调查|合规"
+      ],
+      "content_patterns": [
+        "consent decree",
+        "settlement",
+        "civil penalty",
+        "cease and desist",
+        "regulatory approval",
+        "compliance order"
+      ]
+    },
+    
+    "expansion": {
+      "enabled": true,
+      "priority": 3,
+      "headline_patterns": [
+        "expands?\\s+(to|into|operations)",
+        "opens?\\s+(new\\s+)?(office|headquarters|facility)",
+        "enters?\\s+([A-Z][\\w\\s]+)\\s+market",
+        "launches?\\s+in\\s+([A-Z][\\w\\s]+)",
+        "international\\s+expansion",
+        "扩张|拓展|进入"
+      ],
+      "content_patterns": [
+        "new market",
+        "geographic expansion",
+        "global footprint",
+        "regional headquarters",
+        "local operations"
+      ]
+    },
+    
+    "legal": {
+      "enabled": true,
+      "priority": 2,
+      "headline_patterns": [
+        "sues?\\s+([A-Z][\\w\\s]+)",
+        "sued\\s+by\\s+([A-Z][\\w\\s]+)",
+        "lawsuit\\s+(against|filed)",
+        "patent\\s+(infringement|dispute|lawsuit)",
+        "intellectual\\s+property\\s+(dispute|lawsuit)",
+        "copyright\\s+(infringement|lawsuit)",
+        "诉讼|专利侵权"
+      ],
+      "content_patterns": [
+        "court filing",
+        "complaint",
+        "damages",
+        "injunction",
+        "settlement",
+        "IP litigation"
+      ]
+    },
+    
+    "shutdown": {
+      "enabled": true,
+      "priority": 1,
+      "headline_patterns": [
+        "shuts?\\s+down",
+        "shutdown",
+        "closes?\\s+(down|operations?)",
+        "ceases?\\s+operations?",
+        "wind(s|ing)?\\s+down",
+        "bankruptcy",
+        "liquidat(es?|ion)",
+        "关闭|倒闭|清算"
+      ],
+      "content_patterns": [
+        "chapter 11",
+        "chapter 7",
+        "insolvency",
+        "creditors",
+        "final day",
+        "closing its doors"
+      ]
+    }
+  },
+  
+  "entity_extraction": {
+    "company_indicators": [
+      "Inc\\.",
+      "Corp\\.",
+      "LLC",
+      "Ltd\\.",
+      "Co\\.",
+      "GmbH",
+      "AG",
+      "SA",
+      "NV",
+      "AB"
+    ],
+    "ai_companies": [
+      "OpenAI",
+      "Anthropic",
+      "Google",
+      "Microsoft",
+      "Meta",
+      "Amazon",
+      "NVIDIA",
+      "Hugging Face",
+      "Cohere",
+      "AI21 Labs",
+      "Stability AI",
+      "Mistral AI",
+      "DeepMind",
+      "xAI",
+      "Inflection AI",
+      "Character AI",
+      "Runway",
+      "Midjourney",
+      "Scale AI",
+      "Databricks",
+      "Anyscale"
+    ]
+  },
+  
+  "source_credibility": {
+    "tier1": {
+      "sources": ["reuters", "bloomberg", "wsj", "ft", "nytimes", "techcrunch", "theinformation"],
+      "score": 0.95
+    },
+    "tier2": {
+      "sources": ["venturebeat", "wired", "theverge", "arstechnica", "semafor", "axios"],
+      "score": 0.85
+    },
+    "tier3": {
+      "sources": ["36kr", "pingwest", "jiqizhixin", "leiphone"],
+      "score": 0.80
+    },
+    "tier4": {
+      "sources": ["company_blog", "press_release"],
+      "score": 0.90
+    },
+    "default": {
+      "score": 0.70
+    }
+  },
+  
+  "deduplication": {
+    "time_window_days": 14,
+    "entity_similarity_threshold": 0.8,
+    "headline_similarity_threshold": 0.7
+  },
+  
+  "confidence_thresholds": {
+    "high": 0.7,
+    "medium": 0.4,
+    "low": 0.1
+  }
+}

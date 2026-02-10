@@ -1,0 +1,281 @@
+{
+  "version": "1.0",
+  "description": "Maps entities (companies, technologies) to industry verticals",
+  "last_updated": "2026-01-28",
+  
+  "verticals": {
+    "ai_healthcare": {
+      "name": "AI + Healthcare",
+      "keywords": ["healthcare", "medical", "clinical", "patient", "diagnosis", "radiology", "pathology", "hospital", "ehr", "health tech"],
+      "companies": [
+        "Tempus", "PathAI", "Viz.ai", "Paige", "Rad AI", "Abridge",
+        "Butterfly Network", "Aidoc", "Caption Health", "HeartFlow",
+        "Owkin", "Arterys", "Zebra Medical", "Qure.ai", "Lunit"
+      ],
+      "related_buckets": ["ai-healthcare", "vision-multimodal"]
+    },
+    "ai_drug_discovery": {
+      "name": "AI + Drug Discovery",
+      "keywords": ["drug discovery", "pharmaceutical", "biotech", "molecule", "protein", "clinical trial", "therapeutic", "pharma"],
+      "companies": [
+        "Isomorphic Labs", "Recursion", "Insilico Medicine", "Generate Bio", "Exscientia",
+        "BenevolentAI", "Atomwise", "Schrödinger", "Relay Therapeutics", "XtalPi",
+        "AbCellera", "Absci", "Genesis Therapeutics", "Valo Health", "Evotec"
+      ],
+      "related_buckets": ["ai-science", "ai-healthcare"]
+    },
+    "ai_fintech": {
+      "name": "AI + Fintech",
+      "keywords": ["fintech", "banking", "lending", "credit", "underwriting", "kyc", "aml", "fraud detection", "neobank"],
+      "companies": [
+        "Upstart", "Zest AI", "Socure", "Alloy", "Ramp", "Brex",
+        "Plaid", "Stripe", "Affirm", "Chime", "Dave", "SoFi",
+        "Blend", "Figure", "Oportun", "Creditas"
+      ],
+      "related_buckets": ["ai-finance", "ai-security"]
+    },
+    "ai_trading": {
+      "name": "AI + Trading/Quant",
+      "keywords": ["trading", "quant", "hedge fund", "algorithmic", "market making", "alpha", "systematic"],
+      "companies": [
+        "Two Sigma", "Citadel", "DE Shaw", "Renaissance", "Jane Street",
+        "Point72", "Millennium", "Bridgewater", "AQR", "WorldQuant",
+        "Man Group", "Balyasny", "ExodusPoint", "Hudson River Trading", "Jump Trading"
+      ],
+      "related_buckets": ["ai-finance"]
+    },
+    "ai_education": {
+      "name": "AI + Education",
+      "keywords": ["education", "edtech", "learning", "tutoring", "classroom", "student", "curriculum", "course"],
+      "companies": [
+        "Khanmigo", "Duolingo", "Synthesis", "Speak", "Quizlet",
+        "Coursera", "Byju's", "Udemy", "2U", "Chegg",
+        "Photomath", "Numerade", "Yoodli", "Sana Labs", "Century Tech"
+      ],
+      "related_buckets": ["ai-education", "llm-foundation"]
+    },
+    "ai_legal": {
+      "name": "AI + Legal",
+      "keywords": ["legal", "law firm", "contract", "litigation", "compliance", "regulatory", "court", "attorney"],
+      "companies": [
+        "Harvey", "Casetext", "Spellbook", "EvenUp", "Ironclad",
+        "Luminance", "Kira Systems", "LawGeex", "Atrium", "DoNotPay",
+        "LegalOn", "Robin AI", "Juro", "Evisort", "Lexion"
+      ],
+      "related_buckets": ["ai-legal", "llm-foundation"]
+    },
+    "ai_creative": {
+      "name": "AI + Creative/Media",
+      "keywords": ["creative", "media", "video", "music", "image generation", "content creation", "generative art", "design"],
+      "companies": [
+        "Runway", "Pika", "Suno", "Udio", "ElevenLabs", "Midjourney",
+        "Stability AI", "Leonardo.ai", "Luma AI", "Heygen", "Synthesia",
+        "Descript", "Kapwing", "InVideo", "Pictory", "Murf AI"
+      ],
+      "related_buckets": ["ai-creative", "vision-multimodal", "speech-audio"]
+    },
+    "ai_robotics": {
+      "name": "AI + Robotics",
+      "keywords": ["robotics", "robot", "humanoid", "manipulation", "embodied ai", "warehouse automation"],
+      "companies": [
+        "Figure", "1X", "Covariant", "Boston Dynamics", "Physical Intelligence",
+        "Agility Robotics", "Apptronik", "Sanctuary AI", "Skild AI", "Symbotic",
+        "Locus Robotics", "6 River Systems", "Fetch Robotics", "Realtime Robotics", "Dexterity"
+      ],
+      "related_buckets": ["robotics-embodied", "vision-multimodal"]
+    },
+    "ai_manufacturing": {
+      "name": "AI + Manufacturing",
+      "keywords": ["manufacturing", "factory", "industrial", "quality control", "assembly", "production line"],
+      "companies": [
+        "Bright Machines", "Machina Labs", "Landing AI", "Instrumental",
+        "Sight Machine", "Uptake", "Augury", "Fero Labs", "Veo Robotics",
+        "Path Robotics", "Machinefi", "Eigen Innovations"
+      ],
+      "related_buckets": ["ai-manufacturing", "robotics-embodied", "vision-multimodal"]
+    },
+    "ai_autonomous_vehicles": {
+      "name": "AI + Autonomous Vehicles",
+      "keywords": ["autonomous", "self-driving", "adas", "lidar", "perception", "vehicle", "mobility"],
+      "companies": [
+        "Waymo", "Cruise", "Tesla", "Aurora", "Nuro", "Zoox",
+        "Mobileye", "Argo AI", "TuSimple", "Pony.ai", "WeRide",
+        "Motional", "Gatik", "May Mobility", "Kodiak Robotics", "Einride"
+      ],
+      "related_buckets": ["autonomous-vehicles", "vision-multimodal"]
+    },
+    "ai_agriculture": {
+      "name": "AI + Agriculture",
+      "keywords": ["agriculture", "farming", "crop", "precision agriculture", "agtech", "harvest"],
+      "companies": [
+        "John Deere", "Prospera", "Taranis", "Aigen", "Bowery",
+        "Plenty", "AppHarvest", "Indigo Agriculture", "Farmers Business Network", "Granular",
+        "Blue River Technology", "CropX", "Trace Genomics"
+      ],
+      "related_buckets": ["robotics-embodied", "vision-multimodal"]
+    },
+    "ai_real_estate": {
+      "name": "AI + Real Estate",
+      "keywords": ["real estate", "property", "proptech", "housing", "mortgage", "valuation"],
+      "companies": [
+        "Zillow", "Opendoor", "Redfin", "Cherre", "Entera",
+        "Compass", "Offerpad", "Knock", "Flyhomes", "Side",
+        "HouseCanary", "Reonomy", "Skyline AI"
+      ],
+      "related_buckets": ["ai-finance"]
+    },
+    "ai_insurance": {
+      "name": "AI + Insurance",
+      "keywords": ["insurance", "insurtech", "claims", "underwriting", "actuarial", "risk assessment"],
+      "companies": [
+        "Lemonade", "Tractable", "Shift Technology", "Coalition", "Cape Analytics",
+        "Hippo", "Root Insurance", "Clearcover", "Branch", "Kin",
+        "Snapsheet", "CCC Intelligent Solutions", "Planck"
+      ],
+      "related_buckets": ["ai-finance", "vision-multimodal"]
+    },
+    "ai_cybersecurity": {
+      "name": "AI + Cybersecurity",
+      "keywords": ["cybersecurity", "security", "threat detection", "malware", "soc", "siem", "endpoint"],
+      "companies": [
+        "CrowdStrike", "SentinelOne", "Darktrace", "Abnormal", "Snyk",
+        "Cyera", "Vectra AI", "Orca Security", "Wiz", "Lacework",
+        "Cybereason", "ExtraHop", "Hunters", "Protect AI", "CalypsoAI"
+      ],
+      "related_buckets": ["ai-security"]
+    },
+    "ai_hr": {
+      "name": "AI + HR/Recruiting",
+      "keywords": ["hr", "recruiting", "talent", "hiring", "workforce", "employee", "interview"],
+      "companies": [
+        "Eightfold", "Phenom", "Beamery", "Lattice", "HireVue",
+        "Greenhouse", "Lever", "Gem", "Paradox", "Pymetrics",
+        "Textio", "SeekOut", "hireEZ", "Fetcher"
+      ],
+      "related_buckets": ["ai-enterprise", "llm-foundation", "agent-orchestration"]
+    },
+    "ai_sales": {
+      "name": "AI + Sales",
+      "keywords": ["sales", "revenue", "crm", "prospecting", "pipeline", "deal", "outbound"],
+      "companies": [
+        "Gong", "Clari", "Outreach", "11x", "Apollo",
+        "Salesloft", "ZoomInfo", "6sense", "Demandbase", "Drift",
+        "People.ai", "Chorus", "Highspot", "Seismic"
+      ],
+      "related_buckets": ["ai-enterprise", "ai-customer"]
+    },
+    "ai_marketing": {
+      "name": "AI + Marketing",
+      "keywords": ["marketing", "advertising", "content marketing", "seo", "campaign", "brand"],
+      "companies": [
+        "Jasper", "Copy.ai", "Persado", "Albert", "Mutiny",
+        "Writer", "Anyword", "Phrasee", "Pencil", "Pattern89",
+        "Movable Ink", "Dynamic Yield", "Optimove"
+      ],
+      "related_buckets": ["ai-creative", "ai-enterprise"]
+    },
+    "ai_customer_service": {
+      "name": "AI + Customer Service",
+      "keywords": ["customer service", "support", "chatbot", "contact center", "helpdesk", "ticket"],
+      "companies": [
+        "Intercom", "Ada", "Forethought", "Sierra", "Decagon",
+        "Kustomer", "Zendesk", "Freshworks", "Cognigy", "Ultimate.ai",
+        "Lang.ai", "Assembled", "Cresta"
+      ],
+      "related_buckets": ["ai-customer", "llm-foundation"]
+    },
+    "ai_supply_chain": {
+      "name": "AI + Supply Chain",
+      "keywords": ["supply chain", "logistics", "inventory", "freight", "warehouse", "procurement"],
+      "companies": [
+        "Flexport", "Project44", "FourKites", "o9", "Altana",
+        "Coupa", "E2open", "Blue Yonder", "Kinaxis", "Llamasoft",
+        "ClearMetal", "Transfix", "Loadsmart"
+      ],
+      "related_buckets": ["ai-enterprise", "agent-orchestration", "ai-infrastructure"]
+    },
+    "ai_construction": {
+      "name": "AI + Construction",
+      "keywords": ["construction", "building", "site", "blueprint", "contractor", "infrastructure"],
+      "companies": [
+        "Procore", "Built Robotics", "Dusty Robotics", "OpenSpace", "ICON",
+        "Autodesk", "PlanGrid", "Buildots", "Versatile", "Doxel",
+        "Modular", "EquipmentShare", "Briq"
+      ],
+      "related_buckets": ["robotics-embodied", "vision-multimodal"]
+    },
+    "ai_gaming": {
+      "name": "AI + Gaming",
+      "keywords": ["gaming", "game", "npc", "procedural", "game engine", "esports"],
+      "companies": [
+        "Inworld AI", "Convai", "Scenario", "modl.ai",
+        "Latitude", "Promethean AI", "Charisma", "Replica Studios",
+        "Dreamlab", "Hidden Door"
+      ],
+      "related_buckets": ["ai-gaming", "ai-creative", "llm-foundation", "speech-audio"]
+    },
+    "ai_climate": {
+      "name": "AI + Climate/Energy",
+      "keywords": ["climate", "sustainability", "carbon", "renewable", "energy", "emissions", "esg"],
+      "companies": [
+        "ClimateAI", "Pachama", "Tomorrow.io", "Kayrros",
+        "Persefoni", "Watershed", "Planet", "Descartes Labs",
+        "Carbon Robotics", "Verdant Robotics", "NCX"
+      ],
+      "related_buckets": ["ai-climate", "ai-science", "vision-multimodal"]
+    },
+    "ai_science": {
+      "name": "AI + Scientific Discovery",
+      "keywords": ["scientific", "research", "discovery", "lab", "experiment", "materials"],
+      "companies": [
+        "DeepMind", "Microsoft Research", "Google Research",
+        "OpenAI Research", "Meta AI Research", "Anthropic Research",
+        "Genentech", "Nvidia Research", "IBM Research"
+      ],
+      "related_buckets": ["ai-science", "llm-foundation"]
+    },
+    "ai_defense": {
+      "name": "AI + Defense/Gov",
+      "keywords": ["defense", "military", "government", "intelligence", "national security", "dod"],
+      "companies": [
+        "Anduril", "Palantir", "Shield AI", "Scale AI",
+        "Rebellion Defense", "Vannevar Labs", "Primer", "Rebellion Defense",
+        "Hadean", "Second Front Systems", "SAIC AI"
+      ],
+      "related_buckets": ["ai-defense", "ai-security"]
+    },
+    "ai_retail": {
+      "name": "AI + Retail",
+      "keywords": ["retail", "ecommerce", "store", "checkout", "inventory", "merchandising"],
+      "companies": [
+        "Amazon", "Standard AI", "Grabango", "Vue.ai",
+        "AiFi", "Trigo", "Zippin", "Focal Systems",
+        "Lily AI", "Constructor", "Nosto"
+      ],
+      "related_buckets": ["ai-customer", "vision-multimodal"]
+    },
+    "ai_space": {
+      "name": "AI + Space",
+      "keywords": ["space", "satellite", "aerospace", "orbit", "earth observation", "remote sensing"],
+      "companies": [
+        "Planet Labs", "Spire", "Orbital Sidekick", "SpaceX",
+        "Capella Space", "HawkEye 360", "BlackSky", "Satellogic",
+        "Umbra", "Pixxel", "Muon Space"
+      ],
+      "related_buckets": ["ai-science", "vision-multimodal"]
+    }
+  },
+
+  "cross_references": {
+    "description": "Entities that span multiple verticals",
+    "multi_vertical_entities": {
+      "OpenAI": ["ai_creative", "ai_customer_service", "ai_science", "ai_education"],
+      "Anthropic": ["ai_customer_service", "ai_science", "ai_legal"],
+      "Google": ["ai_healthcare", "ai_science", "ai_creative", "ai_autonomous_vehicles"],
+      "Microsoft": ["ai_enterprise", "ai_healthcare", "ai_science", "ai_gaming"],
+      "NVIDIA": ["ai_healthcare", "ai_autonomous_vehicles", "ai_gaming", "ai_science"],
+      "Tesla": ["ai_autonomous_vehicles", "ai_robotics", "ai_manufacturing"],
+      "Amazon": ["ai_retail", "ai_supply_chain", "ai_customer_service"]
+    }
+  }
+}

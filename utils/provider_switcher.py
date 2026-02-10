@@ -9,8 +9,12 @@ import json
 from typing import Optional, Dict, Any, List, Tuple
 from pathlib import Path
 from loguru import logger
+from dotenv import load_dotenv
 
-from utils.llm_provider import BaseLLMProvider, KimiProvider, OpenRouterProvider
+# Load environment variables
+load_dotenv()
+
+from utils.llm_provider import BaseLLMProvider, KimiProvider, Kimi25Provider, OpenRouterProvider
 
 
 class ProviderSwitcher:
@@ -28,7 +32,6 @@ class ProviderSwitcher:
 
         # Initialize providers
         self.providers: Dict[str, BaseLLMProvider] = {}
-        self.current_provider_id = "kimi"
         self.provider_queue = self._build_fallback_queue()
 
         # Track model usage per tier for rotation
@@ -38,8 +41,26 @@ class ProviderSwitcher:
             'tier3_fast': 0
         }
 
-        # Initialize primary provider
-        self.current_provider = self._get_or_create_provider("kimi")
+        # Load OpenRouter API keys for rotation
+        import os
+        self.openrouter_keys = []
+        for i in [1, 2, 3]:
+            key_name = "OPENROUTER_API_KEY" if i == 1 else f"OPENROUTER_API_KEY_{i}"
+            key = os.getenv(key_name)
+            if key:
+                self.openrouter_keys.append(key)
+
+        self.current_key_index = 0
+        if self.openrouter_keys:
+            logger.info(f"Loaded {len(self.openrouter_keys)} OpenRouter API keys for rotation")
+
+        # Initialize primary provider (use first in queue, or kimi as fallback)
+        if self.provider_queue:
+            self.current_provider_id = self.provider_queue[0]
+            self.current_provider = self._get_or_create_provider(self.provider_queue[0])
+        else:
+            self.current_provider_id = "kimi"
+            self.current_provider = self._get_or_create_provider("kimi")
 
         logger.info("Provider Switcher initialized")
         logger.info(f"Fallback order: {' → '.join(self.provider_queue)}")
@@ -57,7 +78,15 @@ class ProviderSwitcher:
         """Build provider fallback queue from configuration"""
         queue = []
 
-        # Add Kimi first
+        # Add Kimi 2.5 first (best quality)
+        kimi25_config = next(
+            (p for p in self.config['providers'] if p['id'] == 'kimi25'),
+            None
+        )
+        if kimi25_config and kimi25_config.get('enabled'):
+            queue.append('kimi25')
+
+        # Add legacy Kimi if enabled
         kimi_config = next(
             (p for p in self.config['providers'] if p['id'] == 'kimi'),
             None
@@ -65,7 +94,7 @@ class ProviderSwitcher:
         if kimi_config and kimi_config.get('enabled'):
             queue.append('kimi')
 
-        # Add OpenRouter with tiers
+        # Add OpenRouter with tiers (fallback for simpler tasks)
         openrouter_config = next(
             (p for p in self.config['providers'] if p['id'] == 'openrouter'),
             None
@@ -88,7 +117,15 @@ class ProviderSwitcher:
         Returns:
             Provider instance
         """
-        # For Kimi, cache the provider (only one instance needed)
+        # Kimi 2.5 — primary provider
+        if provider_spec == 'kimi25':
+            if provider_spec in self.providers:
+                return self.providers[provider_spec]
+            provider = Kimi25Provider()
+            self.providers[provider_spec] = provider
+            return provider
+
+        # Legacy Kimi (moonshot)
         if provider_spec == 'kimi':
             if provider_spec in self.providers:
                 return self.providers[provider_spec]
@@ -106,12 +143,15 @@ class ProviderSwitcher:
             # Select model from tier with rotation
             model = self._select_model_from_tier(tier)
 
-            # Create new provider instance with rotated model
+            # Get current API key with rotation
+            api_key = self._get_rotated_api_key()
+
+            # Create new provider instance with rotated model and API key
             # Use unique key with model name to avoid overwriting
             provider_key = f"openrouter.{tier}.{model}"
 
             # Create new provider (don't use cache for rotation)
-            provider = OpenRouterProvider(model=model)
+            provider = OpenRouterProvider(api_key=api_key, model=model)
 
             # Store with unique key
             self.providers[provider_key] = provider
@@ -119,6 +159,24 @@ class ProviderSwitcher:
             return provider
         else:
             raise ValueError(f"Unknown provider spec: {provider_spec}")
+
+    def _get_rotated_api_key(self) -> Optional[str]:
+        """
+        Get current API key and rotate to next one for future calls.
+        Returns None if no keys available.
+        """
+        if not self.openrouter_keys:
+            return None
+
+        # Get current key
+        current_key = self.openrouter_keys[self.current_key_index]
+
+        # Rotate to next key for next call
+        self.current_key_index = (self.current_key_index + 1) % len(self.openrouter_keys)
+
+        logger.debug(f"Using OpenRouter key {self.current_key_index + 1}/{len(self.openrouter_keys)}")
+
+        return current_key
 
     def _select_model_from_tier(self, tier: Optional[str] = None) -> str:
         """
@@ -131,7 +189,7 @@ class ProviderSwitcher:
         )
 
         if not openrouter_config:
-            return "meta-llama/llama-3.3-8b-instruct:free"
+            return "deepseek/deepseek-r1-0528:free"
 
         # Default to tier3 if not specified
         if tier is None:
@@ -145,7 +203,7 @@ class ProviderSwitcher:
         models = openrouter_config['tiers'][tier]['models']
 
         if not models:
-            return "meta-llama/llama-3.3-8b-instruct:free"
+            return "deepseek/deepseek-r1-0528:free"
 
         # Get current index for this tier
         current_index = self.tier_model_indices.get(tier, 0)
@@ -218,11 +276,12 @@ class ProviderSwitcher:
                 # Determine provider name and current model for logging
                 provider_name = self._get_provider_display_name(provider_spec)
 
-                if tier and tier in self.tier_model_indices:
+                openrouter_config = self._get_openrouter_config()
+                if tier and tier in self.tier_model_indices and openrouter_config:
                     current_model_idx = (self.tier_model_indices[tier] - 1) % len(
-                        self.config['providers'][1]['tiers'][tier]['models']
+                        openrouter_config['tiers'][tier]['models']
                     )
-                    model_name = self.config['providers'][1]['tiers'][tier]['models'][
+                    model_name = openrouter_config['tiers'][tier]['models'][
                         current_model_idx
                     ]
                     logger.info(
@@ -240,10 +299,19 @@ class ProviderSwitcher:
         logger.error("All providers and models exhausted!")
         return None
 
+    def _get_openrouter_config(self) -> Optional[Dict[str, Any]]:
+        """Get the OpenRouter provider config by ID"""
+        for provider in self.config['providers']:
+            if provider.get('id') == 'openrouter':
+                return provider
+        return None
+
     def _get_provider_display_name(self, provider_spec: str) -> str:
         """Get human-readable provider name"""
-        if provider_spec == 'kimi':
-            return 'Kimi/Moonshot (Primary)'
+        if provider_spec == 'kimi25':
+            return 'Kimi 2.5 (Primary)'
+        elif provider_spec == 'kimi':
+            return 'Kimi/Moonshot (Legacy)'
         elif provider_spec == 'openrouter.tier1_quality':
             return 'OpenRouter Tier 1 (Quality)'
         elif provider_spec == 'openrouter.tier2_balanced':
@@ -307,8 +375,9 @@ class ProviderSwitcher:
                     )
 
                     # If we're in an OpenRouter tier, try next model in same tier first
-                    if current_tier and current_tier in self.tier_model_indices:
-                        tier_models = self.config['providers'][1]['tiers'][current_tier]['models']
+                    openrouter_config = self._get_openrouter_config()
+                    if current_tier and current_tier in self.tier_model_indices and openrouter_config:
+                        tier_models = openrouter_config['tiers'][current_tier]['models']
                         current_idx = (self.tier_model_indices[current_tier] - 1) % len(tier_models)
                         models_in_tier = len(tier_models)
 

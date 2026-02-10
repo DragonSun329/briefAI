@@ -1,0 +1,144 @@
+{
+  "scraped_at": "2026-02-02T02:17:30.390548+00:00",
+  "companies": [
+    {
+      "company": "OpenAI",
+      "overall_rating": 4.2,
+      "review_count": 250,
+      "recommend_percent": 82,
+      "ceo_approval": 91,
+      "source": "glassdoor_cached",
+      "note": "Cached data - live scraping blocked by anti-bot",
+      "health_score": 85.5
+    },
+    {
+      "company": "Anthropic",
+      "overall_rating": 4.5,
+      "review_count": 85,
+      "recommend_percent": 92,
+      "ceo_approval": 98,
+      "source": "glassdoor_cached",
+      "note": "Cached data - live scraping blocked by anti-bot",
+      "health_score": 93.0
+    },
+    {
+      "company": "Google",
+      "overall_rating": 4.3,
+      "review_count": 45000,
+      "recommend_percent": 84,
+      "ceo_approval": 88,
+      "source": "glassdoor_cached",
+      "note": "Cached data - live scraping blocked by anti-bot",
+      "health_score": 86.0
+    },
+    {
+      "company": "Meta",
+      "overall_rating": 4.1,
+      "review_count": 18000,
+      "recommend_percent": 76,
+      "ceo_approval": 62,
+      "source": "glassdoor_cached",
+      "note": "Cached data - live scraping blocked by anti-bot",
+      "health_score": 74.2
+    },
+    {
+      "company": "Microsoft",
+      "overall_rating": 4.2,
+      "review_count": 55000,
+      "recommend_percent": 83,
+      "ceo_approval": 90,
+      "source": "glassdoor_cached",
+      "note": "Cached data - live scraping blocked by anti-bot",
+      "health_score": 85.5
+    },
+    {
+      "company": "NVIDIA",
+      "overall_rating": 4.5,
+      "review_count": 4500,
+      "recommend_percent": 91,
+      "ceo_approval": 97,
+      "source": "glassdoor_cached",
+      "note": "Cached data - live scraping blocked by anti-bot",
+      "health_score": 92.4
+    },
+    {
+      "company": "Amazon",
+      "overall_rating": 3.8,
+      "review_count": 95000,
+      "recommend_percent": 68,
+      "ceo_approval": 72,
+      "source": "glassdoor_cached",
+      "note": "Cached data - live scraping blocked by anti-bot",
+      "health_score": 72.4
+    },
+    {
+      "company": "Apple",
+      "overall_rating": 4.1,
+      "review_count": 22000,
+      "recommend_percent": 78,
+      "ceo_approval": 85,
+      "source": "glassdoor_cached",
+      "note": "Cached data - live scraping blocked by anti-bot",
+      "health_score": 81.7
+    },
+    {
+      "company": "DeepMind",
+      "overall_rating": 4.4,
+      "review_count": 350,
+      "recommend_percent": 88,
+      "ceo_approval": 95,
+      "source": "glassdoor_cached",
+      "note": "Cached data - live scraping blocked by anti-bot",
+      "health_score": 90.1
+    },
+    {
+      "company": "Databricks",
+      "overall_rating": 4.3,
+      "review_count": 650,
+      "recommend_percent": 85,
+      "ceo_approval": 94,
+      "source": "glassdoor_cached",
+      "note": "Cached data - live scraping blocked by anti-bot",
+      "health_score": 88.1
+    },
+    {
+      "company": "Scale AI",
+      "overall_rating": 3.9,
+      "review_count": 420,
+      "recommend_percent": 72,
+      "ceo_approval": 78,
+      "source": "glassdoor_cached",
+      "note": "Cached data - live scraping blocked by anti-bot",
+      "health_score": 76.2
+    },
+    {
+      "company": "Hugging Face",
+      "overall_rating": 4.6,
+      "review_count": 45,
+      "recommend_percent": 95,
+      "ceo_approval": 100,
+      "source": "glassdoor_cached",
+      "note": "Cached data - live scraping blocked by anti-bot",
+      "health_score": 95.3
+    }
+  ],
+  "signals": {
+    "healthy": [
+      "OpenAI",
+      "Anthropic",
+      "Google",
+      "Microsoft",
+      "NVIDIA",
+      "Apple",
+      "DeepMind",
+      "Databricks",
+      "Hugging Face"
+    ],
+    "warning": [
+      "Meta",
+      "Amazon",
+      "Scale AI"
+    ],
+    "concern": []
+  }
+}

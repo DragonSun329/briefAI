@@ -1,0 +1,438 @@
+{
+  "_version": "1.0",
+  "_description": "Mechanism taxonomy for Hypothesis Engine. Maps mechanisms to keywords, predicted signal templates, and falsifiers.",
+  
+  "mechanisms": {
+    "pricing_cost_down": {
+      "display_name": "Pricing Compression",
+      "keywords": ["price cut", "cheaper", "cost reduction", "free tier", "pricing war", "discount", "commoditization", "margin compression", "race to bottom"],
+      "predicted_signals": {
+        "technical": {
+          "description": "New efficiency techniques or distillation methods published",
+          "example_sources": ["arxiv", "github", "huggingface"]
+        },
+        "financial": {
+          "description": "Revenue guidance revisions or margin pressure in earnings",
+          "example_sources": ["sec", "earnings_call", "analyst_report"]
+        },
+        "social": {
+          "description": "Developer discourse on cost optimization strategies",
+          "example_sources": ["twitter", "reddit", "hackernews"]
+        },
+        "media": {
+          "description": "Coverage of pricing changes or competitive responses",
+          "example_sources": ["techmeme", "techcrunch", "theinformation"]
+        }
+      },
+      "falsifiers": [
+        "Prices stabilize or increase across providers",
+        "Demand exceeds supply causing price floors",
+        "Quality differentiation justifies premium pricing"
+      ]
+    },
+    
+    "pricing_cost_up": {
+      "display_name": "Pricing Pressure Rising",
+      "keywords": ["price increase", "rate hike", "cost up", "expensive", "premium", "pricing power", "monetization", "margin expansion"],
+      "predicted_signals": {
+        "financial": {
+          "description": "Pricing tier changes or usage-based billing increases",
+          "example_sources": ["sec", "company_blog", "pricing_page"]
+        },
+        "social": {
+          "description": "User complaints about cost increases",
+          "example_sources": ["twitter", "reddit", "hackernews"]
+        },
+        "technical": {
+          "description": "Alternative or self-hosted solutions gain traction",
+          "example_sources": ["github", "huggingface", "pypi"]
+        }
+      },
+      "falsifiers": [
+        "Competition forces price rollbacks",
+        "Volume growth offsets per-unit price increases",
+        "Enterprise contracts lock in lower rates"
+      ]
+    },
+    
+    "enterprise_adoption": {
+      "display_name": "Enterprise Adoption Accelerating",
+      "keywords": ["enterprise", "corporate", "business", "b2b", "deployment", "production", "rollout", "procurement", "contract", "deal", "integration"],
+      "predicted_signals": {
+        "financial": {
+          "description": "Enterprise contract count and ARR mentions increase",
+          "example_sources": ["sec", "earnings_call", "press_release"],
+          "metric": "contract_count",
+          "direction": "up",
+          "window_days": 30,
+          "canonical_metric": "contract_count",
+          "query_hints": ["enterprise", "contract", "deal", "arr", "b2b", "customer", "deployment"]
+        },
+        "technical": {
+          "description": "Enterprise SDK releases and compliance certifications increase",
+          "example_sources": ["github", "company_blog", "docs"],
+          "metric": "sdk_release",
+          "direction": "up",
+          "window_days": 14,
+          "canonical_metric": "sdk_release",
+          "query_hints": ["enterprise", "sdk", "api", "soc2", "compliance", "integration", "production"]
+        },
+        "social": {
+          "description": "Job postings for AI integration roles increase",
+          "example_sources": ["linkedin", "glassdoor", "indeed"],
+          "metric": "job_postings_count",
+          "direction": "up",
+          "window_days": 14,
+          "canonical_metric": "job_postings_count",
+          "query_hints": ["ai integration", "ml engineer", "mlops", "deployment", "enterprise ai"]
+        },
+        "predictive": {
+          "description": "Prediction market probability for enterprise AI milestones increases",
+          "example_sources": ["polymarket", "metaculus", "manifold"],
+          "metric": "probability_change",
+          "direction": "up",
+          "window_days": 7,
+          "canonical_metric": "probability_change",
+          "query_hints": ["enterprise ai", "adoption", "deployment"]
+        }
+      },
+      "falsifiers": [
+        "Enterprise pilots fail to convert to production",
+        "Compliance or security concerns block adoption",
+        "ROI metrics disappoint causing project cancellations"
+      ]
+    },
+    
+    "regulation_enforcement": {
+      "display_name": "Regulatory Pressure Increasing",
+      "keywords": ["regulation", "law", "policy", "compliance", "ban", "restriction", "antitrust", "legislation", "enforcement", "fine", "investigation", "audit"],
+      "predicted_signals": {
+        "financial": {
+          "description": "Compliance cost disclosures or legal reserve increases",
+          "example_sources": ["sec", "10k", "10q"]
+        },
+        "media": {
+          "description": "Coverage of regulatory actions or policy proposals",
+          "example_sources": ["reuters", "politico", "techmeme"]
+        },
+        "technical": {
+          "description": "Safety tooling or compliance framework releases",
+          "example_sources": ["github", "arxiv", "company_blog"]
+        },
+        "social": {
+          "description": "Policy expert commentary and industry response",
+          "example_sources": ["twitter", "linkedin", "substack"]
+        }
+      },
+      "falsifiers": [
+        "Regulatory proposals fail to advance",
+        "Industry self-regulation satisfies concerns",
+        "Enforcement actions limited in scope"
+      ]
+    },
+    
+    "model_capability_jump": {
+      "display_name": "Capability Breakthrough",
+      "keywords": ["breakthrough", "sota", "state-of-the-art", "benchmark", "capability", "performance", "accuracy", "reasoning", "agi", "frontier"],
+      "predicted_signals": {
+        "technical": {
+          "description": "Benchmark improvements or new evaluation results",
+          "example_sources": ["arxiv", "paperswithcode", "huggingface"]
+        },
+        "social": {
+          "description": "Researcher reactions and replication attempts",
+          "example_sources": ["twitter", "reddit", "hackernews"]
+        },
+        "financial": {
+          "description": "Increased compute spending or valuation adjustments",
+          "example_sources": ["sec", "crunchbase", "pitchbook"]
+        },
+        "predictive": {
+          "description": "AI capability prediction market movements",
+          "example_sources": ["metaculus", "polymarket", "manifold"]
+        }
+      },
+      "falsifiers": [
+        "Benchmark gains don't transfer to real-world tasks",
+        "Replication fails or methodology flaws discovered",
+        "Capability ceiling reached in follow-up work"
+      ]
+    },
+    
+    "infra_scaling": {
+      "display_name": "Infrastructure Scaling",
+      "keywords": ["datacenter", "gpu", "compute", "capacity", "infrastructure", "scaling", "cluster", "hardware", "chip", "accelerator", "hbm"],
+      "predicted_signals": {
+        "financial": {
+          "description": "CapEx and datacenter investment mentions increase in SEC filings",
+          "example_sources": ["sec", "earnings_call", "press_release"],
+          "metric": "filing_mentions",
+          "direction": "up",
+          "window_days": 30,
+          "canonical_metric": "filing_mentions",
+          "query_hints": ["capex", "datacenter", "infrastructure", "gpu", "accelerator", "capacity expansion", "capital expenditure"]
+        },
+        "technical": {
+          "description": "Hardware deployment guides and architecture documentation releases increase",
+          "example_sources": ["github", "company_blog", "docs"],
+          "metric": "repo_activity",
+          "direction": "up",
+          "window_days": 14,
+          "canonical_metric": "repo_activity",
+          "query_hints": ["deployment", "architecture", "infrastructure", "cluster", "scaling", "hardware", "sdk"]
+        },
+        "media": {
+          "description": "Article count covering datacenter buildouts and chip supply increases",
+          "example_sources": ["techmeme", "semafor", "theinformation"],
+          "metric": "article_count",
+          "direction": "up",
+          "window_days": 7,
+          "canonical_metric": "article_count",
+          "query_hints": ["datacenter", "chip supply", "gpu shortage", "infrastructure", "buildout", "capacity"]
+        }
+      },
+      "falsifiers": [
+        "Supply constraints limit expansion plans",
+        "Power/cooling constraints block datacenter growth",
+        "Efficiency gains reduce infrastructure needs"
+      ]
+    },
+    
+    "security_risk": {
+      "display_name": "Security Concerns Rising",
+      "keywords": ["security", "jailbreak", "exploit", "vulnerability", "misuse", "abuse", "safety", "alignment", "attack", "adversarial", "risk"],
+      "predicted_signals": {
+        "technical": {
+          "description": "Security patches or safety research publications",
+          "example_sources": ["arxiv", "github", "company_blog"]
+        },
+        "media": {
+          "description": "Coverage of security incidents or vulnerabilities",
+          "example_sources": ["techmeme", "wired", "arstechnica"]
+        },
+        "social": {
+          "description": "Security researcher disclosures or discussions",
+          "example_sources": ["twitter", "hackernews", "reddit"]
+        }
+      },
+      "falsifiers": [
+        "Security measures prove effective",
+        "Incidents contained without major impact",
+        "Industry coordination improves defenses"
+      ]
+    },
+    
+    "compute_constraint": {
+      "display_name": "Compute Constraints",
+      "keywords": ["shortage", "constraint", "bottleneck", "supply", "allocation", "quota", "wait", "backlog", "capacity limit"],
+      "predicted_signals": {
+        "financial": {
+          "description": "GPU pricing changes or allocation announcements",
+          "example_sources": ["sec", "earnings_call", "cloud_pricing"]
+        },
+        "technical": {
+          "description": "Efficiency research or alternative compute solutions",
+          "example_sources": ["arxiv", "github", "company_blog"]
+        },
+        "social": {
+          "description": "Developer complaints about compute access",
+          "example_sources": ["twitter", "reddit", "hackernews"]
+        }
+      },
+      "falsifiers": [
+        "New supply comes online faster than expected",
+        "Demand growth slows reducing pressure",
+        "Efficiency gains reduce compute requirements"
+      ]
+    },
+    
+    "data_rights_ip": {
+      "display_name": "Data Rights & IP Evolving",
+      "keywords": ["copyright", "ip", "intellectual property", "licensing", "training data", "consent", "opt-out", "lawsuit", "settlement", "data rights"],
+      "predicted_signals": {
+        "financial": {
+          "description": "Licensing deals or legal settlements",
+          "example_sources": ["sec", "press_release", "court_filing"]
+        },
+        "media": {
+          "description": "Coverage of IP disputes or policy changes",
+          "example_sources": ["techmeme", "reuters", "theverge"]
+        },
+        "technical": {
+          "description": "Synthetic data or licensed dataset releases",
+          "example_sources": ["huggingface", "github", "company_blog"]
+        }
+      },
+      "falsifiers": [
+        "Legal precedents favor broad fair use",
+        "Opt-out mechanisms satisfy stakeholders",
+        "Synthetic data quality matches real data"
+      ]
+    },
+    
+    "distribution_shift": {
+      "display_name": "Distribution Channel Shifting",
+      "keywords": ["platform", "distribution", "channel", "app store", "api", "integration", "partnership", "bundle", "embed"],
+      "predicted_signals": {
+        "financial": {
+          "description": "Partnership announcements or revenue share changes",
+          "example_sources": ["sec", "press_release", "earnings_call"]
+        },
+        "technical": {
+          "description": "New API integrations or platform releases",
+          "example_sources": ["github", "company_blog", "docs"]
+        },
+        "social": {
+          "description": "Developer adoption of new distribution channels",
+          "example_sources": ["twitter", "producthunt", "hackernews"]
+        }
+      },
+      "falsifiers": [
+        "Direct channels outperform partnerships",
+        "Platform terms become unfavorable",
+        "User preference for standalone products"
+      ]
+    },
+    
+    "consolidation_mna": {
+      "display_name": "Market Consolidation",
+      "keywords": ["acquisition", "merger", "acquihire", "consolidation", "buyout", "deal", "takeover", "exit"],
+      "predicted_signals": {
+        "financial": {
+          "description": "M&A announcements or strategic investment",
+          "example_sources": ["sec", "crunchbase", "pitchbook"]
+        },
+        "media": {
+          "description": "Coverage of deal rumors or strategic moves",
+          "example_sources": ["theinformation", "bloomberg", "techmeme"]
+        },
+        "social": {
+          "description": "Insider hints or team movements",
+          "example_sources": ["linkedin", "twitter", "blind"]
+        }
+      },
+      "falsifiers": [
+        "Antitrust blocks major deals",
+        "Startup valuations remain high blocking acquihires",
+        "Companies choose IPO over acquisition"
+      ]
+    },
+    
+    "open_source_acceleration": {
+      "display_name": "Open Source Momentum",
+      "keywords": ["open source", "open weights", "apache", "mit", "community", "fork", "self-hosted", "local", "on-prem", "llama", "mistral"],
+      "predicted_signals": {
+        "technical": {
+          "description": "New model releases or community contributions",
+          "example_sources": ["github", "huggingface", "arxiv"]
+        },
+        "social": {
+          "description": "Developer adoption metrics and discussions",
+          "example_sources": ["twitter", "reddit", "hackernews"]
+        },
+        "financial": {
+          "description": "Open source company funding or revenue models",
+          "example_sources": ["crunchbase", "sec", "press_release"]
+        }
+      },
+      "falsifiers": [
+        "Proprietary models maintain significant quality lead",
+        "Enterprise compliance requirements favor commercial",
+        "Community fragmentation slows progress"
+      ]
+    },
+    
+    "talent_dynamics": {
+      "display_name": "Talent Market Shifting",
+      "keywords": ["hiring", "talent", "researcher", "engineer", "team", "layoff", "recruit", "brain drain", "acquihire"],
+      "predicted_signals": {
+        "social": {
+          "description": "High-profile hiring or departure announcements",
+          "example_sources": ["linkedin", "twitter", "blind"]
+        },
+        "financial": {
+          "description": "Compensation benchmarks or equity grants",
+          "example_sources": ["levels_fyi", "glassdoor", "sec"]
+        },
+        "media": {
+          "description": "Coverage of talent movements or culture issues",
+          "example_sources": ["theinformation", "techmeme", "wired"]
+        }
+      },
+      "falsifiers": [
+        "Market cools reducing competition for talent",
+        "Remote work expands talent pool",
+        "AI tools reduce need for specialized roles"
+      ]
+    },
+    
+    "investment_surge": {
+      "display_name": "Investment Acceleration",
+      "keywords": ["funding", "investment", "raise", "valuation", "series", "vc", "capital", "investor", "round"],
+      "predicted_signals": {
+        "financial": {
+          "description": "Funding announcements or valuation changes",
+          "example_sources": ["crunchbase", "pitchbook", "sec"]
+        },
+        "media": {
+          "description": "Coverage of investment trends or notable deals",
+          "example_sources": ["techcrunch", "theinformation", "bloomberg"]
+        },
+        "predictive": {
+          "description": "VC sentiment or market predictions",
+          "example_sources": ["twitter", "substack", "podcasts"]
+        }
+      },
+      "falsifiers": [
+        "Macro conditions tighten capital availability",
+        "Down rounds signal valuation reset",
+        "Profitability focus reduces growth capital"
+      ]
+    },
+    
+    "media_attention_spike": {
+      "display_name": "Media Attention Spike",
+      "keywords": ["viral", "trending", "hype", "buzz", "attention", "coverage", "news cycle"],
+      "predicted_signals": {
+        "media": {
+          "description": "Article count for related coverage continues to increase",
+          "example_sources": ["techmeme", "twitter", "reddit"],
+          "metric": "article_count",
+          "direction": "up",
+          "window_days": 7,
+          "canonical_metric": "article_count",
+          "query_hints": ["coverage", "news", "story", "update"]
+        },
+        "social": {
+          "description": "Discussion volume and engagement rate increase",
+          "example_sources": ["twitter", "reddit", "hackernews"],
+          "metric": "discussion_volume",
+          "direction": "up",
+          "window_days": 7,
+          "canonical_metric": "discussion_volume",
+          "query_hints": ["discussion", "reaction", "comment", "thread"]
+        }
+      },
+      "falsifiers": [
+        "Attention fades without substantive developments",
+        "Story debunked or corrected",
+        "Other events dominate news cycle"
+      ]
+    },
+    
+    "null_hypothesis": {
+      "display_name": "Noise / Insufficient Signal",
+      "keywords": [],
+      "predicted_signals": {
+        "media": {
+          "description": "Monitor for substantive developments",
+          "example_sources": ["techmeme", "twitter"]
+        }
+      },
+      "falsifiers": [
+        "Pattern resolves into clear mechanism",
+        "Additional corroborating signals emerge"
+      ]
+    }
+  }
+}

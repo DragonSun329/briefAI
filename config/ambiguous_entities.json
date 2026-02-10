@@ -1,0 +1,136 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "description": "Entities that are ambiguous and require additional context to resolve. These should not be used as primary query entities without disambiguation.",
+    "updated_at": "2026-02-10"
+  },
+  
+  "ambiguous": {
+    "claude": {
+      "canonical_owner": "anthropic",
+      "reason": "Product name, not company. Use 'anthropic' as entity.",
+      "disambiguation": "anthropic"
+    },
+    "gemini": {
+      "canonical_owner": "google",
+      "reason": "Product name, not company. Use 'google' as entity.",
+      "disambiguation": "google"
+    },
+    "llama": {
+      "canonical_owner": "meta",
+      "reason": "Product name, not company. Use 'meta' as entity.",
+      "disambiguation": "meta"
+    },
+    "gpt": {
+      "canonical_owner": "openai",
+      "reason": "Product name, not company. Use 'openai' as entity.",
+      "disambiguation": "openai"
+    },
+    "chatgpt": {
+      "canonical_owner": "openai",
+      "reason": "Product name, not company. Use 'openai' as entity.",
+      "disambiguation": "openai"
+    },
+    "copilot": {
+      "canonical_owner": "microsoft",
+      "reason": "Product name, not company. Use 'microsoft' as entity.",
+      "disambiguation": "microsoft"
+    },
+    "phi": {
+      "canonical_owner": "microsoft",
+      "reason": "Product name, not company. Use 'microsoft' as entity.",
+      "disambiguation": "microsoft"
+    },
+    "mixtral": {
+      "canonical_owner": "mistral",
+      "reason": "Product name, not company. Use 'mistral' as entity.",
+      "disambiguation": "mistral"
+    },
+    "sora": {
+      "canonical_owner": "openai",
+      "reason": "Product name, not company. Use 'openai' as entity.",
+      "disambiguation": "openai"
+    },
+    "dall-e": {
+      "canonical_owner": "openai",
+      "reason": "Product name, not company. Use 'openai' as entity.",
+      "disambiguation": "openai"
+    },
+    "nemotron": {
+      "canonical_owner": "nvidia",
+      "reason": "Product name, not company. Use 'nvidia' as entity.",
+      "disambiguation": "nvidia"
+    },
+    "megatron": {
+      "canonical_owner": "nvidia",
+      "reason": "Product name, not company. Use 'nvidia' as entity.",
+      "disambiguation": "nvidia"
+    },
+    "deepseek-r1": {
+      "canonical_owner": "deepseek",
+      "reason": "Product name, not company. Use 'deepseek' as entity.",
+      "disambiguation": "deepseek"
+    },
+    "grok": {
+      "canonical_owner": "xai",
+      "reason": "Product name, not company. Use 'xai' as entity.",
+      "disambiguation": "xai"
+    }
+  },
+  
+  "stopwords": [
+    "ai",
+    "the",
+    "and",
+    "of",
+    "in",
+    "for",
+    "to",
+    "with",
+    "on",
+    "by",
+    "is",
+    "as",
+    "an",
+    "a",
+    "its",
+    "or",
+    "be",
+    "at",
+    "from",
+    "this",
+    "that",
+    "are",
+    "was",
+    "were",
+    "has",
+    "have",
+    "had",
+    "not",
+    "but",
+    "can",
+    "all",
+    "will",
+    "new",
+    "more",
+    "some",
+    "into",
+    "other",
+    "their",
+    "also",
+    "just",
+    "about",
+    "after",
+    "before",
+    "over",
+    "under",
+    "again",
+    "out",
+    "up",
+    "down",
+    "any",
+    "each",
+    "few",
+    "most"
+  ]
+}

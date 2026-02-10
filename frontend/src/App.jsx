@@ -8,6 +8,9 @@ import BucketRadar from './pages/BucketRadar'
 import Backtest from './pages/Backtest'
 import Conviction from './pages/Conviction'
 import PipelineHealth from './pages/PipelineHealth'
+import Research from './pages/Research'
+import Validation from './pages/Validation'
+import VerticalsRadar from './pages/VerticalsRadar'
 
 function App() {
   const [dates, setDates] = useState([])
@@ -53,12 +56,16 @@ function App() {
                 { path: '/news', label: 'AI新闻', icon: '📰' },
                 { path: '/product', label: '产品', icon: '🚀' },
                 { path: '/investing', label: '投资', icon: '💰' },
+                { path: '/china-ai', label: '中国AI', icon: '🇨🇳' },
                 { path: '/shortlist', label: 'AI速查', icon: '🏢' },
                 { path: '/signals', label: '信号雷达', icon: '📡' },
+                { path: '/validation', label: '验证', icon: '✅' },
                 { path: '/buckets', label: '趋势桶雷达', icon: '🎯' },
+                { path: '/verticals', label: 'AI Verticals', icon: '🏭' },
                 { path: '/conviction', label: 'Conviction', icon: '⚖️' },
                 { path: '/backtest', label: 'Backtest', icon: '⏪' },
                 { path: '/health', label: 'Health', icon: '🩺' },
+                { path: '/research', label: 'Research', icon: '🔬' },
               ].map(({ path, label, icon }) => (
                 <NavLink
                   key={path}
@@ -85,12 +92,16 @@ function App() {
             <Route path="/news" element={<Articles date={selectedDate} pipeline="news" />} />
             <Route path="/product" element={<Articles date={selectedDate} pipeline="product" />} />
             <Route path="/investing" element={<Articles date={selectedDate} pipeline="investing" />} />
+            <Route path="/china-ai" element={<Articles date={selectedDate} pipeline="china_ai" />} />
             <Route path="/shortlist" element={<Shortlist />} />
             <Route path="/signals" element={<SignalRadar />} />
+            <Route path="/validation" element={<Validation />} />
             <Route path="/buckets" element={<BucketRadar />} />
+            <Route path="/verticals" element={<VerticalsRadar />} />
             <Route path="/conviction" element={<Conviction />} />
             <Route path="/backtest" element={<Backtest />} />
             <Route path="/health" element={<PipelineHealth />} />
+            <Route path="/research" element={<Research date={selectedDate} />} />
           </Routes>
         </main>
       </div>

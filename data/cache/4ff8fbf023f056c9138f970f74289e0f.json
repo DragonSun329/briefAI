@@ -1,12 +1,29 @@
 {
-  "timestamp": "2026-02-02T10:12:18.502577",
+  "timestamp": "2026-02-06T10:23:32.138080",
   "key": "source_microsoft_research_7days",
   "value": [
     {
-      "title": "UniRG: Scaling medical imaging report generation with multimodal reinforcement learning",
-      "url": "https://www.microsoft.com/en-us/research/blog/unirg-scaling-medical-imaging-report-generation-with-multimodal-reinforcement-learning/",
-      "content": "AI can help generate medical image reports, but today’s models struggle with varying reporting schemes. Learn how UniRG uses reinforcement learning to boost performance of medical vision-language models.\nThe post UniRG: Scaling medical imaging report generation with multimodal reinforcement learning appeared first on Microsoft Research.",
-      "published_date": "2026-01-27T17:00:00",
+      "title": "Rethinking imitation learning with Predictive Inverse Dynamics Models",
+      "url": "https://www.microsoft.com/en-us/research/blog/rethinking-imitation-learning-with-predictive-inverse-dynamics-models/",
+      "content": "This research looks at why Predictive Inverse Dynamics Models often outperform standard Behavior Cloning in imitation learning. By using simple predictions of what happens next, PIDMs reduce ambiguity and learn from far fewer demonstrations.\nThe post Rethinking imitation learning with Predictive Inverse Dynamics Models appeared first on Microsoft Research.",
+      "published_date": "2026-02-05T17:00:00",
+      "source": "Microsoft Research Blog",
+      "source_id": "microsoft_research",
+      "language": "en",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": [
+        "Microsoft",
+        "Copilot",
+        "Azure AI",
+        "enterprise"
+      ]
+    },
+    {
+      "title": "Paza: Introducing automatic speech recognition benchmarks and models for low resource languages",
+      "url": "https://www.microsoft.com/en-us/research/blog/paza-introducing-automatic-speech-recognition-benchmarks-and-models-for-low-resource-languages/",
+      "content": "Microsoft Research unveils Paza, a human-centered speech pipeline, and PazaBench, the first leaderboard for low-resource languages. It covers 39 African languages and 52 models and is tested with communities in real settings. \nThe post Paza: Introducing automatic speech recognition benchmarks and models for low resource languages appeared first on Microsoft Research.",
+      "published_date": "2026-02-05T05:07:55",
       "source": "Microsoft Research Blog",
       "source_id": "microsoft_research",
       "language": "en",

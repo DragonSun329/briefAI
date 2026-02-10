@@ -1,0 +1,59 @@
+{
+  "baseline_weeks": 4,
+  "thresholds": {
+    "new_entity_min_mentions": 3,
+    "velocity_spike": 3.0,
+    "score_surge": 1.5,
+    "min_baseline_mentions": 2
+  },
+  "min_confidence": 0.3,
+  "min_baseline_weeks": 2,
+  "entity_limits": {
+    "heatmap_max_entities": 50,
+    "signal_max_evidence": 5
+  },
+
+  "hype_cycle": {
+    "description": "Gartner Hype Cycle phase detection thresholds",
+    "innovation_trigger": {
+      "tms_min": 80,
+      "ccs_max": 20,
+      "eis_max": 10,
+      "description": "High technical activity, minimal capital/enterprise attention"
+    },
+    "peak_expectations": {
+      "nas_min": 80,
+      "ccs_min": 70,
+      "tms_delta_max": 0,
+      "description": "Maximum hype, capital flooding in, technical novelty plateauing"
+    },
+    "trough_disillusionment": {
+      "nas_delta_min": -20,
+      "ccs_delta_min": -10,
+      "description": "Attention and capital receding, reality check phase"
+    },
+    "slope_enlightenment": {
+      "eis_off_delta_min": 10,
+      "tms_delta_min": 0,
+      "description": "Enterprise adoption beginning, practical applications emerging"
+    },
+    "plateau_productivity": {
+      "stability_threshold": 10,
+      "eis_off_min": 60,
+      "description": "Stable market, mainstream adoption, all signals consolidated"
+    },
+    "smoothing": {
+      "ewma_alpha": 0.3,
+      "min_weeks_for_phase": 2
+    }
+  },
+
+  "confidence_intervals": {
+    "z_score": 1.96,
+    "max_variance": 25,
+    "expected_baseline_entities": 10,
+    "coverage_weight": 0.4,
+    "source_weight": 0.3,
+    "temporal_weight": 0.3
+  }
+}

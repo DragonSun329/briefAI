@@ -1,4 +1,20 @@
+# Core API
 fastapi>=0.109.0
 uvicorn[standard]>=0.27.0
 pydantic>=2.0.0
 python-multipart>=0.0.6
+websockets>=12.0
+
+# Export formats
+openpyxl>=3.1.0         # Excel export
+pyarrow>=15.0.0         # Parquet export (optional)
+
+# SDK dependencies (for clients)
+requests>=2.31.0
+websocket-client>=1.7.0
+aiohttp>=3.9.0          # Async client (optional)
+
+# Testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+httpx>=0.27.0

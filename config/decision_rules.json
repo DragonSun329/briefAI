@@ -1,0 +1,203 @@
+{
+  "_version": "1.0",
+  "_description": "Decision rules mapping mechanisms to actions. Rule-based, no LLM.",
+  
+  "rules": {
+    "infra_scaling": {
+      "rising": {
+        "action_type": "buy",
+        "description": "Positive exposure to AI infrastructure providers",
+        "sector": "semiconductors",
+        "timeframe": "medium_term",
+        "risk_level": "moderate",
+        "reasoning": "Infrastructure scaling signals increased compute demand",
+        "examples": ["NVIDIA", "AMD", "ASML", "datacenter REITs", "Vertiv"]
+      },
+      "falling": {
+        "action_type": "reduce",
+        "description": "Reduce infrastructure overweight",
+        "sector": "semiconductors",
+        "reasoning": "Declining infrastructure signals may indicate demand plateau"
+      }
+    },
+    
+    "enterprise_adoption": {
+      "rising": {
+        "action_type": "buy",
+        "description": "Increase B2B SaaS and enterprise AI exposure",
+        "sector": "enterprise_software",
+        "timeframe": "medium_term",
+        "reasoning": "Enterprise adoption drives recurring revenue growth",
+        "examples": ["Salesforce", "ServiceNow", "Palantir", "Snowflake"]
+      },
+      "falling": {
+        "action_type": "avoid",
+        "description": "Avoid new enterprise AI positions",
+        "sector": "enterprise_software",
+        "reasoning": "Slowing adoption reduces growth runway"
+      }
+    },
+    
+    "pricing_compression": {
+      "rising": {
+        "action_type": "avoid",
+        "description": "Avoid foundation model companies without distribution",
+        "sector": "ai_models",
+        "risk_level": "high",
+        "reasoning": "Commoditization pressure reduces margins for pure-play model providers"
+      },
+      "falling": {
+        "action_type": "monitor",
+        "description": "Monitor for pricing power recovery",
+        "sector": "ai_models",
+        "reasoning": "Reduced price pressure may indicate differentiation"
+      }
+    },
+    
+    "distribution_shift": {
+      "rising": {
+        "action_type": "buy",
+        "description": "Invest in application layer over infrastructure",
+        "sector": "ai_applications",
+        "timeframe": "long_term",
+        "reasoning": "Value accruing to applications with distribution moats",
+        "examples": ["Vertical AI SaaS", "consumer AI apps", "embedded AI"]
+      },
+      "falling": {
+        "action_type": "reduce",
+        "description": "Reduce application layer tilt",
+        "sector": "ai_applications",
+        "reasoning": "Distribution less valuable if shifting back to infra"
+      }
+    },
+    
+    "competitive_pressure": {
+      "rising": {
+        "action_type": "avoid",
+        "description": "Avoid undifferentiated AI pure-plays",
+        "sector": "ai_general",
+        "risk_level": "high",
+        "reasoning": "Intensifying competition compresses multiples"
+      },
+      "falling": {
+        "action_type": "buy",
+        "description": "Consider quality AI names with reduced competition",
+        "sector": "ai_general",
+        "reasoning": "Reduced competition supports margin expansion"
+      }
+    },
+    
+    "regulatory_shift": {
+      "rising": {
+        "action_type": "monitor",
+        "description": "Monitor regulatory exposure across positions",
+        "sector": "all",
+        "risk_level": "high",
+        "reasoning": "Regulatory uncertainty increases headline risk"
+      },
+      "falling": {
+        "action_type": "buy",
+        "description": "Reduced regulatory overhang supports risk-on",
+        "sector": "all",
+        "reasoning": "Regulatory clarity de-risks sector"
+      }
+    },
+    
+    "talent_migration": {
+      "rising": {
+        "action_type": "buy",
+        "description": "Follow talent concentration to emerging leaders",
+        "sector": "ai_general",
+        "timeframe": "long_term",
+        "reasoning": "Talent flows precede product differentiation"
+      },
+      "falling": {
+        "action_type": "monitor",
+        "description": "Monitor talent retention at portfolio companies",
+        "sector": "ai_general",
+        "reasoning": "Talent exodus signals potential issues"
+      }
+    },
+    
+    "capex_acceleration": {
+      "rising": {
+        "action_type": "buy",
+        "description": "Long hyperscaler capex beneficiaries",
+        "sector": "datacenter_infrastructure",
+        "timeframe": "medium_term",
+        "reasoning": "Capex commits create multi-year tailwinds",
+        "examples": ["Vertiv", "Eaton", "cooling companies", "power infrastructure"]
+      },
+      "falling": {
+        "action_type": "reduce",
+        "description": "Trim capex-sensitive names",
+        "sector": "datacenter_infrastructure",
+        "reasoning": "Capex slowdown reduces order visibility"
+      }
+    },
+    
+    "open_source_momentum": {
+      "rising": {
+        "action_type": "avoid",
+        "description": "Avoid closed-source AI without strong moats",
+        "sector": "ai_models",
+        "reasoning": "Open source commoditizes model layer"
+      },
+      "falling": {
+        "action_type": "buy",
+        "description": "Consider differentiated closed-source leaders",
+        "sector": "ai_models",
+        "reasoning": "Reduced open source pressure supports premium providers"
+      }
+    },
+    
+    "developer_adoption": {
+      "rising": {
+        "action_type": "buy",
+        "description": "Increase exposure to developer platforms",
+        "sector": "devtools",
+        "timeframe": "medium_term",
+        "reasoning": "Developer adoption is leading indicator of enterprise demand",
+        "examples": ["GitHub", "Vercel", "Supabase", "dev-first companies"]
+      },
+      "falling": {
+        "action_type": "monitor",
+        "description": "Watch for developer sentiment shifts",
+        "sector": "devtools",
+        "reasoning": "Developer cooling may precede enterprise slowdown"
+      }
+    },
+    
+    "consumer_adoption": {
+      "rising": {
+        "action_type": "buy",
+        "description": "Increase consumer AI exposure",
+        "sector": "consumer_ai",
+        "risk_level": "high",
+        "reasoning": "Consumer adoption creates network effects and data moats"
+      },
+      "falling": {
+        "action_type": "avoid",
+        "description": "Avoid consumer AI without proven retention",
+        "sector": "consumer_ai",
+        "reasoning": "Consumer churn indicates weak product-market fit"
+      }
+    }
+  },
+  
+  "sector_mappings": {
+    "semiconductors": ["NVDA", "AMD", "ASML", "TSM", "AVGO", "MRVL"],
+    "enterprise_software": ["CRM", "NOW", "PLTR", "SNOW", "WDAY", "DDOG"],
+    "ai_applications": ["vertical SaaS", "consumer AI", "embedded AI"],
+    "datacenter_infrastructure": ["VRT", "ETN", "DELL", "HPE"],
+    "devtools": ["MSFT/GitHub", "NET", "MDB"]
+  },
+  
+  "min_confidence_thresholds": {
+    "buy": 0.65,
+    "sell": 0.70,
+    "avoid": 0.60,
+    "reduce": 0.60,
+    "monitor": 0.50
+  }
+}

@@ -846,3 +846,75 @@ def generate_financial_signals(
     output.save(output_path)
 
     return output
+
+
+def get_bucket_financial_signals(
+    signals_dir: Optional[Path] = None,
+    max_age_days: int = 3,
+) -> Optional[Dict[str, Dict[str, Any]]]:
+    """
+    Load the most recent financial signals and return bucket-level data.
+    
+    This function is used by bucket_scorers.py to integrate PMS/CSS signals
+    into bucket profiles.
+    
+    Args:
+        signals_dir: Directory containing financial_signals_*.json files.
+                     Defaults to data/alternative_signals/
+        max_age_days: Maximum age of signals file to consider valid.
+    
+    Returns:
+        Dict mapping bucket_id -> {pms, css, pms_contributors_text, css_contributors_text, ...}
+        or None if no valid signals file found.
+    """
+    if signals_dir is None:
+        signals_dir = Path(__file__).parent.parent / "data" / "alternative_signals"
+    
+    if not signals_dir.exists():
+        logger.warning(f"Financial signals directory not found: {signals_dir}")
+        return None
+    
+    # Find most recent financial_signals_*.json file
+    signal_files = list(signals_dir.glob("financial_signals_2*.json"))
+    
+    # Exclude CN signals files
+    signal_files = [f for f in signal_files if "_cn_" not in f.name]
+    
+    if not signal_files:
+        logger.warning(f"No financial signals files found in {signals_dir}")
+        return None
+    
+    # Sort by filename (date) descending
+    signal_files.sort(key=lambda f: f.name, reverse=True)
+    latest_file = signal_files[0]
+    
+    # Check age
+    try:
+        # Extract date from filename: financial_signals_YYYY-MM-DD.json
+        date_str = latest_file.stem.replace("financial_signals_", "")
+        file_date = datetime.strptime(date_str, "%Y-%m-%d").date()
+        age_days = (date.today() - file_date).days
+        
+        if age_days > max_age_days:
+            logger.warning(f"Financial signals file is {age_days} days old (max: {max_age_days})")
+            # Still return data, but log warning
+    except ValueError:
+        logger.warning(f"Could not parse date from filename: {latest_file.name}")
+    
+    # Load the file
+    try:
+        with open(latest_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except Exception as e:
+        logger.error(f"Error loading financial signals from {latest_file}: {e}")
+        return None
+    
+    # Extract bucket_signals
+    bucket_signals = data.get("bucket_signals", {})
+    
+    if not bucket_signals:
+        logger.warning(f"No bucket_signals found in {latest_file.name}")
+        return None
+    
+    logger.info(f"Loaded financial signals for {len(bucket_signals)} buckets from {latest_file.name}")
+    return bucket_signals

@@ -1,0 +1,5512 @@
+{
+  "source": "huggingface",
+  "scraped_at": "2026-01-30T10:05:30.244938",
+  "total_models": 139,
+  "total_spaces": 100,
+  "total_signals": 239,
+  "signals": [
+    {
+      "name": "sentence-transformers/all-MiniLM-L6-v2",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "sentence-similarity model by sentence-transformers",
+      "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2",
+      "category": "HuggingFace/models/sentence-similarity",
+      "metrics": {
+        "downloads": 146050315,
+        "downloads_month": 146050315,
+        "likes": 4393,
+        "task": "sentence-similarity",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "pytorch",
+          "tf",
+          "rust",
+          "onnx"
+        ]
+      },
+      "author": "sentence-transformers",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Falconsai/nsfw_image_detection",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-classification model by Falconsai",
+      "url": "https://huggingface.co/Falconsai/nsfw_image_detection",
+      "category": "HuggingFace/models/image-classification",
+      "metrics": {
+        "downloads": 66375563,
+        "downloads_month": 66375563,
+        "likes": 970,
+        "task": "image-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "safetensors",
+          "vit",
+          "image-classification"
+        ]
+      },
+      "author": "Falconsai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "google/electra-base-discriminator",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by google",
+      "url": "https://huggingface.co/google/electra-base-discriminator",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 49687675,
+        "downloads_month": 49687675,
+        "likes": 79,
+        "task": null,
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "rust"
+        ]
+      },
+      "author": "google",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "dima806/fairface_age_image_detection",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-classification model by dima806",
+      "url": "https://huggingface.co/dima806/fairface_age_image_detection",
+      "category": "HuggingFace/models/image-classification",
+      "metrics": {
+        "downloads": 42683802,
+        "downloads_month": 42683802,
+        "likes": 59,
+        "task": "image-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "vit",
+          "image-classification",
+          "dataset:nateraw/fairface"
+        ]
+      },
+      "author": "dima806",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "google-bert/bert-base-uncased",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "fill-mask model by google-bert",
+      "url": "https://huggingface.co/google-bert/bert-base-uncased",
+      "category": "HuggingFace/models/fill-mask",
+      "metrics": {
+        "downloads": 39458450,
+        "downloads_month": 39458450,
+        "likes": 2555,
+        "task": "fill-mask",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "rust"
+        ]
+      },
+      "author": "google-bert",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "FacebookAI/roberta-large",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "fill-mask model by FacebookAI",
+      "url": "https://huggingface.co/FacebookAI/roberta-large",
+      "category": "HuggingFace/models/fill-mask",
+      "metrics": {
+        "downloads": 22828045,
+        "downloads_month": 22828045,
+        "likes": 264,
+        "task": "fill-mask",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "onnx"
+        ]
+      },
+      "author": "FacebookAI",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "sentence-transformers/all-mpnet-base-v2",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "sentence-similarity model by sentence-transformers",
+      "url": "https://huggingface.co/sentence-transformers/all-mpnet-base-v2",
+      "category": "HuggingFace/models/sentence-similarity",
+      "metrics": {
+        "downloads": 22219021,
+        "downloads_month": 22219021,
+        "likes": 1231,
+        "task": "sentence-similarity",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "pytorch",
+          "onnx",
+          "safetensors",
+          "openvino"
+        ]
+      },
+      "author": "sentence-transformers",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "timm/mobilenetv3_small_100.lamb_in1k",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-classification model by timm",
+      "url": "https://huggingface.co/timm/mobilenetv3_small_100.lamb_in1k",
+      "category": "HuggingFace/models/image-classification",
+      "metrics": {
+        "downloads": 22206178,
+        "downloads_month": 22206178,
+        "likes": 49,
+        "task": "image-classification",
+        "library": "timm",
+        "tags": [
+          "timm",
+          "pytorch",
+          "safetensors",
+          "image-classification",
+          "transformers"
+        ]
+      },
+      "author": "timm",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/Qwen2.5-VL-3B-Instruct",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-text-to-text model by Qwen",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct",
+      "category": "HuggingFace/models/image-text-to-text",
+      "metrics": {
+        "downloads": 21706516,
+        "downloads_month": 21706516,
+        "likes": 594,
+        "task": "image-text-to-text",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen2_5_vl",
+          "image-to-text",
+          "multimodal"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "sentence-similarity model by sentence-transformers",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "category": "HuggingFace/models/sentence-similarity",
+      "metrics": {
+        "downloads": 17481077,
+        "downloads_month": 17481077,
+        "likes": 1110,
+        "task": "sentence-similarity",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "pytorch",
+          "tf",
+          "onnx",
+          "safetensors"
+        ]
+      },
+      "author": "sentence-transformers",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "colbert-ir/colbertv2.0",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by colbert-ir",
+      "url": "https://huggingface.co/colbert-ir/colbertv2.0",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 16349555,
+        "downloads_month": 16349555,
+        "likes": 308,
+        "task": null,
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "onnx",
+          "safetensors",
+          "bert"
+        ]
+      },
+      "author": "colbert-ir",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "laion/clap-htsat-fused",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "audio-classification model by laion",
+      "url": "https://huggingface.co/laion/clap-htsat-fused",
+      "category": "HuggingFace/models/audio-classification",
+      "metrics": {
+        "downloads": 15890772,
+        "downloads_month": 15890772,
+        "likes": 49,
+        "task": "audio-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "safetensors",
+          "clap",
+          "feature-extraction"
+        ]
+      },
+      "author": "laion",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/Qwen2.5-3B-Instruct",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by Qwen",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 15634051,
+        "downloads_month": 15634051,
+        "likes": 391,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen2",
+          "text-generation",
+          "chat"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "pyannote/wespeaker-voxceleb-resnet34-LM",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by pyannote",
+      "url": "https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 14946532,
+        "downloads_month": 14946532,
+        "likes": 98,
+        "task": null,
+        "library": "pyannote-audio",
+        "tags": [
+          "pyannote-audio",
+          "pytorch",
+          "pyannote",
+          "pyannote-audio-model",
+          "wespeaker"
+        ]
+      },
+      "author": "pyannote",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "openai/clip-vit-base-patch32",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "zero-shot-image-classification model by openai",
+      "url": "https://huggingface.co/openai/clip-vit-base-patch32",
+      "category": "HuggingFace/models/zero-shot-image-classification",
+      "metrics": {
+        "downloads": 14802500,
+        "downloads_month": 14802500,
+        "likes": 849,
+        "task": "zero-shot-image-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "clip"
+        ]
+      },
+      "author": "openai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "pyannote/segmentation-3.0",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "voice-activity-detection model by pyannote",
+      "url": "https://huggingface.co/pyannote/segmentation-3.0",
+      "category": "HuggingFace/models/voice-activity-detection",
+      "metrics": {
+        "downloads": 13681186,
+        "downloads_month": 13681186,
+        "likes": 763,
+        "task": "voice-activity-detection",
+        "library": "pyannote-audio",
+        "tags": [
+          "pyannote-audio",
+          "pytorch",
+          "pyannote",
+          "pyannote-audio-model",
+          "audio"
+        ]
+      },
+      "author": "pyannote",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "pyannote/speaker-diarization-3.1",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "automatic-speech-recognition model by pyannote",
+      "url": "https://huggingface.co/pyannote/speaker-diarization-3.1",
+      "category": "HuggingFace/models/automatic-speech-recognition",
+      "metrics": {
+        "downloads": 13055771,
+        "downloads_month": 13055771,
+        "likes": 1479,
+        "task": "automatic-speech-recognition",
+        "library": "pyannote-audio",
+        "tags": [
+          "pyannote-audio",
+          "pyannote",
+          "pyannote-audio-pipeline",
+          "audio",
+          "voice"
+        ]
+      },
+      "author": "pyannote",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Bingsu/adetailer",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by Bingsu",
+      "url": "https://huggingface.co/Bingsu/adetailer",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 12244445,
+        "downloads_month": 12244445,
+        "likes": 651,
+        "task": null,
+        "library": "ultralytics",
+        "tags": [
+          "ultralytics",
+          "pytorch",
+          "dataset:wider_face",
+          "dataset:skytnt/anime-segmentation",
+          "doi:10.57967/hf/3633"
+        ]
+      },
+      "author": "Bingsu",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "autogluon/chronos-bolt-small",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "time-series-forecasting model by autogluon",
+      "url": "https://huggingface.co/autogluon/chronos-bolt-small",
+      "category": "HuggingFace/models/time-series-forecasting",
+      "metrics": {
+        "downloads": 11900883,
+        "downloads_month": 11900883,
+        "likes": 23,
+        "task": "time-series-forecasting",
+        "library": null,
+        "tags": [
+          "safetensors",
+          "t5",
+          "time series",
+          "forecasting",
+          "pretrained models"
+        ]
+      },
+      "author": "autogluon",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "BAAI/bge-m3",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "sentence-similarity model by BAAI",
+      "url": "https://huggingface.co/BAAI/bge-m3",
+      "category": "HuggingFace/models/sentence-similarity",
+      "metrics": {
+        "downloads": 10250179,
+        "downloads_month": 10250179,
+        "likes": 2692,
+        "task": "sentence-similarity",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "pytorch",
+          "onnx",
+          "xlm-roberta",
+          "feature-extraction"
+        ]
+      },
+      "author": "BAAI",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "meta-llama/Llama-3.1-8B-Instruct",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by meta-llama",
+      "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 10107872,
+        "downloads_month": 10107872,
+        "likes": 5342,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "llama",
+          "text-generation",
+          "facebook"
+        ]
+      },
+      "author": "meta-llama",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "FacebookAI/xlm-roberta-base",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "fill-mask model by FacebookAI",
+      "url": "https://huggingface.co/FacebookAI/xlm-roberta-base",
+      "category": "HuggingFace/models/fill-mask",
+      "metrics": {
+        "downloads": 8976658,
+        "downloads_month": 8976658,
+        "likes": 783,
+        "task": "fill-mask",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "onnx"
+        ]
+      },
+      "author": "FacebookAI",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "omni-research/Tarsier2-Recap-7b",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by omni-research",
+      "url": "https://huggingface.co/omni-research/Tarsier2-Recap-7b",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 8791927,
+        "downloads_month": 8791927,
+        "likes": 22,
+        "task": null,
+        "library": null,
+        "tags": [
+          "safetensors",
+          "video LLM",
+          "arxiv:2501.07888",
+          "license:apache-2.0",
+          "region:us"
+        ]
+      },
+      "author": "omni-research",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "FacebookAI/roberta-base",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "fill-mask model by FacebookAI",
+      "url": "https://huggingface.co/FacebookAI/roberta-base",
+      "category": "HuggingFace/models/fill-mask",
+      "metrics": {
+        "downloads": 8731351,
+        "downloads_month": 8731351,
+        "likes": 560,
+        "task": "fill-mask",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "rust"
+        ]
+      },
+      "author": "FacebookAI",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/Qwen3-0.6B",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by Qwen",
+      "url": "https://huggingface.co/Qwen/Qwen3-0.6B",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 8605885,
+        "downloads_month": 8605885,
+        "likes": 1022,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen3",
+          "text-generation",
+          "conversational"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "amazon/chronos-2",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "time-series-forecasting model by amazon",
+      "url": "https://huggingface.co/amazon/chronos-2",
+      "category": "HuggingFace/models/time-series-forecasting",
+      "metrics": {
+        "downloads": 8408982,
+        "downloads_month": 8408982,
+        "likes": 164,
+        "task": "time-series-forecasting",
+        "library": "chronos-forecasting",
+        "tags": [
+          "chronos-forecasting",
+          "safetensors",
+          "t5",
+          "time series",
+          "forecasting"
+        ]
+      },
+      "author": "amazon",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/Qwen2.5-7B-Instruct",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by Qwen",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 8333114,
+        "downloads_month": 8333114,
+        "likes": 1037,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen2",
+          "text-generation",
+          "chat"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "openai/clip-vit-large-patch14",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "zero-shot-image-classification model by openai",
+      "url": "https://huggingface.co/openai/clip-vit-large-patch14",
+      "category": "HuggingFace/models/zero-shot-image-classification",
+      "metrics": {
+        "downloads": 7991048,
+        "downloads_month": 7991048,
+        "likes": 1955,
+        "task": "zero-shot-image-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "safetensors"
+        ]
+      },
+      "author": "openai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "facebook/contriever",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by facebook",
+      "url": "https://huggingface.co/facebook/contriever",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 6967052,
+        "downloads_month": 6967052,
+        "likes": 72,
+        "task": null,
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "bert",
+          "arxiv:2112.09118",
+          "endpoints_compatible"
+        ]
+      },
+      "author": "facebook",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "openai-community/gpt2",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by openai-community",
+      "url": "https://huggingface.co/openai-community/gpt2",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 6927867,
+        "downloads_month": 6927867,
+        "likes": 3103,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "tflite"
+        ]
+      },
+      "author": "openai-community",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Kijai/WanVideo_comfy",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by Kijai",
+      "url": "https://huggingface.co/Kijai/WanVideo_comfy",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 6888401,
+        "downloads_month": 6888401,
+        "likes": 2053,
+        "task": null,
+        "library": "diffusion-single-file",
+        "tags": [
+          "diffusion-single-file",
+          "comfyui",
+          "base_model:Wan-AI/Wan2.1-VACE-1.3B",
+          "base_model:finetune:Wan-AI/Wan2.1-VACE-1.3B",
+          "region:us"
+        ]
+      },
+      "author": "Kijai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "openai/whisper-large-v3",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "automatic-speech-recognition model by openai",
+      "url": "https://huggingface.co/openai/whisper-large-v3",
+      "category": "HuggingFace/models/automatic-speech-recognition",
+      "metrics": {
+        "downloads": 6658617,
+        "downloads_month": 6658617,
+        "likes": 5352,
+        "task": "automatic-speech-recognition",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "jax",
+          "safetensors",
+          "whisper"
+        ]
+      },
+      "author": "openai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/Qwen2.5-1.5B-Instruct",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by Qwen",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 6467543,
+        "downloads_month": 6467543,
+        "likes": 599,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen2",
+          "text-generation",
+          "chat"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "openai/gpt-oss-20b",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by openai",
+      "url": "https://huggingface.co/openai/gpt-oss-20b",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 6431827,
+        "downloads_month": 6431827,
+        "likes": 4268,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "gpt_oss",
+          "text-generation",
+          "vllm"
+        ]
+      },
+      "author": "openai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "sentence-similarity model by sentence-transformers",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+      "category": "HuggingFace/models/sentence-similarity",
+      "metrics": {
+        "downloads": 5966960,
+        "downloads_month": 5966960,
+        "likes": 444,
+        "task": "sentence-similarity",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "pytorch",
+          "tf",
+          "onnx",
+          "safetensors"
+        ]
+      },
+      "author": "sentence-transformers",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "distilbert/distilbert-base-uncased",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "fill-mask model by distilbert",
+      "url": "https://huggingface.co/distilbert/distilbert-base-uncased",
+      "category": "HuggingFace/models/fill-mask",
+      "metrics": {
+        "downloads": 5804399,
+        "downloads_month": 5804399,
+        "likes": 830,
+        "task": "fill-mask",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "rust"
+        ]
+      },
+      "author": "distilbert",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by Comfy-Org",
+      "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 5645208,
+        "downloads_month": 5645208,
+        "likes": 568,
+        "task": null,
+        "library": "diffusion-single-file",
+        "tags": [
+          "diffusion-single-file",
+          "comfyui",
+          "region:us"
+        ]
+      },
+      "author": "Comfy-Org",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "coqui/XTTS-v2",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-speech model by coqui",
+      "url": "https://huggingface.co/coqui/XTTS-v2",
+      "category": "HuggingFace/models/text-to-speech",
+      "metrics": {
+        "downloads": 5623053,
+        "downloads_month": 5623053,
+        "likes": 3367,
+        "task": "text-to-speech",
+        "library": "coqui",
+        "tags": [
+          "coqui",
+          "text-to-speech",
+          "license:other",
+          "region:us"
+        ]
+      },
+      "author": "coqui",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "automatic-speech-recognition model by jonatasgrosman",
+      "url": "https://huggingface.co/jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn",
+      "category": "HuggingFace/models/automatic-speech-recognition",
+      "metrics": {
+        "downloads": 5449393,
+        "downloads_month": 5449393,
+        "likes": 124,
+        "task": "automatic-speech-recognition",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "jax",
+          "wav2vec2",
+          "automatic-speech-recognition"
+        ]
+      },
+      "author": "jonatasgrosman",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-ranking model by cross-encoder",
+      "url": "https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2",
+      "category": "HuggingFace/models/text-ranking",
+      "metrics": {
+        "downloads": 5379019,
+        "downloads_month": 5379019,
+        "likes": 185,
+        "task": "text-ranking",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "pytorch",
+          "jax",
+          "onnx",
+          "safetensors"
+        ]
+      },
+      "author": "cross-encoder",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "jinaai/jina-embeddings-v3",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "feature-extraction model by jinaai",
+      "url": "https://huggingface.co/jinaai/jina-embeddings-v3",
+      "category": "HuggingFace/models/feature-extraction",
+      "metrics": {
+        "downloads": 5111706,
+        "downloads_month": 5111706,
+        "likes": 1126,
+        "task": "feature-extraction",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "onnx",
+          "safetensors",
+          "feature-extraction"
+        ]
+      },
+      "author": "jinaai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "iitolstykh/mivolo_v2",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-classification model by iitolstykh",
+      "url": "https://huggingface.co/iitolstykh/mivolo_v2",
+      "category": "HuggingFace/models/image-classification",
+      "metrics": {
+        "downloads": 4940240,
+        "downloads_month": 4940240,
+        "likes": 21,
+        "task": "image-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "mivolo",
+          "image-classification",
+          "custom_code"
+        ]
+      },
+      "author": "iitolstykh",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "google-bert/bert-base-multilingual-uncased",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "fill-mask model by google-bert",
+      "url": "https://huggingface.co/google-bert/bert-base-multilingual-uncased",
+      "category": "HuggingFace/models/fill-mask",
+      "metrics": {
+        "downloads": 4712542,
+        "downloads_month": 4712542,
+        "likes": 152,
+        "task": "fill-mask",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "safetensors"
+        ]
+      },
+      "author": "google-bert",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/Qwen3-4B",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by Qwen",
+      "url": "https://huggingface.co/Qwen/Qwen3-4B",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 4677782,
+        "downloads_month": 4677782,
+        "likes": 538,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen3",
+          "text-generation",
+          "conversational"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-classification model by cardiffnlp",
+      "url": "https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest",
+      "category": "HuggingFace/models/text-classification",
+      "metrics": {
+        "downloads": 4376721,
+        "downloads_month": 4376721,
+        "likes": 761,
+        "task": "text-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "roberta",
+          "text-classification"
+        ]
+      },
+      "author": "cardiffnlp",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "sentence-transformers/multi-qa-mpnet-base-dot-v1",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "sentence-similarity model by sentence-transformers",
+      "url": "https://huggingface.co/sentence-transformers/multi-qa-mpnet-base-dot-v1",
+      "category": "HuggingFace/models/sentence-similarity",
+      "metrics": {
+        "downloads": 4282245,
+        "downloads_month": 4282245,
+        "likes": 189,
+        "task": "sentence-similarity",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "pytorch",
+          "onnx",
+          "safetensors",
+          "openvino"
+        ]
+      },
+      "author": "sentence-transformers",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "jonatasgrosman/wav2vec2-large-xlsr-53-russian",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "automatic-speech-recognition model by jonatasgrosman",
+      "url": "https://huggingface.co/jonatasgrosman/wav2vec2-large-xlsr-53-russian",
+      "category": "HuggingFace/models/automatic-speech-recognition",
+      "metrics": {
+        "downloads": 4276863,
+        "downloads_month": 4276863,
+        "likes": 64,
+        "task": "automatic-speech-recognition",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "jax",
+          "wav2vec2",
+          "automatic-speech-recognition"
+        ]
+      },
+      "author": "jonatasgrosman",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "BAAI/bge-large-en-v1.5",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "feature-extraction model by BAAI",
+      "url": "https://huggingface.co/BAAI/bge-large-en-v1.5",
+      "category": "HuggingFace/models/feature-extraction",
+      "metrics": {
+        "downloads": 4216347,
+        "downloads_month": 4216347,
+        "likes": 622,
+        "task": "feature-extraction",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "pytorch",
+          "onnx",
+          "safetensors",
+          "bert"
+        ]
+      },
+      "author": "BAAI",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/Qwen3-8B",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by Qwen",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 4215771,
+        "downloads_month": 4215771,
+        "likes": 883,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen3",
+          "text-generation",
+          "conversational"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "timm/resnet50.a1_in1k",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-classification model by timm",
+      "url": "https://huggingface.co/timm/resnet50.a1_in1k",
+      "category": "HuggingFace/models/image-classification",
+      "metrics": {
+        "downloads": 4187222,
+        "downloads_month": 4187222,
+        "likes": 39,
+        "task": "image-classification",
+        "library": "timm",
+        "tags": [
+          "timm",
+          "pytorch",
+          "safetensors",
+          "image-classification",
+          "transformers"
+        ]
+      },
+      "author": "timm",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "emilyalsentzer/Bio_ClinicalBERT",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "fill-mask model by emilyalsentzer",
+      "url": "https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT",
+      "category": "HuggingFace/models/fill-mask",
+      "metrics": {
+        "downloads": 4077136,
+        "downloads_month": 4077136,
+        "likes": 409,
+        "task": "fill-mask",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "bert"
+        ]
+      },
+      "author": "emilyalsentzer",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Comfy-Org/Wan_2.1_ComfyUI_repackaged",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by Comfy-Org",
+      "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 4074626,
+        "downloads_month": 4074626,
+        "likes": 833,
+        "task": null,
+        "library": "diffusion-single-file",
+        "tags": [
+          "diffusion-single-file",
+          "comfyui",
+          "region:us"
+        ]
+      },
+      "author": "Comfy-Org",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "dphn/dolphin-2.9.1-yi-1.5-34b",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by dphn",
+      "url": "https://huggingface.co/dphn/dolphin-2.9.1-yi-1.5-34b",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 4057876,
+        "downloads_month": 4057876,
+        "likes": 54,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "llama",
+          "text-generation",
+          "generated_from_trainer"
+        ]
+      },
+      "author": "dphn",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "timm/mobilenetv3_large_100.ra_in1k",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-classification model by timm",
+      "url": "https://huggingface.co/timm/mobilenetv3_large_100.ra_in1k",
+      "category": "HuggingFace/models/image-classification",
+      "metrics": {
+        "downloads": 4015275,
+        "downloads_month": 4015275,
+        "likes": 36,
+        "task": "image-classification",
+        "library": "timm",
+        "tags": [
+          "timm",
+          "pytorch",
+          "safetensors",
+          "image-classification",
+          "transformers"
+        ]
+      },
+      "author": "timm",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-classification model by distilbert",
+      "url": "https://huggingface.co/distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+      "category": "HuggingFace/models/text-classification",
+      "metrics": {
+        "downloads": 3952203,
+        "downloads_month": 3952203,
+        "likes": 869,
+        "task": "text-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "rust",
+          "onnx"
+        ]
+      },
+      "author": "distilbert",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "google/vit-base-patch16-224",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-classification model by google",
+      "url": "https://huggingface.co/google/vit-base-patch16-224",
+      "category": "HuggingFace/models/image-classification",
+      "metrics": {
+        "downloads": 3932306,
+        "downloads_month": 3932306,
+        "likes": 929,
+        "task": "image-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "safetensors"
+        ]
+      },
+      "author": "google",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "vikhyatk/moondream2",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-text-to-text model by vikhyatk",
+      "url": "https://huggingface.co/vikhyatk/moondream2",
+      "category": "HuggingFace/models/image-text-to-text",
+      "metrics": {
+        "downloads": 3878107,
+        "downloads_month": 3878107,
+        "likes": 1367,
+        "task": "image-text-to-text",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "moondream1",
+          "text-generation",
+          "image-text-to-text"
+        ]
+      },
+      "author": "vikhyatk",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "nomic-ai/nomic-embed-text-v1.5",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "sentence-similarity model by nomic-ai",
+      "url": "https://huggingface.co/nomic-ai/nomic-embed-text-v1.5",
+      "category": "HuggingFace/models/sentence-similarity",
+      "metrics": {
+        "downloads": 3805889,
+        "downloads_month": 3805889,
+        "likes": 766,
+        "task": "sentence-similarity",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "onnx",
+          "safetensors",
+          "nomic_bert",
+          "feature-extraction"
+        ]
+      },
+      "author": "nomic-ai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "BAAI/bge-small-en-v1.5",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "feature-extraction model by BAAI",
+      "url": "https://huggingface.co/BAAI/bge-small-en-v1.5",
+      "category": "HuggingFace/models/feature-extraction",
+      "metrics": {
+        "downloads": 3780204,
+        "downloads_month": 3780204,
+        "likes": 402,
+        "task": "feature-extraction",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "pytorch",
+          "onnx",
+          "safetensors",
+          "bert"
+        ]
+      },
+      "author": "BAAI",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/Qwen2.5-32B-Instruct",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by Qwen",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-32B-Instruct",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 3619710,
+        "downloads_month": 3619710,
+        "likes": 323,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen2",
+          "text-generation",
+          "chat"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/Qwen3-1.7B",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by Qwen",
+      "url": "https://huggingface.co/Qwen/Qwen3-1.7B",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 3556354,
+        "downloads_month": 3556354,
+        "likes": 410,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen3",
+          "text-generation",
+          "conversational"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "facebook/opt-125m",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by facebook",
+      "url": "https://huggingface.co/facebook/opt-125m",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 3554561,
+        "downloads_month": 3554561,
+        "likes": 232,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "opt"
+        ]
+      },
+      "author": "facebook",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "prajjwal1/bert-tiny",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by prajjwal1",
+      "url": "https://huggingface.co/prajjwal1/bert-tiny",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 3543425,
+        "downloads_month": 3543425,
+        "likes": 136,
+        "task": null,
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "BERT",
+          "MNLI",
+          "NLI"
+        ]
+      },
+      "author": "prajjwal1",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "facebook/bart-large-mnli",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "zero-shot-classification model by facebook",
+      "url": "https://huggingface.co/facebook/bart-large-mnli",
+      "category": "HuggingFace/models/zero-shot-classification",
+      "metrics": {
+        "downloads": 3459004,
+        "downloads_month": 3459004,
+        "likes": 1523,
+        "task": "zero-shot-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "jax",
+          "rust",
+          "safetensors"
+        ]
+      },
+      "author": "facebook",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "FacebookAI/xlm-roberta-large",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "fill-mask model by FacebookAI",
+      "url": "https://huggingface.co/FacebookAI/xlm-roberta-large",
+      "category": "HuggingFace/models/fill-mask",
+      "metrics": {
+        "downloads": 3390673,
+        "downloads_month": 3390673,
+        "likes": 491,
+        "task": "fill-mask",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "onnx"
+        ]
+      },
+      "author": "FacebookAI",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "google-t5/t5-small",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "translation model by google-t5",
+      "url": "https://huggingface.co/google-t5/t5-small",
+      "category": "HuggingFace/models/translation",
+      "metrics": {
+        "downloads": 3384627,
+        "downloads_month": 3384627,
+        "likes": 523,
+        "task": "translation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "rust"
+        ]
+      },
+      "author": "google-t5",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "BAAI/bge-reranker-v2-m3",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-classification model by BAAI",
+      "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3",
+      "category": "HuggingFace/models/text-classification",
+      "metrics": {
+        "downloads": 3367151,
+        "downloads_month": 3367151,
+        "likes": 870,
+        "task": "text-classification",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "safetensors",
+          "xlm-roberta",
+          "text-classification",
+          "transformers"
+        ]
+      },
+      "author": "BAAI",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "openai/clip-vit-large-patch14-336",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "zero-shot-image-classification model by openai",
+      "url": "https://huggingface.co/openai/clip-vit-large-patch14-336",
+      "category": "HuggingFace/models/zero-shot-image-classification",
+      "metrics": {
+        "downloads": 3272225,
+        "downloads_month": 3272225,
+        "likes": 286,
+        "task": "zero-shot-image-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "clip",
+          "zero-shot-image-classification"
+        ]
+      },
+      "author": "openai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "hustvl/vitmatte-small-composition-1k",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by hustvl",
+      "url": "https://huggingface.co/hustvl/vitmatte-small-composition-1k",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 3251512,
+        "downloads_month": 3251512,
+        "likes": 52,
+        "task": null,
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "safetensors",
+          "vitmatte",
+          "vision"
+        ]
+      },
+      "author": "hustvl",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "intfloat/multilingual-e5-large",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "feature-extraction model by intfloat",
+      "url": "https://huggingface.co/intfloat/multilingual-e5-large",
+      "category": "HuggingFace/models/feature-extraction",
+      "metrics": {
+        "downloads": 3248386,
+        "downloads_month": 3248386,
+        "likes": 1132,
+        "task": "feature-extraction",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "pytorch",
+          "onnx",
+          "safetensors",
+          "openvino"
+        ]
+      },
+      "author": "intfloat",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Babelscape/rebel-large",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by Babelscape",
+      "url": "https://huggingface.co/Babelscape/rebel-large",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 3178417,
+        "downloads_month": 3178417,
+        "likes": 231,
+        "task": null,
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "safetensors",
+          "bart",
+          "text2text-generation"
+        ]
+      },
+      "author": "Babelscape",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/Qwen2.5-14B-Instruct",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by Qwen",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-14B-Instruct",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 3178050,
+        "downloads_month": 3178050,
+        "likes": 305,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen2",
+          "text-generation",
+          "chat"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-text-to-text model by Qwen",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct",
+      "category": "HuggingFace/models/image-text-to-text",
+      "metrics": {
+        "downloads": 3168914,
+        "downloads_month": 3168914,
+        "likes": 1436,
+        "task": "image-text-to-text",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen2_5_vl",
+          "image-to-text",
+          "multimodal"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "KB/bert-base-swedish-cased-ner",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "token-classification model by KB",
+      "url": "https://huggingface.co/KB/bert-base-swedish-cased-ner",
+      "category": "HuggingFace/models/token-classification",
+      "metrics": {
+        "downloads": 3166096,
+        "downloads_month": 3166096,
+        "likes": 10,
+        "task": "token-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "safetensors"
+        ]
+      },
+      "author": "KB",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "BAAI/bge-base-en-v1.5",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "feature-extraction model by BAAI",
+      "url": "https://huggingface.co/BAAI/bge-base-en-v1.5",
+      "category": "HuggingFace/models/feature-extraction",
+      "metrics": {
+        "downloads": 3124693,
+        "downloads_month": 3124693,
+        "likes": 398,
+        "task": "feature-extraction",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "pytorch",
+          "onnx",
+          "safetensors",
+          "bert"
+        ]
+      },
+      "author": "BAAI",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/Qwen3-4B-Instruct-2507",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by Qwen",
+      "url": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 3092643,
+        "downloads_month": 3092643,
+        "likes": 676,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen3",
+          "text-generation",
+          "conversational"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-OCR",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-text-to-text model by deepseek-ai",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-OCR",
+      "category": "HuggingFace/models/image-text-to-text",
+      "metrics": {
+        "downloads": 3055355,
+        "downloads_month": 3055355,
+        "likes": 3119,
+        "task": "image-text-to-text",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "deepseek_vl_v2",
+          "feature-extraction",
+          "deepseek"
+        ]
+      },
+      "author": "deepseek-ai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "automatic-speech-recognition model by jonatasgrosman",
+      "url": "https://huggingface.co/jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
+      "category": "HuggingFace/models/automatic-speech-recognition",
+      "metrics": {
+        "downloads": 3054498,
+        "downloads_month": 3054498,
+        "likes": 52,
+        "task": "automatic-speech-recognition",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "jax",
+          "wav2vec2",
+          "automatic-speech-recognition"
+        ]
+      },
+      "author": "jonatasgrosman",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "usyd-community/vitpose-plus-base",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "keypoint-detection model by usyd-community",
+      "url": "https://huggingface.co/usyd-community/vitpose-plus-base",
+      "category": "HuggingFace/models/keypoint-detection",
+      "metrics": {
+        "downloads": 2974511,
+        "downloads_month": 2974511,
+        "likes": 28,
+        "task": "keypoint-detection",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "vitpose",
+          "keypoint-detection",
+          "en"
+        ]
+      },
+      "author": "usyd-community",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "autogluon/chronos-bolt-base",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "time-series-forecasting model by autogluon",
+      "url": "https://huggingface.co/autogluon/chronos-bolt-base",
+      "category": "HuggingFace/models/time-series-forecasting",
+      "metrics": {
+        "downloads": 2909062,
+        "downloads_month": 2909062,
+        "likes": 35,
+        "task": "time-series-forecasting",
+        "library": null,
+        "tags": [
+          "safetensors",
+          "t5",
+          "time series",
+          "forecasting",
+          "pretrained models"
+        ]
+      },
+      "author": "autogluon",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "dslim/bert-base-NER",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "token-classification model by dslim",
+      "url": "https://huggingface.co/dslim/bert-base-NER",
+      "category": "HuggingFace/models/token-classification",
+      "metrics": {
+        "downloads": 2894007,
+        "downloads_month": 2894007,
+        "likes": 692,
+        "task": "token-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "onnx"
+        ]
+      },
+      "author": "dslim",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "openai/gpt-oss-120b",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by openai",
+      "url": "https://huggingface.co/openai/gpt-oss-120b",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 2880526,
+        "downloads_month": 2880526,
+        "likes": 4407,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "gpt_oss",
+          "text-generation",
+          "vllm"
+        ]
+      },
+      "author": "openai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "facebook/bart-large-cnn",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "summarization model by facebook",
+      "url": "https://huggingface.co/facebook/bart-large-cnn",
+      "category": "HuggingFace/models/summarization",
+      "metrics": {
+        "downloads": 2878185,
+        "downloads_month": 2878185,
+        "likes": 1530,
+        "task": "summarization",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "rust"
+        ]
+      },
+      "author": "facebook",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "timm/convnextv2_nano.fcmae_ft_in22k_in1k",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-classification model by timm",
+      "url": "https://huggingface.co/timm/convnextv2_nano.fcmae_ft_in22k_in1k",
+      "category": "HuggingFace/models/image-classification",
+      "metrics": {
+        "downloads": 2845893,
+        "downloads_month": 2845893,
+        "likes": 3,
+        "task": "image-classification",
+        "library": "timm",
+        "tags": [
+          "timm",
+          "pytorch",
+          "safetensors",
+          "image-classification",
+          "transformers"
+        ]
+      },
+      "author": "timm",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "MahmoudAshraf/mms-300m-1130-forced-aligner",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "automatic-speech-recognition model by MahmoudAshraf",
+      "url": "https://huggingface.co/MahmoudAshraf/mms-300m-1130-forced-aligner",
+      "category": "HuggingFace/models/automatic-speech-recognition",
+      "metrics": {
+        "downloads": 2833822,
+        "downloads_month": 2833822,
+        "likes": 69,
+        "task": "automatic-speech-recognition",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "safetensors",
+          "wav2vec2",
+          "automatic-speech-recognition"
+        ]
+      },
+      "author": "MahmoudAshraf",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "sentence-transformers/paraphrase-MiniLM-L6-v2",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "sentence-similarity model by sentence-transformers",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L6-v2",
+      "category": "HuggingFace/models/sentence-similarity",
+      "metrics": {
+        "downloads": 2829428,
+        "downloads_month": 2829428,
+        "likes": 145,
+        "task": "sentence-similarity",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "pytorch",
+          "tf",
+          "onnx",
+          "safetensors"
+        ]
+      },
+      "author": "sentence-transformers",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "OpenGVLab/InternVL3-78B",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-text-to-text model by OpenGVLab",
+      "url": "https://huggingface.co/OpenGVLab/InternVL3-78B",
+      "category": "HuggingFace/models/image-text-to-text",
+      "metrics": {
+        "downloads": 2815409,
+        "downloads_month": 2815409,
+        "likes": 230,
+        "task": "image-text-to-text",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "internvl_chat",
+          "feature-extraction",
+          "internvl"
+        ]
+      },
+      "author": "OpenGVLab",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "sentence-transformers/all-MiniLM-L12-v2",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "sentence-similarity model by sentence-transformers",
+      "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2",
+      "category": "HuggingFace/models/sentence-similarity",
+      "metrics": {
+        "downloads": 2767687,
+        "downloads_month": 2767687,
+        "likes": 291,
+        "task": "sentence-similarity",
+        "library": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "pytorch",
+          "rust",
+          "onnx",
+          "safetensors"
+        ]
+      },
+      "author": "sentence-transformers",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "openai/whisper-large-v3-turbo",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "automatic-speech-recognition model by openai",
+      "url": "https://huggingface.co/openai/whisper-large-v3-turbo",
+      "category": "HuggingFace/models/automatic-speech-recognition",
+      "metrics": {
+        "downloads": 2758988,
+        "downloads_month": 2758988,
+        "likes": 2791,
+        "task": "automatic-speech-recognition",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "whisper",
+          "automatic-speech-recognition",
+          "audio"
+        ]
+      },
+      "author": "openai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "openai/clip-vit-base-patch16",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "zero-shot-image-classification model by openai",
+      "url": "https://huggingface.co/openai/clip-vit-base-patch16",
+      "category": "HuggingFace/models/zero-shot-image-classification",
+      "metrics": {
+        "downloads": 2740683,
+        "downloads_month": 2740683,
+        "likes": 147,
+        "task": "zero-shot-image-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "jax",
+          "clip",
+          "zero-shot-image-classification"
+        ]
+      },
+      "author": "openai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "openvla/openvla-7b",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-text-to-text model by openvla",
+      "url": "https://huggingface.co/openvla/openvla-7b",
+      "category": "HuggingFace/models/image-text-to-text",
+      "metrics": {
+        "downloads": 2733544,
+        "downloads_month": 2733544,
+        "likes": 171,
+        "task": "image-text-to-text",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "openvla",
+          "feature-extraction",
+          "robotics"
+        ]
+      },
+      "author": "openvla",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "meta-llama/Llama-3.2-1B-Instruct",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by meta-llama",
+      "url": "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 2706295,
+        "downloads_month": 2706295,
+        "likes": 1270,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "llama",
+          "text-generation",
+          "facebook"
+        ]
+      },
+      "author": "meta-llama",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "meta-llama/Llama-3.1-8B",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by meta-llama",
+      "url": "https://huggingface.co/meta-llama/Llama-3.1-8B",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 2646841,
+        "downloads_month": 2646841,
+        "likes": 2039,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "llama",
+          "text-generation",
+          "facebook"
+        ]
+      },
+      "author": "meta-llama",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "w11wo/indonesian-roberta-base-posp-tagger",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "token-classification model by w11wo",
+      "url": "https://huggingface.co/w11wo/indonesian-roberta-base-posp-tagger",
+      "category": "HuggingFace/models/token-classification",
+      "metrics": {
+        "downloads": 2645588,
+        "downloads_month": 2645588,
+        "likes": 10,
+        "task": "token-classification",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "tensorboard",
+          "safetensors"
+        ]
+      },
+      "author": "w11wo",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "autogluon/chronos-2-small",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "time-series-forecasting model by autogluon",
+      "url": "https://huggingface.co/autogluon/chronos-2-small",
+      "category": "HuggingFace/models/time-series-forecasting",
+      "metrics": {
+        "downloads": 2580897,
+        "downloads_month": 2580897,
+        "likes": 1,
+        "task": "time-series-forecasting",
+        "library": "chronos-forecasting",
+        "tags": [
+          "chronos-forecasting",
+          "safetensors",
+          "t5",
+          "time series",
+          "forecasting"
+        ]
+      },
+      "author": "autogluon",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "google-bert/bert-base-multilingual-cased",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "fill-mask model by google-bert",
+      "url": "https://huggingface.co/google-bert/bert-base-multilingual-cased",
+      "category": "HuggingFace/models/fill-mask",
+      "metrics": {
+        "downloads": 2579850,
+        "downloads_month": 2579850,
+        "likes": 569,
+        "task": "fill-mask",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tf",
+          "jax",
+          "safetensors"
+        ]
+      },
+      "author": "google-bert",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "jonatasgrosman/wav2vec2-large-xlsr-53-portuguese",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "automatic-speech-recognition model by jonatasgrosman",
+      "url": "https://huggingface.co/jonatasgrosman/wav2vec2-large-xlsr-53-portuguese",
+      "category": "HuggingFace/models/automatic-speech-recognition",
+      "metrics": {
+        "downloads": 2575312,
+        "downloads_month": 2575312,
+        "likes": 36,
+        "task": "automatic-speech-recognition",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "jax",
+          "wav2vec2",
+          "automatic-speech-recognition"
+        ]
+      },
+      "author": "jonatasgrosman",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by Qwen",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-0.5B-Instruct",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 2548773,
+        "downloads_month": 2548773,
+        "likes": 63,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen2",
+          "text-generation",
+          "code"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Comfy-Org/z_image_turbo",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by Comfy-Org",
+      "url": "https://huggingface.co/Comfy-Org/z_image_turbo",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 2525344,
+        "downloads_month": 2525344,
+        "likes": 567,
+        "task": null,
+        "library": "diffusion-single-file",
+        "tags": [
+          "diffusion-single-file",
+          "comfyui",
+          "region:us"
+        ]
+      },
+      "author": "Comfy-Org",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "meta-llama/Llama-3.2-1B",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by meta-llama",
+      "url": "https://huggingface.co/meta-llama/Llama-3.2-1B",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 2464704,
+        "downloads_month": 2464704,
+        "likes": 2272,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "llama",
+          "text-generation",
+          "facebook"
+        ]
+      },
+      "author": "meta-llama",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-R1",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by deepseek-ai",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 408840,
+        "downloads_month": 408840,
+        "likes": 12980,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "deepseek_v3",
+          "text-generation",
+          "conversational"
+        ]
+      },
+      "author": "deepseek-ai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "black-forest-labs/FLUX.1-dev",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-image model by black-forest-labs",
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev",
+      "category": "HuggingFace/models/text-to-image",
+      "metrics": {
+        "downloads": 785364,
+        "downloads_month": 785364,
+        "likes": 12222,
+        "task": "text-to-image",
+        "library": "diffusers",
+        "tags": [
+          "diffusers",
+          "safetensors",
+          "text-to-image",
+          "image-generation",
+          "flux"
+        ]
+      },
+      "author": "black-forest-labs",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "stabilityai/stable-diffusion-xl-base-1.0",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-image model by stabilityai",
+      "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0",
+      "category": "HuggingFace/models/text-to-image",
+      "metrics": {
+        "downloads": 2011979,
+        "downloads_month": 2011979,
+        "likes": 7381,
+        "task": "text-to-image",
+        "library": "diffusers",
+        "tags": [
+          "diffusers",
+          "onnx",
+          "safetensors",
+          "text-to-image",
+          "stable-diffusion"
+        ]
+      },
+      "author": "stabilityai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "CompVis/stable-diffusion-v1-4",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-image model by CompVis",
+      "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4",
+      "category": "HuggingFace/models/text-to-image",
+      "metrics": {
+        "downloads": 698577,
+        "downloads_month": 698577,
+        "likes": 6972,
+        "task": "text-to-image",
+        "library": "diffusers",
+        "tags": [
+          "diffusers",
+          "safetensors",
+          "stable-diffusion",
+          "stable-diffusion-diffusers",
+          "text-to-image"
+        ]
+      },
+      "author": "CompVis",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "meta-llama/Meta-Llama-3-8B",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by meta-llama",
+      "url": "https://huggingface.co/meta-llama/Meta-Llama-3-8B",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 1656175,
+        "downloads_month": 1656175,
+        "likes": 6438,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "llama",
+          "text-generation",
+          "facebook"
+        ]
+      },
+      "author": "meta-llama",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "hexgrad/Kokoro-82M",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-speech model by hexgrad",
+      "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+      "category": "HuggingFace/models/text-to-speech",
+      "metrics": {
+        "downloads": 2270011,
+        "downloads_month": 2270011,
+        "likes": 5633,
+        "task": "text-to-speech",
+        "library": null,
+        "tags": [
+          "text-to-speech",
+          "en",
+          "arxiv:2306.07691",
+          "arxiv:2203.02395",
+          "base_model:yl4579/StyleTTS2-LJSpeech"
+        ]
+      },
+      "author": "hexgrad",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "bigscience/bloom",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by bigscience",
+      "url": "https://huggingface.co/bigscience/bloom",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 3774,
+        "downloads_month": 3774,
+        "likes": 4976,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "tensorboard",
+          "safetensors",
+          "bloom"
+        ]
+      },
+      "author": "bigscience",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "stabilityai/stable-diffusion-3-medium",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-image model by stabilityai",
+      "url": "https://huggingface.co/stabilityai/stable-diffusion-3-medium",
+      "category": "HuggingFace/models/text-to-image",
+      "metrics": {
+        "downloads": 6640,
+        "downloads_month": 6640,
+        "likes": 4903,
+        "task": "text-to-image",
+        "library": "diffusion-single-file",
+        "tags": [
+          "diffusion-single-file",
+          "text-to-image",
+          "stable-diffusion",
+          "en",
+          "arxiv:2403.03206"
+        ]
+      },
+      "author": "stabilityai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "meta-llama/Llama-2-7b-chat-hf",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by meta-llama",
+      "url": "https://huggingface.co/meta-llama/Llama-2-7b-chat-hf",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 445902,
+        "downloads_month": 445902,
+        "likes": 4695,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "safetensors",
+          "llama",
+          "text-generation"
+        ]
+      },
+      "author": "meta-llama",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "mistralai/Mixtral-8x7B-Instruct-v0.1",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by mistralai",
+      "url": "https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 476764,
+        "downloads_month": 476764,
+        "likes": 4632,
+        "task": null,
+        "library": "vllm",
+        "tags": [
+          "vllm",
+          "safetensors",
+          "mixtral",
+          "fr",
+          "it"
+        ]
+      },
+      "author": "mistralai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "black-forest-labs/FLUX.1-schnell",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-image model by black-forest-labs",
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell",
+      "category": "HuggingFace/models/text-to-image",
+      "metrics": {
+        "downloads": 609973,
+        "downloads_month": 609973,
+        "likes": 4571,
+        "task": "text-to-image",
+        "library": "diffusers",
+        "tags": [
+          "diffusers",
+          "safetensors",
+          "text-to-image",
+          "image-generation",
+          "flux"
+        ]
+      },
+      "author": "black-forest-labs",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "meta-llama/Llama-2-7b",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by meta-llama",
+      "url": "https://huggingface.co/meta-llama/Llama-2-7b",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 312,
+        "downloads_month": 312,
+        "likes": 4447,
+        "task": "text-generation",
+        "library": null,
+        "tags": [
+          "facebook",
+          "meta",
+          "pytorch",
+          "llama",
+          "llama-2"
+        ]
+      },
+      "author": "meta-llama",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "meta-llama/Meta-Llama-3-8B-Instruct",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by meta-llama",
+      "url": "https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 1560204,
+        "downloads_month": 1560204,
+        "likes": 4367,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "llama",
+          "text-generation",
+          "facebook"
+        ]
+      },
+      "author": "meta-llama",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "mistralai/Mistral-7B-v0.1",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by mistralai",
+      "url": "https://huggingface.co/mistralai/Mistral-7B-v0.1",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 280149,
+        "downloads_month": 280149,
+        "likes": 4037,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "safetensors",
+          "mistral",
+          "text-generation"
+        ]
+      },
+      "author": "mistralai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-V3",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by deepseek-ai",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 834612,
+        "downloads_month": 834612,
+        "likes": 4017,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "deepseek_v3",
+          "text-generation",
+          "conversational"
+        ]
+      },
+      "author": "deepseek-ai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "lllyasviel/ControlNet-v1-1",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by lllyasviel",
+      "url": "https://huggingface.co/lllyasviel/ControlNet-v1-1",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 0,
+        "downloads_month": 0,
+        "likes": 3993,
+        "task": null,
+        "library": null,
+        "tags": [
+          "license:openrail",
+          "region:us"
+        ]
+      },
+      "author": "lllyasviel",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Tongyi-MAI/Z-Image-Turbo",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-image model by Tongyi-MAI",
+      "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+      "category": "HuggingFace/models/text-to-image",
+      "metrics": {
+        "downloads": 534385,
+        "downloads_month": 534385,
+        "likes": 3989,
+        "task": "text-to-image",
+        "library": "diffusers",
+        "tags": [
+          "diffusers",
+          "safetensors",
+          "text-to-image",
+          "en",
+          "arxiv:2511.22699"
+        ]
+      },
+      "author": "Tongyi-MAI",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "WarriorMama777/OrangeMixs",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-image model by WarriorMama777",
+      "url": "https://huggingface.co/WarriorMama777/OrangeMixs",
+      "category": "HuggingFace/models/text-to-image",
+      "metrics": {
+        "downloads": 549,
+        "downloads_month": 549,
+        "likes": 3893,
+        "task": "text-to-image",
+        "library": "diffusers",
+        "tags": [
+          "diffusers",
+          "stable-diffusion",
+          "text-to-image",
+          "dataset:Nerfgun3/bad_prompt",
+          "license:creativeml-openrail-m"
+        ]
+      },
+      "author": "WarriorMama777",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "lllyasviel/ControlNet",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by lllyasviel",
+      "url": "https://huggingface.co/lllyasviel/ControlNet",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 1,
+        "downloads_month": 1,
+        "likes": 3785,
+        "task": null,
+        "library": null,
+        "tags": [
+          "license:openrail",
+          "region:us"
+        ]
+      },
+      "author": "lllyasviel",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "deepseek-ai/Janus-Pro-7B",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "any-to-any model by deepseek-ai",
+      "url": "https://huggingface.co/deepseek-ai/Janus-Pro-7B",
+      "category": "HuggingFace/models/any-to-any",
+      "metrics": {
+        "downloads": 21041,
+        "downloads_month": 21041,
+        "likes": 3556,
+        "task": "any-to-any",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "multi_modality",
+          "muiltimodal",
+          "text-to-image"
+        ]
+      },
+      "author": "deepseek-ai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "microsoft/phi-2",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by microsoft",
+      "url": "https://huggingface.co/microsoft/phi-2",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 1326836,
+        "downloads_month": 1326836,
+        "likes": 3421,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "phi",
+          "text-generation",
+          "nlp"
+        ]
+      },
+      "author": "microsoft",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "stabilityai/stable-diffusion-3.5-large",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-image model by stabilityai",
+      "url": "https://huggingface.co/stabilityai/stable-diffusion-3.5-large",
+      "category": "HuggingFace/models/text-to-image",
+      "metrics": {
+        "downloads": 68438,
+        "downloads_month": 68438,
+        "likes": 3334,
+        "task": "text-to-image",
+        "library": "diffusers",
+        "tags": [
+          "diffusers",
+          "safetensors",
+          "text-to-image",
+          "stable-diffusion",
+          "en"
+        ]
+      },
+      "author": "stabilityai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "google/gemma-7b",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by google",
+      "url": "https://huggingface.co/google/gemma-7b",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 32712,
+        "downloads_month": 32712,
+        "likes": 3264,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "gguf",
+          "gemma",
+          "text-generation"
+        ]
+      },
+      "author": "google",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "stabilityai/stable-video-diffusion-img2vid-xt",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-to-video model by stabilityai",
+      "url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt",
+      "category": "HuggingFace/models/image-to-video",
+      "metrics": {
+        "downloads": 114380,
+        "downloads_month": 114380,
+        "likes": 3225,
+        "task": "image-to-video",
+        "library": "diffusers",
+        "tags": [
+          "diffusers",
+          "safetensors",
+          "image-to-video",
+          "license:other",
+          "diffusers:StableVideoDiffusionPipeline"
+        ]
+      },
+      "author": "stabilityai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "prompthero/openjourney",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-image model by prompthero",
+      "url": "https://huggingface.co/prompthero/openjourney",
+      "category": "HuggingFace/models/text-to-image",
+      "metrics": {
+        "downloads": 6823,
+        "downloads_month": 6823,
+        "likes": 3180,
+        "task": "text-to-image",
+        "library": "diffusers",
+        "tags": [
+          "diffusers",
+          "safetensors",
+          "stable-diffusion",
+          "text-to-image",
+          "en"
+        ]
+      },
+      "author": "prompthero",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-V3-0324",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by deepseek-ai",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 279465,
+        "downloads_month": 279465,
+        "likes": 3086,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "deepseek_v3",
+          "text-generation",
+          "conversational"
+        ]
+      },
+      "author": "deepseek-ai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "mistralai/Mistral-7B-Instruct-v0.2",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by mistralai",
+      "url": "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 2047177,
+        "downloads_month": 2047177,
+        "likes": 3062,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "safetensors",
+          "mistral",
+          "text-generation"
+        ]
+      },
+      "author": "mistralai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "bigcode/starcoder",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by bigcode",
+      "url": "https://huggingface.co/bigcode/starcoder",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 7039,
+        "downloads_month": 7039,
+        "likes": 2918,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "safetensors",
+          "gpt_bigcode",
+          "text-generation"
+        ]
+      },
+      "author": "bigcode",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/QwQ-32B",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by Qwen",
+      "url": "https://huggingface.co/Qwen/QwQ-32B",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 57338,
+        "downloads_month": 57338,
+        "likes": 2883,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen2",
+          "text-generation",
+          "chat"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "zai-org/chatglm-6b",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "AI model by zai-org",
+      "url": "https://huggingface.co/zai-org/chatglm-6b",
+      "category": "HuggingFace/models/other",
+      "metrics": {
+        "downloads": 3434,
+        "downloads_month": 3434,
+        "likes": 2873,
+        "task": null,
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "chatglm",
+          "glm",
+          "thudm"
+        ]
+      },
+      "author": "zai-org",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "CompVis/stable-diffusion-v-1-4-original",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-image model by CompVis",
+      "url": "https://huggingface.co/CompVis/stable-diffusion-v-1-4-original",
+      "category": "HuggingFace/models/text-to-image",
+      "metrics": {
+        "downloads": 0,
+        "downloads_month": 0,
+        "likes": 2835,
+        "task": "text-to-image",
+        "library": "stable-diffusion",
+        "tags": [
+          "stable-diffusion",
+          "text-to-image",
+          "arxiv:2207.12598",
+          "arxiv:2112.10752",
+          "arxiv:2103.00020"
+        ]
+      },
+      "author": "CompVis",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "nari-labs/Dia-1.6B",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-speech model by nari-labs",
+      "url": "https://huggingface.co/nari-labs/Dia-1.6B",
+      "category": "HuggingFace/models/text-to-speech",
+      "metrics": {
+        "downloads": 71108,
+        "downloads_month": 71108,
+        "likes": 2828,
+        "task": "text-to-speech",
+        "library": null,
+        "tags": [
+          "safetensors",
+          "model_hub_mixin",
+          "pytorch_model_hub_mixin",
+          "text-to-speech",
+          "en"
+        ]
+      },
+      "author": "nari-labs",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "meta-llama/Llama-3.3-70B-Instruct",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by meta-llama",
+      "url": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 720587,
+        "downloads_month": 720587,
+        "likes": 2637,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "llama",
+          "text-generation",
+          "facebook"
+        ]
+      },
+      "author": "meta-llama",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "black-forest-labs/FLUX.1-Kontext-dev",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "image-to-image model by black-forest-labs",
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev",
+      "category": "HuggingFace/models/image-to-image",
+      "metrics": {
+        "downloads": 209307,
+        "downloads_month": 209307,
+        "likes": 2529,
+        "task": "image-to-image",
+        "library": "diffusers",
+        "tags": [
+          "diffusers",
+          "safetensors",
+          "image-generation",
+          "flux",
+          "diffusion-single-file"
+        ]
+      },
+      "author": "black-forest-labs",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "stabilityai/sdxl-turbo",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-image model by stabilityai",
+      "url": "https://huggingface.co/stabilityai/sdxl-turbo",
+      "category": "HuggingFace/models/text-to-image",
+      "metrics": {
+        "downloads": 365257,
+        "downloads_month": 365257,
+        "likes": 2521,
+        "task": "text-to-image",
+        "library": "diffusers",
+        "tags": [
+          "diffusers",
+          "onnx",
+          "safetensors",
+          "text-to-image",
+          "license:other"
+        ]
+      },
+      "author": "stabilityai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "hakurei/waifu-diffusion",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-to-image model by hakurei",
+      "url": "https://huggingface.co/hakurei/waifu-diffusion",
+      "category": "HuggingFace/models/text-to-image",
+      "metrics": {
+        "downloads": 2351,
+        "downloads_month": 2351,
+        "likes": 2473,
+        "task": "text-to-image",
+        "library": "diffusers",
+        "tags": [
+          "diffusers",
+          "safetensors",
+          "stable-diffusion",
+          "text-to-image",
+          "en"
+        ]
+      },
+      "author": "hakurei",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "tiiuae/falcon-40b",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by tiiuae",
+      "url": "https://huggingface.co/tiiuae/falcon-40b",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 14117,
+        "downloads_month": 14117,
+        "likes": 2433,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "safetensors",
+          "falcon",
+          "text-generation"
+        ]
+      },
+      "author": "tiiuae",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-R1-0528",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by deepseek-ai",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 458074,
+        "downloads_month": 458074,
+        "likes": 2394,
+        "task": "text-generation",
+        "library": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "deepseek_v3",
+          "text-generation",
+          "conversational"
+        ]
+      },
+      "author": "deepseek-ai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "xai-org/grok-1",
+      "source_type": "huggingface",
+      "signal_type": "trending_model",
+      "entity_type": "technology",
+      "description": "text-generation model by xai-org",
+      "url": "https://huggingface.co/xai-org/grok-1",
+      "category": "HuggingFace/models/text-generation",
+      "metrics": {
+        "downloads": 273,
+        "downloads_month": 273,
+        "likes": 2383,
+        "task": "text-generation",
+        "library": "grok",
+        "tags": [
+          "grok",
+          "grok-1",
+          "text-generation",
+          "license:apache-2.0",
+          "region:us"
+        ]
+      },
+      "author": "xai-org",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "enzostvs/deepsite",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "docker space by enzostvs",
+      "url": "https://huggingface.co/spaces/enzostvs/deepsite",
+      "category": "HuggingFace/spaces/docker",
+      "metrics": {
+        "likes": 16370,
+        "sdk": "docker",
+        "hardware": null,
+        "tags": [
+          "docker",
+          "region:us"
+        ]
+      },
+      "author": "enzostvs",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "open-llm-leaderboard/open_llm_leaderboard",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "docker space by open-llm-leaderboard",
+      "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+      "category": "HuggingFace/spaces/docker",
+      "metrics": {
+        "likes": 13820,
+        "sdk": "docker",
+        "hardware": null,
+        "tags": [
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public"
+        ]
+      },
+      "author": "open-llm-leaderboard",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "jbilcke-hf/ai-comic-factory",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "docker space by jbilcke-hf",
+      "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+      "category": "HuggingFace/spaces/docker",
+      "metrics": {
+        "likes": 10923,
+        "sdk": "docker",
+        "hardware": null,
+        "tags": [
+          "docker",
+          "region:us"
+        ]
+      },
+      "author": "jbilcke-hf",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Kwai-Kolors/Kolors-Virtual-Try-On",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by Kwai-Kolors",
+      "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 9999,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "Kwai-Kolors",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "black-forest-labs/FLUX.1-dev",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by black-forest-labs",
+      "url": "https://huggingface.co/spaces/black-forest-labs/FLUX.1-dev",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 9378,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "black-forest-labs",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "mteb/leaderboard",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "docker space by mteb",
+      "url": "https://huggingface.co/spaces/mteb/leaderboard",
+      "category": "HuggingFace/spaces/docker",
+      "metrics": {
+        "likes": 6982,
+        "sdk": "docker",
+        "hardware": null,
+        "tags": [
+          "docker",
+          "leaderboard",
+          "region:us"
+        ]
+      },
+      "author": "mteb",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "dalle-mini/dalle-mini",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "static space by dalle-mini",
+      "url": "https://huggingface.co/spaces/dalle-mini/dalle-mini",
+      "category": "HuggingFace/spaces/static",
+      "metrics": {
+        "likes": 5650,
+        "sdk": "static",
+        "hardware": null,
+        "tags": [
+          "static",
+          "region:us"
+        ]
+      },
+      "author": "dalle-mini",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "AP123/IllusionDiffusion",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by AP123",
+      "url": "https://huggingface.co/spaces/AP123/IllusionDiffusion",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 5355,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "AP123",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "facebook/MusicGen",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by facebook",
+      "url": "https://huggingface.co/spaces/facebook/MusicGen",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 5072,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ]
+      },
+      "author": "facebook",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "black-forest-labs/FLUX.1-schnell",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by black-forest-labs",
+      "url": "https://huggingface.co/spaces/black-forest-labs/FLUX.1-schnell",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 5036,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "black-forest-labs",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "microsoft/TRELLIS",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by microsoft",
+      "url": "https://huggingface.co/spaces/microsoft/TRELLIS",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 4777,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "microsoft",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "lmarena-ai/lmarena-leaderboard",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "static space by lmarena-ai",
+      "url": "https://huggingface.co/spaces/lmarena-ai/lmarena-leaderboard",
+      "category": "HuggingFace/spaces/static",
+      "metrics": {
+        "likes": 4706,
+        "sdk": "static",
+        "hardware": null,
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ]
+      },
+      "author": "lmarena-ai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Wan-AI/Wan2.2-Animate",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by Wan-AI",
+      "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 4359,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "Wan-AI",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "KingNish/OpenGPT-4o",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by KingNish",
+      "url": "https://huggingface.co/spaces/KingNish/OpenGPT-4o",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 4319,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "KingNish",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "KlingTeam/LivePortrait",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by KlingTeam",
+      "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 3693,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "Multimodal",
+          "Motion control",
+          "Image-to-Video",
+          "Video-to-Video"
+        ]
+      },
+      "author": "KlingTeam",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "nanotron/ultrascale-playbook",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "static space by nanotron",
+      "url": "https://huggingface.co/spaces/nanotron/ultrascale-playbook",
+      "category": "HuggingFace/spaces/static",
+      "metrics": {
+        "likes": 3666,
+        "sdk": "static",
+        "hardware": null,
+        "tags": [
+          "static",
+          "region:us"
+        ]
+      },
+      "author": "nanotron",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "InstantX/InstantID",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by InstantX",
+      "url": "https://huggingface.co/spaces/InstantX/InstantID",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 3562,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "InstantX",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "tencent/Hunyuan3D-2",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by tencent",
+      "url": "https://huggingface.co/spaces/tencent/Hunyuan3D-2",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 3193,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "tencent",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "hexgrad/Kokoro-TTS",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by hexgrad",
+      "url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 3158,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "hexgrad",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "akhaliq/anycoder",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "docker space by akhaliq",
+      "url": "https://huggingface.co/spaces/akhaliq/anycoder",
+      "category": "HuggingFace/spaces/docker",
+      "metrics": {
+        "likes": 3105,
+        "sdk": "docker",
+        "hardware": null,
+        "tags": [
+          "docker",
+          "region:us"
+        ]
+      },
+      "author": "akhaliq",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "mukaist/Midjourney",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by mukaist",
+      "url": "https://huggingface.co/spaces/mukaist/Midjourney",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2978,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "mukaist",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "pharmapsychotic/CLIP-Interrogator",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by pharmapsychotic",
+      "url": "https://huggingface.co/spaces/pharmapsychotic/CLIP-Interrogator",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2963,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "pharmapsychotic",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "HuggingFaceTB/smol-training-playbook",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "docker space by HuggingFaceTB",
+      "url": "https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook",
+      "category": "HuggingFace/spaces/docker",
+      "metrics": {
+        "likes": 2938,
+        "sdk": "docker",
+        "hardware": null,
+        "tags": [
+          "docker",
+          "research-article-template",
+          "research paper",
+          "scientific paper",
+          "data visualization"
+        ]
+      },
+      "author": "HuggingFaceTB",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "sanchit-gandhi/whisper-jax",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "docker space by sanchit-gandhi",
+      "url": "https://huggingface.co/spaces/sanchit-gandhi/whisper-jax",
+      "category": "HuggingFace/spaces/docker",
+      "metrics": {
+        "likes": 2797,
+        "sdk": "docker",
+        "hardware": null,
+        "tags": [
+          "docker",
+          "region:us"
+        ]
+      },
+      "author": "sanchit-gandhi",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "mrfakename/E2-F5-TTS",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by mrfakename",
+      "url": "https://huggingface.co/spaces/mrfakename/E2-F5-TTS",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2788,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "mrfakename",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "HumanAIGC/OutfitAnyone",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by HumanAIGC",
+      "url": "https://huggingface.co/spaces/HumanAIGC/OutfitAnyone",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2774,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "HumanAIGC",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "coqui/xtts",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by coqui",
+      "url": "https://huggingface.co/spaces/coqui/xtts",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2772,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "coqui",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "zerogpu-aoti/wan2-2-fp8da-aoti-faster",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by zerogpu-aoti",
+      "url": "https://huggingface.co/spaces/zerogpu-aoti/wan2-2-fp8da-aoti-faster",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2744,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ]
+      },
+      "author": "zerogpu-aoti",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "openai/whisper",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by openai",
+      "url": "https://huggingface.co/spaces/openai/whisper",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2686,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "openai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "not-lain/background-removal",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by not-lain",
+      "url": "https://huggingface.co/spaces/not-lain/background-removal",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2666,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ]
+      },
+      "author": "not-lain",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "tonyassi/voice-clone",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by tonyassi",
+      "url": "https://huggingface.co/spaces/tonyassi/voice-clone",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2574,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "tonyassi",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "fffiloni/diffusers-image-outpaint",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by fffiloni",
+      "url": "https://huggingface.co/spaces/fffiloni/diffusers-image-outpaint",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2492,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ]
+      },
+      "author": "fffiloni",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "suno/bark",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by suno",
+      "url": "https://huggingface.co/spaces/suno/bark",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2372,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "suno",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "sczhou/CodeFormer",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by sczhou",
+      "url": "https://huggingface.co/spaces/sczhou/CodeFormer",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2323,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "sczhou",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "microsoft/HuggingGPT",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by microsoft",
+      "url": "https://huggingface.co/spaces/microsoft/HuggingGPT",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2271,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "microsoft",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "AI4Editing/MagicQuill",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by AI4Editing",
+      "url": "https://huggingface.co/spaces/AI4Editing/MagicQuill",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2211,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "AI4Editing",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "jbilcke-hf/FacePoke_CLONE-THIS-REPO-TO-USE-IT",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "docker space by jbilcke-hf",
+      "url": "https://huggingface.co/spaces/jbilcke-hf/FacePoke_CLONE-THIS-REPO-TO-USE-IT",
+      "category": "HuggingFace/spaces/docker",
+      "metrics": {
+        "likes": 2206,
+        "sdk": "docker",
+        "hardware": null,
+        "tags": [
+          "docker",
+          "region:us"
+        ]
+      },
+      "author": "jbilcke-hf",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "yanze/PuLID-FLUX",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by yanze",
+      "url": "https://huggingface.co/spaces/yanze/PuLID-FLUX",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2068,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "yanze",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Gustavosta/MagicPrompt-Stable-Diffusion",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by Gustavosta",
+      "url": "https://huggingface.co/spaces/Gustavosta/MagicPrompt-Stable-Diffusion",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2049,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "Gustavosta",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "yisol/IDM-VTON",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by yisol",
+      "url": "https://huggingface.co/spaces/yisol/IDM-VTON",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2049,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "yisol",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "google/sdxl",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by google",
+      "url": "https://huggingface.co/spaces/google/sdxl",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2039,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "google",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "deepseek-ai/Janus-Pro-7B",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by deepseek-ai",
+      "url": "https://huggingface.co/spaces/deepseek-ai/Janus-Pro-7B",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2019,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "deepseek-ai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "multimodalart/stable-video-diffusion",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by multimodalart",
+      "url": "https://huggingface.co/spaces/multimodalart/stable-video-diffusion",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 2001,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ]
+      },
+      "author": "multimodalart",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "stabilityai/stable-diffusion-3.5-large",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by stabilityai",
+      "url": "https://huggingface.co/spaces/stabilityai/stable-diffusion-3.5-large",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1992,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "stabilityai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "tencent/Hunyuan3D-2.1",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by tencent",
+      "url": "https://huggingface.co/spaces/tencent/Hunyuan3D-2.1",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1990,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "tencent",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "finegrain/finegrain-image-enhancer",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by finegrain",
+      "url": "https://huggingface.co/spaces/finegrain/finegrain-image-enhancer",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1987,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "enhancer",
+          "upscaler",
+          "clarity",
+          "refiners"
+        ]
+      },
+      "author": "finegrain",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Wan-AI/Wan2.1",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by Wan-AI",
+      "url": "https://huggingface.co/spaces/Wan-AI/Wan2.1",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1982,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "Wan-AI",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "huggingface-projects/QR-code-AI-art-generator",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by huggingface-projects",
+      "url": "https://huggingface.co/spaces/huggingface-projects/QR-code-AI-art-generator",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1971,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "huggingface-projects",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "TencentARC/PhotoMaker",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by TencentARC",
+      "url": "https://huggingface.co/spaces/TencentARC/PhotoMaker",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1935,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "TencentARC",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "linoyts/Qwen-Image-Edit-Angles",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by linoyts",
+      "url": "https://huggingface.co/spaces/linoyts/Qwen-Image-Edit-Angles",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1921,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ]
+      },
+      "author": "linoyts",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "mrfakename/Z-Image-Turbo",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by mrfakename",
+      "url": "https://huggingface.co/spaces/mrfakename/Z-Image-Turbo",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1885,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ]
+      },
+      "author": "mrfakename",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "ggml-org/gguf-my-repo",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "docker space by ggml-org",
+      "url": "https://huggingface.co/spaces/ggml-org/gguf-my-repo",
+      "category": "HuggingFace/spaces/docker",
+      "metrics": {
+        "likes": 1818,
+        "sdk": "docker",
+        "hardware": null,
+        "tags": [
+          "docker",
+          "region:us"
+        ]
+      },
+      "author": "ggml-org",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "ehristoforu/dalle-3-xl-lora-v2",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by ehristoforu",
+      "url": "https://huggingface.co/spaces/ehristoforu/dalle-3-xl-lora-v2",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1781,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "ehristoforu",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "nari-labs/Dia-1.6B",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by nari-labs",
+      "url": "https://huggingface.co/spaces/nari-labs/Dia-1.6B",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1745,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "nari-labs",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "NihalGazi/Text-To-Speech-Unlimited",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by NihalGazi",
+      "url": "https://huggingface.co/spaces/NihalGazi/Text-To-Speech-Unlimited",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1740,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "NihalGazi",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Qwen/Qwen2.5-Coder-Artifacts",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by Qwen",
+      "url": "https://huggingface.co/spaces/Qwen/Qwen2.5-Coder-Artifacts",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1711,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "Qwen",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "ResembleAI/Chatterbox",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by ResembleAI",
+      "url": "https://huggingface.co/spaces/ResembleAI/Chatterbox",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1695,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ]
+      },
+      "author": "ResembleAI",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "multimodalart/stable-cascade",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by multimodalart",
+      "url": "https://huggingface.co/spaces/multimodalart/stable-cascade",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1679,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "multimodalart",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Tongyi-MAI/Z-Image-Turbo",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by Tongyi-MAI",
+      "url": "https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1674,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ]
+      },
+      "author": "Tongyi-MAI",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "jasperai/Flux.1-dev-Controlnet-Upscaler",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by jasperai",
+      "url": "https://huggingface.co/spaces/jasperai/Flux.1-dev-Controlnet-Upscaler",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1644,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "upscaler",
+          "super-resolution",
+          "controlnet",
+          "flux.1-dev"
+        ]
+      },
+      "author": "jasperai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "fancyfeast/joy-caption-alpha-two",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by fancyfeast",
+      "url": "https://huggingface.co/spaces/fancyfeast/joy-caption-alpha-two",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1641,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "fancyfeast",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "stabilityai/stable-diffusion-3-medium",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by stabilityai",
+      "url": "https://huggingface.co/spaces/stabilityai/stable-diffusion-3-medium",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1639,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "stabilityai",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "multimodalart/wan2-1-fast",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by multimodalart",
+      "url": "https://huggingface.co/spaces/multimodalart/wan2-1-fast",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1603,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ]
+      },
+      "author": "multimodalart",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "fffiloni/expression-editor",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "docker space by fffiloni",
+      "url": "https://huggingface.co/spaces/fffiloni/expression-editor",
+      "category": "HuggingFace/spaces/docker",
+      "metrics": {
+        "likes": 1602,
+        "sdk": "docker",
+        "hardware": null,
+        "tags": [
+          "docker",
+          "region:us"
+        ]
+      },
+      "author": "fffiloni",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "ilcve21/Sparc3D",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by ilcve21",
+      "url": "https://huggingface.co/spaces/ilcve21/Sparc3D",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1583,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "ilcve21",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "TencentARC/InstantMesh",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by TencentARC",
+      "url": "https://huggingface.co/spaces/TencentARC/InstantMesh",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1567,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "TencentARC",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "black-forest-labs/FLUX.1-Kontext-Dev",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by black-forest-labs",
+      "url": "https://huggingface.co/spaces/black-forest-labs/FLUX.1-Kontext-Dev",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1551,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ]
+      },
+      "author": "black-forest-labs",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "multimodalart/flux-lora-the-explorer",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by multimodalart",
+      "url": "https://huggingface.co/spaces/multimodalart/flux-lora-the-explorer",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1549,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "multimodalart",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "timbrooks/instruct-pix2pix",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by timbrooks",
+      "url": "https://huggingface.co/spaces/timbrooks/instruct-pix2pix",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1537,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "timbrooks",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "ysharma/ChatGPT4",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by ysharma",
+      "url": "https://huggingface.co/spaces/ysharma/ChatGPT4",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1489,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "ysharma",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "bigcode/bigcode-models-leaderboard",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by bigcode",
+      "url": "https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1489,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "leaderboard",
+          "eval:code",
+          "test:public",
+          "judge:auto"
+        ]
+      },
+      "author": "bigcode",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "DeepFloyd/IF",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "docker space by DeepFloyd",
+      "url": "https://huggingface.co/spaces/DeepFloyd/IF",
+      "category": "HuggingFace/spaces/docker",
+      "metrics": {
+        "likes": 1487,
+        "sdk": "docker",
+        "hardware": null,
+        "tags": [
+          "docker",
+          "region:us"
+        ]
+      },
+      "author": "DeepFloyd",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "CohereLabs/c4ai-command",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "docker space by CohereLabs",
+      "url": "https://huggingface.co/spaces/CohereLabs/c4ai-command",
+      "category": "HuggingFace/spaces/docker",
+      "metrics": {
+        "likes": 1475,
+        "sdk": "docker",
+        "hardware": null,
+        "tags": [
+          "docker",
+          "region:us"
+        ]
+      },
+      "author": "CohereLabs",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Lightricks/ltx-video-distilled",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by Lightricks",
+      "url": "https://huggingface.co/spaces/Lightricks/ltx-video-distilled",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1468,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ]
+      },
+      "author": "Lightricks",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "ali-vilab/modelscope-text-to-video-synthesis",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by ali-vilab",
+      "url": "https://huggingface.co/spaces/ali-vilab/modelscope-text-to-video-synthesis",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1455,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "ali-vilab",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "DontPlanToEnd/UGI-Leaderboard",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "docker space by DontPlanToEnd",
+      "url": "https://huggingface.co/spaces/DontPlanToEnd/UGI-Leaderboard",
+      "category": "HuggingFace/spaces/docker",
+      "metrics": {
+        "likes": 1451,
+        "sdk": "docker",
+        "hardware": null,
+        "tags": [
+          "docker",
+          "leaderboard",
+          "submission:manual",
+          "test:private",
+          "modality:text"
+        ]
+      },
+      "author": "DontPlanToEnd",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "jamesliu1217/EasyControl_Ghibli",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by jamesliu1217",
+      "url": "https://huggingface.co/spaces/jamesliu1217/EasyControl_Ghibli",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1449,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "jamesliu1217",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "vinthony/SadTalker",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by vinthony",
+      "url": "https://huggingface.co/spaces/vinthony/SadTalker",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1430,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "vinthony",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "zcxu-eric/magicanimate",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by zcxu-eric",
+      "url": "https://huggingface.co/spaces/zcxu-eric/magicanimate",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1428,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "zcxu-eric",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "CompVis/stable-diffusion-license",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "static space by CompVis",
+      "url": "https://huggingface.co/spaces/CompVis/stable-diffusion-license",
+      "category": "HuggingFace/spaces/static",
+      "metrics": {
+        "likes": 1424,
+        "sdk": "static",
+        "hardware": null,
+        "tags": [
+          "static",
+          "region:us"
+        ]
+      },
+      "author": "CompVis",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "NihalGazi/FLUX-Unlimited",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by NihalGazi",
+      "url": "https://huggingface.co/spaces/NihalGazi/FLUX-Unlimited",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1421,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "NihalGazi",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "fancyfeast/joy-caption-pre-alpha",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by fancyfeast",
+      "url": "https://huggingface.co/spaces/fancyfeast/joy-caption-pre-alpha",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1417,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "fancyfeast",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "osanseviero/InstantCoder",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "docker space by osanseviero",
+      "url": "https://huggingface.co/spaces/osanseviero/InstantCoder",
+      "category": "HuggingFace/spaces/docker",
+      "metrics": {
+        "likes": 1404,
+        "sdk": "docker",
+        "hardware": null,
+        "tags": [
+          "docker",
+          "region:us"
+        ]
+      },
+      "author": "osanseviero",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Asahina2K/animagine-xl-3.1",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by Asahina2K",
+      "url": "https://huggingface.co/spaces/Asahina2K/animagine-xl-3.1",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1389,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "Asahina2K",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "gokaygokay/FLUX-Prompt-Generator",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by gokaygokay",
+      "url": "https://huggingface.co/spaces/gokaygokay/FLUX-Prompt-Generator",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1372,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "gokaygokay",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "lllyasviel/IC-Light",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by lllyasviel",
+      "url": "https://huggingface.co/spaces/lllyasviel/IC-Light",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1355,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "lllyasviel",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "akhaliq/AnimeGANv2",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by akhaliq",
+      "url": "https://huggingface.co/spaces/akhaliq/AnimeGANv2",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1347,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "akhaliq",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "fffiloni/CLIP-Interrogator-2",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by fffiloni",
+      "url": "https://huggingface.co/spaces/fffiloni/CLIP-Interrogator-2",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1337,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ]
+      },
+      "author": "fffiloni",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "DamarJati/FLUX.1-RealismLora",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by DamarJati",
+      "url": "https://huggingface.co/spaces/DamarJati/FLUX.1-RealismLora",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1325,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "DamarJati",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "tonyassi/video-face-swap",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by tonyassi",
+      "url": "https://huggingface.co/spaces/tonyassi/video-face-swap",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1294,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "tonyassi",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "HuggingFaceFW/blogpost-fineweb-v1",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "static space by HuggingFaceFW",
+      "url": "https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1",
+      "category": "HuggingFace/spaces/static",
+      "metrics": {
+        "likes": 1276,
+        "sdk": "static",
+        "hardware": null,
+        "tags": [
+          "static",
+          "region:us"
+        ]
+      },
+      "author": "HuggingFaceFW",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "multimodalart/qwen-image-multiple-angles-3d-camera",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by multimodalart",
+      "url": "https://huggingface.co/spaces/multimodalart/qwen-image-multiple-angles-3d-camera",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1254,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "multimodalart",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "Xenova/whisper-web",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "static space by Xenova",
+      "url": "https://huggingface.co/spaces/Xenova/whisper-web",
+      "category": "HuggingFace/spaces/static",
+      "metrics": {
+        "likes": 1227,
+        "sdk": "static",
+        "hardware": null,
+        "tags": [
+          "static",
+          "region:us"
+        ]
+      },
+      "author": "Xenova",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "merve/ChatGPT-prompt-generator",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by merve",
+      "url": "https://huggingface.co/spaces/merve/ChatGPT-prompt-generator",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1215,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "merve",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "huggingchat/chat-ui",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "static space by huggingchat",
+      "url": "https://huggingface.co/spaces/huggingchat/chat-ui",
+      "category": "HuggingFace/spaces/static",
+      "metrics": {
+        "likes": 1213,
+        "sdk": "static",
+        "hardware": null,
+        "tags": [
+          "static",
+          "region:us"
+        ]
+      },
+      "author": "huggingchat",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "hf-audio/open_asr_leaderboard",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by hf-audio",
+      "url": "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1206,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "leaderboard",
+          "region:us"
+        ]
+      },
+      "author": "hf-audio",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "ysharma/Explore_llamav2_with_TGI",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by ysharma",
+      "url": "https://huggingface.co/spaces/ysharma/Explore_llamav2_with_TGI",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1204,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "ysharma",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "TencentARC/PhotoMaker-V2",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by TencentARC",
+      "url": "https://huggingface.co/spaces/TencentARC/PhotoMaker-V2",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1204,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "region:us"
+        ]
+      },
+      "author": "TencentARC",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "prithivMLmods/FLUX-LoRA-DLC",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by prithivMLmods",
+      "url": "https://huggingface.co/spaces/prithivMLmods/FLUX-LoRA-DLC",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1197,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ]
+      },
+      "author": "prithivMLmods",
+      "date_observed": "2026-01-30"
+    },
+    {
+      "name": "dream2589632147/Dream-wan2-2-faster-Pro",
+      "source_type": "huggingface",
+      "signal_type": "trending_space",
+      "entity_type": "technology",
+      "description": "gradio space by dream2589632147",
+      "url": "https://huggingface.co/spaces/dream2589632147/Dream-wan2-2-faster-Pro",
+      "category": "HuggingFace/spaces/gradio",
+      "metrics": {
+        "likes": 1193,
+        "sdk": "gradio",
+        "hardware": null,
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ]
+      },
+      "author": "dream2589632147",
+      "date_observed": "2026-01-30"
+    }
+  ]
+}

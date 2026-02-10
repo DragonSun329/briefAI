@@ -1,0 +1,416 @@
+{
+  "version": "1.0",
+  "description": "Built-in screener presets for briefAI",
+  "presets": [
+    {
+      "name": "Hot AI Startups",
+      "description": "High media attention + strong momentum + startup classification",
+      "category": "opportunities",
+      "tags": ["ai", "startups", "trending", "investment"],
+      "criteria": [
+        {
+          "field": "media_score",
+          "operator": ">=",
+          "value": 70,
+          "type": "score",
+          "label": "High media coverage",
+          "description": "Entities with significant media attention"
+        },
+        {
+          "field": "momentum_7d",
+          "operator": ">",
+          "value": 10,
+          "type": "momentum",
+          "label": "Positive 7-day momentum",
+          "description": "Score increasing over past week"
+        },
+        {
+          "field": "entity_type",
+          "operator": "in",
+          "value": ["company", "technology"],
+          "type": "category",
+          "label": "Startups and tech",
+          "description": "Focus on companies and technologies"
+        }
+      ],
+      "sort_by": "momentum_7d",
+      "sort_order": "desc",
+      "limit": 50
+    },
+    {
+      "name": "Undervalued Tech",
+      "description": "Strong technical signals but low media coverage - potential hidden gems",
+      "category": "opportunities",
+      "tags": ["divergence", "undervalued", "technical", "research"],
+      "criteria": [
+        {
+          "field": "technical_score",
+          "operator": ">=",
+          "value": 65,
+          "type": "score",
+          "label": "Strong technical signals",
+          "description": "High research/development activity"
+        },
+        {
+          "field": "media_score",
+          "operator": "<",
+          "value": 40,
+          "type": "score",
+          "label": "Low media coverage",
+          "description": "Under the radar"
+        },
+        {
+          "field": "technical_score",
+          "operator": "field_gt",
+          "value": null,
+          "compare_field": "media_score",
+          "type": "comparison",
+          "label": "Technical > Media",
+          "description": "Technical signals outpace media attention"
+        }
+      ],
+      "sort_by": "technical_score",
+      "sort_order": "desc",
+      "limit": 30
+    },
+    {
+      "name": "Momentum Leaders",
+      "description": "Top entities by 7-day momentum across all categories",
+      "category": "trending",
+      "tags": ["momentum", "trending", "velocity"],
+      "criteria": [
+        {
+          "field": "momentum_7d",
+          "operator": ">",
+          "value": 25,
+          "type": "momentum",
+          "label": "Strong momentum",
+          "description": "Significant positive momentum"
+        },
+        {
+          "field": "composite_score",
+          "operator": ">=",
+          "value": 30,
+          "type": "score",
+          "label": "Minimum baseline",
+          "description": "Filter out noise"
+        }
+      ],
+      "sort_by": "momentum_7d",
+      "sort_order": "desc",
+      "limit": 10
+    },
+    {
+      "name": "Risk Alerts",
+      "description": "High volatility + negative momentum - potential problems",
+      "category": "risk",
+      "tags": ["risk", "volatility", "declining", "warning"],
+      "criteria": [
+        {
+          "field": "volatility",
+          "operator": ">",
+          "value": 50,
+          "type": "score",
+          "label": "High volatility",
+          "description": "Unstable signal patterns"
+        },
+        {
+          "field": "momentum_7d",
+          "operator": "<",
+          "value": -10,
+          "type": "momentum",
+          "label": "Negative momentum",
+          "description": "Declining scores"
+        }
+      ],
+      "sort_by": "momentum_7d",
+      "sort_order": "asc",
+      "limit": 25
+    },
+    {
+      "name": "China AI Watch",
+      "description": "Chinese AI entities with recent signals and activity",
+      "category": "regional",
+      "tags": ["china", "ai", "regional", "geopolitics"],
+      "criteria": [
+        {
+          "field": "region",
+          "operator": "in",
+          "value": ["china", "cn", "asia"],
+          "type": "category",
+          "label": "China/Asia region",
+          "description": "Geographic filter"
+        },
+        {
+          "field": "signal_count_7d",
+          "operator": ">=",
+          "value": 3,
+          "type": "score",
+          "label": "Recent signals",
+          "description": "Active in past week"
+        }
+      ],
+      "sort_by": "media_score",
+      "sort_order": "desc",
+      "limit": 50
+    },
+    {
+      "name": "Funding Signals",
+      "description": "Entities with strong financial signals indicating funding activity",
+      "category": "opportunities",
+      "tags": ["funding", "investment", "financial", "capital"],
+      "criteria": [
+        {
+          "field": "financial_score",
+          "operator": ">=",
+          "value": 60,
+          "type": "score",
+          "label": "Strong financial signals",
+          "description": "Active funding indicators"
+        },
+        {
+          "field": "has_funding_signal",
+          "operator": "=",
+          "value": true,
+          "type": "signal",
+          "label": "Has funding signal",
+          "description": "Recent funding activity detected"
+        }
+      ],
+      "sort_by": "financial_score",
+      "sort_order": "desc",
+      "limit": 30
+    },
+    {
+      "name": "Product Traction Stars",
+      "description": "Strong product signals with growing user interest",
+      "category": "opportunities",
+      "tags": ["product", "traction", "users", "growth"],
+      "criteria": [
+        {
+          "field": "product_score",
+          "operator": ">=",
+          "value": 65,
+          "type": "score",
+          "label": "Strong product signals",
+          "description": "High user/product traction"
+        },
+        {
+          "field": "momentum_7d",
+          "operator": ">",
+          "value": 5,
+          "type": "momentum",
+          "label": "Positive momentum",
+          "description": "Growing interest"
+        }
+      ],
+      "sort_by": "product_score",
+      "sort_order": "desc",
+      "limit": 25
+    },
+    {
+      "name": "Divergence Opportunities",
+      "description": "Entities with significant signal divergences - potential arbitrage",
+      "category": "opportunities",
+      "tags": ["divergence", "arbitrage", "signals"],
+      "criteria": [
+        {
+          "field": "has_divergence",
+          "operator": "=",
+          "value": true,
+          "type": "signal",
+          "label": "Has divergence",
+          "description": "Active signal divergence detected"
+        },
+        {
+          "field": "divergence_strength",
+          "operator": ">=",
+          "value": 0.5,
+          "type": "score",
+          "label": "Strong divergence",
+          "description": "Significant magnitude"
+        }
+      ],
+      "sort_by": "divergence_strength",
+      "sort_order": "desc",
+      "limit": 20
+    },
+    {
+      "name": "Media Darlings",
+      "description": "High media coverage but potentially overhyped (media > technicals)",
+      "category": "caution",
+      "tags": ["media", "hype", "overvalued"],
+      "criteria": [
+        {
+          "field": "media_score",
+          "operator": ">=",
+          "value": 75,
+          "type": "score",
+          "label": "Very high media",
+          "description": "Extensive coverage"
+        },
+        {
+          "field": "media_score",
+          "operator": "field_gt",
+          "value": null,
+          "compare_field": "technical_score",
+          "type": "comparison",
+          "label": "Media > Technical",
+          "description": "Hype exceeds substance"
+        },
+        {
+          "field": "technical_score",
+          "operator": "<",
+          "value": 50,
+          "type": "score",
+          "label": "Lower technicals",
+          "description": "Weaker technical signals"
+        }
+      ],
+      "sort_by": "media_score",
+      "sort_order": "desc",
+      "limit": 20
+    },
+    {
+      "name": "Recent Breakouts",
+      "description": "New entities or those showing sudden activity spikes",
+      "category": "trending",
+      "tags": ["breakout", "new", "emerging"],
+      "criteria": [
+        {
+          "field": "momentum_7d",
+          "operator": ">",
+          "value": 50,
+          "type": "momentum",
+          "label": "Very strong momentum",
+          "description": "Exceptional growth rate"
+        },
+        {
+          "field": "last_signal_date",
+          "operator": ">",
+          "value": "7 days ago",
+          "type": "date",
+          "label": "Recent activity",
+          "description": "Active in past week"
+        }
+      ],
+      "sort_by": "momentum_7d",
+      "sort_order": "desc",
+      "limit": 15
+    },
+    {
+      "name": "Balanced All-Stars",
+      "description": "Strong across multiple signal categories - well-rounded entities",
+      "category": "quality",
+      "tags": ["balanced", "quality", "diversified"],
+      "criteria": [
+        {
+          "field": "technical_score",
+          "operator": ">=",
+          "value": 50,
+          "type": "score",
+          "label": "Good technical",
+          "description": "Solid technical presence"
+        },
+        {
+          "field": "media_score",
+          "operator": ">=",
+          "value": 50,
+          "type": "score",
+          "label": "Good media",
+          "description": "Reasonable coverage"
+        },
+        {
+          "field": "composite_score",
+          "operator": ">=",
+          "value": 60,
+          "type": "score",
+          "label": "Strong composite",
+          "description": "High overall score"
+        }
+      ],
+      "sort_by": "composite_score",
+      "sort_order": "desc",
+      "limit": 30
+    },
+    {
+      "name": "Sleeping Giants",
+      "description": "High composite but low recent momentum - potentially consolidating",
+      "category": "watchlist",
+      "tags": ["consolidation", "stability", "established"],
+      "criteria": [
+        {
+          "field": "composite_score",
+          "operator": ">=",
+          "value": 70,
+          "type": "score",
+          "label": "Strong composite",
+          "description": "High overall score"
+        },
+        {
+          "field": "momentum_7d",
+          "operator": "<",
+          "value": 5,
+          "type": "momentum",
+          "label": "Low momentum",
+          "description": "Stable or consolidating"
+        },
+        {
+          "field": "momentum_7d",
+          "operator": ">",
+          "value": -10,
+          "type": "momentum",
+          "label": "Not declining",
+          "description": "Not in freefall"
+        }
+      ],
+      "sort_by": "composite_score",
+      "sort_order": "desc",
+      "limit": 25
+    }
+  ],
+  "categories": [
+    {
+      "id": "opportunities",
+      "name": "Opportunities",
+      "description": "Potential investment or attention opportunities",
+      "icon": "target"
+    },
+    {
+      "id": "trending",
+      "name": "Trending",
+      "description": "Hot and momentum-driven screeners",
+      "icon": "chart"
+    },
+    {
+      "id": "risk",
+      "name": "Risk Alerts",
+      "description": "Potential problems and warnings",
+      "icon": "warning"
+    },
+    {
+      "id": "regional",
+      "name": "Regional Focus",
+      "description": "Geographic-focused screeners",
+      "icon": "globe"
+    },
+    {
+      "id": "caution",
+      "name": "Caution",
+      "description": "Entities requiring careful evaluation",
+      "icon": "search"
+    },
+    {
+      "id": "quality",
+      "name": "Quality",
+      "description": "High-quality, balanced entities",
+      "icon": "star"
+    },
+    {
+      "id": "watchlist",
+      "name": "Watchlist",
+      "description": "Entities to monitor",
+      "icon": "eye"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "version": "1.0",
+  "description": "Investment Thesis 5T scoring configuration for business analyst alignment",
+
+  "weights": {
+    "team": 0.20,
+    "technology": 0.20,
+    "market": 0.20,
+    "timing": 0.20,
+    "traction": 0.20
+  },
+
+  "team": {
+    "description": "Team quality signals from company data and news mentions",
+    "crunchbase_rank_weight": 0.40,
+    "exec_mention_weight": 0.30,
+    "key_hire_weight": 0.20,
+    "prior_exit_weight": 0.10,
+    "exec_keywords": ["CEO", "CTO", "founder", "co-founder", "chief", "president", "VP"],
+    "key_hire_keywords": ["hires", "joins", "appoints", "recruits from", "poaches", "brings on"],
+    "rank_thresholds": {
+      "excellent": 100,
+      "good": 500,
+      "average": 2000
+    }
+  },
+
+  "technology": {
+    "description": "Technical momentum from GitHub and HuggingFace signals",
+    "tms_weight": 0.50,
+    "star_velocity_weight": 0.25,
+    "download_velocity_weight": 0.25,
+    "velocity_thresholds": {
+      "high": 1000,
+      "medium": 100,
+      "low": 10
+    }
+  },
+
+  "market": {
+    "description": "Market opportunity signals from news and attention metrics",
+    "nas_weight": 0.40,
+    "article_volume_weight": 0.30,
+    "market_keyword_weight": 0.30,
+    "market_keywords": [
+      "billion dollar",
+      "market size",
+      "TAM",
+      "total addressable market",
+      "serviceable addressable market",
+      "SAM",
+      "addressable market",
+      "industry growth",
+      "market opportunity",
+      "market potential",
+      "revenue opportunity"
+    ],
+    "volume_thresholds": {
+      "high": 50,
+      "medium": 20,
+      "low": 5
+    }
+  },
+
+  "timing": {
+    "description": "Market timing signals from lifecycle state and velocity vectors",
+    "lifecycle_scores": {
+      "emerging": 90,
+      "validating": 80,
+      "establishing": 60,
+      "mainstream": 40
+    },
+    "hype_cycle_modifiers": {
+      "innovation_trigger": 1.2,
+      "peak_expectations": 0.7,
+      "trough_disillusionment": 0.9,
+      "slope_enlightenment": 1.1,
+      "plateau_productivity": 0.8,
+      "unknown": 1.0
+    },
+    "velocity_bonus": {
+      "accelerating": 10,
+      "decelerating": -5,
+      "stable": 0
+    }
+  },
+
+  "traction": {
+    "description": "Adoption and revenue proxy signals",
+    "ccs_weight": 0.35,
+    "eis_weight": 0.35,
+    "pms_weight": 0.20,
+    "customer_mention_weight": 0.10,
+    "customer_keywords": [
+      "customer",
+      "client",
+      "user",
+      "enterprise",
+      "deployment",
+      "production",
+      "revenue",
+      "ARR",
+      "MRR"
+    ]
+  },
+
+  "confidence_thresholds": {
+    "high": 0.70,
+    "medium": 0.40,
+    "low": 0.0
+  },
+
+  "output": {
+    "min_score": 0,
+    "max_score": 100,
+    "default_score": 50
+  }
+}

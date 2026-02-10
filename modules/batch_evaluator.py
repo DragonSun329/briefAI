@@ -25,7 +25,7 @@ class BatchEvaluator:
     def __init__(
         self,
         llm_client: LLMClient = None,
-        batch_size: int = 15,
+        batch_size: int = 5,
         pass_score: float = 6.0,
         enable_checkpoint: bool = False,
         checkpoint_manager: Optional[Any] = None
@@ -35,7 +35,7 @@ class BatchEvaluator:
 
         Args:
             llm_client: LLM client instance (creates new if None)
-            batch_size: Number of articles to evaluate per LLM call (increased from 10 to 15 for speed)
+            batch_size: Number of articles to evaluate per LLM call (reduced to 5 for free model compatibility)
             pass_score: Minimum score to pass to Tier 3 (0-10 scale)
             enable_checkpoint: Save results to checkpoint
             checkpoint_manager: Checkpoint manager instance
@@ -148,7 +148,7 @@ class BatchEvaluator:
                 system_prompt=system_prompt,
                 user_message=user_message,
                 temperature=0.3,
-                max_tokens=1500
+                max_tokens=800  # Reduced for smaller batches (5 articles)
             )
 
             # Parse response

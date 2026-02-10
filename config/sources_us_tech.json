@@ -1,0 +1,281 @@
+{
+  "description": "US Tech Company News Sources for AI Trend Tracking",
+  "version": "1.0.0",
+  "updated": "2025-01-26",
+  "companies": [
+    {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "priority": 1,
+      "description": "AI chips and GPU leader for training and inference",
+      "market_cap_tier": "mega",
+      "ai_relevance": "critical"
+    },
+    {
+      "id": "google",
+      "name": "Google/Alphabet",
+      "ticker": "GOOGL",
+      "priority": 1,
+      "description": "Gemini, DeepMind, Google Cloud AI",
+      "market_cap_tier": "mega",
+      "ai_relevance": "critical"
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "ticker": "META",
+      "priority": 1,
+      "description": "Llama models, PyTorch, open-source AI leader",
+      "market_cap_tier": "mega",
+      "ai_relevance": "critical"
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "priority": 1,
+      "description": "OpenAI partnership, Copilot, Azure AI",
+      "market_cap_tier": "mega",
+      "ai_relevance": "critical"
+    },
+    {
+      "id": "amd",
+      "name": "AMD",
+      "ticker": "AMD",
+      "priority": 1,
+      "description": "AI chips competitor, MI300 accelerators",
+      "market_cap_tier": "large",
+      "ai_relevance": "high"
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "ticker": "AMZN",
+      "priority": 2,
+      "description": "AWS Bedrock, Anthropic investor, Trainium chips",
+      "market_cap_tier": "mega",
+      "ai_relevance": "high"
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "ticker": "AAPL",
+      "priority": 2,
+      "description": "Apple Intelligence, on-device AI",
+      "market_cap_tier": "mega",
+      "ai_relevance": "medium"
+    },
+    {
+      "id": "tesla",
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "priority": 2,
+      "description": "FSD, Optimus robot, Dojo supercomputer",
+      "market_cap_tier": "mega",
+      "ai_relevance": "high"
+    },
+    {
+      "id": "palantir",
+      "name": "Palantir",
+      "ticker": "PLTR",
+      "priority": 2,
+      "description": "AIP platform, enterprise AI",
+      "market_cap_tier": "large",
+      "ai_relevance": "high"
+    },
+    {
+      "id": "salesforce",
+      "name": "Salesforce",
+      "ticker": "CRM",
+      "priority": 2,
+      "description": "Einstein AI, Agentforce",
+      "market_cap_tier": "large",
+      "ai_relevance": "medium"
+    },
+    {
+      "id": "adobe",
+      "name": "Adobe",
+      "ticker": "ADBE",
+      "priority": 2,
+      "description": "Firefly, Sensei, generative AI for creative",
+      "market_cap_tier": "large",
+      "ai_relevance": "medium"
+    },
+    {
+      "id": "snowflake",
+      "name": "Snowflake",
+      "ticker": "SNOW",
+      "priority": 2,
+      "description": "Cortex AI, data cloud ML",
+      "market_cap_tier": "large",
+      "ai_relevance": "medium"
+    },
+    {
+      "id": "ibm",
+      "name": "IBM",
+      "ticker": "IBM",
+      "priority": 2,
+      "description": "watsonx, enterprise AI",
+      "market_cap_tier": "large",
+      "ai_relevance": "medium"
+    },
+    {
+      "id": "oracle",
+      "name": "Oracle",
+      "ticker": "ORCL",
+      "priority": 2,
+      "description": "OCI AI, Autonomous Database",
+      "market_cap_tier": "mega",
+      "ai_relevance": "medium"
+    },
+    {
+      "id": "databricks",
+      "name": "Databricks",
+      "ticker": "PRIVATE",
+      "priority": 2,
+      "description": "Lakehouse AI, MLflow, DBRX model",
+      "market_cap_tier": "large_private",
+      "ai_relevance": "high"
+    }
+  ],
+  "sources": [
+    {
+      "id": "us_tech_google_news",
+      "name": "Google News (US Tech)",
+      "type": "rss",
+      "description": "Google News RSS feeds for US tech company AI news",
+      "enabled": true,
+      "credibility_score": 7,
+      "relevance_weight": 9,
+      "update_frequency": "hourly",
+      "rate_limit": {
+        "requests_per_minute": 20,
+        "delay_between_requests_ms": 1500
+      },
+      "categories": ["media", "news"]
+    },
+    {
+      "id": "us_tech_yahoo_finance",
+      "name": "Yahoo Finance News",
+      "type": "rss",
+      "description": "Yahoo Finance stock news for US tech tickers",
+      "enabled": true,
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "update_frequency": "hourly",
+      "rate_limit": {
+        "requests_per_minute": 30,
+        "delay_between_requests_ms": 1000
+      },
+      "categories": ["media", "financial"]
+    },
+    {
+      "id": "us_tech_newsroom",
+      "name": "Company Newsrooms",
+      "type": "web",
+      "description": "Official company news and press releases",
+      "enabled": true,
+      "credibility_score": 10,
+      "relevance_weight": 10,
+      "update_frequency": "daily",
+      "rate_limit": {
+        "requests_per_minute": 10,
+        "delay_between_requests_ms": 2000
+      },
+      "categories": ["official", "press_release"]
+    }
+  ],
+  "newsroom_urls": {
+    "nvidia": {
+      "newsroom": "https://nvidianews.nvidia.com/news",
+      "blog": "https://blogs.nvidia.com/blog/category/deep-learning/",
+      "ir": "https://investor.nvidia.com/news/press-release-details"
+    },
+    "google": {
+      "newsroom": "https://blog.google/technology/ai/",
+      "deepmind": "https://deepmind.google/discover/blog/",
+      "ir": "https://abc.xyz/investor/"
+    },
+    "meta": {
+      "newsroom": "https://ai.meta.com/blog/",
+      "research": "https://ai.meta.com/research/",
+      "ir": "https://investor.fb.com/press-releases/"
+    },
+    "microsoft": {
+      "newsroom": "https://blogs.microsoft.com/blog/",
+      "research": "https://www.microsoft.com/en-us/research/blog/",
+      "ir": "https://www.microsoft.com/en-us/investor/"
+    },
+    "amd": {
+      "newsroom": "https://www.amd.com/en/newsroom",
+      "ir": "https://ir.amd.com/news-events/press-releases"
+    },
+    "amazon": {
+      "newsroom": "https://www.aboutamazon.com/news",
+      "aws_blog": "https://aws.amazon.com/blogs/machine-learning/",
+      "ir": "https://ir.aboutamazon.com/news-releases"
+    },
+    "apple": {
+      "newsroom": "https://www.apple.com/newsroom/",
+      "ml_research": "https://machinelearning.apple.com/",
+      "ir": "https://investor.apple.com/press-releases/"
+    },
+    "tesla": {
+      "newsroom": "https://www.tesla.com/blog",
+      "ir": "https://ir.tesla.com/press-releases"
+    },
+    "palantir": {
+      "newsroom": "https://www.palantir.com/newsroom/",
+      "ir": "https://investors.palantir.com/news-releases"
+    },
+    "salesforce": {
+      "newsroom": "https://www.salesforce.com/news/",
+      "ai_blog": "https://www.salesforce.com/blog/category/artificial-intelligence/",
+      "ir": "https://investor.salesforce.com/press-releases/"
+    },
+    "adobe": {
+      "newsroom": "https://news.adobe.com/",
+      "blog": "https://blog.adobe.com/",
+      "ir": "https://www.adobe.com/investor-relations.html"
+    },
+    "snowflake": {
+      "newsroom": "https://www.snowflake.com/en/news/",
+      "blog": "https://www.snowflake.com/blog/",
+      "ir": "https://investors.snowflake.com/news/"
+    },
+    "ibm": {
+      "newsroom": "https://newsroom.ibm.com/",
+      "research": "https://research.ibm.com/blog",
+      "ir": "https://investor.ibm.com/news-releases"
+    },
+    "oracle": {
+      "newsroom": "https://www.oracle.com/news/",
+      "ir": "https://investor.oracle.com/news-events/"
+    },
+    "databricks": {
+      "newsroom": "https://www.databricks.com/blog",
+      "company_blog": "https://www.databricks.com/company/newsroom"
+    }
+  },
+  "ai_keywords_global": [
+    "artificial intelligence", "AI", "machine learning", "ML",
+    "deep learning", "neural network", "large language model", "LLM",
+    "generative AI", "GenAI", "GPT", "transformer",
+    "inference", "training", "GPU", "accelerator",
+    "copilot", "assistant", "chatbot", "agent"
+  ],
+  "sentiment_keywords": {
+    "positive": [
+      "breakthrough", "revolutionary", "record", "surge", "soar", "beat",
+      "exceeds", "growth", "innovation", "partnership", "deal", "contract",
+      "launch", "release", "upgrade", "bullish", "outperform", "buy",
+      "strong", "accelerate", "milestone", "impressive", "dominant", "leader"
+    ],
+    "negative": [
+      "decline", "drop", "fall", "miss", "below", "weak", "concern", "risk",
+      "warning", "lawsuit", "investigation", "regulatory", "antitrust", "layoff",
+      "cut", "downgrade", "bearish", "sell", "underperform", "struggle", "delay"
+    ]
+  }
+}

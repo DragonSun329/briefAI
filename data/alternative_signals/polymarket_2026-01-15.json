@@ -1,0 +1,506 @@
+{
+  "scraped_at": "2026-01-15T18:02:50.114874",
+  "total_markets": 500,
+  "ai_markets": 11,
+  "markets": [
+    {
+      "id": "561242",
+      "question": "Will Tulsi Gabbard win the 2028 US Presidential Election?",
+      "description": "The 2028 US Presidential Election is scheduled to take place on November 7, 2028.\n\nThis market will resolve to the person who wins the 2028 US Presidential Election.\n\nThe resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven\u2019t called the race for the same candidate by the inauguration date (January 20, 2029) this market will resolve based on who is inaugurated.",
+      "outcomes": "[\"Yes\", \"No\"]",
+      "outcome_probabilities": {
+        "[": 0.0,
+        "\"": 0.0,
+        "Y": 0.0,
+        "e": 0.0,
+        "s": 0.0,
+        ",": 700.0,
+        " ": 500.0,
+        "N": 0.0,
+        "o": 0.0,
+        "]": 0.0
+      },
+      "volume": 14936632.320857,
+      "volume_24h": 132424.868564,
+      "liquidity": 715456.73634,
+      "start_date": "2025-07-11T19:06:02.279Z",
+      "end_date": "2028-11-07T00:00:00Z",
+      "slug": "will-tulsi-gabbard-win-the-2028-us-presidential-election",
+      "active": true,
+      "spread": 0.001,
+      "bucket": "ai-general"
+    },
+    {
+      "id": "561976",
+      "question": "Will Tulsi Gabbard win the 2028 Republican presidential nomination?",
+      "description": "This market will resolve to \u201cYes\u201d if the named individual wins and accepts the 2028 nomination of the Republican Party for U.S. president. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be a consensus of official Republican Party sources.\n\nAny replacement of the Republican nominee before election day will not change the resolution of the market.",
+      "outcomes": "[\"Yes\", \"No\"]",
+      "outcome_probabilities": {
+        "[": 0.0,
+        "\"": 0.0,
+        "Y": 0.0,
+        "e": 0.0,
+        "s": 0.0,
+        ",": 700.0,
+        " ": 500.0,
+        "N": 0.0,
+        "o": 0.0,
+        "]": 0.0
+      },
+      "volume": 3764676.531709,
+      "volume_24h": 14159.500709000002,
+      "liquidity": 328132.54974,
+      "start_date": "2025-07-11T19:42:04.191Z",
+      "end_date": "2028-11-07T00:00:00Z",
+      "slug": "will-tulsi-gabbard-win-the-2028-republican-presidential-nomination",
+      "active": true,
+      "spread": 0.001,
+      "bucket": "ai-general"
+    },
+    {
+      "id": "553864",
+      "question": "Will the Orlando Magic win the 2026 NBA Finals?",
+      "description": "This market will resolve to \u201cYes\u201d if the Orlando Magic win the 2026 NBA Finals. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NBA Finals based off the rules of the NBA.\n\nThe resolution source for this market will be information from the NBA.",
+      "outcomes": "[\"Yes\", \"No\"]",
+      "outcome_probabilities": {
+        "[": 0.0,
+        "\"": 0.0,
+        "Y": 0.0,
+        "e": 0.0,
+        "s": 0.0,
+        ",": 500.0,
+        " ": 500.0,
+        "N": 0.0,
+        "o": 0.0,
+        "]": 0.0
+      },
+      "volume": 1651128.995024,
+      "volume_24h": 14234.611362999996,
+      "liquidity": 305767.97994,
+      "start_date": "2025-06-23T16:02:21.905414Z",
+      "end_date": "2026-07-01T00:00:00Z",
+      "slug": "will-the-orlando-magic-win-the-2026-nba-finals",
+      "active": true,
+      "spread": 0.001,
+      "bucket": "ai-safety"
+    },
+    {
+      "id": "527079",
+      "question": "Will GTA 6 cost $100+?",
+      "description": "This market will resolve to \"Yes\" if the standard edition of Grand Theft Auto VI (GTA 6) launches at $100.00 or more. Otherwise, this market will resolve to \"No\".\n\nThis market will resolve based on the pre-tax launch price in USD of the standard edition of GTA 6 on Xbox or PlayStation as listed on the Microsoft Store or PlayStation Store on the first official day of its release in the United States.\n\nIf the price differs between the Microsoft and PlayStation stores, this market will resolve acco",
+      "outcomes": "[\"Yes\", \"No\"]",
+      "outcome_probabilities": {
+        "[": 0.0,
+        "\"": 0.0,
+        "Y": 0.0,
+        "e": 0.0,
+        "s": 0.0,
+        ",": 400.0,
+        " ": 500.0,
+        "N": 0.0,
+        "o": 0.0,
+        "]": 0.0
+      },
+      "volume": 1238314.356188,
+      "volume_24h": 121996.34967199997,
+      "liquidity": 27301.56618,
+      "start_date": "2025-03-06T20:51:01.626726Z",
+      "end_date": "2026-02-28T12:00:00Z",
+      "slug": "will-gta-6-cost-100",
+      "active": true,
+      "spread": 0.001,
+      "bucket": "ai-general"
+    },
+    {
+      "id": "540818",
+      "question": "New Playboi Carti Album before GTA VI?",
+      "description": "This market will resolve to \"Yes\" if Playboi Carti officially releases a new album before Grand Theft Auto VI is officially released in the US. Otherwise, this market will resolve to \"No\".\n\nIf neither occurs by July 31, 2026, 11:59 PM ET, this market will resolve to 50-50.\n\nFor the purposes of this market, \"release\" refers to the game becoming publicly available for purchase or download in the US. Early access, beta versions, other forms of pre-release availability, or leaks will not count as an",
+      "outcomes": "[\"Yes\", \"No\"]",
+      "outcome_probabilities": {
+        "[": 0.0,
+        "\"": 0.0,
+        "Y": 0.0,
+        "e": 0.0,
+        "s": 500.0,
+        ",": 0.0,
+        " ": 0.0,
+        "N": 0.0,
+        "o": 0.0,
+        "]": 400.0
+      },
+      "volume": 584433.50187,
+      "volume_24h": 30.98,
+      "liquidity": 29428.0306,
+      "start_date": "2025-05-02T15:48:10.837Z",
+      "end_date": "2026-07-31T12:00:00Z",
+      "slug": "new-playboi-carti-album-before-gta-vi-421",
+      "active": true,
+      "spread": 0.02,
+      "bucket": "ai-general"
+    },
+    {
+      "id": "564162",
+      "question": "Will Shai Gilgeous-Alexander win the 2025\u20132026 NBA MVP?",
+      "description": "This market will resolve to \"Yes\" if Shai Gilgeous-Alexander is awarded the 2025\u201326 regular season NBA Most Valuable Player (MVP) Award. Otherwise, this market will resolve to \"No\".\n\nIf the listed player is not announced as a finalist for the 2025\u201326 NBA MVP award, this market will immediately resolve to \"No\".\n\nThe primary resolution source for this market will be official information from the NBA. However, a consensus of credible reporting may also be used.",
+      "outcomes": "[\"Yes\", \"No\"]",
+      "outcome_probabilities": {
+        "[": 0.0,
+        "\"": 0.0,
+        "Y": 0.0,
+        "e": 0.0,
+        "s": 600.0,
+        ",": 0.0,
+        " ": 0.0,
+        "N": 0.0,
+        "o": 0.0,
+        "]": 300.0
+      },
+      "volume": 574396.792196,
+      "volume_24h": 25023.633288,
+      "liquidity": 54811.3128,
+      "start_date": "2025-07-17T12:14:01.350314Z",
+      "end_date": "2026-06-10T00:00:00Z",
+      "slug": "will-shai-gilgeous-alexander-win-the-20252026-nba-mvp",
+      "active": true,
+      "spread": 0.02,
+      "bucket": "ai-general"
+    },
+    {
+      "id": "540817",
+      "question": "New Rihanna Album before GTA VI?",
+      "description": "This market will resolve to \"Yes\" if Rihanna officially releases a new album before Grand Theft Auto VI is officially released in the US. Otherwise, this market will resolve to \"No\".\n\nIf neither occurs by July 31, 2026, 11:59 PM ET, this market will resolve to 50-50.\n\nFor the purposes of this market, \"release\" refers to the game becoming publicly available for purchase or download in the US. Early access, beta versions, other forms of pre-release availability, or leaks will not count as an offic",
+      "outcomes": "[\"Yes\", \"No\"]",
+      "outcome_probabilities": {
+        "[": 0.0,
+        "\"": 0.0,
+        "Y": 0.0,
+        "e": 0.0,
+        "s": 500.0,
+        ",": 0.0,
+        " ": 0.0,
+        "N": 0.0,
+        "o": 0.0,
+        "]": 400.0
+      },
+      "volume": 373405.124619,
+      "volume_24h": 34.343912,
+      "liquidity": 32020.2187,
+      "start_date": "2025-05-02T15:48:10.582Z",
+      "end_date": "2026-07-31T12:00:00Z",
+      "slug": "new-rhianna-album-before-gta-vi-926",
+      "active": true,
+      "spread": 0.02,
+      "bucket": "ai-general"
+    },
+    {
+      "id": "556108",
+      "question": "Will MegaETH perform an airdrop by June 30? ",
+      "description": "This market will resolve to \"Yes\" if MegaETH launches a token and performs an airdrop by June 30, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market \"locked\" tokens or non-swappable tokens will not suffice to resolve this market to \"Yes\". Airdrops of NFTs will not qualify.\n\nThe primary resolution source for this market is on-chain information and official information from MegaETH, however a consensus of credible reporting will also be used.",
+      "outcomes": "[\"Yes\", \"No\"]",
+      "outcome_probabilities": {
+        "[": 0.0,
+        "\"": 0.0,
+        "Y": 0.0,
+        "e": 0.0,
+        "s": 900.0,
+        ",": 400.0,
+        " ": 500.0,
+        "N": 0.0,
+        "o": 0.0,
+        "]": 0.0
+      },
+      "volume": 114232.009297,
+      "volume_24h": 0.71,
+      "liquidity": 12451.46433,
+      "start_date": "2025-06-26T19:51:03.475Z",
+      "end_date": null,
+      "slug": "will-megaeth-perform-an-airdrop-by-june-30-143",
+      "active": true,
+      "spread": 0.017,
+      "bucket": "ai-general"
+    },
+    {
+      "id": "546612",
+      "question": "Will OpenAI launch a new consumer hardware product by March 31, 2026?",
+      "description": "This market will resolve to \"Yes\" if OpenAI publicly announces and launches a new consumer hardware product by March 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\". \n\nA \"consumer hardware product\" is defined as a physical device intended for direct use by individual consumers, rather than enterprise or developer tools. The product must be newly introduced and not a rebrand, update, or iteration of any previously released device.\n\nExamples that would qualify include an AI-powe",
+      "outcomes": "[\"Yes\", \"No\"]",
+      "outcome_probabilities": {
+        "[": 0.0,
+        "\"": 0.0,
+        "Y": 0.0,
+        "e": 0.0,
+        "s": 0.0,
+        ",": 100.0,
+        " ": 0.0,
+        "N": 0.0,
+        "o": 0.0,
+        "]": 0.0
+      },
+      "volume": 34041.013122,
+      "volume_24h": 225.009564,
+      "liquidity": 4441.54689,
+      "start_date": "2025-05-22T14:50:07.243348Z",
+      "end_date": null,
+      "slug": "will-openai-launch-a-new-consumer-hardware-product-by-march-31-2026",
+      "active": true,
+      "spread": 0.028,
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "541523",
+      "question": "Will Brandon Aiyuk be the 2025-2026 NFL Comeback Player of the Year?",
+      "description": "This market will resolve according to the player who wins 2025-2026 NFL Comeback Player of the Year Award. \n\nThe primary resolution source for this market is official information from the NFL.",
+      "outcomes": "[\"Yes\", \"No\"]",
+      "outcome_probabilities": {
+        "[": 0.0,
+        "\"": 0.0,
+        "Y": 0.0,
+        "e": 0.0,
+        "s": 0.0,
+        ",": 500.0,
+        " ": 500.0,
+        "N": 0.0,
+        "o": 0.0,
+        "]": 0.0
+      },
+      "volume": 10112.92318,
+      "volume_24h": 15.0,
+      "liquidity": 3899.05487,
+      "start_date": "2025-05-06T23:45:41.498851Z",
+      "end_date": "2026-02-07T12:00:00Z",
+      "slug": "will-brandon-aiyuk-be-the-2025-2026-nfl-comeback-player-of-the-year",
+      "active": true,
+      "spread": 0.029,
+      "bucket": "ai-general"
+    },
+    {
+      "id": "541516",
+      "question": "Will Aidan Hutchinson be the 2025-2026 NFL Comeback Player of the Year?",
+      "description": "This market will resolve according to the player who wins 2025-2026 NFL Comeback Player of the Year Award. \n\nThe primary resolution source for this market is official information from the NFL.",
+      "outcomes": "[\"Yes\", \"No\"]",
+      "outcome_probabilities": {
+        "[": 0.0,
+        "\"": 0.0,
+        "Y": 0.0,
+        "e": 0.0,
+        "s": 0.0,
+        ",": 300.0,
+        " ": 0.0,
+        "N": 0.0,
+        "o": 0.0,
+        "]": 0.0
+      },
+      "volume": 8382.767013,
+      "volume_24h": 16.85,
+      "liquidity": 3763.84144,
+      "start_date": "2025-05-06T23:45:29.707162Z",
+      "end_date": "2026-02-07T12:00:00Z",
+      "slug": "will-aidan-hutchinson-be-the-2025-2026-nfl-comeback-player-of-the-year",
+      "active": true,
+      "spread": 0.016,
+      "bucket": "ai-general"
+    }
+  ],
+  "bucket_signals": {
+    "ai-general": {
+      "market_count": 9,
+      "total_volume": 21604586.326928996,
+      "total_liquidity": 1207264.7750000004,
+      "avg_spread": 0,
+      "markets": [
+        {
+          "question": "Will Tulsi Gabbard win the 2028 US Presidential Election?",
+          "volume": 14936632.320857,
+          "outcome_probabilities": {
+            "[": 0.0,
+            "\"": 0.0,
+            "Y": 0.0,
+            "e": 0.0,
+            "s": 0.0,
+            ",": 700.0,
+            " ": 500.0,
+            "N": 0.0,
+            "o": 0.0,
+            "]": 0.0
+          }
+        },
+        {
+          "question": "Will Tulsi Gabbard win the 2028 Republican presidential nomination?",
+          "volume": 3764676.531709,
+          "outcome_probabilities": {
+            "[": 0.0,
+            "\"": 0.0,
+            "Y": 0.0,
+            "e": 0.0,
+            "s": 0.0,
+            ",": 700.0,
+            " ": 500.0,
+            "N": 0.0,
+            "o": 0.0,
+            "]": 0.0
+          }
+        },
+        {
+          "question": "Will GTA 6 cost $100+?",
+          "volume": 1238314.356188,
+          "outcome_probabilities": {
+            "[": 0.0,
+            "\"": 0.0,
+            "Y": 0.0,
+            "e": 0.0,
+            "s": 0.0,
+            ",": 400.0,
+            " ": 500.0,
+            "N": 0.0,
+            "o": 0.0,
+            "]": 0.0
+          }
+        },
+        {
+          "question": "New Playboi Carti Album before GTA VI?",
+          "volume": 584433.50187,
+          "outcome_probabilities": {
+            "[": 0.0,
+            "\"": 0.0,
+            "Y": 0.0,
+            "e": 0.0,
+            "s": 500.0,
+            ",": 0.0,
+            " ": 0.0,
+            "N": 0.0,
+            "o": 0.0,
+            "]": 400.0
+          }
+        },
+        {
+          "question": "Will Shai Gilgeous-Alexander win the 2025\u20132026 NBA MVP?",
+          "volume": 574396.792196,
+          "outcome_probabilities": {
+            "[": 0.0,
+            "\"": 0.0,
+            "Y": 0.0,
+            "e": 0.0,
+            "s": 600.0,
+            ",": 0.0,
+            " ": 0.0,
+            "N": 0.0,
+            "o": 0.0,
+            "]": 300.0
+          }
+        },
+        {
+          "question": "New Rihanna Album before GTA VI?",
+          "volume": 373405.124619,
+          "outcome_probabilities": {
+            "[": 0.0,
+            "\"": 0.0,
+            "Y": 0.0,
+            "e": 0.0,
+            "s": 500.0,
+            ",": 0.0,
+            " ": 0.0,
+            "N": 0.0,
+            "o": 0.0,
+            "]": 400.0
+          }
+        },
+        {
+          "question": "Will MegaETH perform an airdrop by June 30? ",
+          "volume": 114232.009297,
+          "outcome_probabilities": {
+            "[": 0.0,
+            "\"": 0.0,
+            "Y": 0.0,
+            "e": 0.0,
+            "s": 900.0,
+            ",": 400.0,
+            " ": 500.0,
+            "N": 0.0,
+            "o": 0.0,
+            "]": 0.0
+          }
+        },
+        {
+          "question": "Will Brandon Aiyuk be the 2025-2026 NFL Comeback Player of the Year?",
+          "volume": 10112.92318,
+          "outcome_probabilities": {
+            "[": 0.0,
+            "\"": 0.0,
+            "Y": 0.0,
+            "e": 0.0,
+            "s": 0.0,
+            ",": 500.0,
+            " ": 500.0,
+            "N": 0.0,
+            "o": 0.0,
+            "]": 0.0
+          }
+        },
+        {
+          "question": "Will Aidan Hutchinson be the 2025-2026 NFL Comeback Player of the Year?",
+          "volume": 8382.767013,
+          "outcome_probabilities": {
+            "[": 0.0,
+            "\"": 0.0,
+            "Y": 0.0,
+            "e": 0.0,
+            "s": 0.0,
+            ",": 300.0,
+            " ": 0.0,
+            "N": 0.0,
+            "o": 0.0,
+            "]": 0.0
+          }
+        }
+      ]
+    },
+    "ai-safety": {
+      "market_count": 1,
+      "total_volume": 1651128.995024,
+      "total_liquidity": 305767.97994,
+      "avg_spread": 0,
+      "markets": [
+        {
+          "question": "Will the Orlando Magic win the 2026 NBA Finals?",
+          "volume": 1651128.995024,
+          "outcome_probabilities": {
+            "[": 0.0,
+            "\"": 0.0,
+            "Y": 0.0,
+            "e": 0.0,
+            "s": 0.0,
+            ",": 500.0,
+            " ": 500.0,
+            "N": 0.0,
+            "o": 0.0,
+            "]": 0.0
+          }
+        }
+      ]
+    },
+    "llm-foundation": {
+      "market_count": 1,
+      "total_volume": 34041.013122,
+      "total_liquidity": 4441.54689,
+      "avg_spread": 0,
+      "markets": [
+        {
+          "question": "Will OpenAI launch a new consumer hardware product by March 31, 2026?",
+          "volume": 34041.013122,
+          "outcome_probabilities": {
+            "[": 0.0,
+            "\"": 0.0,
+            "Y": 0.0,
+            "e": 0.0,
+            "s": 0.0,
+            ",": 100.0,
+            " ": 0.0,
+            "N": 0.0,
+            "o": 0.0,
+            "]": 0.0
+          }
+        }
+      ]
+    }
+  }
+}

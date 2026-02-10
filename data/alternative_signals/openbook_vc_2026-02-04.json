@@ -1,0 +1,5315 @@
+{
+  "source": "openbook_vc",
+  "scraped_at": "2026-02-04T10:03:36.567580",
+  "dolthub_repo": "iloveitaly/venture_capital_firms",
+  "total_firms": 389,
+  "total_investors": 190,
+  "investors_with_contact": 72,
+  "ai_focused_firms_count": 14,
+  "ai_focused_firms": [
+    "Mountain Nazca",
+    "Global Brain",
+    "Playfair Capital",
+    "Newark Venture Partners",
+    "Cottonwood Technology Fund",
+    "Mayfair Equity Partners",
+    "AirTree Ventures",
+    "Perot Jain",
+    "Felicis Ventures",
+    "NCT Ventures",
+    "PAIONEERS",
+    "Kaizen Private Equity",
+    "Mosaic Ventures",
+    "Mosaik Partners"
+  ],
+  "vc_firms": [
+    {
+      "name": "Collaborative Fund",
+      "url": "collaborativefund.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Nauta Capital",
+      "url": "nautacapital.com",
+      "normalized_url": "https://nautacapital.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Menlo Ventures",
+      "url": "menlovc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Polaris Partners",
+      "url": "polarispartners.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "True Ventures",
+      "url": "trueventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Maveron",
+      "url": "maveron.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "JAFCO Asia",
+      "url": "jafcoasia.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Sierra Ventures",
+      "url": "sierraventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "New Ground Ventures",
+      "url": "newgroundventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "NA Ventures",
+      "url": "naventures.com.sa",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Oak Investment Partners",
+      "url": "oakvc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "K1 Investment Management",
+      "url": "k1capital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Fenox Venture Capital",
+      "url": "fenoxvc.com",
+      "normalized_url": "https://fenoxvc.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Sapphire Ventures",
+      "url": "sapphireventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Nyca Partners",
+      "url": "nycapartners.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Bitkraft Esports Ventures",
+      "url": "bitkraft.vc",
+      "normalized_url": "https://www.bitkraft.vc/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Kfund",
+      "url": "kfund.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Valor Equity Partners",
+      "url": "valorep.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Venrock",
+      "url": "venrock.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "In-Q-Tel",
+      "url": "iqt.org",
+      "normalized_url": "https://www.iqt.org/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Ribbit Capital",
+      "url": "ribbitcap.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Meltwater Entrepreneurial School of Technology (MEST)",
+      "url": "meltwater.org",
+      "normalized_url": "https://meltwater.org",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Cherubic Ventures",
+      "url": "cherubicvc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Entrepreneur First",
+      "url": "joinef.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Newark Venture Partners",
+      "url": "newark.vc",
+      "normalized_url": "https://www.newarkventurepartners.com/",
+      "team_count": 13,
+      "team_with_contact": 12,
+      "ai_focus": true
+    },
+    {
+      "name": "Starfish Ventures",
+      "url": "starfishvc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Cybernaut Investment Group",
+      "url": "cybernaut.com.cn",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Highland Europe",
+      "url": "highlandeurope.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Rebel One",
+      "url": "rebel1.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mid Europa Partners",
+      "url": "mideuropa.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Kaizen Private Equity",
+      "url": "kaizenpe.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": true
+    },
+    {
+      "name": "Noaber",
+      "url": "noaber.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Idacapital",
+      "url": "idacapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "GoAhead Ventures",
+      "url": "goahead.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Summit Partners",
+      "url": "summitpartners.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Prime Ventures",
+      "url": "primeventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Future Positive Capital",
+      "url": "futurepositivecapital.com",
+      "normalized_url": "https://www.futurepositivecapital.com/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Revolution",
+      "url": "revolution.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "LocalGlobe",
+      "url": "localglobe.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Orkila Capital",
+      "url": "orkilacapital.com",
+      "normalized_url": "https://orkilacapital.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Bah Partners",
+      "url": "bahpartners.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "CyberAgent Capital",
+      "url": "cyberagentcapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Kima Ventures",
+      "url": "kimaventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Granatus Ventures",
+      "url": "granatusventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "4Di Capital",
+      "url": "4dicapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Lightbank",
+      "url": "lightbank.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mosaic Ventures",
+      "url": "mosaicventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": true
+    },
+    {
+      "name": "Northzone",
+      "url": "northzone.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Maverick Ventures Israel",
+      "url": "maverick.vc",
+      "normalized_url": "https://www.maverick.vc/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Y Combinator",
+      "url": "ycombinator.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "CREALOGIX",
+      "url": "crealogix.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Flagship Pioneering",
+      "url": "flagshippioneering.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Resolute Ventures",
+      "url": "resolute.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "OMERS Ventures",
+      "url": "omersventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Draper Esprit",
+      "url": "draperesprit.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Dawn Capital",
+      "url": "dawncapital.co.uk",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "RRE Ventures",
+      "url": "rre.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Ignition Partners",
+      "url": "ignitionpartners.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Spark Capital",
+      "url": "sparkcapital.com",
+      "normalized_url": "https://www.sparkcapital.com/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "iH Ventures",
+      "url": "ihventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "MS&AD Ventures",
+      "url": "msad.vc",
+      "normalized_url": "https://msad.vc",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Evolution Equity Partners",
+      "url": "evolutionequity.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "NGP Capital",
+      "url": "ngpcap.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "H Capital",
+      "url": "hcapital.io",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Conductive Ventures",
+      "url": "conductive.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Right Click Capital",
+      "url": "rightclickcapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Amadeus Capital Partners",
+      "url": "amadeuscapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Alven Capital",
+      "url": "alvencapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Experior Venture Fund",
+      "url": "experior.vc",
+      "normalized_url": "http://evf.com.pl/en/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Kalaari Capital",
+      "url": "kalaari.com",
+      "normalized_url": "https://kalaari.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Heavybit",
+      "url": "heavybit.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "MMC Ventures",
+      "url": "mmc.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Perot Jain",
+      "url": "perotjain.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": true
+    },
+    {
+      "name": "Brighteye Ventures",
+      "url": "brighteyevc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "NBK Capital",
+      "url": "nbkcpartners.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Notion Capital",
+      "url": "notion.vc",
+      "normalized_url": "https://www.notion.vc/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Edison Partners",
+      "url": "edisonpartners.com",
+      "normalized_url": "https://edisonpartners.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Drive Capital",
+      "url": "drivecapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Dila Capital",
+      "url": "dilacapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Balderton Capital",
+      "url": "balderton.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Leapfrog Ventures",
+      "url": "leapfrog.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Cross Culture Ventures",
+      "url": "crossculturevc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Lightship Capital",
+      "url": "lightship.capital",
+      "normalized_url": "https://www.lightship.capital/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Accel",
+      "url": "accel.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "GGV Capital",
+      "url": "ggvc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Index Ventures",
+      "url": "indexventures.com",
+      "normalized_url": "https://www.indexventures.com/",
+      "team_count": 54,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Partech Ventures",
+      "url": "partechpartners.com",
+      "normalized_url": "https://partechpartners.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mohr Davidow Ventures",
+      "url": "mdv.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Greenspring Associates",
+      "url": "greenspringassociates.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mission Holdings",
+      "url": "missionholdings.com",
+      "normalized_url": "https://missionholdings.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Orange Digital Ventures",
+      "url": "digitalventures.orange.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Otium Capital",
+      "url": "otiumcapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mountain Nazca",
+      "url": "mountainnazca.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": true
+    },
+    {
+      "name": "Square Peg Capital",
+      "url": "squarepegcap.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Differential Ventures",
+      "url": "differential.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Slow Ventures",
+      "url": "slow.co",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "H-FARM",
+      "url": "h-farm.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "GV (Google Ventures)",
+      "url": "gv.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "FoundersX Ventures",
+      "url": "foundersx.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Origin Ventures",
+      "url": "originventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Newfund Capital",
+      "url": "newfundcap.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Haystack",
+      "url": "haystack.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Chinaccelerator",
+      "url": "chinaccelerator.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Inreach Ventures",
+      "url": "inreachventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Trinity Ventures",
+      "url": "trinityventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mosaik Partners",
+      "url": "mosaikpartners.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": true
+    },
+    {
+      "name": "Mundi Ventures",
+      "url": "mundiventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Leap Ventures",
+      "url": "leap.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Pantheon Ventures",
+      "url": "pantheon.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Fiedler Capital",
+      "url": "fiedlercapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Sunstone Capital",
+      "url": "sunstone.eu",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Sequoia Capital",
+      "url": "sequoiacap.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "DCM Ventures",
+      "url": "dcm.com",
+      "normalized_url": "https://www.dcm.com/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Upfront Ventures",
+      "url": "upfront.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Cornerstone Venture Partners",
+      "url": "cornerstonevp.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Kintaro Capital",
+      "url": "kintarocapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "OpenView Venture Partners",
+      "url": "openviewpartners.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Frontline Ventures",
+      "url": "frontline.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Hoxton Ventures",
+      "url": "hoxtonventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Marquee Equity",
+      "url": "marqueeequity.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Cottonwood Technology Fund",
+      "url": "cottonwood.vc",
+      "normalized_url": "https://www.cottonwood.vc/",
+      "team_count": 9,
+      "team_with_contact": 9,
+      "ai_focus": true
+    },
+    {
+      "name": "Crosslink Capital",
+      "url": "crosslinkcapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Full Circle Venture Capital",
+      "url": "fcvca.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Kstart",
+      "url": "kstart.in",
+      "normalized_url": "https://kstart.in",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Lightspeed Venture Partners",
+      "url": "lsvp.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Ibex Investors",
+      "url": "ibexinvestors.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Merian Ventures",
+      "url": "merianventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Next Frontier Capital",
+      "url": "nextfrontiercapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "IVP (Institutional Venture Partners)",
+      "url": "ivp.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Blue Sky Venture Capital",
+      "url": "blueskyfunds.com.au",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Innospark Ventures",
+      "url": "innosparkventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "QED Investors",
+      "url": "qedinvestors.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Meritech Capital Partners",
+      "url": "meritechcapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Techstars Ventures",
+      "url": "techstars.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Golden Gate Ventures",
+      "url": "goldengate.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Moonfire Ventures",
+      "url": "moonfire.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "PROfounders Capital",
+      "url": "profounderscapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "InVenture Partners",
+      "url": "inventurepartners.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "EDB Investments",
+      "url": "edbi.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Brilliant Ventures",
+      "url": "brilliant.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Karma Ventures",
+      "url": "karma.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Tenaya Capital",
+      "url": "tenayacapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "iTech Capital",
+      "url": "itcap.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Excell Partners",
+      "url": "excellny.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Earlybird Venture Capital",
+      "url": "earlybird.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "MissionOG",
+      "url": "missionog.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "MCI Capital",
+      "url": "mci.pl",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Harvard Management Company",
+      "url": "hmc.harvard.edu",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "East Ventures",
+      "url": "east.vc",
+      "normalized_url": "https://east.vc",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Correlation Ventures",
+      "url": "correlationvc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Luge Capital",
+      "url": "luge.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Arihant Patni",
+      "url": "arihantpatni.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Union Square Ventures (USV)",
+      "url": "usv.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "MassMutual Ventures",
+      "url": "massmutualventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Nexus Venture Partners",
+      "url": "nexusvp.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Just Eat Ventures",
+      "url": "just-eat.com",
+      "normalized_url": "https://www.just-eat.co.uk/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Leta Capital",
+      "url": "leta.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Dot Capital",
+      "url": "dotcap.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Prelude Ventures",
+      "url": "preludeventures.com",
+      "normalized_url": "https://preludeventures.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "SoftTech VC",
+      "url": "softtechvc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mitsui & Co. Global Investment",
+      "url": "mcgi.co.jp",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Founders Fund",
+      "url": "foundersfund.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Shasta Ventures",
+      "url": "shastaventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Neotribe Ventures",
+      "url": "neotribe.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "NextGen Venture Partners",
+      "url": "nextgenvp.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Key Capital",
+      "url": "keycapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "OpenOcean",
+      "url": "openocean.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Version One Ventures",
+      "url": "versionone.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Paua Ventures",
+      "url": "pauaventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Left Lane Capital",
+      "url": "leftlanecap.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Lool Ventures",
+      "url": "lool.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Insignia Venture Partners",
+      "url": "insigniaventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Holtzbrinck Ventures",
+      "url": "hvventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Highland Capital Partners",
+      "url": "hcp.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Sutter Hill Ventures",
+      "url": "shv.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Oxx",
+      "url": "oxx.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "INKEF Capital",
+      "url": "inkefcapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Citizen.vc",
+      "url": "citizen.vc",
+      "normalized_url": "https://citizen.vc",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Innovestor Ventures",
+      "url": "innovestorgroup.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mayfield Fund",
+      "url": "mayfield.com",
+      "normalized_url": "https://www.mayfield.com/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Groove Ventures",
+      "url": "groove.ventures",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "CRV (Charles River Ventures)",
+      "url": "crv.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "AirTree Ventures",
+      "url": "airtree.vc",
+      "normalized_url": "https://www.airtree.vc/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": true
+    },
+    {
+      "name": "US Venture Partners",
+      "url": "usvp.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Conviction Investment Partners",
+      "url": "convictionip.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Clear Ventures",
+      "url": "clear.ventures",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Cooper Capital",
+      "url": "coopercapital.org",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Tiger Global Management",
+      "url": "tigerglobal.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Lumia Capital",
+      "url": "lumiacapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "SEED Capital Denmark",
+      "url": "seedcapital.dk",
+      "normalized_url": "https://www.seedcapital.dk/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Breyer Capital",
+      "url": "breyercapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Monta Vista Capital",
+      "url": "montavc.com",
+      "normalized_url": "https://montavc.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "MSA Capital",
+      "url": "msacap.com",
+      "normalized_url": "https://msacap.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mucker Capital",
+      "url": "mucker.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "EQT Ventures",
+      "url": "eqtventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Osage University Partners",
+      "url": "osageuniversitypartners.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Scale Venture Partners",
+      "url": "scalevp.com",
+      "normalized_url": "https://www.scalevp.com/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Finch Capital",
+      "url": "finchcapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Lowercase Capital",
+      "url": "lowercasecapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "DN Capital",
+      "url": "dncapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Graph Ventures",
+      "url": "graphventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Insight Partners",
+      "url": "insightpartners.com",
+      "normalized_url": "https://www.insightpartners.com/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "HENQ Invest",
+      "url": "henq.nl",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Floodgate",
+      "url": "floodgate.com",
+      "normalized_url": "https://www.floodgate.com/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "EchoVC Partners",
+      "url": "echovc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Inveready Technology Investment Group",
+      "url": "inveready.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Kreos Capital",
+      "url": "kreoscapital.com",
+      "normalized_url": "https://www.kreoscapital.com/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "FJ Labs",
+      "url": "fjlabs.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Storm Ventures",
+      "url": "stormventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "BOOST&Co",
+      "url": "boostandco.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Jungle Ventures",
+      "url": "jungle.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Foundation Capital",
+      "url": "foundationcap.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Cavalry Ventures",
+      "url": "cavalry.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Neon Adventures",
+      "url": "neonadventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Compound",
+      "url": "compound.vc",
+      "normalized_url": "https://www.compound.vc/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "8VC",
+      "url": "8vc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Luminar Ventures",
+      "url": "luminarventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Lux Capital",
+      "url": "luxcapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Blumberg Capital",
+      "url": "blumbergcapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mangrove Capital Partners",
+      "url": "mangrove.vc",
+      "normalized_url": "https://www.mangrove.vc/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Odyssey Investment Partners",
+      "url": "odysseyinvestment.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Cathay Innovation",
+      "url": "cathayinnovation.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Fly Ventures",
+      "url": "fly.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Microsoft ScaleUp",
+      "url": "microsoft.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Emergence Capital Partners",
+      "url": "emcap.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Nippon India Digital Innovation Fund",
+      "url": "nipponindiaaif.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "ADV",
+      "url": "adv.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Bessemer Venture Partners",
+      "url": "bvp.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "First Round Capital",
+      "url": "firstround.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Investiere",
+      "url": "investiere.ch",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Third Rock Ventures",
+      "url": "thirdrockventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "March Capital Partners",
+      "url": "marchcp.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Matrix Partners",
+      "url": "matrixpartners.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "BV Capital",
+      "url": "bvcapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "CincyTech",
+      "url": "cincytechusa.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "NextWorld Capital",
+      "url": "nextworldcap.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "General Catalyst",
+      "url": "generalcatalyst.com",
+      "normalized_url": "https://www.generalcatalyst.com/",
+      "team_count": 20,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "G20 Ventures",
+      "url": "g20vc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Forward Partners",
+      "url": "forwardpartners.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Investinor",
+      "url": "investinor.no",
+      "normalized_url": "https://investinor.no",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Pembroke VCT",
+      "url": "pembrokevct.com",
+      "normalized_url": "https://www.pembrokevct.com/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "August Capital",
+      "url": "augustcap.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "B Capital Group",
+      "url": "bcapgroup.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Boundary Capital",
+      "url": "boundarycapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "No Such Ventures",
+      "url": "nosuch.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Connect Ventures",
+      "url": "connectventures.com",
+      "normalized_url": "https://www.connectventures.com/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Maven Capital Partners",
+      "url": "mavencp.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Village Global",
+      "url": "villageglobal.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "M12 (Microsoft's Venture Fund)",
+      "url": "m12.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "MVision Private Equity Advisers",
+      "url": "mvision.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Medicxi",
+      "url": "medicxi.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Manta Ray Ventures",
+      "url": "mantaray.vc",
+      "normalized_url": "https://mantaray.vc",
+      "team_count": 6,
+      "team_with_contact": 6,
+      "ai_focus": false
+    },
+    {
+      "name": "NDC Capital Partners",
+      "url": "ndccapitalpartners.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "3TS Capital Partners",
+      "url": "3tscapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Gelt VC",
+      "url": "geltvc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mustard Seed",
+      "url": "mustardseed.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Capricorn Venture Partners",
+      "url": "capricorn.be",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Freestyle Capital",
+      "url": "freestyle.vc",
+      "normalized_url": "https://freestyle.vc",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "StartX",
+      "url": "startx.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Burda Principal Investments",
+      "url": "burdaprincipalinvestments.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Investissement Quebec",
+      "url": "investquebec.com",
+      "normalized_url": "https://investquebec.com/quebec/fr",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Orrick Herrington & Sutcliffe",
+      "url": "orrick.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Kindred Ventures",
+      "url": "kindredvc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Battery Ventures",
+      "url": "battery.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "500 Startups",
+      "url": "500.co",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Rho Ventures",
+      "url": "rho.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Rockaway Capital",
+      "url": "rockawaycapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Investcorp",
+      "url": "investcorp.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Crescent Enterprises",
+      "url": "crescententerprises.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Phenomen Ventures",
+      "url": "phenomen.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Intel Capital",
+      "url": "intelcapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Khosla Ventures",
+      "url": "khoslaventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Flybridge Capital Partners",
+      "url": "flybridge.com",
+      "normalized_url": "https://flybridge.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Penske Media",
+      "url": "pmc.com",
+      "normalized_url": "https://pmc.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Max Ventures",
+      "url": "maxventures.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "BlueYard Capital",
+      "url": "blueyard.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "K Cube Ventures",
+      "url": "kcubevc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Global Brain",
+      "url": "globalbrains.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": true
+    },
+    {
+      "name": "Octopus Ventures",
+      "url": "octopusventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Greenoaks Capital",
+      "url": "greenoakscapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "MHS Capital",
+      "url": "mhscapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Norwest Venture Partners",
+      "url": "nvp.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "J12 Ventures",
+      "url": "j12ventures.se",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Horizons Ventures",
+      "url": "horizonsventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Target Partners",
+      "url": "targetpartners.de",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Social Capital",
+      "url": "socialcapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Eight Roads Ventures",
+      "url": "eightroads.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Pejman Mar Ventures",
+      "url": "pejmanmar.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Inventure",
+      "url": "inventure.fi",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Channel 4 Ventures",
+      "url": "channel4ventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Susa Ventures",
+      "url": "susaventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "New Enterprise Associates (NEA)",
+      "url": "nea.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Hyderabad Angels",
+      "url": "hyderabadangels.in",
+      "normalized_url": "https://hyderabadangels.in",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Peak Ventures",
+      "url": "peakventurecapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "JamJar Investments",
+      "url": "jamjarinvestments.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Keen Venture Partners",
+      "url": "keenventurepartners.com",
+      "normalized_url": "https://www.keenventurepartners.com/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Felicis Ventures",
+      "url": "felicis.com",
+      "normalized_url": "https://www.felicis.com/",
+      "team_count": 43,
+      "team_with_contact": 0,
+      "ai_focus": true
+    },
+    {
+      "name": "Lucas Venture Group",
+      "url": "lucasvg.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "iAngels",
+      "url": "iangels.co",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Reinventure Group",
+      "url": "reinventure.com.au",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Kapor Capital",
+      "url": "kaporcapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Episode1",
+      "url": "episode1.com",
+      "normalized_url": "https://episode1.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Pelion Venture Partners",
+      "url": "pelionvp.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Connect Ventures",
+      "url": "connectventures.co.uk",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "eLab Ventures",
+      "url": "elabvc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Imperial Create Lab",
+      "url": "imperialcreatelab.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mayfair Equity Partners",
+      "url": "mayfairequity.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": true
+    },
+    {
+      "name": "Idinvest Partners",
+      "url": "idinvest.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Benchmark",
+      "url": "benchmark.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Myriad International Holdings",
+      "url": "mih.co.za",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "IPV Capital",
+      "url": "ipvcapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "iXengine",
+      "url": "ixengine.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "DCVC (Data Collective)",
+      "url": "dcvc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Harrison Metal",
+      "url": "harrisonmetal.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Crosscut Ventures",
+      "url": "crosscut.vc",
+      "normalized_url": "https://crosscut.vc",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Conscious Venture Lab",
+      "url": "consciousventurelab.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Redpoint Ventures",
+      "url": "redpoint.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Monk's Hill Ventures",
+      "url": "monkshill.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Oriental Fortune Capital",
+      "url": "ofcapital.com.cn",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Corigin Ventures",
+      "url": "coriginventures.com",
+      "normalized_url": "https://alpaca.vc/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Kleiner Perkins",
+      "url": "kleinerperkins.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Infinity Ventures",
+      "url": "infinity-ventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "PAIONEERS",
+      "url": "paioneers.com",
+      "normalized_url": "https://paioneers.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": true
+    },
+    {
+      "name": "Hummingbird Ventures",
+      "url": "hummingbird.vc",
+      "normalized_url": "https://www.hummingbird.vc/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Primary Venture Partners",
+      "url": "primary.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Helion Venture Partners",
+      "url": "helion-vc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Lerer Hippeau",
+      "url": "lererhippeau.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Madrona Venture Group",
+      "url": "madrona.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Northcap",
+      "url": "northcap.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Monochrome Capital",
+      "url": "monochromecapital.com",
+      "normalized_url": "https://monochromecapital.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Project A Ventures",
+      "url": "project-a.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "NCT Ventures",
+      "url": "nctventures.com",
+      "normalized_url": "https://nctventures.com",
+      "team_count": 5,
+      "team_with_contact": 5,
+      "ai_focus": true
+    },
+    {
+      "name": "New Amsterdam Capital",
+      "url": "newamsterdamcapital.nl",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "oneZero Capital",
+      "url": "onezerocapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "High Alpha",
+      "url": "highalpha.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Gotham Ventures",
+      "url": "gothamvc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Blackbird Ventures",
+      "url": "blackbird.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Canaan Partners",
+      "url": "canaan.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Daphni",
+      "url": "daphni.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Pantera Capital",
+      "url": "panteracapital.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Greycroft",
+      "url": "greycroft.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "LAUNCHub Ventures",
+      "url": "launchub.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Lifeline Ventures",
+      "url": "lifelineventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Naspers Labs",
+      "url": "nasperslabs.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Next47",
+      "url": "next47.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "83North",
+      "url": "83north.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Lightrock",
+      "url": "lightrock.co",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mutual Capital Partners",
+      "url": "mutualcapitalpartners.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Atomico",
+      "url": "atomico.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Marlin Equity Partners",
+      "url": "marlinequity.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Accomplice",
+      "url": "accomplice.co",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Seraphim Capital",
+      "url": "seraphimcapital.co.uk",
+      "normalized_url": "https://seraphim.vc/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Information Venture Partners",
+      "url": "informationvp.com",
+      "normalized_url": "https://informationvp.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Partnership Fund for New York City",
+      "url": "pfnyc.org",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Fika Ventures",
+      "url": "fikavc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Homebrew",
+      "url": "homebrew.co",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mariana Tek",
+      "url": "marianatek.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Impact America Fund",
+      "url": "impactamericafund.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Extreme Venture Partners",
+      "url": "evp.vc",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Generation Investment Management",
+      "url": "generationim.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Hambro Perks",
+      "url": "hambroperks.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Kibo Ventures",
+      "url": "kiboventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Ironfire Ventures",
+      "url": "ironfire.co",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Fraser McCombs Capital",
+      "url": "fmcap.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Mighty Capital",
+      "url": "mighty.capital",
+      "normalized_url": "https://mighty.capital",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Day One Ventures",
+      "url": "dayonevc.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Point Nine Capital",
+      "url": "pointninecap.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Makers Fund",
+      "url": "makersfund.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Draper Fisher Jurvetson (DFJ)",
+      "url": "dfj.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Reaktor Ventures",
+      "url": "reaktorventures.com",
+      "normalized_url": "https://www.morrowvc.com/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Founder Collective",
+      "url": "foundercollective.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Morningside Group",
+      "url": "morningside.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Rampersand",
+      "url": "rampersand.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Greylock Partners",
+      "url": "greylock.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Aspect Ventures",
+      "url": "aspectventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "JME Ventures",
+      "url": "jme.vc",
+      "normalized_url": "https://jme.vc",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "FundersClub",
+      "url": "fundersclub.com",
+      "normalized_url": "https://fundersclub.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "LSP (Life Sciences Partners)",
+      "url": "lspvc.com",
+      "normalized_url": "https://www.lspvc.com/",
+      "team_count": 40,
+      "team_with_contact": 40,
+      "ai_focus": false
+    },
+    {
+      "name": "Mithril Capital Management",
+      "url": "mithril.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Inventures",
+      "url": "inventures.vc",
+      "normalized_url": "https://www.inventures.vc/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "ACT Venture Capital",
+      "url": "actventure.com",
+      "normalized_url": "https://actventure.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Bridge for Billions",
+      "url": "bridgeforbillions.org",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Playfair Capital",
+      "url": "playfaircapital.com",
+      "normalized_url": "https://playfair.vc/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": true
+    },
+    {
+      "name": "Graft Ventures",
+      "url": "graftventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "F2 Capital",
+      "url": "f2.capital",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Dolma Impact Fund",
+      "url": "dolmafund.org",
+      "normalized_url": "https://dolmafoundation.org/",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Blume Ventures",
+      "url": "blumeventures.com",
+      "normalized_url": null,
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "P101 Ventures",
+      "url": "p101.it",
+      "normalized_url": "https://p101.it",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    },
+    {
+      "name": "Andreessen Horowitz",
+      "url": "a16z.com",
+      "normalized_url": "https://a16z.com",
+      "team_count": 0,
+      "team_with_contact": 0,
+      "ai_focus": false
+    }
+  ],
+  "investors": [
+    {
+      "firm_name": "Newark Venture Partners",
+      "firm_url": "https://www.newarkventurepartners.com/",
+      "person_name": "Brandi Copeland",
+      "role": "Community & Operations Manager",
+      "role_description": "She leads event organizations and promotes a community culture that encourages morale and performance.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/supplychainoptimization/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Newark Venture Partners",
+      "firm_url": "https://www.newarkventurepartners.com/",
+      "person_name": "Brian Laung Aoaeh",
+      "role": "Venture Partner",
+      "role_description": "Brian Laung Aoaeh is a Founder and Managing General Partner of REFASHIOND Ventures, and a Founder of The Worldwide Supply Chain Federation, a grassroots network of supply chain, innovation, and technology enthusiasts.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/chikaogele/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Newark Venture Partners",
+      "firm_url": "https://www.newarkventurepartners.com/",
+      "person_name": "Chika Ogele",
+      "role": "Associate",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/dborok",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Newark Venture Partners",
+      "firm_url": "https://www.newarkventurepartners.com/",
+      "person_name": "Dan Borok",
+      "role": "Managing Partner",
+      "role_description": "Dan is a co-Founder and Managing Partner at Newark Venture Partners. He has been in the venture space since 2005, most recently as a Partner at Millennium Technology Value Partners.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/daniel-crain-56709113/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Newark Venture Partners",
+      "firm_url": "https://www.newarkventurepartners.com/",
+      "person_name": "Dan Crain",
+      "role": "Operating Partner - Product",
+      "role_description": "Dan has been active in the technology industry for 35 years with a diverse set of experiences. As an engineer, he’s been involved in factory automation, aerospace, semiconductors, networking, software development as well as numerous data center technologies.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/donaldrkatz/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Newark Venture Partners",
+      "firm_url": "https://www.newarkventurepartners.com/",
+      "person_name": "Don Katz",
+      "role": "Founder",
+      "role_description": "Don Katz is the founder and CEO of Audible (an Amazon company) and founded Newark Venture Partners to connect Newark to the east coast technology ecosystem and create New Jersey’s most elite early-stage fund and accelerator. He has served on the board of Uncommon Schools since the organization was founded in 1997 and served as Chairman of Newark’s Brick City Development Corporation in 2014.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/jennifer-solomon-306b4936/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Newark Venture Partners",
+      "firm_url": "https://www.newarkventurepartners.com/",
+      "person_name": "Jennifer Solomon",
+      "role": "Communications, Media Relations",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/kevin-petry-8a00a33/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Newark Venture Partners",
+      "firm_url": "https://www.newarkventurepartners.com/",
+      "person_name": "Kevin Petry",
+      "role": "Operating Partner - Sales",
+      "role_description": "Kevin has years of success in the area of B2B/SaaS sales strategy, process, and execution. His experience includes leadership roles with Entertainment Publications (IAC) and Groupon where as VP of Sales Development and Training he built and led the team that supported the fastest growing company in history.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/kiswanabrowne/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Newark Venture Partners",
+      "firm_url": "https://www.newarkventurepartners.com/",
+      "person_name": "Kiswana Browne",
+      "role": "Senior Associate",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/michelle-morris-50a7a11/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Newark Venture Partners",
+      "firm_url": "https://www.newarkventurepartners.com/",
+      "person_name": "Michelle Morris",
+      "role": "Venture Partner",
+      "role_description": "Michelle also has experience as a senior relationship manager for business development with public and corporate pension plans and foundations and endowments. Previously, Michelle held various positions at Citigroup in corporate M&A, private equity fundraising,institutional investment management and municipal finance banking.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/sean-simons-2422966a/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Newark Venture Partners",
+      "firm_url": "https://www.newarkventurepartners.com/",
+      "person_name": "Sean Simons",
+      "role": "Senior Associate",
+      "role_description": "As a Senior Associate at NVP, Sean's responsibilities include sourcing, evaluating, and executing early-stage investment opportunities and working with existing portfolio companies. He has a strong interest in logistics, supply chain, and industry 4.0.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/thomaswis/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Newark Venture Partners",
+      "firm_url": "https://www.newarkventurepartners.com/",
+      "person_name": "Tom Wisniewski",
+      "role": "Managing Partner",
+      "role_description": "Tom is a co-founder and Managing Partner at Newark Venture Partners. Previously, Tom founded RosePaul Ventures which has a portfolio of 20+ tech start-ups and investments in notable venture funds such as Greycroft Ventures, ff Venture Capital, ERA Accelerator. Notable investments include Pond5, LiveLOOK (acquired by Oracle), Kanvas (acquired by AOL).",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/vaughn-crowe-a18abb3/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Newark Venture Partners",
+      "firm_url": "https://www.newarkventurepartners.com/",
+      "person_name": "Vaughn Crowe",
+      "role": "Managing Partner",
+      "role_description": "Prior to joining Newark Venture Partners, Vaughn served as Managing Director at Wesray Social Investments, the investment arm of Ray Chambers’s family office.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Nina Achadjian",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Julia Andre",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Ana Andreescu",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Sally Appleton",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Damir Becirovic",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Benjy Boateng",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Brendan Boyle",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Kira Busman",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Sofia Dolfe",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "André Dubois",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Juriaan Duizendstraal",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Zabie Elmgren",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Michelle Fernandes",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Mark Fiorentino",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Ali Fisher Sweet",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Giacomo Genzini",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Mark Goldberg",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Carlos Gonzalez-Cadenas",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Jan Hammer",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Rachel Hansen",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Bastian Hasslinger",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Paris Heymann",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Vojtech Horna",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Charlotte Howard",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Dominic Jacquesson",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Rebecca James",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Jacob Jofe",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Pascal Jouin",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Stephane Kurgan",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Adrianna Ma",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Avron Marcus",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Martin Mignot",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Jimena Nowack",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Khalehla Nuzum",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Bryan Offutt",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Shimin Ooi",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Cyriac Parisot",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Erin Price-Wright",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Zheela Qaiser",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Danny Rimer",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Neil Rimer",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Susana Rojas",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Sandra Schwarzer",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Hannah Seal",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Shardul Shah",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Ben Sneider",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Weronika Sowa",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Georgia Stevenson",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Joseph Stolerman",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Ishani Thakur",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Mike Volpi",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Katharina Wilhelm",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Janet Wolpert",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Index Ventures",
+      "firm_url": "https://www.indexventures.com/",
+      "person_name": "Cat Wu",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Cottonwood Technology Fund",
+      "firm_url": "https://www.cottonwood.vc/",
+      "person_name": "Dave Blivin",
+      "role": "MANAGING PARTNER",
+      "role_description": "Founder and Managing Director of Cottonwood Technology Fund I, II and III.",
+      "email": "dave@cottonwood.vc",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/dblivin/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Cottonwood Technology Fund",
+      "firm_url": "https://www.cottonwood.vc/",
+      "person_name": "Alain le Loux",
+      "role": "GENERAL PARTNER",
+      "role_description": "Alain le Loux has 25+ years’ experience in Technology on board level positions (former member of the Executive committee of corporate Getronics PinkRoccade) and as CEO of startups.",
+      "email": "alain@cottonwood.vc",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/alainleloux/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Cottonwood Technology Fund",
+      "firm_url": "https://www.cottonwood.vc/",
+      "person_name": "Patrick Claessen",
+      "role": "Partner",
+      "role_description": "Patrick Claessen has 25+ years’ experience in investment management of innovative technology driven businesses.",
+      "email": "patrick@cottonwood.vc",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/patrick-claessen-7162aa4/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Cottonwood Technology Fund",
+      "firm_url": "https://www.cottonwood.vc/",
+      "person_name": "Sabine Bijker",
+      "role": "Corporate & Investor Relations",
+      "role_description": "Sabine worked before joining Cottonwood 12 years within an IT company in several roles, where she was first responsible for Operations Support, Finance and later on engaged with Sales and Customer Relationships.",
+      "email": "sabine@cottonwood.vc",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/sabine-bijker/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Cottonwood Technology Fund",
+      "firm_url": "https://www.cottonwood.vc/",
+      "person_name": "Shinjan Dasgupta",
+      "role": "Senior Analyst",
+      "role_description": "Shinjan Dasupta is Senior Technology Analyst at Cottonwood Technology Fund. He has** **18 years’ experience in technical research and market analysis at Fortune 500 companies and scale-ups.",
+      "email": "shinjan@cottonwood.vc",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/shinjan-dasgupta-3385827/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Cottonwood Technology Fund",
+      "firm_url": "https://www.cottonwood.vc/",
+      "person_name": "Daan Boekhoudt",
+      "role": "Investment Analyst",
+      "role_description": "Daan finished his Bachelor in Technical Engineering & Management in 2022 at the University of Twente. He has a strong technical and financial background.",
+      "email": "team@cottonwood.vc",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/daan-boekhoudt/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Cottonwood Technology Fund",
+      "firm_url": "https://www.cottonwood.vc/",
+      "person_name": "Iris Wiggers",
+      "role": "FINANCE",
+      "role_description": "Iris Wiggers is engaged for Fund III with administration together with our professional partners for accounting and fund administration.",
+      "email": "iris@cottonwood.vc",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/iriswiggers/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Cottonwood Technology Fund",
+      "firm_url": "https://www.cottonwood.vc/",
+      "person_name": "Alan Abbott",
+      "role": "SLP & Venture Partner",
+      "role_description": "Alan is on the board of New Mexico First Financial, Inc., a one bank holding company of Western Heritage Bank with locations in New Mexico and Texas. He chairs the Compensation Committee and serves on the Asset Liability and Audit Committees. Alan has served as a Special LP & advisor to the investment committee of Cottonwood Funds I, II & III. Alan is the Managing Member of Plutus Ventures, a family investment firm that invests in diversified venture funds. Alan also serves on the investment committee of Saba Investments. Alan was appointed by the Governor of Texas to serve as a Director of the Emerging Technology Fund & as a board member of the Center for Innovation & Commercialization for the El Paso region. He serves on the Investment Committee for the Paso del Norte Foundation & as an advisor to the Medical Center of the Americas startup seed fund. At the Trustee of Pacific University he served on the Investment & Finance Committees. Alan is a graduate of Stanford University, holds an MBA from the University of Texas and is a CPA.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/alan-abbott-9a280218/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Cottonwood Technology Fund",
+      "firm_url": "https://www.cottonwood.vc/",
+      "person_name": "Charles Call",
+      "role": "SLP & Venture Partner",
+      "role_description": "Charles serves as an Special LP in Cottonwood Funds I and II, sourcing both the Skorpios and Incitor. Charles is also General Partner in Phase One Ventures, a small ($2M) angel fund, and an active angel investor. Charles holds a BS in Chemical Engineering with Highest Honors from Montana State University and am MS and PhD in Mechanical Engineering from the University of California, Davis. Charles was previously employed by the Lawrence Livermore National Lab. Specialties: General management, leadership coaching, start-ups. intellectual property management, technology commercialization and business development.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/charles-call-76933/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Chris Bischoff",
+      "role": "Investment Team",
+      "role_description": "Health Assurance",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Larry Bohn",
+      "role": "Investment Team",
+      "role_description": "Enterprise",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Niko Bonatsos",
+      "role": "Investment Team",
+      "role_description": "Consumer, Enterprise, Crypto",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Ken Chenault",
+      "role": "Investment Team",
+      "role_description": "Consumer, Enterprise, Fintech, Crypto",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Quentin Clark",
+      "role": "Investment Team",
+      "role_description": "Enterprise",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Joel Cutler",
+      "role": "Investment Team",
+      "role_description": "Consumer, Enterprise, Fintech",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Kyle Doherty",
+      "role": "Investment Team",
+      "role_description": "Consumer, Fintech, Crypto",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "David Fialkow",
+      "role": "Investment Team",
+      "role_description": "Consumer, Enterprise",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Paul Kwan",
+      "role": "Investment Team",
+      "role_description": "Enterprise",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Holly Maloney",
+      "role": "Investment Team",
+      "role_description": "Health Assurance",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Deep Nishar",
+      "role": "Investment Team",
+      "role_description": "Enterprise, Health Assurance",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Trevor Oelschig",
+      "role": "Investment Team",
+      "role_description": "Enterprise",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Hemant Taneja",
+      "role": "Investment Team",
+      "role_description": "Consumer, Health Assurance, Enterprise, Fintech",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Alex Tran",
+      "role": "Investment Team",
+      "role_description": "Consumer, Fintech",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Adam Valkin",
+      "role": "Investment Team",
+      "role_description": "Consumer, Enterprise, Fintech",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Paul Fielding",
+      "role": "Finance & Operations",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Gabriella Giglio",
+      "role": "HR & Executive Talent",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "John Kim",
+      "role": "Investor Relations",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Chris McCain",
+      "role": "Legal & Compliance",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "General Catalyst",
+      "firm_url": "https://www.generalcatalyst.com/",
+      "person_name": "Jennifer Zimmerman",
+      "role": "Marketing & Communications",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Manta Ray Ventures",
+      "firm_url": "https://mantaray.vc",
+      "person_name": "Sebastian Kulczyk",
+      "role": "Founder",
+      "role_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt urna, id lacinia nunc nisl id nunc.",
+      "email": "sebastian.kulczyk@example.com",
+      "twitter": "https://twitter.com/sebastiankulczyk",
+      "linkedin": "https://www.linkedin.com/in/sebastiankulczyk",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Manta Ray Ventures",
+      "firm_url": "https://mantaray.vc",
+      "person_name": "Leah von Siemens",
+      "role": "Partner",
+      "role_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt urna, id lacinia nunc nisl id nunc.",
+      "email": "leah.vonsiemens@example.com",
+      "twitter": "https://twitter.com/leahvonsiemens",
+      "linkedin": "https://www.linkedin.com/in/leahvonsiemens",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Manta Ray Ventures",
+      "firm_url": "https://mantaray.vc",
+      "person_name": "Yaryna Nych",
+      "role": "Analyst",
+      "role_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt urna, id lacinia nunc nisl id nunc.",
+      "email": "yaryna.nych@example.com",
+      "twitter": "https://twitter.com/yarynanych",
+      "linkedin": "https://www.linkedin.com/in/yarynanych",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Manta Ray Ventures",
+      "firm_url": "https://mantaray.vc",
+      "person_name": "Christopher Sisserian",
+      "role": "Head of Platform",
+      "role_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt urna, id lacinia nunc nisl id nunc.",
+      "email": "christopher.sisserian@example.com",
+      "twitter": "https://twitter.com/csisserian",
+      "linkedin": "https://www.linkedin.com/in/csisserian",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Manta Ray Ventures",
+      "firm_url": "https://mantaray.vc",
+      "person_name": "Julia Schrameier",
+      "role": "Associate",
+      "role_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt urna, id lacinia nunc nisl id nunc.",
+      "email": "julia.schrameier@example.com",
+      "twitter": "https://twitter.com/juliaschrameier",
+      "linkedin": "https://www.linkedin.com/in/juliaschrameier",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Manta Ray Ventures",
+      "firm_url": "https://mantaray.vc",
+      "person_name": "Lawrence Barclay",
+      "role": "Managing Partner",
+      "role_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc id aliquam tincidunt, nisl nunc tincidunt urna, id lacinia nunc nisl id nunc.",
+      "email": "lawrence.barclay@example.com",
+      "twitter": "https://twitter.com/lawrencebarclay",
+      "linkedin": "https://www.linkedin.com/in/lawrencebarclay",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Aydin Senkut",
+      "role": "Founder, Managing Partner",
+      "role_description": "Aydin Senkut is the Founder and Managing Partner of Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Viviana Faga",
+      "role": "General Partner",
+      "role_description": "Viviana Faga is a General Partner at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Sundeep Peechu",
+      "role": "General Partner",
+      "role_description": "Sundeep Peechu is a General Partner at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Victoria Treyger",
+      "role": "General Partner",
+      "role_description": "Victoria Treyger is a General Partner at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Niki Pezeshki",
+      "role": "General Partner",
+      "role_description": "Niki Pezeshki is a General Partner at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Jake Storm",
+      "role": "Deal Partner",
+      "role_description": "Jake Storm is a Deal Partner at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Ryan Isono",
+      "role": "Deal Partner",
+      "role_description": "Ryan Isono is a Deal Partner at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Tobi Coker",
+      "role": "Deal Partner",
+      "role_description": "Tobi Coker is a Deal Partner at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "James Detweiler",
+      "role": "VP of Investments",
+      "role_description": "James Detweiler is the VP of Investments at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Katie Riester",
+      "role": "Partner, Head of Investor Relations",
+      "role_description": "Katie Riester is a Partner and the Head of Investor Relations at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Javier Soltero",
+      "role": "Senior Venture Partner",
+      "role_description": "Javier Soltero is a Senior Venture Partner at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Dasha Maggio",
+      "role": "Partner, Head of Founder Success",
+      "role_description": "Dasha Maggio is a Partner and the Head of Founder Success at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Michelle Delcambre",
+      "role": "Operating Partner, Head of People & Talent",
+      "role_description": "Michelle Delcambre is an Operating Partner and the Head of People & Talent at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Dan Bartus",
+      "role": "Partner, Head of Research",
+      "role_description": "Dan Bartus is a Partner and the Head of Research at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Mischa Vaughn",
+      "role": "Head of Content",
+      "role_description": "Mischa Vaughn is the Head of Content at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Laura Buhler",
+      "role": "Partner, Head of Community",
+      "role_description": "Laura Buhler is a Partner and the Head of Community at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Eric Wagner",
+      "role": "Research Manager",
+      "role_description": "Eric Wagner is a Research Manager at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Teresa Chan",
+      "role": "Chief Financial Officer",
+      "role_description": "Teresa Chan is the Chief Financial Officer at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Raychel Bailon",
+      "role": "VP of Finance",
+      "role_description": "Raychel Bailon is the VP of Finance at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Angela Dunning",
+      "role": "Finance Manager",
+      "role_description": "Angela Dunning is a Finance Manager at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "David Phu",
+      "role": "Controller",
+      "role_description": "David Phu is a Controller at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Enrique Guzman-Alvarez",
+      "role": "Senior Accountant",
+      "role_description": "Enrique Guzman-Alvarez is a Senior Accountant at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Olivia Liao",
+      "role": "Controller",
+      "role_description": "Olivia Liao is a Controller at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Tianen Liang",
+      "role": "Tax Controller",
+      "role_description": "Tianen Liang is a Tax Controller at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Tyler Wilson",
+      "role": "Senior Accountant",
+      "role_description": "Tyler Wilson is a Senior Accountant at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Martin Tobon",
+      "role": "Portfolio Analytics Manager",
+      "role_description": "Martin Tobon is a Portfolio Analytics Manager at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Alexis Abrams",
+      "role": "Partner, General Counsel",
+      "role_description": "Alexis Abrams is a Partner and the General Counsel at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Cody Goodermote",
+      "role": "Head of IT & Security",
+      "role_description": "Cody Goodermote is the Head of IT & Security at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Iva Messy",
+      "role": "Head of People",
+      "role_description": "Iva Messy is the Head of People at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Angelina Shamilov",
+      "role": "Partner Operations Manager",
+      "role_description": "Angelina Shamilov is a Partner Operations Manager at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Jen Wang",
+      "role": "Deal Operations Manager",
+      "role_description": "Jen Wang is a Deal Operations Manager at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Yelena Ter-Sargsyan",
+      "role": "Office Manager",
+      "role_description": "Yelena Ter-Sargsyan is an Office Manager at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Kimberly Jo-Vogel",
+      "role": "Partner Operations Manager",
+      "role_description": "Kimberly Jo-Vogel is a Partner Operations Manager at Felicis Ventures.",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Alex Stamos",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Beth Steinberg",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Harley Finkelstein",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Jack Abraham",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Nancy Wang",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Tim Bertrand",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "John Anderson",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Marcie Vu",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Sonia Arrison",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "Felicis Ventures",
+      "firm_url": "https://www.felicis.com/",
+      "person_name": "Wesley Chan",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": false
+    },
+    {
+      "firm_name": "NCT Ventures",
+      "firm_url": "https://nctventures.com",
+      "person_name": "Jeff Bell",
+      "role": "Chief Executive Officer",
+      "role_description": "Named CEO of PPLSI (dba LegalShield) in July 2014. Led the company to significant growth and retired in June 2022.",
+      "email": "info@nctventures.com",
+      "twitter": "http://www.twitter.com/nctventures",
+      "linkedin": "https://www.linkedin.com/company/2137054/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "NCT Ventures",
+      "firm_url": "https://nctventures.com",
+      "person_name": "Michael Butler",
+      "role": "Partner",
+      "role_description": "Joined NCT as a partner on June 1, 2009. Previously served as President and Chief Distribution Officer at Nationwide Fund Distributors, LLC.",
+      "email": "info@nctventures.com",
+      "twitter": "http://www.twitter.com/nctventures",
+      "linkedin": "https://www.linkedin.com/company/2137054/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "NCT Ventures",
+      "firm_url": "https://nctventures.com",
+      "person_name": "Lindsay Karas",
+      "role": "Partner",
+      "role_description": "Chief legal counsel licensed in Ohio, Michigan and New York, focusing primarily on deal structuring, portfolio management, Limited Partner (LP) relations and fundraising.",
+      "email": "info@nctventures.com",
+      "twitter": "http://www.twitter.com/nctventures",
+      "linkedin": "https://www.linkedin.com/company/2137054/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "NCT Ventures",
+      "firm_url": "https://nctventures.com",
+      "person_name": "Rich Langdale",
+      "role": "Managing Partner",
+      "role_description": "Managing Partner of NCT Ventures, a Venture Capital firm focused on early stage technology companies disrupting major industries in underserved markets.",
+      "email": "info@nctventures.com",
+      "twitter": "http://www.twitter.com/nctventures",
+      "linkedin": "https://www.linkedin.com/company/2137054/",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "NCT Ventures",
+      "firm_url": "https://nctventures.com",
+      "person_name": "Bill Frank",
+      "role": "Entrepreneur",
+      "role_description": "Seasoned entrepreneur, pragmatic technology leader, and investor",
+      "email": "info@nctventures.com",
+      "twitter": "",
+      "linkedin": "",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Martijn Kleijwegt",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/martijn-kleijwegt.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Mark Wegter",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/mark-wegter.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "René Kuijten",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/ren---kuijten.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Joachim Rothe",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/joachim-rothe.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "John de Koning",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/john-de-koning.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Geraldine O’Keeffe",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/geraldine-o---keeffe.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Fouad Azzam",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/fouad-azzam.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Philip Scheltens",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/philip-scheltens.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Anne Portwich",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/anne-portwich.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Rudy Dekeyser",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/rudy-dekeyser.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Clemens van Blitterswijk",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/clemens-van-blitterswijk.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Drew Burdon",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/drew-burdon.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Bruno Holthof",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/bruno-holthof.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Vincent Brichard",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/vincent-brichard.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Felice Verduyn-van Weegen",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/felice-verduyn-van-weegen.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Edwin van den Broek",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/edwin-van-den-broek.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Christoph Broja",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/christoph-broja.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Ruben Osnabrugge",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/ruben-osnabrugge.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Arno de Wilde",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/arno-de-wilde.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Sonia Hallen",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/sonia-hallen.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Laurenz Govaerts",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/laurenz-govaerts.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Cillian King",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/cillian-king.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Philipp Braeuer",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/philipp-braeuer.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Maximilian Moser",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/maximilian-moser.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Ishaan Tewarie",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/ishaan-tewarie.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Kevin Hammon",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/kevin-hammon.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Onno Paymans",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/onno-paymans.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Hans Clevers",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/hans-clevers.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Anton Pijpers",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/anton-pijpers.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Andre Olijslager",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/andre-olijslager.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Maarten Scholten",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/maarten-scholten.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Douwe Breimer",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/douwe-breimer.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Merijn Klaassen",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/merijn-klaassen.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Koen Sintnicolaas",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/koen-sintnicolaas.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Bas Vaessen",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/bas-vaessen.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Irma Hanic",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/irma-hanic.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Edie de Kwaasteniet",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/edie-de-kwaasteniet.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Hannie Wiersema",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/hannie-wiersema.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Suzanne Dwinger",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/suzanne-dwinger.html",
+      "has_contact_info": true
+    },
+    {
+      "firm_name": "LSP (Life Sciences Partners)",
+      "firm_url": "https://www.lspvc.com/",
+      "person_name": "Manuela Fortunato",
+      "role": "",
+      "role_description": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "/team/manuela-fortunato.html",
+      "has_contact_info": true
+    }
+  ],
+  "summary": {
+    "top_firms_by_team_size": [
+      {
+        "name": "Index Ventures",
+        "url": "indexventures.com",
+        "normalized_url": "https://www.indexventures.com/",
+        "team_count": 54,
+        "team_with_contact": 0,
+        "ai_focus": false
+      },
+      {
+        "name": "Felicis Ventures",
+        "url": "felicis.com",
+        "normalized_url": "https://www.felicis.com/",
+        "team_count": 43,
+        "team_with_contact": 0,
+        "ai_focus": true
+      },
+      {
+        "name": "LSP (Life Sciences Partners)",
+        "url": "lspvc.com",
+        "normalized_url": "https://www.lspvc.com/",
+        "team_count": 40,
+        "team_with_contact": 40,
+        "ai_focus": false
+      },
+      {
+        "name": "General Catalyst",
+        "url": "generalcatalyst.com",
+        "normalized_url": "https://www.generalcatalyst.com/",
+        "team_count": 20,
+        "team_with_contact": 0,
+        "ai_focus": false
+      },
+      {
+        "name": "Newark Venture Partners",
+        "url": "newark.vc",
+        "normalized_url": "https://www.newarkventurepartners.com/",
+        "team_count": 13,
+        "team_with_contact": 12,
+        "ai_focus": true
+      },
+      {
+        "name": "Cottonwood Technology Fund",
+        "url": "cottonwood.vc",
+        "normalized_url": "https://www.cottonwood.vc/",
+        "team_count": 9,
+        "team_with_contact": 9,
+        "ai_focus": true
+      },
+      {
+        "name": "Manta Ray Ventures",
+        "url": "mantaray.vc",
+        "normalized_url": "https://mantaray.vc",
+        "team_count": 6,
+        "team_with_contact": 6,
+        "ai_focus": false
+      },
+      {
+        "name": "NCT Ventures",
+        "url": "nctventures.com",
+        "normalized_url": "https://nctventures.com",
+        "team_count": 5,
+        "team_with_contact": 5,
+        "ai_focus": true
+      },
+      {
+        "name": "Collaborative Fund",
+        "url": "collaborativefund.com",
+        "normalized_url": null,
+        "team_count": 0,
+        "team_with_contact": 0,
+        "ai_focus": false
+      },
+      {
+        "name": "Nauta Capital",
+        "url": "nautacapital.com",
+        "normalized_url": "https://nautacapital.com",
+        "team_count": 0,
+        "team_with_contact": 0,
+        "ai_focus": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,1029 @@
+{
+  "version": "2.0",
+  "description": "Comprehensive entity-to-ticker/token mapping for quant analysis",
+  "last_updated": "2026-01-26",
+  "entity_count": 105,
+  
+  "entities": {
+    "openai": {
+      "name": "OpenAI",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["MSFT"],
+      "proxy_rationale": "Microsoft major investor (~49%), revenue-sharing partner, Azure integration",
+      "sector": "ai-foundation",
+      "valuation_estimate": "$157B"
+    },
+    "anthropic": {
+      "name": "Anthropic",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["GOOGL", "AMZN"],
+      "proxy_rationale": "Google invested $2B, Amazon invested $4B",
+      "sector": "ai-foundation",
+      "valuation_estimate": "$60B"
+    },
+    "deepseek": {
+      "name": "DeepSeek",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Backed by High-Flyer quant fund, no public proxy",
+      "sector": "ai-foundation",
+      "parent_entity": "high-flyer"
+    },
+    "nvidia": {
+      "name": "NVIDIA",
+      "type": "company",
+      "status": "public",
+      "tickers": ["NVDA"],
+      "sector": "ai-chips"
+    },
+    "amd": {
+      "name": "AMD",
+      "type": "company",
+      "status": "public",
+      "tickers": ["AMD"],
+      "sector": "ai-chips"
+    },
+    "intel": {
+      "name": "Intel",
+      "type": "company",
+      "status": "public",
+      "tickers": ["INTC"],
+      "sector": "ai-chips"
+    },
+    "qualcomm": {
+      "name": "Qualcomm",
+      "type": "company",
+      "status": "public",
+      "tickers": ["QCOM"],
+      "sector": "ai-chips"
+    },
+    "arm": {
+      "name": "Arm Holdings",
+      "type": "company",
+      "status": "public",
+      "tickers": ["ARM"],
+      "sector": "ai-chips"
+    },
+    "asml": {
+      "name": "ASML",
+      "type": "company",
+      "status": "public",
+      "tickers": ["ASML"],
+      "sector": "ai-chips"
+    },
+    "tsmc": {
+      "name": "TSMC",
+      "type": "company",
+      "status": "public",
+      "tickers": ["TSM"],
+      "sector": "ai-chips"
+    },
+    "broadcom": {
+      "name": "Broadcom",
+      "type": "company",
+      "status": "public",
+      "tickers": ["AVGO"],
+      "sector": "ai-chips"
+    },
+    "marvell": {
+      "name": "Marvell",
+      "type": "company",
+      "status": "public",
+      "tickers": ["MRVL"],
+      "sector": "ai-chips"
+    },
+    "micron": {
+      "name": "Micron",
+      "type": "company",
+      "status": "public",
+      "tickers": ["MU"],
+      "sector": "ai-chips"
+    },
+    "sk_hynix": {
+      "name": "SK Hynix",
+      "type": "company",
+      "status": "public",
+      "tickers": ["000660.KS"],
+      "sector": "ai-chips"
+    },
+    "samsung": {
+      "name": "Samsung Electronics",
+      "type": "company",
+      "status": "public",
+      "tickers": ["005930.KS", "SSNLF"],
+      "sector": "ai-chips"
+    },
+    "cerebras": {
+      "name": "Cerebras",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["NVDA"],
+      "proxy_rationale": "AI chip competitor, NVDA inverse proxy",
+      "sector": "ai-chips",
+      "valuation_estimate": "$4B"
+    },
+    "groq": {
+      "name": "Groq",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI inference chip startup, no direct proxy",
+      "sector": "ai-chips",
+      "valuation_estimate": "$2.8B"
+    },
+    "sambanova": {
+      "name": "SambaNova",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Enterprise AI chip startup",
+      "sector": "ai-chips",
+      "valuation_estimate": "$5B"
+    },
+    "graphcore": {
+      "name": "Graphcore",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "UK AI chip company, acquired discussions",
+      "sector": "ai-chips"
+    },
+    "tenstorrent": {
+      "name": "Tenstorrent",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Jim Keller-led AI chip startup",
+      "sector": "ai-chips",
+      "valuation_estimate": "$2B"
+    },
+    "google": {
+      "name": "Google/Alphabet",
+      "type": "company",
+      "status": "public",
+      "tickers": ["GOOGL", "GOOG"],
+      "sector": "ai-foundation"
+    },
+    "microsoft": {
+      "name": "Microsoft",
+      "type": "company",
+      "status": "public",
+      "tickers": ["MSFT"],
+      "sector": "ai-enterprise"
+    },
+    "meta": {
+      "name": "Meta Platforms",
+      "type": "company",
+      "status": "public",
+      "tickers": ["META"],
+      "sector": "ai-foundation"
+    },
+    "amazon": {
+      "name": "Amazon",
+      "type": "company",
+      "status": "public",
+      "tickers": ["AMZN"],
+      "sector": "ai-cloud"
+    },
+    "apple": {
+      "name": "Apple",
+      "type": "company",
+      "status": "public",
+      "tickers": ["AAPL"],
+      "sector": "ai-devices"
+    },
+    "tesla": {
+      "name": "Tesla",
+      "type": "company",
+      "status": "public",
+      "tickers": ["TSLA"],
+      "sector": "autonomous-vehicles"
+    },
+    "xai": {
+      "name": "xAI",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["TSLA"],
+      "proxy_rationale": "Elon Musk controls both, data sharing",
+      "sector": "ai-foundation",
+      "valuation_estimate": "$50B"
+    },
+    "mistral": {
+      "name": "Mistral AI",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["MSFT"],
+      "proxy_rationale": "Microsoft Azure partnership",
+      "sector": "ai-foundation",
+      "valuation_estimate": "$6B"
+    },
+    "cohere": {
+      "name": "Cohere",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["NVDA", "ORCL"],
+      "proxy_rationale": "Oracle Cloud AI partner, NVIDIA investor",
+      "sector": "ai-foundation",
+      "valuation_estimate": "$5.5B"
+    },
+    "perplexity": {
+      "name": "Perplexity AI",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["NVDA"],
+      "proxy_rationale": "NVIDIA investor",
+      "sector": "ai-search",
+      "valuation_estimate": "$9B"
+    },
+    "stability": {
+      "name": "Stability AI",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Restructuring, no clear proxy",
+      "sector": "vision-multimodal",
+      "valuation_estimate": "$1B"
+    },
+    "midjourney": {
+      "name": "Midjourney",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["ADBE"],
+      "proxy_rationale": "Competes in generative image space",
+      "sector": "vision-multimodal",
+      "valuation_estimate": "$10B"
+    },
+    "runway": {
+      "name": "Runway",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["ADBE", "GOOGL"],
+      "proxy_rationale": "Gen AI video competitor to Adobe/Google",
+      "sector": "vision-multimodal",
+      "valuation_estimate": "$4B"
+    },
+    "pika": {
+      "name": "Pika",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI video startup",
+      "sector": "vision-multimodal",
+      "valuation_estimate": "$470M"
+    },
+    "luma": {
+      "name": "Luma AI",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "3D/video AI startup",
+      "sector": "vision-multimodal"
+    },
+    "inflection": {
+      "name": "Inflection AI",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["MSFT"],
+      "proxy_rationale": "Key talent moved to Microsoft",
+      "sector": "ai-foundation"
+    },
+    "character": {
+      "name": "Character.AI",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["GOOGL"],
+      "proxy_rationale": "Google licensing deal",
+      "sector": "ai-consumer",
+      "valuation_estimate": "$1B"
+    },
+    "adept": {
+      "name": "Adept",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["AMZN"],
+      "proxy_rationale": "Amazon acqui-hire",
+      "sector": "ai-agents"
+    },
+    "huggingface": {
+      "name": "Hugging Face",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["NVDA", "GOOGL", "AMZN"],
+      "proxy_rationale": "NVIDIA/Google/Amazon investors, key AI infrastructure",
+      "sector": "ai-infrastructure",
+      "valuation_estimate": "$4.5B"
+    },
+    "palantir": {
+      "name": "Palantir",
+      "type": "company",
+      "status": "public",
+      "tickers": ["PLTR"],
+      "sector": "ai-enterprise"
+    },
+    "snowflake": {
+      "name": "Snowflake",
+      "type": "company",
+      "status": "public",
+      "tickers": ["SNOW"],
+      "sector": "ai-data"
+    },
+    "databricks": {
+      "name": "Databricks",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["SNOW"],
+      "proxy_rationale": "Direct competitor to Snowflake",
+      "sector": "ai-data",
+      "valuation_estimate": "$62B"
+    },
+    "mongodb": {
+      "name": "MongoDB",
+      "type": "company",
+      "status": "public",
+      "tickers": ["MDB"],
+      "sector": "ai-data"
+    },
+    "datadog": {
+      "name": "Datadog",
+      "type": "company",
+      "status": "public",
+      "tickers": ["DDOG"],
+      "sector": "ai-observability"
+    },
+    "crowdstrike": {
+      "name": "CrowdStrike",
+      "type": "company",
+      "status": "public",
+      "tickers": ["CRWD"],
+      "sector": "ai-security"
+    },
+    "cloudflare": {
+      "name": "Cloudflare",
+      "type": "company",
+      "status": "public",
+      "tickers": ["NET"],
+      "sector": "ai-infrastructure"
+    },
+    "salesforce": {
+      "name": "Salesforce",
+      "type": "company",
+      "status": "public",
+      "tickers": ["CRM"],
+      "sector": "ai-enterprise"
+    },
+    "servicenow": {
+      "name": "ServiceNow",
+      "type": "company",
+      "status": "public",
+      "tickers": ["NOW"],
+      "sector": "ai-enterprise"
+    },
+    "adobe": {
+      "name": "Adobe",
+      "type": "company",
+      "status": "public",
+      "tickers": ["ADBE"],
+      "sector": "vision-multimodal"
+    },
+    "ibm": {
+      "name": "IBM",
+      "type": "company",
+      "status": "public",
+      "tickers": ["IBM"],
+      "sector": "ai-enterprise"
+    },
+    "oracle": {
+      "name": "Oracle",
+      "type": "company",
+      "status": "public",
+      "tickers": ["ORCL"],
+      "sector": "ai-data"
+    },
+    "sap": {
+      "name": "SAP",
+      "type": "company",
+      "status": "public",
+      "tickers": ["SAP"],
+      "sector": "ai-enterprise"
+    },
+    "super_micro": {
+      "name": "Super Micro Computer",
+      "type": "company",
+      "status": "public",
+      "tickers": ["SMCI"],
+      "sector": "ai-infrastructure"
+    },
+    "dell": {
+      "name": "Dell Technologies",
+      "type": "company",
+      "status": "public",
+      "tickers": ["DELL"],
+      "sector": "ai-infrastructure"
+    },
+    "hpe": {
+      "name": "Hewlett Packard Enterprise",
+      "type": "company",
+      "status": "public",
+      "tickers": ["HPE"],
+      "sector": "ai-infrastructure"
+    },
+    "coreweave": {
+      "name": "CoreWeave",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["NVDA"],
+      "proxy_rationale": "GPU cloud provider, NVIDIA partner",
+      "sector": "ai-cloud",
+      "valuation_estimate": "$23B"
+    },
+    "lambda": {
+      "name": "Lambda Labs",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["NVDA"],
+      "proxy_rationale": "GPU cloud provider",
+      "sector": "ai-cloud",
+      "valuation_estimate": "$1.5B"
+    },
+    "together": {
+      "name": "Together AI",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["NVDA"],
+      "proxy_rationale": "AI inference platform, NVIDIA partnership",
+      "sector": "ai-infrastructure",
+      "valuation_estimate": "$1.25B"
+    },
+    "replicate": {
+      "name": "Replicate",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Model hosting platform",
+      "sector": "ai-infrastructure"
+    },
+    "fireworks": {
+      "name": "Fireworks AI",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI inference platform",
+      "sector": "ai-infrastructure"
+    },
+    "anyscale": {
+      "name": "Anyscale",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Ray framework company",
+      "sector": "ai-infrastructure",
+      "valuation_estimate": "$1B"
+    },
+    "modal": {
+      "name": "Modal",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Serverless AI infrastructure",
+      "sector": "ai-infrastructure"
+    },
+    "alibaba": {
+      "name": "Alibaba",
+      "type": "company",
+      "status": "public",
+      "tickers": ["BABA", "9988.HK"],
+      "sector": "ai-foundation"
+    },
+    "tencent": {
+      "name": "Tencent",
+      "type": "company",
+      "status": "public",
+      "tickers": ["TCEHY", "0700.HK"],
+      "sector": "ai-foundation"
+    },
+    "baidu": {
+      "name": "Baidu",
+      "type": "company",
+      "status": "public",
+      "tickers": ["BIDU", "9888.HK"],
+      "sector": "ai-foundation"
+    },
+    "bytedance": {
+      "name": "ByteDance",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Private, owns TikTok/Doubao",
+      "sector": "ai-consumer",
+      "valuation_estimate": "$300B"
+    },
+    "sensetime": {
+      "name": "SenseTime",
+      "type": "company",
+      "status": "public",
+      "tickers": ["0020.HK"],
+      "sector": "ai-foundation"
+    },
+    "megvii": {
+      "name": "Megvii",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["0020.HK"],
+      "proxy_rationale": "Similar to SenseTime, AI vision",
+      "sector": "ai-vision"
+    },
+    "cloudwalk": {
+      "name": "CloudWalk",
+      "type": "company",
+      "status": "public",
+      "tickers": ["688327.SS"],
+      "sector": "ai-vision"
+    },
+    "iflytek": {
+      "name": "iFlytek",
+      "type": "company",
+      "status": "public",
+      "tickers": ["002230.SZ"],
+      "sector": "ai-speech"
+    },
+    "zhipu": {
+      "name": "Zhipu AI",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Private Chinese LLM company",
+      "sector": "ai-foundation",
+      "valuation_estimate": "$3B"
+    },
+    "moonshot": {
+      "name": "Moonshot AI",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["BABA"],
+      "proxy_rationale": "Alibaba investor",
+      "sector": "ai-foundation",
+      "valuation_estimate": "$3B"
+    },
+    "minimax": {
+      "name": "MiniMax",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["TCEHY"],
+      "proxy_rationale": "Tencent investor",
+      "sector": "ai-foundation",
+      "valuation_estimate": "$2.5B"
+    },
+    "baichuan": {
+      "name": "Baichuan",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["BABA"],
+      "proxy_rationale": "Alibaba investor",
+      "sector": "ai-foundation",
+      "valuation_estimate": "$2B"
+    },
+    "01ai": {
+      "name": "01.AI",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["BABA"],
+      "proxy_rationale": "Alibaba investor",
+      "sector": "ai-foundation",
+      "valuation_estimate": "$1B"
+    },
+    "stepfun": {
+      "name": "StepFun",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Private Chinese LLM company",
+      "sector": "ai-foundation"
+    },
+    "kling": {
+      "name": "Kling AI (Kuaishou)",
+      "type": "company",
+      "status": "public",
+      "tickers": ["1024.HK"],
+      "sector": "vision-multimodal"
+    },
+    "scale": {
+      "name": "Scale AI",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Data labeling leader",
+      "sector": "ai-data",
+      "valuation_estimate": "$14B"
+    },
+    "langchain": {
+      "name": "LangChain",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "LLM orchestration framework",
+      "sector": "ai-tooling"
+    },
+    "llamaindex": {
+      "name": "LlamaIndex",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "RAG framework company",
+      "sector": "ai-tooling"
+    },
+    "weights_and_biases": {
+      "name": "Weights & Biases",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "MLOps platform",
+      "sector": "ai-tooling"
+    },
+    "pinecone": {
+      "name": "Pinecone",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Vector database leader",
+      "sector": "ai-data",
+      "valuation_estimate": "$750M"
+    },
+    "weaviate": {
+      "name": "Weaviate",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Vector database",
+      "sector": "ai-data"
+    },
+    "qdrant": {
+      "name": "Qdrant",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Vector database",
+      "sector": "ai-data"
+    },
+    "chroma": {
+      "name": "Chroma",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Embedded vector database",
+      "sector": "ai-data"
+    },
+    "cursor": {
+      "name": "Cursor (Anysphere)",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI coding startup",
+      "sector": "ai-coding",
+      "valuation_estimate": "$2.6B"
+    },
+    "replit": {
+      "name": "Replit",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI coding platform",
+      "sector": "ai-coding",
+      "valuation_estimate": "$1.16B"
+    },
+    "codeium": {
+      "name": "Codeium",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI code completion",
+      "sector": "ai-coding",
+      "valuation_estimate": "$1.25B"
+    },
+    "tabnine": {
+      "name": "Tabnine",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI code completion",
+      "sector": "ai-coding"
+    },
+    "sourcegraph": {
+      "name": "Sourcegraph",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Code search + Cody AI",
+      "sector": "ai-coding",
+      "valuation_estimate": "$2.6B"
+    },
+    "poolside": {
+      "name": "Poolside",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI coding foundation model",
+      "sector": "ai-coding",
+      "valuation_estimate": "$3B"
+    },
+    "magic": {
+      "name": "Magic",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Long-context AI coding",
+      "sector": "ai-coding",
+      "valuation_estimate": "$1.5B"
+    },
+    "elevenlabs": {
+      "name": "ElevenLabs",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI voice synthesis leader",
+      "sector": "ai-audio",
+      "valuation_estimate": "$1.1B"
+    },
+    "suno": {
+      "name": "Suno",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI music generation",
+      "sector": "ai-audio",
+      "valuation_estimate": "$500M"
+    },
+    "udio": {
+      "name": "Udio",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI music generation",
+      "sector": "ai-audio"
+    },
+    "synthesia": {
+      "name": "Synthesia",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI video avatars",
+      "sector": "ai-video",
+      "valuation_estimate": "$2.1B"
+    },
+    "heygen": {
+      "name": "HeyGen",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI video avatars",
+      "sector": "ai-video",
+      "valuation_estimate": "$500M"
+    },
+    "d_id": {
+      "name": "D-ID",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI avatars and video",
+      "sector": "ai-video"
+    },
+    "jasper": {
+      "name": "Jasper",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI content marketing",
+      "sector": "ai-content",
+      "valuation_estimate": "$1.5B"
+    },
+    "copyai": {
+      "name": "Copy.ai",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI copywriting",
+      "sector": "ai-content"
+    },
+    "writer": {
+      "name": "Writer",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Enterprise AI writing",
+      "sector": "ai-content",
+      "valuation_estimate": "$1.9B"
+    },
+    "glean": {
+      "name": "Glean",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Enterprise AI search",
+      "sector": "ai-enterprise",
+      "valuation_estimate": "$4.6B"
+    },
+    "harvey": {
+      "name": "Harvey",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI for legal",
+      "sector": "ai-legal",
+      "valuation_estimate": "$1.5B"
+    },
+    "figma": {
+      "name": "Figma",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["ADBE"],
+      "proxy_rationale": "Adobe deal fell through, competitor",
+      "sector": "ai-design",
+      "valuation_estimate": "$12.5B"
+    },
+    "canva": {
+      "name": "Canva",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["ADBE"],
+      "proxy_rationale": "Adobe competitor in design",
+      "sector": "ai-design",
+      "valuation_estimate": "$26B"
+    },
+    "notion": {
+      "name": "Notion",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Productivity with AI features",
+      "sector": "ai-productivity",
+      "valuation_estimate": "$10B"
+    },
+    "deepl": {
+      "name": "DeepL",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "AI translation leader",
+      "sector": "ai-translation",
+      "valuation_estimate": "$2B"
+    },
+    "waymo": {
+      "name": "Waymo",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["GOOGL"],
+      "proxy_rationale": "Alphabet subsidiary",
+      "sector": "autonomous-vehicles"
+    },
+    "cruise": {
+      "name": "Cruise",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["GM"],
+      "proxy_rationale": "GM subsidiary",
+      "sector": "autonomous-vehicles"
+    },
+    "aurora": {
+      "name": "Aurora Innovation",
+      "type": "company",
+      "status": "public",
+      "tickers": ["AUR"],
+      "sector": "autonomous-vehicles"
+    },
+    "nuro": {
+      "name": "Nuro",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Autonomous delivery",
+      "sector": "autonomous-vehicles"
+    },
+    "figure": {
+      "name": "Figure",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Humanoid robotics, OpenAI/MSFT backed",
+      "sector": "robotics",
+      "valuation_estimate": "$2.6B"
+    },
+    "boston_dynamics": {
+      "name": "Boston Dynamics",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["HYND.KS"],
+      "proxy_rationale": "Hyundai subsidiary",
+      "sector": "robotics"
+    },
+    "1x": {
+      "name": "1X Technologies",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "OpenAI-backed humanoid robotics",
+      "sector": "robotics"
+    },
+    "unitree": {
+      "name": "Unitree",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Chinese robotics company",
+      "sector": "robotics"
+    },
+    "agility": {
+      "name": "Agility Robotics",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": ["AMZN"],
+      "proxy_rationale": "Amazon partnership/investment",
+      "sector": "robotics"
+    },
+    "ai21": {
+      "name": "AI21 Labs",
+      "type": "company",
+      "status": "private",
+      "proxy_tickers": [],
+      "proxy_rationale": "Israeli LLM company",
+      "sector": "ai-foundation",
+      "valuation_estimate": "$1.4B"
+    }
+  },
+  
+  "crypto_mapping": {
+    "FET": {
+      "name": "Fetch.ai",
+      "entity_id": "fetch-ai",
+      "sector": "agent-orchestration"
+    },
+    "AGIX": {
+      "name": "SingularityNET",
+      "entity_id": "singularitynet",
+      "sector": "ai-marketplace"
+    },
+    "OCEAN": {
+      "name": "Ocean Protocol",
+      "entity_id": "ocean-protocol",
+      "sector": "ai-data"
+    },
+    "TAO": {
+      "name": "Bittensor",
+      "entity_id": "bittensor",
+      "sector": "ai-infrastructure"
+    },
+    "RNDR": {
+      "name": "Render Network",
+      "entity_id": "render-network",
+      "sector": "ai-compute"
+    },
+    "WLD": {
+      "name": "Worldcoin",
+      "entity_id": "worldcoin",
+      "sector": "ai-identity"
+    },
+    "ARKM": {
+      "name": "Arkham",
+      "entity_id": "arkham",
+      "sector": "ai-analytics"
+    },
+    "AKT": {
+      "name": "Akash Network",
+      "entity_id": "akash-network",
+      "sector": "ai-compute"
+    },
+    "NOS": {
+      "name": "Nosana",
+      "entity_id": "nosana",
+      "sector": "ai-compute"
+    },
+    "VIRTUAL": {
+      "name": "Virtual Protocol",
+      "entity_id": "virtual-protocol",
+      "sector": "ai-agents"
+    },
+    "AI16Z": {
+      "name": "ai16z",
+      "entity_id": "ai16z",
+      "sector": "ai-agents"
+    }
+  },
+  
+  "sector_etfs": {
+    "ai-chips": ["SMH", "SOXX", "PSI"],
+    "ai-software": ["IGV", "XSW", "WCLD"],
+    "ai-cloud": ["CLOU", "SKYY", "WCLD"],
+    "ai-general": ["BOTZ", "ROBO", "AIQ", "IRBO"],
+    "ai-robotics": ["BOTZ", "ROBO", "ARKQ"]
+  },
+  
+  "benchmark_indices": {
+    "nasdaq_100": "QQQ",
+    "sp_500": "SPY",
+    "semiconductor": "SMH",
+    "tech_sector": "XLK",
+    "china_tech": "KWEB",
+    "hong_kong_tech": "3033.HK"
+  }
+}

@@ -40,6 +40,7 @@ class EntityExtractor:
         self.checkpoint_manager = checkpoint_manager
 
         # Initialize spaCy if available
+        global SPACY_AVAILABLE
         self.nlp = None
         if SPACY_AVAILABLE:
             try:

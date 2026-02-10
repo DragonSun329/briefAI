@@ -17,6 +17,22 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from utils.cache_manager import CacheManager
 
+# Import source health monitor
+try:
+    from utils.source_health_monitor import SourceHealthMonitor
+    HEALTH_MONITOR_AVAILABLE = True
+except ImportError:
+    HEALTH_MONITOR_AVAILABLE = False
+    logger.debug("Source health monitor not available")
+
+# Import custom Chinese source parsers
+try:
+    from scrapers.cn_source_parsers import has_custom_parser, parse_with_custom_parser
+    CUSTOM_PARSERS_AVAILABLE = True
+except ImportError:
+    CUSTOM_PARSERS_AVAILABLE = False
+    logger.debug("Custom Chinese source parsers not available")
+
 
 class WebScraper:
     """Scrapes AI news from configured sources"""
@@ -25,7 +41,8 @@ class WebScraper:
         self,
         sources_config: str = "./config/sources.json",
         cache_manager: CacheManager = None,
-        max_articles_per_source: int = 20
+        max_articles_per_source: int = 20,
+        enable_health_tracking: bool = True
     ):
         """
         Initialize web scraper
@@ -34,6 +51,7 @@ class WebScraper:
             sources_config: Path to sources configuration file
             cache_manager: Cache manager instance (creates new if None)
             max_articles_per_source: Maximum articles to scrape per source
+            enable_health_tracking: Enable source health monitoring
         """
         self.sources_config = Path(sources_config)
         self.cache_manager = cache_manager or CacheManager()
@@ -48,6 +66,12 @@ class WebScraper:
         logger.info(f"Loaded {len(self.sources)} enabled sources")
         if self.weighting_config.get('enabled', False):
             logger.info("Source weighting system enabled")
+
+        # Initialize health monitor
+        self.health_monitor = None
+        if enable_health_tracking and HEALTH_MONITOR_AVAILABLE:
+            self.health_monitor = SourceHealthMonitor()
+            logger.info("Source health monitoring enabled")
 
         # Setup session with headers
         self.session = requests.Session()
@@ -219,6 +243,9 @@ class WebScraper:
         Returns:
             List of articles from this source
         """
+        import time
+        start_time = time.time()
+        
         # Check cache first
         cache_key = f"source_{source['id']}_7days"
         if use_cache:
@@ -230,13 +257,39 @@ class WebScraper:
                 return cached_articles
 
         # Scrape based on source type
-        if source['type'] == 'rss':
-            articles = self._scrape_rss(source, cutoff_date)
-        elif source['type'] == 'web':
-            articles = self._scrape_web(source, cutoff_date)
-        else:
-            logger.warning(f"Unknown source type: {source['type']}")
-            return []
+        articles = []
+        error_message = None
+        
+        try:
+            if source['type'] == 'rss':
+                articles = self._scrape_rss(source, cutoff_date)
+            elif source['type'] == 'web':
+                articles = self._scrape_web(source, cutoff_date)
+            else:
+                logger.warning(f"Unknown source type: {source['type']}")
+                error_message = f"Unknown source type: {source['type']}"
+        except Exception as e:
+            error_message = str(e)
+            logger.error(f"Error scraping {source['name']}: {e}")
+
+        # Record health metrics
+        if self.health_monitor:
+            duration = time.time() - start_time
+            newest_date = None
+            if articles:
+                dates = [a.get('published_date') for a in articles if a.get('published_date')]
+                if dates:
+                    newest_date = max(dates)
+            
+            self.health_monitor.record_scrape(
+                source_id=source['id'],
+                source_name=source['name'],
+                success=error_message is None and len(articles) > 0,
+                article_count=len(articles),
+                newest_article_date=newest_date,
+                error_message=error_message,
+                duration_seconds=duration
+            )
 
         # Apply keyword filtering if query plan exists
         if query_plan and articles:
@@ -324,12 +377,23 @@ class WebScraper:
         """
         Scrape articles from web page (HTML parsing)
 
-        Implements generic scraping with fallback to RSS if available
+        Implements custom parsers for specific sources, with fallback to
+        generic scraping or RSS if available.
         """
         articles = []
 
         try:
-            # Try RSS URL first if available
+            # Check for custom parser first (for Chinese sources, etc.)
+            if CUSTOM_PARSERS_AVAILABLE and has_custom_parser(source['id']):
+                logger.debug(f"Using custom parser for {source['name']}")
+                articles = parse_with_custom_parser(
+                    source, cutoff_date, self.max_articles_per_source
+                )
+                if articles:
+                    return articles
+                logger.debug(f"Custom parser returned no articles, trying fallbacks")
+
+            # Try RSS URL if available
             if 'rss_url' in source:
                 return self._scrape_rss(source, cutoff_date)
 
@@ -463,6 +527,45 @@ class WebScraper:
         return filtered_articles
 
 
+    def get_adjusted_credibility(self, source_id: str, base_score: int) -> float:
+        """
+        Get health-adjusted credibility score for a source.
+        
+        Args:
+            source_id: Source identifier
+            base_score: Base credibility score from config (1-10)
+            
+        Returns:
+            Adjusted credibility score
+        """
+        if self.health_monitor:
+            return self.health_monitor.get_credibility_adjustment(source_id, base_score)
+        return float(base_score)
+    
+    def get_health_report(self) -> Dict[str, Any]:
+        """
+        Get health report for all sources.
+        
+        Returns:
+            Health report dictionary
+        """
+        if self.health_monitor:
+            return self.health_monitor.generate_report()
+        return {"error": "Health monitoring not enabled"}
+    
+    def get_problem_sources(self) -> List[str]:
+        """
+        Get list of sources with health issues.
+        
+        Returns:
+            List of source IDs with low health scores
+        """
+        if self.health_monitor:
+            problems = self.health_monitor.get_problem_sources()
+            return [p.source_id for p in problems]
+        return []
+
+
 if __name__ == "__main__":
     # Test web scraper
     scraper = WebScraper()
@@ -473,3 +576,11 @@ if __name__ == "__main__":
     print(f"\nScraped {len(articles)} articles:")
     for article in articles[:5]:
         print(f"- {article['title']} ({article['source']})")
+    
+    # Show health report
+    print("\n" + "=" * 50)
+    print("SOURCE HEALTH REPORT")
+    print("=" * 50)
+    import json
+    report = scraper.get_health_report()
+    print(json.dumps(report, indent=2))

@@ -1,0 +1,834 @@
+{
+  "schema": {
+    "name": "financial_signals_cn",
+    "version": "1.0"
+  },
+  "date": "2026-01-22",
+  "generated_at": "2026-01-22T16:46:51.647018",
+  "quality": {
+    "overall_status": "ok",
+    "warnings": []
+  },
+  "sources": {
+    "akshare": {
+      "status": "ok",
+      "ashare_fetched": 24
+    },
+    "yfinance": {
+      "status": "ok",
+      "hk_fetched": 10
+    }
+  },
+  "raw": {
+    "equities": [
+      {
+        "ticker": "603986.SS",
+        "name": "兆易创新",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 301.47,
+        "change_1d_pct": -2.01,
+        "change_7d_pct": 18.24,
+        "change_30d_pct": 40.58,
+        "volume": 450617,
+        "volume_ratio": 1.18,
+        "market": "A"
+      },
+      {
+        "ticker": "300347.SZ",
+        "name": "泰格医药",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 60.28,
+        "change_1d_pct": 0.52,
+        "change_7d_pct": -3.95,
+        "change_30d_pct": 19.82,
+        "volume": 68966,
+        "volume_ratio": 0.61,
+        "market": "A"
+      },
+      {
+        "ticker": "688256.SS",
+        "name": "寒武纪-U",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 1353.0,
+        "change_1d_pct": -0.06,
+        "change_7d_pct": -4.38,
+        "change_30d_pct": 5.13,
+        "volume": 59350,
+        "volume_ratio": 0.79,
+        "market": "A"
+      },
+      {
+        "ticker": "002920.SZ",
+        "name": "德赛西威",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 128.43,
+        "change_1d_pct": -2.71,
+        "change_7d_pct": -4.53,
+        "change_30d_pct": 9.88,
+        "volume": 133022,
+        "volume_ratio": 0.86,
+        "market": "A"
+      },
+      {
+        "ticker": "600703.SS",
+        "name": "三安光电",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 15.64,
+        "change_1d_pct": -1.64,
+        "change_7d_pct": 8.99,
+        "change_30d_pct": 19.75,
+        "volume": 1636612,
+        "volume_ratio": 1.26,
+        "market": "A"
+      },
+      {
+        "ticker": "688041.SS",
+        "name": "海光信息",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 288.5,
+        "change_1d_pct": 0.14,
+        "change_7d_pct": 15.4,
+        "change_30d_pct": 42.33,
+        "volume": 516985,
+        "volume_ratio": 1.79,
+        "market": "A"
+      },
+      {
+        "ticker": "300308.SZ",
+        "name": "中际旭创",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 621.0,
+        "change_1d_pct": 6.72,
+        "change_7d_pct": -0.64,
+        "change_30d_pct": 8.72,
+        "volume": 401944,
+        "volume_ratio": 1.34,
+        "market": "A"
+      },
+      {
+        "ticker": "688050.SS",
+        "name": "爱博医疗",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 61.53,
+        "change_1d_pct": -1.39,
+        "change_7d_pct": -4.44,
+        "change_30d_pct": -1.76,
+        "volume": 39226,
+        "volume_ratio": 1.38,
+        "market": "A"
+      },
+      {
+        "ticker": "300253.SZ",
+        "name": "卫宁健康",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 11.51,
+        "change_1d_pct": -2.29,
+        "change_7d_pct": -17.43,
+        "change_30d_pct": 21.16,
+        "volume": 1624847,
+        "volume_ratio": 0.82,
+        "market": "A"
+      },
+      {
+        "ticker": "002410.SZ",
+        "name": "广联达",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 14.72,
+        "change_1d_pct": 0.41,
+        "change_7d_pct": -6.24,
+        "change_30d_pct": 20.26,
+        "volume": 389588,
+        "volume_ratio": 0.77,
+        "market": "A"
+      },
+      {
+        "ticker": "300760.SZ",
+        "name": "迈瑞医疗",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 193.5,
+        "change_1d_pct": -0.92,
+        "change_7d_pct": -5.18,
+        "change_30d_pct": -2.16,
+        "volume": 72342,
+        "volume_ratio": 0.83,
+        "market": "A"
+      },
+      {
+        "ticker": "002594.SZ",
+        "name": "比亚迪",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 94.12,
+        "change_1d_pct": 0.02,
+        "change_7d_pct": -1.62,
+        "change_30d_pct": 0.63,
+        "volume": 291014,
+        "volume_ratio": 0.76,
+        "market": "A"
+      },
+      {
+        "ticker": "002049.SZ",
+        "name": "紫光国微",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 85.02,
+        "change_1d_pct": -1.55,
+        "change_7d_pct": -1.93,
+        "change_30d_pct": 11.15,
+        "volume": 406348,
+        "volume_ratio": 1.22,
+        "market": "A"
+      },
+      {
+        "ticker": "688111.SS",
+        "name": "金山办公",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 343.02,
+        "change_1d_pct": 2.89,
+        "change_7d_pct": -4.8,
+        "change_30d_pct": 11.75,
+        "volume": 96628,
+        "volume_ratio": 1.28,
+        "market": "A"
+      },
+      {
+        "ticker": "688169.SS",
+        "name": "石头科技",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 149.7,
+        "change_1d_pct": -2.13,
+        "change_7d_pct": -4.16,
+        "change_30d_pct": -3.57,
+        "volume": 55267,
+        "volume_ratio": 1.15,
+        "market": "A"
+      },
+      {
+        "ticker": "300124.SZ",
+        "name": "汇川技术",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 79.12,
+        "change_1d_pct": -1.2,
+        "change_7d_pct": -2.13,
+        "change_30d_pct": 10.98,
+        "volume": 362422,
+        "volume_ratio": 1.03,
+        "market": "A"
+      },
+      {
+        "ticker": "601127.SS",
+        "name": "赛力斯",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 115.12,
+        "change_1d_pct": -2.66,
+        "change_7d_pct": -5.11,
+        "change_30d_pct": -3.67,
+        "volume": 301853,
+        "volume_ratio": 1.49,
+        "market": "A"
+      },
+      {
+        "ticker": "688008.SS",
+        "name": "澜起科技",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 167.9,
+        "change_1d_pct": 4.92,
+        "change_7d_pct": 24.19,
+        "change_30d_pct": 43.79,
+        "volume": 1140819,
+        "volume_ratio": 2.68,
+        "market": "A"
+      },
+      {
+        "ticker": "300033.SZ",
+        "name": "同花顺",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 358.19,
+        "change_1d_pct": -0.92,
+        "change_7d_pct": -7.75,
+        "change_30d_pct": 14.8,
+        "volume": 100894,
+        "volume_ratio": 0.87,
+        "market": "A"
+      },
+      {
+        "ticker": "300024.SZ",
+        "name": "机器人",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 18.19,
+        "change_1d_pct": -0.71,
+        "change_7d_pct": 0.28,
+        "change_30d_pct": 8.27,
+        "volume": 304603,
+        "volume_ratio": 0.73,
+        "market": "A"
+      },
+      {
+        "ticker": "000977.SZ",
+        "name": "浪潮信息",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 65.09,
+        "change_1d_pct": -1.11,
+        "change_7d_pct": -4.46,
+        "change_30d_pct": 6.25,
+        "volume": 466344,
+        "volume_ratio": 0.85,
+        "market": "A"
+      },
+      {
+        "ticker": "002230.SZ",
+        "name": "科大讯飞",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 58.44,
+        "change_1d_pct": 0.6,
+        "change_7d_pct": -7.81,
+        "change_30d_pct": 20.1,
+        "volume": 637770,
+        "volume_ratio": 0.7,
+        "market": "A"
+      },
+      {
+        "ticker": "002747.SZ",
+        "name": "埃斯顿",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 25.47,
+        "change_1d_pct": 1.35,
+        "change_7d_pct": 2.91,
+        "change_30d_pct": 21.58,
+        "volume": 291566,
+        "volume_ratio": 1.14,
+        "market": "A"
+      },
+      {
+        "ticker": "300418.SZ",
+        "name": "昆仑万维",
+        "asof": "2026-01-22T16:40:18.868348",
+        "price": 53.45,
+        "change_1d_pct": 1.64,
+        "change_7d_pct": -14.22,
+        "change_30d_pct": 33.79,
+        "volume": 678907,
+        "volume_ratio": 0.73,
+        "market": "A"
+      },
+      {
+        "ticker": "2382.HK",
+        "name": "2382.HK",
+        "asof": "2026-01-22T16:43:39.390064",
+        "price": 63.95000076293945,
+        "change_1d_pct": 2.16,
+        "change_7d_pct": -1.24,
+        "change_30d_pct": -2.14,
+        "volume": 10684893,
+        "volume_ratio": 1.04,
+        "market": "HK"
+      },
+      {
+        "ticker": "9988.HK",
+        "name": "9988.HK",
+        "asof": "2026-01-22T16:43:39.390064",
+        "price": 163.1999969482422,
+        "change_1d_pct": 2.19,
+        "change_7d_pct": -3.43,
+        "change_30d_pct": 13.25,
+        "volume": 67441221,
+        "volume_ratio": 0.76,
+        "market": "HK"
+      },
+      {
+        "ticker": "0700.HK",
+        "name": "0700.HK",
+        "asof": "2026-01-22T16:43:39.390064",
+        "price": 602.5,
+        "change_1d_pct": 0.25,
+        "change_7d_pct": -4.82,
+        "change_30d_pct": -0.41,
+        "volume": 16003431,
+        "volume_ratio": 0.91,
+        "market": "HK"
+      },
+      {
+        "ticker": "9888.HK",
+        "name": "9888.HK",
+        "asof": "2026-01-22T16:43:39.390064",
+        "price": 153.6999969482422,
+        "change_1d_pct": 3.29,
+        "change_7d_pct": 5.93,
+        "change_30d_pct": 30.7,
+        "volume": 20685107,
+        "volume_ratio": 1.53,
+        "market": "HK"
+      },
+      {
+        "ticker": "9868.HK",
+        "name": "9868.HK",
+        "asof": "2026-01-22T16:43:39.390064",
+        "price": 79.30000305175781,
+        "change_1d_pct": -0.25,
+        "change_7d_pct": -3.53,
+        "change_30d_pct": 11.38,
+        "volume": 13292351,
+        "volume_ratio": 1.01,
+        "market": "HK"
+      },
+      {
+        "ticker": "0020.HK",
+        "name": "0020.HK",
+        "asof": "2026-01-22T16:43:39.390064",
+        "price": 2.4800000190734863,
+        "change_1d_pct": 4.2,
+        "change_7d_pct": 0.0,
+        "change_30d_pct": 31.22,
+        "volume": 578422964,
+        "volume_ratio": 0.88,
+        "market": "HK"
+      },
+      {
+        "ticker": "9999.HK",
+        "name": "9999.HK",
+        "asof": "2026-01-22T16:43:39.390064",
+        "price": 208.0,
+        "change_1d_pct": -3.7,
+        "change_7d_pct": -5.63,
+        "change_30d_pct": -1.7,
+        "volume": 9729530,
+        "volume_ratio": 1.96,
+        "market": "HK"
+      },
+      {
+        "ticker": "3690.HK",
+        "name": "3690.HK",
+        "asof": "2026-01-22T16:43:39.390064",
+        "price": 97.30000305175781,
+        "change_1d_pct": -0.05,
+        "change_7d_pct": -4.14,
+        "change_30d_pct": -4.04,
+        "volume": 38515912,
+        "volume_ratio": 0.89,
+        "market": "HK"
+      },
+      {
+        "ticker": "9961.HK",
+        "name": "9961.HK",
+        "asof": "2026-01-22T16:43:39.390064",
+        "price": 482.6000061035156,
+        "change_1d_pct": 0.46,
+        "change_7d_pct": -15.26,
+        "change_30d_pct": -13.59,
+        "volume": 3935164,
+        "volume_ratio": 0.94,
+        "market": "HK"
+      },
+      {
+        "ticker": "1810.HK",
+        "name": "1810.HK",
+        "asof": "2026-01-22T16:43:39.390064",
+        "price": 35.41999816894531,
+        "change_1d_pct": -0.17,
+        "change_7d_pct": -6.25,
+        "change_30d_pct": -11.89,
+        "volume": 266881560,
+        "volume_ratio": 1.77,
+        "market": "HK"
+      }
+    ],
+    "macro": [
+      {
+        "series_id": "10y_bond",
+        "name": "10Y国债收益率",
+        "asof": "2026-01-22T16:45:58.580227",
+        "value": 1.8312,
+        "z_score": 0.44
+      },
+      {
+        "series_id": "shibor_3m",
+        "name": "3M SHIBOR",
+        "asof": "2026-01-22T16:46:46.625517",
+        "value": 1.598,
+        "z_score": -7.54
+      }
+    ],
+    "flow": null
+  },
+  "macro_regime_cn": {
+    "mrs_cn": -1.0,
+    "interpretation": "risk_off"
+  },
+  "bucket_signals": {
+    "ai-chips-cn": {
+      "bucket_id": "ai-chips-cn",
+      "bucket_name": "AI芯片",
+      "pms_cn": 87.5,
+      "pms_cn_coverage": {
+        "tickers_present": 5,
+        "tickers_total": 5,
+        "missing": []
+      },
+      "pms_cn_contributors": [
+        {
+          "ticker": "688008.SS",
+          "name": "澜起科技",
+          "change_7d_pct": 24.19,
+          "weight": 0.2,
+          "contribution": 4.838
+        },
+        {
+          "ticker": "603986.SS",
+          "name": "兆易创新",
+          "change_7d_pct": 18.24,
+          "weight": 0.2,
+          "contribution": 3.6479999999999997
+        },
+        {
+          "ticker": "688041.SS",
+          "name": "海光信息",
+          "change_7d_pct": 15.4,
+          "weight": 0.2,
+          "contribution": 3.08
+        },
+        {
+          "ticker": "688256.SS",
+          "name": "寒武纪-U",
+          "change_7d_pct": -4.38,
+          "weight": 0.2,
+          "contribution": -0.876
+        },
+        {
+          "ticker": "002049.SZ",
+          "name": "紫光国微",
+          "change_7d_pct": -1.93,
+          "weight": 0.2,
+          "contribution": -0.386
+        }
+      ],
+      "pms_cn_contributors_text": [
+        "688008.SS +24.2%",
+        "603986.SS +18.2%",
+        "688041.SS +15.4%"
+      ]
+    },
+    "ai-infrastructure-cn": {
+      "bucket_id": "ai-infrastructure-cn",
+      "bucket_name": "AI基础设施",
+      "pms_cn": 62.5,
+      "pms_cn_coverage": {
+        "tickers_present": 4,
+        "tickers_total": 4,
+        "missing": []
+      },
+      "pms_cn_contributors": [
+        {
+          "ticker": "600703.SS",
+          "name": "三安光电",
+          "change_7d_pct": 8.99,
+          "weight": 0.25,
+          "contribution": 2.2475
+        },
+        {
+          "ticker": "002230.SZ",
+          "name": "科大讯飞",
+          "change_7d_pct": -7.81,
+          "weight": 0.25,
+          "contribution": -1.9525
+        },
+        {
+          "ticker": "000977.SZ",
+          "name": "浪潮信息",
+          "change_7d_pct": -4.46,
+          "weight": 0.25,
+          "contribution": -1.115
+        },
+        {
+          "ticker": "300308.SZ",
+          "name": "中际旭创",
+          "change_7d_pct": -0.64,
+          "weight": 0.25,
+          "contribution": -0.16
+        }
+      ],
+      "pms_cn_contributors_text": [
+        "600703.SS +9.0%",
+        "002230.SZ -7.8%",
+        "000977.SZ -4.5%"
+      ]
+    },
+    "llm-foundation-cn": {
+      "bucket_id": "llm-foundation-cn",
+      "bucket_name": "大模型基座",
+      "pms_cn": 50.0,
+      "pms_cn_coverage": {
+        "tickers_present": 6,
+        "tickers_total": 8,
+        "missing": [
+          "BIDU",
+          "BABA"
+        ]
+      },
+      "pms_cn_contributors": [
+        {
+          "ticker": "9961.HK",
+          "name": "9961.HK",
+          "change_7d_pct": -15.26,
+          "weight": 0.16666666666666666,
+          "contribution": -2.5433333333333334
+        },
+        {
+          "ticker": "9888.HK",
+          "name": "9888.HK",
+          "change_7d_pct": 5.93,
+          "weight": 0.16666666666666666,
+          "contribution": 0.9883333333333333
+        },
+        {
+          "ticker": "0700.HK",
+          "name": "0700.HK",
+          "change_7d_pct": -4.82,
+          "weight": 0.16666666666666666,
+          "contribution": -0.8033333333333333
+        },
+        {
+          "ticker": "3690.HK",
+          "name": "3690.HK",
+          "change_7d_pct": -4.14,
+          "weight": 0.16666666666666666,
+          "contribution": -0.69
+        },
+        {
+          "ticker": "9988.HK",
+          "name": "9988.HK",
+          "change_7d_pct": -3.43,
+          "weight": 0.16666666666666666,
+          "contribution": -0.5716666666666667
+        },
+        {
+          "ticker": "0020.HK",
+          "name": "0020.HK",
+          "change_7d_pct": 0.0,
+          "weight": 0.16666666666666666,
+          "contribution": 0.0
+        }
+      ],
+      "pms_cn_contributors_text": [
+        "9961.HK -15.3%",
+        "9888.HK +5.9%",
+        "0700.HK -4.8%"
+      ]
+    },
+    "ai-enterprise-cn": {
+      "bucket_id": "ai-enterprise-cn",
+      "bucket_name": "AI企业应用",
+      "pms_cn": 0.0,
+      "pms_cn_coverage": {
+        "tickers_present": 4,
+        "tickers_total": 4,
+        "missing": []
+      },
+      "pms_cn_contributors": [
+        {
+          "ticker": "300253.SZ",
+          "name": "卫宁健康",
+          "change_7d_pct": -17.43,
+          "weight": 0.25,
+          "contribution": -4.3575
+        },
+        {
+          "ticker": "300033.SZ",
+          "name": "同花顺",
+          "change_7d_pct": -7.75,
+          "weight": 0.25,
+          "contribution": -1.9375
+        },
+        {
+          "ticker": "002410.SZ",
+          "name": "广联达",
+          "change_7d_pct": -6.24,
+          "weight": 0.25,
+          "contribution": -1.56
+        },
+        {
+          "ticker": "688111.SS",
+          "name": "金山办公",
+          "change_7d_pct": -4.8,
+          "weight": 0.25,
+          "contribution": -1.2
+        }
+      ],
+      "pms_cn_contributors_text": [
+        "300253.SZ -17.4%",
+        "300033.SZ -7.8%",
+        "002410.SZ -6.2%"
+      ]
+    },
+    "robotics-embodied-cn": {
+      "bucket_id": "robotics-embodied-cn",
+      "bucket_name": "机器人/具身智能",
+      "pms_cn": 75.0,
+      "pms_cn_coverage": {
+        "tickers_present": 4,
+        "tickers_total": 4,
+        "missing": []
+      },
+      "pms_cn_contributors": [
+        {
+          "ticker": "688169.SS",
+          "name": "石头科技",
+          "change_7d_pct": -4.16,
+          "weight": 0.25,
+          "contribution": -1.04
+        },
+        {
+          "ticker": "002747.SZ",
+          "name": "埃斯顿",
+          "change_7d_pct": 2.91,
+          "weight": 0.25,
+          "contribution": 0.7275
+        },
+        {
+          "ticker": "300124.SZ",
+          "name": "汇川技术",
+          "change_7d_pct": -2.13,
+          "weight": 0.25,
+          "contribution": -0.5325
+        },
+        {
+          "ticker": "300024.SZ",
+          "name": "机器人",
+          "change_7d_pct": 0.28,
+          "weight": 0.25,
+          "contribution": 0.07
+        }
+      ],
+      "pms_cn_contributors_text": [
+        "688169.SS -4.2%",
+        "002747.SZ +2.9%",
+        "300124.SZ -2.1%"
+      ]
+    },
+    "ai-healthcare-cn": {
+      "bucket_id": "ai-healthcare-cn",
+      "bucket_name": "AI医疗",
+      "pms_cn": 25.0,
+      "pms_cn_coverage": {
+        "tickers_present": 3,
+        "tickers_total": 3,
+        "missing": []
+      },
+      "pms_cn_contributors": [
+        {
+          "ticker": "300760.SZ",
+          "name": "迈瑞医疗",
+          "change_7d_pct": -5.18,
+          "weight": 0.3333333333333333,
+          "contribution": -1.7266666666666666
+        },
+        {
+          "ticker": "688050.SS",
+          "name": "爱博医疗",
+          "change_7d_pct": -4.44,
+          "weight": 0.3333333333333333,
+          "contribution": -1.4800000000000002
+        },
+        {
+          "ticker": "300347.SZ",
+          "name": "泰格医药",
+          "change_7d_pct": -3.95,
+          "weight": 0.3333333333333333,
+          "contribution": -1.3166666666666667
+        }
+      ],
+      "pms_cn_contributors_text": [
+        "300760.SZ -5.2%",
+        "688050.SS -4.4%",
+        "300347.SZ -4.0%"
+      ]
+    },
+    "autonomous-vehicles-cn": {
+      "bucket_id": "autonomous-vehicles-cn",
+      "bucket_name": "自动驾驶",
+      "pms_cn": 37.5,
+      "pms_cn_coverage": {
+        "tickers_present": 4,
+        "tickers_total": 4,
+        "missing": []
+      },
+      "pms_cn_contributors": [
+        {
+          "ticker": "601127.SS",
+          "name": "赛力斯",
+          "change_7d_pct": -5.11,
+          "weight": 0.25,
+          "contribution": -1.2775
+        },
+        {
+          "ticker": "002920.SZ",
+          "name": "德赛西威",
+          "change_7d_pct": -4.53,
+          "weight": 0.25,
+          "contribution": -1.1325
+        },
+        {
+          "ticker": "9868.HK",
+          "name": "9868.HK",
+          "change_7d_pct": -3.53,
+          "weight": 0.25,
+          "contribution": -0.8825
+        },
+        {
+          "ticker": "002594.SZ",
+          "name": "比亚迪",
+          "change_7d_pct": -1.62,
+          "weight": 0.25,
+          "contribution": -0.405
+        }
+      ],
+      "pms_cn_contributors_text": [
+        "601127.SS -5.1%",
+        "002920.SZ -4.5%",
+        "9868.HK -3.5%"
+      ]
+    },
+    "ai-consumer-cn": {
+      "bucket_id": "ai-consumer-cn",
+      "bucket_name": "AI消费",
+      "pms_cn": 12.5,
+      "pms_cn_coverage": {
+        "tickers_present": 4,
+        "tickers_total": 4,
+        "missing": []
+      },
+      "pms_cn_contributors": [
+        {
+          "ticker": "300418.SZ",
+          "name": "昆仑万维",
+          "change_7d_pct": -14.22,
+          "weight": 0.25,
+          "contribution": -3.555
+        },
+        {
+          "ticker": "1810.HK",
+          "name": "1810.HK",
+          "change_7d_pct": -6.25,
+          "weight": 0.25,
+          "contribution": -1.5625
+        },
+        {
+          "ticker": "9999.HK",
+          "name": "9999.HK",
+          "change_7d_pct": -5.63,
+          "weight": 0.25,
+          "contribution": -1.4075
+        },
+        {
+          "ticker": "2382.HK",
+          "name": "2382.HK",
+          "change_7d_pct": -1.24,
+          "weight": 0.25,
+          "contribution": -0.31
+        }
+      ],
+      "pms_cn_contributors_text": [
+        "300418.SZ -14.2%",
+        "1810.HK -6.2%",
+        "9999.HK -5.6%"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1374 @@
+{
+  "_meta": {
+    "version": "2.0.0",
+    "generated_at": "2026-01-26",
+    "normalization": "lower+strip_punct+strip_suffixes",
+    "suffixes_stripped": ["inc", "corp", "ai", "labs", "co", "llc"],
+    "description": "Canonical entity registry for trend radar validation. Maps normalized keys to entity definitions.",
+    "entity_count": 105
+  },
+
+  "openai": {
+    "canonical_key": "openai",
+    "canonical_name": "OpenAI",
+    "entity_type": "company",
+    "aliases": ["open ai", "openai inc"],
+    "github_orgs": ["openai"],
+    "hf_namespaces": ["openai"],
+    "products": ["gpt-4", "gpt-4o", "gpt-5", "chatgpt", "dall-e", "sora", "whisper", "codex", "o1", "o3"],
+    "website": "openai.com"
+  },
+
+  "anthropic": {
+    "canonical_key": "anthropic",
+    "canonical_name": "Anthropic",
+    "entity_type": "company",
+    "aliases": ["anthropic ai", "anthropic inc"],
+    "github_orgs": ["anthropics"],
+    "hf_namespaces": ["anthropic"],
+    "products": ["claude", "claude-3", "claude-3.5", "claude-opus", "claude-sonnet", "claude-haiku", "claude-4"],
+    "website": "anthropic.com"
+  },
+
+  "deepseek": {
+    "canonical_key": "deepseek",
+    "canonical_name": "DeepSeek",
+    "entity_type": "company",
+    "aliases": ["deepseek ai", "deep seek"],
+    "github_orgs": ["deepseek-ai"],
+    "hf_namespaces": ["deepseek-ai"],
+    "products": ["deepseek-v3", "deepseek-r1", "deepseek-coder", "deepseek-math"],
+    "website": "deepseek.com"
+  },
+
+  "google": {
+    "canonical_key": "google",
+    "canonical_name": "Google",
+    "entity_type": "company",
+    "aliases": ["google ai", "google deepmind", "deepmind", "alphabet"],
+    "github_orgs": ["google", "google-deepmind", "google-research"],
+    "hf_namespaces": ["google"],
+    "products": ["gemini", "gemini-pro", "gemini-ultra", "gemini-2", "bard", "palm", "lamda", "veo"],
+    "website": "deepmind.google"
+  },
+
+  "meta": {
+    "canonical_key": "meta",
+    "canonical_name": "Meta",
+    "entity_type": "company",
+    "aliases": ["meta ai", "facebook ai", "fair"],
+    "github_orgs": ["meta-llama", "facebookresearch"],
+    "hf_namespaces": ["meta-llama", "facebook"],
+    "products": ["llama", "llama-2", "llama-3", "llama-3.1", "llama-4", "segment-anything", "sam"],
+    "website": "ai.meta.com"
+  },
+
+  "mistral": {
+    "canonical_key": "mistral",
+    "canonical_name": "Mistral AI",
+    "entity_type": "company",
+    "aliases": ["mistralai"],
+    "github_orgs": ["mistralai"],
+    "hf_namespaces": ["mistralai"],
+    "products": ["mistral-7b", "mistral-8x7b", "mixtral", "mistral-large", "mistral-nemo", "codestral", "pixtral"],
+    "website": "mistral.ai"
+  },
+
+  "microsoft": {
+    "canonical_key": "microsoft",
+    "canonical_name": "Microsoft",
+    "entity_type": "company",
+    "aliases": ["microsoft ai", "msft", "azure ai"],
+    "github_orgs": ["microsoft"],
+    "hf_namespaces": ["microsoft"],
+    "products": ["copilot", "phi", "phi-2", "phi-3", "phi-4", "orca", "azure-openai"],
+    "website": "microsoft.com"
+  },
+
+  "nvidia": {
+    "canonical_key": "nvidia",
+    "canonical_name": "NVIDIA",
+    "entity_type": "company",
+    "aliases": ["nvidia ai", "nvda"],
+    "github_orgs": ["nvidia", "nvidia-research"],
+    "hf_namespaces": ["nvidia"],
+    "products": ["nemotron", "megatron", "tensorrt", "triton", "nemo", "blackwell", "hopper"],
+    "website": "nvidia.com"
+  },
+
+  "xai": {
+    "canonical_key": "xai",
+    "canonical_name": "xAI",
+    "entity_type": "company",
+    "aliases": ["x.ai", "x ai"],
+    "github_orgs": ["xai-org"],
+    "hf_namespaces": ["xai-org"],
+    "products": ["grok", "grok-1", "grok-2", "grok-3"],
+    "website": "x.ai"
+  },
+
+  "cohere": {
+    "canonical_key": "cohere",
+    "canonical_name": "Cohere",
+    "entity_type": "company",
+    "aliases": ["cohere ai", "cohere inc"],
+    "github_orgs": ["cohere-ai"],
+    "hf_namespaces": ["cohere", "CohereForAI"],
+    "products": ["command", "command-r", "command-r-plus", "embed", "rerank", "aya"],
+    "website": "cohere.com"
+  },
+
+  "alibaba": {
+    "canonical_key": "alibaba",
+    "canonical_name": "Alibaba",
+    "entity_type": "company",
+    "aliases": ["alibaba cloud", "alibaba ai", "qwen team", "aliyun"],
+    "github_orgs": ["QwenLM", "alibaba"],
+    "hf_namespaces": ["Qwen", "alibaba-nlp"],
+    "products": ["qwen", "qwen-2", "qwen-2.5", "qwen-vl", "qwen-audio", "tongyi"],
+    "website": "qwenlm.ai"
+  },
+
+  "stability": {
+    "canonical_key": "stability",
+    "canonical_name": "Stability AI",
+    "entity_type": "company",
+    "aliases": ["stability.ai", "stabilityai"],
+    "github_orgs": ["stability-ai", "Stability-AI"],
+    "hf_namespaces": ["stabilityai"],
+    "products": ["stable-diffusion", "sdxl", "sd3", "stable-video", "stable-audio", "stable-cascade"],
+    "website": "stability.ai"
+  },
+
+  "huggingface": {
+    "canonical_key": "huggingface",
+    "canonical_name": "Hugging Face",
+    "entity_type": "company",
+    "aliases": ["hugging face", "hf"],
+    "github_orgs": ["huggingface"],
+    "hf_namespaces": ["huggingface", "HuggingFaceH4"],
+    "products": ["transformers", "diffusers", "accelerate", "peft", "trl", "safetensors"],
+    "website": "huggingface.co"
+  },
+
+  "perplexity": {
+    "canonical_key": "perplexity",
+    "canonical_name": "Perplexity",
+    "entity_type": "company",
+    "aliases": ["perplexity ai", "perplexity.ai"],
+    "github_orgs": ["perplexity-ai"],
+    "hf_namespaces": [],
+    "products": ["perplexity", "sonar", "sonar-pro"],
+    "website": "perplexity.ai"
+  },
+
+  "together": {
+    "canonical_key": "together",
+    "canonical_name": "Together AI",
+    "entity_type": "company",
+    "aliases": ["together.ai", "together compute"],
+    "github_orgs": ["togethercomputer"],
+    "hf_namespaces": ["togethercomputer"],
+    "products": ["redpajama", "together-inference"],
+    "website": "together.ai"
+  },
+
+  "ai21": {
+    "canonical_key": "ai21",
+    "canonical_name": "AI21 Labs",
+    "entity_type": "company",
+    "aliases": ["ai21labs"],
+    "github_orgs": ["AI21Labs"],
+    "hf_namespaces": ["ai21labs"],
+    "products": ["jamba", "jamba-1.5", "jurassic", "wordtune"],
+    "website": "ai21.com"
+  },
+
+  "baichuan": {
+    "canonical_key": "baichuan",
+    "canonical_name": "Baichuan",
+    "entity_type": "company",
+    "aliases": ["baichuan ai", "baichuan inc"],
+    "github_orgs": ["baichuan-inc"],
+    "hf_namespaces": ["baichuan-inc"],
+    "products": ["baichuan", "baichuan-2", "baichuan-13b", "baichuan-4"],
+    "website": "baichuan-ai.com"
+  },
+
+  "zhipu": {
+    "canonical_key": "zhipu",
+    "canonical_name": "Zhipu AI",
+    "entity_type": "company",
+    "aliases": ["glm", "chatglm team", "智谱ai"],
+    "github_orgs": ["THUDM"],
+    "hf_namespaces": ["THUDM"],
+    "products": ["chatglm", "glm-4", "glm-4v", "cogvideo", "cogview", "cogvlm"],
+    "website": "zhipuai.cn"
+  },
+
+  "01ai": {
+    "canonical_key": "01ai",
+    "canonical_name": "01.AI",
+    "entity_type": "company",
+    "aliases": ["01 ai", "yi team", "零一万物"],
+    "github_orgs": ["01-ai"],
+    "hf_namespaces": ["01-ai"],
+    "products": ["yi", "yi-34b", "yi-1.5", "yi-coder", "yi-lightning"],
+    "website": "01.ai"
+  },
+
+  "runway": {
+    "canonical_key": "runway",
+    "canonical_name": "Runway",
+    "entity_type": "company",
+    "aliases": ["runway ml", "runwayml"],
+    "github_orgs": ["runwayml"],
+    "hf_namespaces": ["runwayml"],
+    "products": ["gen-2", "gen-3", "gen-3-alpha"],
+    "website": "runway.ml"
+  },
+
+  "midjourney": {
+    "canonical_key": "midjourney",
+    "canonical_name": "Midjourney",
+    "entity_type": "company",
+    "aliases": ["mid journey", "mj"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["midjourney-v5", "midjourney-v6", "niji"],
+    "website": "midjourney.com"
+  },
+
+  "replicate": {
+    "canonical_key": "replicate",
+    "canonical_name": "Replicate",
+    "entity_type": "company",
+    "aliases": ["replicate.com"],
+    "github_orgs": ["replicate"],
+    "hf_namespaces": [],
+    "products": ["cog", "replicate-api"],
+    "website": "replicate.com"
+  },
+
+  "anyscale": {
+    "canonical_key": "anyscale",
+    "canonical_name": "Anyscale",
+    "entity_type": "company",
+    "aliases": ["anyscale ai"],
+    "github_orgs": ["anyscale", "ray-project"],
+    "hf_namespaces": [],
+    "products": ["ray", "ray-serve", "ray-tune"],
+    "website": "anyscale.com"
+  },
+
+  "databricks": {
+    "canonical_key": "databricks",
+    "canonical_name": "Databricks",
+    "entity_type": "company",
+    "aliases": ["databricks ai", "mosaic ml", "mosaicml"],
+    "github_orgs": ["databricks", "mosaicml"],
+    "hf_namespaces": ["databricks", "mosaicml"],
+    "products": ["dbrx", "mpt", "dolly", "unity-catalog"],
+    "website": "databricks.com"
+  },
+
+  "inflection": {
+    "canonical_key": "inflection",
+    "canonical_name": "Inflection AI",
+    "entity_type": "company",
+    "aliases": ["pi ai", "inflection.ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["pi", "inflection-2", "inflection-2.5"],
+    "website": "inflection.ai"
+  },
+
+  "character": {
+    "canonical_key": "character",
+    "canonical_name": "Character.AI",
+    "entity_type": "company",
+    "aliases": ["character ai", "c.ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["character", "character-voice"],
+    "website": "character.ai"
+  },
+
+  "adept": {
+    "canonical_key": "adept",
+    "canonical_name": "Adept",
+    "entity_type": "company",
+    "aliases": ["adept ai", "adept.ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["act-1", "fuyu", "persimmon"],
+    "website": "adept.ai"
+  },
+
+  "scale": {
+    "canonical_key": "scale",
+    "canonical_name": "Scale AI",
+    "entity_type": "company",
+    "aliases": ["scaleai"],
+    "github_orgs": ["scaleapi"],
+    "hf_namespaces": [],
+    "products": ["scale-data", "scale-nucleus", "scale-rapid"],
+    "website": "scale.com"
+  },
+
+  "weights_and_biases": {
+    "canonical_key": "weights_and_biases",
+    "canonical_name": "Weights & Biases",
+    "entity_type": "company",
+    "aliases": ["wandb", "weights and biases", "w&b"],
+    "github_orgs": ["wandb"],
+    "hf_namespaces": [],
+    "products": ["wandb", "weave", "launch"],
+    "website": "wandb.ai"
+  },
+
+  "langchain": {
+    "canonical_key": "langchain",
+    "canonical_name": "LangChain",
+    "entity_type": "company",
+    "aliases": ["langchain ai"],
+    "github_orgs": ["langchain-ai"],
+    "hf_namespaces": [],
+    "products": ["langchain", "langsmith", "langgraph"],
+    "website": "langchain.com"
+  },
+
+  "sensetime": {
+    "canonical_key": "sensetime",
+    "canonical_name": "SenseTime",
+    "entity_type": "company",
+    "aliases": ["商汤科技", "sense time"],
+    "github_orgs": ["SenseTime"],
+    "hf_namespaces": [],
+    "products": ["sensechat", "sensenova", "sensemimic"],
+    "website": "sensetime.com"
+  },
+
+  "megvii": {
+    "canonical_key": "megvii",
+    "canonical_name": "Megvii",
+    "entity_type": "company",
+    "aliases": ["旷视科技", "face++"],
+    "github_orgs": ["megvii-research"],
+    "hf_namespaces": [],
+    "products": ["megengine", "face++", "brain++"],
+    "website": "megvii.com"
+  },
+
+  "cloudwalk": {
+    "canonical_key": "cloudwalk",
+    "canonical_name": "CloudWalk",
+    "entity_type": "company",
+    "aliases": ["云从科技", "cloud walk"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["cloudwalk-ai"],
+    "website": "cloudwalk.com"
+  },
+
+  "moonshot": {
+    "canonical_key": "moonshot",
+    "canonical_name": "Moonshot AI",
+    "entity_type": "company",
+    "aliases": ["月之暗面", "kimi"],
+    "github_orgs": ["moonshotai"],
+    "hf_namespaces": [],
+    "products": ["kimi", "kimi-chat", "moonshot-v1"],
+    "website": "moonshot.cn"
+  },
+
+  "minimax": {
+    "canonical_key": "minimax",
+    "canonical_name": "MiniMax",
+    "entity_type": "company",
+    "aliases": ["小冰公司"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["abab", "hailuo", "talkie"],
+    "website": "minimaxi.com"
+  },
+
+  "stepfun": {
+    "canonical_key": "stepfun",
+    "canonical_name": "StepFun",
+    "entity_type": "company",
+    "aliases": ["阶跃星辰", "step fun"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["step-1", "step-2"],
+    "website": "stepfun.com"
+  },
+
+  "amd": {
+    "canonical_key": "amd",
+    "canonical_name": "AMD",
+    "entity_type": "company",
+    "aliases": ["advanced micro devices"],
+    "github_orgs": ["ROCm", "RadeonOpenCompute"],
+    "hf_namespaces": [],
+    "products": ["mi300", "mi300x", "rocm", "instinct"],
+    "website": "amd.com"
+  },
+
+  "intel": {
+    "canonical_key": "intel",
+    "canonical_name": "Intel",
+    "entity_type": "company",
+    "aliases": ["intel ai", "habana"],
+    "github_orgs": ["intel", "IntelLabs"],
+    "hf_namespaces": ["Intel"],
+    "products": ["gaudi", "gaudi-2", "gaudi-3", "xeon", "neural-compressor"],
+    "website": "intel.com"
+  },
+
+  "qualcomm": {
+    "canonical_key": "qualcomm",
+    "canonical_name": "Qualcomm",
+    "entity_type": "company",
+    "aliases": ["qualcomm ai"],
+    "github_orgs": ["qualcomm"],
+    "hf_namespaces": [],
+    "products": ["snapdragon", "cloud-ai-100", "hexagon"],
+    "website": "qualcomm.com"
+  },
+
+  "cerebras": {
+    "canonical_key": "cerebras",
+    "canonical_name": "Cerebras",
+    "entity_type": "company",
+    "aliases": ["cerebras systems"],
+    "github_orgs": ["cerebras"],
+    "hf_namespaces": [],
+    "products": ["wse-3", "cs-3", "cerebras-inference"],
+    "website": "cerebras.net"
+  },
+
+  "groq": {
+    "canonical_key": "groq",
+    "canonical_name": "Groq",
+    "entity_type": "company",
+    "aliases": ["groq inc"],
+    "github_orgs": ["groq"],
+    "hf_namespaces": [],
+    "products": ["lpu", "groqcloud", "groq-inference"],
+    "website": "groq.com"
+  },
+
+  "sambanova": {
+    "canonical_key": "sambanova",
+    "canonical_name": "SambaNova",
+    "entity_type": "company",
+    "aliases": ["sambanova systems"],
+    "github_orgs": ["sambanova"],
+    "hf_namespaces": [],
+    "products": ["sn40l", "sambastudio", "dataflow"],
+    "website": "sambanova.ai"
+  },
+
+  "graphcore": {
+    "canonical_key": "graphcore",
+    "canonical_name": "Graphcore",
+    "entity_type": "company",
+    "aliases": [],
+    "github_orgs": ["graphcore"],
+    "hf_namespaces": ["Graphcore"],
+    "products": ["ipu", "bow-ipu", "poplar"],
+    "website": "graphcore.ai"
+  },
+
+  "tenstorrent": {
+    "canonical_key": "tenstorrent",
+    "canonical_name": "Tenstorrent",
+    "entity_type": "company",
+    "aliases": ["ten storrent"],
+    "github_orgs": ["tenstorrent"],
+    "hf_namespaces": [],
+    "products": ["wormhole", "grayskull", "buda"],
+    "website": "tenstorrent.com"
+  },
+
+  "aws": {
+    "canonical_key": "aws",
+    "canonical_name": "Amazon Web Services",
+    "entity_type": "company",
+    "aliases": ["amazon aws", "amazon web services"],
+    "github_orgs": ["aws", "aws-samples"],
+    "hf_namespaces": [],
+    "products": ["bedrock", "sagemaker", "trainium", "inferentia", "nova"],
+    "website": "aws.amazon.com"
+  },
+
+  "gcp": {
+    "canonical_key": "gcp",
+    "canonical_name": "Google Cloud Platform",
+    "entity_type": "company",
+    "aliases": ["google cloud", "gcp ai"],
+    "github_orgs": ["GoogleCloudPlatform"],
+    "hf_namespaces": [],
+    "products": ["vertex-ai", "tpu", "cloud-ai"],
+    "website": "cloud.google.com"
+  },
+
+  "azure": {
+    "canonical_key": "azure",
+    "canonical_name": "Microsoft Azure",
+    "entity_type": "company",
+    "aliases": ["azure ai", "ms azure"],
+    "github_orgs": ["Azure", "Azure-Samples"],
+    "hf_namespaces": [],
+    "products": ["azure-openai", "azure-ml", "cognitive-services"],
+    "website": "azure.microsoft.com"
+  },
+
+  "coreweave": {
+    "canonical_key": "coreweave",
+    "canonical_name": "CoreWeave",
+    "entity_type": "company",
+    "aliases": ["core weave"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["coreweave-cloud"],
+    "website": "coreweave.com"
+  },
+
+  "lambda": {
+    "canonical_key": "lambda",
+    "canonical_name": "Lambda Labs",
+    "entity_type": "company",
+    "aliases": ["lambda cloud", "lambdalabs"],
+    "github_orgs": ["lambdal"],
+    "hf_namespaces": [],
+    "products": ["lambda-cloud", "lambda-stack"],
+    "website": "lambdalabs.com"
+  },
+
+  "paperspace": {
+    "canonical_key": "paperspace",
+    "canonical_name": "Paperspace",
+    "entity_type": "company",
+    "aliases": ["paperspace gradient"],
+    "github_orgs": ["Paperspace"],
+    "hf_namespaces": [],
+    "products": ["gradient", "core"],
+    "website": "paperspace.com"
+  },
+
+  "vast": {
+    "canonical_key": "vast",
+    "canonical_name": "Vast.ai",
+    "entity_type": "company",
+    "aliases": ["vast ai", "vastai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["vast-cloud"],
+    "website": "vast.ai"
+  },
+
+  "jasper": {
+    "canonical_key": "jasper",
+    "canonical_name": "Jasper",
+    "entity_type": "company",
+    "aliases": ["jasper ai", "jasper.ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["jasper-chat", "jasper-art", "jasper-brand-voice"],
+    "website": "jasper.ai"
+  },
+
+  "copyai": {
+    "canonical_key": "copyai",
+    "canonical_name": "Copy.ai",
+    "entity_type": "company",
+    "aliases": ["copy ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["copy-ai"],
+    "website": "copy.ai"
+  },
+
+  "writer": {
+    "canonical_key": "writer",
+    "canonical_name": "Writer",
+    "entity_type": "company",
+    "aliases": ["writer.com", "writer ai"],
+    "github_orgs": ["writer"],
+    "hf_namespaces": ["Writer"],
+    "products": ["palmyra", "writer-llm"],
+    "website": "writer.com"
+  },
+
+  "elevenlabs": {
+    "canonical_key": "elevenlabs",
+    "canonical_name": "ElevenLabs",
+    "entity_type": "company",
+    "aliases": ["eleven labs", "11labs"],
+    "github_orgs": ["elevenlabs"],
+    "hf_namespaces": [],
+    "products": ["elevenlabs-tts", "voice-cloning", "dubbing"],
+    "website": "elevenlabs.io"
+  },
+
+  "pika": {
+    "canonical_key": "pika",
+    "canonical_name": "Pika",
+    "entity_type": "company",
+    "aliases": ["pika labs", "pika.art"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["pika-1.0", "pika-1.5", "pika-2.0"],
+    "website": "pika.art"
+  },
+
+  "luma": {
+    "canonical_key": "luma",
+    "canonical_name": "Luma AI",
+    "entity_type": "company",
+    "aliases": ["luma labs"],
+    "github_orgs": ["lumalabs"],
+    "hf_namespaces": [],
+    "products": ["dream-machine", "genie", "nerf"],
+    "website": "lumalabs.ai"
+  },
+
+  "kling": {
+    "canonical_key": "kling",
+    "canonical_name": "Kling AI",
+    "entity_type": "company",
+    "aliases": ["可灵ai", "kuaishou ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["kling", "kling-1.5"],
+    "website": "klingai.com"
+  },
+
+  "suno": {
+    "canonical_key": "suno",
+    "canonical_name": "Suno",
+    "entity_type": "company",
+    "aliases": ["suno ai", "suno.ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["suno-v3", "suno-v4", "bark"],
+    "website": "suno.ai"
+  },
+
+  "udio": {
+    "canonical_key": "udio",
+    "canonical_name": "Udio",
+    "entity_type": "company",
+    "aliases": ["udio ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["udio"],
+    "website": "udio.com"
+  },
+
+  "cursor": {
+    "canonical_key": "cursor",
+    "canonical_name": "Cursor",
+    "entity_type": "company",
+    "aliases": ["cursor ai", "cursor.sh", "anysphere"],
+    "github_orgs": ["getcursor"],
+    "hf_namespaces": [],
+    "products": ["cursor", "cursor-pro"],
+    "website": "cursor.sh"
+  },
+
+  "replit": {
+    "canonical_key": "replit",
+    "canonical_name": "Replit",
+    "entity_type": "company",
+    "aliases": ["repl.it"],
+    "github_orgs": ["replit"],
+    "hf_namespaces": [],
+    "products": ["ghostwriter", "replit-agent"],
+    "website": "replit.com"
+  },
+
+  "tabnine": {
+    "canonical_key": "tabnine",
+    "canonical_name": "Tabnine",
+    "entity_type": "company",
+    "aliases": ["tabnine ai"],
+    "github_orgs": ["codota"],
+    "hf_namespaces": [],
+    "products": ["tabnine"],
+    "website": "tabnine.com"
+  },
+
+  "codeium": {
+    "canonical_key": "codeium",
+    "canonical_name": "Codeium",
+    "entity_type": "company",
+    "aliases": ["codeium ai"],
+    "github_orgs": ["Exafunction"],
+    "hf_namespaces": [],
+    "products": ["codeium", "windsurf"],
+    "website": "codeium.com"
+  },
+
+  "sourcegraph": {
+    "canonical_key": "sourcegraph",
+    "canonical_name": "Sourcegraph",
+    "entity_type": "company",
+    "aliases": ["cody ai"],
+    "github_orgs": ["sourcegraph"],
+    "hf_namespaces": [],
+    "products": ["cody", "sourcegraph-search"],
+    "website": "sourcegraph.com"
+  },
+
+  "poolside": {
+    "canonical_key": "poolside",
+    "canonical_name": "Poolside",
+    "entity_type": "company",
+    "aliases": ["poolside ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["poolside-code"],
+    "website": "poolside.ai"
+  },
+
+  "magic": {
+    "canonical_key": "magic",
+    "canonical_name": "Magic",
+    "entity_type": "company",
+    "aliases": ["magic.dev", "magic ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["lt", "ltm-1"],
+    "website": "magic.dev"
+  },
+
+  "pinecone": {
+    "canonical_key": "pinecone",
+    "canonical_name": "Pinecone",
+    "entity_type": "company",
+    "aliases": ["pinecone.io"],
+    "github_orgs": ["pinecone-io"],
+    "hf_namespaces": [],
+    "products": ["pinecone-db", "canopy"],
+    "website": "pinecone.io"
+  },
+
+  "weaviate": {
+    "canonical_key": "weaviate",
+    "canonical_name": "Weaviate",
+    "entity_type": "company",
+    "aliases": ["weaviate.io"],
+    "github_orgs": ["weaviate"],
+    "hf_namespaces": [],
+    "products": ["weaviate"],
+    "website": "weaviate.io"
+  },
+
+  "chroma": {
+    "canonical_key": "chroma",
+    "canonical_name": "Chroma",
+    "entity_type": "company",
+    "aliases": ["chroma db", "trychroma"],
+    "github_orgs": ["chroma-core"],
+    "hf_namespaces": [],
+    "products": ["chromadb"],
+    "website": "trychroma.com"
+  },
+
+  "qdrant": {
+    "canonical_key": "qdrant",
+    "canonical_name": "Qdrant",
+    "entity_type": "company",
+    "aliases": ["qdrant.tech"],
+    "github_orgs": ["qdrant"],
+    "hf_namespaces": [],
+    "products": ["qdrant"],
+    "website": "qdrant.tech"
+  },
+
+  "milvus": {
+    "canonical_key": "milvus",
+    "canonical_name": "Milvus",
+    "entity_type": "company",
+    "aliases": ["zilliz"],
+    "github_orgs": ["milvus-io", "zilliztech"],
+    "hf_namespaces": [],
+    "products": ["milvus", "zilliz-cloud"],
+    "website": "milvus.io"
+  },
+
+  "voyageai": {
+    "canonical_key": "voyageai",
+    "canonical_name": "Voyage AI",
+    "entity_type": "company",
+    "aliases": ["voyage ai"],
+    "github_orgs": ["voyage-ai"],
+    "hf_namespaces": [],
+    "products": ["voyage-embed", "voyage-rerank"],
+    "website": "voyageai.com"
+  },
+
+  "llamaindex": {
+    "canonical_key": "llamaindex",
+    "canonical_name": "LlamaIndex",
+    "entity_type": "company",
+    "aliases": ["llama index", "gpt-index"],
+    "github_orgs": ["run-llama"],
+    "hf_namespaces": [],
+    "products": ["llamaindex", "llama-cloud"],
+    "website": "llamaindex.ai"
+  },
+
+  "modal": {
+    "canonical_key": "modal",
+    "canonical_name": "Modal",
+    "entity_type": "company",
+    "aliases": ["modal.com", "modal labs"],
+    "github_orgs": ["modal-labs"],
+    "hf_namespaces": [],
+    "products": ["modal"],
+    "website": "modal.com"
+  },
+
+  "fireworks": {
+    "canonical_key": "fireworks",
+    "canonical_name": "Fireworks AI",
+    "entity_type": "company",
+    "aliases": ["fireworks.ai"],
+    "github_orgs": ["fireworks-ai"],
+    "hf_namespaces": [],
+    "products": ["fireworks-inference"],
+    "website": "fireworks.ai"
+  },
+
+  "deepl": {
+    "canonical_key": "deepl",
+    "canonical_name": "DeepL",
+    "entity_type": "company",
+    "aliases": ["deepl translator"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["deepl-translate", "deepl-write"],
+    "website": "deepl.com"
+  },
+
+  "glean": {
+    "canonical_key": "glean",
+    "canonical_name": "Glean",
+    "entity_type": "company",
+    "aliases": ["glean.com", "glean ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["glean-search"],
+    "website": "glean.com"
+  },
+
+  "harvey": {
+    "canonical_key": "harvey",
+    "canonical_name": "Harvey",
+    "entity_type": "company",
+    "aliases": ["harvey ai", "harvey.ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["harvey-legal"],
+    "website": "harvey.ai"
+  },
+
+  "casetext": {
+    "canonical_key": "casetext",
+    "canonical_name": "Casetext",
+    "entity_type": "company",
+    "aliases": ["cocounsel"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["cocounsel"],
+    "website": "casetext.com"
+  },
+
+  "synthesia": {
+    "canonical_key": "synthesia",
+    "canonical_name": "Synthesia",
+    "entity_type": "company",
+    "aliases": ["synthesia.io"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["synthesia"],
+    "website": "synthesia.io"
+  },
+
+  "heygen": {
+    "canonical_key": "heygen",
+    "canonical_name": "HeyGen",
+    "entity_type": "company",
+    "aliases": ["hey gen"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["heygen"],
+    "website": "heygen.com"
+  },
+
+  "d_id": {
+    "canonical_key": "d_id",
+    "canonical_name": "D-ID",
+    "entity_type": "company",
+    "aliases": ["d-id", "d id"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["d-id-studio", "live-portrait"],
+    "website": "d-id.com"
+  },
+
+  "figma": {
+    "canonical_key": "figma",
+    "canonical_name": "Figma",
+    "entity_type": "company",
+    "aliases": ["figma ai"],
+    "github_orgs": ["figma"],
+    "hf_namespaces": [],
+    "products": ["figma-ai", "figjam-ai"],
+    "website": "figma.com"
+  },
+
+  "canva": {
+    "canonical_key": "canva",
+    "canonical_name": "Canva",
+    "entity_type": "company",
+    "aliases": ["canva ai", "magic studio"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["magic-studio", "canva-ai"],
+    "website": "canva.com"
+  },
+
+  "notion": {
+    "canonical_key": "notion",
+    "canonical_name": "Notion",
+    "entity_type": "company",
+    "aliases": ["notion ai"],
+    "github_orgs": ["makenotion"],
+    "hf_namespaces": [],
+    "products": ["notion-ai"],
+    "website": "notion.so"
+  },
+
+  "asml": {
+    "canonical_key": "asml",
+    "canonical_name": "ASML",
+    "entity_type": "company",
+    "aliases": ["asml holding"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["euv-lithography", "high-na-euv"],
+    "website": "asml.com"
+  },
+
+  "tsmc": {
+    "canonical_key": "tsmc",
+    "canonical_name": "TSMC",
+    "entity_type": "company",
+    "aliases": ["taiwan semiconductor", "台积电"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["3nm", "2nm", "cowos"],
+    "website": "tsmc.com"
+  },
+
+  "arm": {
+    "canonical_key": "arm",
+    "canonical_name": "Arm Holdings",
+    "entity_type": "company",
+    "aliases": ["arm ltd"],
+    "github_orgs": ["ARM-software"],
+    "hf_namespaces": [],
+    "products": ["arm-architecture", "neoverse", "cortex"],
+    "website": "arm.com"
+  },
+
+  "broadcom": {
+    "canonical_key": "broadcom",
+    "canonical_name": "Broadcom",
+    "entity_type": "company",
+    "aliases": ["broadcom inc"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["tomahawk", "jericho", "ai-networking"],
+    "website": "broadcom.com"
+  },
+
+  "marvell": {
+    "canonical_key": "marvell",
+    "canonical_name": "Marvell",
+    "entity_type": "company",
+    "aliases": ["marvell technology"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["alaska", "prestera", "ai-accelerators"],
+    "website": "marvell.com"
+  },
+
+  "micron": {
+    "canonical_key": "micron",
+    "canonical_name": "Micron",
+    "entity_type": "company",
+    "aliases": ["micron technology"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["hbm3e", "ddr5", "cxl"],
+    "website": "micron.com"
+  },
+
+  "sk_hynix": {
+    "canonical_key": "sk_hynix",
+    "canonical_name": "SK Hynix",
+    "entity_type": "company",
+    "aliases": ["skhynix", "hynix"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["hbm3", "hbm3e", "gddr7"],
+    "website": "skhynix.com"
+  },
+
+  "samsung": {
+    "canonical_key": "samsung",
+    "canonical_name": "Samsung",
+    "entity_type": "company",
+    "aliases": ["samsung electronics", "samsung ai"],
+    "github_orgs": ["Samsung"],
+    "hf_namespaces": [],
+    "products": ["gauss", "hbm", "exynos"],
+    "website": "samsung.com"
+  },
+
+  "apple": {
+    "canonical_key": "apple",
+    "canonical_name": "Apple",
+    "entity_type": "company",
+    "aliases": ["apple ai", "apple intelligence"],
+    "github_orgs": ["apple"],
+    "hf_namespaces": ["apple"],
+    "products": ["apple-intelligence", "mlx", "core-ml", "siri"],
+    "website": "apple.com"
+  },
+
+  "tesla": {
+    "canonical_key": "tesla",
+    "canonical_name": "Tesla",
+    "entity_type": "company",
+    "aliases": ["tesla ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["fsd", "dojo", "optimus"],
+    "website": "tesla.com"
+  },
+
+  "tencent": {
+    "canonical_key": "tencent",
+    "canonical_name": "Tencent",
+    "entity_type": "company",
+    "aliases": ["腾讯", "tencent ai"],
+    "github_orgs": ["Tencent", "TencentARC"],
+    "hf_namespaces": ["Tencent-Hunyuan"],
+    "products": ["hunyuan", "hunyuan-dit", "mixpeek"],
+    "website": "ai.tencent.com"
+  },
+
+  "baidu": {
+    "canonical_key": "baidu",
+    "canonical_name": "Baidu",
+    "entity_type": "company",
+    "aliases": ["百度", "baidu ai", "ernie team"],
+    "github_orgs": ["PaddlePaddle"],
+    "hf_namespaces": [],
+    "products": ["ernie", "ernie-bot", "wenxin", "apollo"],
+    "website": "ai.baidu.com"
+  },
+
+  "bytedance": {
+    "canonical_key": "bytedance",
+    "canonical_name": "ByteDance",
+    "entity_type": "company",
+    "aliases": ["字节跳动", "doubao team"],
+    "github_orgs": ["bytedance"],
+    "hf_namespaces": [],
+    "products": ["doubao", "jimeng", "coze"],
+    "website": "bytedance.com"
+  },
+
+  "iflytek": {
+    "canonical_key": "iflytek",
+    "canonical_name": "iFlytek",
+    "entity_type": "company",
+    "aliases": ["科大讯飞", "kdxf"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["spark", "xinghuo"],
+    "website": "iflytek.com"
+  },
+
+  "palantir": {
+    "canonical_key": "palantir",
+    "canonical_name": "Palantir",
+    "entity_type": "company",
+    "aliases": ["palantir technologies"],
+    "github_orgs": ["palantir"],
+    "hf_namespaces": [],
+    "products": ["aip", "foundry", "gotham"],
+    "website": "palantir.com"
+  },
+
+  "snowflake": {
+    "canonical_key": "snowflake",
+    "canonical_name": "Snowflake",
+    "entity_type": "company",
+    "aliases": ["snowflake ai"],
+    "github_orgs": ["Snowflake-Labs"],
+    "hf_namespaces": [],
+    "products": ["snowflake-cortex", "arctic", "document-ai"],
+    "website": "snowflake.com"
+  },
+
+  "servicenow": {
+    "canonical_key": "servicenow",
+    "canonical_name": "ServiceNow",
+    "entity_type": "company",
+    "aliases": ["service now"],
+    "github_orgs": ["ServiceNow"],
+    "hf_namespaces": ["servicenow"],
+    "products": ["now-assist", "starcoder"],
+    "website": "servicenow.com"
+  },
+
+  "salesforce": {
+    "canonical_key": "salesforce",
+    "canonical_name": "Salesforce",
+    "entity_type": "company",
+    "aliases": ["salesforce ai"],
+    "github_orgs": ["salesforce"],
+    "hf_namespaces": ["Salesforce"],
+    "products": ["einstein", "agentforce", "xgen", "codegen"],
+    "website": "salesforce.com"
+  },
+
+  "adobe": {
+    "canonical_key": "adobe",
+    "canonical_name": "Adobe",
+    "entity_type": "company",
+    "aliases": ["adobe ai"],
+    "github_orgs": ["adobe", "adobe-research"],
+    "hf_namespaces": [],
+    "products": ["firefly", "sensei", "podcast"],
+    "website": "adobe.com"
+  },
+
+  "ibm": {
+    "canonical_key": "ibm",
+    "canonical_name": "IBM",
+    "entity_type": "company",
+    "aliases": ["ibm ai"],
+    "github_orgs": ["IBM"],
+    "hf_namespaces": ["ibm-granite"],
+    "products": ["watsonx", "granite"],
+    "website": "ibm.com"
+  },
+
+  "oracle": {
+    "canonical_key": "oracle",
+    "canonical_name": "Oracle",
+    "entity_type": "company",
+    "aliases": ["oracle ai", "oracle cloud"],
+    "github_orgs": ["oracle"],
+    "hf_namespaces": [],
+    "products": ["oci-ai", "oracle-database-23ai"],
+    "website": "oracle.com"
+  },
+
+  "sap": {
+    "canonical_key": "sap",
+    "canonical_name": "SAP",
+    "entity_type": "company",
+    "aliases": ["sap ai"],
+    "github_orgs": ["SAP"],
+    "hf_namespaces": [],
+    "products": ["joule", "sap-business-ai"],
+    "website": "sap.com"
+  },
+
+  "weaveworks": {
+    "canonical_key": "weaveworks",
+    "canonical_name": "Weights & Biases",
+    "entity_type": "company",
+    "aliases": ["wandb", "w&b"],
+    "github_orgs": ["wandb"],
+    "hf_namespaces": [],
+    "products": ["wandb", "weave"],
+    "website": "wandb.ai"
+  },
+
+  "ramp": {
+    "canonical_key": "ramp",
+    "canonical_name": "Ramp",
+    "entity_type": "company",
+    "aliases": ["ramp.com"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["ramp-intelligence"],
+    "website": "ramp.com"
+  },
+
+  "klarna": {
+    "canonical_key": "klarna",
+    "canonical_name": "Klarna",
+    "entity_type": "company",
+    "aliases": ["klarna ai"],
+    "github_orgs": ["klarna"],
+    "hf_namespaces": [],
+    "products": ["klarna-ai-assistant"],
+    "website": "klarna.com"
+  },
+
+  "waymo": {
+    "canonical_key": "waymo",
+    "canonical_name": "Waymo",
+    "entity_type": "company",
+    "aliases": ["waymo llc"],
+    "github_orgs": ["waymo-research"],
+    "hf_namespaces": [],
+    "products": ["waymo-one", "waymo-driver"],
+    "website": "waymo.com"
+  },
+
+  "cruise": {
+    "canonical_key": "cruise",
+    "canonical_name": "Cruise",
+    "entity_type": "company",
+    "aliases": ["cruise automation", "gm cruise"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["cruise-av"],
+    "website": "getcruise.com"
+  },
+
+  "aurora": {
+    "canonical_key": "aurora",
+    "canonical_name": "Aurora Innovation",
+    "entity_type": "company",
+    "aliases": ["aurora driver"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["aurora-driver"],
+    "website": "aurora.tech"
+  },
+
+  "nuro": {
+    "canonical_key": "nuro",
+    "canonical_name": "Nuro",
+    "entity_type": "company",
+    "aliases": ["nuro ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["nuro-delivery"],
+    "website": "nuro.ai"
+  },
+
+  "figure": {
+    "canonical_key": "figure",
+    "canonical_name": "Figure",
+    "entity_type": "company",
+    "aliases": ["figure ai", "figure robotics"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["figure-01", "figure-02"],
+    "website": "figure.ai"
+  },
+
+  "boston_dynamics": {
+    "canonical_key": "boston_dynamics",
+    "canonical_name": "Boston Dynamics",
+    "entity_type": "company",
+    "aliases": ["bostondynamics"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["spot", "atlas", "stretch"],
+    "website": "bostondynamics.com"
+  },
+
+  "1x": {
+    "canonical_key": "1x",
+    "canonical_name": "1X Technologies",
+    "entity_type": "company",
+    "aliases": ["1x", "one x"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["eve", "neo"],
+    "website": "1x.tech"
+  },
+
+  "unitree": {
+    "canonical_key": "unitree",
+    "canonical_name": "Unitree",
+    "entity_type": "company",
+    "aliases": ["unitree robotics", "宇树科技"],
+    "github_orgs": ["unitreerobotics"],
+    "hf_namespaces": [],
+    "products": ["go2", "h1", "g1"],
+    "website": "unitree.com"
+  },
+
+  "agility": {
+    "canonical_key": "agility",
+    "canonical_name": "Agility Robotics",
+    "entity_type": "company",
+    "aliases": ["agility"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": ["digit"],
+    "website": "agilityrobotics.com"
+  },
+
+  "nvidia_research": {
+    "canonical_key": "nvidia_research",
+    "canonical_name": "NVIDIA Research",
+    "entity_type": "research",
+    "aliases": ["nvidia labs"],
+    "github_orgs": ["NVlabs"],
+    "hf_namespaces": [],
+    "products": ["project-groot", "eureka"],
+    "website": "research.nvidia.com"
+  },
+
+  "berkeley_ai": {
+    "canonical_key": "berkeley_ai",
+    "canonical_name": "Berkeley AI Research",
+    "entity_type": "research",
+    "aliases": ["bair", "ucb ai"],
+    "github_orgs": ["berkeley-rll"],
+    "hf_namespaces": [],
+    "products": [],
+    "website": "bair.berkeley.edu"
+  },
+
+  "stanford_hai": {
+    "canonical_key": "stanford_hai",
+    "canonical_name": "Stanford HAI",
+    "entity_type": "research",
+    "aliases": ["stanford human-centered ai"],
+    "github_orgs": [],
+    "hf_namespaces": [],
+    "products": [],
+    "website": "hai.stanford.edu"
+  },
+
+  "allen_ai": {
+    "canonical_key": "allen_ai",
+    "canonical_name": "Allen Institute for AI",
+    "entity_type": "research",
+    "aliases": ["ai2", "allenai"],
+    "github_orgs": ["allenai"],
+    "hf_namespaces": ["allenai"],
+    "products": ["olmo", "wildguard", "tulu"],
+    "website": "allenai.org"
+  }
+}

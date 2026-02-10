@@ -1,0 +1,145 @@
+{
+  "version": "1.0",
+  "description": "Maps verticals to public company tickers for performance validation",
+  "last_updated": "2026-01-28",
+  
+  "verticals": {
+    "ai_healthcare": {
+      "primary_tickers": ["TDOC", "VEEV", "DOCS", "HIMS", "GDRX"],
+      "proxy_tickers": ["UNH", "HCA", "CVS"],
+      "etfs": ["ARKG", "XLV"]
+    },
+    "ai_drug_discovery": {
+      "primary_tickers": ["RXRX", "EXAI", "SDGR", "RLAY"],
+      "proxy_tickers": ["LLY", "PFE", "MRNA", "REGN"],
+      "etfs": ["XBI", "IBB"]
+    },
+    "ai_fintech": {
+      "primary_tickers": ["UPST", "AFRM", "SOFI", "HOOD", "PYPL"],
+      "proxy_tickers": ["V", "MA", "SQ"],
+      "etfs": ["FINX", "ARKF"]
+    },
+    "ai_trading": {
+      "primary_tickers": [],
+      "proxy_tickers": ["CME", "ICE", "NDAQ", "CBOE"],
+      "etfs": ["XLF"]
+    },
+    "ai_education": {
+      "primary_tickers": ["DUOL", "CHGG", "TWOU", "COUR"],
+      "proxy_tickers": [],
+      "etfs": []
+    },
+    "ai_legal": {
+      "primary_tickers": [],
+      "proxy_tickers": ["EPIQ", "TR"],
+      "etfs": []
+    },
+    "ai_creative": {
+      "primary_tickers": ["AI", "APP", "RBLX"],
+      "proxy_tickers": ["ADBE", "SNAP", "PINS"],
+      "etfs": []
+    },
+    "ai_robotics": {
+      "primary_tickers": ["ISRG", "TER", "ROK", "IRBT"],
+      "proxy_tickers": ["ABB", "FANUY"],
+      "etfs": ["ROBO", "BOTZ"]
+    },
+    "ai_manufacturing": {
+      "primary_tickers": ["ROK", "KEYS", "TER"],
+      "proxy_tickers": ["HON", "EMR", "ETN"],
+      "etfs": ["XLI"]
+    },
+    "ai_autonomous_vehicles": {
+      "primary_tickers": ["TSLA", "MBLY", "LAZR", "INVZ", "OUST"],
+      "proxy_tickers": ["GM", "F", "APTV"],
+      "etfs": ["DRIV", "IDRV"]
+    },
+    "ai_cybersecurity": {
+      "primary_tickers": ["CRWD", "S", "PANW", "ZS", "FTNT"],
+      "proxy_tickers": ["CSCO", "MSFT"],
+      "etfs": ["CIBR", "HACK", "BUG"]
+    },
+    "ai_hr": {
+      "primary_tickers": ["DAY", "WDAY", "PAYC"],
+      "proxy_tickers": ["ADP", "PAYX"],
+      "etfs": []
+    },
+    "ai_sales": {
+      "primary_tickers": ["CRM", "HUBS", "ZI"],
+      "proxy_tickers": [],
+      "etfs": []
+    },
+    "ai_marketing": {
+      "primary_tickers": ["TTD", "MGNI", "DV", "PUBM"],
+      "proxy_tickers": ["GOOGL", "META"],
+      "etfs": []
+    },
+    "ai_customer_service": {
+      "primary_tickers": ["ZEN", "FRES"],
+      "proxy_tickers": ["TWLO", "NOW"],
+      "etfs": []
+    },
+    "ai_supply_chain": {
+      "primary_tickers": ["KNSL", "FOUR"],
+      "proxy_tickers": ["UPS", "FDX", "XPO"],
+      "etfs": []
+    },
+    "ai_retail": {
+      "primary_tickers": ["AMZN", "WMT", "TGT", "GRAB"],
+      "proxy_tickers": ["COST", "HD"],
+      "etfs": ["XRT"]
+    },
+    "ai_defense": {
+      "primary_tickers": ["PLTR", "AI"],
+      "proxy_tickers": ["LMT", "RTX", "NOC", "GD", "BA"],
+      "etfs": ["ITA", "XAR"]
+    },
+    "ai_gaming": {
+      "primary_tickers": ["RBLX", "U", "TTWO", "EA"],
+      "proxy_tickers": ["MSFT", "SONY", "NTDOY"],
+      "etfs": ["ESPO", "HERO"]
+    },
+    "ai_climate": {
+      "primary_tickers": ["SEDG", "ENPH", "RUN"],
+      "proxy_tickers": ["NEE", "FSLR"],
+      "etfs": ["ICLN", "QCLN", "TAN"]
+    },
+    "ai_real_estate": {
+      "primary_tickers": ["Z", "RDFN", "OPEN", "COMP"],
+      "proxy_tickers": ["CBRE", "JLL"],
+      "etfs": ["VNQ", "IYR"]
+    },
+    "ai_insurance": {
+      "primary_tickers": ["LMND", "ROOT", "HIG"],
+      "proxy_tickers": ["PGR", "ALL", "TRV"],
+      "etfs": []
+    },
+    "ai_space": {
+      "primary_tickers": ["PL", "SPIR", "BKSY", "RDW"],
+      "proxy_tickers": ["LMT", "BA", "NOC"],
+      "etfs": ["UFO", "ARKX"]
+    },
+    "ai_science": {
+      "primary_tickers": [],
+      "proxy_tickers": ["GOOG", "MSFT", "NVDA"],
+      "etfs": []
+    },
+    "ai_agriculture": {
+      "primary_tickers": ["AGFY"],
+      "proxy_tickers": ["DE", "AGCO", "CNH"],
+      "etfs": ["MOO"]
+    },
+    "ai_construction": {
+      "primary_tickers": ["PCOR"],
+      "proxy_tickers": ["CAT", "URI", "VMC"],
+      "etfs": ["ITB", "XHB"]
+    }
+  },
+  
+  "benchmark_indices": {
+    "ai_overall": ["NVDA", "MSFT", "GOOGL", "META", "AMZN"],
+    "tech_sector": "XLK",
+    "sp500": "SPY",
+    "nasdaq": "QQQ"
+  }
+}

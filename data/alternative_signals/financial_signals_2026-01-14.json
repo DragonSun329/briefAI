@@ -1,0 +1,1162 @@
+{
+  "schema": {
+    "name": "financial_signals",
+    "version": "1.0",
+    "compatible_with": [
+      "1.0"
+    ]
+  },
+  "date": "2026-01-14",
+  "generated_at": "2026-01-14T11:20:22.655752",
+  "quality": {
+    "overall_status": "degraded",
+    "warnings": [
+      "Only fetched 6/8 tokens"
+    ]
+  },
+  "sources": {
+    "yahoo_finance": {
+      "status": "ok",
+      "tickers_fetched": 35,
+      "tickers_expected": 37
+    },
+    "kraken": {
+      "status": "ok",
+      "tokens_fetched": 6,
+      "tokens_expected": 8
+    },
+    "dbnomics": {
+      "status": "degraded",
+      "series_fetched": 0,
+      "series_expected": 5
+    }
+  },
+  "methods": {
+    "pms": {
+      "window_days": [
+        1,
+        7,
+        30
+      ],
+      "weighting": "equal",
+      "aggregation": "bucket_equal_weight",
+      "transform": "percentile"
+    },
+    "css": {
+      "window_days": [
+        1,
+        7,
+        30
+      ],
+      "weighting": "equal",
+      "aggregation": "confidence_weighted",
+      "transform": "percentile"
+    },
+    "mrs": {
+      "components": [
+        "volatility",
+        "rates",
+        "employment",
+        "credit",
+        "cli"
+      ],
+      "transform": "zscore_composite",
+      "normalize": "clip_-1_1"
+    }
+  },
+  "raw": {
+    "equities": [
+      {
+        "ticker": "ADBE",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 309.92999267578125,
+        "change_1d_pct": -5.41,
+        "change_7d_pct": -7.76,
+        "change_30d_pct": -9.68,
+        "volume": 7208400,
+        "volume_avg_30d": 4277947,
+        "volume_ratio": 1.69,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "AMD",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 220.97000122070312,
+        "change_1d_pct": 6.39,
+        "change_7d_pct": 3.09,
+        "change_30d_pct": -0.2,
+        "volume": 56824500,
+        "volume_avg_30d": 28642143,
+        "volume_ratio": 1.98,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "ANET",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 129.92999267578125,
+        "change_1d_pct": 5.27,
+        "change_7d_pct": -2.0,
+        "change_30d_pct": -1.84,
+        "volume": 8633400,
+        "volume_avg_30d": 6644652,
+        "volume_ratio": 1.3,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "AVGO",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 354.6099853515625,
+        "change_1d_pct": 0.68,
+        "change_7d_pct": 3.15,
+        "change_30d_pct": -13.97,
+        "volume": 18287500,
+        "volume_avg_30d": 39610026,
+        "volume_ratio": 0.46,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "COIN",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 252.69000244140625,
+        "change_1d_pct": 4.0,
+        "change_7d_pct": 0.85,
+        "change_30d_pct": -8.14,
+        "volume": 8956200,
+        "volume_avg_30d": 7797939,
+        "volume_ratio": 1.15,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "CRM",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 241.05999755859375,
+        "change_1d_pct": -7.07,
+        "change_7d_pct": -8.31,
+        "change_30d_pct": -8.61,
+        "volume": 13639700,
+        "volume_avg_30d": 6731586,
+        "volume_ratio": 2.03,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "CRWD",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 468.0199890136719,
+        "change_1d_pct": 0.22,
+        "change_7d_pct": 2.12,
+        "change_30d_pct": -9.92,
+        "volume": 2691100,
+        "volume_avg_30d": 2257560,
+        "volume_ratio": 1.19,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "DDOG",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 125.5,
+        "change_1d_pct": -0.85,
+        "change_7d_pct": -8.46,
+        "change_30d_pct": -17.0,
+        "volume": 5206700,
+        "volume_avg_30d": 3746234,
+        "volume_ratio": 1.39,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "DELL",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 119.66000366210938,
+        "change_1d_pct": -0.67,
+        "change_7d_pct": -3.45,
+        "change_30d_pct": -14.91,
+        "volume": 5637600,
+        "volume_avg_30d": 5915591,
+        "volume_ratio": 0.95,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "DXCM",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 70.25,
+        "change_1d_pct": -1.03,
+        "change_7d_pct": 0.52,
+        "change_30d_pct": 3.98,
+        "volume": 8711500,
+        "volume_avg_30d": 5194108,
+        "volume_ratio": 1.68,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "GM",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 83.23999786376953,
+        "change_1d_pct": 0.41,
+        "change_7d_pct": 1.29,
+        "change_30d_pct": 3.02,
+        "volume": 6022000,
+        "volume_avg_30d": 8791995,
+        "volume_ratio": 0.68,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "GOOGL",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 335.9700012207031,
+        "change_1d_pct": 1.24,
+        "change_7d_pct": 6.88,
+        "change_30d_pct": 4.92,
+        "volume": 33472800,
+        "volume_avg_30d": 29963704,
+        "volume_ratio": 1.12,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "INTC",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 47.290000915527344,
+        "change_1d_pct": 7.33,
+        "change_7d_pct": 18.11,
+        "change_30d_pct": 15.96,
+        "volume": 168271000,
+        "volume_avg_30d": 82469321,
+        "volume_ratio": 2.04,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "ISRG",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 561.8200073242188,
+        "change_1d_pct": -1.91,
+        "change_7d_pct": -5.23,
+        "change_30d_pct": 1.06,
+        "volume": 1515000,
+        "volume_avg_30d": 1607130,
+        "volume_ratio": 0.94,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "MDB",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 411.19000244140625,
+        "change_1d_pct": -1.67,
+        "change_7d_pct": -5.66,
+        "change_30d_pct": -3.79,
+        "volume": 1521500,
+        "volume_avg_30d": 1387621,
+        "volume_ratio": 1.1,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "META",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 631.0900268554688,
+        "change_1d_pct": -1.69,
+        "change_7d_pct": -4.47,
+        "change_30d_pct": -2.85,
+        "volume": 18003200,
+        "volume_avg_30d": 14279930,
+        "volume_ratio": 1.26,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "MRVL",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 83.05000305175781,
+        "change_1d_pct": 0.19,
+        "change_7d_pct": -5.8,
+        "change_30d_pct": -10.12,
+        "volume": 9126500,
+        "volume_avg_30d": 13637321,
+        "volume_ratio": 0.67,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "MSFT",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 470.6700134277344,
+        "change_1d_pct": -1.36,
+        "change_7d_pct": -1.64,
+        "change_30d_pct": -1.65,
+        "volume": 28514200,
+        "volume_avg_30d": 22823447,
+        "volume_ratio": 1.25,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "NOW",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 138.19000244140625,
+        "change_1d_pct": -3.12,
+        "change_7d_pct": -7.14,
+        "change_30d_pct": -19.05,
+        "volume": 12890800,
+        "volume_avg_30d": 10477047,
+        "volume_ratio": 1.23,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "NVDA",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 185.80999755859375,
+        "change_1d_pct": 0.47,
+        "change_7d_pct": -0.76,
+        "change_30d_pct": 1.1,
+        "volume": 159752700,
+        "volume_avg_30d": 160740886,
+        "volume_ratio": 0.99,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "PANW",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 190.85000610351562,
+        "change_1d_pct": 1.04,
+        "change_7d_pct": 2.68,
+        "change_30d_pct": -1.09,
+        "volume": 5418500,
+        "volume_avg_30d": 5664760,
+        "volume_ratio": 0.96,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "PLTR",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 178.9600067138672,
+        "change_1d_pct": -0.25,
+        "change_7d_pct": -0.42,
+        "change_30d_pct": -4.76,
+        "volume": 27705300,
+        "volume_avg_30d": 38088947,
+        "volume_ratio": 0.73,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "PYPL",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 56.560001373291016,
+        "change_1d_pct": -1.27,
+        "change_7d_pct": -5.43,
+        "change_30d_pct": -7.52,
+        "volume": 15865000,
+        "volume_avg_30d": 15598530,
+        "volume_ratio": 1.02,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "ROK",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 416.8800048828125,
+        "change_1d_pct": 0.66,
+        "change_7d_pct": 0.85,
+        "change_30d_pct": 1.62,
+        "volume": 594500,
+        "volume_avg_30d": 702786,
+        "volume_ratio": 0.85,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "S",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 14.640000343322754,
+        "change_1d_pct": -2.66,
+        "change_7d_pct": -3.56,
+        "change_30d_pct": -3.94,
+        "volume": 8676200,
+        "volume_avg_30d": 8298778,
+        "volume_ratio": 1.05,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "SMCI",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 28.600000381469727,
+        "change_1d_pct": -5.05,
+        "change_7d_pct": -6.35,
+        "change_30d_pct": -18.05,
+        "volume": 52354400,
+        "volume_avg_30d": 24638943,
+        "volume_ratio": 2.12,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "SNAP",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 7.989999771118164,
+        "change_1d_pct": -2.44,
+        "change_7d_pct": -9.1,
+        "change_30d_pct": 0.88,
+        "volume": 47012800,
+        "volume_avg_30d": 37724986,
+        "volume_ratio": 1.25,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "SNOW",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 209.38999938964844,
+        "change_1d_pct": -4.94,
+        "change_7d_pct": -10.72,
+        "change_30d_pct": -3.31,
+        "volume": 8048400,
+        "volume_avg_30d": 4140800,
+        "volume_ratio": 1.94,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "TSLA",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 447.20001220703125,
+        "change_1d_pct": -0.39,
+        "change_7d_pct": 3.29,
+        "change_30d_pct": -0.94,
+        "volume": 53557200,
+        "volume_avg_30d": 74077030,
+        "volume_ratio": 0.72,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "U",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 45.66999816894531,
+        "change_1d_pct": -3.43,
+        "change_7d_pct": 0.26,
+        "change_30d_pct": -6.76,
+        "volume": 9522600,
+        "volume_avg_30d": 6561334,
+        "volume_ratio": 1.45,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "UBER",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 85.41000366210938,
+        "change_1d_pct": 0.87,
+        "change_7d_pct": -0.15,
+        "change_30d_pct": 1.49,
+        "volume": 14803900,
+        "volume_avg_30d": 19531078,
+        "volume_ratio": 0.76,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "VEEV",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 228.49000549316406,
+        "change_1d_pct": -2.02,
+        "change_7d_pct": -3.94,
+        "change_30d_pct": -0.29,
+        "volume": 1448300,
+        "volume_avg_30d": 1620582,
+        "volume_ratio": 0.89,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "VRT",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 172.72000122070312,
+        "change_1d_pct": 1.58,
+        "change_7d_pct": -1.27,
+        "change_30d_pct": -5.0,
+        "volume": 3645400,
+        "volume_avg_30d": 6297852,
+        "volume_ratio": 0.58,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "WDAY",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 199.5500030517578,
+        "change_1d_pct": -4.02,
+        "change_7d_pct": -5.11,
+        "change_30d_pct": -10.42,
+        "volume": 2490800,
+        "volume_avg_30d": 2670747,
+        "volume_ratio": 0.93,
+        "market_cap_b": null
+      },
+      {
+        "ticker": "ZS",
+        "asof": "2026-01-14T11:14:33.100088",
+        "price": 216.84500122070312,
+        "change_1d_pct": 0.1,
+        "change_7d_pct": -2.34,
+        "change_30d_pct": -10.87,
+        "volume": 1504800,
+        "volume_avg_30d": 1556069,
+        "volume_ratio": 0.97,
+        "market_cap_b": null
+      }
+    ],
+    "tokens": [
+      {
+        "symbol": "FET",
+        "asof": "2026-01-14T11:19:31.667502",
+        "price_usd": 0.2924,
+        "change_1d_pct": -0.44,
+        "change_7d_pct": 6.44,
+        "change_30d_pct": 30.83,
+        "volume_24h_usd": 1156824.1011661652
+      },
+      {
+        "symbol": "OCEAN",
+        "asof": "2026-01-14T11:19:31.667502",
+        "price_usd": 0.1667,
+        "change_1d_pct": 1.46,
+        "change_7d_pct": 1.03,
+        "change_30d_pct": -15.81,
+        "volume_24h_usd": 36791.41266318534
+      },
+      {
+        "symbol": "TAO",
+        "asof": "2026-01-14T11:19:31.667502",
+        "price_usd": 297.2213,
+        "change_1d_pct": 1.2,
+        "change_7d_pct": 9.85,
+        "change_30d_pct": 10.18,
+        "volume_24h_usd": 5302323.424858396
+      },
+      {
+        "symbol": "ARKM",
+        "asof": "2026-01-14T11:19:31.667502",
+        "price_usd": 0.2238,
+        "change_1d_pct": 0.49,
+        "change_7d_pct": 5.72,
+        "change_30d_pct": 13.37,
+        "volume_24h_usd": 193075.67446893724
+      },
+      {
+        "symbol": "WLD",
+        "asof": "2026-01-14T11:19:31.667502",
+        "price_usd": 0.615,
+        "change_1d_pct": -0.49,
+        "change_7d_pct": 3.54,
+        "change_30d_pct": 14.1,
+        "volume_24h_usd": 266082.4485965207
+      },
+      {
+        "symbol": "AKT",
+        "asof": "2026-01-14T11:19:31.667502",
+        "price_usd": 0.5428,
+        "change_1d_pct": -2.3,
+        "change_7d_pct": 28.41,
+        "change_30d_pct": 33.37,
+        "volume_24h_usd": 495667.65494184796
+      }
+    ],
+    "macro": []
+  },
+  "macro_regime": {
+    "mrs": 0.0,
+    "interpretation": "neutral",
+    "components": {}
+  },
+  "bucket_signals": {
+    "autonomous-vehicles": {
+      "bucket_id": "autonomous-vehicles",
+      "pms": 83.3,
+      "pms_coverage": {
+        "tickers_present": 4,
+        "tickers_total": 4,
+        "missing": []
+      },
+      "pms_contributors": [
+        {
+          "ticker": "GOOGL",
+          "change_7d_pct": 6.88,
+          "weight": 0.25,
+          "contribution": 1.72
+        },
+        {
+          "ticker": "TSLA",
+          "change_7d_pct": 3.29,
+          "weight": 0.25,
+          "contribution": 0.8225
+        },
+        {
+          "ticker": "GM",
+          "change_7d_pct": 1.29,
+          "weight": 0.25,
+          "contribution": 0.3225
+        },
+        {
+          "ticker": "UBER",
+          "change_7d_pct": -0.15,
+          "weight": 0.25,
+          "contribution": -0.0375
+        }
+      ],
+      "pms_contributors_text": [
+        "GOOGL +6.9%",
+        "TSLA +3.3%",
+        "GM +1.3%"
+      ],
+      "css": null,
+      "css_coverage": null,
+      "css_contributors": [],
+      "css_contributors_text": []
+    },
+    "vision-multimodal": {
+      "bucket_id": "vision-multimodal",
+      "pms": 8.3,
+      "pms_coverage": {
+        "tickers_present": 3,
+        "tickers_total": 3,
+        "missing": []
+      },
+      "pms_contributors": [
+        {
+          "ticker": "SNAP",
+          "change_7d_pct": -9.1,
+          "weight": 0.3333333333333333,
+          "contribution": -3.033333333333333
+        },
+        {
+          "ticker": "ADBE",
+          "change_7d_pct": -7.76,
+          "weight": 0.3333333333333333,
+          "contribution": -2.5866666666666664
+        },
+        {
+          "ticker": "U",
+          "change_7d_pct": 0.26,
+          "weight": 0.3333333333333333,
+          "contribution": 0.08666666666666667
+        }
+      ],
+      "pms_contributors_text": [
+        "SNAP -9.1%",
+        "ADBE -7.8%",
+        "U +0.3%"
+      ],
+      "css": null,
+      "css_coverage": null,
+      "css_contributors": [],
+      "css_contributors_text": []
+    },
+    "ai-healthcare": {
+      "bucket_id": "ai-healthcare",
+      "pms": 41.7,
+      "pms_coverage": {
+        "tickers_present": 3,
+        "tickers_total": 3,
+        "missing": []
+      },
+      "pms_contributors": [
+        {
+          "ticker": "ISRG",
+          "change_7d_pct": -5.23,
+          "weight": 0.3333333333333333,
+          "contribution": -1.7433333333333334
+        },
+        {
+          "ticker": "VEEV",
+          "change_7d_pct": -3.94,
+          "weight": 0.3333333333333333,
+          "contribution": -1.3133333333333332
+        },
+        {
+          "ticker": "DXCM",
+          "change_7d_pct": 0.52,
+          "weight": 0.3333333333333333,
+          "contribution": 0.17333333333333334
+        }
+      ],
+      "pms_contributors_text": [
+        "ISRG -5.2%",
+        "VEEV -3.9%",
+        "DXCM +0.5%"
+      ],
+      "css": null,
+      "css_coverage": null,
+      "css_contributors": [],
+      "css_contributors_text": []
+    },
+    "llm-foundation": {
+      "bucket_id": "llm-foundation",
+      "pms": 75.0,
+      "pms_coverage": {
+        "tickers_present": 3,
+        "tickers_total": 3,
+        "missing": []
+      },
+      "pms_contributors": [
+        {
+          "ticker": "GOOGL",
+          "change_7d_pct": 6.88,
+          "weight": 0.3333333333333333,
+          "contribution": 2.2933333333333334
+        },
+        {
+          "ticker": "META",
+          "change_7d_pct": -4.47,
+          "weight": 0.3333333333333333,
+          "contribution": -1.49
+        },
+        {
+          "ticker": "MSFT",
+          "change_7d_pct": -1.64,
+          "weight": 0.3333333333333333,
+          "contribution": -0.5466666666666666
+        }
+      ],
+      "pms_contributors_text": [
+        "GOOGL +6.9%",
+        "META -4.5%",
+        "MSFT -1.6%"
+      ],
+      "css": 66.7,
+      "css_coverage": {
+        "tokens_present": 1,
+        "tokens_total": 2,
+        "missing": [
+          "AGIX"
+        ]
+      },
+      "css_contributors": [
+        {
+          "symbol": "TAO",
+          "change_7d_pct": 9.85,
+          "weight": 1.0,
+          "contribution": 9.85
+        }
+      ],
+      "css_contributors_text": [
+        "TAO +9.8%"
+      ]
+    },
+    "code-ai": {
+      "bucket_id": "code-ai",
+      "pms": 16.7,
+      "pms_coverage": {
+        "tickers_present": 3,
+        "tickers_total": 3,
+        "missing": []
+      },
+      "pms_contributors": [
+        {
+          "ticker": "ADBE",
+          "change_7d_pct": -7.76,
+          "weight": 0.3333333333333333,
+          "contribution": -2.5866666666666664
+        },
+        {
+          "ticker": "NOW",
+          "change_7d_pct": -7.14,
+          "weight": 0.3333333333333333,
+          "contribution": -2.38
+        },
+        {
+          "ticker": "MSFT",
+          "change_7d_pct": -1.64,
+          "weight": 0.3333333333333333,
+          "contribution": -0.5466666666666666
+        }
+      ],
+      "pms_contributors_text": [
+        "ADBE -7.8%",
+        "NOW -7.1%",
+        "MSFT -1.6%"
+      ],
+      "css": null,
+      "css_coverage": null,
+      "css_contributors": [],
+      "css_contributors_text": []
+    },
+    "ai-chips": {
+      "bucket_id": "ai-chips",
+      "pms": 91.7,
+      "pms_coverage": {
+        "tickers_present": 5,
+        "tickers_total": 5,
+        "missing": []
+      },
+      "pms_contributors": [
+        {
+          "ticker": "INTC",
+          "change_7d_pct": 18.11,
+          "weight": 0.2,
+          "contribution": 3.622
+        },
+        {
+          "ticker": "MRVL",
+          "change_7d_pct": -5.8,
+          "weight": 0.2,
+          "contribution": -1.16
+        },
+        {
+          "ticker": "AVGO",
+          "change_7d_pct": 3.15,
+          "weight": 0.2,
+          "contribution": 0.63
+        },
+        {
+          "ticker": "AMD",
+          "change_7d_pct": 3.09,
+          "weight": 0.2,
+          "contribution": 0.618
+        },
+        {
+          "ticker": "NVDA",
+          "change_7d_pct": -0.76,
+          "weight": 0.2,
+          "contribution": -0.152
+        }
+      ],
+      "pms_contributors_text": [
+        "INTC +18.1%",
+        "MRVL -5.8%",
+        "AVGO +3.1%"
+      ],
+      "css": null,
+      "css_coverage": null,
+      "css_contributors": [],
+      "css_contributors_text": []
+    },
+    "agent-orchestration": {
+      "bucket_id": "agent-orchestration",
+      "pms": null,
+      "pms_coverage": null,
+      "pms_contributors": [],
+      "pms_contributors_text": [],
+      "css": 50.0,
+      "css_coverage": {
+        "tokens_present": 1,
+        "tokens_total": 1,
+        "missing": []
+      },
+      "css_contributors": [
+        {
+          "symbol": "FET",
+          "change_7d_pct": 6.44,
+          "weight": 1.0,
+          "contribution": 6.440000000000001
+        }
+      ],
+      "css_contributors_text": [
+        "FET +6.4%"
+      ]
+    },
+    "ai-security": {
+      "bucket_id": "ai-security",
+      "pms": 66.7,
+      "pms_coverage": {
+        "tickers_present": 4,
+        "tickers_total": 4,
+        "missing": []
+      },
+      "pms_contributors": [
+        {
+          "ticker": "S",
+          "change_7d_pct": -3.56,
+          "weight": 0.25,
+          "contribution": -0.89
+        },
+        {
+          "ticker": "PANW",
+          "change_7d_pct": 2.68,
+          "weight": 0.25,
+          "contribution": 0.67
+        },
+        {
+          "ticker": "ZS",
+          "change_7d_pct": -2.34,
+          "weight": 0.25,
+          "contribution": -0.585
+        },
+        {
+          "ticker": "CRWD",
+          "change_7d_pct": 2.12,
+          "weight": 0.25,
+          "contribution": 0.53
+        }
+      ],
+      "pms_contributors_text": [
+        "S -3.6%",
+        "PANW +2.7%",
+        "ZS -2.3%"
+      ],
+      "css": 33.3,
+      "css_coverage": {
+        "tokens_present": 1,
+        "tokens_total": 1,
+        "missing": []
+      },
+      "css_contributors": [
+        {
+          "symbol": "ARKM",
+          "change_7d_pct": 5.72,
+          "weight": 1.0,
+          "contribution": 5.72
+        }
+      ],
+      "css_contributors_text": [
+        "ARKM +5.7%"
+      ]
+    },
+    "ai-infrastructure": {
+      "bucket_id": "ai-infrastructure",
+      "pms": 33.3,
+      "pms_coverage": {
+        "tickers_present": 4,
+        "tickers_total": 4,
+        "missing": []
+      },
+      "pms_contributors": [
+        {
+          "ticker": "SMCI",
+          "change_7d_pct": -6.35,
+          "weight": 0.25,
+          "contribution": -1.5875
+        },
+        {
+          "ticker": "DELL",
+          "change_7d_pct": -3.45,
+          "weight": 0.25,
+          "contribution": -0.8625
+        },
+        {
+          "ticker": "ANET",
+          "change_7d_pct": -2.0,
+          "weight": 0.25,
+          "contribution": -0.5
+        },
+        {
+          "ticker": "VRT",
+          "change_7d_pct": -1.27,
+          "weight": 0.25,
+          "contribution": -0.3175
+        }
+      ],
+      "pms_contributors_text": [
+        "SMCI -6.3%",
+        "DELL -3.5%",
+        "ANET -2.0%"
+      ],
+      "css": 83.3,
+      "css_coverage": {
+        "tokens_present": 3,
+        "tokens_total": 4,
+        "missing": [
+          "RNDR"
+        ]
+      },
+      "css_contributors": [
+        {
+          "symbol": "AKT",
+          "change_7d_pct": 28.41,
+          "weight": 0.3888888888888889,
+          "contribution": 11.048333333333336
+        },
+        {
+          "symbol": "TAO",
+          "change_7d_pct": 9.85,
+          "weight": 0.3888888888888889,
+          "contribution": 3.8305555555555557
+        },
+        {
+          "symbol": "FET",
+          "change_7d_pct": 6.44,
+          "weight": 0.22222222222222227,
+          "contribution": 1.4311111111111114
+        }
+      ],
+      "css_contributors_text": [
+        "AKT +28.4%",
+        "TAO +9.8%",
+        "FET +6.4%"
+      ]
+    },
+    "ai-enterprise": {
+      "bucket_id": "ai-enterprise",
+      "pms": 25.0,
+      "pms_coverage": {
+        "tickers_present": 4,
+        "tickers_total": 4,
+        "missing": []
+      },
+      "pms_contributors": [
+        {
+          "ticker": "CRM",
+          "change_7d_pct": -8.31,
+          "weight": 0.25,
+          "contribution": -2.0775
+        },
+        {
+          "ticker": "NOW",
+          "change_7d_pct": -7.14,
+          "weight": 0.25,
+          "contribution": -1.785
+        },
+        {
+          "ticker": "WDAY",
+          "change_7d_pct": -5.11,
+          "weight": 0.25,
+          "contribution": -1.2775
+        },
+        {
+          "ticker": "PLTR",
+          "change_7d_pct": -0.42,
+          "weight": 0.25,
+          "contribution": -0.105
+        }
+      ],
+      "pms_contributors_text": [
+        "CRM -8.3%",
+        "NOW -7.1%",
+        "WDAY -5.1%"
+      ],
+      "css": null,
+      "css_coverage": null,
+      "css_contributors": [],
+      "css_contributors_text": []
+    },
+    "ai-data": {
+      "bucket_id": "ai-data",
+      "pms": 0.0,
+      "pms_coverage": {
+        "tickers_present": 3,
+        "tickers_total": 3,
+        "missing": []
+      },
+      "pms_contributors": [
+        {
+          "ticker": "SNOW",
+          "change_7d_pct": -10.72,
+          "weight": 0.3333333333333333,
+          "contribution": -3.5733333333333337
+        },
+        {
+          "ticker": "DDOG",
+          "change_7d_pct": -8.46,
+          "weight": 0.3333333333333333,
+          "contribution": -2.8200000000000003
+        },
+        {
+          "ticker": "MDB",
+          "change_7d_pct": -5.66,
+          "weight": 0.3333333333333333,
+          "contribution": -1.8866666666666667
+        }
+      ],
+      "pms_contributors_text": [
+        "SNOW -10.7%",
+        "DDOG -8.5%",
+        "MDB -5.7%"
+      ],
+      "css": 0.0,
+      "css_coverage": {
+        "tokens_present": 2,
+        "tokens_total": 2,
+        "missing": []
+      },
+      "css_contributors": [
+        {
+          "symbol": "ARKM",
+          "change_7d_pct": 5.72,
+          "weight": 0.4285714285714286,
+          "contribution": 2.4514285714285715
+        },
+        {
+          "symbol": "OCEAN",
+          "change_7d_pct": 1.03,
+          "weight": 0.5714285714285715,
+          "contribution": 0.5885714285714286
+        }
+      ],
+      "css_contributors_text": [
+        "ARKM +5.7%",
+        "OCEAN +1.0%"
+      ]
+    },
+    "ai-consumer-assistants": {
+      "bucket_id": "ai-consumer-assistants",
+      "pms": null,
+      "pms_coverage": null,
+      "pms_contributors": [],
+      "pms_contributors_text": [],
+      "css": 16.7,
+      "css_coverage": {
+        "tokens_present": 1,
+        "tokens_total": 1,
+        "missing": []
+      },
+      "css_contributors": [
+        {
+          "symbol": "WLD",
+          "change_7d_pct": 3.54,
+          "weight": 1.0,
+          "contribution": 3.54
+        }
+      ],
+      "css_contributors_text": [
+        "WLD +3.5%"
+      ]
+    },
+    "robotics-embodied": {
+      "bucket_id": "robotics-embodied",
+      "pms": 58.3,
+      "pms_coverage": {
+        "tickers_present": 2,
+        "tickers_total": 3,
+        "missing": [
+          "ABB"
+        ]
+      },
+      "pms_contributors": [
+        {
+          "ticker": "ISRG",
+          "change_7d_pct": -5.23,
+          "weight": 0.5,
+          "contribution": -2.615
+        },
+        {
+          "ticker": "ROK",
+          "change_7d_pct": 0.85,
+          "weight": 0.5,
+          "contribution": 0.425
+        }
+      ],
+      "pms_contributors_text": [
+        "ISRG -5.2%",
+        "ROK +0.8%"
+      ],
+      "css": null,
+      "css_coverage": null,
+      "css_contributors": [],
+      "css_contributors_text": []
+    },
+    "ai-finance": {
+      "bucket_id": "ai-finance",
+      "pms": 50.0,
+      "pms_coverage": {
+        "tickers_present": 2,
+        "tickers_total": 3,
+        "missing": [
+          "SQ"
+        ]
+      },
+      "pms_contributors": [
+        {
+          "ticker": "PYPL",
+          "change_7d_pct": -5.43,
+          "weight": 0.5,
+          "contribution": -2.715
+        },
+        {
+          "ticker": "COIN",
+          "change_7d_pct": 0.85,
+          "weight": 0.5,
+          "contribution": 0.425
+        }
+      ],
+      "pms_contributors_text": [
+        "PYPL -5.4%",
+        "COIN +0.8%"
+      ],
+      "css": null,
+      "css_coverage": null,
+      "css_contributors": [],
+      "css_contributors_text": []
+    }
+  }
+}

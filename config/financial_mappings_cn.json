@@ -1,17 +1,26 @@
 {
+  "version": "2.0",
+  "description": "Chinese AI sector financial mappings",
+  "last_updated": "2026-01-26",
+  
   "ticker_to_bucket": {
     "ai-chips-cn": [
       "688041.SS",
       "603986.SS",
       "688256.SS",
       "002049.SZ",
-      "688008.SS"
+      "688008.SS",
+      "688981.SS",
+      "688521.SS",
+      "688120.SS"
     ],
     "ai-infrastructure-cn": [
       "000977.SZ",
       "300308.SZ",
       "002230.SZ",
-      "600703.SS"
+      "600703.SS",
+      "000938.SZ",
+      "002236.SZ"
     ],
     "llm-foundation-cn": [
       "9988.HK",
@@ -21,38 +30,275 @@
       "9961.HK",
       "BIDU",
       "BABA",
-      "0020.HK"
+      "0020.HK",
+      "1024.HK"
     ],
     "ai-enterprise-cn": [
       "688111.SS",
       "300033.SZ",
       "002410.SZ",
-      "300253.SZ"
+      "300253.SZ",
+      "688083.SS",
+      "300364.SZ"
     ],
     "robotics-embodied-cn": [
       "300024.SZ",
       "688169.SS",
       "002747.SZ",
-      "300124.SZ"
+      "300124.SZ",
+      "688165.SS",
+      "300222.SZ"
     ],
     "ai-healthcare-cn": [
       "300760.SZ",
       "688050.SS",
-      "300347.SZ"
+      "300347.SZ",
+      "688139.SS"
     ],
     "autonomous-vehicles-cn": [
       "002594.SZ",
       "601127.SS",
       "9868.HK",
-      "002920.SZ"
+      "002920.SZ",
+      "688656.SS",
+      "300750.SZ"
     ],
     "ai-consumer-cn": [
       "9999.HK",
       "1810.HK",
       "2382.HK",
-      "300418.SZ"
+      "300418.SZ",
+      "603444.SS"
+    ],
+    "ai-vision-cn": [
+      "0020.HK",
+      "688327.SS",
+      "300496.SZ"
+    ],
+    "ai-speech-cn": [
+      "002230.SZ",
+      "300078.SZ"
     ]
   },
+  
+  "entity_to_ticker_cn": {
+    "alibaba": {
+      "name": "阿里巴巴",
+      "english": "Alibaba",
+      "tickers": ["BABA", "9988.HK"],
+      "sector": "llm-foundation-cn",
+      "ai_products": ["通义千问", "Qwen"]
+    },
+    "tencent": {
+      "name": "腾讯",
+      "english": "Tencent",
+      "tickers": ["0700.HK", "TCEHY"],
+      "sector": "llm-foundation-cn",
+      "ai_products": ["混元", "Hunyuan"]
+    },
+    "baidu": {
+      "name": "百度",
+      "english": "Baidu",
+      "tickers": ["BIDU", "9888.HK"],
+      "sector": "llm-foundation-cn",
+      "ai_products": ["文心一言", "ERNIE"]
+    },
+    "bytedance": {
+      "name": "字节跳动",
+      "english": "ByteDance",
+      "status": "private",
+      "tickers": [],
+      "sector": "llm-foundation-cn",
+      "ai_products": ["豆包", "Doubao"]
+    },
+    "sensetime": {
+      "name": "商汤科技",
+      "english": "SenseTime",
+      "tickers": ["0020.HK"],
+      "sector": "ai-vision-cn",
+      "ai_products": ["日日新", "SenseNova"]
+    },
+    "megvii": {
+      "name": "旷视科技",
+      "english": "Megvii",
+      "status": "private",
+      "tickers": [],
+      "proxy_tickers": ["0020.HK"],
+      "sector": "ai-vision-cn",
+      "ai_products": ["Face++"]
+    },
+    "cloudwalk": {
+      "name": "云从科技",
+      "english": "CloudWalk",
+      "tickers": ["688327.SS"],
+      "sector": "ai-vision-cn",
+      "ai_products": ["从容大模型"]
+    },
+    "yitu": {
+      "name": "依图科技",
+      "english": "Yitu",
+      "status": "private",
+      "tickers": [],
+      "sector": "ai-vision-cn",
+      "ai_products": ["求索"]
+    },
+    "iflytek": {
+      "name": "科大讯飞",
+      "english": "iFlytek",
+      "tickers": ["002230.SZ"],
+      "sector": "ai-speech-cn",
+      "ai_products": ["星火", "Spark"]
+    },
+    "zhipu": {
+      "name": "智谱AI",
+      "english": "Zhipu AI",
+      "status": "private",
+      "tickers": [],
+      "sector": "llm-foundation-cn",
+      "ai_products": ["智谱清言", "GLM"]
+    },
+    "moonshot": {
+      "name": "月之暗面",
+      "english": "Moonshot AI",
+      "status": "private",
+      "tickers": [],
+      "proxy_tickers": ["BABA"],
+      "sector": "llm-foundation-cn",
+      "ai_products": ["Kimi"]
+    },
+    "minimax": {
+      "name": "MiniMax",
+      "english": "MiniMax",
+      "status": "private",
+      "tickers": [],
+      "proxy_tickers": ["0700.HK"],
+      "sector": "llm-foundation-cn",
+      "ai_products": ["海螺AI", "Talkie"]
+    },
+    "deepseek": {
+      "name": "深度求索",
+      "english": "DeepSeek",
+      "status": "private",
+      "tickers": [],
+      "sector": "llm-foundation-cn",
+      "ai_products": ["DeepSeek"]
+    },
+    "baichuan": {
+      "name": "百川智能",
+      "english": "Baichuan",
+      "status": "private",
+      "tickers": [],
+      "proxy_tickers": ["BABA"],
+      "sector": "llm-foundation-cn",
+      "ai_products": ["百川大模型"]
+    },
+    "01ai": {
+      "name": "零一万物",
+      "english": "01.AI",
+      "status": "private",
+      "tickers": [],
+      "proxy_tickers": ["BABA"],
+      "sector": "llm-foundation-cn",
+      "ai_products": ["Yi", "万知"]
+    },
+    "stepfun": {
+      "name": "阶跃星辰",
+      "english": "StepFun",
+      "status": "private",
+      "tickers": [],
+      "sector": "llm-foundation-cn",
+      "ai_products": ["跃问"]
+    },
+    "kuaishou": {
+      "name": "快手",
+      "english": "Kuaishou",
+      "tickers": ["1024.HK"],
+      "sector": "ai-consumer-cn",
+      "ai_products": ["可灵", "Kling"]
+    },
+    "meituan": {
+      "name": "美团",
+      "english": "Meituan",
+      "tickers": ["3690.HK"],
+      "sector": "ai-enterprise-cn"
+    },
+    "jd": {
+      "name": "京东",
+      "english": "JD.com",
+      "tickers": ["JD", "9618.HK"],
+      "sector": "ai-enterprise-cn",
+      "ai_products": ["言犀"]
+    },
+    "xiaomi": {
+      "name": "小米",
+      "english": "Xiaomi",
+      "tickers": ["1810.HK"],
+      "sector": "ai-consumer-cn",
+      "ai_products": ["小爱同学"]
+    },
+    "netease": {
+      "name": "网易",
+      "english": "NetEase",
+      "tickers": ["NTES", "9999.HK"],
+      "sector": "ai-consumer-cn",
+      "ai_products": ["子曰"]
+    },
+    "cambricon": {
+      "name": "寒武纪",
+      "english": "Cambricon",
+      "tickers": ["688256.SS"],
+      "sector": "ai-chips-cn"
+    },
+    "haiguang": {
+      "name": "海光信息",
+      "english": "Hygon",
+      "tickers": ["688041.SS"],
+      "sector": "ai-chips-cn"
+    },
+    "byd": {
+      "name": "比亚迪",
+      "english": "BYD",
+      "tickers": ["002594.SZ", "1211.HK"],
+      "sector": "autonomous-vehicles-cn"
+    },
+    "nio": {
+      "name": "蔚来",
+      "english": "NIO",
+      "tickers": ["NIO", "9866.HK"],
+      "sector": "autonomous-vehicles-cn"
+    },
+    "xpeng": {
+      "name": "小鹏",
+      "english": "XPeng",
+      "tickers": ["XPEV", "9868.HK"],
+      "sector": "autonomous-vehicles-cn"
+    },
+    "li_auto": {
+      "name": "理想汽车",
+      "english": "Li Auto",
+      "tickers": ["LI", "2015.HK"],
+      "sector": "autonomous-vehicles-cn"
+    },
+    "catl": {
+      "name": "宁德时代",
+      "english": "CATL",
+      "tickers": ["300750.SZ"],
+      "sector": "autonomous-vehicles-cn"
+    },
+    "hikvision": {
+      "name": "海康威视",
+      "english": "Hikvision",
+      "tickers": ["002415.SZ"],
+      "sector": "ai-vision-cn"
+    },
+    "dahua": {
+      "name": "大华股份",
+      "english": "Dahua",
+      "tickers": ["002236.SZ"],
+      "sector": "ai-vision-cn"
+    }
+  },
+  
   "macro_series_cn": {
     "10y_bond": {
       "name": "10Y国债收益率",
@@ -85,12 +331,16 @@
       "description": "Northbound capital net inflow"
     }
   },
+  
   "etf_baskets": {
-    "ai-chips-cn": ["159995.SZ", "516160.SS"],
-    "ai-infrastructure-cn": ["512480.SS"],
-    "robotics-cn": ["562500.SS"],
-    "ai-healthcare-cn": ["159883.SZ"]
+    "ai-chips-cn": ["159995.SZ", "516160.SS", "512760.SS"],
+    "ai-infrastructure-cn": ["512480.SS", "159869.SZ"],
+    "robotics-cn": ["562500.SS", "159770.SZ"],
+    "ai-healthcare-cn": ["159883.SZ"],
+    "autonomous-vehicles-cn": ["516110.SS", "159806.SZ"],
+    "ai-general-cn": ["159819.SZ", "515980.SS"]
   },
+  
   "bucket_names": {
     "ai-chips-cn": "AI芯片",
     "ai-infrastructure-cn": "AI基础设施",
@@ -99,6 +349,92 @@
     "robotics-embodied-cn": "机器人/具身智能",
     "ai-healthcare-cn": "AI医疗",
     "autonomous-vehicles-cn": "自动驾驶",
-    "ai-consumer-cn": "AI消费"
-  }
+    "ai-consumer-cn": "AI消费",
+    "ai-vision-cn": "AI视觉",
+    "ai-speech-cn": "AI语音"
+  },
+  
+  "private_cn_entities": [
+    {
+      "name": "深度求索",
+      "english": "DeepSeek",
+      "status": "private",
+      "funding_stage": "Series A",
+      "valuation_estimate": "$2B",
+      "investors": ["High-Flyer Quant"],
+      "tracking_signals": ["github_stars", "hf_downloads", "arxiv_papers"]
+    },
+    {
+      "name": "智谱AI",
+      "english": "Zhipu AI",
+      "status": "private",
+      "funding_stage": "Series B",
+      "valuation_estimate": "$3B",
+      "investors": ["Tencent", "Alibaba", "Sequoia China"],
+      "tracking_signals": ["api_traffic", "enterprise_deployments"]
+    },
+    {
+      "name": "月之暗面",
+      "english": "Moonshot AI",
+      "status": "private",
+      "funding_stage": "Series B",
+      "valuation_estimate": "$3B",
+      "investors": ["Alibaba", "HongShan", "Sequoia China"],
+      "tracking_signals": ["app_downloads", "user_engagement"]
+    },
+    {
+      "name": "MiniMax",
+      "english": "MiniMax",
+      "status": "private",
+      "funding_stage": "Series C",
+      "valuation_estimate": "$2.5B",
+      "investors": ["Tencent", "Hillhouse"],
+      "tracking_signals": ["talkie_users", "b2b_contracts"]
+    },
+    {
+      "name": "百川智能",
+      "english": "Baichuan",
+      "status": "private",
+      "funding_stage": "Series A",
+      "valuation_estimate": "$2B",
+      "investors": ["Alibaba", "Tencent", "Xiaomi"],
+      "tracking_signals": ["model_benchmarks", "enterprise_adoption"]
+    },
+    {
+      "name": "零一万物",
+      "english": "01.AI",
+      "status": "private",
+      "funding_stage": "Series A",
+      "valuation_estimate": "$1B",
+      "investors": ["Alibaba", "Sinovation"],
+      "tracking_signals": ["yi_downloads", "api_usage"]
+    },
+    {
+      "name": "阶跃星辰",
+      "english": "StepFun",
+      "status": "private",
+      "funding_stage": "Series A",
+      "valuation_estimate": "$500M",
+      "investors": ["Sequoia China"],
+      "tracking_signals": ["model_launches"]
+    },
+    {
+      "name": "旷视科技",
+      "english": "Megvii",
+      "status": "private",
+      "funding_stage": "Series E",
+      "valuation_estimate": "$4B",
+      "investors": ["Alibaba", "Ant Group", "CICC"],
+      "tracking_signals": ["government_contracts", "smart_city_deployments"]
+    },
+    {
+      "name": "依图科技",
+      "english": "Yitu",
+      "status": "private",
+      "funding_stage": "Series D",
+      "valuation_estimate": "$2B",
+      "investors": ["Sequoia China", "Hillhouse"],
+      "tracking_signals": ["healthcare_deployments"]
+    }
+  ]
 }

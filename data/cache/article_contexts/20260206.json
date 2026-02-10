@@ -1,0 +1,181 @@
+{
+  "report_date": "2026-02-06",
+  "generation_time": "2026-02-06T10:48:08.589491",
+  "articles": [
+    {
+      "id": "001",
+      "title": "AI",
+      "url": "https://blog.google/",
+      "source": "Google AI Blog",
+      "published_date": "2026-02-06T10:23:10.717179",
+      "full_content": "The work we're doing to make AI helpful for everyone.",
+      "credibility_score": 10,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 8,
+          "competitive_impact": 7,
+          "strategic_relevance": 9,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 7.1,
+        "rationale": "来自Google AI Blog的可信来源，但内容较为泛泛，未提供具体技术细节或市场变化，市场影响力虽高但受限于信息不足。战略相关性高因Google的AI发展直接关联公司业务方向。",
+        "key_takeaway": "可信来源但信息不足，需关注后续具体内容",
+        "recommended_category": "Strategic Relevance",
+        "average_score": 8.0
+      }
+    },
+    {
+      "id": "002",
+      "title": "Likelihood-Based Reward Designs for General LLM Reasoning",
+      "url": "https://arxiv.org/abs/2602.03979",
+      "source": "arXiv cs.CL (NLP)",
+      "published_date": "2026-02-05T05:00:00",
+      "full_content": "arXiv:2602.03979v1 Announce Type: new \nAbstract: Fine-tuning large language models (LLMs) on reasoning benchmarks via reinforcement learning requires a specific reward function, often binary, for each benchmark. This comes with two potential limitations: the need to design the reward, and the potentially sparse nature of binary rewards. Here, we systematically investigate rewards derived from the probability or log-probability of emitting the reference answer (or any other prompt continuation present in the data), which have the advantage of not relying on specific verifiers and being available at scale. Several recent works have advocated for the use of similar rewards (e.g., VeriFree, JEPO, RLPR, NOVER). We systematically compare variants of likelihood-based rewards with standard baselines, testing performance both on standard mathematical reasoning benchmarks, and on long-form answers where no external verifier is available. We find that using the log-probability of the reference answer as the reward for chain-of-thought (CoT) learning is the only option that performs well in all setups. This reward is also consistent with the next-token log-likelihood loss used during pretraining. In verifiable settings, log-probability rewards bring comparable or better success rates than reinforcing with standard binary rewards, and yield much better perplexity. In non-verifiable settings, they perform on par with SFT. On the other hand, methods based on probability, such as VeriFree, flatline on non-verifiable settings due to vanishing probabilities of getting the correct answer. Overall, this establishes log-probability rewards as a viable method for CoT fine-tuning, bridging the short, verifiable and long, non-verifiable answer settings.",
+      "credibility_score": 10,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 7,
+          "competitive_impact": 7,
+          "strategic_relevance": 9,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 6.85,
+        "rationale": "该论文在AI奖励机制研究领域具有重要学术贡献，但市场影响力受限于其研究性质。战略相关性高因直接关联AI产品开发方向，运营相关性中等因需技术落地。",
+        "key_takeaway": "论文对AI产品研发策略具有重要参考价值",
+        "recommended_category": "Research Papers",
+        "average_score": 7.8
+      }
+    },
+    {
+      "id": "003",
+      "title": "On the Credibility of Evaluating LLMs using Survey Questions",
+      "url": "https://arxiv.org/abs/2602.04033",
+      "source": "arXiv cs.CL (NLP)",
+      "published_date": "2026-02-05T05:00:00",
+      "full_content": "arXiv:2602.04033v1 Announce Type: new \nAbstract: Recent studies evaluate the value orientation of large language models (LLMs) using adapted social surveys, typically by prompting models with survey questions and comparing their responses to average human responses. This paper identifies limitations in this methodology that, depending on the exact setup, can lead to both underestimating and overestimating the similarity of value orientation. Using the World Value Survey in three languages across five countries, we demonstrate that prompting methods (direct vs. chain-of-thought) and decoding strategies (greedy vs. sampling) significantly affect results. To assess the interaction between answers, we introduce a novel metric, self-correlation distance. This metric measures whether LLMs maintain consistent relationships between answers across different questions, as humans do. This indicates that even a high average agreement with human data, when considering LLM responses independently, does not guarantee structural alignment in responses. Additionally, we reveal a weak correlation between two common evaluation metrics, mean-squared distance and KL divergence, which assume that survey answers are independent of each other. For future research, we recommend CoT prompting, sampling-based decoding with dozens of samples, and robust analysis using multiple metrics, including self-correlation distance.",
+      "credibility_score": 10,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 7,
+          "competitive_impact": 7,
+          "strategic_relevance": 9,
+          "operational_relevance": 6,
+          "credibility": 9
+        },
+        "weighted_score": 6.75,
+        "rationale": "该研究探讨LLM评估方法的局限性，对AI产品安全性和可靠性评估有战略意义，但市场和运营影响有限。",
+        "key_takeaway": "研究结果对AI产品评估方法具有重要参考价值，但需结合实际应用场景验证。",
+        "recommended_category": "AI Safety Research",
+        "average_score": 7.6
+      }
+    },
+    {
+      "id": "004",
+      "title": "Linguistic Blind Spots in Clinical Decision Extraction",
+      "url": "https://arxiv.org/abs/2602.03942",
+      "source": "arXiv cs.CL (NLP)",
+      "published_date": "2026-02-05T05:00:00",
+      "full_content": "arXiv:2602.03942v1 Announce Type: new \nAbstract: Extracting medical decisions from clinical notes is a key step for clinical decision support and patient-facing care summaries. We study how the linguistic characteristics of clinical decisions vary across decision categories and whether these differences explain extraction failures. Using MedDec discharge summaries annotated with decision categories from the Decision Identification and Classification Taxonomy for Use in Medicine (DICTUM), we compute seven linguistic indices for each decision span and analyze span-level extraction recall of a standard transformer model. We find clear category-specific signatures: drug-related and problem-defining decisions are entity-dense and telegraphic, whereas advice and precaution decisions contain more narrative, with higher stopword and pronoun proportions and more frequent hedging and negation cues. On the validation split, exact-match recall is 48%, with large gaps across linguistic strata: recall drops from 58% to 24% from the lowest to highest stopword-proportion bins, and spans containing hedging or negation cues are less likely to be recovered. Under a relaxed overlap-based match criterion, recall increases to 71%, indicating that many errors are span boundary disagreements rather than complete misses. Overall, narrative-style spans--common in advice and precaution decisions--are a consistent blind spot under exact matching, suggesting that downstream systems should incorporate boundary-tolerant evaluation and extraction strategies for clinical decisions.",
+      "credibility_score": 10,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 7,
+          "strategic_relevance": 9,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 6.6,
+        "rationale": "该研究聚焦于医疗决策提取的NLP技术，对医疗AI产品开发有潜在价值，但与Fintech核心业务关联度有限。",
+        "key_takeaway": "研究结果可为医疗AI产品提供技术参考，但对当前Fintech业务影响较小。",
+        "recommended_category": "Research Papers",
+        "average_score": 7.6
+      }
+    },
+    {
+      "id": "005",
+      "title": "Transformers perform adaptive partial pooling",
+      "url": "https://arxiv.org/abs/2602.03980",
+      "source": "arXiv cs.CL (NLP)",
+      "published_date": "2026-02-05T05:00:00",
+      "full_content": "arXiv:2602.03980v1 Announce Type: new \nAbstract: Because language is creative, any reasonable language model must generalize, deciding what to say in novel contexts by using information from similar contexts. But what about contexts that are not novel but merely infrequent? In hierarchical regression, the model's predictions for behavior in a context are affected by observations from other similar contexts to the extent that 1) the current context is infrequent and 2) different contexts behave similarly. This is called adaptive partial pooling of evidence. This paper shows that next-word predictions of a transformer (GPT2) are increasingly unaffected by observations from outside the current context across epochs of training (the amount of pooling reduces with training), and that the extent of pooling is affected by context frequency, context number (type frequency) and context variability in a similar way to hierarchical regression. These characteristics of learning in transformers are argued to be realistic on both rational and empirical grounds.",
+      "credibility_score": 10,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 7,
+          "competitive_impact": 6,
+          "strategic_relevance": 9,
+          "operational_relevance": 6,
+          "credibility": 8
+        },
+        "weighted_score": 6.45,
+        "rationale": "论文探讨Transformer的自适应部分池化机制，对NLP理论有贡献，但公司业务更侧重金融科技应用，理论突破对市场影响有限。战略相关性高，因可优化AI产品处理罕见场景的能力。",
+        "key_takeaway": "理论研究对AI产品战略有潜在价值，但需进一步技术转化",
+        "recommended_category": "Research Papers",
+        "average_score": 7.2
+      }
+    },
+    {
+      "id": "006",
+      "title": "Abstraction Induces the Brain Alignment of Language and Speech Models",
+      "url": "https://arxiv.org/abs/2602.04081",
+      "source": "arXiv cs.CL (NLP)",
+      "published_date": "2026-02-05T05:00:00",
+      "full_content": "arXiv:2602.04081v1 Announce Type: new \nAbstract: Research has repeatedly demonstrated that intermediate hidden states extracted from large language models and speech audio models predict measured brain response to natural language stimuli. Yet, very little is known about the representation properties that enable this high prediction performance. Why is it the intermediate layers, and not the output layers, that are most effective for this unique and highly general transfer task? We give evidence that the correspondence between speech and language models and the brain derives from shared meaning abstraction and not their next-word prediction properties. In particular, models construct higher-order linguistic features in their middle layers, cued by a peak in the layerwise intrinsic dimension, a measure of feature complexity. We show that a layer's intrinsic dimension strongly predicts how well it explains fMRI and ECoG signals; that the relation between intrinsic dimension and brain predictivity arises over model pre-training; and finetuning models to better predict the brain causally increases both representations' intrinsic dimension and their semantic content. Results suggest that semantic richness, high intrinsic dimension, and brain predictivity mirror each other, and that the key driver of model-brain similarity is rich meaning abstraction of the inputs, where language modeling is a task sufficiently complex (but perhaps not the only) to require it.",
+      "credibility_score": 10,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 6,
+          "competitive_impact": 5,
+          "strategic_relevance": 8,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 6.0,
+        "rationale": "该研究聚焦于NLP模型与脑活动的关联，虽具学术价值但对Fintech/AI产品直接应用有限，战略相关性因AI产品开发潜力而较高",
+        "key_takeaway": "研究结果可能为AI产品模型优化提供理论参考",
+        "recommended_category": "Research Papers",
+        "average_score": 7.0
+      }
+    },
+    {
+      "id": "007",
+      "title": "Automatic Classification of Pedagogical Materials against CS Curriculum Guidelines",
+      "url": "https://arxiv.org/abs/2602.03962",
+      "source": "arXiv cs.CL (NLP)",
+      "published_date": "2026-02-05T05:00:00",
+      "full_content": "arXiv:2602.03962v1 Announce Type: new \nAbstract: Professional societies often publish curriculum guidelines to help programs align their content to international standards. In Computer Science, the primary standard is published by ACM and IEEE and provide detailed guidelines for what should be and could be included in a Computer Science program.\n  While very helpful, it remains difficult for program administrators to assess how much of the guidelines is being covered by a CS program. This is in particular due to the extensiveness of the guidelines, containing thousands of individual items. As such, it is time consuming and cognitively demanding to audit every course to confidently mark everything that is actually being covered. Our preliminary work indicated that it takes about a day of work per course.\n  In this work, we propose using Natural Language Processing techniques to accelerate the process. We explore two kinds of techniques, the first relying on traditional tools for parsing, tagging, and embeddings, while the second leverages the power of Large Language Models. We evaluate the application of these techniques to classify a corpus of pedagogical materials and show that we can meaningfully classify documents automatically.",
+      "credibility_score": 10,
+      "relevance_score": 0,
+      "entities": {},
+      "evaluation": {
+        "scores": {
+          "market_impact": 5,
+          "competitive_impact": 5,
+          "strategic_relevance": 7,
+          "operational_relevance": 6,
+          "credibility": 10
+        },
+        "weighted_score": 5.55,
+        "rationale": "该研究聚焦于NLP在CS课程对齐中的应用，虽技术创新但与Fintech/AI产品业务关联有限。可能对AI产品开发有辅助价值，但当前业务方向不直接相关。",
+        "key_takeaway": "NLP技术研究对AI产品开发有潜在参考价值，但需结合业务场景进一步评估",
+        "recommended_category": "Research Papers",
+        "average_score": 6.6
+      }
+    }
+  ]
+}

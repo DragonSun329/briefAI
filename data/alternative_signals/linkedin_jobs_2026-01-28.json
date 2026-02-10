@@ -1,0 +1,29 @@
+{
+  "source": "linkedin_jobs",
+  "timestamp": "2026-01-28T10:35:00+08:00",
+  "search_query": "AI Engineer",
+  "location": "United States",
+  "total_jobs": 24000,
+  "companies_hiring": [
+    {"company": "DataAnnotation", "role": "AI/ML Developer", "locations": "All US states", "posted": "2 weeks ago", "scale": "mass hiring"},
+    {"company": "Nightfall AI", "role": "AI/ML Engineer (Recent Grad)", "location": "Palo Alto, CA", "posted": "2 months ago"},
+    {"company": "Netic", "role": "Machine Learning Engineer, New Grad", "location": "San Francisco, CA", "posted": "1 week ago"},
+    {"company": "Twilio", "role": "Machine Learning Engineer", "location": "US (Remote)", "posted": "6 days ago", "status": "actively hiring"},
+    {"company": "Deltek", "role": "ML/AI Engineer", "location": "US", "posted": "1 month ago", "status": "actively hiring"},
+    {"company": "Tamarind Bio", "role": "AI Software Engineer", "location": "San Francisco, CA", "posted": "5 months ago"},
+    {"company": "Pragmatike", "role": "AI/ML Engineer (Entry Position)", "location": "Cambridge, MA", "posted": "7 hours ago"},
+    {"company": "Fusemachines", "role": "ML Engineer / Data Scientist", "location": "New York, NY", "posted": "1 day ago"},
+    {"company": "Summit Tech Partners", "role": "AI/ML Engineer", "location": "Alpharetta, GA", "posted": "1 week ago"}
+  ],
+  "insights": {
+    "market_demand": "Very strong - 24,000+ open positions",
+    "hot_locations": ["San Francisco", "New York", "Remote"],
+    "trend": "Entry-level/new grad positions increasing",
+    "data_annotation_boom": "DataAnnotation hiring massively across all states - likely for AI training data"
+  },
+  "signals": {
+    "ai_job_market": {"health": "very_strong", "signal": "bullish", "strength": 9},
+    "new_grad_demand": {"level": "high", "signal": "bullish"},
+    "data_annotation_sector": {"growth": "explosive", "signal": "bullish"}
+  }
+}

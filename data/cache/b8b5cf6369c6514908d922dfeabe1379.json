@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-02-02T10:04:19.368266",
+  "timestamp": "2026-02-06T09:56:26.204904",
   "key": "source_hackernews_7days",
   "value": [
     {
-      "title": "Actors: A Model of Concurrent Computation [pdf]",
-      "url": "https://apps.dtic.mil/sti/tr/pdf/ADA157917.pdf",
-      "content": "Article URL: https://apps.dtic.mil/sti/tr/pdf/ADA157917.pdf\nComments URL: https://news.ycombinator.com/item?id=46851192\nPoints: 3\n# Comments: 0",
-      "published_date": "2026-02-02T01:11:15",
+      "title": "C Isn't a Language",
+      "url": "https://faultlore.com/blah/c-isnt-a-language/",
+      "content": "Article URL: https://faultlore.com/blah/c-isnt-a-language/\nComments URL: https://news.ycombinator.com/item?id=46907350\nPoints: 10\n# Comments: 10",
+      "published_date": "2026-02-06T00:15:55",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -15,10 +15,10 @@
       "focus_tags": []
     },
     {
-      "title": "Show HN: Wikipedia as a doomscrollable social media feed",
-      "url": "https://xikipedia.org",
-      "content": "Article URL: https://xikipedia.org\nComments URL: https://news.ycombinator.com/item?id=46850803\nPoints: 12\n# Comments: 2",
-      "published_date": "2026-02-02T00:12:19",
+      "title": "Show HN: Local task classifier and dispatcher on RTX 3080",
+      "url": "https://github.com/resilientworkflowsentinel/resilient-workflow-sentinel",
+      "content": "Hi HN, I am shubham a 3d artist who learned coding in college as an I.T.  graduate know logics but not an expert as i just wanna try my hands on to aiSo i built Resilient Workflow Sentinel this is offline ai agent which classify urgency (Low,Medium and HIgh) and dispatches to the candidates based on availability \nWell i want an offline system like a person can trust with its sensitive data to stay completely locallyDid use ai to code for speeding and cutting labor.Its works on RTX 3080 system (this is an basic affordable setup not heavy ai machinery) which i want it to make it reliable without heavy upgrade\nThis is full system doesn't require ollama(I am not against it)I see in companies tickets are raised on jira and slack. Currently people or manager (self) have to sort those things either manually read one by one or send them to the cloud. But the issue is you can't send everything like there is a lot of sensitive data out there which they do not trust and makes it harder and manual sorting through thousands is likely a nightmare.But then just imagine u get all the task classified like its urgency and distribution u can selectively see which task is urgent and needs immediate attention and last of all information doesn't leave your building totally secure\nAlso Api sending is not the only issue u are paying per token cost for task for each may be monthly 100$ to 1000$ which can like save hassle for startup a lot or companies as wellThere was several biases like positional bias also json out put bias also have issues in attention \nAt start i tried just prompting things like Chain of thoughts,RISE(evaluate negative first), given negative examples,Positive examples, somewhere it was struggling with commonsense issue so examples for that (Later changed the approach)Well prompting did give the output and worked well but took too much time to process for single task like 70 to 90secs for a taskThen i tried batching and the biases got worst like it got stronger it always use to like favour alice also more prompts are like ignored and moreFor json output i used constrain so model can only generate json and if fails there is a as well parser i used when i implemented prompting onlyThis reduce time from 90sec to nearly 15 to 30secs per task\nI used steering vector to correct the attention i seen issues happeningStack:\nLanguage: Python 3.10\nModel: qwen2.5-7b-instruct\nLibraries: Pytorch, Hugging Face Transformers (No Langchain, No Ollama)\nAPI: Fast API\nUI: NiceGUI\nHardware: Ryzen 5, 16Gb ram RTX 3080Implementation:Quantization: Load model in nf4 quantization so models like 7b can fit on vram of 10gb which is on rtx 3080 also my hardwareSteering Vectors: Standard prompting wasn't enough. I need to block or direct certain things on a certain layer of llm to make it reliable.Json Constraints: Used constraint to make model strictly give json and also stop from over explanation this happens at logits level where token are blocked which are not required etcgithub : https://github.com/resilientworkflowsentinel/resilient-workf...Youtube: https://youtu.be/tky3eURLzWo\n\nComments URL: https://news.ycombinator.com/item?id=46906967\nPoints: 4\n# Comments: 0",
+      "published_date": "2026-02-05T23:31:01",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -27,10 +27,10 @@
       "focus_tags": []
     },
     {
-      "title": "Time Machine-style Backups with rsync (2018)",
-      "url": "https://samuelhewitt.com/blog/2018-06-05-time-machine-style-backups-with-rsync",
-      "content": "Article URL: https://samuelhewitt.com/blog/2018-06-05-time-machine-style-backups-with-rsync\nComments URL: https://news.ycombinator.com/item?id=46850709\nPoints: 17\n# Comments: 7",
-      "published_date": "2026-02-02T00:00:07",
+      "title": "The RCE that AMD won't fix",
+      "url": "https://mrbruh.com/amd/",
+      "content": "Article URL: https://mrbruh.com/amd/\nComments URL: https://news.ycombinator.com/item?id=46906947\nPoints: 34\n# Comments: 6",
+      "published_date": "2026-02-05T23:29:18",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -39,10 +39,10 @@
       "focus_tags": []
     },
     {
-      "title": "History and Timeline of the Proco Rat Pedal (2021)",
-      "url": "https://web.archive.org/web/20211030011207/https://thejhsshow.com/articles/history-and-timeline-of-the-proco-rat-pedal",
-      "content": "Article URL: https://web.archive.org/web/20211030011207/https://thejhsshow.com/articles/history-and-timeline-of-the-proco-rat-pedal\nComments URL: https://news.ycombinator.com/item?id=46850653\nPoints: 4\n# Comments: 1",
-      "published_date": "2026-02-01T23:53:48",
+      "title": "Jane Street Blog – What if writing tests was a joyful experience?",
+      "url": "https://blog.janestreet.com/the-joy-of-expect-tests/",
+      "content": "Article URL: https://blog.janestreet.com/the-joy-of-expect-tests/\nComments URL: https://news.ycombinator.com/item?id=46905896\nPoints: 27\n# Comments: 6",
+      "published_date": "2026-02-05T21:51:51",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -51,10 +51,10 @@
       "focus_tags": []
     },
     {
-      "title": "Two kinds of AI users are emerging. The gap between them is astonishing",
-      "url": "https://martinalderson.com/posts/two-kinds-of-ai-users-are-emerging/",
-      "content": "Article URL: https://martinalderson.com/posts/two-kinds-of-ai-users-are-emerging/\nComments URL: https://news.ycombinator.com/item?id=46850588\nPoints: 34\n# Comments: 38",
-      "published_date": "2026-02-01T23:45:18",
+      "title": "Review of 1984 by Isaac Asimov (1980)",
+      "url": "https://www.newworker.org/ncptrory/1984.htm",
+      "content": "Article URL: https://www.newworker.org/ncptrory/1984.htm\nComments URL: https://news.ycombinator.com/item?id=46905761\nPoints: 80\n# Comments: 32",
+      "published_date": "2026-02-05T21:39:57",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -63,10 +63,10 @@
       "focus_tags": []
     },
     {
-      "title": "Show HN: NanoClaw – “Clawdbot” in 500 lines of TS with Apple container isolation",
-      "url": "https://github.com/gavrielc/nanoclaw",
-      "content": "I’ve been running Clawdbot for the last couple weeks and have genuinely found it useful but running it scares the crap out of me.OpenClaw has 52+ modules and runs agents with near-unlimited permissions in a single Node process. NanoClaw is ~500 lines of core code, agents run in actual Apple containers with filesystem isolation. Each chat gets its own sandboxed context.This is not a swiss army knife. It’s built to match my exact needs. Fork it and make it yours.\n\nComments URL: https://news.ycombinator.com/item?id=46850205\nPoints: 166\n# Comments: 50",
-      "published_date": "2026-02-01T22:49:22",
+      "title": "It's 2026, Just Use Postgres",
+      "url": "https://www.tigerdata.com/blog/its-2026-just-use-postgres",
+      "content": "Article URL: https://www.tigerdata.com/blog/its-2026-just-use-postgres\nComments URL: https://news.ycombinator.com/item?id=46905555\nPoints: 355\n# Comments: 200",
+      "published_date": "2026-02-05T21:24:03",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -75,10 +75,10 @@
       "focus_tags": []
     },
     {
-      "title": "Treasures found on HS2 route stored in secret warehouse",
-      "url": "https://www.bbc.com/news/articles/c93v21q5xdvo",
-      "content": "Article URL: https://www.bbc.com/news/articles/c93v21q5xdvo\nComments URL: https://news.ycombinator.com/item?id=46849926\nPoints: 23\n# Comments: 2",
-      "published_date": "2026-02-01T22:14:39",
+      "title": "Claude Opus 4.6 extra usage promo",
+      "url": "https://support.claude.com/en/articles/13613973-claude-opus-4-6-extra-usage-promo",
+      "content": "Article URL: https://support.claude.com/en/articles/13613973-claude-opus-4-6-extra-usage-promo\nComments URL: https://news.ycombinator.com/item?id=46904569\nPoints: 100\n# Comments: 26",
+      "published_date": "2026-02-05T20:15:48",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -87,10 +87,10 @@
       "focus_tags": []
     },
     {
-      "title": "MRI scans show exercise can make the brain look younger",
-      "url": "https://www.sciencedaily.com/releases/2026/01/260121034130.htm",
-      "content": "Article URL: https://www.sciencedaily.com/releases/2026/01/260121034130.htm\nComments URL: https://news.ycombinator.com/item?id=46849630\nPoints: 70\n# Comments: 18",
-      "published_date": "2026-02-01T21:37:00",
+      "title": "LinkedIn checks for 2953 browser extensions",
+      "url": "https://github.com/mdp/linkedin-extension-fingerprinting",
+      "content": "Article URL: https://github.com/mdp/linkedin-extension-fingerprinting\nComments URL: https://news.ycombinator.com/item?id=46904361\nPoints: 277\n# Comments: 137",
+      "published_date": "2026-02-05T20:00:39",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -99,10 +99,10 @@
       "focus_tags": []
     },
     {
-      "title": "Defeating a 40-year-old copy protection dongle",
-      "url": "https://dmitrybrant.com/2026/02/01/defeating-a-40-year-old-copy-protection-dongle",
-      "content": "Article URL: https://dmitrybrant.com/2026/02/01/defeating-a-40-year-old-copy-protection-dongle\nComments URL: https://news.ycombinator.com/item?id=46849567\nPoints: 235\n# Comments: 72",
-      "published_date": "2026-02-01T21:30:51",
+      "title": "We tasked Opus 4.6 using agent teams to build a C Compiler",
+      "url": "https://www.anthropic.com/engineering/building-c-compiler",
+      "content": "Article URL: https://www.anthropic.com/engineering/building-c-compiler\nComments URL: https://news.ycombinator.com/item?id=46903616\nPoints: 366\n# Comments: 342",
+      "published_date": "2026-02-05T19:07:51",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -111,10 +111,10 @@
       "focus_tags": []
     },
     {
-      "title": "My thousand dollar iPhone can't do math",
-      "url": "https://journal.rafaelcosta.me/my-thousand-dollar-iphone-cant-do-math/",
-      "content": "Article URL: https://journal.rafaelcosta.me/my-thousand-dollar-iphone-cant-do-math/\nComments URL: https://news.ycombinator.com/item?id=46849258\nPoints: 137\n# Comments: 60",
-      "published_date": "2026-02-01T20:51:56",
+      "title": "My AI Adoption Journey",
+      "url": "https://mitchellh.com/writing/my-ai-adoption-journey",
+      "content": "Article URL: https://mitchellh.com/writing/my-ai-adoption-journey\nComments URL: https://news.ycombinator.com/item?id=46903558\nPoints: 314\n# Comments: 80",
+      "published_date": "2026-02-05T19:04:40",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -123,10 +123,10 @@
       "focus_tags": []
     },
     {
-      "title": "Building Your Own Efficient uint128 in C++",
-      "url": "https://solidean.com/blog/2026/building-your-own-u128/",
-      "content": "Article URL: https://solidean.com/blog/2026/building-your-own-u128/\nComments URL: https://news.ycombinator.com/item?id=46849154\nPoints: 24\n# Comments: 2",
-      "published_date": "2026-02-01T20:40:45",
+      "title": "Flock CEO calls Deflock a “terrorist organization” (2025) [video]",
+      "url": "https://www.youtube.com/watch?v=l-kZGrDz7PU",
+      "content": "Article URL: https://www.youtube.com/watch?v=l-kZGrDz7PU\nComments URL: https://news.ycombinator.com/item?id=46903556\nPoints: 458\n# Comments: 303",
+      "published_date": "2026-02-05T19:04:37",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -135,10 +135,10 @@
       "focus_tags": []
     },
     {
-      "title": "TIL: Apple Broke Time Machine Again on Tahoe",
-      "url": "https://taoofmac.com/space/til/2026/02/01/1630",
-      "content": "Article URL: https://taoofmac.com/space/til/2026/02/01/1630\nComments URL: https://news.ycombinator.com/item?id=46848699\nPoints: 179\n# Comments: 106",
-      "published_date": "2026-02-01T19:38:45",
+      "title": "Ardour 9.0",
+      "url": "https://ardour.org/whatsnew.html",
+      "content": "Article URL: https://ardour.org/whatsnew.html\nComments URL: https://news.ycombinator.com/item?id=46903001\nPoints: 235\n# Comments: 48",
+      "published_date": "2026-02-05T18:30:16",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -147,10 +147,10 @@
       "focus_tags": []
     },
     {
-      "title": "I taught my neighbor to keep the volume down",
-      "url": "https://idiallo.com/blog/teaching-my-neighbor-to-keep-the-volume-down",
-      "content": "Article URL: https://idiallo.com/blog/teaching-my-neighbor-to-keep-the-volume-down\nComments URL: https://news.ycombinator.com/item?id=46848415\nPoints: 528\n# Comments: 216",
-      "published_date": "2026-02-01T19:00:46",
+      "title": "PsiACE/Skills – A small, shared skill library",
+      "url": "https://github.com/PsiACE/skills",
+      "content": "Article URL: https://github.com/PsiACE/skills\nComments URL: https://news.ycombinator.com/item?id=46902789\nPoints: 46\n# Comments: 4",
+      "published_date": "2026-02-05T18:17:14",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -159,10 +159,10 @@
       "focus_tags": []
     },
     {
-      "title": "Clearspace (YC W23) Is Hiring an Applied Researcher (ML)",
-      "url": "https://www.ycombinator.com/companies/clearspace/jobs/GOWiDwp-research-engineer-at-clearspace",
-      "content": "Article URL: https://www.ycombinator.com/companies/clearspace/jobs/GOWiDwp-research-engineer-at-clearspace\nComments URL: https://news.ycombinator.com/item?id=46848260\nPoints: 0\n# Comments: 0",
-      "published_date": "2026-02-01T18:41:54",
+      "title": "GPT-5.3-Codex",
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+      "content": "Article URL: https://openai.com/index/introducing-gpt-5-3-codex/\nComments URL: https://news.ycombinator.com/item?id=46902638\nPoints: 1026\n# Comments: 394",
+      "published_date": "2026-02-05T18:08:08",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -171,10 +171,10 @@
       "focus_tags": []
     },
     {
-      "title": "Towards a science of scaling agent systems: When and why agent systems work",
-      "url": "https://research.google/blog/towards-a-science-of-scaling-agent-systems-when-and-why-agent-systems-work/",
-      "content": "Article URL: https://research.google/blog/towards-a-science-of-scaling-agent-systems-when-and-why-agent-systems-work/\nComments URL: https://news.ycombinator.com/item?id=46847958\nPoints: 42\n# Comments: 17",
-      "published_date": "2026-02-01T18:00:30",
+      "title": "Orchestrate teams of Claude Code sessions",
+      "url": "https://code.claude.com/docs/en/agent-teams",
+      "content": "Article URL: https://code.claude.com/docs/en/agent-teams\nComments URL: https://news.ycombinator.com/item?id=46902368\nPoints: 304\n# Comments: 168",
+      "published_date": "2026-02-05T17:49:54",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -183,10 +183,10 @@
       "focus_tags": []
     },
     {
-      "title": "A Crisis comes to Wordle: Reusing old words",
-      "url": "https://forkingmad.blog/wordle-crisis/",
-      "content": "Article URL: https://forkingmad.blog/wordle-crisis/\nComments URL: https://news.ycombinator.com/item?id=46847924\nPoints: 46\n# Comments: 61",
-      "published_date": "2026-02-01T17:54:55",
+      "title": "Claude Opus 4.6",
+      "url": "https://www.anthropic.com/news/claude-opus-4-6",
+      "content": "Article URL: https://www.anthropic.com/news/claude-opus-4-6\nComments URL: https://news.ycombinator.com/item?id=46902223\nPoints: 1547\n# Comments: 667",
+      "published_date": "2026-02-05T17:38:53",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -195,10 +195,10 @@
       "focus_tags": []
     },
     {
-      "title": "Apple I Advertisement (1976)",
-      "url": "http://apple1.chez.com/Apple1project/Gallery/Gallery.htm",
-      "content": "https://computerhistory.org/wp-content/uploads/2019/10/Apple...\n\nComments URL: https://news.ycombinator.com/item?id=46847780\nPoints: 175\n# Comments: 116",
-      "published_date": "2026-02-01T17:36:57",
+      "title": "Maihem (YC W24): hiring senior robotics perception engineer (London, on-site)",
+      "url": "https://jobs.ashbyhq.com/maihem/8da3fa8b-5544-45de-a99e-888021519758",
+      "content": "Article URL: https://jobs.ashbyhq.com/maihem/8da3fa8b-5544-45de-a99e-888021519758\nComments URL: https://news.ycombinator.com/item?id=46901768\nPoints: 0\n# Comments: 0",
+      "published_date": "2026-02-05T17:00:07",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -207,10 +207,10 @@
       "focus_tags": []
     },
     {
-      "title": "Adventure Game Studio: OSS software for creating adventure games",
-      "url": "https://www.adventuregamestudio.co.uk/",
-      "content": "Article URL: https://www.adventuregamestudio.co.uk/\nComments URL: https://news.ycombinator.com/item?id=46846252\nPoints: 265\n# Comments: 49",
-      "published_date": "2026-02-01T13:56:56",
+      "title": "The New Collabora Office for Desktop",
+      "url": "https://www.collaboraonline.com/collabora-office/",
+      "content": "Article URL: https://www.collaboraonline.com/collabora-office/\nComments URL: https://news.ycombinator.com/item?id=46899591\nPoints: 149\n# Comments: 95",
+      "published_date": "2026-02-05T13:47:59",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -219,10 +219,10 @@
       "focus_tags": []
     },
     {
-      "title": "Amiga Unix (Amix)",
-      "url": "https://www.amigaunix.com/doku.php/home",
-      "content": "Article URL: https://www.amigaunix.com/doku.php/home\nComments URL: https://news.ycombinator.com/item?id=46845244\nPoints: 112\n# Comments: 41",
-      "published_date": "2026-02-01T10:57:20",
+      "title": "Company as Code",
+      "url": "https://blog.42futures.com/p/company-as-code",
+      "content": "Article URL: https://blog.42futures.com/p/company-as-code\nComments URL: https://news.ycombinator.com/item?id=46899132\nPoints: 220\n# Comments: 109",
+      "published_date": "2026-02-05T12:56:28",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",
@@ -231,10 +231,10 @@
       "focus_tags": []
     },
     {
-      "title": "FOSDEM 2026 – Open-Source Conference in Brussels – Day#1 Recap",
-      "url": "https://gyptazy.com/blog/fosdem-2026-opensource-conference-brussels/",
-      "content": "Article URL: https://gyptazy.com/blog/fosdem-2026-opensource-conference-brussels/\nComments URL: https://news.ycombinator.com/item?id=46845103\nPoints: 184\n# Comments: 106",
-      "published_date": "2026-02-01T10:30:41",
+      "title": "Freshpaint (YC S19) Is Hiring a Senior SWE, Data",
+      "url": "https://www.freshpaint.io/about?ashby_jid=3a7926ba-cf51-4084-9196-4361a7e97761",
+      "content": "Article URL: https://www.freshpaint.io/about?ashby_jid=3a7926ba-cf51-4084-9196-4361a7e97761\nComments URL: https://news.ycombinator.com/item?id=46898713\nPoints: 0\n# Comments: 0",
+      "published_date": "2026-02-05T12:00:03",
       "source": "Hacker News",
       "source_id": "hackernews",
       "language": "en",

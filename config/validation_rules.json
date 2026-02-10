@@ -1,0 +1,348 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "description": "Validation rules for Bloomberg Terminal-grade data verification. Defines requirements for accepting claims based on value thresholds and source requirements.",
+    "last_updated": "2026-01-26"
+  },
+
+  "global_settings": {
+    "default_min_sources": 1,
+    "high_value_min_sources": 2,
+    "high_value_threshold_usd": 100000000,
+    "conflict_tolerance_percent": 10,
+    "enable_auto_validation": true,
+    "enable_manual_review_queue": true,
+    "stale_claim_days": 30
+  },
+
+  "claim_types": {
+    "funding_amount": {
+      "description": "Investment/funding round amounts",
+      "unit": "usd",
+      "validation_rules": [
+        {
+          "name": "small_funding",
+          "condition": {"value_lt": 10000000},
+          "min_sources": 1,
+          "min_tier": 3,
+          "notes": "Seed/angel rounds under $10M can be single-source"
+        },
+        {
+          "name": "medium_funding",
+          "condition": {"value_gte": 10000000, "value_lt": 100000000},
+          "min_sources": 2,
+          "min_tier": 2,
+          "notes": "Series A-C typically $10M-$100M requires 2 sources"
+        },
+        {
+          "name": "large_funding",
+          "condition": {"value_gte": 100000000},
+          "min_sources": 2,
+          "min_tier": 1,
+          "require_official_source": true,
+          "notes": "Large rounds require tier 1 sources (SEC, press release, top-tier news)"
+        }
+      ],
+      "conflict_resolution": {
+        "tolerance_percent": 5,
+        "prefer_sources": ["sec", "company_ir", "press_release"],
+        "on_conflict": "flag_for_review"
+      }
+    },
+
+    "valuation": {
+      "description": "Company valuation estimates",
+      "unit": "usd",
+      "validation_rules": [
+        {
+          "name": "early_stage_valuation",
+          "condition": {"value_lt": 100000000},
+          "min_sources": 1,
+          "min_tier": 3,
+          "notes": "Early stage valuations are speculative"
+        },
+        {
+          "name": "growth_valuation",
+          "condition": {"value_gte": 100000000, "value_lt": 1000000000},
+          "min_sources": 2,
+          "min_tier": 2,
+          "notes": "Sub-unicorn valuations need corroboration"
+        },
+        {
+          "name": "unicorn_valuation",
+          "condition": {"value_gte": 1000000000},
+          "min_sources": 2,
+          "min_tier": 1,
+          "require_official_source": true,
+          "notes": "Unicorn status requires strong evidence"
+        }
+      ],
+      "conflict_resolution": {
+        "tolerance_percent": 15,
+        "prefer_sources": ["pitchbook", "crunchbase", "sec"],
+        "on_conflict": "use_weighted_average"
+      }
+    },
+
+    "employee_count": {
+      "description": "Number of employees",
+      "unit": "count",
+      "validation_rules": [
+        {
+          "name": "small_company",
+          "condition": {"value_lt": 100},
+          "min_sources": 1,
+          "min_tier": 3
+        },
+        {
+          "name": "medium_company",
+          "condition": {"value_gte": 100, "value_lt": 1000},
+          "min_sources": 1,
+          "min_tier": 2
+        },
+        {
+          "name": "large_company",
+          "condition": {"value_gte": 1000},
+          "min_sources": 2,
+          "min_tier": 2,
+          "notes": "Large headcount changes are significant signals"
+        }
+      ],
+      "conflict_resolution": {
+        "tolerance_percent": 20,
+        "prefer_sources": ["linkedin", "company_ir", "sec_10k"],
+        "on_conflict": "use_most_recent"
+      }
+    },
+
+    "acquisition_price": {
+      "description": "M&A transaction values",
+      "unit": "usd",
+      "validation_rules": [
+        {
+          "name": "small_acquisition",
+          "condition": {"value_lt": 50000000},
+          "min_sources": 1,
+          "min_tier": 2
+        },
+        {
+          "name": "medium_acquisition",
+          "condition": {"value_gte": 50000000, "value_lt": 500000000},
+          "min_sources": 2,
+          "min_tier": 2
+        },
+        {
+          "name": "large_acquisition",
+          "condition": {"value_gte": 500000000},
+          "min_sources": 2,
+          "min_tier": 1,
+          "require_official_source": true,
+          "notes": "Major M&A requires SEC filings or official announcements"
+        }
+      ],
+      "conflict_resolution": {
+        "tolerance_percent": 5,
+        "prefer_sources": ["sec_8k", "sec_s4", "press_release"],
+        "on_conflict": "flag_for_review"
+      }
+    },
+
+    "partnership": {
+      "description": "Strategic partnerships and collaborations",
+      "unit": "boolean",
+      "validation_rules": [
+        {
+          "name": "default",
+          "min_sources": 1,
+          "min_tier": 2,
+          "notes": "Partnerships typically announced officially"
+        }
+      ],
+      "conflict_resolution": {
+        "on_conflict": "flag_for_review"
+      }
+    },
+
+    "product_launch": {
+      "description": "New product or feature launches",
+      "unit": "boolean",
+      "validation_rules": [
+        {
+          "name": "default",
+          "min_sources": 1,
+          "min_tier": 3,
+          "notes": "Product launches are usually visible"
+        }
+      ],
+      "conflict_resolution": {
+        "on_conflict": "accept_first"
+      }
+    },
+
+    "executive_change": {
+      "description": "C-suite and key executive changes",
+      "unit": "boolean",
+      "validation_rules": [
+        {
+          "name": "default",
+          "min_sources": 2,
+          "min_tier": 2,
+          "notes": "Executive changes should be corroborated"
+        }
+      ],
+      "conflict_resolution": {
+        "prefer_sources": ["linkedin", "company_ir", "sec_8k"],
+        "on_conflict": "flag_for_review"
+      }
+    },
+
+    "layoff": {
+      "description": "Workforce reduction events",
+      "unit": "count",
+      "validation_rules": [
+        {
+          "name": "small_layoff",
+          "condition": {"value_lt": 100},
+          "min_sources": 2,
+          "min_tier": 3,
+          "notes": "Small layoffs often unconfirmed"
+        },
+        {
+          "name": "large_layoff",
+          "condition": {"value_gte": 100},
+          "min_sources": 2,
+          "min_tier": 2,
+          "notes": "Large layoffs are newsworthy"
+        }
+      ],
+      "conflict_resolution": {
+        "tolerance_percent": 25,
+        "prefer_sources": ["sec_8k", "news", "company_ir"],
+        "on_conflict": "use_weighted_average"
+      }
+    },
+
+    "revenue": {
+      "description": "Revenue figures",
+      "unit": "usd",
+      "validation_rules": [
+        {
+          "name": "private_company",
+          "condition": {"is_public": false},
+          "min_sources": 2,
+          "min_tier": 2,
+          "notes": "Private company revenue is hard to verify"
+        },
+        {
+          "name": "public_company",
+          "condition": {"is_public": true},
+          "min_sources": 1,
+          "min_tier": 1,
+          "require_official_source": true,
+          "preferred_sources": ["sec_10k", "sec_10q", "earnings_call"]
+        }
+      ],
+      "conflict_resolution": {
+        "tolerance_percent": 2,
+        "prefer_sources": ["sec_10k", "sec_10q"],
+        "on_conflict": "use_official"
+      }
+    },
+
+    "market_cap": {
+      "description": "Public market capitalization",
+      "unit": "usd",
+      "validation_rules": [
+        {
+          "name": "default",
+          "min_sources": 1,
+          "min_tier": 1,
+          "preferred_sources": ["yahoo_finance", "bloomberg", "nasdaq"]
+        }
+      ],
+      "conflict_resolution": {
+        "tolerance_percent": 1,
+        "on_conflict": "use_most_recent"
+      }
+    }
+  },
+
+  "source_tiers": {
+    "tier_1": {
+      "description": "Official and institutional sources",
+      "weight": 1.0,
+      "examples": ["sec", "company_ir", "press_release", "bloomberg", "wsj", "reuters"]
+    },
+    "tier_2": {
+      "description": "Established data providers and business publications",
+      "weight": 0.8,
+      "examples": ["crunchbase", "pitchbook", "forbes", "techcrunch", "axios"]
+    },
+    "tier_3": {
+      "description": "Tech news and community sources",
+      "weight": 0.6,
+      "examples": ["venturebeat", "hackernews", "reddit", "github"]
+    },
+    "tier_4": {
+      "description": "Social media and unverified sources",
+      "weight": 0.4,
+      "examples": ["twitter", "discord", "telegram", "medium"]
+    }
+  },
+
+  "conflict_resolution_strategies": {
+    "flag_for_review": {
+      "description": "Add to manual review queue",
+      "action": "create_review_task"
+    },
+    "use_weighted_average": {
+      "description": "Compute source-reliability-weighted average",
+      "action": "compute_weighted_value"
+    },
+    "use_most_recent": {
+      "description": "Use the most recently reported value",
+      "action": "select_by_timestamp"
+    },
+    "use_official": {
+      "description": "Prefer official/tier-1 sources",
+      "action": "select_by_tier"
+    },
+    "accept_first": {
+      "description": "Accept the first reported value",
+      "action": "select_first_report"
+    }
+  },
+
+  "validation_statuses": {
+    "pending": "Awaiting validation (single source, high value)",
+    "single_source": "Only one source, below threshold for mandatory validation",
+    "corroborated": "Multiple independent sources agree",
+    "conflict": "Sources disagree beyond tolerance",
+    "validated": "Meets all validation requirements",
+    "rejected": "Failed validation checks",
+    "review_required": "Flagged for manual review"
+  },
+
+  "alerts": {
+    "high_value_single_source": {
+      "description": "High-value claim from single source",
+      "severity": "warning",
+      "action": "add_to_review_queue"
+    },
+    "source_conflict": {
+      "description": "Sources report conflicting values",
+      "severity": "warning",
+      "action": "add_to_review_queue"
+    },
+    "low_reliability_source": {
+      "description": "Claim from source with low reliability score",
+      "severity": "info",
+      "action": "reduce_confidence"
+    },
+    "stale_claim": {
+      "description": "Claim not updated in configured period",
+      "severity": "info",
+      "action": "mark_stale"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "_version": "1.0",
+  "_description": "Evidence weights for belief updates. Combines metric importance with source reliability.",
+  
+  "canonical_metric_weights": {
+    "_doc": "Weight by metric type (0.0 to 1.0). Higher = more influential on belief.",
+    
+    "filing_mentions": 0.95,
+    "contract_count": 0.90,
+    "earnings_mentions": 0.90,
+    "arr": 0.85,
+    "revenue": 0.85,
+    "capex": 0.80,
+    
+    "repo_activity": 0.70,
+    "repo_stars": 0.65,
+    "repo_forks": 0.60,
+    "sdk_release": 0.75,
+    "package_downloads": 0.70,
+    
+    "job_postings_count": 0.65,
+    "hiring_activity": 0.60,
+    
+    "article_count": 0.45,
+    "headline_mentions": 0.45,
+    "keyword_frequency": 0.40,
+    
+    "discussion_volume": 0.30,
+    "sentiment_score": 0.35,
+    "social_mentions": 0.25
+  },
+  
+  "source_reliability": {
+    "_doc": "Reliability multiplier by source (0.0 to 1.0). Adjusts canonical weight.",
+    
+    "sec": 1.0,
+    "earnings_call": 0.95,
+    "financial": 0.90,
+    
+    "github": 0.85,
+    "package": 0.80,
+    
+    "jobs": 0.70,
+    
+    "news": 0.55,
+    "press": 0.50,
+    
+    "social": 0.35,
+    "reddit": 0.30,
+    "twitter": 0.25
+  },
+  
+  "direction_thresholds": {
+    "_doc": "Thresholds for evidence classification",
+    "significant_change": 0.15,
+    "saturation_point": 0.30
+  },
+  
+  "update_parameters": {
+    "_doc": "Belief update formula parameters",
+    "learning_rate": 0.35,
+    "min_confidence": 0.05,
+    "max_confidence": 0.98
+  },
+  
+  "safety_caps": {
+    "_doc": "Maximum posterior confidence by hypothesis quality",
+    "review_required": 0.60,
+    "weakly_validated": 0.75,
+    "default": 0.95
+  }
+}

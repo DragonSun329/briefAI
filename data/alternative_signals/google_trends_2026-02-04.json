@@ -1,0 +1,73 @@
+{
+  "source": "google_trends",
+  "scraped_at": "2026-02-04T10:03:22.694026",
+  "note": "Synthetic signals - install pytrends for live data",
+  "terms_tracked": [
+    "OpenAI",
+    "ChatGPT",
+    "Anthropic Claude",
+    "Google Gemini",
+    "Midjourney",
+    "artificial intelligence",
+    "machine learning",
+    "large language model",
+    "generative AI",
+    "AI chatbot",
+    "GitHub Copilot",
+    "Stable Diffusion",
+    "DALL-E",
+    "Llama AI",
+    "Claude AI"
+  ],
+  "bucket_signals": {
+    "llm-foundation": {
+      "terms_tracked": [
+        "ChatGPT",
+        "Claude AI",
+        "Google Gemini"
+      ],
+      "relative_interest": 85,
+      "trend_direction": "stable",
+      "signal_interpretation": "Sustained high interest in LLM chatbots"
+    },
+    "ai-image-generation": {
+      "terms_tracked": [
+        "Midjourney",
+        "Stable Diffusion",
+        "DALL-E"
+      ],
+      "relative_interest": 60,
+      "trend_direction": "declining",
+      "signal_interpretation": "Mature market, interest normalizing"
+    },
+    "ai-coding": {
+      "terms_tracked": [
+        "GitHub Copilot",
+        "Cursor AI",
+        "AI coding"
+      ],
+      "relative_interest": 75,
+      "trend_direction": "rising",
+      "signal_interpretation": "Growing developer adoption"
+    },
+    "ai-agents": {
+      "terms_tracked": [
+        "AI agent",
+        "AutoGPT",
+        "AI automation"
+      ],
+      "relative_interest": 50,
+      "trend_direction": "rising",
+      "signal_interpretation": "Emerging interest in autonomous AI"
+    },
+    "ai-general": {
+      "terms_tracked": [
+        "artificial intelligence",
+        "AI"
+      ],
+      "relative_interest": 90,
+      "trend_direction": "stable",
+      "signal_interpretation": "AI remains dominant tech topic"
+    }
+  }
+}

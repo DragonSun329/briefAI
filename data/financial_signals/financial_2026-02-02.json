@@ -1,0 +1,84 @@
+{
+  "scraped_at": "2026-02-02T02:10:29.914809+00:00",
+  "sec_filings": [
+    {
+      "id": "sec_MSFT_2026-01-28_10-Q",
+      "signal_type": "sec_filing",
+      "entity": "Microsoft",
+      "ticker": "MSFT",
+      "title": "Microsoft (MSFT) files 10-Q: 10-Q",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=10-Q",
+      "source": "sec_edgar",
+      "published_at": "2026-01-28",
+      "summary": "SEC 10-Q filing by Microsoft",
+      "filing_type": "10-Q",
+      "relevance": 1.0
+    },
+    {
+      "id": "sec_MSFT_2026-01-28_8-K",
+      "signal_type": "sec_filing",
+      "entity": "Microsoft",
+      "ticker": "MSFT",
+      "title": "Microsoft (MSFT) files 8-K: 8-K",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=8-K",
+      "source": "sec_edgar",
+      "published_at": "2026-01-28",
+      "summary": "SEC 8-K filing by Microsoft",
+      "filing_type": "8-K",
+      "relevance": 1.0
+    },
+    {
+      "id": "sec_META_2026-01-29_10-K",
+      "signal_type": "sec_filing",
+      "entity": "Meta",
+      "ticker": "META",
+      "title": "Meta (META) files 10-K: 10-K",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=10-K",
+      "source": "sec_edgar",
+      "published_at": "2026-01-29",
+      "summary": "SEC 10-K filing by Meta",
+      "filing_type": "10-K",
+      "relevance": 1.0
+    },
+    {
+      "id": "sec_META_2026-01-28_8-K",
+      "signal_type": "sec_filing",
+      "entity": "Meta",
+      "ticker": "META",
+      "title": "Meta (META) files 8-K: 8-K",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=8-K",
+      "source": "sec_edgar",
+      "published_at": "2026-01-28",
+      "summary": "SEC 8-K filing by Meta",
+      "filing_type": "8-K",
+      "relevance": 1.0
+    },
+    {
+      "id": "sec_AAPL_2026-01-30_10-Q",
+      "signal_type": "sec_filing",
+      "entity": "Apple",
+      "ticker": "AAPL",
+      "title": "Apple (AAPL) files 10-Q: 10-Q",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=10-Q",
+      "source": "sec_edgar",
+      "published_at": "2026-01-30",
+      "summary": "SEC 10-Q filing by Apple",
+      "filing_type": "10-Q",
+      "relevance": 1.0
+    },
+    {
+      "id": "sec_AAPL_2026-01-29_8-K",
+      "signal_type": "sec_filing",
+      "entity": "Apple",
+      "ticker": "AAPL",
+      "title": "Apple (AAPL) files 8-K: 8-K",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=8-K",
+      "source": "sec_edgar",
+      "published_at": "2026-01-29",
+      "summary": "SEC 8-K filing by Apple",
+      "filing_type": "8-K",
+      "relevance": 1.0
+    }
+  ],
+  "upcoming_earnings": []
+}

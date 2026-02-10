@@ -1,0 +1,108 @@
+{
+  "sources": [
+    {
+      "id": "jiqizhixin_main",
+      "name": "机器之心",
+      "url": "https://www.jiqizhixin.com",
+      "type": "rss",
+      "rss_url": "https://www.jiqizhixin.com/rss",
+      "enabled": true,
+      "categories": ["llm_domestic", "ai_research", "industry_trends"],
+      "language": "zh-CN",
+      "credibility_score": 9,
+      "relevance_weight": 10,
+      "focus_tags": ["大模型", "AI研究", "技术前沿", "深度学习"]
+    },
+    {
+      "id": "qbitai",
+      "name": "量子位",
+      "url": "https://www.qbitai.com",
+      "type": "rss",
+      "rss_url": "https://www.qbitai.com/feed",
+      "enabled": true,
+      "categories": ["llm_domestic", "ai_chips", "industry_trends"],
+      "language": "zh-CN",
+      "credibility_score": 8,
+      "relevance_weight": 10,
+      "focus_tags": ["国内AI", "大模型", "芯片", "产业动态"]
+    },
+    {
+      "id": "36kr_ai",
+      "name": "36氪 AI频道",
+      "url": "https://36kr.com/information/AI",
+      "type": "web",
+      "enabled": true,
+      "categories": ["industry_trends", "ai_investment", "llm_domestic"],
+      "language": "zh-CN",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": ["AI创业", "融资", "产品发布", "行业分析"]
+    },
+    {
+      "id": "xinzhiyuan",
+      "name": "新智元",
+      "url": "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI3MTA0MTk1MA==",
+      "type": "web",
+      "enabled": true,
+      "categories": ["llm_domestic", "ai_research", "ai_regulation"],
+      "language": "zh-CN",
+      "credibility_score": 8,
+      "relevance_weight": 9,
+      "focus_tags": ["AGI", "大模型", "技术突破", "国际动态"]
+    },
+    {
+      "id": "leiphone_ai",
+      "name": "雷锋网 AI",
+      "url": "https://www.leiphone.com/category/ai",
+      "type": "rss",
+      "rss_url": "https://www.leiphone.com/category/ai/feed",
+      "enabled": true,
+      "categories": ["industry_trends", "llm_domestic", "ai_chips"],
+      "language": "zh-CN",
+      "credibility_score": 8,
+      "relevance_weight": 8,
+      "focus_tags": ["AI产品", "技术应用", "行业报道"]
+    },
+    {
+      "id": "aikeji_review",
+      "name": "AI科技评论",
+      "url": "https://www.leiphone.com/category/academic",
+      "type": "web",
+      "enabled": true,
+      "categories": ["ai_research", "llm_domestic", "industry_trends"],
+      "language": "zh-CN",
+      "credibility_score": 7,
+      "relevance_weight": 8,
+      "focus_tags": ["学术", "研究进展", "技术分析"]
+    },
+    {
+      "id": "paperweekly",
+      "name": "PaperWeekly",
+      "url": "https://www.paperweekly.site",
+      "type": "web",
+      "enabled": true,
+      "categories": ["ai_research", "llm_domestic"],
+      "language": "zh-CN",
+      "credibility_score": 9,
+      "relevance_weight": 8,
+      "focus_tags": ["论文解读", "学术前沿", "深度学习", "NLP"]
+    },
+    {
+      "id": "baai_hub",
+      "name": "智源社区",
+      "url": "https://hub.baai.ac.cn",
+      "type": "web",
+      "enabled": true,
+      "categories": ["ai_research", "llm_domestic", "ai_regulation"],
+      "language": "zh-CN",
+      "credibility_score": 9,
+      "relevance_weight": 9,
+      "focus_tags": ["智源", "国产模型", "开源", "研究院"]
+    }
+  ],
+  "weighting_config": {
+    "enabled": true,
+    "credibility_weight": 0.4,
+    "relevance_weight": 0.6
+  }
+}

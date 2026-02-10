@@ -1,10 +1,51 @@
 {
   "providers": [
     {
-      "id": "kimi",
-      "name": "Kimi/Moonshot AI",
-      "api_url": "https://api.moonshot.cn/v1",
+      "id": "perplexity",
+      "name": "Perplexity Sonar",
+      "api_url": "https://api.perplexity.ai",
+      "type": "research",
+      "api_key_env": "PERPLEXITY_API_KEY",
+      "models": {
+        "default": "sonar",
+        "available": ["sonar", "sonar-pro", "sonar-deep-research"]
+      },
+      "rate_limits": {
+        "rpm": 20,
+        "requests_per_minute": 20
+      },
+      "priority": 0,
+      "enabled": true,
+      "notes": "Search-grounded research - use sparingly ($5 budget)",
+      "pricing_per_million": {
+        "sonar": {"input": 1, "output": 1, "search_request": 5},
+        "sonar-pro": {"input": 3, "output": 15, "search_request": 5}
+      }
+    },
+    {
+      "id": "kimi25",
+      "name": "Kimi 2.5",
+      "api_url": "https://api.kimi.com/coding/v1",
       "type": "primary",
+      "api_key_env": "KIMI25_API_KEY",
+      "api_format": "anthropic",
+      "models": {
+        "default": "kimi-2.5",
+        "available": ["kimi-2.5"]
+      },
+      "rate_limits": {
+        "rpm": 30,
+        "requests_per_minute": 30
+      },
+      "priority": 1,
+      "enabled": true,
+      "notes": "PRIMARY — Kimi 2.5 via Claude-compatible API. Best quality. Use for complex tasks: trend analysis, narrative generation, entity extraction, article evaluation."
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi/Moonshot AI (Legacy)",
+      "api_url": "https://api.moonshot.cn/v1",
+      "type": "fallback",
       "api_key_env": "MOONSHOT_API_KEY",
       "models": {
         "default": "moonshot-v1-8k",
@@ -14,9 +55,9 @@
         "rpm": 3,
         "requests_per_minute": 3
       },
-      "priority": 1,
-      "enabled": true,
-      "notes": "Primary provider - highest quality"
+      "priority": 5,
+      "enabled": false,
+      "notes": "DISABLED — old account suspended (no balance). Kept for reference."
     },
     {
       "id": "openrouter",
@@ -33,72 +74,30 @@
       "notes": "Fallback provider - 50+ free models available",
       "tiers": {
         "tier1_quality": {
-          "description": "Best quality - use for critical tasks (reasoning & large models)",
+          "description": "Best quality - reasoning models (VERIFIED WORKING)",
           "models": [
-            "deepseek/deepseek-r1:free",
-            "deepseek/deepseek-r1-0528:free",
-            "deepseek/deepseek-r1-0528-qwen3-8b:free",
-            "deepseek/deepseek-chat-v3-0324:free",
-            "deepseek/deepseek-chat-v3.1:free",
-            "deepseek/deepseek-r1-distill-llama-70b:free",
-            "deepseek/deepseek-r1t-chimera:free",
+            "tngtech/deepseek-r1t-chimera:free",
             "tngtech/deepseek-r1t2-chimera:free",
-            "qwen/qwen3-235b-a22b:free",
-            "qwen/qwen3-30b-a3b:free",
-            "qwen/qwen3-14b:free",
-            "google/gemini-2.0-flash-exp:free",
-            "meta-llama/llama-4-maverick:free",
-            "meta-llama/llama-4-scout:free",
-            "meta-llama/llama-3.3-70b-instruct:free",
-            "mistralai/mistral-small-3.2-24b-instruct:free",
-            "google/gemma-3-27b-it:free",
-            "google/gemma-3-12b-it:free",
-            "moonshotai/kimi-k2:free",
-            "z-ai/glm-4.5-air:free"
+            "arcee-ai/trinity-large-preview:free",
+            "deepseek/deepseek-r1-0528:free"
           ]
         },
         "tier2_balanced": {
-          "description": "Good quality and reasonable speed (balanced models)",
+          "description": "Good quality and reasonable speed (VERIFIED WORKING)",
           "models": [
-            "qwen/qwen3-8b:free",
-            "google/gemma-3-4b-it:free",
-            "google/gemma-3n-e4b-it:free",
-            "google/gemma-3n-e2b-it:free",
-            "mistralai/mistral-small-3.1-24b-instruct:free",
-            "mistralai/mistral-small-24b-instruct-2501:free",
-            "mistralai/devstral-small-2505:free",
-            "google/gemma-2-9b-it:free",
-            "meta-llama/llama-3.2-3b-instruct:free",
-            "meta-llama/llama-3.1-8b-instruct:free",
-            "meta-llama/llama-3.3-8b-instruct:free",
-            "qwen/qwen-2.5-72b-instruct:free",
-            "qwen/qwen-2.5-coder-32b-instruct:free",
-            "qwen/qwen2.5-vl-32b-instruct:free",
-            "qwen/qwen2.5-vl-72b-instruct:free",
-            "qwen/qwen3-coder:free",
-            "mistralai/mistral-nemo:free",
-            "mistralai/mistral-7b-instruct:free",
-            "tencent/hunyuan-a13b-instruct:free",
-            "nousresearch/deephermes-3-llama-3-8b-preview:free",
-            "cognitivecomputations/dolphin3.0-mistral-24b:free"
+            "nvidia/nemotron-3-nano-30b-a3b:free",
+            "z-ai/glm-4.5-air:free",
+            "upstage/solar-pro-3:free",
+            "google/gemma-3-12b-it:free"
           ]
         },
         "tier3_fast": {
-          "description": "Fast response - for collection and non-critical tasks",
+          "description": "Fast response - for collection and non-critical tasks (VERIFIED WORKING)",
           "models": [
-            "qwen/qwen3-4b:free",
             "nvidia/nemotron-nano-9b-v2:free",
-            "alibaba/tongyi-deepresearch-30b-a3b:free",
-            "meituan/longcat-flash-chat:free",
-            "openai/gpt-oss-20b:free",
-            "moonshotai/kimi-dev-72b:free",
-            "microsoft/mai-ds-r1:free",
-            "shisa-ai/shisa-v2-llama3.3-70b:free",
-            "arliai/qwq-32b-arliai-rpr-v1:free",
-            "agentica-org/deepcoder-14b-preview:free",
-            "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
-            "nousresearch/deephermes-3-llama-3-8b-preview:free",
-            "google/gemma-3n-e4b-it:free"
+            "google/gemma-3-4b-it:free",
+            "google/gemma-3n-e4b-it:free",
+            "arcee-ai/trinity-mini:free"
           ]
         }
       }
@@ -128,15 +127,25 @@
     "fallback_emergency": {
       "preferred_tier": "tier3_fast",
       "reason": "Last resort when all quality providers rate-limited"
+    },
+    "deep_research": {
+      "preferred_provider": "perplexity",
+      "preferred_model": "sonar",
+      "reason": "Search-grounded responses with citations for company/topic research"
+    },
+    "company_research": {
+      "preferred_provider": "perplexity",
+      "preferred_model": "sonar",
+      "reason": "Real-time web search for company details and news"
     }
   },
   "fallback_strategy": {
     "description": "Provider switching strategy when rate limits are hit",
     "order": [
-      "kimi",
       "openrouter.tier1_quality",
       "openrouter.tier2_balanced",
-      "openrouter.tier3_fast"
+      "openrouter.tier3_fast",
+      "kimi"
     ],
     "on_rate_limit": "switch_to_next_provider",
     "max_retries_per_provider": 3,

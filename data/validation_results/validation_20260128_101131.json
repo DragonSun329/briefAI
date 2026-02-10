@@ -1,0 +1,226 @@
+{
+  "generated_at": "2026-01-28T10:11:31.864922",
+  "total_entities": 2,
+  "summary": {
+    "average_validation_score": 0.71,
+    "direction_aligned_pct": 100.0,
+    "technical_confirmed_pct": 50.0
+  },
+  "grade_distribution": {
+    "A": 1,
+    "B": 0,
+    "C": 1,
+    "D": 0,
+    "F": 0
+  },
+  "top_validated": [
+    {
+      "entity_id": "META",
+      "ticker": "META",
+      "timestamp": "2026-01-28T10:11:25.355176",
+      "briefai_signal": {
+        "sentiment": 9.47,
+        "momentum": "bullish",
+        "confidence": 0.659
+      },
+      "market_reality": {
+        "current_price": 672.969970703125,
+        "price_change_1d": "0.09%",
+        "price_change_5d": "11.40%",
+        "price_change_20d": "1.46%"
+      },
+      "technicals": {
+        "rsi_14": 54.12,
+        "macd_histogram": null,
+        "bollinger_position": null,
+        "sma_20_distance": "4.33%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.83,
+        "grade": "A",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move",
+          "Technical confirmation (2/2)"
+        ]
+      }
+    },
+    {
+      "entity_id": "AMD",
+      "ticker": "AMD",
+      "timestamp": "2026-01-28T10:11:31.864846",
+      "briefai_signal": {
+        "sentiment": 9.53,
+        "momentum": "bullish",
+        "confidence": 0.687
+      },
+      "market_reality": {
+        "current_price": 252.02999877929688,
+        "price_change_1d": "0.29%",
+        "price_change_5d": "8.67%",
+        "price_change_20d": "17.23%"
+      },
+      "technicals": {
+        "rsi_14": 74.54,
+        "macd_histogram": null,
+        "bollinger_position": null,
+        "sma_20_distance": "11.21%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": false,
+        "score": 0.59,
+        "grade": "C",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move",
+          "RSI overbought (74.5)"
+        ]
+      }
+    }
+  ],
+  "lowest_validated": [
+    {
+      "entity_id": "AMD",
+      "ticker": "AMD",
+      "timestamp": "2026-01-28T10:11:31.864846",
+      "briefai_signal": {
+        "sentiment": 9.53,
+        "momentum": "bullish",
+        "confidence": 0.687
+      },
+      "market_reality": {
+        "current_price": 252.02999877929688,
+        "price_change_1d": "0.29%",
+        "price_change_5d": "8.67%",
+        "price_change_20d": "17.23%"
+      },
+      "technicals": {
+        "rsi_14": 74.54,
+        "macd_histogram": null,
+        "bollinger_position": null,
+        "sma_20_distance": "11.21%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": false,
+        "score": 0.59,
+        "grade": "C",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move",
+          "RSI overbought (74.5)"
+        ]
+      }
+    },
+    {
+      "entity_id": "META",
+      "ticker": "META",
+      "timestamp": "2026-01-28T10:11:25.355176",
+      "briefai_signal": {
+        "sentiment": 9.47,
+        "momentum": "bullish",
+        "confidence": 0.659
+      },
+      "market_reality": {
+        "current_price": 672.969970703125,
+        "price_change_1d": "0.09%",
+        "price_change_5d": "11.40%",
+        "price_change_20d": "1.46%"
+      },
+      "technicals": {
+        "rsi_14": 54.12,
+        "macd_histogram": null,
+        "bollinger_position": null,
+        "sma_20_distance": "4.33%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.83,
+        "grade": "A",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move",
+          "Technical confirmation (2/2)"
+        ]
+      }
+    }
+  ],
+  "all_results": [
+    {
+      "entity_id": "META",
+      "ticker": "META",
+      "timestamp": "2026-01-28T10:11:25.355176",
+      "briefai_signal": {
+        "sentiment": 9.47,
+        "momentum": "bullish",
+        "confidence": 0.659
+      },
+      "market_reality": {
+        "current_price": 672.969970703125,
+        "price_change_1d": "0.09%",
+        "price_change_5d": "11.40%",
+        "price_change_20d": "1.46%"
+      },
+      "technicals": {
+        "rsi_14": 54.12,
+        "macd_histogram": null,
+        "bollinger_position": null,
+        "sma_20_distance": "4.33%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.83,
+        "grade": "A",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move",
+          "Technical confirmation (2/2)"
+        ]
+      }
+    },
+    {
+      "entity_id": "AMD",
+      "ticker": "AMD",
+      "timestamp": "2026-01-28T10:11:31.864846",
+      "briefai_signal": {
+        "sentiment": 9.53,
+        "momentum": "bullish",
+        "confidence": 0.687
+      },
+      "market_reality": {
+        "current_price": 252.02999877929688,
+        "price_change_1d": "0.29%",
+        "price_change_5d": "8.67%",
+        "price_change_20d": "17.23%"
+      },
+      "technicals": {
+        "rsi_14": 74.54,
+        "macd_histogram": null,
+        "bollinger_position": null,
+        "sma_20_distance": "11.21%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": false,
+        "score": 0.59,
+        "grade": "C",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move",
+          "RSI overbought (74.5)"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1309 @@
+{
+  "source": "paperswithcode",
+  "scraped_at": "2026-02-05T10:09:05.001343",
+  "total_papers": 50,
+  "papers": [
+    {
+      "id": "2602.01785",
+      "title": "CodeOCR: On the Effectiveness of Vision Language Models in Code Understanding",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable success in source code understanding, yet as software systems grow in scale, computational efficiency has become a critical bottleneck. Currently, these models rely on a text-based paradigm that treats source code as a linear sequence of tokens, which leads to a linear increase in context length and associated computational costs. The rapid advancement of Multimodal LLMs (MLLMs) introduces an opportunity to optimize efficiency by representing",
+      "url_abs": "https://arxiv.org/abs/2602.01785",
+      "url_pdf": "https://arxiv.org/pdf/2602.01785",
+      "arxiv_id": "2602.01785",
+      "github_stars": 81,
+      "published": "2026-02-02T08:10:21.000Z",
+      "authors": [
+        "Yuling Shi",
+        "Chaoxiang Xie",
+        "Zhensu Sun",
+        "Yeheng Chen",
+        "Chenxu Zhang",
+        "Longfei Yun",
+        "Chengcheng Wan",
+        "Hongyu Zhang",
+        "David Lo",
+        "Xiaodong Gu"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03786",
+      "title": "AOrchestra: Automating Sub-Agent Creation for Agentic Orchestration",
+      "abstract": "Language agents have shown strong promise for task automation. Realizing this promise for increasingly complex, long-horizon tasks has driven the rise of a sub-agent-as-tools paradigm for multi-turn task solving. However, existing designs still lack a dynamic abstraction view of sub-agents, thereby hurting adaptability. We address this challenge with a unified, framework-agnostic agent abstraction that models any agent as a tuple Instruction, Context, Tools, Model. This tuple acts as a compositi",
+      "url_abs": "https://arxiv.org/abs/2602.03786",
+      "url_pdf": "https://arxiv.org/pdf/2602.03786",
+      "arxiv_id": "2602.03786",
+      "github_stars": 67,
+      "published": "2026-02-03T17:46:16.000Z",
+      "authors": [
+        "Jianhao Ruan",
+        "Zhihao Xu",
+        "Yiran Peng",
+        "Fashen Ren",
+        "Zhaoyang Yu",
+        "Xinbing Liang",
+        "Jinyu Xiang",
+        "Bang Liu",
+        "Chenglin Wu",
+        "Yuyu Luo",
+        "Jiayi Zhang"
+      ],
+      "tasks": [],
+      "bucket": "ai-agents"
+    },
+    {
+      "id": "2602.02103",
+      "title": "No Global Plan in Chain-of-Thought: Uncover the Latent Planning Horizon of LLMs",
+      "abstract": "This work stems from prior complementary observations on the dynamics of Chain-of-Thought (CoT): Large Language Models (LLMs) is shown latent planning of subsequent reasoning prior to CoT emergence, thereby diminishing the significance of explicit CoT; whereas CoT remains critical for tasks requiring multi-step reasoning. To deepen the understanding between LLM's internal states and its verbalized reasoning trajectories, we investigate the latent planning strength of LLMs, through our probing me",
+      "url_abs": "https://arxiv.org/abs/2602.02103",
+      "url_pdf": "https://arxiv.org/pdf/2602.02103",
+      "arxiv_id": "2602.02103",
+      "github_stars": 57,
+      "published": "2026-02-02T13:46:56.000Z",
+      "authors": [
+        "Liyan Xu",
+        "Mo Yu",
+        "Fandong Meng",
+        "Jie Zhou"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.02660",
+      "title": "MARS: Modular Agent with Reflective Search for Automated AI Research",
+      "abstract": "Automating AI research differs from general software engineering due to computationally expensive evaluation (e.g., model training) and opaque performance attribution. Current LLM-based agents struggle here, often generating monolithic scripts that ignore execution costs and causal factors. We introduce MARS (Modular Agent with Reflective Search), a framework optimized for autonomous AI research. MARS relies on three pillars: (1) Budget-Aware Planning via cost-constrained Monte Carlo Tree Search",
+      "url_abs": "https://arxiv.org/abs/2602.02660",
+      "url_pdf": "https://arxiv.org/pdf/2602.02660",
+      "arxiv_id": "2602.02660",
+      "github_stars": 47,
+      "published": "2026-02-02T19:00:03.000Z",
+      "authors": [
+        "Jiefeng Chen",
+        "Bhavana Dalvi Mishra",
+        "Jaehyun Nam",
+        "Rui Meng",
+        "Tomas Pfister",
+        "Jinsung Yoon"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03796",
+      "title": "3D-Aware Implicit Motion Control for View-Adaptive Human Video Generation",
+      "abstract": "Existing methods for human motion control in video generation typically rely on either 2D poses or explicit 3D parametric models (e.g., SMPL) as control signals. However, 2D poses rigidly bind motion to the driving viewpoint, precluding novel-view synthesis. Explicit 3D models, though structurally informative, suffer from inherent inaccuracies (e.g., depth ambiguity and inaccurate dynamics) which, when used as a strong constraint, override the powerful intrinsic 3D awareness of large-scale video",
+      "url_abs": "https://arxiv.org/abs/2602.03796",
+      "url_pdf": "https://arxiv.org/pdf/2602.03796",
+      "arxiv_id": "2602.03796",
+      "github_stars": 45,
+      "published": "2026-02-03T17:59:09.000Z",
+      "authors": [
+        "Zhixue Fang",
+        "Xu He",
+        "Songlin Tang",
+        "Haoxian Zhang",
+        "Qingfeng Li",
+        "Xiaoqiang Liu",
+        "Pengfei Wan",
+        "Kun Gai"
+      ],
+      "tasks": [],
+      "bucket": "ai-coding"
+    },
+    {
+      "id": "2602.02619",
+      "title": "daVinci-Agency: Unlocking Long-Horizon Agency Data-Efficiently",
+      "abstract": "While Large Language Models (LLMs) excel at short-term tasks, scaling them to long-horizon agentic workflows remains challenging. The core bottleneck lies in the scarcity of training data that captures authentic long-dependency structures and cross-stage evolutionary dynamics--existing synthesis methods either confine to single-feature scenarios constrained by model distribution, or incur prohibitive human annotation costs, failing to provide scalable, high-quality supervision. We address this b",
+      "url_abs": "https://arxiv.org/abs/2602.02619",
+      "url_pdf": "https://arxiv.org/pdf/2602.02619",
+      "arxiv_id": "2602.02619",
+      "github_stars": 43,
+      "published": "2026-02-02T13:23:39.000Z",
+      "authors": [
+        "Mohan Jiang",
+        "Dayuan Fu",
+        "Junhao Shi",
+        "Ji Zeng",
+        "Weiye Si",
+        "Keyu Li",
+        "Xuefeng Li",
+        "Yang Xiao",
+        "Wenjie Li",
+        "Dequan Wang",
+        "Pengfei Liu"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.01630",
+      "title": "Research on World Models Is Not Merely Injecting World Knowledge into Specific Tasks",
+      "abstract": "World models have emerged as a critical frontier in AI research, aiming to enhance large models by infusing them with physical dynamics and world knowledge. The core objective is to enable agents to understand, predict, and interact with complex environments. However, current research landscape remains fragmented, with approaches predominantly focused on injecting world knowledge into isolated tasks, such as visual prediction, 3D estimation, or symbol grounding, rather than establishing a unifie",
+      "url_abs": "https://arxiv.org/abs/2602.01630",
+      "url_pdf": "https://arxiv.org/pdf/2602.01630",
+      "arxiv_id": "2602.01630",
+      "github_stars": 42,
+      "published": "2026-02-02T04:42:44.000Z",
+      "authors": [
+        "Bohan Zeng",
+        "Kaixin Zhu",
+        "Daili Hua",
+        "Bozhou Li",
+        "Chengzhuo Tong",
+        "Yuran Wang",
+        "Xinyi Huang",
+        "Yifan Dai",
+        "Zixiang Zhang",
+        "Yifan Yang",
+        "Zhou Liu",
+        "Hao Liang",
+        "Xiaochen Ma",
+        "Ruichuan An",
+        "Tianyi Bai",
+        "Hongcheng Gao",
+        "Junbo Niu",
+        "Yang Shi",
+        "Xinlong Chen",
+        "Yue Ding",
+        "Minglei Shi",
+        "Kai Zeng",
+        "Yiwen Tang",
+        "Yuanxing Zhang",
+        "Pengfei Wan",
+        "Xintao Wang",
+        "Wentao Zhang"
+      ],
+      "tasks": [],
+      "bucket": "ai-agents"
+    },
+    {
+      "id": "2602.03048",
+      "title": "CoBA-RL: Capability-Oriented Budget Allocation for Reinforcement Learning in LLMs",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has emerged as a key approach for enhancing LLM reasoning.However, standard frameworks like Group Relative Policy Optimization (GRPO) typically employ a uniform rollout budget, leading to resource inefficiency. Moreover, existing adaptive methods often rely on instance-level metrics, such as task pass rates, failing to capture the model's dynamic learning state. To address these limitations, we propose CoBA-RL, a reinforcement learning algori",
+      "url_abs": "https://arxiv.org/abs/2602.03048",
+      "url_pdf": "https://arxiv.org/pdf/2602.03048",
+      "arxiv_id": "2602.03048",
+      "github_stars": 33,
+      "published": "2026-02-03T03:14:36.000Z",
+      "authors": [
+        "Zhiyuan Yao",
+        "Yi-Kai Zhang",
+        "Yuxin Chen",
+        "Yueqing Sun",
+        "Zishan Xu",
+        "Yu Yang",
+        "Tianhao Hu",
+        "Qi Gu",
+        "Hui Su",
+        "Xunliang Cai"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03139",
+      "title": "Diversity-Preserved Distribution Matching Distillation for Fast Visual Synthesis",
+      "abstract": "Distribution matching distillation (DMD) aligns a multi-step generator with its few-step counterpart to enable high-quality generation under low inference cost. However, DMD tends to suffer from mode collapse, as its reverse-KL formulation inherently encourages mode-seeking behavior, for which existing remedies typically rely on perceptual or adversarial regularization, thereby incurring substantial computational overhead and training instability. In this work, we propose a role-separated distil",
+      "url_abs": "https://arxiv.org/abs/2602.03139",
+      "url_pdf": "https://arxiv.org/pdf/2602.03139",
+      "arxiv_id": "2602.03139",
+      "github_stars": 31,
+      "published": "2026-02-03T05:45:25.000Z",
+      "authors": [
+        "Tianhe Wu",
+        "Ruibin Li",
+        "Lei Zhang",
+        "Kede Ma"
+      ],
+      "tasks": [],
+      "bucket": "ai-image-generation"
+    },
+    {
+      "id": "2602.03419",
+      "title": "SWE-World: Building Software Engineering Agents in Docker-Free Environments",
+      "abstract": "Recent advances in large language models (LLMs) have enabled software engineering agents to tackle complex code modification tasks. Most existing approaches rely on execution feedback from containerized environments, which require dependency-complete setup and physical execution of programs and tests. While effective, this paradigm is resource-intensive and difficult to maintain, substantially complicating agent training and limiting scalability. We propose SWE-World, a Docker-free framework tha",
+      "url_abs": "https://arxiv.org/abs/2602.03419",
+      "url_pdf": "https://arxiv.org/pdf/2602.03419",
+      "arxiv_id": "2602.03419",
+      "github_stars": 30,
+      "published": "2026-02-03T11:44:39.000Z",
+      "authors": [
+        "Shuang Sun",
+        "Huatong Song",
+        "Lisheng Huang",
+        "Jinhao Jiang",
+        "Ran Le",
+        "Zhihao Lv",
+        "Zongchao Chen",
+        "Yiwen Hu",
+        "Wenyang Luo",
+        "Wayne Xin Zhao",
+        "Yang Song",
+        "Hongteng Xu",
+        "Tao Zhang",
+        "Ji-Rong Wen"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03411",
+      "title": "SWE-Master: Unleashing the Potential of Software Engineering Agents via Post-Training",
+      "abstract": "In this technical report, we present SWE-Master, an open-source and fully reproducible post-training framework for building effective software engineering agents. SWE-Master systematically explores the complete agent development pipeline, including teacher-trajectory synthesis and data curation, long-horizon SFT, RL with real execution feedback, and inference framework design. Starting from an open-source base model with limited initial SWE capability, SWE-Master demonstrates how systematical op",
+      "url_abs": "https://arxiv.org/abs/2602.03411",
+      "url_pdf": "https://arxiv.org/pdf/2602.03411",
+      "arxiv_id": "2602.03411",
+      "github_stars": 28,
+      "published": "2026-02-03T11:38:48.000Z",
+      "authors": [
+        "Huatong Song",
+        "Lisheng Huang",
+        "Shuang Sun",
+        "Jinhao Jiang",
+        "Ran Le",
+        "Daixuan Cheng",
+        "Guoxin Chen",
+        "Yiwen Hu",
+        "Zongchao Chen",
+        "Wayne Xin Zhao",
+        "Yang Song",
+        "Tao Zhang",
+        "Ji-Rong Wen"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03845",
+      "title": "Parallel-Probe: Towards Efficient Parallel Thinking via 2D Probing",
+      "abstract": "Parallel thinking has emerged as a promising paradigm for reasoning, yet it imposes significant computational burdens. Existing efficiency methods primarily rely on local, per-trajectory signals and lack principled mechanisms to exploit global dynamics across parallel branches. We introduce 2D probing, an interface that exposes the width-depth dynamics of parallel thinking by periodically eliciting intermediate answers from all branches. Our analysis reveals three key insights: non-monotonic sca",
+      "url_abs": "https://arxiv.org/abs/2602.03845",
+      "url_pdf": "https://arxiv.org/pdf/2602.03845",
+      "arxiv_id": "2602.03845",
+      "github_stars": 21,
+      "published": "2026-02-03T18:59:41.000Z",
+      "authors": [
+        "Tong Zheng",
+        "Chengsong Huang",
+        "Runpeng Dai",
+        "Yun He",
+        "Rui Liu",
+        "Xin Ni",
+        "Huiwen Bao",
+        "Kaishen Wang",
+        "Hongtu Zhu",
+        "Jiaxin Huang",
+        "Furong Huang",
+        "Heng Huang"
+      ],
+      "tasks": [],
+      "bucket": "ai-agents"
+    },
+    {
+      "id": "2602.03619",
+      "title": "Learning Query-Specific Rubrics from Human Preferences for DeepResearch Report Generation",
+      "abstract": "Nowadays, training and evaluating DeepResearch-generated reports remain challenging due to the lack of verifiable reward signals. Accordingly, rubric-based evaluation has become a common practice. However, existing approaches either rely on coarse, pre-defined rubrics that lack sufficient granularity, or depend on manually constructed query-specific rubrics that are costly and difficult to scale. In this paper, we propose a pipeline to train human-preference-aligned query-specific rubric generat",
+      "url_abs": "https://arxiv.org/abs/2602.03619",
+      "url_pdf": "https://arxiv.org/pdf/2602.03619",
+      "arxiv_id": "2602.03619",
+      "github_stars": 21,
+      "published": "2026-02-03T15:09:56.000Z",
+      "authors": [
+        "Changze Lv",
+        "Jie Zhou",
+        "Wentao Zhao",
+        "Jingwen Xu",
+        "Zisu Huang",
+        "Muzhao Tian",
+        "Shihan Dou",
+        "Tao Gui",
+        "Le Tian",
+        "Xiao Zhou",
+        "Xiaoqing Zheng",
+        "Xuanjing Huang",
+        "Jie Zhou"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.02444",
+      "title": "RANKVIDEO: Reasoning Reranking for Text-to-Video Retrieval",
+      "abstract": "Reranking is a critical component of modern retrieval systems, which typically pair an efficient first-stage retriever with a more expressive model to refine results. While large reasoning models have driven rapid progress in text-centric reranking, reasoning-based reranking for video retrieval remains underexplored. To address this gap, we introduce RANKVIDEO, a reasoning-based reranker for video retrieval that explicitly reasons over query-video pairs using video content to assess relevance. R",
+      "url_abs": "https://arxiv.org/abs/2602.02444",
+      "url_pdf": "https://arxiv.org/pdf/2602.02444",
+      "arxiv_id": "2602.02444",
+      "github_stars": 17,
+      "published": "2026-02-02T18:40:37.000Z",
+      "authors": [
+        "Tyler Skow",
+        "Alexander Martin",
+        "Benjamin Van Durme",
+        "Rama Chellappa",
+        "Reno Kriz"
+      ],
+      "tasks": [],
+      "bucket": "open-source-ai"
+    },
+    {
+      "id": "2602.03086",
+      "title": "Neural Predictor-Corrector: Solving Homotopy Problems with Reinforcement Learning",
+      "abstract": "The Homotopy paradigm, a general principle for solving challenging problems, appears across diverse domains such as robust optimization, global optimization, polynomial root-finding, and sampling. Practical solvers for these problems typically follow a predictor-corrector (PC) structure, but rely on hand-crafted heuristics for step sizes and iteration termination, which are often suboptimal and task-specific. To address this, we unify these problems under a single framework, which enables the de",
+      "url_abs": "https://arxiv.org/abs/2602.03086",
+      "url_pdf": "https://arxiv.org/pdf/2602.03086",
+      "arxiv_id": "2602.03086",
+      "github_stars": 12,
+      "published": "2026-02-03T04:19:48.000Z",
+      "authors": [
+        "Jiayao Mai",
+        "Bangyan Liao",
+        "Zhenjun Zhao",
+        "Yingping Zeng",
+        "Haoang Li",
+        "Javier Civera",
+        "Tailin Wu",
+        "Yi Zhou",
+        "Peidong Liu"
+      ],
+      "tasks": [],
+      "bucket": "ai-research"
+    },
+    {
+      "id": "2602.01362",
+      "title": "Balancing Understanding and Generation in Discrete Diffusion Models",
+      "abstract": "In discrete generative modeling, two dominant paradigms demonstrate divergent capabilities: Masked Diffusion Language Models (MDLM) excel at semantic understanding and zero-shot generalization, whereas Uniform-noise Diffusion Language Models (UDLM) achieve strong few-step generation quality, yet neither attains balanced performance across both dimensions. To address this, we propose XDLM, which bridges the two paradigms via a stationary noise kernel. XDLM offers two key contributions: (1) it pro",
+      "url_abs": "https://arxiv.org/abs/2602.01362",
+      "url_pdf": "https://arxiv.org/pdf/2602.01362",
+      "arxiv_id": "2602.01362",
+      "github_stars": 12,
+      "published": "2026-02-01T18:00:35.000Z",
+      "authors": [
+        "Yue Liu",
+        "Yuzhong Zhao",
+        "Zheyong Xie",
+        "Qixiang Ye",
+        "Jianbin Jiao",
+        "Yao Hu",
+        "Shaosheng Cao",
+        "Yunfan Liu"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.02636",
+      "title": "WideSeek: Advancing Wide Research via Multi-Agent Scaling",
+      "abstract": "Search intelligence is evolving from Deep Research to Wide Research, a paradigm essential for retrieving and synthesizing comprehensive information under complex constraints in parallel. However, progress in this field is impeded by the lack of dedicated benchmarks and optimization methodologies for search breadth. To address these challenges, we take a deep dive into Wide Research from two perspectives: Data Pipeline and Agent Optimization. First, we produce WideSeekBench, a General Broad Infor",
+      "url_abs": "https://arxiv.org/abs/2602.02636",
+      "url_pdf": "https://arxiv.org/pdf/2602.02636",
+      "arxiv_id": "2602.02636",
+      "github_stars": 12,
+      "published": "2026-02-02T18:32:48.000Z",
+      "authors": [
+        "Ziyang Huang",
+        "Haolin Ren",
+        "Xiaowei Yuan",
+        "Jiawei Wang",
+        "Zhongtao Jiang",
+        "Kun Xu",
+        "Shizhu He",
+        "Jun Zhao",
+        "Kang Liu"
+      ],
+      "tasks": [],
+      "bucket": "ai-agents"
+    },
+    {
+      "id": "2601.21244",
+      "title": "Less Noise, More Voice: Reinforcement Learning for Reasoning via Instruction Purification",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has advanced LLM reasoning, but remains constrained by inefficient exploration under limited rollout budgets, leading to low sampling success and unstable training in complex tasks. We find that many exploration failures arise not from problem difficulty, but from a small number of prompt tokens that introduce interference. Building on this insight, we propose the Less Noise Sampling Framework (LENS), which first prompts by identifying and re",
+      "url_abs": "https://arxiv.org/abs/2601.21244",
+      "url_pdf": "https://arxiv.org/pdf/2601.21244",
+      "arxiv_id": "2601.21244",
+      "github_stars": 12,
+      "published": "2026-01-29T04:08:24.000Z",
+      "authors": [
+        "Yiju Guo",
+        "Tianyi Hu",
+        "Zexu Sun",
+        "Yankai Lin"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03216",
+      "title": "Token Sparse Attention: Efficient Long-Context Inference with Interleaved Token Selection",
+      "abstract": "The quadratic complexity of attention remains the central bottleneck in long-context inference for large language models. Prior acceleration methods either sparsify the attention map with structured patterns or permanently evict tokens at specific layers, which can retain irrelevant tokens or rely on irreversible early decisions despite the layer-/head-wise dynamics of token importance. In this paper, we propose Token Sparse Attention, a lightweight and dynamic token-level sparsification mechani",
+      "url_abs": "https://arxiv.org/abs/2602.03216",
+      "url_pdf": "https://arxiv.org/pdf/2602.03216",
+      "arxiv_id": "2602.03216",
+      "github_stars": 10,
+      "published": "2026-02-03T07:31:14.000Z",
+      "authors": [
+        "Dongwon Jo",
+        "Beomseok Kang",
+        "Jiwon Song",
+        "Jae-Joon Kim"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03798",
+      "title": "FullStack-Agent: Enhancing Agentic Full-Stack Web Coding via Development-Oriented Testing and Repository Back-Translation",
+      "abstract": "Assisting non-expert users to develop complex interactive websites has become a popular task for LLM-powered code agents. However, existing code agents tend to only generate frontend web pages, masking the lack of real full-stack data processing and storage with fancy visual effects. Notably, constructing production-level full-stack web applications is far more challenging than only generating frontend web pages, demanding careful control of data flow, comprehensive understanding of constantly u",
+      "url_abs": "https://arxiv.org/abs/2602.03798",
+      "url_pdf": "https://arxiv.org/pdf/2602.03798",
+      "arxiv_id": "2602.03798",
+      "github_stars": 9,
+      "published": "2026-02-03T18:01:34.000Z",
+      "authors": [
+        "Zimu Lu",
+        "Houxing Ren",
+        "Yunqiao Yang",
+        "Ke Wang",
+        "Zhuofan Zong",
+        "Mingjie Zhan",
+        "Hongsheng Li"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03747",
+      "title": "LIVE: Long-horizon Interactive Video World Modeling",
+      "abstract": "Autoregressive video world models predict future visual observations conditioned on actions. While effective over short horizons, these models often struggle with long-horizon generation, as small prediction errors accumulate over time. Prior methods alleviate this by introducing pre-trained teacher models and sequence-level distribution matching, which incur additional computational cost and fail to prevent error propagation beyond the training horizon. In this work, we propose LIVE, a Long-hor",
+      "url_abs": "https://arxiv.org/abs/2602.03747",
+      "url_pdf": "https://arxiv.org/pdf/2602.03747",
+      "arxiv_id": "2602.03747",
+      "github_stars": 8,
+      "published": "2026-02-03T17:10:03.000Z",
+      "authors": [
+        "Junchao Huang",
+        "Ziyang Ye",
+        "Xinting Hu",
+        "Tianyu He",
+        "Guiyu Zhang",
+        "Shaoshuai Shi",
+        "Jiang Bian",
+        "Li Jiang"
+      ],
+      "tasks": [],
+      "bucket": "ai-image-generation"
+    },
+    {
+      "id": "2602.03709",
+      "title": "No Shortcuts to Culture: Indonesian Multi-hop Question Answering for Complex Cultural Understanding",
+      "abstract": "Understanding culture requires reasoning across context, tradition, and implicit social knowledge, far beyond recalling isolated facts. Yet most culturally focused question answering (QA) benchmarks rely on single-hop questions, which may allow models to exploit shallow cues rather than demonstrate genuine cultural reasoning. In this work, we introduce ID-MoCQA, the first large-scale multi-hop QA dataset for assessing the cultural understanding of large language models (LLMs), grounded in Indone",
+      "url_abs": "https://arxiv.org/abs/2602.03709",
+      "url_pdf": "https://arxiv.org/pdf/2602.03709",
+      "arxiv_id": "2602.03709",
+      "github_stars": 8,
+      "published": "2026-02-03T16:32:00.000Z",
+      "authors": [
+        "Vynska Amalia Permadi",
+        "Xingwei Tan",
+        "Nafise Sadat Moosavi",
+        "Nikos Aletras"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.00747",
+      "title": "Decouple Searching from Training: Scaling Data Mixing via Model Merging for Large Language Model Pre-training",
+      "abstract": "Determining an effective data mixture is a key factor in Large Language Model (LLM) pre-training, where models must balance general competence with proficiency on hard tasks such as math and code. However, identifying an optimal mixture remains an open challenge, as existing approaches either rely on unreliable tiny-scale proxy experiments or require prohibitively expensive large-scale exploration. To address this, we propose Decouple Searching from Training Mix (DeMix), a novel framework that l",
+      "url_abs": "https://arxiv.org/abs/2602.00747",
+      "url_pdf": "https://arxiv.org/pdf/2602.00747",
+      "arxiv_id": "2602.00747",
+      "github_stars": 8,
+      "published": "2026-01-31T14:27:46.000Z",
+      "authors": [
+        "Shengrui Li",
+        "Fei Zhao",
+        "Kaiyan Zhao",
+        "Jieying Ye",
+        "Haifeng Liu",
+        "Fangcheng Shi",
+        "Zheyong Xie",
+        "Yao Hu",
+        "Shaosheng Cao"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.02676",
+      "title": "AdaptMMBench: Benchmarking Adaptive Multimodal Reasoning for Mode Selection and Reasoning Process",
+      "abstract": "Adaptive multimodal reasoning has emerged as a promising frontier in Vision-Language Models (VLMs), aiming to dynamically modulate between tool-augmented visual reasoning and text reasoning to enhance both effectiveness and efficiency. However, existing evaluations rely on static difficulty labels and simplistic metrics, which fail to capture the dynamic nature of difficulty relative to varying model capacities. Consequently, they obscure the distinction between adaptive mode selection and gener",
+      "url_abs": "https://arxiv.org/abs/2602.02676",
+      "url_pdf": "https://arxiv.org/pdf/2602.02676",
+      "arxiv_id": "2602.02676",
+      "github_stars": 8,
+      "published": "2026-02-02T19:00:27.000Z",
+      "authors": [
+        "Xintong Zhang",
+        "Xiaowen Zhang",
+        "Jongrong Wu",
+        "Zhi Gao",
+        "Shilin Yan",
+        "Zhenxin Diao",
+        "Kunpeng Gao",
+        "Xuanyan Chen",
+        "Yuwei Wu",
+        "Yunde Jia",
+        "Qing Li"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.00359",
+      "title": "Position: Agentic Evolution is the Path to Evolving LLMs",
+      "abstract": "As Large Language Models (LLMs) move from curated training sets into open-ended real-world environments, a fundamental limitation emerges: static training cannot keep pace with continual deployment environment change. Scaling training-time and inference-time compute improves static capability but does not close this train-deploy gap. We argue that addressing this limitation requires a new scaling axis-evolution. Existing deployment-time adaptation methods, whether parametric fine-tuning or heuri",
+      "url_abs": "https://arxiv.org/abs/2602.00359",
+      "url_pdf": "https://arxiv.org/pdf/2602.00359",
+      "arxiv_id": "2602.00359",
+      "github_stars": 5,
+      "published": "2026-01-30T22:15:58.000Z",
+      "authors": [
+        "Minhua Lin",
+        "Hanqing Lu",
+        "Zhan Shi",
+        "Bing He",
+        "Rui Mao",
+        "Zhiwei Zhang",
+        "Zongyu Wu",
+        "Xianfeng Tang",
+        "Hui Liu",
+        "Zhenwei Dai",
+        "Xiang Zhang",
+        "Suhang Wang",
+        "Benoit Dumoulin",
+        "Jian Pei"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03677",
+      "title": "Instruction Anchors: Dissecting the Causal Dynamics of Modality Arbitration",
+      "abstract": "Modality following serves as the capacity of multimodal large language models (MLLMs) to selectively utilize multimodal contexts based on user instructions. It is fundamental to ensuring safety and reliability in real-world deployments. However, the underlying mechanisms governing this decision-making process remain poorly understood. In this paper, we investigate its working mechanism through an information flow lens. Our findings reveal that instruction tokens function as structural anchors fo",
+      "url_abs": "https://arxiv.org/abs/2602.03677",
+      "url_pdf": "https://arxiv.org/pdf/2602.03677",
+      "arxiv_id": "2602.03677",
+      "github_stars": 5,
+      "published": "2026-02-03T15:59:24.000Z",
+      "authors": [
+        "Yu Zhang",
+        "Mufan Xu",
+        "Xuefeng Bai",
+        "Kehai chen",
+        "Pengfei Zhang",
+        "Yang Xiang",
+        "Min Zhang"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.01053",
+      "title": "LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents",
+      "abstract": "Role specialization in multi-LLM agent systems is often realized via multi-LoRA, where agents share a pretrained backbone and differ only through lightweight adapters. Despite sharing base model weights, each agent independently builds and stores its own KV cache for the same long, tool-augmented trajectories, incurring substantial memory and compute overhead. Existing KV cache sharing methods largely overlook this multi-LoRA setting. We observe that, across agents, cache differences are dominat",
+      "url_abs": "https://arxiv.org/abs/2602.01053",
+      "url_pdf": "https://arxiv.org/pdf/2602.01053",
+      "arxiv_id": "2602.01053",
+      "github_stars": 5,
+      "published": "2026-02-01T06:36:46.000Z",
+      "authors": [
+        "Hyesung Jeon",
+        "Hyeongju Ha",
+        "Jae-Joon Kim"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03647",
+      "title": "Search-R2: Enhancing Search-Integrated Reasoning via Actor-Refiner Collaboration",
+      "abstract": "Search-integrated reasoning enables language agents to transcend static parametric knowledge by actively querying external sources. However, training these agents via reinforcement learning is hindered by the multi-scale credit assignment problem: existing methods typically rely on sparse, trajectory-level rewards that fail to distinguish between high-quality reasoning and fortuitous guesses, leading to redundant or misleading search behaviors. To address this, we propose Search-R2, a novel Acto",
+      "url_abs": "https://arxiv.org/abs/2602.03647",
+      "url_pdf": "https://arxiv.org/pdf/2602.03647",
+      "arxiv_id": "2602.03647",
+      "github_stars": 5,
+      "published": "2026-02-03T15:32:09.000Z",
+      "authors": [
+        "Bowei He",
+        "Minda Hu",
+        "Zenan Xu",
+        "Hongru Wang",
+        "Licheng Zong",
+        "Yankai Chen",
+        "Chen Ma",
+        "Xue Liu",
+        "Pluto Zhou",
+        "Irwin King"
+      ],
+      "tasks": [],
+      "bucket": "ai-research"
+    },
+    {
+      "id": "2602.02537",
+      "title": "WorldVQA: Measuring Atomic World Knowledge in Multimodal Large Language Models",
+      "abstract": "We introduce WorldVQA, a benchmark designed to evaluate the atomic visual world knowledge of Multimodal Large Language Models (MLLMs). Unlike current evaluations, which often conflate visual knowledge retrieval with reasoning, WorldVQA decouples these capabilities to strictly measure \"what the model memorizes.\" The benchmark assesses the atomic capability of grounding and naming visual entities across a stratified taxonomy, spanning from common head-class objects to long-tail rarities. We expect",
+      "url_abs": "https://arxiv.org/abs/2602.02537",
+      "url_pdf": "https://arxiv.org/pdf/2602.02537",
+      "arxiv_id": "2602.02537",
+      "github_stars": 5,
+      "published": "2026-01-28T11:27:22.000Z",
+      "authors": [
+        "Runjie Zhou",
+        "Youbo Shao",
+        "Haoyu Lu",
+        "Bowei Xing",
+        "Tongtong Bai",
+        "Yujie Chen",
+        "Jie Zhao",
+        "Lin Sui",
+        "Haotian Yao",
+        "Zijia Zhao",
+        "Hao Yang",
+        "Haoning Wu",
+        "Zaida Zhou",
+        "Jinguo Zhu",
+        "Zhiqi Huang",
+        "Yiping Bao",
+        "Yangyang Liu",
+        "Y. Charles",
+        "Xinyu Zhou"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.02905",
+      "title": "FIRE-Bench: Evaluating Agents on the Rediscovery of Scientific Insights",
+      "abstract": "Autonomous agents powered by large language models (LLMs) promise to accelerate scientific discovery end-to-end, but rigorously evaluating their capacity for verifiable discovery remains a central challenge. Existing benchmarks face a trade-off: they either heavily rely on LLM-as-judge evaluations of automatically generated research outputs or optimize convenient yet isolated performance metrics that provide coarse proxies for scientific insight. To address this gap, we introduce FIRE-Bench (Ful",
+      "url_abs": "https://arxiv.org/abs/2602.02905",
+      "url_pdf": "https://arxiv.org/pdf/2602.02905",
+      "arxiv_id": "2602.02905",
+      "github_stars": 4,
+      "published": "2026-02-02T23:21:13.000Z",
+      "authors": [
+        "Zhen Wang",
+        "Fan Bai",
+        "Zhongyan Luo",
+        "Jinyan Su",
+        "Kaiser Sun",
+        "Xinle Yu",
+        "Jieyuan Liu",
+        "Kun Zhou",
+        "Claire Cardie",
+        "Mark Dredze",
+        "Eric P. Xing",
+        "Zhiting Hu"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03806",
+      "title": "Bridging Online and Offline RL: Contextual Bandit Learning for Multi-Turn Code Generation",
+      "abstract": "Recently, there have been significant research interests in training large language models (LLMs) with reinforcement learning (RL) on real-world tasks, such as multi-turn code generation. While online RL tends to perform better than offline RL, its higher training cost and instability hinders wide adoption. In this paper, we build on the observation that multi-turn code generation can be formulated as a one-step recoverable Markov decision process and propose contextual bandit learning with offl",
+      "url_abs": "https://arxiv.org/abs/2602.03806",
+      "url_pdf": "https://arxiv.org/pdf/2602.03806",
+      "arxiv_id": "2602.03806",
+      "github_stars": 4,
+      "published": "2026-02-03T18:08:41.000Z",
+      "authors": [
+        "Ziru Chen",
+        "Dongdong Chen",
+        "Ruinan Jin",
+        "Yingbin Liang",
+        "Yujia Xie",
+        "Huan Sun"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.01753",
+      "title": "ObjEmbed: Towards Universal Multimodal Object Embeddings",
+      "abstract": "Aligning objects with corresponding textual descriptions is a fundamental challenge and a realistic requirement in vision-language understanding. While recent multimodal embedding models excel at global image-text alignment, they often struggle with fine-grained alignment between image regions and specific phrases. In this work, we present ObjEmbed, a novel MLLM embedding model that decomposes the input image into multiple regional embeddings, each corresponding to an individual object, along wi",
+      "url_abs": "https://arxiv.org/abs/2602.01753",
+      "url_pdf": "https://arxiv.org/pdf/2602.01753",
+      "arxiv_id": "2602.01753",
+      "github_stars": 4,
+      "published": "2026-02-02T07:38:45.000Z",
+      "authors": [
+        "Shenghao Fu",
+        "Yukun Su",
+        "Fengyun Rao",
+        "Jing Lyu",
+        "Xiaohua Xie",
+        "Wei-Shi Zheng"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03295",
+      "title": "POP: Prefill-Only Pruning for Efficient Large Model Inference",
+      "abstract": "Large Language Models (LLMs) and Vision-Language Models (VLMs) have demonstrated remarkable capabilities. However, their deployment is hindered by significant computational costs. Existing structured pruning methods, while hardware-efficient, often suffer from significant accuracy degradation. In this paper, we argue that this failure stems from a stage-agnostic pruning approach that overlooks the asymmetric roles between the prefill and decode stages. By introducing a virtual gate mechanism, ou",
+      "url_abs": "https://arxiv.org/abs/2602.03295",
+      "url_pdf": "https://arxiv.org/pdf/2602.03295",
+      "arxiv_id": "2602.03295",
+      "github_stars": 3,
+      "published": "2026-02-03T09:22:26.000Z",
+      "authors": [
+        "Junhui He",
+        "Zhihui Fu",
+        "Jun Wang",
+        "Qingan Li"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.02419",
+      "title": "SafeGround: Know When to Trust GUI Grounding Models via Uncertainty Calibration",
+      "abstract": "Graphical User Interface (GUI) grounding aims to translate natural language instructions into executable screen coordinates, enabling automated GUI interaction. Nevertheless, incorrect grounding can result in costly, hard-to-reverse actions (e.g., erroneous payment approvals), raising concerns about model reliability. In this paper, we introduce SafeGround, an uncertainty-aware framework for GUI grounding models that enables risk-aware predictions through calibrations before testing. SafeGround ",
+      "url_abs": "https://arxiv.org/abs/2602.02419",
+      "url_pdf": "https://arxiv.org/pdf/2602.02419",
+      "arxiv_id": "2602.02419",
+      "github_stars": 3,
+      "published": "2026-02-02T18:22:45.000Z",
+      "authors": [
+        "Qingni Wang",
+        "Yue Fan",
+        "Xin Eric Wang"
+      ],
+      "tasks": [],
+      "bucket": "ai-general"
+    },
+    {
+      "id": "2602.03454",
+      "title": "Contextualized Visual Personalization in Vision-Language Models",
+      "abstract": "Despite recent progress in vision-language models (VLMs), existing approaches often fail to generate personalized responses based on the user's specific experiences, as they lack the ability to associate visual inputs with a user's accumulated visual-textual context. We newly formalize this challenge as contextualized visual personalization, which requires the visual recognition and textual retrieval of personalized visual experiences by VLMs when interpreting new images. To address this issue, ",
+      "url_abs": "https://arxiv.org/abs/2602.03454",
+      "url_pdf": "https://arxiv.org/pdf/2602.03454",
+      "arxiv_id": "2602.03454",
+      "github_stars": 3,
+      "published": "2026-02-03T12:21:26.000Z",
+      "authors": [
+        "Yeongtak Oh",
+        "Sangwon Yu",
+        "Junsung Park",
+        "Han Cheol Moon",
+        "Jisoo Mok",
+        "Sungroh Yoon"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03183",
+      "title": "Privasis: Synthesizing the Largest \"Public\" Private Dataset from Scratch",
+      "abstract": "Research involving privacy-sensitive data has always been constrained by data scarcity, standing in sharp contrast to other areas that have benefited from data scaling. This challenge is becoming increasingly urgent as modern AI agents--such as OpenClaw and Gemini Agent--are granted persistent access to highly sensitive personal information. To tackle this longstanding bottleneck and the rising risks, we present Privasis (i.e., privacy oasis), the first million-scale fully synthetic dataset enti",
+      "url_abs": "https://arxiv.org/abs/2602.03183",
+      "url_pdf": "https://arxiv.org/pdf/2602.03183",
+      "arxiv_id": "2602.03183",
+      "github_stars": 2,
+      "published": "2026-02-03T06:54:46.000Z",
+      "authors": [
+        "Hyunwoo Kim",
+        "Niloofar Mireshghallah",
+        "Michael Duan",
+        "Rui Xin",
+        "Shuyue Stella Li",
+        "Jaehun Jung",
+        "David Acuna",
+        "Qi Pang",
+        "Hanshen Xiao",
+        "G. Edward Suh",
+        "Sewoong Oh",
+        "Yulia Tsvetkov",
+        "Pang Wei Koh",
+        "Yejin Choi"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.02751",
+      "title": "Scaling Small Agents Through Strategy Auctions",
+      "abstract": "Small language models are increasingly viewed as a promising, cost-effective approach to agentic AI, with proponents claiming they are sufficiently capable for agentic workflows. However, while smaller agents can closely match larger ones on simple tasks, it remains unclear how their performance scales with task complexity, when large models become necessary, and how to better leverage small agents for long-horizon workloads. In this work, we empirically show that small agents' performance fails",
+      "url_abs": "https://arxiv.org/abs/2602.02751",
+      "url_pdf": "https://arxiv.org/pdf/2602.02751",
+      "arxiv_id": "2602.02751",
+      "github_stars": 2,
+      "published": "2026-02-02T20:05:51.000Z",
+      "authors": [
+        "Lisa Alazraki",
+        "William F. Shen",
+        "Yoram Bachrach",
+        "Akhil Mathur"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.01212",
+      "title": "SimpleGPT: Improving GPT via A Simple Normalization Strategy",
+      "abstract": "In this work, we revisit Transformer optimization through the lens of second-order geometry and establish a direct connection between architectural design, activation scale, the Hessian matrix, and the maximum tolerable learning rate. We introduce a simple normalization strategy, termed SimpleNorm, which stabilizes intermediate activation scales by construction. Then, by analyzing the Hessian of the loss with respect to network activations, we theoretically show that SimpleNorm significantly red",
+      "url_abs": "https://arxiv.org/abs/2602.01212",
+      "url_pdf": "https://arxiv.org/pdf/2602.01212",
+      "arxiv_id": "2602.01212",
+      "github_stars": 2,
+      "published": "2026-02-01T13:07:17.000Z",
+      "authors": [
+        "Marco Chen",
+        "Xianbiao Qi",
+        "Yelin He",
+        "Jiaquan Ye",
+        "Rong Xiao"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03837",
+      "title": "Accelerating Scientific Research with Gemini: Case Studies and Common Techniques",
+      "abstract": "Recent advances in large language models (LLMs) have opened new avenues for accelerating scientific research. While models are increasingly capable of assisting with routine tasks, their ability to contribute to novel, expert-level mathematical discovery is less understood. We present a collection of case studies demonstrating how researchers have successfully collaborated with advanced AI models, specifically Google's Gemini-based models (in particular Gemini Deep Think and its advanced variant",
+      "url_abs": "https://arxiv.org/abs/2602.03837",
+      "url_pdf": "https://arxiv.org/pdf/2602.03837",
+      "arxiv_id": "2602.03837",
+      "github_stars": 2,
+      "published": "2026-02-03T18:56:17.000Z",
+      "authors": [
+        "David P. Woodruff",
+        "Vincent Cohen-Addad",
+        "Lalit Jain",
+        "Jieming Mao",
+        "Song Zuo",
+        "MohammadHossein Bateni",
+        "Simina Branzei",
+        "Michael P. Brenner",
+        "Lin Chen",
+        "Ying Feng",
+        "Lance Fortnow",
+        "Gang Fu",
+        "Ziyi Guan",
+        "Zahra Hadizadeh",
+        "Mohammad T. Hajiaghayi",
+        "Mahdi JafariRaviz",
+        "Adel Javanmard",
+        "Karthik C. S.",
+        "Ken-ichi Kawarabayashi",
+        "Ravi Kumar",
+        "Silvio Lattanzi",
+        "Euiwoong Lee",
+        "Yi Li",
+        "Ioannis Panageas",
+        "Dimitris Paparas",
+        "Benjamin Przybocki",
+        "Bernardo Subercaseaux",
+        "Ola Svensson",
+        "Shayan Taherijam",
+        "Xuan Wu",
+        "Eylon Yogev",
+        "Morteza Zadimoghaddam",
+        "Samson Zhou",
+        "Vahab Mirrokni"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.04541",
+      "title": "LycheeDecode: Accelerating Long-Context LLM Inference via Hybrid-Head Sparse Decoding",
+      "abstract": "The proliferation of long-context large language models (LLMs) exposes a key bottleneck: the rapidly expanding key-value cache during decoding, which imposes heavy memory and latency costs. While recent approaches attempt to alleviate this by sharing a single set of crucial tokens across layers, such coarse-grained sharing undermines model performance by neglecting the functional diversity of attention heads. To address this, we propose LycheeDecode, an efficient decoding method centered on a fi",
+      "url_abs": "https://arxiv.org/abs/2602.04541",
+      "url_pdf": "https://arxiv.org/pdf/2602.04541",
+      "arxiv_id": "2602.04541",
+      "github_stars": 1,
+      "published": "2026-02-04T13:34:12.000Z",
+      "authors": [
+        "Gang Lin",
+        "Dongfang Li",
+        "Zhuoen Chen",
+        "Yukun Shi",
+        "Xuhui Chen",
+        "Baotian Hu",
+        "Min Zhang"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.00398",
+      "title": "MemoryLLM: Plug-n-Play Interpretable Feed-Forward Memory for Transformers",
+      "abstract": "Understanding how transformer components operate in LLMs is important, as it is at the core of recent technological advances in artificial intelligence. In this work, we revisit the challenges associated with interpretability of feed-forward modules (FFNs) and propose MemoryLLM, which aims to decouple FFNs from self-attention and enables us to study the decoupled FFNs as context-free token-wise neural retrieval memory. In detail, we investigate how input tokens access memory locations within FFN",
+      "url_abs": "https://arxiv.org/abs/2602.00398",
+      "url_pdf": "https://arxiv.org/pdf/2602.00398",
+      "arxiv_id": "2602.00398",
+      "github_stars": 1,
+      "published": "2026-01-30T23:25:20.000Z",
+      "authors": [
+        "Ajay Jaiswal",
+        "Lauren Hannah",
+        "Han-Byul Kim",
+        "Duc Hoang",
+        "Arnav Kundu",
+        "Mehrdad Farajtabar",
+        "Minsik Cho"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.01405",
+      "title": "Feedback by Design: Understanding and Overcoming User Feedback Barriers in Conversational Agents",
+      "abstract": "High-quality feedback is essential for effective human-AI interaction. It bridges knowledge gaps, corrects digressions, and shapes system behavior; both during interaction and throughout model development. Yet despite its importance, human feedback to AI is often infrequent and low quality. This gap motivates a critical examination of human feedback during interactions with AIs. To understand and overcome the challenges preventing users from giving high-quality feedback, we conducted two studies",
+      "url_abs": "https://arxiv.org/abs/2602.01405",
+      "url_pdf": "https://arxiv.org/pdf/2602.01405",
+      "arxiv_id": "2602.01405",
+      "github_stars": 1,
+      "published": "2026-02-01T19:16:23.000Z",
+      "authors": [
+        "Nikhil Sharma",
+        "Zheng Zhang",
+        "Daniel Lee",
+        "Namita Krishnan",
+        "Guang-Jie Ren",
+        "Ziang Xiao",
+        "Yunyao Li"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.02405",
+      "title": "Didactic to Constructive: Turning Expert Solutions into Learnable Reasoning",
+      "abstract": "Improving the reasoning capabilities of large language models (LLMs) typically relies either on the model's ability to sample a correct solution to be reinforced or on the existence of a stronger model able to solve the problem. However, many difficult problems remain intractable for even current frontier models, preventing the extraction of valid training signals. A promising alternative is to leverage high-quality expert human solutions, yet naive imitation of this data fails because it is fun",
+      "url_abs": "https://arxiv.org/abs/2602.02405",
+      "url_pdf": "https://arxiv.org/pdf/2602.02405",
+      "arxiv_id": "2602.02405",
+      "github_stars": 1,
+      "published": "2026-02-02T18:03:43.000Z",
+      "authors": [
+        "Ethan Mendes",
+        "Jungsoo Park",
+        "Alan Ritter"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03320",
+      "title": "MedSAM-Agent: Empowering Interactive Medical Image Segmentation with Multi-turn Agentic Reinforcement Learning",
+      "abstract": "Medical image segmentation is evolving from task-specific models toward generalizable frameworks. Recent research leverages Multi-modal Large Language Models (MLLMs) as autonomous agents, employing reinforcement learning with verifiable reward (RLVR) to orchestrate specialized tools like the Segment Anything Model (SAM). However, these approaches often rely on single-turn, rigid interaction strategies and lack process-level supervision during training, which hinders their ability to fully exploi",
+      "url_abs": "https://arxiv.org/abs/2602.03320",
+      "url_pdf": "https://arxiv.org/pdf/2602.03320",
+      "arxiv_id": "2602.03320",
+      "github_stars": 1,
+      "published": "2026-02-03T09:47:49.000Z",
+      "authors": [
+        "Shengyuan Liu",
+        "Liuxin Bao",
+        "Qi Yang",
+        "Wanting Geng",
+        "Boyun Zheng",
+        "Chenxin Li",
+        "Wenting Chen",
+        "Houwen Peng",
+        "Yixuan Yuan"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.02494",
+      "title": "MEG-XL: Data-Efficient Brain-to-Text via Long-Context Pre-Training",
+      "abstract": "Clinical brain-to-text interfaces are designed for paralysed patients who cannot provide extensive training recordings. Pre-training improves data-efficient generalisation by learning statistical priors across subjects, but these priors critically depend on context. While natural speech might unfold gradually over minutes, most methods pre-train with only a few seconds of context. Thus, we propose MEG-XL, a model pre-trained with 2.5 minutes of MEG context per sample, 5-300x longer than prior wo",
+      "url_abs": "https://arxiv.org/abs/2602.02494",
+      "url_pdf": "https://arxiv.org/pdf/2602.02494",
+      "arxiv_id": "2602.02494",
+      "github_stars": 1,
+      "published": "2026-02-02T18:59:50.000Z",
+      "authors": [
+        "Dulhan Jayalath",
+        "Oiwi Parker Jones"
+      ],
+      "tasks": [],
+      "bucket": "open-source-ai"
+    },
+    {
+      "id": "2602.02220",
+      "title": "LangMap: A Hierarchical Benchmark for Open-Vocabulary Goal Navigation",
+      "abstract": "The relationships between objects and language are fundamental to meaningful communication between humans and AI, and to practically useful embodied intelligence. We introduce HieraNav, a multi-granularity, open-vocabulary goal navigation task where agents interpret natural language instructions to reach targets at four semantic levels: scene, room, region, and instance. To this end, we present Language as a Map (LangMap), a large-scale benchmark built on real-world 3D indoor scans with comprehe",
+      "url_abs": "https://arxiv.org/abs/2602.02220",
+      "url_pdf": "https://arxiv.org/pdf/2602.02220",
+      "arxiv_id": "2602.02220",
+      "github_stars": 1,
+      "published": "2026-02-02T15:26:19.000Z",
+      "authors": [
+        "Bo Miao",
+        "Weijia Liu",
+        "Jun Luo",
+        "Lachlan Shinnick",
+        "Jian Liu",
+        "Thomas Hamilton-Smith",
+        "Yuhe Yang",
+        "Zijie Wu",
+        "Vanja Videnovic",
+        "Feras Dayoub",
+        "Anton van den Hengel"
+      ],
+      "tasks": [],
+      "bucket": "ai-agents"
+    },
+    {
+      "id": "2602.00682",
+      "title": "RecGOAT: Graph Optimal Adaptive Transport for LLM-Enhanced Multimodal Recommendation with Dual Semantic Alignment",
+      "abstract": "Multimodal recommendation systems typically integrates user behavior with multimodal data from items, thereby capturing more accurate user preferences. Concurrently, with the rise of large models (LMs), multimodal recommendation is increasingly leveraging their strengths in semantic understanding and contextual reasoning. However, LM representations are inherently optimized for general semantic tasks, while recommendation models rely heavily on sparse user/item unique identity (ID) features. Exi",
+      "url_abs": "https://arxiv.org/abs/2602.00682",
+      "url_pdf": "https://arxiv.org/pdf/2602.00682",
+      "arxiv_id": "2602.00682",
+      "github_stars": 1,
+      "published": "2026-01-31T11:58:38.000Z",
+      "authors": [
+        "Yuecheng Li",
+        "Hengwei Ju",
+        "Zeyu Song",
+        "Wei Yang",
+        "Chi Lu",
+        "Peng Jiang",
+        "Kun Gai"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03238",
+      "title": "The Necessity of a Unified Framework for LLM-Based Agent Evaluation",
+      "abstract": "With the advent of Large Language Models (LLMs), general-purpose agents have seen fundamental advancements. However, evaluating these agents presents unique challenges that distinguish them from static QA benchmarks. We observe that current agent benchmarks are heavily confounded by extraneous factors, including system prompts, toolset configurations, and environmental dynamics. Existing evaluations often rely on fragmented, researcher-specific frameworks where the prompt engineering for reasoni",
+      "url_abs": "https://arxiv.org/abs/2602.03238",
+      "url_pdf": "https://arxiv.org/pdf/2602.03238",
+      "arxiv_id": "2602.03238",
+      "github_stars": 1,
+      "published": "2026-02-03T08:18:37.000Z",
+      "authors": [
+        "Pengyu Zhu",
+        "Li Sun",
+        "Philip S. Yu",
+        "Sen Su"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.01519",
+      "title": "You Need an Encoder for Native Position-Independent Caching",
+      "abstract": "The Key-Value (KV) cache of Large Language Models (LLMs) is prefix-based, making it highly inefficient for processing contexts retrieved in arbitrary order. Position-Independent Caching (PIC) has been proposed to enable KV reuse without positional constraints; however, existing approaches often incur substantial accuracy degradation, limiting their practical adoption. To address this issue, we propose native PIC by reintroducing the encoder to prevalent decoder-only LLMs and explicitly training ",
+      "url_abs": "https://arxiv.org/abs/2602.01519",
+      "url_pdf": "https://arxiv.org/pdf/2602.01519",
+      "arxiv_id": "2602.01519",
+      "github_stars": 0,
+      "published": "2026-02-02T01:23:13.000Z",
+      "authors": [
+        "Shiju Zhao",
+        "Junhao Hu",
+        "Jiaqi Zheng",
+        "Guihai Chen"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.03817",
+      "title": "Adaptive Evidence Weighting for Audio-Spatiotemporal Fusion",
+      "abstract": "Many machine learning systems have access to multiple sources of evidence for the same prediction target, yet these sources often differ in reliability and informativeness across inputs. In bioacoustic classification, species identity may be inferred both from the acoustic signal and from spatiotemporal context such as location and season; while Bayesian inference motivates multiplicative evidence combination, in practice we typically only have access to discriminative predictors rather than cal",
+      "url_abs": "https://arxiv.org/abs/2602.03817",
+      "url_pdf": "https://arxiv.org/pdf/2602.03817",
+      "arxiv_id": "2602.03817",
+      "github_stars": 0,
+      "published": "2026-02-03T18:21:13.000Z",
+      "authors": [
+        "Oscar Ovanger",
+        "Levi Harris",
+        "Timothy H. Keitt"
+      ],
+      "tasks": [],
+      "bucket": "ai-audio"
+    }
+  ],
+  "bucket_signals": {
+    "llm-foundation": {
+      "paper_count": 36,
+      "total_stars": 460,
+      "top_papers": [
+        {
+          "title": "CodeOCR: On the Effectiveness of Vision Language Models in Code Understanding",
+          "stars": 81,
+          "url": "https://arxiv.org/abs/2602.01785"
+        },
+        {
+          "title": "No Global Plan in Chain-of-Thought: Uncover the Latent Planning Horizon of LLMs",
+          "stars": 57,
+          "url": "https://arxiv.org/abs/2602.02103"
+        },
+        {
+          "title": "MARS: Modular Agent with Reflective Search for Automated AI Research",
+          "stars": 47,
+          "url": "https://arxiv.org/abs/2602.02660"
+        },
+        {
+          "title": "daVinci-Agency: Unlocking Long-Horizon Agency Data-Efficiently",
+          "stars": 43,
+          "url": "https://arxiv.org/abs/2602.02619"
+        },
+        {
+          "title": "CoBA-RL: Capability-Oriented Budget Allocation for Reinforcement Learning in LLMs",
+          "stars": 33,
+          "url": "https://arxiv.org/abs/2602.03048"
+        }
+      ],
+      "star_share": 0.6344827586206897,
+      "avg_stars": 12.777777777777779,
+      "signal_interpretation": "Hot research area with high implementation interest"
+    },
+    "ai-agents": {
+      "paper_count": 5,
+      "total_stars": 143,
+      "top_papers": [
+        {
+          "title": "AOrchestra: Automating Sub-Agent Creation for Agentic Orchestration",
+          "stars": 67,
+          "url": "https://arxiv.org/abs/2602.03786"
+        },
+        {
+          "title": "Research on World Models Is Not Merely Injecting World Knowledge into Specific Tasks",
+          "stars": 42,
+          "url": "https://arxiv.org/abs/2602.01630"
+        },
+        {
+          "title": "Parallel-Probe: Towards Efficient Parallel Thinking via 2D Probing",
+          "stars": 21,
+          "url": "https://arxiv.org/abs/2602.03845"
+        },
+        {
+          "title": "WideSeek: Advancing Wide Research via Multi-Agent Scaling",
+          "stars": 12,
+          "url": "https://arxiv.org/abs/2602.02636"
+        },
+        {
+          "title": "LangMap: A Hierarchical Benchmark for Open-Vocabulary Goal Navigation",
+          "stars": 1,
+          "url": "https://arxiv.org/abs/2602.02220"
+        }
+      ],
+      "star_share": 0.19724137931034483,
+      "avg_stars": 28.6,
+      "signal_interpretation": "Active area with significant code adoption"
+    },
+    "ai-coding": {
+      "paper_count": 1,
+      "total_stars": 45,
+      "top_papers": [
+        {
+          "title": "3D-Aware Implicit Motion Control for View-Adaptive Human Video Generation",
+          "stars": 45,
+          "url": "https://arxiv.org/abs/2602.03796"
+        }
+      ],
+      "star_share": 0.06206896551724138,
+      "avg_stars": 45.0,
+      "signal_interpretation": "Growing interest in implementations"
+    },
+    "ai-image-generation": {
+      "paper_count": 2,
+      "total_stars": 39,
+      "top_papers": [
+        {
+          "title": "Diversity-Preserved Distribution Matching Distillation for Fast Visual Synthesis",
+          "stars": 31,
+          "url": "https://arxiv.org/abs/2602.03139"
+        },
+        {
+          "title": "LIVE: Long-horizon Interactive Video World Modeling",
+          "stars": 8,
+          "url": "https://arxiv.org/abs/2602.03747"
+        }
+      ],
+      "star_share": 0.05379310344827586,
+      "avg_stars": 19.5,
+      "signal_interpretation": "Growing interest in implementations"
+    },
+    "open-source-ai": {
+      "paper_count": 2,
+      "total_stars": 18,
+      "top_papers": [
+        {
+          "title": "RANKVIDEO: Reasoning Reranking for Text-to-Video Retrieval",
+          "stars": 17,
+          "url": "https://arxiv.org/abs/2602.02444"
+        },
+        {
+          "title": "MEG-XL: Data-Efficient Brain-to-Text via Long-Context Pre-Training",
+          "stars": 1,
+          "url": "https://arxiv.org/abs/2602.02494"
+        }
+      ],
+      "star_share": 0.02482758620689655,
+      "avg_stars": 9.0,
+      "signal_interpretation": "Research-focused with limited code adoption"
+    },
+    "ai-research": {
+      "paper_count": 2,
+      "total_stars": 17,
+      "top_papers": [
+        {
+          "title": "Neural Predictor-Corrector: Solving Homotopy Problems with Reinforcement Learning",
+          "stars": 12,
+          "url": "https://arxiv.org/abs/2602.03086"
+        },
+        {
+          "title": "Search-R2: Enhancing Search-Integrated Reasoning via Actor-Refiner Collaboration",
+          "stars": 5,
+          "url": "https://arxiv.org/abs/2602.03647"
+        }
+      ],
+      "star_share": 0.023448275862068966,
+      "avg_stars": 8.5,
+      "signal_interpretation": "Research-focused with limited code adoption"
+    },
+    "ai-general": {
+      "paper_count": 1,
+      "total_stars": 3,
+      "top_papers": [
+        {
+          "title": "SafeGround: Know When to Trust GUI Grounding Models via Uncertainty Calibration",
+          "stars": 3,
+          "url": "https://arxiv.org/abs/2602.02419"
+        }
+      ],
+      "star_share": 0.004137931034482759,
+      "avg_stars": 3.0,
+      "signal_interpretation": "Research-focused with limited code adoption"
+    },
+    "ai-audio": {
+      "paper_count": 1,
+      "total_stars": 0,
+      "top_papers": [
+        {
+          "title": "Adaptive Evidence Weighting for Audio-Spatiotemporal Fusion",
+          "stars": 0,
+          "url": "https://arxiv.org/abs/2602.03817"
+        }
+      ],
+      "star_share": 0.0,
+      "avg_stars": 0.0,
+      "signal_interpretation": "Research-focused with limited code adoption"
+    }
+  },
+  "tasks_count": 0
+}

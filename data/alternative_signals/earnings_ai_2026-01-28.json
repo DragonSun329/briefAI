@@ -1,0 +1,415 @@
+{
+  "source": "earnings_calls",
+  "scraped_at": "2026-01-28T10:10:57.262198",
+  "total_companies": 15,
+  "companies": [
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "top_keywords": [],
+      "sentiment_score": 0,
+      "bucket": "ai-infrastructure"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "top_keywords": [],
+      "sentiment_score": 0,
+      "bucket": "llm-foundation"
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "top_keywords": [],
+      "sentiment_score": 0,
+      "bucket": "llm-foundation"
+    },
+    {
+      "ticker": "META",
+      "name": "Meta",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "top_keywords": [],
+      "sentiment_score": 0,
+      "bucket": "ai-general"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "top_keywords": [],
+      "sentiment_score": 0,
+      "bucket": "llm-foundation"
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "top_keywords": [],
+      "sentiment_score": 0,
+      "bucket": "ai-general"
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "top_keywords": [],
+      "sentiment_score": 0,
+      "bucket": "ai-infrastructure"
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "top_keywords": [],
+      "sentiment_score": 0,
+      "bucket": "ai-infrastructure"
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "top_keywords": [],
+      "sentiment_score": 0,
+      "bucket": "ai-agents"
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "top_keywords": [],
+      "sentiment_score": 0,
+      "bucket": "llm-foundation"
+    },
+    {
+      "ticker": "IBM",
+      "name": "IBM",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "sentiment_score": 0,
+      "bucket": "ai-general"
+    },
+    {
+      "ticker": "ADBE",
+      "name": "Adobe",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "top_keywords": [],
+      "sentiment_score": 0,
+      "bucket": "ai-agents"
+    },
+    {
+      "ticker": "SAP",
+      "name": "SAP",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "sentiment_score": 0,
+      "bucket": "ai-agents"
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "top_keywords": [],
+      "sentiment_score": 0,
+      "bucket": "ai-agents"
+    },
+    {
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "filings_analyzed": 0,
+      "ai_mentions": {},
+      "total_mentions": 0,
+      "top_keywords": [],
+      "sentiment_score": 0,
+      "bucket": "ai-agents"
+    }
+  ],
+  "signals": {
+    "bucket_signals": {
+      "ai-infrastructure": {
+        "company_count": 3,
+        "total_mentions": 0,
+        "avg_sentiment": 0.0,
+        "top_companies": [
+          {
+            "ticker": "NVDA",
+            "name": "NVIDIA",
+            "ai_mentions": 0,
+            "sentiment": 0
+          },
+          {
+            "ticker": "AMD",
+            "name": "AMD",
+            "ai_mentions": 0,
+            "sentiment": 0
+          },
+          {
+            "ticker": "INTC",
+            "name": "Intel",
+            "ai_mentions": 0,
+            "sentiment": 0
+          }
+        ],
+        "weighted_sentiment": 0,
+        "signal_interpretation": "Limited AI discussion - not a priority"
+      },
+      "llm-foundation": {
+        "company_count": 4,
+        "total_mentions": 0,
+        "avg_sentiment": 0.0,
+        "top_companies": [
+          {
+            "ticker": "MSFT",
+            "name": "Microsoft",
+            "ai_mentions": 0,
+            "sentiment": 0
+          },
+          {
+            "ticker": "GOOGL",
+            "name": "Alphabet",
+            "ai_mentions": 0,
+            "sentiment": 0
+          },
+          {
+            "ticker": "AMZN",
+            "name": "Amazon",
+            "ai_mentions": 0,
+            "sentiment": 0
+          },
+          {
+            "ticker": "ORCL",
+            "name": "Oracle",
+            "ai_mentions": 0,
+            "sentiment": 0
+          }
+        ],
+        "weighted_sentiment": 0,
+        "signal_interpretation": "Limited AI discussion - not a priority"
+      },
+      "ai-general": {
+        "company_count": 3,
+        "total_mentions": 0,
+        "avg_sentiment": 0.0,
+        "top_companies": [
+          {
+            "ticker": "META",
+            "name": "Meta",
+            "ai_mentions": 0,
+            "sentiment": 0
+          },
+          {
+            "ticker": "AAPL",
+            "name": "Apple",
+            "ai_mentions": 0,
+            "sentiment": 0
+          },
+          {
+            "ticker": "IBM",
+            "name": "IBM",
+            "ai_mentions": 0,
+            "sentiment": 0
+          }
+        ],
+        "weighted_sentiment": 0,
+        "signal_interpretation": "Limited AI discussion - not a priority"
+      },
+      "ai-agents": {
+        "company_count": 5,
+        "total_mentions": 0,
+        "avg_sentiment": 0.0,
+        "top_companies": [
+          {
+            "ticker": "CRM",
+            "name": "Salesforce",
+            "ai_mentions": 0,
+            "sentiment": 0
+          },
+          {
+            "ticker": "ADBE",
+            "name": "Adobe",
+            "ai_mentions": 0,
+            "sentiment": 0
+          },
+          {
+            "ticker": "SAP",
+            "name": "SAP",
+            "ai_mentions": 0,
+            "sentiment": 0
+          },
+          {
+            "ticker": "PLTR",
+            "name": "Palantir",
+            "ai_mentions": 0,
+            "sentiment": 0
+          },
+          {
+            "ticker": "SNOW",
+            "name": "Snowflake",
+            "ai_mentions": 0,
+            "sentiment": 0
+          }
+        ],
+        "weighted_sentiment": 0,
+        "signal_interpretation": "Limited AI discussion - not a priority"
+      }
+    },
+    "top_keywords": [],
+    "total_mentions": 0
+  },
+  "bucket_signals": {
+    "ai-infrastructure": {
+      "company_count": 3,
+      "total_mentions": 0,
+      "avg_sentiment": 0.0,
+      "top_companies": [
+        {
+          "ticker": "NVDA",
+          "name": "NVIDIA",
+          "ai_mentions": 0,
+          "sentiment": 0
+        },
+        {
+          "ticker": "AMD",
+          "name": "AMD",
+          "ai_mentions": 0,
+          "sentiment": 0
+        },
+        {
+          "ticker": "INTC",
+          "name": "Intel",
+          "ai_mentions": 0,
+          "sentiment": 0
+        }
+      ],
+      "weighted_sentiment": 0,
+      "signal_interpretation": "Limited AI discussion - not a priority"
+    },
+    "llm-foundation": {
+      "company_count": 4,
+      "total_mentions": 0,
+      "avg_sentiment": 0.0,
+      "top_companies": [
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft",
+          "ai_mentions": 0,
+          "sentiment": 0
+        },
+        {
+          "ticker": "GOOGL",
+          "name": "Alphabet",
+          "ai_mentions": 0,
+          "sentiment": 0
+        },
+        {
+          "ticker": "AMZN",
+          "name": "Amazon",
+          "ai_mentions": 0,
+          "sentiment": 0
+        },
+        {
+          "ticker": "ORCL",
+          "name": "Oracle",
+          "ai_mentions": 0,
+          "sentiment": 0
+        }
+      ],
+      "weighted_sentiment": 0,
+      "signal_interpretation": "Limited AI discussion - not a priority"
+    },
+    "ai-general": {
+      "company_count": 3,
+      "total_mentions": 0,
+      "avg_sentiment": 0.0,
+      "top_companies": [
+        {
+          "ticker": "META",
+          "name": "Meta",
+          "ai_mentions": 0,
+          "sentiment": 0
+        },
+        {
+          "ticker": "AAPL",
+          "name": "Apple",
+          "ai_mentions": 0,
+          "sentiment": 0
+        },
+        {
+          "ticker": "IBM",
+          "name": "IBM",
+          "ai_mentions": 0,
+          "sentiment": 0
+        }
+      ],
+      "weighted_sentiment": 0,
+      "signal_interpretation": "Limited AI discussion - not a priority"
+    },
+    "ai-agents": {
+      "company_count": 5,
+      "total_mentions": 0,
+      "avg_sentiment": 0.0,
+      "top_companies": [
+        {
+          "ticker": "CRM",
+          "name": "Salesforce",
+          "ai_mentions": 0,
+          "sentiment": 0
+        },
+        {
+          "ticker": "ADBE",
+          "name": "Adobe",
+          "ai_mentions": 0,
+          "sentiment": 0
+        },
+        {
+          "ticker": "SAP",
+          "name": "SAP",
+          "ai_mentions": 0,
+          "sentiment": 0
+        },
+        {
+          "ticker": "PLTR",
+          "name": "Palantir",
+          "ai_mentions": 0,
+          "sentiment": 0
+        },
+        {
+          "ticker": "SNOW",
+          "name": "Snowflake",
+          "ai_mentions": 0,
+          "sentiment": 0
+        }
+      ],
+      "weighted_sentiment": 0,
+      "signal_interpretation": "Limited AI discussion - not a priority"
+    }
+  }
+}

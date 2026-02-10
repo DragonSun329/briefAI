@@ -1,0 +1,32 @@
+{
+  "hyp_nvidia_infra_001": {
+    "hypothesis_id": "hyp_nvidia_infra_001",
+    "meta_id": "meta_nvidia_compute_demand",
+    "prior_confidence": 0.75,
+    "posterior_confidence": 0.88,
+    "support_count": 4,
+    "contradict_count": 1,
+    "evidence_sum": 2.1,
+    "weight_sum": 3.2
+  },
+  "hyp_enterprise_001": {
+    "hypothesis_id": "hyp_enterprise_001",
+    "meta_id": "meta_enterprise_ai_adoption",
+    "prior_confidence": 0.68,
+    "posterior_confidence": 0.79,
+    "support_count": 3,
+    "contradict_count": 0,
+    "evidence_sum": 1.4,
+    "weight_sum": 2.0
+  },
+  "hyp_capex_001": {
+    "hypothesis_id": "hyp_capex_001",
+    "meta_id": "meta_datacenter_capex",
+    "prior_confidence": 0.72,
+    "posterior_confidence": 0.81,
+    "support_count": 2,
+    "contradict_count": 0,
+    "evidence_sum": 1.1,
+    "weight_sum": 1.5
+  }
+}

@@ -54,14 +54,17 @@ class ArticlesResponse(BaseModel):
     total: int
 
 
+VALID_PIPELINES = ["news", "product", "investing", "china_ai"]
+
+
 @router.get("/articles/{pipeline}", response_model=ArticlesResponse)
 def get_articles(
     pipeline: str,
     date: str = Query(..., description="Date in YYYYMMDD format"),
 ):
     """Get articles for a specific pipeline."""
-    if pipeline not in ["news", "product", "investing"]:
-        raise HTTPException(status_code=400, detail="Invalid pipeline. Use: news, product, investing")
+    if pipeline not in VALID_PIPELINES:
+        raise HTTPException(status_code=400, detail=f"Invalid pipeline. Use: {', '.join(VALID_PIPELINES)}")
 
     analyzer = get_analyzer()
     pipelines = analyzer.load_pipelines_for_date(date)

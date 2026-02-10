@@ -1,0 +1,723 @@
+{
+  "source": "product_reviews",
+  "scraped_at": "2026-01-22T15:40:27.463231",
+  "total_companies": 31,
+  "total_reviews": 586679,
+  "company_scores": {
+    "openai": {
+      "company_name": "openai",
+      "consensus_score": 90.6,
+      "avg_rating": 4.67,
+      "total_reviews": 4370,
+      "source_count": 2,
+      "confidence": "high",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "ChatGPT Enterprise",
+          "company_name": "openai",
+          "rating": 4.7,
+          "review_count": 2847,
+          "nps_score": 92.0,
+          "sentiment_score": 0.88,
+          "url": "https://www.g2.com/products/chatgpt/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161121"
+        },
+        {
+          "source": "capterra",
+          "product_name": "ChatGPT",
+          "company_name": "openai",
+          "rating": 4.6,
+          "review_count": 1523,
+          "nps_score": 88.0,
+          "sentiment_score": 0.84,
+          "url": "https://www.capterra.com/p/chatgpt/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161157"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.462866"
+    },
+    "anthropic": {
+      "company_name": "anthropic",
+      "consensus_score": 85.0,
+      "avg_rating": 4.5,
+      "total_reviews": 342,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "Claude",
+          "company_name": "anthropic",
+          "rating": 4.5,
+          "review_count": 342,
+          "nps_score": 85.0,
+          "sentiment_score": 0.8,
+          "url": "https://www.g2.com/products/claude/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161158"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.462900"
+    },
+    "microsoft": {
+      "company_name": "microsoft",
+      "consensus_score": 86.0,
+      "avg_rating": 4.47,
+      "total_reviews": 2768,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "GitHub Copilot",
+          "company_name": "microsoft",
+          "rating": 4.5,
+          "review_count": 1876,
+          "nps_score": 87.0,
+          "sentiment_score": 0.8,
+          "url": "https://www.g2.com/products/github-copilot/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161160"
+        },
+        {
+          "source": "g2",
+          "product_name": "Microsoft Copilot",
+          "company_name": "microsoft",
+          "rating": 4.4,
+          "review_count": 892,
+          "nps_score": 84.0,
+          "sentiment_score": 0.76,
+          "url": "https://www.g2.com/products/microsoft-copilot/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161161"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.462922"
+    },
+    "notion": {
+      "company_name": "notion",
+      "consensus_score": 89.0,
+      "avg_rating": 4.6,
+      "total_reviews": 5234,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "Notion AI",
+          "company_name": "notion",
+          "rating": 4.6,
+          "review_count": 5234,
+          "nps_score": 89.0,
+          "sentiment_score": 0.84,
+          "url": "https://www.g2.com/products/notion/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161162"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.462934"
+    },
+    "grammarly": {
+      "company_name": "grammarly",
+      "consensus_score": 91.0,
+      "avg_rating": 4.7,
+      "total_reviews": 8921,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "Grammarly",
+          "company_name": "grammarly",
+          "rating": 4.7,
+          "review_count": 8921,
+          "nps_score": 91.0,
+          "sentiment_score": 0.88,
+          "url": "https://www.g2.com/products/grammarly/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161163"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.462945"
+    },
+    "jasper": {
+      "company_name": "jasper",
+      "consensus_score": 90.0,
+      "avg_rating": 4.7,
+      "total_reviews": 1234,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "Jasper AI",
+          "company_name": "jasper",
+          "rating": 4.7,
+          "review_count": 1234,
+          "nps_score": 90.0,
+          "sentiment_score": 0.88,
+          "url": "https://www.g2.com/products/jasper/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161164"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.462955"
+    },
+    "copy-ai": {
+      "company_name": "copy-ai",
+      "consensus_score": 90.0,
+      "avg_rating": 4.7,
+      "total_reviews": 892,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "Copy.ai",
+          "company_name": "copy-ai",
+          "rating": 4.7,
+          "review_count": 892,
+          "nps_score": 90.0,
+          "sentiment_score": 0.88,
+          "url": "https://www.g2.com/products/copy-ai/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161166"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.462966"
+    },
+    "perplexity": {
+      "company_name": "perplexity",
+      "consensus_score": 94.0,
+      "avg_rating": 4.8,
+      "total_reviews": 3421,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "producthunt",
+          "product_name": "Perplexity AI",
+          "company_name": "perplexity",
+          "rating": 4.8,
+          "review_count": 3421,
+          "nps_score": 94.0,
+          "sentiment_score": 0.92,
+          "url": "https://www.producthunt.com/products/perplexity",
+          "scraped_at": "2026-01-22T15:40:15.161167"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.462977"
+    },
+    "cursor": {
+      "company_name": "cursor",
+      "consensus_score": 95.6,
+      "avg_rating": 4.89,
+      "total_reviews": 4755,
+      "source_count": 2,
+      "confidence": "high",
+      "products": [
+        {
+          "source": "producthunt",
+          "product_name": "Cursor",
+          "company_name": "cursor",
+          "rating": 4.9,
+          "review_count": 4521,
+          "nps_score": 96.0,
+          "sentiment_score": 0.96,
+          "url": "https://www.producthunt.com/products/cursor",
+          "scraped_at": "2026-01-22T15:40:15.161168"
+        },
+        {
+          "source": "g2",
+          "product_name": "Cursor",
+          "company_name": "cursor",
+          "rating": 4.6,
+          "review_count": 234,
+          "nps_score": 88.0,
+          "sentiment_score": 0.84,
+          "url": "https://www.g2.com/products/cursor/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161169"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.462993"
+    },
+    "midjourney": {
+      "company_name": "midjourney",
+      "consensus_score": 94.0,
+      "avg_rating": 4.8,
+      "total_reviews": 5234,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "producthunt",
+          "product_name": "Midjourney",
+          "company_name": "midjourney",
+          "rating": 4.8,
+          "review_count": 5234,
+          "nps_score": 94.0,
+          "sentiment_score": 0.92,
+          "url": "https://www.producthunt.com/products/midjourney",
+          "scraped_at": "2026-01-22T15:40:15.161170"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463005"
+    },
+    "runway": {
+      "company_name": "runway",
+      "consensus_score": 85.0,
+      "avg_rating": 4.5,
+      "total_reviews": 187,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "Runway",
+          "company_name": "runway",
+          "rating": 4.5,
+          "review_count": 187,
+          "nps_score": 85.0,
+          "sentiment_score": 0.8,
+          "url": "https://www.g2.com/products/runway/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161171"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463015"
+    },
+    "elevenlabs": {
+      "company_name": "elevenlabs",
+      "consensus_score": 91.0,
+      "avg_rating": 4.7,
+      "total_reviews": 2341,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "producthunt",
+          "product_name": "ElevenLabs",
+          "company_name": "elevenlabs",
+          "rating": 4.7,
+          "review_count": 2341,
+          "nps_score": 91.0,
+          "sentiment_score": 0.88,
+          "url": "https://www.producthunt.com/products/elevenlabs",
+          "scraped_at": "2026-01-22T15:40:15.161172"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463027"
+    },
+    "huggingface": {
+      "company_name": "huggingface",
+      "consensus_score": 88.0,
+      "avg_rating": 4.6,
+      "total_reviews": 421,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "Hugging Face",
+          "company_name": "huggingface",
+          "rating": 4.6,
+          "review_count": 421,
+          "nps_score": 88.0,
+          "sentiment_score": 0.84,
+          "url": "https://www.g2.com/products/hugging-face/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161173"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463037"
+    },
+    "databricks": {
+      "company_name": "databricks",
+      "consensus_score": 86.0,
+      "avg_rating": 4.5,
+      "total_reviews": 1234,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "Databricks",
+          "company_name": "databricks",
+          "rating": 4.5,
+          "review_count": 1234,
+          "nps_score": 86.0,
+          "sentiment_score": 0.8,
+          "url": "https://www.g2.com/products/databricks/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161174"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463049"
+    },
+    "scale-ai": {
+      "company_name": "scale-ai",
+      "consensus_score": 82.0,
+      "avg_rating": 4.4,
+      "total_reviews": 87,
+      "source_count": 1,
+      "confidence": "low",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "Scale AI",
+          "company_name": "scale-ai",
+          "rating": 4.4,
+          "review_count": 87,
+          "nps_score": 82.0,
+          "sentiment_score": 0.76,
+          "url": "https://www.g2.com/products/scale-ai/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161175"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463064"
+    },
+    "weights-biases": {
+      "company_name": "weights-biases",
+      "consensus_score": 94.0,
+      "avg_rating": 4.8,
+      "total_reviews": 342,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "Weights & Biases",
+          "company_name": "weights-biases",
+          "rating": 4.8,
+          "review_count": 342,
+          "nps_score": 94.0,
+          "sentiment_score": 0.92,
+          "url": "https://www.g2.com/products/weights-biases/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161176"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463074"
+    },
+    "deepl": {
+      "company_name": "deepl",
+      "consensus_score": 88.0,
+      "avg_rating": 4.6,
+      "total_reviews": 567,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "DeepL",
+          "company_name": "deepl",
+          "rating": 4.6,
+          "review_count": 567,
+          "nps_score": 88.0,
+          "sentiment_score": 0.84,
+          "url": "https://www.g2.com/products/deepl/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161177"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463085"
+    },
+    "otter-ai": {
+      "company_name": "otter-ai",
+      "consensus_score": 82.0,
+      "avg_rating": 4.4,
+      "total_reviews": 892,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "Otter.ai",
+          "company_name": "otter-ai",
+          "rating": 4.4,
+          "review_count": 892,
+          "nps_score": 82.0,
+          "sentiment_score": 0.76,
+          "url": "https://www.g2.com/products/otter-ai/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161178"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463095"
+    },
+    "synthesia": {
+      "company_name": "synthesia",
+      "consensus_score": 90.0,
+      "avg_rating": 4.7,
+      "total_reviews": 432,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "Synthesia",
+          "company_name": "synthesia",
+          "rating": 4.7,
+          "review_count": 432,
+          "nps_score": 90.0,
+          "sentiment_score": 0.88,
+          "url": "https://www.g2.com/products/synthesia/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161179"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463105"
+    },
+    "descript": {
+      "company_name": "descript",
+      "consensus_score": 86.0,
+      "avg_rating": 4.5,
+      "total_reviews": 654,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "Descript",
+          "company_name": "descript",
+          "rating": 4.5,
+          "review_count": 654,
+          "nps_score": 86.0,
+          "sentiment_score": 0.8,
+          "url": "https://www.g2.com/products/descript/reviews",
+          "scraped_at": "2026-01-22T15:40:15.161180"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463115"
+    },
+    "deepseek": {
+      "company_name": "deepseek",
+      "consensus_score": 96.0,
+      "avg_rating": 4.9,
+      "total_reviews": 8234,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "producthunt",
+          "product_name": "DeepSeek V3",
+          "company_name": "deepseek",
+          "rating": 4.9,
+          "review_count": 8234,
+          "nps_score": 96.0,
+          "sentiment_score": 0.96,
+          "url": "https://www.producthunt.com/products/deepseek",
+          "scraped_at": "2026-01-22T15:40:15.161181"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463125"
+    },
+    "moonshot-ai": {
+      "company_name": "moonshot-ai",
+      "consensus_score": 94.0,
+      "avg_rating": 4.8,
+      "total_reviews": 45000,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "appstore",
+          "product_name": "Kimi",
+          "company_name": "moonshot-ai",
+          "rating": 4.8,
+          "review_count": 45000,
+          "nps_score": 94.0,
+          "sentiment_score": 0.92,
+          "url": "https://apps.apple.com/app/kimi",
+          "scraped_at": "2026-01-22T15:40:15.161182"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463135"
+    },
+    "zhipu-ai": {
+      "company_name": "zhipu-ai",
+      "consensus_score": 86.0,
+      "avg_rating": 4.5,
+      "total_reviews": 1234,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "producthunt",
+          "product_name": "ChatGLM",
+          "company_name": "zhipu-ai",
+          "rating": 4.5,
+          "review_count": 1234,
+          "nps_score": 86.0,
+          "sentiment_score": 0.8,
+          "url": "https://www.producthunt.com/products/chatglm",
+          "scraped_at": "2026-01-22T15:40:15.161183"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463146"
+    },
+    "minimax": {
+      "company_name": "minimax",
+      "consensus_score": 90.0,
+      "avg_rating": 4.7,
+      "total_reviews": 2341,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "producthunt",
+          "product_name": "Hailuo AI",
+          "company_name": "minimax",
+          "rating": 4.7,
+          "review_count": 2341,
+          "nps_score": 90.0,
+          "sentiment_score": 0.88,
+          "url": "https://www.producthunt.com/products/hailuo-ai",
+          "scraped_at": "2026-01-22T15:40:15.161184"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463157"
+    },
+    "01-ai": {
+      "company_name": "01-ai",
+      "consensus_score": 82.0,
+      "avg_rating": 4.4,
+      "total_reviews": 876,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "producthunt",
+          "product_name": "Yi",
+          "company_name": "01-ai",
+          "rating": 4.4,
+          "review_count": 876,
+          "nps_score": 82.0,
+          "sentiment_score": 0.76,
+          "url": "https://www.producthunt.com/products/yi",
+          "scraped_at": "2026-01-22T15:40:15.161185"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463166"
+    },
+    "sensetime": {
+      "company_name": "sensetime",
+      "consensus_score": 80.0,
+      "avg_rating": 4.3,
+      "total_reviews": 123,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "g2",
+          "product_name": "SenseTime",
+          "company_name": "sensetime",
+          "rating": 4.3,
+          "review_count": 123,
+          "nps_score": 80.0,
+          "sentiment_score": 0.72,
+          "url": "https://www.g2.com/products/sensetime",
+          "scraped_at": "2026-01-22T15:40:15.161186"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463176"
+    },
+    "iflytek": {
+      "company_name": "iflytek",
+      "consensus_score": 88.0,
+      "avg_rating": 4.6,
+      "total_reviews": 28000,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "appstore",
+          "product_name": "\u8baf\u98de\u661f\u706b",
+          "company_name": "iflytek",
+          "rating": 4.6,
+          "review_count": 28000,
+          "nps_score": 88.0,
+          "sentiment_score": 0.84,
+          "url": "https://apps.apple.com/app/xunfei",
+          "scraped_at": "2026-01-22T15:40:15.161187"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463187"
+    },
+    "baidu-ai": {
+      "company_name": "baidu-ai",
+      "consensus_score": 86.0,
+      "avg_rating": 4.5,
+      "total_reviews": 120000,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "appstore",
+          "product_name": "\u6587\u5fc3\u4e00\u8a00",
+          "company_name": "baidu-ai",
+          "rating": 4.5,
+          "review_count": 120000,
+          "nps_score": 86.0,
+          "sentiment_score": 0.8,
+          "url": "https://apps.apple.com/app/wenxin",
+          "scraped_at": "2026-01-22T15:40:15.161188"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463196"
+    },
+    "alibaba-ai": {
+      "company_name": "alibaba-ai",
+      "consensus_score": 88.0,
+      "avg_rating": 4.6,
+      "total_reviews": 85000,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "appstore",
+          "product_name": "\u901a\u4e49\u5343\u95ee",
+          "company_name": "alibaba-ai",
+          "rating": 4.6,
+          "review_count": 85000,
+          "nps_score": 88.0,
+          "sentiment_score": 0.84,
+          "url": "https://apps.apple.com/app/tongyi",
+          "scraped_at": "2026-01-22T15:40:15.161189"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463206"
+    },
+    "bytedance-ai": {
+      "company_name": "bytedance-ai",
+      "consensus_score": 90.0,
+      "avg_rating": 4.7,
+      "total_reviews": 250000,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "appstore",
+          "product_name": "\u8c46\u5305",
+          "company_name": "bytedance-ai",
+          "rating": 4.7,
+          "review_count": 250000,
+          "nps_score": 90.0,
+          "sentiment_score": 0.88,
+          "url": "https://apps.apple.com/app/doubao",
+          "scraped_at": "2026-01-22T15:40:15.161190"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463217"
+    },
+    "unitree": {
+      "company_name": "unitree",
+      "consensus_score": 88.0,
+      "avg_rating": 4.6,
+      "total_reviews": 1543,
+      "source_count": 1,
+      "confidence": "medium",
+      "products": [
+        {
+          "source": "producthunt",
+          "product_name": "Unitree Go2",
+          "company_name": "unitree",
+          "rating": 4.6,
+          "review_count": 1543,
+          "nps_score": 88.0,
+          "sentiment_score": 0.84,
+          "url": "https://www.producthunt.com/products/unitree",
+          "scraped_at": "2026-01-22T15:40:15.161191"
+        }
+      ],
+      "last_updated": "2026-01-22T15:40:27.463228"
+    }
+  }
+}

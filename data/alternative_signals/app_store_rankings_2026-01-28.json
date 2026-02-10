@@ -1,0 +1,28 @@
+{
+  "source": "app_store_productivity",
+  "timestamp": "2026-01-28T10:30:00+08:00",
+  "category": "Productivity",
+  "chart": "Top Free",
+  "ai_apps": [
+    {"rank": 1, "name": "ChatGPT", "company": "OpenAI", "tagline": "The official app by OpenAI"},
+    {"rank": 2, "name": "Google Gemini", "company": "Google", "tagline": "Your AI assistant from Google"},
+    {"rank": 4, "name": "Grok", "company": "xAI", "tagline": "World's Smartest AI Advisor"},
+    {"rank": 18, "name": "Microsoft Copilot", "company": "Microsoft", "tagline": "Your AI companion"},
+    {"rank": 24, "name": "Claude by Anthropic", "company": "Anthropic", "tagline": "AI assistant for life & work"},
+    {"rank": 25, "name": "Speechify", "company": "Speechify", "tagline": "Text to Speech, AI Dictation"}
+  ],
+  "insights": {
+    "openai_dominance": "ChatGPT holds #1 position",
+    "google_gemini": "Strong #2, competing directly with ChatGPT",
+    "grok_surprise": "xAI's Grok at #4, strong consumer traction",
+    "claude_position": "#24 - room to grow in consumer market",
+    "copilot_mid_tier": "Microsoft Copilot at #18, enterprise focus may limit consumer ranking"
+  },
+  "signals": {
+    "openai": {"app_rank": 1, "signal": "bullish", "strength": 10},
+    "google": {"app_rank": 2, "signal": "bullish", "strength": 9},
+    "xai": {"app_rank": 4, "signal": "bullish", "strength": 8},
+    "microsoft": {"app_rank": 18, "signal": "neutral", "strength": 5},
+    "anthropic": {"app_rank": 24, "signal": "neutral", "strength": 4}
+  }
+}

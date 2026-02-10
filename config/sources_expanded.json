@@ -1,0 +1,285 @@
+{
+  "description": "Expanded AI News Sources - Added Jan 28, 2026",
+  "version": "2.0.0",
+  
+  "reddit_subreddits_expanded": {
+    "description": "Additional high-value AI subreddits",
+    "new_subreddits": [
+      {
+        "name": "LLMDevs",
+        "focus": "LLM developers, prompting, fine-tuning",
+        "signal_type": "developer_sentiment"
+      },
+      {
+        "name": "Ollama",
+        "focus": "Local LLM running, open-source models",
+        "signal_type": "product_traction"
+      },
+      {
+        "name": "LangChain",
+        "focus": "AI application development, agents",
+        "signal_type": "developer_tools"
+      },
+      {
+        "name": "ArtificialIntelligence",
+        "focus": "General AI discussion (larger than r/artificial)",
+        "signal_type": "general_sentiment"
+      },
+      {
+        "name": "MLOps",
+        "focus": "ML infrastructure, deployment",
+        "signal_type": "enterprise_adoption"
+      },
+      {
+        "name": "DataEngineering",
+        "focus": "Data pipelines for ML",
+        "signal_type": "infrastructure"
+      },
+      {
+        "name": "datascience",
+        "focus": "Data science community",
+        "signal_type": "practitioner_sentiment"
+      },
+      {
+        "name": "computervision",
+        "focus": "CV applications",
+        "signal_type": "technical"
+      },
+      {
+        "name": "reinforcementlearning",
+        "focus": "RL research and applications",
+        "signal_type": "research"
+      },
+      {
+        "name": "PromptEngineering",
+        "focus": "Prompting techniques",
+        "signal_type": "practitioner"
+      },
+      {
+        "name": "AutoGPT",
+        "focus": "Autonomous agents",
+        "signal_type": "product_traction"
+      },
+      {
+        "name": "perplexity_ai",
+        "focus": "Perplexity product discussion",
+        "signal_type": "product_sentiment"
+      },
+      {
+        "name": "Notion",
+        "focus": "AI features in productivity tools",
+        "signal_type": "enterprise_adoption"
+      }
+    ]
+  },
+  
+  "tech_news_sources": {
+    "description": "Major tech news sites to add",
+    "sources": [
+      {
+        "id": "techcrunch_ai",
+        "name": "TechCrunch AI",
+        "url": "https://techcrunch.com/category/artificial-intelligence/",
+        "rss_url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+        "type": "rss",
+        "credibility_score": 8,
+        "relevance_weight": 9,
+        "categories": ["funding", "product_launch", "industry_news"]
+      },
+      {
+        "id": "venturebeat_ai",
+        "name": "VentureBeat AI",
+        "url": "https://venturebeat.com/category/ai/",
+        "rss_url": "https://venturebeat.com/category/ai/feed/",
+        "type": "rss",
+        "credibility_score": 8,
+        "relevance_weight": 9,
+        "categories": ["enterprise_ai", "research", "product"]
+      },
+      {
+        "id": "theverge_ai",
+        "name": "The Verge AI",
+        "url": "https://www.theverge.com/ai-artificial-intelligence",
+        "rss_url": "https://www.theverge.com/ai-artificial-intelligence/rss/index.xml",
+        "type": "rss",
+        "credibility_score": 8,
+        "relevance_weight": 8,
+        "categories": ["consumer_ai", "product", "policy"]
+      },
+      {
+        "id": "wired_ai",
+        "name": "Wired AI",
+        "url": "https://www.wired.com/tag/artificial-intelligence/",
+        "type": "web",
+        "credibility_score": 8,
+        "relevance_weight": 7,
+        "categories": ["analysis", "policy", "culture"]
+      },
+      {
+        "id": "arstechnica_ai",
+        "name": "Ars Technica AI",
+        "url": "https://arstechnica.com/ai/",
+        "rss_url": "https://feeds.arstechnica.com/arstechnica/technology-lab",
+        "type": "rss",
+        "credibility_score": 9,
+        "relevance_weight": 8,
+        "categories": ["technical", "analysis", "research"]
+      },
+      {
+        "id": "mit_tech_review",
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+        "rss_url": "https://www.technologyreview.com/feed/",
+        "type": "rss",
+        "credibility_score": 10,
+        "relevance_weight": 9,
+        "categories": ["research", "analysis", "policy"]
+      },
+      {
+        "id": "the_information",
+        "name": "The Information (requires subscription)",
+        "url": "https://www.theinformation.com/technology",
+        "type": "web",
+        "credibility_score": 10,
+        "relevance_weight": 10,
+        "categories": ["insider", "funding", "executive"],
+        "note": "Paywalled but high-value scoops"
+      },
+      {
+        "id": "semafor_tech",
+        "name": "Semafor Tech",
+        "url": "https://www.semafor.com/vertical/tech",
+        "type": "web",
+        "credibility_score": 8,
+        "relevance_weight": 8,
+        "categories": ["analysis", "policy", "global"]
+      }
+    ]
+  },
+  
+  "newsletters_blogs": {
+    "description": "High-signal newsletters and blogs",
+    "sources": [
+      {
+        "id": "stratechery",
+        "name": "Stratechery (Ben Thompson)",
+        "url": "https://stratechery.com",
+        "type": "rss",
+        "credibility_score": 10,
+        "relevance_weight": 10,
+        "categories": ["strategy", "analysis"],
+        "note": "Paywalled but extremely influential"
+      },
+      {
+        "id": "import_ai",
+        "name": "Import AI (Jack Clark)",
+        "url": "https://importai.substack.com",
+        "type": "rss",
+        "credibility_score": 10,
+        "relevance_weight": 10,
+        "categories": ["research", "policy", "insider"]
+      },
+      {
+        "id": "the_batch",
+        "name": "The Batch (Andrew Ng)",
+        "url": "https://www.deeplearning.ai/the-batch/",
+        "type": "web",
+        "credibility_score": 10,
+        "relevance_weight": 9,
+        "categories": ["research", "education"]
+      },
+      {
+        "id": "ai_supremacy",
+        "name": "AI Supremacy (Michael Spencer)",
+        "url": "https://aisupremacy.substack.com",
+        "type": "rss",
+        "credibility_score": 7,
+        "relevance_weight": 7,
+        "categories": ["analysis", "trends"]
+      },
+      {
+        "id": "one_useful_thing",
+        "name": "One Useful Thing (Ethan Mollick)",
+        "url": "https://www.oneusefulthing.org",
+        "type": "rss",
+        "credibility_score": 9,
+        "relevance_weight": 8,
+        "categories": ["applications", "productivity", "education"]
+      },
+      {
+        "id": "simon_willison",
+        "name": "Simon Willison's Weblog",
+        "url": "https://simonwillison.net",
+        "rss_url": "https://simonwillison.net/atom/everything/",
+        "type": "rss",
+        "credibility_score": 9,
+        "relevance_weight": 9,
+        "categories": ["technical", "llm", "tools"]
+      }
+    ]
+  },
+  
+  "research_sources": {
+    "description": "Academic and research sources",
+    "sources": [
+      {
+        "id": "semantic_scholar",
+        "name": "Semantic Scholar AI",
+        "url": "https://www.semanticscholar.org/search?q=artificial+intelligence&sort=relevance",
+        "type": "api",
+        "credibility_score": 10,
+        "relevance_weight": 7,
+        "categories": ["research", "papers"]
+      },
+      {
+        "id": "google_ai_blog",
+        "name": "Google AI Blog",
+        "url": "https://ai.googleblog.com",
+        "rss_url": "https://ai.googleblog.com/feeds/posts/default",
+        "type": "rss",
+        "credibility_score": 10,
+        "relevance_weight": 9,
+        "categories": ["research", "product"]
+      },
+      {
+        "id": "openai_blog",
+        "name": "OpenAI Blog",
+        "url": "https://openai.com/blog",
+        "type": "web",
+        "credibility_score": 10,
+        "relevance_weight": 10,
+        "categories": ["product", "research", "policy"]
+      },
+      {
+        "id": "anthropic_research",
+        "name": "Anthropic Research",
+        "url": "https://www.anthropic.com/research",
+        "type": "web",
+        "credibility_score": 10,
+        "relevance_weight": 10,
+        "categories": ["research", "safety"]
+      }
+    ]
+  },
+  
+  "x_twitter_accounts": {
+    "description": "High-value X/Twitter accounts to monitor (manual scrape)",
+    "accounts": [
+      {"handle": "@DarioAmodei", "entity": "Anthropic", "type": "executive"},
+      {"handle": "@sama", "entity": "OpenAI", "type": "executive"},
+      {"handle": "@elaboratories", "entity": "ElevenLabs", "type": "company"},
+      {"handle": "@deepaboratories", "entity": "DeepSeek", "type": "company"},
+      {"handle": "@kaboratoryAI", "entity": "Karpathy", "type": "researcher"},
+      {"handle": "@ylecun", "entity": "Meta AI", "type": "researcher"},
+      {"handle": "@demaboratories", "entity": "DeepMind", "type": "company"},
+      {"handle": "@AnthropicAI", "entity": "Anthropic", "type": "company"},
+      {"handle": "@OpenAI", "entity": "OpenAI", "type": "company"},
+      {"handle": "@GoogleAI", "entity": "Google", "type": "company"},
+      {"handle": "@MetaAI", "entity": "Meta", "type": "company"},
+      {"handle": "@rauchg", "entity": "Vercel", "type": "executive"},
+      {"handle": "@swyx", "entity": "AI Engineer", "type": "influencer"}
+    ]
+  },
+  
+  "linkedin_note": "LinkedIn aggressively blocks scrapers. Best approach: manual monitoring or use Sales Navigator API (expensive). Consider: following company pages manually and extracting signals during X scrapes."
+}

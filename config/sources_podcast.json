@@ -1,0 +1,98 @@
+{
+  "sources": [
+    {
+      "id": "all-in",
+      "name": "All-In Podcast",
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg",
+      "type": "youtube_podcast",
+      "enabled": true,
+      "categories": ["investing", "tech", "AI", "startups"],
+      "language": "en",
+      "credibility_score": 8,
+      "freshness_hours": 168
+    },
+    {
+      "id": "lex-fridman",
+      "name": "Lex Fridman Podcast",
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA",
+      "type": "youtube_podcast",
+      "enabled": true,
+      "categories": ["AI", "research", "philosophy", "technology"],
+      "language": "en",
+      "credibility_score": 9,
+      "freshness_hours": 168
+    },
+    {
+      "id": "no-priors",
+      "name": "No Priors",
+      "channel_id": "UCSI7h9hydQ40K5MJHnCrQvw",
+      "type": "youtube_podcast",
+      "enabled": true,
+      "categories": ["AI", "startups", "investing", "founders"],
+      "language": "en",
+      "credibility_score": 9,
+      "freshness_hours": 168
+    },
+    {
+      "id": "dwarkesh",
+      "name": "Dwarkesh Podcast",
+      "channel_id": "UCXl4i9dYBrFOabk0xGmbkRA",
+      "type": "youtube_podcast",
+      "enabled": true,
+      "categories": ["AI", "research", "technology", "history"],
+      "language": "en",
+      "credibility_score": 8,
+      "freshness_hours": 168
+    },
+    {
+      "id": "latent-space",
+      "name": "Latent Space",
+      "channel_id": "UCvi5jNRoRVm436TVAXet1kQ",
+      "type": "youtube_podcast",
+      "enabled": true,
+      "categories": ["AI", "engineering", "LLMs", "infrastructure"],
+      "language": "en",
+      "credibility_score": 9,
+      "freshness_hours": 168
+    },
+    {
+      "id": "lenny-podcast",
+      "name": "Lenny's Podcast",
+      "channel_id": "UC6t1O76G0jYXOAoYCm153dA",
+      "type": "youtube_podcast",
+      "enabled": true,
+      "categories": ["product", "growth", "startups", "leadership"],
+      "language": "en",
+      "credibility_score": 8,
+      "freshness_hours": 168
+    },
+    {
+      "id": "gradient-dissent",
+      "name": "Gradient Dissent",
+      "channel_id": "UC9ieyMPLacBbuTOsR0alldA",
+      "type": "youtube_podcast",
+      "enabled": true,
+      "categories": ["ML", "AI", "research", "tools"],
+      "language": "en",
+      "credibility_score": 8,
+      "freshness_hours": 168
+    },
+    {
+      "id": "practical-ai",
+      "name": "Practical AI",
+      "channel_id": "UCIRYeDQviNEmpYrJpMaHBiw",
+      "type": "youtube_podcast",
+      "enabled": true,
+      "categories": ["AI", "ML", "applications", "tutorials"],
+      "language": "en",
+      "credibility_score": 7,
+      "freshness_hours": 168
+    }
+  ],
+  "settings": {
+    "max_episodes_per_channel": 3,
+    "days_back": 7,
+    "min_duration_sec": 600,
+    "cache_transcripts": true
+  }
+}

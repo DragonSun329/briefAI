@@ -1,0 +1,391 @@
+{
+  "date": "2026-02-10",
+  "generated_at": "2026-02-10T11:31:38.897017",
+  "version": "2.1",
+  "summary": {
+    "total_metas": 1,
+    "total_bundles": 1,
+    "total_hypotheses": 1,
+    "top_mechanisms": {
+      "enterprise_adoption": 1
+    },
+    "metas_requiring_review": 0
+  },
+  "bundles": [
+    {
+      "meta_id": "meta_strong_v21",
+      "concept_slug": "slug_strong_v21",
+      "concept_name": "Enterprise AI Adoption Accelerating",
+      "maturity_stage": "trending",
+      "hypotheses": [
+        {
+          "hypothesis_id": "07a486cbcc835ef0",
+          "title": "Enterprise Adoption Accelerating",
+          "mechanism": "enterprise_adoption",
+          "claim": "Enterprise AI Adoption Accelerating suggests enterprise adoption acceleration, driven by proven ROI or compliance readiness.",
+          "why_now": "Signal is persistent for 5 days, accelerating, now trending, from independent sources.",
+          "evidence_used": {
+            "supporting_signals": [
+              "sig1",
+              "sig2"
+            ],
+            "source_categories": [
+              "technical",
+              "financial",
+              "media"
+            ],
+            "key_entities": [
+              "company_a"
+            ],
+            "key_quotes": [
+              "Enterprise AI contract volume increasing.",
+              "Multiple signals indicate enterprise adoption of AI is accelerating."
+            ]
+          },
+          "predicted_next_signals": [
+            {
+              "category": "financial",
+              "description": "Enterprise contract count and ARR mentions increase",
+              "example_sources": [
+                "sec",
+                "earnings_call",
+                "press_release"
+              ],
+              "expected_timeframe_days": 30,
+              "metric": "contract_count",
+              "direction": "up",
+              "canonical_metric": "contract_count",
+              "observable_query": {
+                "source": "sec",
+                "query": "((enterprise OR contract OR deal OR arr OR deployment)) AND (company_a)",
+                "aggregation": "count",
+                "window_days": 30,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "company_a"
+                  ],
+                  "primary_entity": "company_a",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "enterprise",
+                    "deployment",
+                    "contract"
+                  ],
+                  "query_hints": [
+                    "enterprise",
+                    "contract",
+                    "deal",
+                    "arr"
+                  ],
+                  "bucket_terms": [
+                    "deployment",
+                    "enterprise"
+                  ],
+                  "canonical_metric": "contract_count",
+                  "template_used": "filings:{entity} type:{filing_type}"
+                }
+              },
+              "measurable": true
+            },
+            {
+              "category": "technical",
+              "description": "Enterprise SDK releases and compliance certifications increase",
+              "example_sources": [
+                "github",
+                "company_blog",
+                "docs"
+              ],
+              "expected_timeframe_days": 14,
+              "metric": "sdk_release",
+              "direction": "up",
+              "canonical_metric": "sdk_release",
+              "observable_query": {
+                "source": "github",
+                "query": "repo:company_a metric:sdk_release",
+                "aggregation": "count",
+                "window_days": 14,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "company_a"
+                  ],
+                  "primary_entity": "company_a",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "enterprise",
+                    "deployment",
+                    "contract"
+                  ],
+                  "query_hints": [
+                    "enterprise",
+                    "sdk",
+                    "api",
+                    "soc2"
+                  ],
+                  "bucket_terms": [
+                    "deployment",
+                    "enterprise"
+                  ],
+                  "canonical_metric": "sdk_release",
+                  "template_used": "repo:{entity} metric:{metric}"
+                }
+              },
+              "measurable": true
+            },
+            {
+              "category": "social",
+              "description": "Job postings for AI integration roles increase",
+              "example_sources": [
+                "linkedin",
+                "glassdoor",
+                "indeed"
+              ],
+              "expected_timeframe_days": 14,
+              "metric": "job_postings_count",
+              "direction": "up",
+              "canonical_metric": "job_postings_count",
+              "observable_query": {
+                "source": "linkedin",
+                "query": "company:company_a jobs:(ai integration OR ml engineer OR mlops OR deployment OR enterprise OR contract)",
+                "aggregation": "count",
+                "window_days": 14,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "company_a"
+                  ],
+                  "primary_entity": "company_a",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "enterprise",
+                    "deployment",
+                    "contract"
+                  ],
+                  "query_hints": [
+                    "ai integration",
+                    "ml engineer",
+                    "mlops",
+                    "deployment"
+                  ],
+                  "bucket_terms": [
+                    "deployment",
+                    "enterprise"
+                  ],
+                  "canonical_metric": "job_postings_count",
+                  "template_used": "company:{entity} jobs:{keyword}"
+                }
+              },
+              "measurable": true
+            },
+            {
+              "category": "predictive",
+              "description": "Prediction market probability for enterprise AI milestones increases",
+              "example_sources": [
+                "polymarket",
+                "metaculus",
+                "manifold"
+              ],
+              "expected_timeframe_days": 7,
+              "metric": "probability_change",
+              "direction": "up",
+              "canonical_metric": "probability_change",
+              "observable_query": {
+                "source": "polymarket",
+                "query": "market:(enterprise ai OR adoption OR deployment OR enterprise OR contract)",
+                "aggregation": "delta",
+                "window_days": 7,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "company_a"
+                  ],
+                  "primary_entity": "company_a",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "enterprise",
+                    "deployment",
+                    "contract"
+                  ],
+                  "query_hints": [
+                    "enterprise ai",
+                    "adoption",
+                    "deployment"
+                  ],
+                  "bucket_terms": [
+                    "deployment",
+                    "enterprise"
+                  ],
+                  "canonical_metric": "probability_change",
+                  "template_used": "market:{keyword}"
+                }
+              },
+              "measurable": true
+            }
+          ],
+          "falsifiers": [
+            "Enterprise pilots fail to convert to production",
+            "Compliance or security concerns block adoption",
+            "ROI metrics disappoint causing project cancellations"
+          ],
+          "confidence": 0.824,
+          "confidence_breakdown": {
+            "base_from_meta_confidence": 0.429,
+            "diversity_bonus": 0.15,
+            "persistence_bonus": 0.1,
+            "independence_bonus": 0.085,
+            "specificity_bonus": 0.06,
+            "penalties_applied": [],
+            "final": 0.824
+          },
+          "review_required": false,
+          "debug": {
+            "rules_fired": [
+              "base_from_meta:0.78",
+              "category_diversity:3",
+              "persistence_days:5",
+              "independence:0.85",
+              "mechanism_hits:3"
+            ],
+            "scoring_terms": {
+              "meta_confidence": 0.78,
+              "category_count": 3,
+              "persistence_days": 5,
+              "independence_score": 0.85,
+              "evidence_strength": 1.0
+            },
+            "mechanism_keyword_hits": 3,
+            "mechanism_keywords_matched": [
+              "enterprise",
+              "deployment",
+              "contract"
+            ]
+          },
+          "mechanism_trace": {
+            "candidate_scores": {
+              "enterprise_adoption": 3,
+              "data_rights_ip": 1
+            },
+            "matched_terms": [
+              "enterprise",
+              "deployment",
+              "contract"
+            ],
+            "evidence_sources": [
+              "description",
+              "concept_name",
+              "mechanism_field",
+              "meta_insight",
+              "signal_name",
+              "mechanism_bucket",
+              "naming_reason",
+              "bucket_tags"
+            ],
+            "selection_reason": "highest_score",
+            "evidence_sources_primary": [
+              "concept_name",
+              "description",
+              "meta_insight",
+              "signal_name",
+              "bucket_tags"
+            ],
+            "evidence_sources_secondary": [
+              "mechanism_field",
+              "mechanism_bucket",
+              "naming_reason"
+            ]
+          },
+          "confidence_inputs": {
+            "meta_confidence_raw": 0.78,
+            "meta_to_hypothesis_scaling": 0.55
+          },
+          "confidence_debug": {
+            "base_scaled": 0.429,
+            "base_raw": 0.78,
+            "scaling_factor": 0.55
+          },
+          "falsifiers_v2": [
+            {
+              "text": "Enterprise pilots fail to convert to production",
+              "observable": {
+                "metric": "contract_count",
+                "direction": "down",
+                "window_days": 30,
+                "available": true
+              }
+            },
+            {
+              "text": "Compliance or security concerns block adoption",
+              "observable": {
+                "metric": "certification",
+                "direction": "down",
+                "window_days": 30,
+                "available": true
+              }
+            },
+            {
+              "text": "ROI metrics disappoint causing project cancellations",
+              "observable": {
+                "metric": "earnings_mentions",
+                "direction": "down",
+                "window_days": 90,
+                "available": true
+              }
+            }
+          ]
+        }
+      ],
+      "selected_hypothesis_id": "07a486cbcc835ef0",
+      "bundle_confidence": 0.824,
+      "generated_at": "2026-02-10T11:31:38.896931",
+      "version": "2.1",
+      "what_to_watch_next": [
+        "Prediction market probability for enterprise AI milestones increases",
+        "Enterprise SDK releases and compliance certifications increase",
+        "Job postings for AI integration roles increase"
+      ],
+      "watch_items": [
+        {
+          "description": "Prediction market probability for enterprise AI milestones increases",
+          "watch_priority_score": 0.912,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.82",
+            "measurable:True",
+            "timeframe:7d"
+          ],
+          "timeframe_bucket": "7d",
+          "timeframe_days": 7,
+          "measurable": true
+        },
+        {
+          "description": "Enterprise SDK releases and compliance certifications increase",
+          "watch_priority_score": 0.812,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.82",
+            "measurable:True",
+            "timeframe:14d"
+          ],
+          "timeframe_bucket": "14d",
+          "timeframe_days": 14,
+          "measurable": true
+        },
+        {
+          "description": "Job postings for AI integration roles increase",
+          "watch_priority_score": 0.812,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.82",
+            "measurable:True",
+            "timeframe:14d"
+          ],
+          "timeframe_bucket": "14d",
+          "timeframe_days": 14,
+          "measurable": true
+        }
+      ]
+    }
+  ]
+}

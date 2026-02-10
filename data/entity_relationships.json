@@ -1,0 +1,251 @@
+{
+  "version": "1.0",
+  "description": "Entity relationship graph for signal propagation and analysis",
+  "last_updated": "2026-01-26",
+  
+  "investment_relationships": {
+    "microsoft": {
+      "invested_in": ["openai", "mistral", "inflection", "figure"],
+      "investment_type": "strategic",
+      "notes": "OpenAI: $13B total, ~49% profit share"
+    },
+    "google": {
+      "invested_in": ["anthropic", "huggingface", "runway", "character"],
+      "investment_type": "strategic",
+      "notes": "Anthropic: $2B+ commitment"
+    },
+    "amazon": {
+      "invested_in": ["anthropic", "adept", "huggingface", "agility"],
+      "investment_type": "strategic",
+      "notes": "Anthropic: $4B investment"
+    },
+    "nvidia": {
+      "invested_in": ["cohere", "perplexity", "coreweave", "huggingface", "databricks", "together", "replicate", "inflection"],
+      "investment_type": "strategic",
+      "notes": "Invests in companies using their chips"
+    },
+    "oracle": {
+      "invested_in": ["cohere"],
+      "investment_type": "strategic",
+      "notes": "Cloud partnership"
+    },
+    "salesforce": {
+      "invested_in": ["anthropic", "cohere", "huggingface"],
+      "investment_type": "strategic"
+    },
+    "alibaba": {
+      "invested_in": ["moonshot", "baichuan", "01ai", "zhipu"],
+      "investment_type": "strategic",
+      "notes": "Major backer of Chinese LLM startups"
+    },
+    "tencent": {
+      "invested_in": ["minimax", "zhipu", "baichuan"],
+      "investment_type": "strategic"
+    },
+    "openai": {
+      "invested_in": ["1x", "figure"],
+      "investment_type": "strategic",
+      "notes": "Robotics partnerships"
+    }
+  },
+  
+  "partnership_mappings": {
+    "openai": {
+      "partners": ["microsoft", "apple"],
+      "partnership_type": "product_integration",
+      "products_affected": ["Azure OpenAI", "Apple Intelligence"]
+    },
+    "anthropic": {
+      "partners": ["google", "amazon"],
+      "partnership_type": "cloud_integration",
+      "products_affected": ["Google Cloud", "AWS Bedrock"]
+    },
+    "mistral": {
+      "partners": ["microsoft"],
+      "partnership_type": "cloud_integration",
+      "products_affected": ["Azure AI"]
+    },
+    "cohere": {
+      "partners": ["oracle", "nvidia"],
+      "partnership_type": "cloud_integration",
+      "products_affected": ["Oracle Cloud AI"]
+    },
+    "meta": {
+      "partners": ["microsoft"],
+      "partnership_type": "model_distribution",
+      "products_affected": ["Llama on Azure"]
+    },
+    "huggingface": {
+      "partners": ["google", "amazon", "nvidia", "microsoft"],
+      "partnership_type": "infrastructure",
+      "products_affected": ["Model hosting across clouds"]
+    },
+    "nvidia": {
+      "partners": ["microsoft", "google", "amazon", "oracle", "coreweave", "lambda"],
+      "partnership_type": "hardware_supply",
+      "products_affected": ["Cloud GPU instances"]
+    }
+  },
+  
+  "competitive_relationships": {
+    "ai-foundation": {
+      "competitors": ["openai", "anthropic", "google", "meta", "mistral", "cohere", "xai"],
+      "competition_type": "direct",
+      "market": "Foundation models"
+    },
+    "ai-foundation-cn": {
+      "competitors": ["deepseek", "zhipu", "moonshot", "baichuan", "01ai", "minimax", "alibaba", "baidu", "bytedance"],
+      "competition_type": "direct",
+      "market": "Chinese foundation models"
+    },
+    "ai-chips": {
+      "competitors": ["nvidia", "amd", "intel", "cerebras", "groq", "sambanova", "graphcore", "tenstorrent"],
+      "competition_type": "direct",
+      "market": "AI training/inference chips"
+    },
+    "ai-cloud": {
+      "competitors": ["aws", "gcp", "azure", "coreweave", "lambda", "together", "fireworks"],
+      "competition_type": "direct",
+      "market": "AI cloud infrastructure"
+    },
+    "ai-coding": {
+      "competitors": ["cursor", "github_copilot", "codeium", "tabnine", "replit", "sourcegraph"],
+      "competition_type": "direct",
+      "market": "AI coding assistants"
+    },
+    "ai-image": {
+      "competitors": ["midjourney", "stability", "dalle", "adobe_firefly"],
+      "competition_type": "direct",
+      "market": "Image generation"
+    },
+    "ai-video": {
+      "competitors": ["runway", "pika", "luma", "kling", "sora", "veo"],
+      "competition_type": "direct",
+      "market": "Video generation"
+    },
+    "ai-search": {
+      "competitors": ["perplexity", "google", "bing_copilot"],
+      "competition_type": "direct",
+      "market": "AI-powered search"
+    },
+    "autonomous-vehicles": {
+      "competitors": ["waymo", "cruise", "tesla", "aurora", "nuro"],
+      "competition_type": "direct",
+      "market": "Self-driving vehicles"
+    },
+    "robotics": {
+      "competitors": ["figure", "boston_dynamics", "1x", "unitree", "agility", "tesla"],
+      "competition_type": "direct",
+      "market": "Humanoid robotics"
+    }
+  },
+  
+  "supply_chain_dependencies": {
+    "nvidia": {
+      "depends_on": ["tsmc", "sk_hynix", "micron", "asml"],
+      "dependency_type": "manufacturing",
+      "critical_level": "high",
+      "notes": "TSMC for fab, HBM from SK Hynix/Micron"
+    },
+    "amd": {
+      "depends_on": ["tsmc", "sk_hynix", "micron"],
+      "dependency_type": "manufacturing",
+      "critical_level": "high"
+    },
+    "apple": {
+      "depends_on": ["tsmc"],
+      "dependency_type": "manufacturing",
+      "critical_level": "high"
+    },
+    "openai": {
+      "depends_on": ["nvidia", "microsoft"],
+      "dependency_type": "compute_and_capital",
+      "critical_level": "high"
+    },
+    "anthropic": {
+      "depends_on": ["nvidia", "google", "amazon"],
+      "dependency_type": "compute_and_capital",
+      "critical_level": "high"
+    },
+    "meta": {
+      "depends_on": ["nvidia"],
+      "dependency_type": "compute",
+      "critical_level": "high"
+    },
+    "xai": {
+      "depends_on": ["nvidia"],
+      "dependency_type": "compute",
+      "critical_level": "high",
+      "notes": "Building Colossus cluster with 100k H100s"
+    },
+    "coreweave": {
+      "depends_on": ["nvidia"],
+      "dependency_type": "hardware",
+      "critical_level": "critical",
+      "notes": "Entire business model depends on NVIDIA GPUs"
+    },
+    "tsmc": {
+      "depends_on": ["asml"],
+      "dependency_type": "equipment",
+      "critical_level": "critical",
+      "notes": "ASML EUV machines essential for advanced nodes"
+    }
+  },
+  
+  "talent_flows": {
+    "openai_to": ["anthropic", "inflection", "xai", "adept", "character", "cohere"],
+    "google_to": ["anthropic", "adept", "character", "openai", "inflection"],
+    "meta_to": ["anthropic", "openai", "mistral"],
+    "deepmind_to": ["openai", "inflection", "anthropic"]
+  },
+  
+  "signal_propagation_rules": {
+    "nvidia_news": {
+      "affects": ["all_ai_companies"],
+      "direction": "same",
+      "strength": 0.7,
+      "notes": "NVDA positive → AI sector positive"
+    },
+    "tsmc_news": {
+      "affects": ["nvidia", "amd", "apple", "qualcomm"],
+      "direction": "same",
+      "strength": 0.8
+    },
+    "openai_news": {
+      "affects": ["microsoft"],
+      "direction": "same",
+      "strength": 0.6
+    },
+    "anthropic_news": {
+      "affects": ["google", "amazon"],
+      "direction": "same",
+      "strength": 0.4
+    },
+    "regulation_news": {
+      "affects": ["all_ai_companies"],
+      "direction": "depends",
+      "strength": 0.5,
+      "notes": "Context-dependent"
+    },
+    "compute_shortage_news": {
+      "affects": ["nvidia", "coreweave", "lambda"],
+      "direction": "positive",
+      "strength": 0.6
+    },
+    "funding_round_news": {
+      "affects": ["sector_peers"],
+      "direction": "positive",
+      "strength": 0.3,
+      "notes": "Signals sector health"
+    }
+  },
+  
+  "entity_groups": {
+    "magnificent_7": ["apple", "microsoft", "google", "amazon", "meta", "nvidia", "tesla"],
+    "ai_hyperscalers": ["microsoft", "google", "amazon", "meta"],
+    "ai_chip_leaders": ["nvidia", "amd", "intel", "arm", "broadcom"],
+    "ai_foundry": ["openai", "anthropic", "google", "meta", "mistral", "cohere", "xai"],
+    "chinese_llm_leaders": ["alibaba", "baidu", "tencent", "bytedance", "deepseek", "zhipu", "moonshot"],
+    "gpu_cloud_providers": ["coreweave", "lambda", "together", "fireworks", "vast", "paperspace"]
+  }
+}
