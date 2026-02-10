@@ -1,6 +1,6 @@
 {
   "date": "2026-02-09",
-  "generated_at": "2026-02-10T10:41:59.685363",
+  "generated_at": "2026-02-10T14:27:05.529728",
   "version": "2.1",
   "summary": {
     "total_metas": 2,
@@ -36,11 +36,11 @@
               "media"
             ],
             "key_entities": [
-              "opus",
-              "china",
-              "anthropic",
               "claude",
-              "api"
+              "api",
+              "anthropic",
+              "opus",
+              "china"
             ],
             "key_quotes": [
               "Rolls fast mode cost dynamics shifting in ai market",
@@ -50,7 +50,7 @@
           "predicted_next_signals": [
             {
               "category": "financial",
-              "description": "Partnership announcements or revenue share changes indicating increase or decline",
+              "description": "Partnership announcements or revenue share changes",
               "example_sources": [
                 "sec",
                 "press_release",
@@ -58,37 +58,72 @@
               ],
               "expected_timeframe_days": 14,
               "metric": "revenue",
-              "direction": "change",
               "speculative": true,
               "canonical_metric": "arr",
               "observable_query": {
                 "source": "sec",
-                "query": "filings:{entity} type:{filing_type}",
+                "query": "(api) AND (opus)",
                 "aggregation": "sum",
                 "window_days": 14,
-                "expected_direction": "up"
-              }
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "opus",
+                    "claude",
+                    "anthropic"
+                  ],
+                  "primary_entity": "opus",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "api"
+                  ],
+                  "query_hints": [],
+                  "bucket_terms": [],
+                  "canonical_metric": "arr",
+                  "template_used": "filings:{entity} type:{filing_type}"
+                }
+              },
+              "measurable": true
             },
             {
               "category": "technical",
-              "description": "New API integrations or platform releases indicating increase or decline",
+              "description": "New API integrations or platform releases",
               "example_sources": [
                 "github",
                 "company_blog",
                 "docs"
               ],
               "expected_timeframe_days": 14,
-              "metric": "api",
-              "direction": "change",
+              "metric": "integration",
               "speculative": true,
-              "canonical_metric": "api_release",
+              "canonical_metric": "custom_metric",
               "observable_query": {
                 "source": "github",
-                "query": "repo:{entity} metric:api_release",
+                "query": "repo:opus metric:custom_metric",
                 "aggregation": "count",
                 "window_days": 14,
-                "expected_direction": "up"
-              }
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "opus",
+                    "claude",
+                    "anthropic"
+                  ],
+                  "primary_entity": "opus",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "api"
+                  ],
+                  "query_hints": [],
+                  "bucket_terms": [],
+                  "canonical_metric": "custom_metric",
+                  "template_used": "repo:{entity} metric:{metric}"
+                }
+              },
+              "measurable": false,
+              "measurable_reason": "no_canonical_metric_match"
             }
           ],
           "falsifiers": [
@@ -203,11 +238,11 @@
               "media"
             ],
             "key_entities": [
-              "opus",
-              "china",
-              "anthropic",
               "claude",
-              "api"
+              "api",
+              "anthropic",
+              "opus",
+              "china"
             ],
             "key_quotes": [
               "Rolls fast mode cost dynamics shifting in ai market",
@@ -217,45 +252,91 @@
           "predicted_next_signals": [
             {
               "category": "media",
-              "description": "Continued coverage or follow-up stories (watch for metric changes) indicating increase or decline",
+              "description": "Article count for related coverage continues to increase",
               "example_sources": [
                 "techmeme",
                 "twitter",
                 "reddit"
               ],
               "expected_timeframe_days": 7,
-              "metric": "metric",
-              "direction": "change",
+              "metric": "article_count",
+              "direction": "up",
               "speculative": true,
-              "canonical_metric": "custom_metric",
+              "canonical_metric": "article_count",
               "observable_query": {
                 "source": "techmeme",
-                "query": "search:custom_metric",
+                "query": "search:(coverage OR news OR story OR update OR media)",
                 "aggregation": "count",
                 "window_days": 7,
-                "expected_direction": "up"
-              }
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "opus",
+                    "claude",
+                    "anthropic"
+                  ],
+                  "primary_entity": "opus",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "media"
+                  ],
+                  "query_hints": [
+                    "coverage",
+                    "news",
+                    "story",
+                    "update"
+                  ],
+                  "bucket_terms": [],
+                  "canonical_metric": "article_count",
+                  "template_used": "search:{keyword}"
+                }
+              },
+              "measurable": true
             },
             {
               "category": "social",
-              "description": "Social engagement metrics and discussions indicating increase or decline",
+              "description": "Discussion volume and engagement rate increase",
               "example_sources": [
                 "twitter",
                 "reddit",
                 "hackernews"
               ],
               "expected_timeframe_days": 7,
-              "metric": "metric",
-              "direction": "change",
+              "metric": "discussion_volume",
+              "direction": "up",
               "speculative": true,
-              "canonical_metric": "custom_metric",
+              "canonical_metric": "discussion_volume",
               "observable_query": {
                 "source": "twitter",
-                "query": "keyword:custom_metric from:{entity}",
+                "query": "keyword:(discussion OR reaction OR comment OR thread OR media) from:opus",
                 "aggregation": "count",
                 "window_days": 7,
-                "expected_direction": "up"
-              }
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "opus",
+                    "claude",
+                    "anthropic"
+                  ],
+                  "primary_entity": "opus",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "media"
+                  ],
+                  "query_hints": [
+                    "discussion",
+                    "reaction",
+                    "comment",
+                    "thread"
+                  ],
+                  "bucket_terms": [],
+                  "canonical_metric": "keyword_frequency",
+                  "template_used": "keyword:{keyword} from:{entity}"
+                }
+              },
+              "measurable": true
             }
           ],
           "falsifiers": [
@@ -355,43 +436,49 @@
       ],
       "selected_hypothesis_id": "66a137e1d3439066",
       "bundle_confidence": 0.278,
-      "generated_at": "2026-02-10T10:41:59.684680",
+      "generated_at": "2026-02-10T14:27:05.519013",
       "version": "2.1",
       "what_to_watch_next": [
-        "Partnership announcements or revenue share changes indicating increase or decline",
-        "New API integrations or platform releases indicating increase or decline",
-        "Continued coverage or follow-up stories"
+        "Article count for related coverage continues to increase",
+        "Discussion volume and engagement rate increase",
+        "Partnership announcements or revenue share changes"
       ],
       "watch_items": [
         {
-          "description": "Partnership announcements or revenue share changes indicating increase or decline",
-          "watch_priority_score": 0.5388,
+          "description": "Article count for related coverage continues to increase",
+          "watch_priority_score": 0.6388,
           "watch_priority_reason": [
             "hypothesis_confidence:0.28",
             "measurable:True",
-            "timeframe:14d"
-          ],
-          "timeframe_bucket": "14d"
-        },
-        {
-          "description": "New API integrations or platform releases indicating increase or decline",
-          "watch_priority_score": 0.5388,
-          "watch_priority_reason": [
-            "hypothesis_confidence:0.28",
-            "measurable:True",
-            "timeframe:14d"
-          ],
-          "timeframe_bucket": "14d"
-        },
-        {
-          "description": "Continued coverage or follow-up stories",
-          "watch_priority_score": 0.4888,
-          "watch_priority_reason": [
-            "hypothesis_confidence:0.28",
-            "measurable:False",
             "timeframe:7d"
           ],
-          "timeframe_bucket": "7d"
+          "timeframe_bucket": "7d",
+          "timeframe_days": 7,
+          "measurable": true
+        },
+        {
+          "description": "Discussion volume and engagement rate increase",
+          "watch_priority_score": 0.6388,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.28",
+            "measurable:True",
+            "timeframe:7d"
+          ],
+          "timeframe_bucket": "7d",
+          "timeframe_days": 7,
+          "measurable": true
+        },
+        {
+          "description": "Partnership announcements or revenue share changes",
+          "watch_priority_score": 0.5388,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.28",
+            "measurable:True",
+            "timeframe:14d"
+          ],
+          "timeframe_bucket": "14d",
+          "timeframe_days": 14,
+          "measurable": true
         }
       ]
     },
@@ -418,16 +505,16 @@
               "media"
             ],
             "key_entities": [
-              "section",
-              "meta",
               "google",
+              "section",
               "china",
-              "us",
-              "apple's",
-              "pro",
-              "alphabet",
               "apple",
-              "amazon"
+              "amazon",
+              "us",
+              "meta",
+              "apple's",
+              "alphabet",
+              "pro"
             ],
             "key_quotes": [
               "Ai ecosystem dynamics shifting"
@@ -436,14 +523,12 @@
           "predicted_next_signals": [
             {
               "category": "media",
-              "description": "Monitor for substantive developments (watch for metric changes) indicating increase or decline",
+              "description": "Monitor for substantive developments",
               "example_sources": [
                 "techmeme",
                 "twitter"
               ],
               "expected_timeframe_days": 7,
-              "metric": "metric",
-              "direction": "change",
               "speculative": true,
               "canonical_metric": "custom_metric",
               "observable_query": {
@@ -451,15 +536,32 @@
                 "query": "search:custom_metric",
                 "aggregation": "count",
                 "window_days": 7,
-                "expected_direction": "up"
-              }
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "google",
+                    "meta",
+                    "amazon"
+                  ],
+                  "primary_entity": "google",
+                  "concept_entity": null,
+                  "mechanism_terms": [],
+                  "query_hints": [],
+                  "bucket_terms": [],
+                  "canonical_metric": "custom_metric",
+                  "template_used": "search:{keyword}"
+                }
+              },
+              "measurable": false,
+              "measurable_reason": "no_canonical_metric_match"
             }
           ],
           "falsifiers": [
             "Pattern resolves into clear mechanism",
             "Additional corroborating signals emerge"
           ],
-          "confidence": 0.343,
+          "confidence": 0.243,
           "confidence_breakdown": {
             "base_from_meta_confidence": 0.248,
             "diversity_bonus": 0.1,
@@ -467,9 +569,10 @@
             "independence_bonus": 0.075,
             "specificity_bonus": 0.0,
             "penalties_applied": [
+              "generic_predictions:-0.1",
               "weak_mechanism:-0.1"
             ],
-            "final": 0.343
+            "final": 0.243
           },
           "review_required": true,
           "debug": {
@@ -479,6 +582,7 @@
               "persistence_days:1",
               "independence:0.75",
               "mechanism_hits:0",
+              "penalty:generic_predictions",
               "penalty:weak_mechanism"
             ],
             "scoring_terms": {
@@ -536,8 +640,8 @@
         }
       ],
       "selected_hypothesis_id": "db11c15e09ac397b",
-      "bundle_confidence": 0.343,
-      "generated_at": "2026-02-10T10:41:59.685315",
+      "bundle_confidence": 0.243,
+      "generated_at": "2026-02-10T14:27:05.529568",
       "version": "2.1",
       "what_to_watch_next": [
         "Monitor for substantive developments"
@@ -545,13 +649,16 @@
       "watch_items": [
         {
           "description": "Monitor for substantive developments",
-          "watch_priority_score": 0.5214,
+          "watch_priority_score": 0.4714,
           "watch_priority_reason": [
-            "hypothesis_confidence:0.34",
+            "hypothesis_confidence:0.24",
             "measurable:False",
+            "reason:no_canonical_metric_match",
             "timeframe:7d"
           ],
-          "timeframe_bucket": "7d"
+          "timeframe_bucket": "7d",
+          "timeframe_days": 7,
+          "measurable": false
         }
       ]
     }

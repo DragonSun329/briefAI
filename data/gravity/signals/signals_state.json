@@ -1,6 +1,6 @@
 {
   "version": "2.3",
-  "updated_at": "2026-02-10T09:16:03.900504",
+  "updated_at": "2026-02-10T14:26:57.469993",
   "signal_count": 14,
   "signals": [
     {
@@ -136,17 +136,38 @@
           "buckets": [],
           "title": "Anthropic rolls out a fast mode for Claude Opus 4.6 in research preview, saying it offers the same model quality 2.5 times faster but costs six times more",
           "url": "https://simonwillison.net/2026/Feb/7/claude-fast-mode/"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "1c7f09062b1b",
+          "rank_score": 7.5,
+          "gravity_score": 7.5,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Simonwillison"
+          ],
+          "domains": [
+            "simonwillison.net"
+          ],
+          "entities": [
+            "anthropic",
+            "claude",
+            "opus"
+          ],
+          "buckets": [],
+          "title": "Anthropic rolls out a fast mode for Claude Opus 4.6 in research preview, saying it offers the same model quality 2.5 times faster but costs six times more",
+          "url": "https://simonwillison.net/2026/Feb/7/claude-fast-mode/"
         }
       ],
       "metrics": {
-        "mentions_7d": 6,
-        "mentions_21d": 6,
+        "mentions_7d": 7,
+        "mentions_21d": 7,
         "coverage_sources_7d": 1,
         "coverage_domains_7d": 1,
         "avg_gravity_7d": 7.5,
-        "velocity": 6.0,
+        "velocity": 7.0,
         "acceleration": 1.0,
-        "confidence": 0.567
+        "confidence": 0.592
       },
       "profile": {
         "top_entities": [
@@ -549,7 +570,7 @@
       "_hysteresis": {
         "consecutive_mainstream_days": 0,
         "consecutive_fading_weeks": 0,
-        "last_velocity": 6.0
+        "last_velocity": 7.0
       }
     },
     {
@@ -679,17 +700,37 @@
           "buckets": [],
           "title": "How Anthropic's bet on enterprise users is paying off; sources: Anthropic's guidance to investors claims annualized revenue will exceed $30B by the end of 2026",
           "url": "https://www.ft.com/content/a75555a6-24c3-4468-aba9-7fe12b5def31?accessToken=zwAGSjHgWEiYkdOnVVWmJMNEaNOrqX_hK13vMQ.MEQCIDs3XjaBZUL2KOnciRZbCAqqzCUwunmkYUAA6UEeFjvXAiBFV0O6hl3sd0N9NI2JjB7qlsREziD9CbdrGmwheChuAA&sharetype=gift&token=fe4f4fac-e494-4463-8bdc-4ce56416cabf"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "e3ecbb328197",
+          "rank_score": 6.0,
+          "gravity_score": 6.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Ft"
+          ],
+          "domains": [
+            "ft.com"
+          ],
+          "entities": [
+            "anthropic",
+            "anthropic's"
+          ],
+          "buckets": [],
+          "title": "How Anthropic's bet on enterprise users is paying off; sources: Anthropic's guidance to investors claims annualized revenue will exceed $30B by the end of 2026",
+          "url": "https://www.ft.com/content/a75555a6-24c3-4468-aba9-7fe12b5def31?accessToken=zwAGSjHgWEiYkdOnVVWmJMNEaNOrqX_hK13vMQ.MEQCIDs3XjaBZUL2KOnciRZbCAqqzCUwunmkYUAA6UEeFjvXAiBFV0O6hl3sd0N9NI2JjB7qlsREziD9CbdrGmwheChuAA&sharetype=gift&token=fe4f4fac-e494-4463-8bdc-4ce56416cabf"
         }
       ],
       "metrics": {
-        "mentions_7d": 6,
-        "mentions_21d": 6,
+        "mentions_7d": 7,
+        "mentions_21d": 7,
         "coverage_sources_7d": 1,
         "coverage_domains_7d": 1,
         "avg_gravity_7d": 6.0,
-        "velocity": 6.0,
+        "velocity": 7.0,
         "acceleration": 1.0,
-        "confidence": 0.567
+        "confidence": 0.592
       },
       "profile": {
         "top_entities": [
@@ -1091,7 +1132,7 @@
       "_hysteresis": {
         "consecutive_mainstream_days": 0,
         "consecutive_fading_weeks": 0,
-        "last_velocity": 6.0
+        "last_velocity": 7.0
       }
     },
     {
@@ -1239,17 +1280,40 @@
           "buckets": [],
           "title": "Blackstone and Coatue grant a $10B loan to Australian AI infrastructure startup Firmus for data center expansion, among Australia's largest private credit deals",
           "url": "https://www.bloomberg.com/news/articles/2026-02-09/blackstone-coatue-grant-10-billion-loan-to-australia-ai-firm"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "c1117b6433c0",
+          "rank_score": 5.0,
+          "gravity_score": 5.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Bloomberg"
+          ],
+          "domains": [
+            "bloomberg.com"
+          ],
+          "entities": [
+            "ai",
+            "firmus",
+            "australia's",
+            "australian",
+            "coatue"
+          ],
+          "buckets": [],
+          "title": "Blackstone and Coatue grant a $10B loan to Australian AI infrastructure startup Firmus for data center expansion, among Australia's largest private credit deals",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/blackstone-coatue-grant-10-billion-loan-to-australia-ai-firm"
         }
       ],
       "metrics": {
-        "mentions_7d": 6,
-        "mentions_21d": 6,
+        "mentions_7d": 7,
+        "mentions_21d": 7,
         "coverage_sources_7d": 1,
         "coverage_domains_7d": 1,
         "avg_gravity_7d": 5.0,
-        "velocity": 6.0,
+        "velocity": 7.0,
         "acceleration": 1.0,
-        "confidence": 0.567
+        "confidence": 0.592
       },
       "profile": {
         "top_entities": [
@@ -1654,7 +1718,7 @@
       "_hysteresis": {
         "consecutive_mainstream_days": 0,
         "consecutive_fading_weeks": 0,
-        "last_velocity": 6.0
+        "last_velocity": 7.0
       }
     },
     {
@@ -1784,17 +1848,37 @@
           "buckets": [],
           "title": "A software engineer explains AI fatigue, compounded by a FOMO treadmill of using labs' latest tools, thinking atrophy, and more, alongside boosted productivity",
           "url": "https://siddhantkhare.com/writing/ai-fatigue-is-real"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "35e52929d923",
+          "rank_score": 3.5,
+          "gravity_score": 3.5,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Siddhantkhare"
+          ],
+          "domains": [
+            "siddhantkhare.com"
+          ],
+          "entities": [
+            "ai",
+            "fomo"
+          ],
+          "buckets": [],
+          "title": "A software engineer explains AI fatigue, compounded by a FOMO treadmill of using labs' latest tools, thinking atrophy, and more, alongside boosted productivity",
+          "url": "https://siddhantkhare.com/writing/ai-fatigue-is-real"
         }
       ],
       "metrics": {
-        "mentions_7d": 6,
-        "mentions_21d": 6,
+        "mentions_7d": 7,
+        "mentions_21d": 7,
         "coverage_sources_7d": 1,
         "coverage_domains_7d": 1,
         "avg_gravity_7d": 3.5,
-        "velocity": 6.0,
+        "velocity": 7.0,
         "acceleration": 1.0,
-        "confidence": 0.567
+        "confidence": 0.592
       },
       "profile": {
         "top_entities": [
@@ -2196,13 +2280,13 @@
       "_hysteresis": {
         "consecutive_mainstream_days": 0,
         "consecutive_fading_weeks": 0,
-        "last_velocity": 6.0
+        "last_velocity": 7.0
       }
     },
     {
       "signal_id": "777c5b6fbe2e",
       "name": "Unnamed Signal",
-      "created_at": "2026-02-10T09:16:03.773190",
+      "created_at": "2026-02-10T14:26:57.344291",
       "first_seen_date": "2026-02-09",
       "last_seen_date": "2026-02-09",
       "status": "weak_signal",
@@ -2766,17 +2850,37 @@
           "buckets": [],
           "title": "Q&A with mathematicians behind the “First Proof” experiment, which tests AI's mathematical competence on questions drawn from the authors' unpublished research",
           "url": "https://www.nytimes.com/2026/02/07/science/mathematics-ai-proof-hairer.html?unlocked_article_code=1.KlA.yyET.0-6xYbRkxOrf&smid=url-share"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "090bf3950af1",
+          "rank_score": 3.0,
+          "gravity_score": 3.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Nytimes"
+          ],
+          "domains": [
+            "nytimes.com"
+          ],
+          "entities": [
+            "proof”",
+            "ai's"
+          ],
+          "buckets": [],
+          "title": "Q&A with mathematicians behind the “First Proof” experiment, which tests AI's mathematical competence on questions drawn from the authors' unpublished research",
+          "url": "https://www.nytimes.com/2026/02/07/science/mathematics-ai-proof-hairer.html?unlocked_article_code=1.KlA.yyET.0-6xYbRkxOrf&smid=url-share"
         }
       ],
       "metrics": {
-        "mentions_7d": 6,
-        "mentions_21d": 6,
+        "mentions_7d": 7,
+        "mentions_21d": 7,
         "coverage_sources_7d": 1,
         "coverage_domains_7d": 1,
         "avg_gravity_7d": 3.0,
-        "velocity": 6.0,
+        "velocity": 7.0,
         "acceleration": 1.0,
-        "confidence": 0.567
+        "confidence": 0.592
       },
       "profile": {
         "top_entities": [
@@ -3178,7 +3282,7 @@
       "_hysteresis": {
         "consecutive_mainstream_days": 0,
         "consecutive_fading_weeks": 0,
-        "last_velocity": 6.0
+        "last_velocity": 7.0
       }
     },
     {
@@ -3314,17 +3418,38 @@
           "buckets": [],
           "title": "This year's projected capex ramp-up will all but wipe out free cash flow for Amazon, Google, and Meta, potentially forcing stock buyback cuts or more borrowing",
           "url": "https://www.theinformation.com/articles/capex-ramp-will-squeeze-google-amazon-meta"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "be1ae2b151e1",
+          "rank_score": 3.0,
+          "gravity_score": 3.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Theinformation"
+          ],
+          "domains": [
+            "theinformation.com"
+          ],
+          "entities": [
+            "google",
+            "meta",
+            "amazon"
+          ],
+          "buckets": [],
+          "title": "This year's projected capex ramp-up will all but wipe out free cash flow for Amazon, Google, and Meta, potentially forcing stock buyback cuts or more borrowing",
+          "url": "https://www.theinformation.com/articles/capex-ramp-will-squeeze-google-amazon-meta"
         }
       ],
       "metrics": {
-        "mentions_7d": 6,
-        "mentions_21d": 6,
+        "mentions_7d": 7,
+        "mentions_21d": 7,
         "coverage_sources_7d": 1,
         "coverage_domains_7d": 1,
         "avg_gravity_7d": 3.0,
-        "velocity": 6.0,
+        "velocity": 7.0,
         "acceleration": 1.0,
-        "confidence": 0.567
+        "confidence": 0.592
       },
       "profile": {
         "top_entities": [
@@ -3727,13 +3852,13 @@
       "_hysteresis": {
         "consecutive_mainstream_days": 0,
         "consecutive_fading_weeks": 0,
-        "last_velocity": 6.0
+        "last_velocity": 7.0
       }
     },
     {
       "signal_id": "399bf415e1ce",
       "name": "Unnamed Signal",
-      "created_at": "2026-02-10T09:16:03.815529",
+      "created_at": "2026-02-10T14:26:57.389053",
       "first_seen_date": "2026-02-09",
       "last_seen_date": "2026-02-09",
       "status": "weak_signal",
@@ -4287,17 +4412,36 @@
           "buckets": [],
           "title": "X unveils a new pay-per-use pricing model for its API, replacing the earlier pricing model that required developers to pay fixed monthly fees of $200 or $5,000",
           "url": "https://www.medianama.com/2026/02/223-x-developer-api-pricing-pay-per-use-model/"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "bf784fcb2c88",
+          "rank_score": 2.0,
+          "gravity_score": 2.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Medianama"
+          ],
+          "domains": [
+            "medianama.com"
+          ],
+          "entities": [
+            "api"
+          ],
+          "buckets": [],
+          "title": "X unveils a new pay-per-use pricing model for its API, replacing the earlier pricing model that required developers to pay fixed monthly fees of $200 or $5,000",
+          "url": "https://www.medianama.com/2026/02/223-x-developer-api-pricing-pay-per-use-model/"
         }
       ],
       "metrics": {
-        "mentions_7d": 6,
-        "mentions_21d": 6,
+        "mentions_7d": 7,
+        "mentions_21d": 7,
         "coverage_sources_7d": 1,
         "coverage_domains_7d": 1,
         "avg_gravity_7d": 2.0,
-        "velocity": 6.0,
+        "velocity": 7.0,
         "acceleration": 1.0,
-        "confidence": 0.567
+        "confidence": 0.592
       },
       "profile": {
         "top_entities": [
@@ -4698,7 +4842,7 @@
       "_hysteresis": {
         "consecutive_mainstream_days": 0,
         "consecutive_fading_weeks": 0,
-        "last_velocity": 6.0
+        "last_velocity": 7.0
       }
     },
     {
@@ -4840,17 +4984,39 @@
           "buckets": [],
           "title": "As Section 230 turns 30, a look at how upcoming court cases involving Meta, Alphabet, and others in the US could reshape the bounds of Section 230's protections",
           "url": "https://www.theverge.com/policy/875300/section-230-turns-30-social-media-addiction-cases-sunset"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "369bdc781b61",
+          "rank_score": 1.5,
+          "gravity_score": 1.5,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Theverge"
+          ],
+          "domains": [
+            "theverge.com"
+          ],
+          "entities": [
+            "alphabet",
+            "section",
+            "us",
+            "meta"
+          ],
+          "buckets": [],
+          "title": "As Section 230 turns 30, a look at how upcoming court cases involving Meta, Alphabet, and others in the US could reshape the bounds of Section 230's protections",
+          "url": "https://www.theverge.com/policy/875300/section-230-turns-30-social-media-addiction-cases-sunset"
         }
       ],
       "metrics": {
-        "mentions_7d": 6,
-        "mentions_21d": 6,
+        "mentions_7d": 7,
+        "mentions_21d": 7,
         "coverage_sources_7d": 1,
         "coverage_domains_7d": 1,
         "avg_gravity_7d": 1.5,
-        "velocity": 6.0,
+        "velocity": 7.0,
         "acceleration": 1.0,
-        "confidence": 0.567
+        "confidence": 0.592
       },
       "profile": {
         "top_entities": [
@@ -5254,7 +5420,7 @@
       "_hysteresis": {
         "consecutive_mainstream_days": 0,
         "consecutive_fading_weeks": 0,
-        "last_velocity": 6.0
+        "last_velocity": 7.0
       }
     },
     {
@@ -5378,17 +5544,36 @@
           "buckets": [],
           "title": "How China boosts its humanoid robot industry, giving companies land, favorable bank loan terms, and sometimes subsidizing the robots' purchase price by ~10%",
           "url": "https://www.wsj.com/tech/china-is-going-all-in-to-beat-the-u-s-on-humanoid-robots-b9c434d2?st=jWsuyx&reflink=desktopwebshare_permalink"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "2b2a7fbcdd5f",
+          "rank_score": 1.5,
+          "gravity_score": 1.5,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Wsj"
+          ],
+          "domains": [
+            "wsj.com"
+          ],
+          "entities": [
+            "china"
+          ],
+          "buckets": [],
+          "title": "How China boosts its humanoid robot industry, giving companies land, favorable bank loan terms, and sometimes subsidizing the robots' purchase price by ~10%",
+          "url": "https://www.wsj.com/tech/china-is-going-all-in-to-beat-the-u-s-on-humanoid-robots-b9c434d2?st=jWsuyx&reflink=desktopwebshare_permalink"
         }
       ],
       "metrics": {
-        "mentions_7d": 6,
-        "mentions_21d": 6,
+        "mentions_7d": 7,
+        "mentions_21d": 7,
         "coverage_sources_7d": 1,
         "coverage_domains_7d": 1,
         "avg_gravity_7d": 1.5,
-        "velocity": 6.0,
+        "velocity": 7.0,
         "acceleration": 1.0,
-        "confidence": 0.567
+        "confidence": 0.592
       },
       "profile": {
         "top_entities": [
@@ -5789,7 +5974,7 @@
       "_hysteresis": {
         "consecutive_mainstream_days": 0,
         "consecutive_fading_weeks": 0,
-        "last_velocity": 6.0
+        "last_velocity": 7.0
       }
     },
     {
@@ -5913,17 +6098,36 @@
           "buckets": [],
           "title": "T-glass, a type of ultrathin glass sheet used in advanced chips, is in short supply and largely comes from Nittobo, which is not adding capacity for months",
           "url": "https://www.wsj.com/tech/a-critical-ai-niche-is-dominated-by-one-little-known-japanese-company-d9101853?st=5rmnez"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "ef0b1a5960b3",
+          "rank_score": 1.5,
+          "gravity_score": 1.5,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Wsj"
+          ],
+          "domains": [
+            "wsj.com"
+          ],
+          "entities": [
+            "nittobo"
+          ],
+          "buckets": [],
+          "title": "T-glass, a type of ultrathin glass sheet used in advanced chips, is in short supply and largely comes from Nittobo, which is not adding capacity for months",
+          "url": "https://www.wsj.com/tech/a-critical-ai-niche-is-dominated-by-one-little-known-japanese-company-d9101853?st=5rmnez"
         }
       ],
       "metrics": {
-        "mentions_7d": 6,
-        "mentions_21d": 6,
+        "mentions_7d": 7,
+        "mentions_21d": 7,
         "coverage_sources_7d": 1,
         "coverage_domains_7d": 1,
         "avg_gravity_7d": 1.5,
-        "velocity": 6.0,
+        "velocity": 7.0,
         "acceleration": 1.0,
-        "confidence": 0.567
+        "confidence": 0.592
       },
       "profile": {
         "top_entities": [
@@ -6324,7 +6528,7 @@
       "_hysteresis": {
         "consecutive_mainstream_days": 0,
         "consecutive_fading_weeks": 0,
-        "last_velocity": 6.0
+        "last_velocity": 7.0
       }
     },
     {
@@ -6466,17 +6670,39 @@
           "buckets": [],
           "title": "Analysts say a design refresh for the iPhone 17 lineup has reinforced Apple's status-symbol appeal in China, with the “cosmic orange” Pro model going viral",
           "url": "https://www.ft.com/content/e2d78d04-7368-4b0c-abd5-591c03774c46"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "eb7fd18f2909",
+          "rank_score": 1.5,
+          "gravity_score": 1.5,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Ft"
+          ],
+          "domains": [
+            "ft.com"
+          ],
+          "entities": [
+            "apple's",
+            "pro",
+            "china",
+            "apple"
+          ],
+          "buckets": [],
+          "title": "Analysts say a design refresh for the iPhone 17 lineup has reinforced Apple's status-symbol appeal in China, with the “cosmic orange” Pro model going viral",
+          "url": "https://www.ft.com/content/e2d78d04-7368-4b0c-abd5-591c03774c46"
         }
       ],
       "metrics": {
-        "mentions_7d": 6,
-        "mentions_21d": 6,
+        "mentions_7d": 7,
+        "mentions_21d": 7,
         "coverage_sources_7d": 1,
         "coverage_domains_7d": 1,
         "avg_gravity_7d": 1.5,
-        "velocity": 6.0,
+        "velocity": 7.0,
         "acceleration": 1.0,
-        "confidence": 0.567
+        "confidence": 0.592
       },
       "profile": {
         "top_entities": [
@@ -6880,7 +7106,7 @@
       "_hysteresis": {
         "consecutive_mainstream_days": 0,
         "consecutive_fading_weeks": 0,
-        "last_velocity": 6.0
+        "last_velocity": 7.0
       }
     },
     {
@@ -7028,25 +7254,48 @@
           "buckets": [],
           "title": "An interview with Jeannette zu Fürstenberg, who was promoted to president of General Catalyst in January, about investing in European tech and defense startups",
           "url": "https://www.bloomberg.com/news/features/2026-02-06/the-general-catalyst-investor-backing-mistral-and-helsing?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc3MDQyOTUwMywiZXhwIjoxNzcxMDM0MzAzLCJhcnRpY2xlSWQiOiJUQTE1MFZLR1pBTFQwMCIsImJjb25uZWN0SWQiOiI4OUM4OTNDMDhGOTQ0NThDQkQwQTQyREY1RDFCOTY0QyJ9.mes9z1NQDL8BrKYhUNg6kJJKuEQ3DFjUjRsjrnRDGBs"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "6c54497b1d52",
+          "rank_score": 1.0,
+          "gravity_score": 1.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Bloomberg"
+          ],
+          "domains": [
+            "bloomberg.com"
+          ],
+          "entities": [
+            "catalyst",
+            "jeannette",
+            "january",
+            "fürstenberg",
+            "general"
+          ],
+          "buckets": [],
+          "title": "An interview with Jeannette zu Fürstenberg, who was promoted to president of General Catalyst in January, about investing in European tech and defense startups",
+          "url": "https://www.bloomberg.com/news/features/2026-02-06/the-general-catalyst-investor-backing-mistral-and-helsing?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc3MDQyOTUwMywiZXhwIjoxNzcxMDM0MzAzLCJhcnRpY2xlSWQiOiJUQTE1MFZLR1pBTFQwMCIsImJjb25uZWN0SWQiOiI4OUM4OTNDMDhGOTQ0NThDQkQwQTQyREY1RDFCOTY0QyJ9.mes9z1NQDL8BrKYhUNg6kJJKuEQ3DFjUjRsjrnRDGBs"
         }
       ],
       "metrics": {
-        "mentions_7d": 6,
-        "mentions_21d": 6,
+        "mentions_7d": 7,
+        "mentions_21d": 7,
         "coverage_sources_7d": 1,
         "coverage_domains_7d": 1,
         "avg_gravity_7d": 1.0,
-        "velocity": 6.0,
+        "velocity": 7.0,
         "acceleration": 1.0,
-        "confidence": 0.567
+        "confidence": 0.592
       },
       "profile": {
         "top_entities": [
           "jeannette",
           "fürstenberg",
-          "european",
           "catalyst",
-          "january"
+          "january",
+          "european"
         ],
         "top_buckets": [],
         "example_titles": [
@@ -7443,7 +7692,7 @@
       "_hysteresis": {
         "consecutive_mainstream_days": 0,
         "consecutive_fading_weeks": 0,
-        "last_velocity": 6.0
+        "last_velocity": 7.0
       }
     }
   ]
