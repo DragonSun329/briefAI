@@ -1,0 +1,210 @@
+{
+  "_version": "1.0",
+  "_description": "Maps economic/strategic pressures to likely company actions. This is the core inference layer for action-based forecasting.",
+  
+  "pressure_types": {
+    "competitive_pressure": {
+      "display_name": "Competitive Pressure",
+      "description": "Multiple competitors active in same space, market share battle",
+      "detection_keywords": ["competition", "rival", "competitor", "versus", "vs", "battle", "war", "race", "challenge", "threat", "market share"],
+      "detection_patterns": {
+        "multiple_competitors_mentioned": {"min_entities": 2, "same_vertical": true},
+        "benchmark_comparison": {"keywords": ["benchmark", "comparison", "outperform", "beat", "faster", "better"]},
+        "market_share_discussion": {"keywords": ["market share", "dominance", "leader", "position"]}
+      },
+      "likely_actions": [
+        {"event_type": "pricing_change", "probability": 0.65, "direction": "down"},
+        {"event_type": "partnership_announcement", "probability": 0.55},
+        {"event_type": "product_launch", "probability": 0.70},
+        {"event_type": "open_source_release", "probability": 0.45}
+      ],
+      "confidence_modifier": 1.15
+    },
+    
+    "margin_pressure": {
+      "display_name": "Margin Pressure",
+      "description": "Profitability concerns, cost structure challenges",
+      "detection_keywords": ["margin", "profit", "cost", "expense", "burn rate", "runway", "profitability", "losses", "unprofitable", "monetization"],
+      "detection_patterns": {
+        "earnings_miss": {"keywords": ["miss", "below expectations", "disappointed"]},
+        "cost_cutting_signals": {"keywords": ["efficiency", "streamline", "optimize", "reduce costs"]},
+        "revenue_pressure": {"keywords": ["revenue growth", "slowing", "decelerate"]}
+      },
+      "likely_actions": [
+        {"event_type": "pricing_change", "probability": 0.70, "direction": "up"},
+        {"event_type": "hiring_freeze_or_layoff", "probability": 0.60},
+        {"event_type": "product_launch", "probability": 0.40, "note": "new monetization feature"},
+        {"event_type": "api_policy_change", "probability": 0.45, "note": "usage restrictions"}
+      ],
+      "confidence_modifier": 1.10
+    },
+    
+    "supply_constraint": {
+      "display_name": "Supply Constraint",
+      "description": "GPU shortage, compute limits, infrastructure bottlenecks",
+      "detection_keywords": ["shortage", "constraint", "bottleneck", "capacity", "allocation", "supply chain", "wait time", "queue", "limited availability", "gpu", "h100", "compute"],
+      "detection_patterns": {
+        "hardware_shortage": {"keywords": ["gpu shortage", "chip shortage", "h100", "supply constraint"]},
+        "capacity_limits": {"keywords": ["capacity", "waitlist", "queue", "allocation"]},
+        "infrastructure_strain": {"keywords": ["infrastructure", "datacenter", "scaling limits"]}
+      },
+      "likely_actions": [
+        {"event_type": "infrastructure_investment", "probability": 0.75},
+        {"event_type": "partnership_announcement", "probability": 0.55, "counterparty_type": "cloud_provider"},
+        {"event_type": "product_launch", "probability": 0.35, "note": "delayed or limited rollout"},
+        {"event_type": "pricing_change", "probability": 0.50, "direction": "up"}
+      ],
+      "confidence_modifier": 1.20
+    },
+    
+    "adoption_friction": {
+      "display_name": "Adoption Friction",
+      "description": "User churn, integration difficulties, developer complaints",
+      "detection_keywords": ["friction", "churn", "difficult", "complex", "integration", "onboarding", "learning curve", "migration", "switching cost", "developer experience"],
+      "detection_patterns": {
+        "developer_complaints": {"keywords": ["broken", "bug", "issue", "difficult", "frustrating"], "sources": ["github", "twitter", "hackernews"]},
+        "churn_signals": {"keywords": ["cancellation", "churn", "leaving", "switching"]},
+        "integration_issues": {"keywords": ["integration", "api", "sdk", "compatibility"]}
+      },
+      "likely_actions": [
+        {"event_type": "product_launch", "probability": 0.65, "note": "developer experience improvements"},
+        {"event_type": "api_policy_change", "probability": 0.50, "note": "simplification"},
+        {"event_type": "open_source_release", "probability": 0.45},
+        {"event_type": "partnership_announcement", "probability": 0.40, "counterparty_type": "integration_platform"}
+      ],
+      "confidence_modifier": 1.05
+    },
+    
+    "regulatory_pressure": {
+      "display_name": "Regulatory Pressure",
+      "description": "Government scrutiny, compliance requirements, policy changes",
+      "detection_keywords": ["regulation", "regulatory", "compliance", "government", "congress", "senate", "eu", "ftc", "antitrust", "privacy", "gdpr", "ai act", "safety", "audit"],
+      "detection_patterns": {
+        "government_action": {"keywords": ["investigation", "subpoena", "hearing", "inquiry", "lawsuit"]},
+        "compliance_requirement": {"keywords": ["compliance", "requirement", "mandate", "rule"]},
+        "safety_concerns": {"keywords": ["safety", "risk", "harm", "responsible ai"]}
+      },
+      "likely_actions": [
+        {"event_type": "regulatory_filing", "probability": 0.70},
+        {"event_type": "api_policy_change", "probability": 0.60, "note": "safety restrictions"},
+        {"event_type": "executive_change", "probability": 0.35, "note": "policy/legal hires"},
+        {"event_type": "partnership_announcement", "probability": 0.40, "counterparty_type": "safety_org"}
+      ],
+      "confidence_modifier": 1.15
+    },
+    
+    "platform_lockin_battle": {
+      "display_name": "Platform Lock-in Battle",
+      "description": "Ecosystem competition, developer platform wars",
+      "detection_keywords": ["platform", "ecosystem", "developer", "sdk", "api", "integration", "lock-in", "switching", "migration", "compatibility"],
+      "detection_patterns": {
+        "platform_competition": {"keywords": ["platform", "ecosystem", "developer platform"]},
+        "integration_wars": {"keywords": ["integration", "plugin", "extension", "marketplace"]},
+        "developer_targeting": {"keywords": ["developer", "sdk", "api", "tooling"]}
+      },
+      "likely_actions": [
+        {"event_type": "open_source_release", "probability": 0.60},
+        {"event_type": "partnership_announcement", "probability": 0.65, "counterparty_type": "platform_company"},
+        {"event_type": "product_launch", "probability": 0.70, "note": "developer tools"},
+        {"event_type": "pricing_change", "probability": 0.45, "direction": "down", "note": "developer tier"}
+      ],
+      "confidence_modifier": 1.10
+    },
+    
+    "distribution_bottleneck": {
+      "display_name": "Distribution Bottleneck",
+      "description": "Go-to-market challenges, channel conflicts, reach limitations",
+      "detection_keywords": ["distribution", "channel", "partner", "reseller", "go-to-market", "sales", "reach", "market access", "enterprise sales"],
+      "detection_patterns": {
+        "gtm_challenges": {"keywords": ["go-to-market", "sales", "distribution", "channel"]},
+        "enterprise_access": {"keywords": ["enterprise", "sales cycle", "procurement"]},
+        "partner_friction": {"keywords": ["partner", "reseller", "channel conflict"]}
+      },
+      "likely_actions": [
+        {"event_type": "partnership_announcement", "probability": 0.75, "counterparty_type": "enterprise_software_company"},
+        {"event_type": "enterprise_contract", "probability": 0.60},
+        {"event_type": "hiring_surge", "probability": 0.55, "role_category": "sales"},
+        {"event_type": "market_entry", "probability": 0.45}
+      ],
+      "confidence_modifier": 1.10
+    },
+    
+    "compute_shortage": {
+      "display_name": "Compute Shortage",
+      "description": "Specific compute capacity limitations, training/inference bottlenecks",
+      "detection_keywords": ["compute", "gpu", "tpu", "training", "inference", "capacity", "cluster", "h100", "a100", "nvidia", "chip"],
+      "detection_patterns": {
+        "training_constraints": {"keywords": ["training", "pre-training", "fine-tuning", "compute budget"]},
+        "inference_limits": {"keywords": ["inference", "latency", "throughput", "capacity"]},
+        "hardware_access": {"keywords": ["gpu", "chip", "nvidia", "h100", "tpu"]}
+      },
+      "likely_actions": [
+        {"event_type": "infrastructure_investment", "probability": 0.80},
+        {"event_type": "partnership_announcement", "probability": 0.65, "counterparty_type": "cloud_hyperscaler"},
+        {"event_type": "enterprise_contract", "probability": 0.50, "counterparty_type": "chip_manufacturer"},
+        {"event_type": "open_source_release", "probability": 0.40, "note": "efficient models"}
+      ],
+      "confidence_modifier": 1.25
+    },
+    
+    "talent_pressure": {
+      "display_name": "Talent Pressure",
+      "description": "Key departures, hiring competition, team instability",
+      "detection_keywords": ["talent", "hire", "departure", "leave", "poach", "recruit", "team", "researcher", "engineer", "exodus", "retention"],
+      "detection_patterns": {
+        "departures": {"keywords": ["leaving", "departure", "left", "resigned", "stepped down"]},
+        "hiring_competition": {"keywords": ["poach", "recruit", "compete for talent", "offer"]},
+        "team_changes": {"keywords": ["team", "reorganization", "restructuring"]}
+      },
+      "likely_actions": [
+        {"event_type": "hiring_surge", "probability": 0.70},
+        {"event_type": "executive_change", "probability": 0.55},
+        {"event_type": "funding_round", "probability": 0.40, "note": "to fund hiring"},
+        {"event_type": "acquisition", "probability": 0.35, "note": "acqui-hire"}
+      ],
+      "confidence_modifier": 1.05
+    },
+    
+    "growth_pressure": {
+      "display_name": "Growth Pressure",
+      "description": "User growth expectations, market expansion needs",
+      "detection_keywords": ["growth", "scale", "expand", "user base", "adoption", "market", "penetration", "traction", "momentum", "hockey stick"],
+      "detection_patterns": {
+        "growth_metrics": {"keywords": ["growth", "users", "adoption", "dau", "mau"]},
+        "expansion_signals": {"keywords": ["expand", "scale", "international", "new market"]},
+        "investor_expectations": {"keywords": ["expectations", "targets", "milestones"]}
+      },
+      "likely_actions": [
+        {"event_type": "product_launch", "probability": 0.70},
+        {"event_type": "market_entry", "probability": 0.60},
+        {"event_type": "pricing_change", "probability": 0.50, "direction": "down"},
+        {"event_type": "partnership_announcement", "probability": 0.55}
+      ],
+      "confidence_modifier": 1.10
+    }
+  },
+  
+  "entity_pressure_overrides": {
+    "_description": "Entity-specific pressure likelihood adjustments",
+    "openai": {
+      "regulatory_pressure": 1.3,
+      "competitive_pressure": 1.2
+    },
+    "anthropic": {
+      "regulatory_pressure": 0.9,
+      "competitive_pressure": 1.2
+    },
+    "meta": {
+      "platform_lockin_battle": 1.3,
+      "open_source_release": 1.5
+    },
+    "google": {
+      "platform_lockin_battle": 1.3,
+      "regulatory_pressure": 1.2
+    },
+    "microsoft": {
+      "distribution_bottleneck": 0.7,
+      "platform_lockin_battle": 1.2
+    }
+  }
+}

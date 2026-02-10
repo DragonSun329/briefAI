@@ -1,0 +1,215 @@
+{
+  "_version": "1.0",
+  "_description": "Canonical action event types for action-based forecasting. Each event maps to measurable observables that can be verified.",
+  
+  "event_types": {
+    "partnership_announcement": {
+      "display_name": "Partnership Announcement",
+      "description": "Strategic partnership, integration deal, or alliance between companies",
+      "observables": [
+        {"metric": "press_release_mentions", "source": "press_release", "aggregation": "count", "window_days": 7},
+        {"metric": "entity_pair_cooccurrence", "source": "news", "aggregation": "count", "window_days": 14},
+        {"metric": "integration_docs_published", "source": "docs", "aggregation": "exists", "window_days": 30}
+      ],
+      "verification_signals": ["joint press release", "integration announcement", "API partnership"],
+      "typical_timeframe_days": 30,
+      "confidence_weight": 1.2
+    },
+    
+    "pricing_change": {
+      "display_name": "Pricing Change",
+      "description": "API price adjustment, plan restructuring, or billing model change",
+      "observables": [
+        {"metric": "api_price_delta", "source": "pricing_page", "aggregation": "delta", "window_days": 14},
+        {"metric": "plan_tier_changes", "source": "billing_page", "aggregation": "exists", "window_days": 14},
+        {"metric": "pricing_announcement", "source": "company_blog", "aggregation": "exists", "window_days": 7}
+      ],
+      "verification_signals": ["price per token change", "new pricing tier", "billing update"],
+      "typical_timeframe_days": 21,
+      "confidence_weight": 1.1
+    },
+    
+    "product_launch": {
+      "display_name": "Product Launch",
+      "description": "New product, model release, or major feature announcement",
+      "observables": [
+        {"metric": "product_announcement", "source": "company_blog", "aggregation": "exists", "window_days": 14},
+        {"metric": "github_repo_created", "source": "github", "aggregation": "exists", "window_days": 14},
+        {"metric": "docs_new_section", "source": "docs", "aggregation": "exists", "window_days": 14},
+        {"metric": "huggingface_model_upload", "source": "huggingface", "aggregation": "exists", "window_days": 14}
+      ],
+      "verification_signals": ["new model release", "product launch", "feature announcement"],
+      "typical_timeframe_days": 30,
+      "confidence_weight": 1.0
+    },
+    
+    "acquisition": {
+      "display_name": "Acquisition",
+      "description": "Company acquisition, acqui-hire, or merger",
+      "observables": [
+        {"metric": "sec_filing_mentions", "source": "sec", "aggregation": "exists", "window_days": 7},
+        {"metric": "press_release_entity_pair", "source": "press_release", "aggregation": "exists", "window_days": 7},
+        {"metric": "linkedin_company_merge", "source": "linkedin", "aggregation": "exists", "window_days": 30}
+      ],
+      "verification_signals": ["acquisition announcement", "SEC filing", "merger news"],
+      "typical_timeframe_days": 60,
+      "confidence_weight": 1.3
+    },
+    
+    "hiring_surge": {
+      "display_name": "Hiring Surge",
+      "description": "Significant increase in job postings, indicating expansion",
+      "observables": [
+        {"metric": "job_postings_count", "source": "linkedin", "aggregation": "delta_percent", "window_days": 14, "threshold": 25},
+        {"metric": "new_roles_category_share", "source": "linkedin", "aggregation": "percent", "window_days": 30},
+        {"metric": "glassdoor_reviews_new", "source": "glassdoor", "aggregation": "count", "window_days": 30}
+      ],
+      "verification_signals": ["job posting spike", "new office announcement", "team expansion news"],
+      "typical_timeframe_days": 30,
+      "confidence_weight": 1.0
+    },
+    
+    "hiring_freeze_or_layoff": {
+      "display_name": "Hiring Freeze or Layoff",
+      "description": "Workforce reduction, hiring pause, or restructuring",
+      "observables": [
+        {"metric": "job_postings_count", "source": "linkedin", "aggregation": "delta_percent", "window_days": 14, "threshold": -25},
+        {"metric": "layoff_announcement", "source": "news", "aggregation": "exists", "window_days": 7},
+        {"metric": "warn_filing", "source": "sec", "aggregation": "exists", "window_days": 30}
+      ],
+      "verification_signals": ["layoff announcement", "restructuring news", "hiring freeze"],
+      "typical_timeframe_days": 21,
+      "confidence_weight": 1.1
+    },
+    
+    "regulatory_filing": {
+      "display_name": "Regulatory Filing",
+      "description": "SEC filing, compliance document, or regulatory submission",
+      "observables": [
+        {"metric": "sec_filing_new", "source": "sec", "aggregation": "exists", "window_days": 14},
+        {"metric": "regulatory_mention", "source": "news", "aggregation": "count", "window_days": 14},
+        {"metric": "compliance_announcement", "source": "company_blog", "aggregation": "exists", "window_days": 21}
+      ],
+      "verification_signals": ["SEC filing", "regulatory submission", "compliance update"],
+      "typical_timeframe_days": 30,
+      "confidence_weight": 1.0
+    },
+    
+    "infrastructure_investment": {
+      "display_name": "Infrastructure Investment",
+      "description": "Data center build-out, compute expansion, or major capex",
+      "observables": [
+        {"metric": "capex_announcement", "source": "earnings_call", "aggregation": "exists", "window_days": 30},
+        {"metric": "datacenter_news", "source": "news", "aggregation": "count", "window_days": 30},
+        {"metric": "cloud_region_expansion", "source": "company_blog", "aggregation": "exists", "window_days": 60}
+      ],
+      "verification_signals": ["infrastructure announcement", "datacenter investment", "compute expansion"],
+      "typical_timeframe_days": 60,
+      "confidence_weight": 1.2
+    },
+    
+    "enterprise_contract": {
+      "display_name": "Enterprise Contract",
+      "description": "Major enterprise deal, government contract, or large customer win",
+      "observables": [
+        {"metric": "contract_announcement", "source": "press_release", "aggregation": "exists", "window_days": 14},
+        {"metric": "customer_case_study", "source": "company_blog", "aggregation": "exists", "window_days": 30},
+        {"metric": "sec_material_contract", "source": "sec", "aggregation": "exists", "window_days": 14}
+      ],
+      "verification_signals": ["contract win", "customer announcement", "enterprise deal"],
+      "typical_timeframe_days": 30,
+      "confidence_weight": 1.1
+    },
+    
+    "open_source_release": {
+      "display_name": "Open Source Release",
+      "description": "Model weights release, library open-source, or code publication",
+      "observables": [
+        {"metric": "github_repo_created", "source": "github", "aggregation": "exists", "window_days": 14},
+        {"metric": "huggingface_model_upload", "source": "huggingface", "aggregation": "exists", "window_days": 14},
+        {"metric": "arxiv_paper_with_code", "source": "arxiv", "aggregation": "exists", "window_days": 14}
+      ],
+      "verification_signals": ["open source release", "model weights published", "code release"],
+      "typical_timeframe_days": 21,
+      "confidence_weight": 1.0
+    },
+    
+    "api_policy_change": {
+      "display_name": "API Policy Change",
+      "description": "Terms of service update, usage policy change, or API restrictions",
+      "observables": [
+        {"metric": "tos_page_diff", "source": "tos_page", "aggregation": "exists", "window_days": 14},
+        {"metric": "policy_announcement", "source": "company_blog", "aggregation": "exists", "window_days": 14},
+        {"metric": "developer_community_reaction", "source": "twitter", "aggregation": "sentiment_shift", "window_days": 7}
+      ],
+      "verification_signals": ["policy update", "terms change", "API restriction"],
+      "typical_timeframe_days": 21,
+      "confidence_weight": 0.9
+    },
+    
+    "market_entry": {
+      "display_name": "Market Entry",
+      "description": "Geographic expansion, new vertical, or market segment entry",
+      "observables": [
+        {"metric": "region_announcement", "source": "press_release", "aggregation": "exists", "window_days": 30},
+        {"metric": "localized_product_launch", "source": "company_blog", "aggregation": "exists", "window_days": 30},
+        {"metric": "local_hiring_surge", "source": "linkedin", "aggregation": "count", "window_days": 30}
+      ],
+      "verification_signals": ["market entry", "geographic expansion", "new vertical"],
+      "typical_timeframe_days": 45,
+      "confidence_weight": 1.0
+    },
+    
+    "market_exit": {
+      "display_name": "Market Exit",
+      "description": "Product sunset, market withdrawal, or service discontinuation",
+      "observables": [
+        {"metric": "deprecation_announcement", "source": "company_blog", "aggregation": "exists", "window_days": 14},
+        {"metric": "sunset_notice", "source": "docs", "aggregation": "exists", "window_days": 30},
+        {"metric": "service_shutdown_news", "source": "news", "aggregation": "exists", "window_days": 14}
+      ],
+      "verification_signals": ["product sunset", "service discontinuation", "market exit"],
+      "typical_timeframe_days": 30,
+      "confidence_weight": 1.0
+    },
+    
+    "funding_round": {
+      "display_name": "Funding Round",
+      "description": "Venture funding, debt raise, or secondary sale",
+      "observables": [
+        {"metric": "funding_announcement", "source": "press_release", "aggregation": "exists", "window_days": 7},
+        {"metric": "crunchbase_round", "source": "crunchbase", "aggregation": "exists", "window_days": 14},
+        {"metric": "sec_form_d", "source": "sec", "aggregation": "exists", "window_days": 30}
+      ],
+      "verification_signals": ["funding round", "investment announcement", "Series X"],
+      "typical_timeframe_days": 45,
+      "confidence_weight": 1.2
+    },
+    
+    "executive_change": {
+      "display_name": "Executive Change",
+      "description": "C-suite hire, departure, or board change",
+      "observables": [
+        {"metric": "executive_announcement", "source": "press_release", "aggregation": "exists", "window_days": 7},
+        {"metric": "linkedin_title_change", "source": "linkedin", "aggregation": "exists", "window_days": 14},
+        {"metric": "sec_8k_filing", "source": "sec", "aggregation": "exists", "window_days": 7}
+      ],
+      "verification_signals": ["executive hire", "CEO departure", "board change"],
+      "typical_timeframe_days": 30,
+      "confidence_weight": 1.1
+    }
+  },
+  
+  "fallback_event": {
+    "media_attention_spike": {
+      "display_name": "Media Attention Spike",
+      "description": "Fallback: Increased media coverage without specific action prediction",
+      "observables": [
+        {"metric": "article_count", "source": "news", "aggregation": "count", "window_days": 7},
+        {"metric": "discussion_volume", "source": "social", "aggregation": "count", "window_days": 7}
+      ],
+      "is_fallback": true,
+      "confidence_cap": 0.45
+    }
+  }
+}

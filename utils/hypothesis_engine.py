@@ -1,11 +1,18 @@
 """
-Hypothesis Engine v2.3 - Prediction Verification Integration.
+Hypothesis Engine v3.0 - Action-Based Forecasting.
 
 Part of Gravity Engine v2.7: Predictive Foresight Layer.
 
 This module sits AFTER meta-signals are generated and BEFORE UI/report output.
 It converts structural meta-signals into testable causal hypotheses with
 predicted next signals.
+
+v3.0 Improvements:
+- Action-Based Predictions: Predicts company ACTIONS, not media activity
+- Incentive Inference Layer: Detects economic pressures driving behavior
+- Pressure-to-Action Mapping: Converts detected pressures into likely actions
+- Confidence Adjustments: +12% bonus for action predictions, 45% cap for media-only
+- Observable Events: Partnership, pricing, product launch, acquisition, hiring, etc.
 
 v2.3 Improvements:
 - Prediction Verification Integration: Auto-registers predictions for tracking
@@ -2758,6 +2765,7 @@ def run_hypothesis_engine(
     output_dir: Path = None,
     date: str = None,
     register_predictions: bool = True,
+    enable_action_predictions: bool = True,
 ) -> Dict[str, Any]:
     """
     Run hypothesis engine on meta-signals file.
@@ -2767,6 +2775,7 @@ def run_hypothesis_engine(
         output_dir: Output directory for hypotheses
         date: Date string
         register_predictions: If True, register predictions for verification (v2.3)
+        enable_action_predictions: If True, generate action-based predictions (v3.0)
     
     Returns:
         Result dict with bundles and stats
@@ -2794,6 +2803,69 @@ def run_hypothesis_engine(
     # Run engine
     engine = HypothesisEngine(output_dir=output_dir)
     result = engine.process_meta_signals(meta_signals, date)
+    
+    # v3.0: Generate action predictions
+    if enable_action_predictions and 'bundles' in result:
+        try:
+            from utils.action_predictions import (
+                generate_action_predictions,
+                enhance_hypothesis_with_actions,
+                action_predictions_to_forecast_records,
+            )
+            
+            all_action_predictions = []
+            enhanced_bundles = []
+            
+            for i, bundle in enumerate(result.get('bundles', [])):
+                meta = meta_signals[i] if i < len(meta_signals) else {}
+                action_bundle = generate_action_predictions(meta)
+                
+                # Enhance each hypothesis in the bundle
+                enhanced_hypotheses = []
+                for hyp in bundle.get('hypotheses', []):
+                    enhanced = enhance_hypothesis_with_actions(hyp, action_bundle)
+                    enhanced_hypotheses.append(enhanced)
+                
+                # Update bundle with action predictions
+                bundle['hypotheses'] = enhanced_hypotheses
+                bundle['action_bundle'] = action_bundle.to_dict()
+                bundle['has_action_predictions'] = action_bundle.has_action_predictions
+                bundle['action_prediction_count'] = action_bundle.action_count
+                enhanced_bundles.append(bundle)
+                
+                # Collect all action predictions for summary
+                all_action_predictions.extend(action_bundle.action_predictions)
+            
+            result['bundles'] = enhanced_bundles
+            
+            # Add action prediction stats
+            action_prediction_count = len(all_action_predictions)
+            bundles_with_actions = sum(1 for b in enhanced_bundles if b.get('has_action_predictions', False))
+            
+            # Ensure stats dict exists
+            if 'stats' not in result:
+                result['stats'] = {}
+            
+            result['stats']['action_predictions'] = {
+                'total': action_prediction_count,
+                'bundles_with_actions': bundles_with_actions,
+                'action_ratio': bundles_with_actions / len(enhanced_bundles) if enhanced_bundles else 0,
+            }
+            
+            logger.info(f"Generated {action_prediction_count} action predictions across {bundles_with_actions} bundles")
+            
+            # Re-write the output file with action predictions included
+            if output_dir is None:
+                output_dir = Path(__file__).parent.parent / "data" / "insights"
+            output_file = Path(output_dir) / f"hypotheses_{date}.json"
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(result, f, indent=2, ensure_ascii=False)
+            logger.debug(f"Updated hypotheses file with action predictions: {output_file}")
+            
+        except ImportError as e:
+            logger.debug(f"Action predictions module not available: {e}")
+        except Exception as e:
+            logger.warning(f"Failed to generate action predictions: {e}")
     
     # v2.3: Register predictions for verification
     if register_predictions and 'bundles' in result:

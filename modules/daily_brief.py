@@ -93,6 +93,7 @@ class DailyBriefGenerator:
             self._gather_predictions() if include_predictions else _empty_dict(),
             self._gather_alerts() if include_alerts else _empty_dict(),
             self._gather_deep_research(),  # CellCog integration
+            self._gather_action_predictions(),  # v3.0: Action-based predictions
             return_exceptions=True,
         )
 
@@ -103,6 +104,7 @@ class DailyBriefGenerator:
         prediction_data = _safe_result(sections[3], "predictions")
         alert_data = _safe_result(sections[4], "alerts")
         deep_research_data = _safe_result(sections[5], "deep_research")
+        action_prediction_data = _safe_result(sections[6], "action_predictions")
 
         # Gather entity heatmap (sync, fast)
         heatmap = self._build_heatmap(top_n_entities)
@@ -128,6 +130,8 @@ class DailyBriefGenerator:
             "alerts": alert_data.get("alerts", []),
             # Predictions
             "predictions": prediction_data.get("predictions", []),
+            # Action Predictions (v3.0)
+            "action_predictions": action_prediction_data.get("action_predictions", []),
             # Heatmap
             "top_entities": heatmap,
             # Deep Research (CellCog)
@@ -421,6 +425,45 @@ Only include articles scoring 6+. Categories: Product Launch, Funding, Partnersh
             logger.debug(f"Predictions lookup: {e}")
 
         return {"predictions": predictions}
+
+    async def _gather_action_predictions(self) -> Dict[str, Any]:
+        """Gather action-based predictions from latest hypotheses (v3.0)."""
+        action_predictions = []
+        try:
+            # Load latest hypotheses file
+            hypotheses_dir = Path("data/insights")
+            today = date.today().isoformat()
+            hypotheses_file = hypotheses_dir / f"hypotheses_{today}.json"
+            
+            if hypotheses_file.exists():
+                with open(hypotheses_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                
+                # Collect all action predictions from bundles
+                for bundle in data.get('bundles', []):
+                    action_bundle = bundle.get('action_bundle', {})
+                    for ap in action_bundle.get('action_predictions', []):
+                        action_predictions.append({
+                            'entity': ap.get('entity', 'Unknown'),
+                            'event_type': ap.get('event_type', ''),
+                            'event_display_name': ap.get('event_display_name', ''),
+                            'probability': ap.get('probability', 0),
+                            'timeframe_days': ap.get('timeframe_days', 30),
+                            'source_pressure': ap.get('source_pressure', ''),
+                            'counterparty_type': ap.get('counterparty_type'),
+                            'direction': ap.get('direction'),
+                            'note': ap.get('note'),
+                        })
+                
+                # Sort by probability and limit
+                action_predictions.sort(key=lambda x: x['probability'], reverse=True)
+                action_predictions = action_predictions[:10]
+                
+                logger.info(f"Loaded {len(action_predictions)} action predictions")
+        except Exception as e:
+            logger.debug(f"Action predictions lookup: {e}")
+        
+        return {"action_predictions": action_predictions}
 
     async def _gather_alerts(self) -> Dict[str, Any]:
         """Run intelligence alert scanner and gather results."""

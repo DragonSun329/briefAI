@@ -39,6 +39,19 @@ Evidence chain:
 {% endfor %}
 {% endif %}
 
+{% if action_predictions %}
+## 🎯 Expected Company Actions
+
+_Predicted actions based on incentive analysis — what companies are likely forced to do next._
+
+{% for ap in action_predictions %}
+- **{{ ap.entity | title }}** likely to announce **{{ ap.event_display_name }}**{% if ap.direction %} ({{ ap.direction }}){% endif %}{% if ap.counterparty_type %} with {{ ap.counterparty_type | replace('_', ' ') }}{% endif %} within {{ ap.timeframe_days }} days ({{ (ap.probability * 100) | int }}% confidence)
+{% if ap.note %}  - _{{ ap.note }}_{% endif %}
+{% endfor %}
+
+---
+{% endif %}
+
 {% if stealth_signals %}
 ## 🕵️ Stealth Signals
 
