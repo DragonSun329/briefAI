@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-02-10T08:30:16.041297Z",
+  "experiments": [
+    "v2_1_forward_test",
+    "v3_0_action_test"
+  ],
+  "active_experiment": "v2_1_forward_test",
+  "experiment_details": {
+    "v2_1_forward_test": {
+      "engine_tag": "ENGINE_v2.1_DAY0",
+      "start_date": "2026-02-10",
+      "description": "Narrative + metric prediction engine (Genesis)",
+      "status": "active"
+    },
+    "v3_0_action_test": {
+      "engine_tag": "ENGINE_v3.0_ACTION",
+      "start_date": "2026-02-11",
+      "description": "Incentive + action prediction engine",
+      "status": "pending"
+    }
+  }
+}

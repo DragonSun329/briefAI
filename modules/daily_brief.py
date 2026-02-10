@@ -108,6 +108,16 @@ class DailyBriefGenerator:
 
         # Gather entity heatmap (sync, fast)
         heatmap = self._build_heatmap(top_n_entities)
+        
+        # Get current experiment name (for report header)
+        experiment_name = None
+        try:
+            from utils.experiment_manager import get_active_experiment
+            exp = get_active_experiment()
+            if exp:
+                experiment_name = exp.experiment_id
+        except Exception:
+            pass
 
         # Generate executive summary
         exec_summary = await self._generate_executive_summary(
@@ -118,6 +128,7 @@ class DailyBriefGenerator:
         template_data = {
             "report_date": report_date,
             "generation_time": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "experiment_name": experiment_name,
             "executive_summary": exec_summary,
             # Trends
             "emerging_trends": trend_data.get("trends", []),

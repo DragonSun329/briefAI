@@ -1,6 +1,6 @@
 # AI Intelligence Daily Brief
 
-**{{ report_date }}** | Generated {{ generation_time }}
+**{{ report_date }}** | Generated {{ generation_time }}{% if experiment_name %} | Experiment: `{{ experiment_name }}`{% endif %}
 
 ---
 

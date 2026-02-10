@@ -1,472 +1,411 @@
 """
-Public Forecast Logger - Append-Only Audit Trail.
+Public Forecast Logger v2.0
 
-Part of briefAI Validation & Public Credibility Layer.
+Logs predictions to experiment-specific ledgers for forward-testing.
+Ensures experimental isolation and append-only audit trails.
 
-Every time a hypothesis prediction is generated, append a line.
-This file is the PUBLIC AUDIT TRAIL.
-
-Rules:
-- Append only
-- Never overwrite
-- Stable ordering
-- Deterministic output
-
-Output:
-    data/public/forecast_history.jsonl
+Key features:
+- Experiment-aware routing (no cross-experiment writes)
+- Metadata stamping (experiment_id, engine_version, commit_hash)
+- Append-only forecast history
+- Daily snapshots with freeze timestamps
 """
 
-import os
 import json
 import hashlib
-from typing import List, Dict, Any, Optional
-
-# File locking (Unix only)
-if os.name != 'nt':
-    import fcntl
-else:
-    fcntl = None
-from dataclasses import dataclass, asdict
+from typing import Dict, Any, List, Optional
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 
 from loguru import logger
+
+from utils.experiment_manager import (
+    get_experiment_context,
+    get_ledger_path,
+    get_forecast_history_path,
+    get_daily_snapshot_path,
+    get_run_metadata_path,
+    validate_experiment_context,
+    ExperimentContext,
+)
 
 
 # =============================================================================
 # CONSTANTS
 # =============================================================================
 
-DEFAULT_DATA_DIR = Path(__file__).parent.parent / "data"
-PUBLIC_DIR = "public"
-FORECAST_HISTORY_FILE = "forecast_history.jsonl"
+REQUIRED_PREDICTION_FIELDS = [
+    'experiment_id',
+    'engine_version',
+    'commit_hash',
+    'generation_timestamp',
+]
 
 
 # =============================================================================
-# DATA STRUCTURES
+# VALIDATION
 # =============================================================================
 
-@dataclass
-class ForecastEntry:
-    """A single forecast entry in the public ledger."""
-    
-    # Identifiers
-    forecast_id: str
-    date: str
-    hypothesis_id: str
-    
-    # The claim
-    claim: str
-    confidence: float
-    mechanism: str
-    
-    # Prediction details
-    predicted_signal: str
-    category: str
-    canonical_metric: str
-    expected_direction: str
-    timeframe_days: int
-    
-    # Metadata
-    concept_name: str
-    logged_at: str
-    
-    def to_dict(self) -> Dict[str, Any]:
-        return asdict(self)
-    
-    def to_jsonl(self) -> str:
-        """Serialize to JSONL line (sorted keys for stability)."""
-        return json.dumps(self.to_dict(), sort_keys=True, ensure_ascii=False)
-    
-    @classmethod
-    def from_dict(cls, d: Dict[str, Any]) -> 'ForecastEntry':
-        return cls(**d)
-    
-    @classmethod
-    def from_jsonl(cls, line: str) -> 'ForecastEntry':
-        return cls.from_dict(json.loads(line))
-
-
-# =============================================================================
-# FORECAST ID GENERATOR
-# =============================================================================
-
-def generate_forecast_id(
-    date: str,
-    hypothesis_id: str,
-    canonical_metric: str,
-    category: str,
-) -> str:
+def validate_prediction(prediction: Dict[str, Any]) -> tuple:
     """
-    Generate a stable, deterministic forecast ID.
-    
-    Same inputs always produce same ID.
-    """
-    input_str = f"{date}|{hypothesis_id}|{canonical_metric}|{category}"
-    hash_bytes = hashlib.sha256(input_str.encode()).hexdigest()
-    return f"fc_{hash_bytes[:12]}"
-
-
-# =============================================================================
-# PUBLIC FORECAST LOGGER
-# =============================================================================
-
-class PublicForecastLogger:
-    """
-    Logs forecasts to an append-only public audit trail.
-    
-    Thread-safe (uses file locking on Unix).
-    Idempotent (same forecast won't be logged twice).
-    """
-    
-    def __init__(self, data_dir: Path = None):
-        """
-        Initialize forecast logger.
-        
-        Args:
-            data_dir: Base data directory
-        """
-        if data_dir is None:
-            data_dir = DEFAULT_DATA_DIR
-        
-        self.data_dir = Path(data_dir)
-        self.public_dir = self.data_dir / PUBLIC_DIR
-        self.public_dir.mkdir(parents=True, exist_ok=True)
-        
-        self.history_file = self.public_dir / FORECAST_HISTORY_FILE
-        
-        # Cache of logged forecast IDs (for idempotency)
-        self._logged_ids: set = set()
-        self._load_logged_ids()
-        
-        logger.debug(f"PublicForecastLogger initialized at {self.history_file}")
-    
-    def _load_logged_ids(self):
-        """Load already logged forecast IDs."""
-        if not self.history_file.exists():
-            return
-        
-        try:
-            with open(self.history_file, 'r', encoding='utf-8') as f:
-                for line in f:
-                    line = line.strip()
-                    if line:
-                        try:
-                            entry = json.loads(line)
-                            self._logged_ids.add(entry.get("forecast_id", ""))
-                        except json.JSONDecodeError:
-                            pass
-        except Exception as e:
-            logger.warning(f"Failed to load logged IDs: {e}")
-    
-    def log_forecast(self, entry: ForecastEntry) -> bool:
-        """
-        Log a single forecast entry.
-        
-        Args:
-            entry: ForecastEntry to log
-        
-        Returns:
-            True if logged, False if already exists
-        """
-        # Check for duplicate
-        if entry.forecast_id in self._logged_ids:
-            logger.debug(f"Forecast {entry.forecast_id} already logged")
-            return False
-        
-        # Append to file
-        try:
-            with open(self.history_file, 'a', encoding='utf-8') as f:
-                # File locking on Unix
-                if fcntl is not None:
-                    fcntl.flock(f.fileno(), fcntl.LOCK_EX)
-                
-                f.write(entry.to_jsonl() + '\n')
-                
-                if fcntl is not None:
-                    fcntl.flock(f.fileno(), fcntl.LOCK_UN)
-            
-            self._logged_ids.add(entry.forecast_id)
-            logger.debug(f"Logged forecast {entry.forecast_id}")
-            return True
-            
-        except Exception as e:
-            logger.error(f"Failed to log forecast: {e}")
-            return False
-    
-    def log_forecasts(self, entries: List[ForecastEntry]) -> int:
-        """
-        Log multiple forecast entries.
-        
-        Args:
-            entries: List of ForecastEntry to log
-        
-        Returns:
-            Number of new entries logged
-        """
-        logged = 0
-        for entry in entries:
-            if self.log_forecast(entry):
-                logged += 1
-        
-        return logged
-    
-    def log_from_hypothesis(
-        self,
-        date: str,
-        hypothesis: Dict[str, Any],
-        concept_name: str = "",
-    ) -> int:
-        """
-        Log forecasts from a hypothesis dict.
-        
-        Args:
-            date: Date of forecast
-            hypothesis: Hypothesis dict
-            concept_name: Name of parent concept
-        
-        Returns:
-            Number of entries logged
-        """
-        entries = []
-        
-        hypothesis_id = hypothesis.get("hypothesis_id", "")
-        confidence = hypothesis.get("confidence", 0.5)
-        mechanism = hypothesis.get("mechanism", "")
-        title = hypothesis.get("title", "")
-        
-        for pred in hypothesis.get("predicted_next_signals", []):
-            if not pred.get("measurable", False):
-                continue
-            
-            forecast_id = generate_forecast_id(
-                date,
-                hypothesis_id,
-                pred.get("canonical_metric", ""),
-                pred.get("category", ""),
-            )
-            
-            entry = ForecastEntry(
-                forecast_id=forecast_id,
-                date=date,
-                hypothesis_id=hypothesis_id,
-                claim=title,
-                confidence=confidence,
-                mechanism=mechanism,
-                predicted_signal=pred.get("description", ""),
-                category=pred.get("category", ""),
-                canonical_metric=pred.get("canonical_metric", ""),
-                expected_direction=pred.get("direction", "up"),
-                timeframe_days=pred.get("expected_timeframe_days", 30),
-                concept_name=concept_name,
-                logged_at=datetime.now().isoformat(),
-            )
-            
-            entries.append(entry)
-        
-        return self.log_forecasts(entries)
-    
-    def log_from_hypotheses_file(self, file_path: Path) -> int:
-        """
-        Log forecasts from a hypotheses JSON file.
-        
-        Args:
-            file_path: Path to hypotheses_YYYY-MM-DD.json
-        
-        Returns:
-            Number of entries logged
-        """
-        if not file_path.exists():
-            logger.warning(f"Hypotheses file not found: {file_path}")
-            return 0
-        
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-        except Exception as e:
-            logger.error(f"Failed to load hypotheses: {e}")
-            return 0
-        
-        date = data.get("date", file_path.stem.split("_")[-1])
-        logged = 0
-        
-        for bundle in data.get("bundles", []):
-            concept_name = bundle.get("concept_name", "")
-            
-            for hyp in bundle.get("hypotheses", []):
-                logged += self.log_from_hypothesis(date, hyp, concept_name)
-        
-        logger.info(f"Logged {logged} forecasts from {file_path.name}")
-        return logged
-    
-    def get_forecast_count(self) -> int:
-        """Get total number of logged forecasts."""
-        return len(self._logged_ids)
-    
-    def get_forecasts_for_date(self, date: str) -> List[ForecastEntry]:
-        """Get all forecasts for a specific date."""
-        if not self.history_file.exists():
-            return []
-        
-        forecasts = []
-        
-        with open(self.history_file, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                if line:
-                    try:
-                        entry = ForecastEntry.from_jsonl(line)
-                        if entry.date == date:
-                            forecasts.append(entry)
-                    except Exception:
-                        pass
-        
-        return forecasts
-    
-    def get_all_forecasts(self) -> List[ForecastEntry]:
-        """Get all logged forecasts."""
-        if not self.history_file.exists():
-            return []
-        
-        forecasts = []
-        
-        with open(self.history_file, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                if line:
-                    try:
-                        forecasts.append(ForecastEntry.from_jsonl(line))
-                    except Exception:
-                        pass
-        
-        return forecasts
-
-
-# =============================================================================
-# INTEGRATION HOOK
-# =============================================================================
-
-def log_hypothesis_predictions(
-    hypotheses_data: Dict[str, Any],
-    date: str = None,
-    data_dir: Path = None,
-) -> int:
-    """
-    Integration hook: Log predictions from hypotheses output.
-    
-    Call this after hypothesis generation to populate the public ledger.
-    
-    Args:
-        hypotheses_data: Output from HypothesisEngine.process_meta_signals()
-        date: Date of predictions (defaults to today)
-        data_dir: Data directory
+    Validate a prediction has required metadata.
     
     Returns:
-        Number of forecasts logged
+        (is_valid, missing_fields)
     """
-    if date is None:
-        date = hypotheses_data.get("date", datetime.now().strftime("%Y-%m-%d"))
+    missing = []
+    for field in REQUIRED_PREDICTION_FIELDS:
+        if field not in prediction or not prediction[field]:
+            missing.append(field)
     
-    logger_obj = PublicForecastLogger(data_dir)
+    return len(missing) == 0, missing
+
+
+def stamp_prediction(
+    prediction: Dict[str, Any],
+    context: ExperimentContext,
+) -> Dict[str, Any]:
+    """Add experiment metadata stamp to a prediction."""
+    stamped = prediction.copy()
+    stamped.update(context.get_metadata_stamp())
     
-    logged = 0
-    for bundle in hypotheses_data.get("bundles", []):
-        concept_name = bundle.get("concept_name", "")
-        
-        for hyp in bundle.get("hypotheses", []):
-            logged += logger_obj.log_from_hypothesis(date, hyp, concept_name)
+    # Add prediction ID if not present
+    if 'prediction_id' not in stamped:
+        content = json.dumps(stamped, sort_keys=True)
+        stamped['prediction_id'] = 'pred_' + hashlib.sha256(content.encode()).hexdigest()[:12]
     
-    return logged
+    return stamped
 
 
 # =============================================================================
-# TESTS
+# FORECAST HISTORY LOGGER
 # =============================================================================
 
-def _test_forecast_entry():
-    """Test ForecastEntry serialization."""
-    entry = ForecastEntry(
-        forecast_id="fc_test123",
-        date="2026-02-10",
-        hypothesis_id="hyp_001",
-        claim="Infrastructure Scaling",
-        confidence=0.78,
-        mechanism="infra_scaling",
-        predicted_signal="NVIDIA datacenter revenue beats",
-        category="financial",
-        canonical_metric="earnings_mentions",
-        expected_direction="up",
-        timeframe_days=30,
-        concept_name="NVIDIA Demand",
-        logged_at="2026-02-10T14:00:00",
-    )
+class ForecastHistoryLogger:
+    """
+    Append-only logger for forecast history.
     
-    jsonl = entry.to_jsonl()
-    restored = ForecastEntry.from_jsonl(jsonl)
+    Writes predictions to experiment-specific forecast_history.jsonl.
+    """
     
-    assert restored.forecast_id == entry.forecast_id
-    assert restored.confidence == entry.confidence
-    
-    print("[PASS] _test_forecast_entry")
-
-
-def _test_forecast_id_stability():
-    """Test forecast ID is deterministic."""
-    id1 = generate_forecast_id("2026-02-10", "hyp_001", "arr", "financial")
-    id2 = generate_forecast_id("2026-02-10", "hyp_001", "arr", "financial")
-    id3 = generate_forecast_id("2026-02-10", "hyp_002", "arr", "financial")
-    
-    assert id1 == id2  # Same inputs = same ID
-    assert id1 != id3  # Different inputs = different ID
-    
-    print("[PASS] _test_forecast_id_stability")
-
-
-def _test_logger_idempotency():
-    """Test logger doesn't log duplicates."""
-    import tempfile
-    
-    with tempfile.TemporaryDirectory() as tmpdir:
-        logger_obj = PublicForecastLogger(Path(tmpdir))
+    def __init__(self, experiment_id: str = None):
+        """
+        Initialize logger for an experiment.
         
-        entry = ForecastEntry(
-            forecast_id="fc_test123",
-            date="2026-02-10",
-            hypothesis_id="hyp_001",
-            claim="Test",
-            confidence=0.78,
-            mechanism="test",
-            predicted_signal="Test signal",
-            category="test",
-            canonical_metric="test",
-            expected_direction="up",
-            timeframe_days=30,
-            concept_name="Test",
-            logged_at="2026-02-10T14:00:00",
+        Args:
+            experiment_id: Optional experiment ID. Uses active experiment if None.
+        """
+        self.context = get_experiment_context(experiment_id)
+        self.ledger_path = get_ledger_path(self.context.experiment.experiment_id)
+        self.history_path = get_forecast_history_path(self.context.experiment.experiment_id)
+        
+        # Validate context
+        is_valid, warnings, errors = validate_experiment_context(self.context)
+        for warning in warnings:
+            logger.warning(f"[ForecastLogger] {warning}")
+        for error in errors:
+            logger.error(f"[ForecastLogger] {error}")
+        
+        if not is_valid:
+            raise ValueError(f"Invalid experiment context: {errors}")
+        
+        logger.info(
+            f"ForecastHistoryLogger initialized for experiment: "
+            f"{self.context.experiment.experiment_id}"
         )
-        
-        # First log should succeed
-        assert logger_obj.log_forecast(entry) == True
-        
-        # Second log should be idempotent (no duplicate)
-        assert logger_obj.log_forecast(entry) == False
-        
-        # Count should be 1
-        assert logger_obj.get_forecast_count() == 1
-        
-    print("[PASS] _test_logger_idempotency")
-
-
-def run_tests():
-    """Run all tests."""
-    print("\n=== PUBLIC FORECAST LOGGER TESTS ===\n")
     
-    _test_forecast_entry()
-    _test_forecast_id_stability()
-    _test_logger_idempotency()
+    def log_prediction(self, prediction: Dict[str, Any]) -> str:
+        """
+        Log a single prediction to the forecast history.
+        
+        Args:
+            prediction: Prediction dict
+        
+        Returns:
+            prediction_id
+        """
+        # Stamp with metadata
+        stamped = stamp_prediction(prediction, self.context)
+        
+        # Validate
+        is_valid, missing = validate_prediction(stamped)
+        if not is_valid:
+            raise ValueError(f"Prediction missing required fields: {missing}")
+        
+        # Append to JSONL
+        with open(self.history_path, 'a', encoding='utf-8') as f:
+            f.write(json.dumps(stamped, ensure_ascii=False) + '\n')
+        
+        return stamped['prediction_id']
     
-    print("\n=== ALL TESTS PASSED ===")
+    def log_predictions(self, predictions: List[Dict[str, Any]]) -> List[str]:
+        """
+        Log multiple predictions to the forecast history.
+        
+        Args:
+            predictions: List of prediction dicts
+        
+        Returns:
+            List of prediction_ids
+        """
+        ids = []
+        for pred in predictions:
+            pred_id = self.log_prediction(pred)
+            ids.append(pred_id)
+        
+        logger.info(f"Logged {len(ids)} predictions to {self.history_path}")
+        return ids
+    
+    def get_prediction_count(self) -> int:
+        """Get the total number of predictions in the history."""
+        if not self.history_path.exists():
+            return 0
+        
+        count = 0
+        with open(self.history_path, 'r', encoding='utf-8') as f:
+            for _ in f:
+                count += 1
+        return count
 
 
-if __name__ == "__main__":
-    run_tests()
+# =============================================================================
+# DAILY SNAPSHOT WRITER
+# =============================================================================
+
+class DailySnapshotWriter:
+    """
+    Writes daily snapshots for experiment ledgers.
+    
+    A daily snapshot contains all predictions generated on a specific date,
+    frozen at a specific timestamp.
+    """
+    
+    def __init__(self, experiment_id: str = None):
+        """
+        Initialize writer for an experiment.
+        
+        Args:
+            experiment_id: Optional experiment ID. Uses active experiment if None.
+        """
+        self.context = get_experiment_context(experiment_id)
+        self.ledger_path = get_ledger_path(self.context.experiment.experiment_id)
+        
+        logger.info(
+            f"DailySnapshotWriter initialized for experiment: "
+            f"{self.context.experiment.experiment_id}"
+        )
+    
+    def write_snapshot(
+        self,
+        date: str,
+        predictions: List[Dict[str, Any]],
+        signals_data: Dict[str, Any] = None,
+        additional_metadata: Dict[str, Any] = None,
+    ) -> Path:
+        """
+        Write a daily snapshot.
+        
+        Args:
+            date: Date string (YYYY-MM-DD)
+            predictions: List of predictions for this date
+            signals_data: Optional signals/meta-signals data
+            additional_metadata: Optional additional metadata
+        
+        Returns:
+            Path to the snapshot file
+        """
+        snapshot = {
+            'date': date,
+            'frozen_at': self.context.generation_timestamp,
+            'experiment_id': self.context.experiment.experiment_id,
+            'engine_tag': self.context.experiment.engine_tag,
+            'commit_hash': self.context.commit_hash,
+            'model_version': self.context.experiment.engine_version,
+            'run_type': 'forward_test',
+            'prediction_count': len(predictions),
+            'predictions': predictions,
+        }
+        
+        if signals_data:
+            snapshot['signals'] = signals_data
+        
+        if additional_metadata:
+            snapshot.update(additional_metadata)
+        
+        # Write snapshot
+        snapshot_path = get_daily_snapshot_path(date, self.context.experiment.experiment_id)
+        with open(snapshot_path, 'w', encoding='utf-8') as f:
+            json.dump(snapshot, f, indent=2, ensure_ascii=False)
+        
+        logger.info(f"Wrote daily snapshot: {snapshot_path}")
+        return snapshot_path
+    
+    def write_run_metadata(self, date: str) -> Path:
+        """
+        Write run metadata for a specific date.
+        
+        Args:
+            date: Date string (YYYY-MM-DD)
+        
+        Returns:
+            Path to the metadata file
+        """
+        import platform
+        import sys
+        
+        metadata = {
+            'experiment_id': self.context.experiment.experiment_id,
+            'engine_tag': self.context.experiment.engine_tag,
+            'model_version': self.context.experiment.engine_version,
+            'commit_hash': self.context.commit_hash,
+            'run_type': 'forward_test',
+            'rerun_allowed': False,
+            'date': date,
+            'timestamp_utc': self.context.generation_timestamp,
+            'python_version': platform.python_version(),
+            'os': f"{platform.system()} {platform.release()}",
+        }
+        
+        # Write metadata
+        metadata_path = get_run_metadata_path(date, self.context.experiment.experiment_id)
+        with open(metadata_path, 'w', encoding='utf-8') as f:
+            json.dump(metadata, f, indent=2, ensure_ascii=False)
+        
+        logger.info(f"Wrote run metadata: {metadata_path}")
+        return metadata_path
+    
+    def write_completion_flag(self, date: str) -> Path:
+        """
+        Write a completion flag for a specific date.
+        
+        Args:
+            date: Date string (YYYY-MM-DD)
+        
+        Returns:
+            Path to the flag file
+        """
+        flag_path = self.ledger_path / f"RUN_COMPLETE_{date}.flag"
+        
+        with open(flag_path, 'w', encoding='utf-8') as f:
+            f.write(f"Completed: {self.context.generation_timestamp}\n")
+            f.write(f"Experiment: {self.context.experiment.experiment_id}\n")
+            f.write(f"Commit: {self.context.commit_hash}\n")
+        
+        logger.info(f"Wrote completion flag: {flag_path}")
+        return flag_path
+
+
+# =============================================================================
+# CONVENIENCE FUNCTIONS
+# =============================================================================
+
+def log_predictions_to_experiment(
+    predictions: List[Dict[str, Any]],
+    experiment_id: str = None,
+) -> List[str]:
+    """
+    Log predictions to an experiment's forecast history.
+    
+    Args:
+        predictions: List of prediction dicts
+        experiment_id: Optional experiment ID. Uses active experiment if None.
+    
+    Returns:
+        List of prediction IDs
+    """
+    logger_instance = ForecastHistoryLogger(experiment_id)
+    return logger_instance.log_predictions(predictions)
+
+
+def create_daily_snapshot(
+    date: str,
+    predictions: List[Dict[str, Any]],
+    signals_data: Dict[str, Any] = None,
+    experiment_id: str = None,
+) -> Dict[str, Path]:
+    """
+    Create a complete daily snapshot with metadata.
+    
+    Args:
+        date: Date string (YYYY-MM-DD)
+        predictions: List of predictions
+        signals_data: Optional signals data
+        experiment_id: Optional experiment ID
+    
+    Returns:
+        Dict with paths to created files
+    """
+    writer = DailySnapshotWriter(experiment_id)
+    
+    # Stamp all predictions
+    context = get_experiment_context(experiment_id)
+    stamped_predictions = [
+        stamp_prediction(pred, context) 
+        for pred in predictions
+    ]
+    
+    # Write files
+    snapshot_path = writer.write_snapshot(date, stamped_predictions, signals_data)
+    metadata_path = writer.write_run_metadata(date)
+    flag_path = writer.write_completion_flag(date)
+    
+    # Log to forecast history
+    history_logger = ForecastHistoryLogger(experiment_id)
+    history_logger.log_predictions(stamped_predictions)
+    
+    return {
+        'snapshot': snapshot_path,
+        'metadata': metadata_path,
+        'flag': flag_path,
+        'prediction_count': len(stamped_predictions),
+    }
+
+
+# =============================================================================
+# READING FUNCTIONS
+# =============================================================================
+
+def read_forecast_history(experiment_id: str = None) -> List[Dict[str, Any]]:
+    """
+    Read all predictions from an experiment's forecast history.
+    
+    Args:
+        experiment_id: Optional experiment ID. Uses active experiment if None.
+    
+    Returns:
+        List of prediction dicts
+    """
+    history_path = get_forecast_history_path(experiment_id)
+    
+    if not history_path.exists():
+        return []
+    
+    predictions = []
+    with open(history_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                predictions.append(json.loads(line))
+    
+    return predictions
+
+
+def read_daily_snapshot(date: str, experiment_id: str = None) -> Optional[Dict[str, Any]]:
+    """
+    Read a daily snapshot for a specific date.
+    
+    Args:
+        date: Date string (YYYY-MM-DD)
+        experiment_id: Optional experiment ID
+    
+    Returns:
+        Snapshot dict or None if not found
+    """
+    snapshot_path = get_daily_snapshot_path(date, experiment_id)
+    
+    if not snapshot_path.exists():
+        return None
+    
+    with open(snapshot_path, 'r', encoding='utf-8') as f:
+        return json.load(f)

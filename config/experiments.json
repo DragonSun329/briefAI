@@ -1,0 +1,40 @@
+{
+  "_version": "1.0",
+  "_description": "Experiment registry for forward-test isolation. Each experiment has its own ledger, calibration metrics, and audit trail.",
+  "active_experiment": "v2_1_forward_test",
+  "experiments": {
+    "v2_1_forward_test": {
+      "engine_tag": "ENGINE_v2.1_DAY0",
+      "engine_version": "2.1",
+      "ledger_path": "data/public/experiments/v2_1_forward_test/",
+      "metrics_path": "data/metrics/v2_1_forward_test/",
+      "start_date": "2026-02-10",
+      "description": "Narrative + metric prediction engine (Genesis)",
+      "prediction_types": [
+        "metric_trend",
+        "media_attention"
+      ],
+      "status": "active"
+    },
+    "v3_0_action_test": {
+      "engine_tag": "ENGINE_v3.0_ACTION",
+      "engine_version": "3.0",
+      "ledger_path": "data/public/experiments/v3_0_action_test/",
+      "metrics_path": "data/metrics/v3_0_action_test/",
+      "start_date": "2026-02-11",
+      "description": "Incentive + action prediction engine",
+      "prediction_types": [
+        "action_event",
+        "metric_trend"
+      ],
+      "status": "pending"
+    }
+  },
+  "rules": {
+    "append_only": true,
+    "require_experiment_id": true,
+    "require_engine_tag": true,
+    "require_commit_hash": true,
+    "allow_cross_experiment_writes": false
+  }
+}

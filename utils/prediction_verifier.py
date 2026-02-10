@@ -35,6 +35,9 @@ from loguru import logger
 DEFAULT_PREDICTIONS_DIR = Path(__file__).parent.parent / "data" / "predictions"
 DEFAULT_RECORDS_FILE = "prediction_records.jsonl"
 
+# Experiment-aware mode
+EXPERIMENT_AWARE = True  # Set to True to use experiment-isolated storage
+
 # Direction evaluation thresholds
 THRESHOLD_SIGNIFICANT_CHANGE = 0.15  # 15% change for verified_true/false
 THRESHOLD_FLAT = 0.10                # 10% for flat direction
@@ -118,6 +121,11 @@ class PredictionRecord:
     # Query trace (for debugging)
     observable_query: Dict[str, Any] = field(default_factory=dict)
     query_terms: Dict[str, Any] = field(default_factory=dict)
+    
+    # Experiment metadata (for isolation)
+    experiment_id: Optional[str] = None     # e.g., "v2_1_forward_test"
+    engine_version: Optional[str] = None    # e.g., "ENGINE_v2.1_DAY0"
+    commit_hash: Optional[str] = None       # Git commit hash
     
     def to_dict(self) -> Dict[str, Any]:
         """Serialize to dict for JSON storage."""
@@ -366,10 +374,35 @@ class PredictionStore:
     Persistent store for prediction records.
     
     Uses JSONL format for append-friendly storage.
+    Supports experiment-aware storage isolation.
     """
     
-    def __init__(self, data_dir: Path = None):
-        """Initialize prediction store."""
+    def __init__(self, data_dir: Path = None, experiment_id: str = None):
+        """
+        Initialize prediction store.
+        
+        Args:
+            data_dir: Override data directory
+            experiment_id: Optional experiment ID for isolated storage
+        """
+        self.experiment_id = experiment_id
+        self.experiment_context = None
+        
+        # Try to use experiment-aware storage
+        if EXPERIMENT_AWARE and data_dir is None:
+            try:
+                from utils.experiment_manager import (
+                    get_experiment_context,
+                    get_ledger_path,
+                )
+                self.experiment_context = get_experiment_context(experiment_id)
+                # Store predictions alongside the forecast ledger
+                ledger_path = get_ledger_path(experiment_id)
+                data_dir = ledger_path / "predictions"
+                self.experiment_id = self.experiment_context.experiment.experiment_id
+            except Exception as e:
+                logger.debug(f"Experiment manager not available, using default: {e}")
+        
         if data_dir is None:
             data_dir = DEFAULT_PREDICTIONS_DIR
         
@@ -381,6 +414,12 @@ class PredictionStore:
     
     def save_record(self, record: PredictionRecord) -> None:
         """Append a single record to the store."""
+        # Add experiment metadata if available
+        if self.experiment_context:
+            record.experiment_id = self.experiment_id
+            record.engine_version = self.experiment_context.experiment.engine_tag
+            record.commit_hash = self.experiment_context.commit_hash
+        
         with open(self.records_file, 'a', encoding='utf-8') as f:
             f.write(record.to_jsonl() + '\n')
         logger.debug(f"Saved prediction {record.prediction_id}")
