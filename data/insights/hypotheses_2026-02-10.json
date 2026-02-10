@@ -1,89 +1,86 @@
 {
   "date": "2026-02-10",
-  "generated_at": "2026-02-10T11:31:38.897017",
+  "generated_at": "2026-02-10T16:25:04.475987",
   "version": "2.1",
   "summary": {
-    "total_metas": 1,
-    "total_bundles": 1,
-    "total_hypotheses": 1,
+    "total_metas": 2,
+    "total_bundles": 2,
+    "total_hypotheses": 3,
     "top_mechanisms": {
-      "enterprise_adoption": 1
+      "distribution_shift": 1,
+      "null_hypothesis": 1
     },
-    "metas_requiring_review": 0
+    "metas_requiring_review": 2
   },
   "bundles": [
     {
-      "meta_id": "meta_strong_v21",
-      "concept_slug": "slug_strong_v21",
-      "concept_name": "Enterprise AI Adoption Accelerating",
-      "maturity_stage": "trending",
+      "meta_id": "52f11143cbd4",
+      "concept_slug": "f869cf725b27",
+      "concept_name": "Mixed Signals Review",
+      "maturity_stage": "emerging",
       "hypotheses": [
         {
-          "hypothesis_id": "07a486cbcc835ef0",
-          "title": "Enterprise Adoption Accelerating",
-          "mechanism": "enterprise_adoption",
-          "claim": "Enterprise AI Adoption Accelerating suggests enterprise adoption acceleration, driven by proven ROI or compliance readiness.",
-          "why_now": "Signal is persistent for 5 days, accelerating, now trending, from independent sources.",
+          "hypothesis_id": "66a137e1d3439066",
+          "title": "Emerging Distribution Channel Shifting",
+          "mechanism": "distribution_shift",
+          "claim": "Mixed Signals Review indicates changing distribution channels reshaping market access.",
+          "why_now": "Signal is accelerating, emerging pattern.",
           "evidence_used": {
             "supporting_signals": [
-              "sig1",
-              "sig2"
+              "79f88a9ab05a",
+              "406761560557",
+              "709bc63a75a5",
+              "399bf415e1ce"
             ],
             "source_categories": [
-              "technical",
-              "financial",
               "media"
             ],
             "key_entities": [
-              "company_a"
+              "china",
+              "api",
+              "anthropic",
+              "opus",
+              "claude"
             ],
             "key_quotes": [
-              "Enterprise AI contract volume increasing.",
-              "Multiple signals indicate enterprise adoption of AI is accelerating."
+              "Rolls fast mode cost dynamics shifting in ai market",
+              "Unveils pay-per-use pricing cost dynamics shifting in ai market"
             ]
           },
           "predicted_next_signals": [
             {
               "category": "financial",
-              "description": "Enterprise contract count and ARR mentions increase",
+              "description": "Partnership announcements or revenue share changes",
               "example_sources": [
                 "sec",
-                "earnings_call",
-                "press_release"
+                "press_release",
+                "earnings_call"
               ],
-              "expected_timeframe_days": 30,
-              "metric": "contract_count",
-              "direction": "up",
-              "canonical_metric": "contract_count",
+              "expected_timeframe_days": 14,
+              "metric": "revenue",
+              "speculative": true,
+              "canonical_metric": "arr",
               "observable_query": {
                 "source": "sec",
-                "query": "((enterprise OR contract OR deal OR arr OR deployment)) AND (company_a)",
-                "aggregation": "count",
-                "window_days": 30,
+                "query": "(api) AND (opus)",
+                "aggregation": "sum",
+                "window_days": 14,
                 "expected_direction": "up",
                 "available": true,
                 "query_terms": {
                   "entities": [
-                    "company_a"
+                    "opus",
+                    "claude",
+                    "anthropic"
                   ],
-                  "primary_entity": "company_a",
+                  "primary_entity": "opus",
                   "concept_entity": null,
                   "mechanism_terms": [
-                    "enterprise",
-                    "deployment",
-                    "contract"
+                    "api"
                   ],
-                  "query_hints": [
-                    "enterprise",
-                    "contract",
-                    "deal",
-                    "arr"
-                  ],
-                  "bucket_terms": [
-                    "deployment",
-                    "enterprise"
-                  ],
-                  "canonical_metric": "contract_count",
+                  "query_hints": [],
+                  "bucket_terms": [],
+                  "canonical_metric": "arr",
                   "template_used": "filings:{entity} type:{filing_type}"
                 }
               },
@@ -91,269 +88,584 @@
             },
             {
               "category": "technical",
-              "description": "Enterprise SDK releases and compliance certifications increase",
+              "description": "New API integrations or platform releases",
               "example_sources": [
                 "github",
                 "company_blog",
                 "docs"
               ],
               "expected_timeframe_days": 14,
-              "metric": "sdk_release",
-              "direction": "up",
-              "canonical_metric": "sdk_release",
+              "metric": "release",
+              "speculative": true,
+              "canonical_metric": "repo_activity",
               "observable_query": {
                 "source": "github",
-                "query": "repo:company_a metric:sdk_release",
+                "query": "repo:opus metric:repo_activity",
                 "aggregation": "count",
                 "window_days": 14,
                 "expected_direction": "up",
                 "available": true,
                 "query_terms": {
                   "entities": [
-                    "company_a"
+                    "opus",
+                    "claude",
+                    "anthropic"
                   ],
-                  "primary_entity": "company_a",
+                  "primary_entity": "opus",
                   "concept_entity": null,
                   "mechanism_terms": [
-                    "enterprise",
-                    "deployment",
-                    "contract"
+                    "api"
                   ],
-                  "query_hints": [
-                    "enterprise",
-                    "sdk",
-                    "api",
-                    "soc2"
-                  ],
-                  "bucket_terms": [
-                    "deployment",
-                    "enterprise"
-                  ],
-                  "canonical_metric": "sdk_release",
+                  "query_hints": [],
+                  "bucket_terms": [],
+                  "canonical_metric": "repo_activity",
                   "template_used": "repo:{entity} metric:{metric}"
-                }
-              },
-              "measurable": true
-            },
-            {
-              "category": "social",
-              "description": "Job postings for AI integration roles increase",
-              "example_sources": [
-                "linkedin",
-                "glassdoor",
-                "indeed"
-              ],
-              "expected_timeframe_days": 14,
-              "metric": "job_postings_count",
-              "direction": "up",
-              "canonical_metric": "job_postings_count",
-              "observable_query": {
-                "source": "linkedin",
-                "query": "company:company_a jobs:(ai integration OR ml engineer OR mlops OR deployment OR enterprise OR contract)",
-                "aggregation": "count",
-                "window_days": 14,
-                "expected_direction": "up",
-                "available": true,
-                "query_terms": {
-                  "entities": [
-                    "company_a"
-                  ],
-                  "primary_entity": "company_a",
-                  "concept_entity": null,
-                  "mechanism_terms": [
-                    "enterprise",
-                    "deployment",
-                    "contract"
-                  ],
-                  "query_hints": [
-                    "ai integration",
-                    "ml engineer",
-                    "mlops",
-                    "deployment"
-                  ],
-                  "bucket_terms": [
-                    "deployment",
-                    "enterprise"
-                  ],
-                  "canonical_metric": "job_postings_count",
-                  "template_used": "company:{entity} jobs:{keyword}"
-                }
-              },
-              "measurable": true
-            },
-            {
-              "category": "predictive",
-              "description": "Prediction market probability for enterprise AI milestones increases",
-              "example_sources": [
-                "polymarket",
-                "metaculus",
-                "manifold"
-              ],
-              "expected_timeframe_days": 7,
-              "metric": "probability_change",
-              "direction": "up",
-              "canonical_metric": "probability_change",
-              "observable_query": {
-                "source": "polymarket",
-                "query": "market:(enterprise ai OR adoption OR deployment OR enterprise OR contract)",
-                "aggregation": "delta",
-                "window_days": 7,
-                "expected_direction": "up",
-                "available": true,
-                "query_terms": {
-                  "entities": [
-                    "company_a"
-                  ],
-                  "primary_entity": "company_a",
-                  "concept_entity": null,
-                  "mechanism_terms": [
-                    "enterprise",
-                    "deployment",
-                    "contract"
-                  ],
-                  "query_hints": [
-                    "enterprise ai",
-                    "adoption",
-                    "deployment"
-                  ],
-                  "bucket_terms": [
-                    "deployment",
-                    "enterprise"
-                  ],
-                  "canonical_metric": "probability_change",
-                  "template_used": "market:{keyword}"
                 }
               },
               "measurable": true
             }
           ],
           "falsifiers": [
-            "Enterprise pilots fail to convert to production",
-            "Compliance or security concerns block adoption",
-            "ROI metrics disappoint causing project cancellations"
+            "Direct channels outperform partnerships",
+            "Platform terms become unfavorable",
+            "User preference for standalone products"
           ],
-          "confidence": 0.824,
+          "confidence": 0.398,
           "confidence_breakdown": {
-            "base_from_meta_confidence": 0.429,
-            "diversity_bonus": 0.15,
-            "persistence_bonus": 0.1,
-            "independence_bonus": 0.085,
-            "specificity_bonus": 0.06,
-            "penalties_applied": [],
-            "final": 0.824
+            "base_from_meta_confidence": 0.248,
+            "diversity_bonus": 0.05,
+            "persistence_bonus": 0.02,
+            "independence_bonus": 0.04,
+            "specificity_bonus": 0.02,
+            "penalties_applied": [
+              "weak_mechanism:-0.1"
+            ],
+            "final": 0.278
           },
-          "review_required": false,
+          "review_required": true,
           "debug": {
             "rules_fired": [
-              "base_from_meta:0.78",
-              "category_diversity:3",
-              "persistence_days:5",
-              "independence:0.85",
-              "mechanism_hits:3"
+              "base_from_meta:0.45",
+              "category_diversity:1",
+              "persistence_days:1",
+              "independence:0.40",
+              "mechanism_hits:1",
+              "penalty:weak_mechanism"
             ],
             "scoring_terms": {
-              "meta_confidence": 0.78,
-              "category_count": 3,
-              "persistence_days": 5,
-              "independence_score": 0.85,
-              "evidence_strength": 1.0
+              "meta_confidence": 0.45,
+              "category_count": 1,
+              "persistence_days": 1,
+              "independence_score": 0.4,
+              "evidence_strength": 0.33
             },
-            "mechanism_keyword_hits": 3,
+            "mechanism_keyword_hits": 1,
             "mechanism_keywords_matched": [
-              "enterprise",
-              "deployment",
-              "contract"
+              "api"
             ]
           },
           "mechanism_trace": {
             "candidate_scores": {
-              "enterprise_adoption": 3,
-              "data_rights_ip": 1
+              "distribution_shift": 1
             },
             "matched_terms": [
-              "enterprise",
-              "deployment",
-              "contract"
+              "api"
             ],
             "evidence_sources": [
-              "description",
-              "concept_name",
-              "mechanism_field",
-              "meta_insight",
               "signal_name",
-              "mechanism_bucket",
-              "naming_reason",
-              "bucket_tags"
+              "entity_tags"
             ],
-            "selection_reason": "highest_score",
+            "selection_reason": "best_available",
             "evidence_sources_primary": [
-              "concept_name",
-              "description",
-              "meta_insight",
               "signal_name",
-              "bucket_tags"
-            ],
-            "evidence_sources_secondary": [
-              "mechanism_field",
-              "mechanism_bucket",
-              "naming_reason"
+              "entity_tags"
             ]
           },
           "confidence_inputs": {
-            "meta_confidence_raw": 0.78,
+            "meta_confidence_raw": 0.45,
             "meta_to_hypothesis_scaling": 0.55
           },
           "confidence_debug": {
-            "base_scaled": 0.429,
-            "base_raw": 0.78,
+            "base_scaled": 0.2475,
+            "base_raw": 0.45,
             "scaling_factor": 0.55
           },
           "falsifiers_v2": [
             {
-              "text": "Enterprise pilots fail to convert to production",
+              "text": "Direct channels outperform partnerships",
               "observable": {
-                "metric": "contract_count",
+                "metric": "custom_metric",
                 "direction": "down",
                 "window_days": 30,
-                "available": true
+                "available": false
               }
             },
             {
-              "text": "Compliance or security concerns block adoption",
+              "text": "Platform terms become unfavorable",
               "observable": {
-                "metric": "certification",
+                "metric": "custom_metric",
                 "direction": "down",
                 "window_days": 30,
-                "available": true
+                "available": false
               }
             },
             {
-              "text": "ROI metrics disappoint causing project cancellations",
+              "text": "User preference for standalone products",
               "observable": {
-                "metric": "earnings_mentions",
+                "metric": "custom_metric",
                 "direction": "down",
-                "window_days": 90,
-                "available": true
+                "window_days": 30,
+                "available": false
               }
             }
-          ]
+          ],
+          "action_predictions": [
+            {
+              "event_type": "product_launch",
+              "event_display_name": "Product Launch",
+              "entity": "china",
+              "probability": 0.2849,
+              "timeframe_days": 30,
+              "source_pressure": "platform_lockin_battle",
+              "source_pressure_confidence": 0.407,
+              "prediction_id": "ap_a31810581b23",
+              "created_at": "2026-02-10T08:25:04.481518",
+              "note": "developer tools",
+              "observable_query": {
+                "source": "company_blog",
+                "metric": "product_announcement",
+                "aggregation": "exists",
+                "window_days": 14,
+                "entity": "china"
+              }
+            },
+            {
+              "event_type": "partnership_announcement",
+              "event_display_name": "Partnership Announcement",
+              "entity": "china",
+              "probability": 0.2646,
+              "timeframe_days": 30,
+              "source_pressure": "platform_lockin_battle",
+              "source_pressure_confidence": 0.407,
+              "prediction_id": "ap_2926e04488c0",
+              "created_at": "2026-02-10T08:25:04.481533",
+              "counterparty_type": "platform_company",
+              "observable_query": {
+                "source": "press_release",
+                "metric": "press_release_mentions",
+                "aggregation": "count",
+                "window_days": 7,
+                "entity": "china"
+              }
+            }
+          ],
+          "pressure_analysis": {
+            "meta_signal_id": "unknown",
+            "entity": "china",
+            "pressures": [
+              {
+                "pressure_type": "platform_lockin_battle",
+                "display_name": "Platform Lock-in Battle",
+                "confidence": 0.407,
+                "evidence": {
+                  "source_field": "signal_names",
+                  "matched_terms": [
+                    "api"
+                  ],
+                  "pattern_matches": [
+                    "developer_targeting"
+                  ]
+                },
+                "entity": "china",
+                "entity_modifier": 1.0
+              },
+              {
+                "pressure_type": "competitive_pressure",
+                "display_name": "Competitive Pressure",
+                "confidence": 0.1725,
+                "evidence": {
+                  "source_field": "unknown",
+                  "matched_terms": [],
+                  "pattern_matches": [
+                    "multiple_competitors_mentioned"
+                  ]
+                },
+                "entity": "china",
+                "entity_modifier": 1.0
+              },
+              {
+                "pressure_type": "adoption_friction",
+                "display_name": "Adoption Friction",
+                "confidence": 0.1575,
+                "evidence": {
+                  "source_field": "unknown",
+                  "matched_terms": [],
+                  "pattern_matches": [
+                    "integration_issues"
+                  ]
+                },
+                "entity": "china",
+                "entity_modifier": 1.0
+              }
+            ],
+            "primary_pressure": {
+              "pressure_type": "platform_lockin_battle",
+              "display_name": "Platform Lock-in Battle",
+              "confidence": 0.407,
+              "evidence": {
+                "source_field": "signal_names",
+                "matched_terms": [
+                  "api"
+                ],
+                "pattern_matches": [
+                  "developer_targeting"
+                ]
+              },
+              "entity": "china",
+              "entity_modifier": 1.0
+            },
+            "analysis_version": "1.0"
+          },
+          "has_action_predictions": true,
+          "confidence_adjustment_reason": "action_prediction_bonus"
+        },
+        {
+          "hypothesis_id": "79e142730eed5085",
+          "title": "Alternative: Media Attention Spike",
+          "mechanism": "media_attention_spike",
+          "claim": "Mixed Signals Review shows elevated media attention without clear underlying mechanism.",
+          "why_now": "Signal is accelerating, emerging pattern.",
+          "evidence_used": {
+            "supporting_signals": [
+              "79f88a9ab05a",
+              "406761560557",
+              "709bc63a75a5",
+              "399bf415e1ce"
+            ],
+            "source_categories": [
+              "media"
+            ],
+            "key_entities": [
+              "china",
+              "api",
+              "anthropic",
+              "opus",
+              "claude"
+            ],
+            "key_quotes": [
+              "Rolls fast mode cost dynamics shifting in ai market",
+              "Unveils pay-per-use pricing cost dynamics shifting in ai market"
+            ]
+          },
+          "predicted_next_signals": [
+            {
+              "category": "media",
+              "description": "Article count for related coverage continues to increase",
+              "example_sources": [
+                "techmeme",
+                "twitter",
+                "reddit"
+              ],
+              "expected_timeframe_days": 7,
+              "metric": "article_count",
+              "direction": "up",
+              "speculative": true,
+              "canonical_metric": "article_count",
+              "observable_query": {
+                "source": "techmeme",
+                "query": "search:(coverage OR news OR story OR update OR media)",
+                "aggregation": "count",
+                "window_days": 7,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "opus",
+                    "claude",
+                    "anthropic"
+                  ],
+                  "primary_entity": "opus",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "media"
+                  ],
+                  "query_hints": [
+                    "coverage",
+                    "news",
+                    "story",
+                    "update"
+                  ],
+                  "bucket_terms": [],
+                  "canonical_metric": "article_count",
+                  "template_used": "search:{keyword}"
+                }
+              },
+              "measurable": true
+            },
+            {
+              "category": "social",
+              "description": "Discussion volume and engagement rate increase",
+              "example_sources": [
+                "twitter",
+                "reddit",
+                "hackernews"
+              ],
+              "expected_timeframe_days": 7,
+              "metric": "discussion_volume",
+              "direction": "up",
+              "speculative": true,
+              "canonical_metric": "discussion_volume",
+              "observable_query": {
+                "source": "twitter",
+                "query": "keyword:(discussion OR reaction OR comment OR thread OR media) from:opus",
+                "aggregation": "count",
+                "window_days": 7,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "opus",
+                    "claude",
+                    "anthropic"
+                  ],
+                  "primary_entity": "opus",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "media"
+                  ],
+                  "query_hints": [
+                    "discussion",
+                    "reaction",
+                    "comment",
+                    "thread"
+                  ],
+                  "bucket_terms": [],
+                  "canonical_metric": "keyword_frequency",
+                  "template_used": "keyword:{keyword} from:{entity}"
+                }
+              },
+              "measurable": true
+            }
+          ],
+          "falsifiers": [
+            "Attention fades without substantive developments",
+            "Story debunked or corrected",
+            "Other events dominate news cycle"
+          ],
+          "confidence": 0.398,
+          "confidence_breakdown": {
+            "base_from_meta_confidence": 0.248,
+            "diversity_bonus": 0.05,
+            "persistence_bonus": 0.02,
+            "independence_bonus": 0.04,
+            "specificity_bonus": 0.02,
+            "penalties_applied": [
+              "weak_mechanism:-0.1"
+            ],
+            "final": 0.278
+          },
+          "review_required": true,
+          "debug": {
+            "rules_fired": [
+              "base_from_meta:0.45",
+              "category_diversity:1",
+              "persistence_days:1",
+              "independence:0.40",
+              "mechanism_hits:1",
+              "penalty:weak_mechanism"
+            ],
+            "scoring_terms": {
+              "meta_confidence": 0.45,
+              "category_count": 1,
+              "persistence_days": 1,
+              "independence_score": 0.4,
+              "evidence_strength": 0.33
+            },
+            "mechanism_keyword_hits": 1,
+            "mechanism_keywords_matched": [
+              "media"
+            ]
+          },
+          "mechanism_trace": {
+            "candidate_scores": {
+              "media_attention_spike": 1
+            },
+            "matched_terms": [
+              "media-only",
+              "weak-mechanism"
+            ],
+            "evidence_sources": [
+              "structural_analysis"
+            ],
+            "selection_reason": "competing_null_hypothesis:weak_evidence",
+            "evidence_sources_secondary": [
+              "structural_analysis"
+            ]
+          },
+          "confidence_inputs": {
+            "meta_confidence_raw": 0.45,
+            "meta_to_hypothesis_scaling": 0.55
+          },
+          "confidence_debug": {
+            "base_scaled": 0.2475,
+            "base_raw": 0.45,
+            "scaling_factor": 0.55
+          },
+          "falsifiers_v2": [
+            {
+              "text": "Attention fades without substantive developments",
+              "observable": {
+                "metric": "keyword_frequency",
+                "direction": "down",
+                "window_days": 7,
+                "available": true
+              }
+            },
+            {
+              "text": "Story debunked or corrected",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            },
+            {
+              "text": "Other events dominate news cycle",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            }
+          ],
+          "action_predictions": [
+            {
+              "event_type": "product_launch",
+              "event_display_name": "Product Launch",
+              "entity": "china",
+              "probability": 0.2849,
+              "timeframe_days": 30,
+              "source_pressure": "platform_lockin_battle",
+              "source_pressure_confidence": 0.407,
+              "prediction_id": "ap_a31810581b23",
+              "created_at": "2026-02-10T08:25:04.481518",
+              "note": "developer tools",
+              "observable_query": {
+                "source": "company_blog",
+                "metric": "product_announcement",
+                "aggregation": "exists",
+                "window_days": 14,
+                "entity": "china"
+              }
+            },
+            {
+              "event_type": "partnership_announcement",
+              "event_display_name": "Partnership Announcement",
+              "entity": "china",
+              "probability": 0.2646,
+              "timeframe_days": 30,
+              "source_pressure": "platform_lockin_battle",
+              "source_pressure_confidence": 0.407,
+              "prediction_id": "ap_2926e04488c0",
+              "created_at": "2026-02-10T08:25:04.481533",
+              "counterparty_type": "platform_company",
+              "observable_query": {
+                "source": "press_release",
+                "metric": "press_release_mentions",
+                "aggregation": "count",
+                "window_days": 7,
+                "entity": "china"
+              }
+            }
+          ],
+          "pressure_analysis": {
+            "meta_signal_id": "unknown",
+            "entity": "china",
+            "pressures": [
+              {
+                "pressure_type": "platform_lockin_battle",
+                "display_name": "Platform Lock-in Battle",
+                "confidence": 0.407,
+                "evidence": {
+                  "source_field": "signal_names",
+                  "matched_terms": [
+                    "api"
+                  ],
+                  "pattern_matches": [
+                    "developer_targeting"
+                  ]
+                },
+                "entity": "china",
+                "entity_modifier": 1.0
+              },
+              {
+                "pressure_type": "competitive_pressure",
+                "display_name": "Competitive Pressure",
+                "confidence": 0.1725,
+                "evidence": {
+                  "source_field": "unknown",
+                  "matched_terms": [],
+                  "pattern_matches": [
+                    "multiple_competitors_mentioned"
+                  ]
+                },
+                "entity": "china",
+                "entity_modifier": 1.0
+              },
+              {
+                "pressure_type": "adoption_friction",
+                "display_name": "Adoption Friction",
+                "confidence": 0.1575,
+                "evidence": {
+                  "source_field": "unknown",
+                  "matched_terms": [],
+                  "pattern_matches": [
+                    "integration_issues"
+                  ]
+                },
+                "entity": "china",
+                "entity_modifier": 1.0
+              }
+            ],
+            "primary_pressure": {
+              "pressure_type": "platform_lockin_battle",
+              "display_name": "Platform Lock-in Battle",
+              "confidence": 0.407,
+              "evidence": {
+                "source_field": "signal_names",
+                "matched_terms": [
+                  "api"
+                ],
+                "pattern_matches": [
+                  "developer_targeting"
+                ]
+              },
+              "entity": "china",
+              "entity_modifier": 1.0
+            },
+            "analysis_version": "1.0"
+          },
+          "has_action_predictions": true,
+          "confidence_adjustment_reason": "action_prediction_bonus"
         }
       ],
-      "selected_hypothesis_id": "07a486cbcc835ef0",
-      "bundle_confidence": 0.824,
-      "generated_at": "2026-02-10T11:31:38.896931",
+      "selected_hypothesis_id": "66a137e1d3439066",
+      "bundle_confidence": 0.278,
+      "generated_at": "2026-02-10T16:25:04.468592",
       "version": "2.1",
       "what_to_watch_next": [
-        "Prediction market probability for enterprise AI milestones increases",
-        "Enterprise SDK releases and compliance certifications increase",
-        "Job postings for AI integration roles increase"
+        "Article count for related coverage continues to increase",
+        "Discussion volume and engagement rate increase",
+        "Partnership announcements or revenue share changes"
       ],
       "watch_items": [
         {
-          "description": "Prediction market probability for enterprise AI milestones increases",
-          "watch_priority_score": 0.912,
+          "description": "Article count for related coverage continues to increase",
+          "watch_priority_score": 0.6388,
           "watch_priority_reason": [
-            "hypothesis_confidence:0.82",
+            "hypothesis_confidence:0.28",
             "measurable:True",
             "timeframe:7d"
           ],
@@ -362,22 +674,22 @@
           "measurable": true
         },
         {
-          "description": "Enterprise SDK releases and compliance certifications increase",
-          "watch_priority_score": 0.812,
+          "description": "Discussion volume and engagement rate increase",
+          "watch_priority_score": 0.6388,
           "watch_priority_reason": [
-            "hypothesis_confidence:0.82",
+            "hypothesis_confidence:0.28",
             "measurable:True",
-            "timeframe:14d"
+            "timeframe:7d"
           ],
-          "timeframe_bucket": "14d",
-          "timeframe_days": 14,
+          "timeframe_bucket": "7d",
+          "timeframe_days": 7,
           "measurable": true
         },
         {
-          "description": "Job postings for AI integration roles increase",
-          "watch_priority_score": 0.812,
+          "description": "Partnership announcements or revenue share changes",
+          "watch_priority_score": 0.5388,
           "watch_priority_reason": [
-            "hypothesis_confidence:0.82",
+            "hypothesis_confidence:0.28",
             "measurable:True",
             "timeframe:14d"
           ],
@@ -385,7 +697,507 @@
           "timeframe_days": 14,
           "measurable": true
         }
-      ]
+      ],
+      "action_bundle": {
+        "meta_signal_id": "52f11143cbd4",
+        "entity": "china",
+        "pressure_analysis": {
+          "meta_signal_id": "unknown",
+          "entity": "china",
+          "pressures": [
+            {
+              "pressure_type": "platform_lockin_battle",
+              "display_name": "Platform Lock-in Battle",
+              "confidence": 0.407,
+              "evidence": {
+                "source_field": "signal_names",
+                "matched_terms": [
+                  "api"
+                ],
+                "pattern_matches": [
+                  "developer_targeting"
+                ]
+              },
+              "entity": "china",
+              "entity_modifier": 1.0
+            },
+            {
+              "pressure_type": "competitive_pressure",
+              "display_name": "Competitive Pressure",
+              "confidence": 0.1725,
+              "evidence": {
+                "source_field": "unknown",
+                "matched_terms": [],
+                "pattern_matches": [
+                  "multiple_competitors_mentioned"
+                ]
+              },
+              "entity": "china",
+              "entity_modifier": 1.0
+            },
+            {
+              "pressure_type": "adoption_friction",
+              "display_name": "Adoption Friction",
+              "confidence": 0.1575,
+              "evidence": {
+                "source_field": "unknown",
+                "matched_terms": [],
+                "pattern_matches": [
+                  "integration_issues"
+                ]
+              },
+              "entity": "china",
+              "entity_modifier": 1.0
+            }
+          ],
+          "primary_pressure": {
+            "pressure_type": "platform_lockin_battle",
+            "display_name": "Platform Lock-in Battle",
+            "confidence": 0.407,
+            "evidence": {
+              "source_field": "signal_names",
+              "matched_terms": [
+                "api"
+              ],
+              "pattern_matches": [
+                "developer_targeting"
+              ]
+            },
+            "entity": "china",
+            "entity_modifier": 1.0
+          },
+          "analysis_version": "1.0"
+        },
+        "action_predictions": [
+          {
+            "event_type": "product_launch",
+            "event_display_name": "Product Launch",
+            "entity": "china",
+            "probability": 0.2849,
+            "timeframe_days": 30,
+            "source_pressure": "platform_lockin_battle",
+            "source_pressure_confidence": 0.407,
+            "prediction_id": "ap_a31810581b23",
+            "created_at": "2026-02-10T08:25:04.481518",
+            "note": "developer tools",
+            "observable_query": {
+              "source": "company_blog",
+              "metric": "product_announcement",
+              "aggregation": "exists",
+              "window_days": 14,
+              "entity": "china"
+            }
+          },
+          {
+            "event_type": "partnership_announcement",
+            "event_display_name": "Partnership Announcement",
+            "entity": "china",
+            "probability": 0.2646,
+            "timeframe_days": 30,
+            "source_pressure": "platform_lockin_battle",
+            "source_pressure_confidence": 0.407,
+            "prediction_id": "ap_2926e04488c0",
+            "created_at": "2026-02-10T08:25:04.481533",
+            "counterparty_type": "platform_company",
+            "observable_query": {
+              "source": "press_release",
+              "metric": "press_release_mentions",
+              "aggregation": "count",
+              "window_days": 7,
+              "entity": "china"
+            }
+          }
+        ],
+        "has_action_predictions": true,
+        "action_count": 2,
+        "confidence_adjustment": 0.12
+      },
+      "has_action_predictions": true,
+      "action_prediction_count": 2
+    },
+    {
+      "meta_id": "8186e6034b36",
+      "concept_slug": "dc3dc2aa8662",
+      "concept_name": "Mixed Signals Review",
+      "maturity_stage": "emerging",
+      "hypotheses": [
+        {
+          "hypothesis_id": "db11c15e09ac397b",
+          "title": "Emerging Noise / Insufficient",
+          "mechanism": "null_hypothesis",
+          "claim": "Mixed Signals Review lacks clear causal mechanism; may be noise or early signal.",
+          "why_now": "Signal is accelerating, emerging pattern, from independent sources.",
+          "evidence_used": {
+            "supporting_signals": [
+              "5ea6131d17bb",
+              "93edcce77570",
+              "b9adcb79e600"
+            ],
+            "source_categories": [
+              "financial",
+              "media"
+            ],
+            "key_entities": [
+              "apple's",
+              "google",
+              "china",
+              "section",
+              "alphabet",
+              "amazon",
+              "us",
+              "meta",
+              "apple",
+              "pro"
+            ],
+            "key_quotes": [
+              "Ai ecosystem dynamics shifting"
+            ]
+          },
+          "predicted_next_signals": [
+            {
+              "category": "media",
+              "description": "Monitor for substantive developments",
+              "example_sources": [
+                "techmeme",
+                "twitter"
+              ],
+              "expected_timeframe_days": 7,
+              "speculative": true,
+              "canonical_metric": "custom_metric",
+              "observable_query": {
+                "source": "techmeme",
+                "query": "search:custom_metric",
+                "aggregation": "count",
+                "window_days": 7,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "google",
+                    "meta",
+                    "amazon"
+                  ],
+                  "primary_entity": "google",
+                  "concept_entity": null,
+                  "mechanism_terms": [],
+                  "query_hints": [],
+                  "bucket_terms": [],
+                  "canonical_metric": "custom_metric",
+                  "template_used": "search:{keyword}"
+                }
+              },
+              "measurable": false,
+              "measurable_reason": "no_canonical_metric_match"
+            }
+          ],
+          "falsifiers": [
+            "Pattern resolves into clear mechanism",
+            "Additional corroborating signals emerge"
+          ],
+          "confidence": 0.363,
+          "confidence_breakdown": {
+            "base_from_meta_confidence": 0.248,
+            "diversity_bonus": 0.1,
+            "persistence_bonus": 0.02,
+            "independence_bonus": 0.075,
+            "specificity_bonus": 0.0,
+            "penalties_applied": [
+              "generic_predictions:-0.1",
+              "weak_mechanism:-0.1"
+            ],
+            "final": 0.243
+          },
+          "review_required": true,
+          "debug": {
+            "rules_fired": [
+              "base_from_meta:0.45",
+              "category_diversity:2",
+              "persistence_days:1",
+              "independence:0.75",
+              "mechanism_hits:0",
+              "penalty:generic_predictions",
+              "penalty:weak_mechanism"
+            ],
+            "scoring_terms": {
+              "meta_confidence": 0.45,
+              "category_count": 2,
+              "persistence_days": 1,
+              "independence_score": 0.753,
+              "evidence_strength": 0.33
+            },
+            "mechanism_keyword_hits": 0,
+            "mechanism_keywords_matched": []
+          },
+          "mechanism_trace": {
+            "candidate_scores": {
+              "null_hypothesis": 0
+            },
+            "matched_terms": [],
+            "evidence_sources": [
+              "no_mechanism_match"
+            ],
+            "selection_reason": "null_hypothesis:no_mechanism_detected",
+            "evidence_sources_secondary": [
+              "no_mechanism_match"
+            ]
+          },
+          "confidence_inputs": {
+            "meta_confidence_raw": 0.45,
+            "meta_to_hypothesis_scaling": 0.55
+          },
+          "confidence_debug": {
+            "base_scaled": 0.2475,
+            "base_raw": 0.45,
+            "scaling_factor": 0.55
+          },
+          "falsifiers_v2": [
+            {
+              "text": "Pattern resolves into clear mechanism",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            },
+            {
+              "text": "Additional corroborating signals emerge",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            }
+          ],
+          "action_predictions": [
+            {
+              "event_type": "product_launch",
+              "event_display_name": "Product Launch",
+              "entity": "apple's",
+              "probability": 0.2849,
+              "timeframe_days": 30,
+              "source_pressure": "platform_lockin_battle",
+              "source_pressure_confidence": 0.407,
+              "prediction_id": "ap_ad22b0ac337c",
+              "created_at": "2026-02-10T08:25:04.481932",
+              "note": "developer tools",
+              "observable_query": {
+                "source": "company_blog",
+                "metric": "product_announcement",
+                "aggregation": "exists",
+                "window_days": 14,
+                "entity": "apple's"
+              }
+            },
+            {
+              "event_type": "partnership_announcement",
+              "event_display_name": "Partnership Announcement",
+              "entity": "apple's",
+              "probability": 0.2646,
+              "timeframe_days": 30,
+              "source_pressure": "platform_lockin_battle",
+              "source_pressure_confidence": 0.407,
+              "prediction_id": "ap_ccb4a46d63ad",
+              "created_at": "2026-02-10T08:25:04.481939",
+              "counterparty_type": "platform_company",
+              "observable_query": {
+                "source": "press_release",
+                "metric": "press_release_mentions",
+                "aggregation": "count",
+                "window_days": 7,
+                "entity": "apple's"
+              }
+            }
+          ],
+          "pressure_analysis": {
+            "meta_signal_id": "unknown",
+            "entity": "apple's",
+            "pressures": [
+              {
+                "pressure_type": "platform_lockin_battle",
+                "display_name": "Platform Lock-in Battle",
+                "confidence": 0.407,
+                "evidence": {
+                  "source_field": "description",
+                  "matched_terms": [
+                    "ecosystem"
+                  ],
+                  "pattern_matches": [
+                    "platform_competition"
+                  ]
+                },
+                "entity": "apple's",
+                "entity_modifier": 1.0
+              },
+              {
+                "pressure_type": "competitive_pressure",
+                "display_name": "Competitive Pressure",
+                "confidence": 0.1725,
+                "evidence": {
+                  "source_field": "unknown",
+                  "matched_terms": [],
+                  "pattern_matches": [
+                    "multiple_competitors_mentioned"
+                  ]
+                },
+                "entity": "apple's",
+                "entity_modifier": 1.0
+              }
+            ],
+            "primary_pressure": {
+              "pressure_type": "platform_lockin_battle",
+              "display_name": "Platform Lock-in Battle",
+              "confidence": 0.407,
+              "evidence": {
+                "source_field": "description",
+                "matched_terms": [
+                  "ecosystem"
+                ],
+                "pattern_matches": [
+                  "platform_competition"
+                ]
+              },
+              "entity": "apple's",
+              "entity_modifier": 1.0
+            },
+            "analysis_version": "1.0"
+          },
+          "has_action_predictions": true,
+          "confidence_adjustment_reason": "action_prediction_bonus"
+        }
+      ],
+      "selected_hypothesis_id": "db11c15e09ac397b",
+      "bundle_confidence": 0.243,
+      "generated_at": "2026-02-10T16:25:04.475893",
+      "version": "2.1",
+      "what_to_watch_next": [
+        "Monitor for substantive developments"
+      ],
+      "watch_items": [
+        {
+          "description": "Monitor for substantive developments",
+          "watch_priority_score": 0.4714,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.24",
+            "measurable:False",
+            "reason:no_canonical_metric_match",
+            "timeframe:7d"
+          ],
+          "timeframe_bucket": "7d",
+          "timeframe_days": 7,
+          "measurable": false
+        }
+      ],
+      "action_bundle": {
+        "meta_signal_id": "8186e6034b36",
+        "entity": "apple's",
+        "pressure_analysis": {
+          "meta_signal_id": "unknown",
+          "entity": "apple's",
+          "pressures": [
+            {
+              "pressure_type": "platform_lockin_battle",
+              "display_name": "Platform Lock-in Battle",
+              "confidence": 0.407,
+              "evidence": {
+                "source_field": "description",
+                "matched_terms": [
+                  "ecosystem"
+                ],
+                "pattern_matches": [
+                  "platform_competition"
+                ]
+              },
+              "entity": "apple's",
+              "entity_modifier": 1.0
+            },
+            {
+              "pressure_type": "competitive_pressure",
+              "display_name": "Competitive Pressure",
+              "confidence": 0.1725,
+              "evidence": {
+                "source_field": "unknown",
+                "matched_terms": [],
+                "pattern_matches": [
+                  "multiple_competitors_mentioned"
+                ]
+              },
+              "entity": "apple's",
+              "entity_modifier": 1.0
+            }
+          ],
+          "primary_pressure": {
+            "pressure_type": "platform_lockin_battle",
+            "display_name": "Platform Lock-in Battle",
+            "confidence": 0.407,
+            "evidence": {
+              "source_field": "description",
+              "matched_terms": [
+                "ecosystem"
+              ],
+              "pattern_matches": [
+                "platform_competition"
+              ]
+            },
+            "entity": "apple's",
+            "entity_modifier": 1.0
+          },
+          "analysis_version": "1.0"
+        },
+        "action_predictions": [
+          {
+            "event_type": "product_launch",
+            "event_display_name": "Product Launch",
+            "entity": "apple's",
+            "probability": 0.2849,
+            "timeframe_days": 30,
+            "source_pressure": "platform_lockin_battle",
+            "source_pressure_confidence": 0.407,
+            "prediction_id": "ap_ad22b0ac337c",
+            "created_at": "2026-02-10T08:25:04.481932",
+            "note": "developer tools",
+            "observable_query": {
+              "source": "company_blog",
+              "metric": "product_announcement",
+              "aggregation": "exists",
+              "window_days": 14,
+              "entity": "apple's"
+            }
+          },
+          {
+            "event_type": "partnership_announcement",
+            "event_display_name": "Partnership Announcement",
+            "entity": "apple's",
+            "probability": 0.2646,
+            "timeframe_days": 30,
+            "source_pressure": "platform_lockin_battle",
+            "source_pressure_confidence": 0.407,
+            "prediction_id": "ap_ccb4a46d63ad",
+            "created_at": "2026-02-10T08:25:04.481939",
+            "counterparty_type": "platform_company",
+            "observable_query": {
+              "source": "press_release",
+              "metric": "press_release_mentions",
+              "aggregation": "count",
+              "window_days": 7,
+              "entity": "apple's"
+            }
+          }
+        ],
+        "has_action_predictions": true,
+        "action_count": 2,
+        "confidence_adjustment": 0.12
+      },
+      "has_action_predictions": true,
+      "action_prediction_count": 2
     }
-  ]
+  ],
+  "stats": {
+    "action_predictions": {
+      "total": 4,
+      "bundles_with_actions": 2,
+      "action_ratio": 1.0
+    }
+  }
 }
