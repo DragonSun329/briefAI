@@ -1,376 +1,299 @@
-# Experiment Reproducibility Guide
+# Experiment Reproducibility & Tamper Evidence
 
-> How briefAI achieves research-grade reproducibility for forward-test experiments.
+> How briefAI ensures research-grade integrity for forward-test forecasting experiments.
 
 ## Overview
 
-briefAI is designed as a **publishable forecasting experiment**, not just a software tool. This means every prediction must be:
+briefAI's forecasting system is designed for **scientific reproducibility**. A third-party researcher must be able to:
 
-- **Auditable**: Complete provenance trail
-- **Reproducible**: Same code → same methodology
-- **Tamper-evident**: No post-hoc modifications possible
-- **Externally verifiable**: Third parties can validate
+1. Clone the repository
+2. Verify the prediction ledger is intact
+3. Reproduce the exact forecasting methodology
+4. Trust that no predictions were modified after the fact
 
-This document explains the systems that enforce these properties.
+This document explains the technical guarantees that make this possible.
 
 ---
 
-## The Three Pillars
+## Tamper Evidence Guarantee
 
-### 1. Run Lock (`utils/run_lock.py`)
+### Hash Chain Architecture
 
-**Purpose**: Prevents pipeline execution unless experimental conditions are met.
+Every prediction logged to `forecast_history.jsonl` is part of a **cryptographic hash chain**, similar to blockchain technology:
 
-**Checks performed**:
-
-| Check | What It Does | Failure Consequence |
-|-------|--------------|---------------------|
-| Active Experiment | Verifies `experiments.json` has active experiment | Pipeline aborts |
-| Engine Tag | Confirms HEAD is descendant of engine tag | Pipeline aborts |
-| Clean Tree | No modified `.py`, `.json`, `.md` in source dirs | Pipeline aborts |
-| Git Access | Can read commit hash | Pipeline aborts |
-
-**Usage**:
-
-```python
-from utils.run_lock import verify_run_integrity, require_run_integrity
-
-# Option 1: Check and handle
-report = verify_run_integrity()
-if not report.valid:
-    report.print_report()
-    sys.exit(1)
-
-# Option 2: Auto-abort on failure
-report = require_run_integrity()  # Raises RuntimeError if invalid
-
-# Option 3: Context manager
-from utils.run_lock import RunLock
-with RunLock() as lock:
-    # Pipeline code here
-    print(lock.report.experiment_id)
+```
+Entry 1: { data..., prev_hash: "genesis", entry_hash: "abc123..." }
+Entry 2: { data..., prev_hash: "abc123...", entry_hash: "def456..." }
+Entry 3: { data..., prev_hash: "def456...", entry_hash: "ghi789..." }
 ```
 
-**Output Example**:
+Each entry's hash depends on:
+- Its own content (deterministically serialized)
+- The previous entry's hash
+
+**If any historical entry is modified, the chain breaks.** This is cryptographically detectable.
+
+### Canonical JSON Serialization
+
+To ensure hash stability across different machines and Python versions, we use **deterministic canonical JSON**:
+
+| Rule | Example |
+|------|---------|
+| Keys sorted alphabetically | `{"a":1,"b":2}` not `{"b":2,"a":1}` |
+| Floats normalized (8 decimals) | `1.12345679` not `1.123456789012` |
+| No negative zero | `0` not `-0` |
+| Datetimes in UTC | `"2024-06-15T12:30:45Z"` |
+| No whitespace | `{"a":1}` not `{ "a": 1 }` |
+| Runtime fields excluded | `generation_timestamp` not in hash |
+
+This guarantees identical hashes on any machine.
+
+### Hash Computation
+
+```python
+# Simplified version
+def compute_entry_hash(entry, prev_hash):
+    canonical = canonical_dumps(entry, exclude_runtime_fields=True)
+    content = prev_hash + canonical
+    return sha256(content.encode()).hexdigest()
+```
+
+---
+
+## Crash Recovery
+
+### Two-Phase Write Protocol
+
+Writes to the ledger use a crash-safe two-phase commit:
+
+```
+Phase 1: Append entry to JSONL, flush(), fsync()
+Phase 2: Verify by re-reading last line
+Phase 3: Update sidecar hash (atomic rename)
+```
+
+If the process crashes between phases:
+- **Crash after Phase 1**: Entry is in JSONL, sidecar is stale
+- **Crash after Phase 2**: Same as above
+- **Crash after Phase 3**: Fully committed
+
+### Automatic Reconciliation
+
+On startup, the logger runs `reconcile_ledger()`:
+
+1. Read entire JSONL
+2. Recompute hash chain from genesis
+3. Compare with sidecar (`forecast_history_last_hash.txt`)
+4. If mismatch: repair sidecar, log WARNING
+
+**Important**: Reconciliation NEVER deletes entries. It only repairs metadata.
+
+---
+
+## Independent Verification
+
+### Verification Tool
+
+Verify any ledger's integrity:
+
+```bash
+# Verify specific experiment
+python scripts/verify_ledger_integrity.py --experiment v2_1_forward_test
+
+# Verify all experiments
+python scripts/verify_ledger_integrity.py --all
+
+# Repair sidecar if inconsistent
+python scripts/verify_ledger_integrity.py --experiment v2_1_forward_test --repair
+
+# Output as JSON
+python scripts/verify_ledger_integrity.py --experiment v2_1_forward_test --json
+```
+
+### Verification Output
 
 ```
 ============================================================
-✅ RUN INTEGRITY VERIFIED
+  LEDGER STATUS: VALID
 ============================================================
-  Experiment:  v2_1_forward_test
-  Engine Tag:  ENGINE_v2.1_DAY0
-  Commit:      8eae743
-  Verified:    2026-02-10T12:00:00Z
+  experiment:     v2_1_forward_test
+  entries:        124
+  genesis_hash:   genesis
+  latest_hash:    a1b2c3d4e5f6...
+  sidecar_ok:     True
+
+  Integrity Checks:
+    broken_links:       0
+    hash_mismatches:    0
+    duplicate_ids:      0
+    chronology_errors:  0
+    experiment_errors:  0
+    canonical_errors:   0
+
+  verified_at: 2026-02-15T08:30:00Z
 ============================================================
 ```
 
-### 2. Artifact Contract (`utils/run_artifact_contract.py`)
+### Exit Codes
 
-**Purpose**: Guarantees every run produces complete, valid outputs.
+| Code | Meaning |
+|------|---------|
+| 0 | Ledger valid |
+| 1 | Ledger invalid or errors found |
+| 2 | Ledger file not found |
 
-**Required Artifacts**:
+### Verification Checks
 
-| Artifact | Location | Format | Purpose |
-|----------|----------|--------|---------|
-| `forecast_history.jsonl` | Experiment ledger | JSONL | Append-only prediction log |
-| `daily_snapshot_YYYY-MM-DD.json` | Experiment ledger | JSON | Frozen daily predictions |
-| `run_metadata_YYYY-MM-DD.json` | Experiment ledger | JSON | Complete run context |
-| `daily_brief_YYYY-MM-DD.md` | `data/reports/` | Markdown | Human-readable report |
+The tool performs:
 
-**Verification Process**:
-
-```python
-from utils.run_artifact_contract import verify_run_artifacts, require_run_artifacts
-
-# Check artifacts for today
-report = verify_run_artifacts()
-if not report.all_passed:
-    report.print_report()
-    # Handle failure
-
-# Or auto-raise on failure
-report = require_run_artifacts()  # Raises RunArtifactViolation
-```
-
-**Run Metadata Schema**:
-
-```json
-{
-  "experiment_id": "v2_1_forward_test",
-  "engine_tag": "ENGINE_v2.1_DAY0",
-  "commit_hash": "8eae743...",
-  "generation_timestamp": "2026-02-10T12:00:00Z",
-  "date": "2026-02-10",
-  "artifact_contract_passed": true,
-  "sources": {
-    "reddit": 575,
-    "github": 171,
-    "arxiv": 251,
-    "news": 534
-  },
-  "scraper_failures": [],
-  "duration_seconds": 180.5
-}
-```
-
-### 3. Methodology Export (`scripts/generate_experiment_methodology.py`)
-
-**Purpose**: Generates academic-style methodology documentation.
-
-**Output Location**: `data/public/experiments/{experiment_id}/METHODOLOGY.md`
-
-**Sections Generated**:
-
-1. **Experiment Purpose**: Objective and design
-2. **Forecasting Engine**: Architecture and determinism
-3. **Data Sources**: Collection methodology
-4. **Prediction Specification**: Types and structure
-5. **Verification Methodology**: Evaluation rules
-6. **Calibration Methodology**: Accuracy measurement
-7. **Reproducibility Guarantee**: How to reproduce
-8. **Appendices**: Glossary, file locations, audit trail
-
-**Usage**:
-
-```bash
-# Generate for active experiment
-python scripts/generate_experiment_methodology.py
-
-# Generate for specific experiment
-python scripts/generate_experiment_methodology.py --experiment v3_0_action_test
-
-# Generate for all experiments
-python scripts/generate_experiment_methodology.py
-```
+1. **JSON Validity**: Each line is valid JSON
+2. **Canonical JSON**: Entries can be canonically serialized
+3. **Hash Chain**: `prev_hash` links form unbroken chain
+4. **Hash Integrity**: Stored `entry_hash` matches computed
+5. **Sidecar Consistency**: Sidecar matches actual last hash
+6. **Duplicate IDs**: No repeated `prediction_id`
+7. **Chronology**: Entries in chronological order
+8. **Experiment ID**: All entries belong to correct experiment
 
 ---
 
-## Pipeline Integration
+## Reproducibility Checklist
 
-The pipeline should integrate these systems as follows:
+### For Researchers
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    PIPELINE START                        │
-└────────────────────────┬────────────────────────────────┘
-                         │
-                         ▼
-              ┌──────────────────────┐
-              │  verify_run_integrity │
-              │  (Run Lock)           │
-              └──────────┬───────────┘
-                         │
-                    ┌────┴────┐
-                    │ Valid?  │
-                    └────┬────┘
-                    No   │   Yes
-                    │    │
-              ┌─────┘    └─────┐
-              ▼                ▼
-        ┌──────────┐    ┌──────────────┐
-        │  ABORT   │    │ Run Scrapers │
-        └──────────┘    └──────┬───────┘
-                               │
-                               ▼
-                       ┌───────────────┐
-                       │ Process Data  │
-                       │ (signals,     │
-                       │  meta, hypo)  │
-                       └───────┬───────┘
-                               │
-                               ▼
-                       ┌───────────────┐
-                       │ Write Outputs │
-                       └───────┬───────┘
-                               │
-                               ▼
-              ┌────────────────────────────┐
-              │  verify_run_artifacts      │
-              │  (Artifact Contract)       │
-              └────────────┬───────────────┘
-                           │
-                      ┌────┴────┐
-                      │ Valid?  │
-                      └────┬────┘
-                      No   │   Yes
-                      │    │
-                ┌─────┘    └─────┐
-                ▼                ▼
-          ┌───────────┐   ┌─────────────────┐
-          │ Mark run  │   │ Write metadata  │
-          │ as failed │   │ (contract=true) │
-          └───────────┘   └─────────────────┘
-                               │
-                               ▼
-                       ┌───────────────┐
-                       │ Append Ledger │
-                       └───────┬───────┘
-                               │
-                               ▼
-              ┌────────────────────────────┐
-              │  PIPELINE COMPLETE         │
-              └────────────────────────────┘
-```
-
----
-
-## Experimental Isolation
-
-### Why Isolation Matters
-
-Different forecasting models cannot share the same ledger because:
-
-1. **Model Contamination**: Can't compare v2.1 vs v3.0 if mixed
-2. **Calibration Confusion**: Metrics would be meaningless
-3. **Audit Failure**: Can't prove which model made which prediction
-
-### How Isolation Works
-
-```
-data/public/
-├── public_index.json          # Lists all experiments
-├── experiments/
-│   ├── v2_1_forward_test/     # Experiment A
-│   │   ├── forecast_history.jsonl
-│   │   ├── daily_snapshot_2026-02-10.json
-│   │   ├── run_metadata_2026-02-10.json
-│   │   └── METHODOLOGY.md
-│   └── v3_0_action_test/      # Experiment B
-│       ├── forecast_history.jsonl
-│       ├── daily_snapshot_2026-02-11.json
-│       ├── run_metadata_2026-02-11.json
-│       └── METHODOLOGY.md
-└── [legacy files preserved]
-```
-
-### Switching Experiments
-
-```python
-from utils.experiment_manager import set_active_experiment
-
-# Switch to v3.0 experiment
-set_active_experiment('v3_0_action_test')
-
-# All future writes go to v3_0_action_test ledger
-```
-
----
-
-## Verification Workflow
-
-### For Internal Review
+To verify a briefAI experiment:
 
 ```bash
-# 1. Verify run integrity
-python -c "from utils.run_lock import require_run_integrity; require_run_integrity()"
-
-# 2. After run, verify artifacts
-python -c "from utils.run_artifact_contract import require_run_artifacts; require_run_artifacts()"
-
-# 3. Generate methodology
-python scripts/generate_experiment_methodology.py
-```
-
-### For External Auditors
-
-A third party can verify experiment integrity:
-
-```bash
-# 1. Clone and checkout engine tag
+# 1. Clone repository
 git clone https://github.com/[repo]/briefAI.git
+cd briefAI
+
+# 2. Checkout exact engine version
 git checkout ENGINE_v2.1_DAY0
 
-# 2. Verify forecast_history.jsonl integrity
-# - Check file hash
-# - Verify append-only (no deletions in git history)
-# - Cross-reference with daily snapshots
+# 3. Install dependencies
+pip install -r requirements.txt
 
-# 3. Verify predictions match methodology
-# - Check confidence formula matches documented
-# - Verify evaluation thresholds match documented
-# - Confirm no LLM calls in core logic
+# 4. Verify ledger integrity
+python scripts/verify_ledger_integrity.py --experiment v2_1_forward_test
 
-# 4. Reproduce a single day
-# - Run pipeline with --date flag
-# - Compare structure (not exact data)
+# 5. Compare hashes
+# The genesis_hash and latest_hash should match public records
+```
+
+### Hash Portability
+
+The same ledger file will produce identical verification results on:
+- Windows, macOS, Linux
+- Python 3.8, 3.9, 3.10, 3.11, 3.12
+- x86_64, ARM64
+- Any timezone
+
+This is guaranteed by canonical JSON serialization.
+
+---
+
+## File Locations
+
+| File | Purpose |
+|------|---------|
+| `data/public/experiments/{exp}/forecast_history.jsonl` | Append-only prediction ledger |
+| `data/public/experiments/{exp}/forecast_history_last_hash.txt` | Latest hash (sidecar) |
+| `data/public/experiments/{exp}/daily_snapshot_YYYY-MM-DD.json` | Daily frozen predictions |
+| `data/public/experiments/{exp}/run_metadata_YYYY-MM-DD.json` | Run environment + config hash |
+| `data/public/experiments/{exp}/METHODOLOGY.md` | Auto-generated methodology |
+
+---
+
+## Security Considerations
+
+### What This Protects Against
+
+- ✅ Post-hoc modification of predictions
+- ✅ Silent data corruption
+- ✅ Accidental overwrites
+- ✅ Cross-experiment contamination
+- ✅ Process crashes during writes
+
+### What This Does NOT Protect Against
+
+- ❌ Attacker with write access to entire ledger (can rewrite from genesis)
+- ❌ Pre-generation bias (making predictions after seeing outcomes)
+- ❌ Selective publication (only publishing good predictions)
+
+For stronger guarantees, consider:
+- Publishing daily ledger hashes to a public blockchain
+- Using timestamping authorities (RFC 3161)
+- Publishing predictions to immutable storage (IPFS, Arweave)
+
+---
+
+## Technical Reference
+
+### Canonical JSON Module
+
+```python
+from utils.canonical_json import canonical_dumps, verify_canonical_equivalence
+
+# Deterministic serialization
+json_str = canonical_dumps(obj, exclude_runtime_fields=True)
+
+# Check equivalence
+are_equal = verify_canonical_equivalence(obj1, obj2)
+```
+
+### Hash Chain Functions
+
+```python
+from utils.public_forecast_logger import (
+    compute_entry_hash,
+    verify_hash_chain,
+    reconcile_ledger,
+    validate_ledger_integrity,
+)
+
+# Compute hash for new entry
+entry_hash = compute_entry_hash(entry, prev_hash)
+
+# Quick chain verification
+is_valid, count, error = verify_hash_chain(history_path)
+
+# Comprehensive validation
+is_valid, count, errors = validate_ledger_integrity(
+    history_path, repair=True, ledger_path=ledger_path
+)
+
+# Crash recovery
+was_repaired, current_hash = reconcile_ledger(ledger_path, history_path)
 ```
 
 ---
 
-## Common Issues
+## Migration Notes
 
-### "Run integrity failed: dirty_working_tree"
+### Pre-Hash-Chain Entries
 
-**Cause**: Modified source files not committed.
+Entries created before v1.2 do not have `prev_hash` and `entry_hash` fields.
+The verifier will report these as "missing" but they are valid legacy entries.
 
-**Fix**:
-```bash
-git add -A
-git commit -m "chore: pre-run commit"
-```
+Options for existing experiments:
+1. **Continue as-is**: New entries get hash chain, old entries remain legacy
+2. **Migrate**: Add hash chain fields to existing entries (one-time operation)
+3. **New experiment**: Start fresh experiment with hash chain from day 1
 
-### "Run integrity failed: not_descendant_of_engine_tag"
-
-**Cause**: Current HEAD is not at or after the experiment's engine tag.
-
-**Fix**:
-```bash
-# Option 1: Checkout correct tag
-git checkout ENGINE_v2.1_DAY0
-
-# Option 2: Create new experiment for current code
-```
-
-### "Artifact contract violated"
-
-**Cause**: Pipeline didn't produce all required files.
-
-**Fix**:
-- Check logs for scraper failures
-- Verify disk space
-- Re-run pipeline
+For maximum auditability, option 3 (new experiment) is recommended when
+starting a production forward-test.
 
 ---
 
-## Best Practices
+## Version History
 
-1. **Always commit before running pipeline**
-   - Ensures exact reproducibility
-   - Creates audit trail
-
-2. **Tag engine versions explicitly**
-   - Before any code changes
-   - Use semantic naming: `ENGINE_v2.1_DAY0`
-
-3. **Never edit forecast_history.jsonl**
-   - Append-only is enforced by convention
-   - Git history proves integrity
-
-4. **Generate methodology after engine changes**
-   - Documents what the new version does
-   - Provides external verification reference
-
-5. **Compare experiments fairly**
-   - Same time period
-   - Same evaluation thresholds
-   - Separate ledgers
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0 | 2026-02-10 | Initial hash chain implementation |
+| 1.1 | 2026-02-14 | Engine freeze + env fingerprint |
+| 1.2 | 2026-02-15 | Canonical JSON + crash recovery + truncated line detection |
 
 ---
 
-## Summary
-
-briefAI's reproducibility layer converts it from a "cool project" into a "publishable experiment" by:
-
-| Property | How Achieved |
-|----------|--------------|
-| **Auditable** | Git commit in every prediction |
-| **Reproducible** | Engine tags, deterministic logic |
-| **Tamper-evident** | Append-only ledgers, artifact contracts |
-| **Publishable** | Auto-generated methodology docs |
-
-This allows claims like:
-
-> "briefAI predicted X before mainstream media, with Y% calibrated accuracy,
-> using pre-committed models that can be independently verified."
-
-That statement is now **provable**, not just a claim.
+*This document is part of the briefAI experiment reproducibility framework.*
