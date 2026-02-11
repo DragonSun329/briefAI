@@ -1,0 +1,64 @@
+{
+  "experiment_id": "v2_2_forward_test",
+  "engine_tag": "ENGINE_v2.2_DAY0",
+  "commit_hash": "325adbf7f2e634c906014f593fb0f1e4ed50c46c",
+  "engine_commit_hash": "325adbf7f2e634c906014f593fb0f1e4ed50c46c",
+  "generation_timestamp": "2026-02-11T02:40:03.489075Z",
+  "date": "2026-02-09",
+  "artifact_contract_passed": true,
+  "run_type": "forward_test",
+  "rerun_allowed": false,
+  "start_time": "2026-02-11T02:40:03.457980Z",
+  "end_time": "2026-02-11T02:40:03.489075Z",
+  "duration_seconds": 0.03,
+  "sources": {
+    "signal_generation": 15,
+    "meta_signals": 2,
+    "hypotheses": 3,
+    "forecasts_written": 5
+  },
+  "scraper_stats": {
+    "signal_generation": {
+      "source": "signal_generation",
+      "fetched": 15,
+      "stored": 15,
+      "errors": []
+    },
+    "meta_signals": {
+      "source": "meta_signals",
+      "fetched": 2,
+      "stored": 2,
+      "errors": []
+    },
+    "hypotheses": {
+      "source": "hypotheses",
+      "fetched": 3,
+      "stored": 3,
+      "errors": []
+    },
+    "forecasts_written": {
+      "source": "forecasts_written",
+      "fetched": 5,
+      "stored": 5,
+      "errors": []
+    }
+  },
+  "scraper_failures": [],
+  "warnings": [],
+  "environment": {
+    "python_version": "3.14.0",
+    "python_implementation": "CPython",
+    "platform": "Windows 11",
+    "platform_machine": "AMD64",
+    "platform_processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "pip_freeze_hash": "6016eaa93b891d68",
+    "dep_anthropic": "0.74.1",
+    "dep_loguru": "0.7.3",
+    "dep_numpy": "1.26.4",
+    "dep_openai": "2.16.0",
+    "dep_pandas": "2.3.3",
+    "dep_requests": "2.32.5",
+    "requirements_hash": "e9374cda61a2b2d8"
+  },
+  "config_dir_hash": "909e8981cac9ff97"
+}

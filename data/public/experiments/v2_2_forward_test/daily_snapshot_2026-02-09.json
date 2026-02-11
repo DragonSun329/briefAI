@@ -1,0 +1,86 @@
+{
+  "date": "2026-02-09",
+  "frozen_at": "2026-02-11T02:40:03.448642Z",
+  "experiment_id": "v2_2_forward_test",
+  "engine_tag": "ENGINE_v2.2_DAY0",
+  "commit_hash": "325adbf7f2e634c906014f593fb0f1e4ed50c46c",
+  "model_version": "2.2",
+  "run_type": "forward_test",
+  "prediction_count": 5,
+  "predictions": [
+    {
+      "forecast_type": "hypothesis_signal",
+      "hypothesis_id": "79e142730eed5085",
+      "mechanism": "media_attention_spike",
+      "claim": "Alternative: Media Attention Spike",
+      "concept_name": "Mixed Signals Review",
+      "confidence": 0.278,
+      "category": "media",
+      "predicted_signal": "Article count for related coverage continues to increase",
+      "canonical_metric": "article_count",
+      "expected_direction": "up",
+      "timeframe_days": 14,
+      "date": "2026-02-09"
+    },
+    {
+      "forecast_type": "hypothesis_signal",
+      "hypothesis_id": "79e142730eed5085",
+      "mechanism": "media_attention_spike",
+      "claim": "Alternative: Media Attention Spike",
+      "concept_name": "Mixed Signals Review",
+      "confidence": 0.278,
+      "category": "social",
+      "predicted_signal": "Discussion volume and engagement rate increase",
+      "canonical_metric": "discussion_volume",
+      "expected_direction": "up",
+      "timeframe_days": 14,
+      "date": "2026-02-09"
+    },
+    {
+      "forecast_type": "hypothesis_signal",
+      "hypothesis_id": "66a137e1d3439066",
+      "mechanism": "distribution_shift",
+      "claim": "Distribution Channel Shifting",
+      "concept_name": "Mixed Signals Review",
+      "confidence": 0.178,
+      "category": "financial",
+      "predicted_signal": "Partnership announcements or revenue share changes",
+      "canonical_metric": "custom_metric",
+      "expected_direction": "unknown",
+      "timeframe_days": 14,
+      "date": "2026-02-09"
+    },
+    {
+      "forecast_type": "hypothesis_signal",
+      "hypothesis_id": "66a137e1d3439066",
+      "mechanism": "distribution_shift",
+      "claim": "Distribution Channel Shifting",
+      "concept_name": "Mixed Signals Review",
+      "confidence": 0.178,
+      "category": "technical",
+      "predicted_signal": "New API integrations or platform releases",
+      "canonical_metric": "custom_metric",
+      "expected_direction": "unknown",
+      "timeframe_days": 14,
+      "date": "2026-02-09"
+    },
+    {
+      "forecast_type": "hypothesis_signal",
+      "hypothesis_id": "db11c15e09ac397b",
+      "mechanism": "null_hypothesis",
+      "claim": "Noise / Insufficient",
+      "concept_name": "Mixed Signals Review",
+      "confidence": 0.243,
+      "category": "media",
+      "predicted_signal": "Monitor for substantive developments",
+      "canonical_metric": "custom_metric",
+      "expected_direction": "unknown",
+      "timeframe_days": 14,
+      "date": "2026-02-09"
+    }
+  ],
+  "hypothesis_summary": {
+    "total_bundles": 2,
+    "total_hypotheses": 3
+  }
+}
