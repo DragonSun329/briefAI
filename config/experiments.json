@@ -1,7 +1,7 @@
 {
   "_version": "1.0",
   "_description": "Experiment registry for forward-test isolation. Each experiment has its own ledger, calibration metrics, and audit trail.",
-  "active_experiment": "v2_1_forward_test",
+  "active_experiment": "v2_2_forward_test",
   "experiments": {
     "v2_1_forward_test": {
       "engine_tag": "ENGINE_v2.1_DAY0",
@@ -13,6 +13,20 @@
       "prediction_types": [
         "metric_trend",
         "media_attention"
+      ],
+      "status": "completed"
+    },
+    "v2_2_forward_test": {
+      "engine_tag": "ENGINE_v2.2_DAY0",
+      "engine_version": "2.2",
+      "ledger_path": "data/public/experiments/v2_2_forward_test/",
+      "metrics_path": "data/metrics/v2_2_forward_test/",
+      "start_date": "2026-02-11",
+      "description": "Ledger-first engine with hash chain integrity",
+      "prediction_types": [
+        "hypothesis_signal",
+        "action_event",
+        "metric_trend"
       ],
       "status": "active"
     },
