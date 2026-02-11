@@ -269,6 +269,78 @@ def is_descendant_of_tag(tag: str) -> tuple:
     return False, f"HEAD is not a descendant of '{tag}'"
 
 
+def is_exact_engine_commit(tag: str) -> tuple:
+    """
+    Check if current HEAD is EXACTLY at the engine tag commit.
+    
+    For research-grade reproducibility, we require exact commit match,
+    not just descendant. This prevents running on commits that may have
+    untested changes.
+    
+    Returns (is_exact, tag_commit_hash, relationship_description)
+    """
+    # First, check if the tag exists
+    success, _ = _run_git_command(['rev-parse', tag])
+    if not success:
+        return False, None, f"Tag '{tag}' does not exist"
+    
+    # Resolve tag to commit hash
+    success, tag_commit = _run_git_command(['rev-parse', tag + '^{commit}'])
+    if not success:
+        return False, None, f"Could not resolve tag '{tag}'"
+    
+    # Get HEAD commit
+    success, head_commit = _run_git_command(['rev-parse', 'HEAD'])
+    if not success:
+        return False, None, "Could not get HEAD commit"
+    
+    if tag_commit == head_commit:
+        return True, tag_commit, "HEAD is exactly at engine tag"
+    
+    # Check relationship for helpful error message
+    success, _ = _run_git_command(['merge-base', '--is-ancestor', tag, 'HEAD'])
+    if success:
+        success, distance = _run_git_command(['rev-list', '--count', f'{tag}..HEAD'])
+        if success:
+            return False, tag_commit, f"HEAD is {distance} commits AHEAD of engine tag - checkout {tag} to run pipeline"
+        return False, tag_commit, f"HEAD is ahead of engine tag - checkout {tag} to run pipeline"
+    
+    # Check if tag is ahead of HEAD
+    success, _ = _run_git_command(['merge-base', '--is-ancestor', 'HEAD', tag])
+    if success:
+        return False, tag_commit, f"HEAD is BEHIND engine tag - checkout {tag} to run pipeline"
+    
+    return False, tag_commit, f"HEAD has diverged from engine tag - checkout {tag} to run pipeline"
+
+
+def resolve_engine_commit_hash(experiment_id: str = None) -> Optional[str]:
+    """
+    Resolve the engine_tag to its commit hash.
+    
+    Args:
+        experiment_id: Optional experiment ID. Uses active if None.
+    
+    Returns:
+        Commit hash of the engine tag, or None if not found.
+    """
+    try:
+        from utils.experiment_manager import get_active_experiment, get_experiment
+        
+        if experiment_id:
+            experiment = get_experiment(experiment_id)
+        else:
+            experiment = get_active_experiment()
+        
+        if not experiment:
+            return None
+        
+        engine_tag = experiment.engine_tag
+        success, commit = _run_git_command(['rev-parse', engine_tag + '^{commit}'])
+        return commit if success else None
+    except Exception:
+        return None
+
+
 def get_closest_engine_tag() -> Optional[str]:
     """Get the closest ENGINE_* tag in history."""
     success, output = _run_git_command(['describe', '--tags', '--match', 'ENGINE_*', '--abbrev=0'])
@@ -282,6 +354,7 @@ def get_closest_engine_tag() -> Optional[str]:
 def verify_run_integrity(
     require_clean_tree: bool = True,
     require_tag_descendant: bool = True,
+    require_exact_commit: bool = True,
 ) -> RunIntegrityReport:
     """
     Verify that the current state is valid for a pipeline run.
@@ -289,12 +362,13 @@ def verify_run_integrity(
     Checks:
     1. Active experiment exists
     2. Engine tag is configured
-    3. HEAD is descendant of engine tag (or exact match)
+    3. HEAD is EXACTLY at engine tag commit (research-grade requirement)
     4. Working tree is clean (no modified source code)
     
     Args:
         require_clean_tree: If True, fail on dirty working tree
-        require_tag_descendant: If True, require HEAD to be at/after engine tag
+        require_tag_descendant: If True, require HEAD to be at/after engine tag (legacy, overridden by exact)
+        require_exact_commit: If True, require HEAD == engine_tag commit exactly (recommended)
     
     Returns:
         RunIntegrityReport with validation results
@@ -304,6 +378,13 @@ def verify_run_integrity(
         if not report.valid:
             report.print_report()
             sys.exit(1)
+    
+    Research Integrity:
+        When require_exact_commit=True (default), the pipeline will only run
+        if HEAD is exactly at the engine_tag commit. This ensures:
+        - All predictions are made with auditable, frozen code
+        - No untested commits sneak into production runs
+        - Third parties can reproduce by checking out the exact tag
     """
     warnings = []
     
@@ -356,8 +437,21 @@ def verify_run_integrity(
             failure_message=f"Could not import experiment_manager: {e}",
         )
     
-    # Check engine tag descendancy
-    if require_tag_descendant:
+    # Check engine tag - exact commit match (research-grade)
+    if require_exact_commit:
+        is_exact, tag_commit, relationship = is_exact_engine_commit(engine_tag)
+        if not is_exact:
+            return RunIntegrityReport(
+                valid=False,
+                experiment_id=experiment_id,
+                engine_tag=engine_tag,
+                current_commit=current_commit,
+                commit_short=commit_short,
+                failure_reason=LockFailureReason.ENGINE_TAG_MISMATCH,
+                failure_message=f"HEAD must be exactly at {engine_tag}. {relationship}",
+            )
+    elif require_tag_descendant:
+        # Legacy mode: allow descendants (less strict)
         is_descendant, relationship = is_descendant_of_tag(engine_tag)
         if not is_descendant:
             return RunIntegrityReport(
@@ -370,9 +464,9 @@ def verify_run_integrity(
                 failure_message=f"Current HEAD is not a descendant of {engine_tag}: {relationship}",
             )
         
-        # Add relationship info as warning if not exact match
+        # Warn if not exact match
         if "ahead" in relationship:
-            warnings.append(f"Commit relationship: {relationship}")
+            warnings.append(f"WARNING: Running on descendant commit, not exact tag. {relationship}")
     
     # Check working tree cleanliness
     dirty_files = get_dirty_files()
@@ -439,21 +533,28 @@ class RunLock:
             # Pipeline code here
             # Guaranteed to have valid experiment context
             print(lock.report.experiment_id)
+    
+    Research-Grade Mode (default):
+        Requires HEAD to be exactly at engine_tag commit.
+        This is stricter than legacy mode but ensures reproducibility.
     """
     
     def __init__(
         self,
         require_clean: bool = True,
         require_tag: bool = True,
+        require_exact: bool = True,
     ):
         self.require_clean = require_clean
         self.require_tag = require_tag
+        self.require_exact = require_exact
         self.report: Optional[RunIntegrityReport] = None
     
     def __enter__(self) -> 'RunLock':
         self.report = verify_run_integrity(
             require_clean_tree=self.require_clean,
             require_tag_descendant=self.require_tag,
+            require_exact_commit=self.require_exact,
         )
         self.report.print_report()
         
@@ -490,6 +591,11 @@ def main():
         help='Skip engine tag descendancy check'
     )
     parser.add_argument(
+        '--no-exact-check',
+        action='store_true',
+        help='Allow descendants of engine tag (less strict, not recommended for production)'
+    )
+    parser.add_argument(
         '--json',
         action='store_true',
         help='Output as JSON'
@@ -500,6 +606,7 @@ def main():
     report = verify_run_integrity(
         require_clean_tree=not args.no_clean_check,
         require_tag_descendant=not args.no_tag_check,
+        require_exact_commit=not args.no_exact_check,
     )
     
     if args.json:

@@ -39,7 +39,7 @@ MIN_FILE_SIZES = {
     'daily_brief': 100,            # At least a header
 }
 
-# Required fields in run_metadata
+# Required fields in run_metadata (v1.1 - includes environment)
 REQUIRED_METADATA_FIELDS = [
     'experiment_id',
     'engine_tag',
@@ -48,6 +48,16 @@ REQUIRED_METADATA_FIELDS = [
     'date',
     'artifact_contract_passed',
 ]
+
+# Extended fields for research-grade runs
+RESEARCH_GRADE_METADATA_FIELDS = [
+    'engine_commit_hash',
+    'environment',
+    'config_dir_hash',
+]
+
+# Experiment base path
+EXPERIMENTS_BASE_PATH = Path(__file__).parent.parent / "data" / "public" / "experiments"
 
 
 # =============================================================================
@@ -60,6 +70,122 @@ class RunArtifactViolation(Exception):
     def __init__(self, message: str, violations: List[str]):
         super().__init__(message)
         self.violations = violations
+
+
+class ExperimentPathViolation(Exception):
+    """Raised when an artifact is written to wrong experiment path."""
+    
+    def __init__(self, path: Path, expected_experiment: str, message: str = None):
+        self.path = path
+        self.expected_experiment = expected_experiment
+        super().__init__(
+            message or f"Path {path} is not in experiment {expected_experiment}"
+        )
+
+
+# =============================================================================
+# EXPERIMENT PATH ENFORCEMENT
+# =============================================================================
+
+def get_experiment_artifact_path(experiment_id: str) -> Path:
+    """Get the canonical artifact path for an experiment."""
+    return EXPERIMENTS_BASE_PATH / experiment_id
+
+
+def validate_artifact_path(
+    artifact_path: Path,
+    experiment_id: str,
+    raise_on_violation: bool = True,
+) -> bool:
+    """
+    Validate that an artifact path is within the correct experiment directory.
+    
+    This prevents cross-experiment contamination where v2.1 predictions
+    accidentally get written to v3.0's ledger.
+    
+    Args:
+        artifact_path: Path to the artifact being written
+        experiment_id: Expected experiment ID
+        raise_on_violation: If True, raise ExperimentPathViolation
+    
+    Returns:
+        True if path is valid
+    
+    Raises:
+        ExperimentPathViolation: If path is not in experiment directory
+    """
+    expected_base = get_experiment_artifact_path(experiment_id)
+    
+    # Resolve to absolute paths for comparison
+    try:
+        artifact_abs = artifact_path.resolve()
+        expected_abs = expected_base.resolve()
+        
+        # Check if artifact is under expected experiment path
+        try:
+            artifact_abs.relative_to(expected_abs)
+            return True
+        except ValueError:
+            pass
+        
+        # Path is not under expected experiment
+        if raise_on_violation:
+            # Check if it's under a different experiment
+            try:
+                rel_to_experiments = artifact_abs.relative_to(EXPERIMENTS_BASE_PATH.resolve())
+                wrong_experiment = str(rel_to_experiments).split('/')[0].split('\\')[0]
+                raise ExperimentPathViolation(
+                    artifact_path,
+                    experiment_id,
+                    f"Artifact path belongs to experiment '{wrong_experiment}', "
+                    f"not '{experiment_id}'. Cross-experiment writes are forbidden."
+                )
+            except ValueError:
+                raise ExperimentPathViolation(
+                    artifact_path,
+                    experiment_id,
+                    f"Artifact path {artifact_path} is not in any experiment directory. "
+                    f"All artifacts must be in data/public/experiments/{experiment_id}/"
+                )
+        
+        return False
+    except Exception as e:
+        if raise_on_violation:
+            raise
+        return False
+
+
+def enforce_experiment_paths(experiment_id: str) -> None:
+    """
+    Context check: Ensure the active experiment path exists and is exclusive.
+    
+    Call this at pipeline start to validate the experiment is properly isolated.
+    
+    Args:
+        experiment_id: The active experiment ID
+    
+    Raises:
+        ValueError: If experiment paths are not properly configured
+    """
+    experiment_path = get_experiment_artifact_path(experiment_id)
+    
+    # Ensure directory exists
+    experiment_path.mkdir(parents=True, exist_ok=True)
+    
+    # Check for .experiment_id marker file
+    marker_file = experiment_path / ".experiment_id"
+    if marker_file.exists():
+        stored_id = marker_file.read_text(encoding='utf-8').strip()
+        if stored_id != experiment_id:
+            raise ValueError(
+                f"Experiment path conflict: {experiment_path} belongs to "
+                f"'{stored_id}', not '{experiment_id}'"
+            )
+    else:
+        # Create marker
+        marker_file.write_text(experiment_id, encoding='utf-8')
+    
+    logger.info(f"Experiment path validated: {experiment_path}")
 
 
 # =============================================================================
@@ -517,13 +643,17 @@ class RunMetadataBuilder:
     
     def build(self, artifact_contract_passed: bool = True) -> Dict[str, Any]:
         """
-        Build the complete run metadata.
+        Build the complete run metadata with full environment fingerprint.
         
         Args:
             artifact_contract_passed: Result of artifact verification
         
         Returns:
-            Complete metadata dict
+            Complete metadata dict with:
+            - Required experiment fields
+            - Environment fingerprint (python, platform, deps)
+            - Config directory hash
+            - Engine commit verification
         """
         import platform
         import sys
@@ -536,11 +666,21 @@ class RunMetadataBuilder:
         for name, stats in self.scraper_stats.items():
             sources[name] = stats.items_stored
         
+        # Compute environment fingerprint
+        env_fingerprint = self._compute_environment_fingerprint()
+        
+        # Compute config directory hash
+        config_hash = self._compute_config_hash()
+        
+        # Get engine commit hash for verification
+        engine_commit = self._resolve_engine_commit()
+        
         metadata = {
             # Required fields
             'experiment_id': self.experiment_id,
             'engine_tag': self.engine_tag,
             'commit_hash': self.commit_hash,
+            'engine_commit_hash': engine_commit,
             'generation_timestamp': end_time.isoformat() + 'Z',
             'date': self.run_date,
             'artifact_contract_passed': artifact_contract_passed,
@@ -561,12 +701,128 @@ class RunMetadataBuilder:
             'scraper_failures': self.scraper_failures,
             'warnings': self.warnings,
             
-            # Environment
-            'python_version': platform.python_version(),
-            'os': f"{platform.system()} {platform.release()}",
+            # Environment fingerprint (research-grade reproducibility)
+            'environment': env_fingerprint,
+            
+            # Config hash (detects config drift)
+            'config_dir_hash': config_hash,
         }
         
         return metadata
+    
+    def _compute_environment_fingerprint(self) -> Dict[str, Any]:
+        """
+        Compute comprehensive environment fingerprint for reproducibility.
+        
+        Includes:
+        - Python version and implementation
+        - Platform details
+        - Installed packages hash
+        - Key dependency versions
+        """
+        import platform
+        import sys
+        import hashlib
+        
+        fingerprint = {
+            'python_version': platform.python_version(),
+            'python_implementation': platform.python_implementation(),
+            'platform': f"{platform.system()} {platform.release()}",
+            'platform_machine': platform.machine(),
+            'platform_processor': platform.processor() or 'unknown',
+        }
+        
+        # Try to get pip freeze hash
+        try:
+            import subprocess
+            result = subprocess.run(
+                [sys.executable, '-m', 'pip', 'freeze'],
+                capture_output=True,
+                text=True,
+                timeout=30,
+            )
+            if result.returncode == 0:
+                freeze_output = result.stdout.strip()
+                fingerprint['pip_freeze_hash'] = hashlib.sha256(
+                    freeze_output.encode('utf-8')
+                ).hexdigest()[:16]
+                
+                # Extract key dependency versions
+                key_deps = ['loguru', 'requests', 'openai', 'anthropic', 'numpy', 'pandas']
+                for line in freeze_output.split('\n'):
+                    for dep in key_deps:
+                        if line.lower().startswith(dep + '=='):
+                            fingerprint[f'dep_{dep}'] = line.split('==')[1]
+        except Exception as e:
+            fingerprint['pip_freeze_error'] = str(e)
+        
+        # Try to get requirements.txt hash
+        try:
+            req_path = Path(__file__).parent.parent / 'requirements.txt'
+            if req_path.exists():
+                content = req_path.read_text(encoding='utf-8')
+                fingerprint['requirements_hash'] = hashlib.sha256(
+                    content.encode('utf-8')
+                ).hexdigest()[:16]
+        except Exception:
+            pass
+        
+        # Get embedding model if configured
+        try:
+            from utils.config_loader import load_config
+            models_config = load_config('models.yaml')
+            if models_config:
+                fingerprint['embedding_model'] = models_config.get(
+                    'embedding', {}).get('model', 'unknown'
+                )
+        except Exception:
+            pass
+        
+        return fingerprint
+    
+    def _compute_config_hash(self) -> str:
+        """
+        Compute hash of all config/*.json files.
+        
+        This detects any config drift that could affect predictions.
+        """
+        import hashlib
+        
+        config_dir = Path(__file__).parent.parent / 'config'
+        if not config_dir.exists():
+            return 'config_dir_missing'
+        
+        hasher = hashlib.sha256()
+        
+        # Sort files for deterministic ordering
+        config_files = sorted(config_dir.glob('*.json'))
+        
+        for config_file in config_files:
+            try:
+                content = config_file.read_text(encoding='utf-8')
+                # Include filename in hash (so renaming is detected)
+                hasher.update(f"{config_file.name}:{len(content)}:".encode('utf-8'))
+                hasher.update(content.encode('utf-8'))
+            except Exception:
+                hasher.update(f"{config_file.name}:ERROR".encode('utf-8'))
+        
+        return hasher.hexdigest()[:16]
+    
+    def _resolve_engine_commit(self) -> Optional[str]:
+        """Resolve the engine_tag to its commit hash."""
+        try:
+            import subprocess
+            result = subprocess.run(
+                ['git', 'rev-parse', self.engine_tag + '^{commit}'],
+                capture_output=True,
+                text=True,
+                cwd=Path(__file__).parent.parent,
+            )
+            if result.returncode == 0:
+                return result.stdout.strip()
+        except Exception:
+            pass
+        return None
     
     def write(
         self,

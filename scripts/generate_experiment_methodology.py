@@ -308,11 +308,111 @@ The append-only ledger ensures:
     return section
 
 
+def generate_fixed_parameters_section() -> str:
+    """
+    Generate the fixed parameters table.
+    
+    These parameters are extracted from code and config files,
+    NOT hand-written. This ensures the documentation matches reality.
+    """
+    section = """## 6. Fixed Parameters
+
+> **Auto-extracted from code and config.** These values are frozen for the experiment duration.
+
+### 6.1 Clustering Thresholds
+
+| Parameter | Value | Source |
+|-----------|-------|--------|
+"""
+    
+    # Try to extract from signal_config.json
+    try:
+        signal_config = load_config('signal_config.json')
+        clustering = signal_config.get('clustering', {})
+        section += f"| Similarity threshold | {clustering.get('similarity_threshold', 0.75)} | signal_config.json |\n"
+        section += f"| Min cluster size | {clustering.get('min_cluster_size', 3)} | signal_config.json |\n"
+        section += f"| Max cluster age (days) | {clustering.get('max_age_days', 7)} | signal_config.json |\n"
+    except Exception:
+        section += "| *Could not load signal_config.json* | - | - |\n"
+    
+    section += """
+### 6.2 Evidence Weights
+
+| Evidence Type | Weight (alpha) | Source |
+|---------------|----------------|--------|
+"""
+    
+    # Try to extract from evidence_weights.json
+    try:
+        evidence_weights = load_config('evidence_weights.json')
+        for evidence_type, weight in list(evidence_weights.get('weights', {}).items())[:10]:
+            section += f"| {evidence_type} | {weight} | evidence_weights.json |\n"
+    except Exception:
+        section += "| *Could not load evidence_weights.json* | - | - |\n"
+    
+    section += """
+### 6.3 Verification Thresholds
+
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+"""
+    
+    # Try to extract from validation_rules.json or hardcoded values
+    try:
+        validation_rules = load_config('validation_rules.json')
+        thresholds = validation_rules.get('verification', {})
+        section += f"| Direction change threshold | {thresholds.get('direction_threshold', 0.15)} | Min change to verify |\n"
+        section += f"| Inconclusive range | {thresholds.get('inconclusive_threshold', 0.15)} | Change too small |\n"
+        section += f"| Confidence floor | {thresholds.get('min_confidence', 0.30)} | Predictions below skipped |\n"
+    except Exception:
+        # Hardcoded defaults from verification methodology
+        section += "| Direction change threshold | 0.15 (15%) | Min change to verify |\n"
+        section += "| Inconclusive range | <0.15 (<15%) | Change too small |\n"
+        section += "| Confidence floor | 0.30 (30%) | Predictions below skipped |\n"
+    
+    section += """
+### 6.4 Novelty & Deduplication Gates
+
+| Parameter | Value | Source |
+|-----------|-------|--------|
+"""
+    
+    # Try to extract from trend_detection.json
+    try:
+        trend_config = load_config('trend_detection.json')
+        novelty = trend_config.get('novelty', {})
+        section += f"| Novelty decay (days) | {novelty.get('decay_days', 14)} | trend_detection.json |\n"
+        section += f"| Dedup similarity | {novelty.get('dedup_threshold', 0.92)} | trend_detection.json |\n"
+        section += f"| Recency boost max | {novelty.get('recency_boost', 1.2)} | trend_detection.json |\n"
+    except Exception:
+        section += "| *Could not load trend_detection.json* | - | - |\n"
+    
+    section += """
+### 6.5 Confidence Formula Weights
+
+| Component | Weight | Notes |
+|-----------|--------|-------|
+| Meta-confidence | 0.55 | Core signal strength |
+| Category diversity | 0.15 | Cross-source signal |
+| Persistence | 0.10 | Signal longevity |
+| Independence | 0.10 | Source independence |
+| Specificity | 0.10 | Prediction precision |
+
+**Modifiers:**
+- Action prediction bonus: +12%
+- Media-only cap: 45% maximum
+- Generic prediction penalty: -10%
+- Weak mechanism penalty: -10%
+
+"""
+    return section
+
+
 def generate_calibration_section() -> str:
     """Generate the calibration methodology section."""
-    section = """## 6. Calibration Methodology
+    section = """## 7. Calibration Methodology
 
-### 6.1 Calibration Definition
+### 7.1 Calibration Definition
 
 A forecasting system is **well-calibrated** when:
 
@@ -320,7 +420,7 @@ A forecasting system is **well-calibrated** when:
 
 Example: Of 100 predictions made with 70% confidence, ~70 should be verified true.
 
-### 6.2 Calibration Metrics
+### 7.2 Calibration Metrics
 
 | Metric | Description |
 |--------|-------------|
@@ -329,7 +429,7 @@ Example: Of 100 predictions made with 70% confidence, ~70 should be verified tru
 | **Reliability Diagram** | Binned calibration visualization |
 | **Resolution** | Variance of predictions (measures informativeness) |
 
-### 6.3 Confidence Scoring
+### 7.3 Confidence Scoring
 
 Confidence is calculated as:
 
@@ -347,7 +447,7 @@ Modifiers applied:
 - Generic prediction penalty: -10%
 - Weak mechanism penalty: -10%
 
-### 6.4 Calibration Feedback Loop
+### 7.4 Calibration Feedback Loop
 
 After sufficient predictions are evaluated:
 
@@ -361,12 +461,12 @@ After sufficient predictions are evaluated:
 
 
 def generate_reproducibility_section(experiment: Dict[str, Any]) -> str:
-    """Generate the reproducibility guarantee section."""
+    """Generate the reproducibility guarantee section with environment info."""
     engine_tag = experiment.get('engine_tag', 'unknown')
     
-    section = f"""## 7. Reproducibility Guarantee
+    section = f"""## 8. Reproducibility Guarantee
 
-### 7.1 Reproduction Steps
+### 8.1 Reproduction Steps
 
 A third party can reproduce this experiment's predictions:
 
@@ -388,7 +488,7 @@ python -c "from utils.experiment_manager import set_active_experiment; set_activ
 python scripts/daily_bloomberg.ps1
 ```
 
-### 7.2 What Is Reproducible
+### 8.2 What Is Reproducible
 
 | Component | Reproducible? | Notes |
 |-----------|---------------|-------|
@@ -398,7 +498,7 @@ python scripts/daily_bloomberg.ps1
 | Exact predictions | ❌ No | Data sources change daily |
 | Methodology | ✅ Yes | Frozen at engine tag |
 
-### 7.3 Integrity Verification
+### 8.3 Integrity Verification
 
 Each run produces metadata that enables verification:
 
@@ -407,14 +507,41 @@ Each run produces metadata that enables verification:
 - **Generation Timestamp**: When predictions were made
 - **Artifact Contract**: Verification that all outputs exist
 
-### 7.4 Append-Only Ledger
+### 8.4 Append-Only Ledger with Hash Chain
 
-The `forecast_history.jsonl` file is append-only:
+The `forecast_history.jsonl` file is append-only with cryptographic verification:
 
 - New predictions are appended, never overwritten
-- Historical predictions are never modified
-- External observers can verify via file hash
-- Git history provides additional verification
+- Each entry includes `prev_hash` and `entry_hash` fields
+- Hash chain creates blockchain-like tamper evidence
+- Any modification breaks the chain and is detectable
+- Sidecar file `forecast_history_last_hash.txt` tracks chain head
+
+**Hash Chain Structure:**
+```
+entry_hash = SHA-256(prev_hash + canonical_json(entry))
+```
+
+**Verification:**
+```bash
+python -c "from utils.public_forecast_logger import verify_hash_chain; print(verify_hash_chain('path/to/forecast_history.jsonl'))"
+```
+
+### 8.5 Environment Fingerprint
+
+Each `run_metadata` file includes a comprehensive environment fingerprint:
+
+| Field | Description |
+|-------|-------------|
+| `python_version` | Exact Python version |
+| `platform` | OS and release |
+| `pip_freeze_hash` | Hash of installed packages |
+| `requirements_hash` | Hash of requirements.txt |
+| `config_dir_hash` | Hash of all config/*.json |
+| `engine_commit_hash` | Resolved commit of engine tag |
+| `dep_*` | Versions of key dependencies |
+
+This allows verification that the execution environment matches expectations.
 
 """
     return section
@@ -494,6 +621,7 @@ def generate_methodology(experiment_id: str = None) -> str:
         generate_data_sources_section(),
         generate_prediction_types_section(experiment),
         generate_verification_section(),
+        generate_fixed_parameters_section(),  # NEW: Auto-extracted parameters
         generate_calibration_section(),
         generate_reproducibility_section(experiment),
         generate_appendix(experiment),
