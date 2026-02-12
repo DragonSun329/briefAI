@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-02-12T09:36:05.197613",
+  "scraped_at": "2026-02-12T10:01:17.652000",
   "total_markets": 500,
   "ai_markets": 61,
   "markets": [
@@ -259,7 +259,7 @@
       },
       "volume": 108087.264031,
       "volume_24h": 3.409083,
-      "liquidity": 4972.1851,
+      "liquidity": 5002.3326,
       "start_date": "2025-11-12T21:28:47.034102Z",
       "end_date": "2026-12-31T00:00:00Z",
       "slug": "mistral-ai-ipo-before-2027",
@@ -276,17 +276,17 @@
         "No"
       ],
       "outcome_probabilities": {
-        "Yes": 48.5,
-        "No": 51.5
+        "Yes": 48.0,
+        "No": 52.0
       },
-      "volume": 88678.556687,
+      "volume": 88836.086687,
       "volume_24h": 541.5426,
-      "liquidity": 6563.8709,
+      "liquidity": 6284.2524,
       "start_date": "2025-11-12T21:28:49.336026Z",
       "end_date": "2026-12-31T00:00:00Z",
       "slug": "openai-ipo-before-2027",
       "active": true,
-      "spread": 0.03,
+      "spread": 0.04,
       "bucket": "llm-foundation"
     },
     {
@@ -298,12 +298,12 @@
         "No"
       ],
       "outcome_probabilities": {
-        "Yes": 69.0,
-        "No": 31.0
+        "Yes": 67.0,
+        "No": 33.0
       },
-      "volume": 68279.389065,
+      "volume": 68474.899065,
       "volume_24h": 1526.857141,
-      "liquidity": 3500.4265,
+      "liquidity": 4007.0398,
       "start_date": "2025-11-12T21:28:41.148275Z",
       "end_date": "2026-12-31T00:00:00Z",
       "slug": "anthropic-ipo-before-2027",
@@ -325,7 +325,7 @@
       },
       "volume": 62523.072468,
       "volume_24h": 1797.3403439999997,
-      "liquidity": 5005.73432,
+      "liquidity": 4458.03976,
       "start_date": "2025-05-22T14:50:07.243348Z",
       "end_date": null,
       "slug": "will-openai-launch-a-new-consumer-hardware-product-by-march-31-2026",
@@ -646,7 +646,7 @@
     "ai-general": {
       "market_count": 21,
       "total_volume": 21835050.667212997,
-      "total_liquidity": 4972.1851,
+      "total_liquidity": 5002.3326,
       "total_confidence": 21806947.978564937,
       "bullish_confidence": 0,
       "bearish_confidence": 21806947.978564937,
@@ -972,11 +972,11 @@
     },
     "llm-foundation": {
       "market_count": 7,
-      "total_volume": 6148316.573197,
-      "total_liquidity": 15070.031719999999,
-      "total_confidence": 6011399.491062194,
-      "bullish_confidence": 1726740.2485327,
-      "bearish_confidence": 4284659.242529495,
+      "total_volume": 6148669.613197001,
+      "total_liquidity": 14749.33196,
+      "total_confidence": 6009627.875666464,
+      "bullish_confidence": 1724075.5463701,
+      "bearish_confidence": 4285552.329296364,
       "markets": [
         {
           "question": "Will Google have the best AI model at the end of January 2026?",
@@ -1040,32 +1040,32 @@
         },
         {
           "question": "OpenAI IPO before 2027?",
-          "volume": 88678.556687,
+          "volume": 88836.086687,
           "outcome_probabilities": {
-            "Yes": 48.5,
-            "No": 51.5
+            "Yes": 48.0,
+            "No": 52.0
           },
           "sentiment": {
-            "yes_probability": 48.5,
+            "yes_probability": 48.0,
             "direction": "bearish",
-            "sentiment_score": 0.03,
-            "confidence_score": 2660.35670061,
-            "volume": 88678.556687
+            "sentiment_score": 0.04,
+            "confidence_score": 3553.44346748,
+            "volume": 88836.086687
           }
         },
         {
           "question": "Anthropic IPO before 2027?",
-          "volume": 68279.389065,
+          "volume": 68474.899065,
           "outcome_probabilities": {
-            "Yes": 69.0,
-            "No": 31.0
+            "Yes": 67.0,
+            "No": 33.0
           },
           "sentiment": {
-            "yes_probability": 69.0,
+            "yes_probability": 67.0,
             "direction": "bullish",
-            "sentiment_score": 0.38,
-            "confidence_score": 25946.167844699998,
-            "volume": 68279.389065
+            "sentiment_score": 0.34,
+            "confidence_score": 23281.465682100003,
+            "volume": 68474.899065
           }
         },
         {
@@ -1084,7 +1084,7 @@
           }
         }
       ],
-      "weighted_sentiment": -0.4255113967720715,
+      "weighted_sentiment": -0.42622885075761835,
       "signal_interpretation": "Strong bearish consensus"
     },
     "open-source-ai": {

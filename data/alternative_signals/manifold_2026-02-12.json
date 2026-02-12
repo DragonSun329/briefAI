@@ -1,6 +1,6 @@
 {
   "source": "manifold",
-  "scraped_at": "2026-02-12T09:36:40.105610",
+  "scraped_at": "2026-02-12T10:02:12.242453",
   "total_markets": 385,
   "markets": [
     {
@@ -10,7 +10,7 @@
       "url": "https://manifold.markets/ScottAlexander/in-2028-will-an-ai-be-able-to-gener",
       "probability": 0.2800000000000001,
       "volume": 11364552.979188614,
-      "volume_24h": 102886.26578058065,
+      "volume_24h": 104469.80235161092,
       "liquidity": 20915,
       "unique_bettors": 4225,
       "created_at": 1676933242898,
@@ -78,7 +78,7 @@
       "url": "https://manifold.markets/Bayesian/when-will-anthropic-release-claude-qZd5QEQ225",
       "probability": null,
       "volume": 361547.68266048963,
-      "volume_24h": 879.776864314269,
+      "volume_24h": 872.3268643142691,
       "liquidity": 1900,
       "unique_bettors": 268,
       "created_at": 1753468677203,
@@ -248,7 +248,7 @@
       "url": "https://manifold.markets/RemNi/will-we-get-agi-before-2029-ef1c187271ed",
       "probability": 0.2518064319028598,
       "volume": 90998.09424832986,
-      "volume_24h": 151,
+      "volume_24h": 101,
       "liquidity": 1000,
       "unique_bettors": 235,
       "created_at": 1702039111889,
@@ -297,11 +297,11 @@
       "question": "Will OpenAI release a model named GPT 5.3 by the end of February?",
       "description": "",
       "url": "https://manifold.markets/BenAybar/will-openai-release-a-model-named-g",
-      "probability": 0.62,
-      "volume": 62347.38544978667,
-      "volume_24h": 11642.420252496178,
+      "probability": 0.57,
+      "volume": 62529.65002137829,
+      "volume_24h": 12176.647281284942,
       "liquidity": 1000,
-      "unique_bettors": 256,
+      "unique_bettors": 257,
       "created_at": 1769794161113,
       "close_time": 1772323140000,
       "is_resolved": false,
@@ -410,23 +410,6 @@
       "outcome_type": "BINARY",
       "creator": "Teddy",
       "bucket": "ai-general"
-    },
-    {
-      "id": "gydlA7gBnOlkzqYd67Wt",
-      "question": "Will we get AGI before 2048?",
-      "description": "",
-      "url": "https://manifold.markets/RemNi/will-we-get-agi-before-2048",
-      "probability": 0.7940261426906188,
-      "volume": 40554.064537877246,
-      "volume_24h": 50,
-      "liquidity": 1000,
-      "unique_bettors": 81,
-      "created_at": 1707581479324,
-      "close_time": 2466716340000,
-      "is_resolved": false,
-      "outcome_type": "BINARY",
-      "creator": "RemNi",
-      "bucket": "ai-safety"
     },
     {
       "id": "OAL8q0Azzl",
@@ -554,7 +537,7 @@
       "url": "https://manifold.markets/predyx_markets/claude-5-released-before-march-31",
       "probability": 0.5810962348992332,
       "volume": 33271.73670269893,
-      "volume_24h": 389.6917010200868,
+      "volume_24h": 301.6617010200868,
       "liquidity": 1000,
       "unique_bettors": 94,
       "created_at": 1756196340384,
@@ -570,10 +553,10 @@
       "description": "",
       "url": "https://manifold.markets/Bayesian/when-will-openai-release-gpt6",
       "probability": null,
-      "volume": 31028.320801544516,
-      "volume_24h": 0,
+      "volume": 31034.04458672739,
+      "volume_24h": 5.723785182870996,
       "liquidity": 2500,
-      "unique_bettors": 105,
+      "unique_bettors": 106,
       "created_at": 1754586007485,
       "close_time": 1786121820000,
       "is_resolved": false,
@@ -587,16 +570,33 @@
       "description": "",
       "url": "https://manifold.markets/jim/which-of-xai-anthropic-and-openai-w",
       "probability": null,
-      "volume": 28294.217772223725,
-      "volume_24h": 50.28112426471563,
+      "volume": 28344.217772223725,
+      "volume_24h": 100.28112426471563,
       "liquidity": 3000,
-      "unique_bettors": 136,
+      "unique_bettors": 137,
       "created_at": 1764723269759,
       "close_time": 1922489640000,
       "is_resolved": false,
       "outcome_type": "MULTIPLE_CHOICE",
       "creator": "jim",
       "bucket": "llm-foundation"
+    },
+    {
+      "id": "5M7F5ApF8SH9osu8DGJb",
+      "question": "Will we get AGI before 2035?",
+      "description": "",
+      "url": "https://manifold.markets/RemNi/will-we-get-agi-before-2033-34ec8e1d00fd",
+      "probability": 0.5438252509945856,
+      "volume": 27887.563472482925,
+      "volume_24h": 1,
+      "liquidity": 1000,
+      "unique_bettors": 113,
+      "created_at": 1701472828761,
+      "close_time": 2056402740000,
+      "is_resolved": false,
+      "outcome_type": "BINARY",
+      "creator": "RemNi",
+      "bucket": "ai-safety"
     },
     {
       "id": "u0ZzZg3x5uD36Du0eDAZ",
@@ -673,7 +673,7 @@
       "url": "https://manifold.markets/ZviMowshowitz/claude-cowork-for-windows-by-feb-15",
       "probability": 0.897027518377687,
       "volume": 22152.338893857544,
-      "volume_24h": 5740.994811207237,
+      "volume_24h": 5739.994811207237,
       "liquidity": 1000,
       "unique_bettors": 64,
       "created_at": 1768774797355,
@@ -690,7 +690,7 @@
       "url": "https://manifold.markets/256/will-the-ai-bubble-pop-in-2026",
       "probability": 0.28,
       "volume": 21938.964472106047,
-      "volume_24h": 11964.361045828988,
+      "volume_24h": 11985.808237724843,
       "liquidity": 1000,
       "unique_bettors": 77,
       "created_at": 1766899095871,
@@ -724,7 +724,7 @@
       "url": "https://manifold.markets/Bayesian/february-2026-ai-releases",
       "probability": null,
       "volume": 20186.31499655018,
-      "volume_24h": 3864.790714500751,
+      "volume_24h": 3845.740714500751,
       "liquidity": 1900,
       "unique_bettors": 84,
       "created_at": 1770045082898,
@@ -792,7 +792,7 @@
       "url": "https://manifold.markets/Anthem/what-will-happen-during-the-next-cl",
       "probability": null,
       "volume": 15206.506956330279,
-      "volume_24h": 1514.5444213171177,
+      "volume_24h": 821.1557632789298,
       "liquidity": 1550,
       "unique_bettors": 47,
       "created_at": 1770319013558,
@@ -1619,6 +1619,23 @@
       "bucket": "llm-foundation"
     },
     {
+      "id": "qnAStACzhU",
+      "question": "Which company has the best AI model end of February 2026? (LMArena)",
+      "description": "",
+      "url": "https://manifold.markets/Bayesian/which-company-has-the-best-ai-model-LIC6U8LQ9R",
+      "probability": null,
+      "volume": 5856.357342565403,
+      "volume_24h": 610,
+      "liquidity": 1000,
+      "unique_bettors": 22,
+      "created_at": 1767437806835,
+      "close_time": 1772323140000,
+      "is_resolved": false,
+      "outcome_type": "MULTIPLE_CHOICE",
+      "creator": "Bayesian",
+      "bucket": "ai-general"
+    },
+    {
       "id": "LZAEp8dzpU",
       "question": "In mid 2026, will an AI be able to generate a full high-quality short film to a prompt?",
       "description": "",
@@ -1633,23 +1650,6 @@
       "is_resolved": false,
       "outcome_type": "BINARY",
       "creator": "JoshSnider",
-      "bucket": "ai-general"
-    },
-    {
-      "id": "qnAStACzhU",
-      "question": "Which company has the best AI model end of February 2026? (LMArena)",
-      "description": "",
-      "url": "https://manifold.markets/Bayesian/which-company-has-the-best-ai-model-LIC6U8LQ9R",
-      "probability": null,
-      "volume": 5806.357342565403,
-      "volume_24h": 560,
-      "liquidity": 1000,
-      "unique_bettors": 21,
-      "created_at": 1767437806835,
-      "close_time": 1772323140000,
-      "is_resolved": false,
-      "outcome_type": "MULTIPLE_CHOICE",
-      "creator": "Bayesian",
       "bucket": "ai-general"
     },
     {
@@ -2815,7 +2815,7 @@
       "url": "https://manifold.markets/Albertito/will-openai-announce-a-new-gpt5leve",
       "probability": 0.8715381889333983,
       "volume": 2473.870226768473,
-      "volume_24h": 26.1,
+      "volume_24h": 6,
       "liquidity": 100,
       "unique_bettors": 23,
       "created_at": 1766027604427,
@@ -2945,6 +2945,23 @@
       "bucket": "ai-safety"
     },
     {
+      "id": "UOp0CRph0E",
+      "question": "OpenAI abandon answer independence on ads before 2028?",
+      "description": "",
+      "url": "https://manifold.markets/ZviMowshowitz/openai-abandon-answer-independence",
+      "probability": 0.28,
+      "volume": 2191.713518478684,
+      "volume_24h": 2218.1579629231287,
+      "liquidity": 1000,
+      "unique_bettors": 20,
+      "created_at": 1770834820512,
+      "close_time": 1830297540000,
+      "is_resolved": false,
+      "outcome_type": "BINARY",
+      "creator": "ZviMowshowitz",
+      "bucket": "llm-foundation"
+    },
+    {
       "id": "6CEUQh0QOQ",
       "question": "When will Gemini CLI reach version 1.0 (or higher)?",
       "description": "",
@@ -2959,23 +2976,6 @@
       "is_resolved": false,
       "outcome_type": "DATE",
       "creator": "RS",
-      "bucket": "llm-foundation"
-    },
-    {
-      "id": "UOp0CRph0E",
-      "question": "OpenAI abandon answer independence on ads before 2028?",
-      "description": "",
-      "url": "https://manifold.markets/ZviMowshowitz/openai-abandon-answer-independence",
-      "probability": 0.25000000000000006,
-      "volume": 2095.454223205986,
-      "volume_24h": 2102.4542232059866,
-      "liquidity": 1000,
-      "unique_bettors": 18,
-      "created_at": 1770834820512,
-      "close_time": 1830297540000,
-      "is_resolved": false,
-      "outcome_type": "BINARY",
-      "creator": "ZviMowshowitz",
       "bucket": "llm-foundation"
     },
     {
@@ -3334,6 +3334,23 @@
       "outcome_type": "BINARY",
       "creator": "Loppukilpailija",
       "bucket": "ai-safety"
+    },
+    {
+      "id": "cENdlC9SzC",
+      "question": "GPT ads by March 31? [Polymarket]",
+      "description": "",
+      "url": "https://manifold.markets/vdb/gpt-ads-by-march-31-polymarket",
+      "probability": 0.99,
+      "volume": 1550.6032669679348,
+      "volume_24h": 645.9012734028853,
+      "liquidity": 100,
+      "unique_bettors": 16,
+      "created_at": 1768439618904,
+      "close_time": 1774915140000,
+      "is_resolved": false,
+      "outcome_type": "BINARY",
+      "creator": "vdb",
+      "bucket": "ai-general"
     },
     {
       "id": "8q8UqPAhqy",
@@ -3920,7 +3937,7 @@
       "url": "https://manifold.markets/RemNi/will-it-be-fairly-common-to-join-vo",
       "probability": 0.38711166463656094,
       "volume": 938.9207273323,
-      "volume_24h": 562.8487481661346,
+      "volume_24h": 62.8487481661346,
       "liquidity": 1000,
       "unique_bettors": 22,
       "created_at": 1715599879670,
@@ -4014,23 +4031,6 @@
       "outcome_type": "MULTIPLE_CHOICE",
       "creator": "Bayesian",
       "bucket": "llm-foundation"
-    },
-    {
-      "id": "cENdlC9SzC",
-      "question": "GPT ads by March 31? [Polymarket]",
-      "description": "",
-      "url": "https://manifold.markets/vdb/gpt-ads-by-march-31-polymarket",
-      "probability": 0.9241746450205297,
-      "volume": 904.7019935650495,
-      "volume_24h": 0,
-      "liquidity": 100,
-      "unique_bettors": 16,
-      "created_at": 1768439618904,
-      "close_time": 1774915140000,
-      "is_resolved": false,
-      "outcome_type": "BINARY",
-      "creator": "vdb",
-      "bucket": "ai-general"
     },
     {
       "id": "OWR5laUCIGguYrQCY29f",
@@ -4883,6 +4883,23 @@
       "bucket": "ai-general"
     },
     {
+      "id": "9PQlhqRNQP",
+      "question": "When will a new Claude Haiku be released (after 4.5)?",
+      "description": "",
+      "url": "https://manifold.markets/Robincvgr/when-will-a-new-claude-haiku-be-rel",
+      "probability": null,
+      "volume": 445.33721782223046,
+      "volume_24h": 70,
+      "liquidity": 325,
+      "unique_bettors": 7,
+      "created_at": 1770382982674,
+      "close_time": 1798869540000,
+      "is_resolved": false,
+      "outcome_type": "DATE",
+      "creator": "Robincvgr",
+      "bucket": "llm-foundation"
+    },
+    {
       "id": "Sl55EspEOd",
       "question": "Will Elon win his case against OpenAI?",
       "description": "",
@@ -5068,23 +5085,6 @@
       "outcome_type": "BINARY",
       "creator": "splice",
       "bucket": "ai-general"
-    },
-    {
-      "id": "9PQlhqRNQP",
-      "question": "When will a new Claude Haiku be released (after 4.5)?",
-      "description": "",
-      "url": "https://manifold.markets/Robincvgr/when-will-a-new-claude-haiku-be-rel",
-      "probability": null,
-      "volume": 375.33721782223046,
-      "volume_24h": 0,
-      "liquidity": 325,
-      "unique_bettors": 6,
-      "created_at": 1770382982674,
-      "close_time": 1798869540000,
-      "is_resolved": false,
-      "outcome_type": "DATE",
-      "creator": "Robincvgr",
-      "bucket": "llm-foundation"
     },
     {
       "id": "zmtqmwetKH",
@@ -5288,6 +5288,23 @@
       "is_resolved": false,
       "outcome_type": "BINARY",
       "creator": "jim",
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "IU0qp2zAlt",
+      "question": "Will Elon Musk tweet that a Grok Sucessor has achieved 'AGI-level performance' or 'AGI has been reached'  in 2026?",
+      "description": "",
+      "url": "https://manifold.markets/Gugra/will-elon-musk-tweet-that-a-grok-su",
+      "probability": 0.3552293323609546,
+      "volume": 290.5541596785133,
+      "volume_24h": 200,
+      "liquidity": 600,
+      "unique_bettors": 7,
+      "created_at": 1769791784699,
+      "close_time": 1798761540000,
+      "is_resolved": false,
+      "outcome_type": "BINARY",
+      "creator": "Gugra",
       "bucket": "llm-foundation"
     },
     {
@@ -5546,6 +5563,40 @@
       "bucket": "llm-foundation"
     },
     {
+      "id": "2RQAsssP9N",
+      "question": "Anthropic's Claude 5 released before 4/20",
+      "description": "",
+      "url": "https://manifold.markets/ManiPart/anthropics-claude-5-released-before",
+      "probability": 0.5901639344262296,
+      "volume": 200,
+      "volume_24h": 200,
+      "liquidity": 1000,
+      "unique_bettors": 4,
+      "created_at": 1770855695798,
+      "close_time": 1776729540000,
+      "is_resolved": false,
+      "outcome_type": "BINARY",
+      "creator": "ManiPart",
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "csncg9puZL",
+      "question": "Will an AI agent run a profitable (>10% ROI) prediction market portfolio by end of 2026?",
+      "description": "",
+      "url": "https://manifold.markets/Terminator2/will-an-ai-agent-run-a-profitable-1",
+      "probability": 0.7452401632383133,
+      "volume": 197.97105940027072,
+      "volume_24h": 197.97105940027075,
+      "liquidity": 100,
+      "unique_bettors": 8,
+      "created_at": 1770844254767,
+      "close_time": 1798837826000,
+      "is_resolved": false,
+      "outcome_type": "BINARY",
+      "creator": "Terminator2",
+      "bucket": "ai-general"
+    },
+    {
       "id": "n4NjukjrJkk5B9FGvdpy",
       "question": "Will a machine learning training run exceed 10^25 FLOP in China before 2025?",
       "description": "",
@@ -5560,23 +5611,6 @@
       "is_resolved": false,
       "outcome_type": "BINARY",
       "creator": "MatthewBarnett",
-      "bucket": "ai-general"
-    },
-    {
-      "id": "csncg9puZL",
-      "question": "Will an AI agent run a profitable (>10% ROI) prediction market portfolio by end of 2026?",
-      "description": "",
-      "url": "https://manifold.markets/Terminator2/will-an-ai-agent-run-a-profitable-1",
-      "probability": 0.72,
-      "volume": 187.97105940027072,
-      "volume_24h": 187.97105940027075,
-      "liquidity": 100,
-      "unique_bettors": 7,
-      "created_at": 1770844254767,
-      "close_time": 1798837826000,
-      "is_resolved": false,
-      "outcome_type": "BINARY",
-      "creator": "Terminator2",
       "bucket": "ai-general"
     },
     {
@@ -6005,23 +6039,6 @@
       "bucket": "ai-general"
     },
     {
-      "id": "2RQAsssP9N",
-      "question": "Anthropic's Claude 5 released before 4/20",
-      "description": "",
-      "url": "https://manifold.markets/ManiPart/anthropics-claude-5-released-before",
-      "probability": 0.5475113122171946,
-      "volume": 100,
-      "volume_24h": 50,
-      "liquidity": 1000,
-      "unique_bettors": 2,
-      "created_at": 1770855695798,
-      "close_time": 1776729540000,
-      "is_resolved": false,
-      "outcome_type": "BINARY",
-      "creator": "ManiPart",
-      "bucket": "llm-foundation"
-    },
-    {
       "id": "alkpx3dIqfu198irAXsF",
       "question": "DeepMind's DiLoCo - how big of a blow to compute governance?",
       "description": "",
@@ -6071,23 +6088,6 @@
       "outcome_type": "BINARY",
       "creator": "jim",
       "bucket": "ai-general"
-    },
-    {
-      "id": "IU0qp2zAlt",
-      "question": "Will Elon Musk tweet that a Grok Sucessor has achieved 'AGI-level performance' or 'AGI has been reached'  in 2026?",
-      "description": "",
-      "url": "https://manifold.markets/Gugra/will-elon-musk-tweet-that-a-grok-su",
-      "probability": 0.49320174184471555,
-      "volume": 90.55415967851334,
-      "volume_24h": 0,
-      "liquidity": 600,
-      "unique_bettors": 6,
-      "created_at": 1769791784699,
-      "close_time": 1798761540000,
-      "is_resolved": false,
-      "outcome_type": "BINARY",
-      "creator": "Gugra",
-      "bucket": "llm-foundation"
     },
     {
       "id": "JyEYyDdo96sDZmtZZrDe",
@@ -6552,10 +6552,10 @@
   "bucket_signals": {
     "ai-general": {
       "market_count": 86,
-      "total_volume": 14876792.628615402,
-      "total_bettors": 10395,
-      "total_confidence": 6618923.5788485035,
-      "bullish_confidence": 1385411.0448192442,
+      "total_volume": 14877448.529888805,
+      "total_bettors": 10396,
+      "total_confidence": 6619690.060399904,
+      "bullish_confidence": 1386177.5263706446,
       "bearish_confidence": 5233512.534029259,
       "markets": [
         {
@@ -6817,6 +6817,12 @@
           "url": "https://manifold.markets/vluzko/ai-honesty-3-by-2027-will-we-have-i"
         },
         {
+          "question": "GPT ads by March 31? [Polymarket]",
+          "probability": 0.99,
+          "volume": 1550.6032669679348,
+          "url": "https://manifold.markets/vdb/gpt-ads-by-march-31-polymarket"
+        },
+        {
           "question": "Will any prominent Notkilleveryoneists switch sides to e/acc after learning more about machine learning R&D?",
           "probability": 0.011811483320939743,
           "volume": 1166.8912695896654,
@@ -6845,12 +6851,6 @@
           "probability": 0.30723643794098565,
           "volume": 930.0000000000002,
           "url": "https://manifold.markets/JoeandSeth/daily-llm-assistant-personal-usage-cRA2S5uS9Z"
-        },
-        {
-          "question": "GPT ads by March 31? [Polymarket]",
-          "probability": 0.9241746450205297,
-          "volume": 904.7019935650495,
-          "url": "https://manifold.markets/vdb/gpt-ads-by-march-31-polymarket"
         },
         {
           "question": "The Catholic Church releases a religious LLM before June 2026",
@@ -6925,16 +6925,16 @@
           "url": "https://manifold.markets/AlanTuring/will-a-rogue-artificial-intelligenc-y82dldnZsI"
         },
         {
+          "question": "Will an AI agent run a profitable (>10% ROI) prediction market portfolio by end of 2026?",
+          "probability": 0.7452401632383133,
+          "volume": 197.97105940027072,
+          "url": "https://manifold.markets/Terminator2/will-an-ai-agent-run-a-profitable-1"
+        },
+        {
           "question": "Will a machine learning training run exceed 10^25 FLOP in China before 2025?",
           "probability": 0.7703260932198124,
           "volume": 193.6348265196462,
           "url": "https://manifold.markets/MatthewBarnett/will-a-machine-learning-training-ru"
-        },
-        {
-          "question": "Will an AI agent run a profitable (>10% ROI) prediction market portfolio by end of 2026?",
-          "probability": 0.72,
-          "volume": 187.97105940027072,
-          "url": "https://manifold.markets/Terminator2/will-an-ai-agent-run-a-profitable-1"
         },
         {
           "question": "Will Chat GPT 6 release before SSI releases their first model?",
@@ -7075,15 +7075,15 @@
           "url": "https://manifold.markets/Thib/will-at-least-one-major-llm-publicl"
         }
       ],
-      "weighted_sentiment": -0.5813787458593788,
+      "weighted_sentiment": -0.5811956409672436,
       "signal_interpretation": "Strong bearish consensus"
     },
     "ai-safety": {
       "market_count": 67,
-      "total_volume": 936566.7689103216,
-      "total_bettors": 3001,
-      "total_confidence": 469810.043293123,
-      "bullish_confidence": 66721.51248700154,
+      "total_volume": 923900.2678449274,
+      "total_bettors": 3033,
+      "total_confidence": 448406.49189774407,
+      "bullish_confidence": 45317.961091622594,
       "bearish_confidence": 403088.5308061215,
       "markets": [
         {
@@ -7123,16 +7123,16 @@
           "url": "https://manifold.markets/iamgingertrash/will-agi-come-from-a-company-whos-p"
         },
         {
-          "question": "Will we get AGI before 2048?",
-          "probability": 0.7940261426906188,
-          "volume": 40554.064537877246,
-          "url": "https://manifold.markets/RemNi/will-we-get-agi-before-2048"
-        },
-        {
           "question": "Are LLMs capable of reaching AGI?",
           "probability": 0.5065334695845307,
           "volume": 36614.95122789211,
           "url": "https://manifold.markets/IsaacKing/are-llms-capable-of-reaching-agi"
+        },
+        {
+          "question": "Will we get AGI before 2035?",
+          "probability": 0.5438252509945856,
+          "volume": 27887.563472482925,
+          "url": "https://manifold.markets/RemNi/will-we-get-agi-before-2033-34ec8e1d00fd"
         },
         {
           "question": "Will we get AGI before 2033?",
@@ -7489,16 +7489,16 @@
           "url": "https://manifold.markets/LessWrong/will-we-should-try-to-automate-ai-s"
         }
       ],
-      "weighted_sentiment": -0.7159638733164638,
+      "weighted_sentiment": -0.797871074971158,
       "signal_interpretation": "Strong bearish consensus"
     },
     "llm-foundation": {
       "market_count": 126,
-      "total_volume": 683528.5826943088,
-      "total_bettors": 3022,
-      "total_confidence": 409063.60909725784,
-      "bullish_confidence": 107825.14991717294,
-      "bearish_confidence": 301238.4591800848,
+      "total_volume": 684107.106561173,
+      "total_bettors": 3028,
+      "total_confidence": 402880.47395841155,
+      "bullish_confidence": 101642.49172354415,
+      "bearish_confidence": 301237.9822348673,
       "markets": [
         {
           "question": "Anthropic flips Apple before 2030?",
@@ -7508,8 +7508,8 @@
         },
         {
           "question": "Will OpenAI release a model named GPT 5.3 by the end of February?",
-          "probability": 0.62,
-          "volume": 62347.38544978667,
+          "probability": 0.57,
+          "volume": 62529.65002137829,
           "url": "https://manifold.markets/BenAybar/will-openai-release-a-model-named-g"
         },
         {
@@ -7784,8 +7784,8 @@
         },
         {
           "question": "OpenAI abandon answer independence on ads before 2028?",
-          "probability": 0.25000000000000006,
-          "volume": 2095.454223205986,
+          "probability": 0.28,
+          "volume": 2191.713518478684,
           "url": "https://manifold.markets/ZviMowshowitz/openai-abandon-answer-independence"
         },
         {
@@ -8131,6 +8131,12 @@
           "url": "https://manifold.markets/jim/gemini-31-released-this-week"
         },
         {
+          "question": "Will Elon Musk tweet that a Grok Sucessor has achieved 'AGI-level performance' or 'AGI has been reached'  in 2026?",
+          "probability": 0.3552293323609546,
+          "volume": 290.5541596785133,
+          "url": "https://manifold.markets/Gugra/will-elon-musk-tweet-that-a-grok-su"
+        },
+        {
           "question": "Will OpenAI do large layoffs this year?",
           "probability": 0.19999999999999998,
           "volume": 280.4104846686449,
@@ -8159,6 +8165,12 @@
           "probability": 0.4966168557027207,
           "volume": 200.51664844259764,
           "url": "https://manifold.markets/JaundicedBaboon/will-anthropics-next-sonnet-model-e"
+        },
+        {
+          "question": "Anthropic's Claude 5 released before 4/20",
+          "probability": 0.5901639344262296,
+          "volume": 200,
+          "url": "https://manifold.markets/ManiPart/anthropics-claude-5-released-before"
         },
         {
           "question": "Will the OpenAI GPT Store (or equivalent \u201cAI App Store\u201d) launch before August 1, 2026?",
@@ -8197,22 +8209,10 @@
           "url": "https://manifold.markets/JaundicedBaboon/before-2027-will-openai-release-a-f-IyZO2LA90S"
         },
         {
-          "question": "Anthropic's Claude 5 released before 4/20",
-          "probability": 0.5475113122171946,
-          "volume": 100,
-          "url": "https://manifold.markets/ManiPart/anthropics-claude-5-released-before"
-        },
-        {
           "question": "DeepMind's DiLoCo - how big of a blow to compute governance?",
           "probability": 0.2633711630929722,
           "volume": 99.15127321668913,
           "url": "https://manifold.markets/CalebW/deepminds-diloco-how-big-of-a-blow"
-        },
-        {
-          "question": "Will Elon Musk tweet that a Grok Sucessor has achieved 'AGI-level performance' or 'AGI has been reached'  in 2026?",
-          "probability": 0.49320174184471555,
-          "volume": 90.55415967851334,
-          "url": "https://manifold.markets/Gugra/will-elon-musk-tweet-that-a-grok-su"
         },
         {
           "question": "Will GPT-5.3 Thinking exceed 50% on Frontier Math Tiers 1-3?",
@@ -8257,7 +8257,7 @@
           "url": "https://manifold.markets/AutopoieticErgodicity/claude-mcp-for-genome-variant-calli"
         }
       ],
-      "weighted_sentiment": -0.4728196421327873,
+      "weighted_sentiment": -0.495421107283365,
       "signal_interpretation": "Strong bearish consensus"
     },
     "open-source-ai": {

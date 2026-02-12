@@ -1,7 +1,7 @@
 {
   "source": "github",
-  "scraped_at": "2026-02-12T09:37:55.962550",
-  "total_repos": 171,
+  "scraped_at": "2026-02-12T10:03:45.871273",
+  "total_repos": 164,
   "repos": [
     {
       "id": 45717250,
@@ -13,7 +13,7 @@
       "stars": 193699,
       "forks": 75230,
       "watchers": 193699,
-      "open_issues": 3429,
+      "open_issues": 3433,
       "language": "C++",
       "topics": [
         "deep-learning",
@@ -27,7 +27,7 @@
       ],
       "created_at": "2015-11-07T01:19:20Z",
       "updated_at": "2026-02-12T01:28:02Z",
-      "pushed_at": "2026-02-12T01:33:41Z",
+      "pushed_at": "2026-02-12T02:01:12Z",
       "license": "Apache-2.0",
       "bucket": "ai-general"
     },
@@ -38,9 +38,9 @@
       "owner": "ollama",
       "description": "Get up and running with Kimi-K2.5, GLM-4.7, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
       "url": "https://github.com/ollama/ollama",
-      "stars": 162418,
-      "forks": 14554,
-      "watchers": 162418,
+      "stars": 162422,
+      "forks": 14555,
+      "watchers": 162422,
       "open_issues": 2406,
       "language": "Go",
       "topics": [
@@ -61,8 +61,8 @@
         "qwen"
       ],
       "created_at": "2023-06-26T19:39:32Z",
-      "updated_at": "2026-02-12T01:37:47Z",
-      "pushed_at": "2026-02-12T01:37:40Z",
+      "updated_at": "2026-02-12T02:01:54Z",
+      "pushed_at": "2026-02-12T01:40:15Z",
       "license": "MIT",
       "bucket": "llm-foundation"
     },
@@ -109,9 +109,9 @@
       "owner": "huggingface",
       "description": "\ud83e\udd17 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "url": "https://github.com/huggingface/transformers",
-      "stars": 156387,
+      "stars": 156389,
       "forks": 32040,
-      "watchers": 156387,
+      "watchers": 156389,
       "open_issues": 2212,
       "language": "Python",
       "topics": [
@@ -136,7 +136,7 @@
         "vlm"
       ],
       "created_at": "2018-10-29T13:56:00Z",
-      "updated_at": "2026-02-12T00:57:32Z",
+      "updated_at": "2026-02-12T01:50:09Z",
       "pushed_at": "2026-02-11T21:36:18Z",
       "license": "Apache-2.0",
       "bucket": "llm-foundation"
@@ -148,9 +148,9 @@
       "owner": "f",
       "description": "a.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source \u2014 self-host for your organization with complete privacy.",
       "url": "https://github.com/f/prompts.chat",
-      "stars": 145090,
+      "stars": 145092,
       "forks": 19157,
-      "watchers": 145090,
+      "watchers": 145092,
       "open_issues": 5,
       "language": "HTML",
       "topics": [
@@ -174,7 +174,7 @@
         "typescript"
       ],
       "created_at": "2022-12-05T13:54:13Z",
-      "updated_at": "2026-02-12T01:30:51Z",
+      "updated_at": "2026-02-12T01:55:36Z",
       "pushed_at": "2026-02-11T19:47:55Z",
       "license": "CC0-1.0",
       "bucket": "llm-foundation"
@@ -201,48 +201,8 @@
       ],
       "created_at": "2023-02-08T22:28:03Z",
       "updated_at": "2026-02-12T01:30:50Z",
-      "pushed_at": "2026-02-12T01:11:04Z",
+      "pushed_at": "2026-02-12T01:50:25Z",
       "license": "MIT",
-      "bucket": "ai-agents"
-    },
-    {
-      "id": 626805178,
-      "full_name": "langgenius/dify",
-      "name": "dify",
-      "owner": "langgenius",
-      "description": "Production-ready platform for agentic workflow development.",
-      "url": "https://github.com/langgenius/dify",
-      "stars": 129430,
-      "forks": 20138,
-      "watchers": 129430,
-      "open_issues": 724,
-      "language": "TypeScript",
-      "topics": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai",
-        "automation",
-        "gemini",
-        "genai",
-        "gpt",
-        "gpt-4",
-        "llm",
-        "low-code",
-        "mcp",
-        "nextjs",
-        "no-code",
-        "openai",
-        "orchestration",
-        "python",
-        "rag",
-        "workflow"
-      ],
-      "created_at": "2023-04-12T07:40:24Z",
-      "updated_at": "2026-02-12T01:35:35Z",
-      "pushed_at": "2026-02-11T21:46:42Z",
-      "license": "NOASSERTION",
       "bucket": "ai-agents"
     },
     {
@@ -252,9 +212,9 @@
       "owner": "langchain-ai",
       "description": "\ud83e\udd9c\ud83d\udd17 The platform for reliable agents.",
       "url": "https://github.com/langchain-ai/langchain",
-      "stars": 126498,
+      "stars": 126500,
       "forks": 20809,
-      "watchers": 126498,
+      "watchers": 126500,
       "open_issues": 402,
       "language": "Python",
       "topics": [
@@ -279,7 +239,7 @@
         "rag"
       ],
       "created_at": "2022-10-17T02:58:36Z",
-      "updated_at": "2026-02-12T01:24:23Z",
+      "updated_at": "2026-02-12T01:58:54Z",
       "pushed_at": "2026-02-11T21:36:56Z",
       "license": "MIT",
       "bucket": "ai-agents"
@@ -292,9 +252,9 @@
       "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "url": "https://github.com/open-webui/open-webui",
       "stars": 123621,
-      "forks": 17458,
+      "forks": 17459,
       "watchers": 123621,
-      "open_issues": 258,
+      "open_issues": 259,
       "language": "Python",
       "topics": [
         "ai",
@@ -314,50 +274,10 @@
         "webui"
       ],
       "created_at": "2023-10-06T22:08:27Z",
-      "updated_at": "2026-02-12T01:13:21Z",
+      "updated_at": "2026-02-12T01:52:45Z",
       "pushed_at": "2026-02-12T00:33:37Z",
       "license": "NOASSERTION",
       "bucket": "llm-foundation"
-    },
-    {
-      "id": 943398999,
-      "full_name": "x1xhlol/system-prompts-and-models-of-ai-tools",
-      "name": "system-prompts-and-models-of-ai-tools",
-      "owner": "x1xhlol",
-      "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts",
-      "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
-      "stars": 114228,
-      "forks": 29560,
-      "watchers": 114228,
-      "open_issues": 123,
-      "language": null,
-      "topics": [
-        "ai",
-        "bolt",
-        "cluely",
-        "copilot",
-        "cursor",
-        "cursorai",
-        "devin",
-        "github-copilot",
-        "lovable",
-        "open-source",
-        "perplexity",
-        "replit",
-        "system-prompts",
-        "trae",
-        "trae-ai",
-        "trae-ide",
-        "v0",
-        "vscode",
-        "windsurf",
-        "windsurf-ai"
-      ],
-      "created_at": "2025-03-05T16:38:29Z",
-      "updated_at": "2026-02-12T01:05:17Z",
-      "pushed_at": "2026-02-06T22:12:44Z",
-      "license": "GPL-3.0",
-      "bucket": "ai-agents"
     },
     {
       "id": 655806940,
@@ -400,10 +320,10 @@
       "owner": "pytorch",
       "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
       "url": "https://github.com/pytorch/pytorch",
-      "stars": 97349,
-      "forks": 26834,
-      "watchers": 97349,
-      "open_issues": 18013,
+      "stars": 97350,
+      "forks": 26835,
+      "watchers": 97350,
+      "open_issues": 18010,
       "language": "Python",
       "topics": [
         "autograd",
@@ -416,8 +336,8 @@
         "tensor"
       ],
       "created_at": "2016-08-13T05:26:41Z",
-      "updated_at": "2026-02-12T01:37:35Z",
-      "pushed_at": "2026-02-12T01:37:33Z",
+      "updated_at": "2026-02-12T01:51:23Z",
+      "pushed_at": "2026-02-12T02:02:30Z",
       "license": "NOASSERTION",
       "bucket": "ai-general"
     },
@@ -428,46 +348,19 @@
       "owner": "ggml-org",
       "description": "LLM inference in C/C++",
       "url": "https://github.com/ggml-org/llama.cpp",
-      "stars": 94874,
-      "forks": 14878,
-      "watchers": 94874,
+      "stars": 94878,
+      "forks": 14879,
+      "watchers": 94878,
       "open_issues": 1100,
       "language": "C++",
       "topics": [
         "ggml"
       ],
       "created_at": "2023-03-10T18:58:00Z",
-      "updated_at": "2026-02-12T01:20:03Z",
+      "updated_at": "2026-02-12T02:02:15Z",
       "pushed_at": "2026-02-12T01:37:34Z",
       "license": "MIT",
       "bucket": "open-source-ai"
-    },
-    {
-      "id": 968197216,
-      "full_name": "google-gemini/gemini-cli",
-      "name": "gemini-cli",
-      "owner": "google-gemini",
-      "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-      "url": "https://github.com/google-gemini/gemini-cli",
-      "stars": 94279,
-      "forks": 11136,
-      "watchers": 94279,
-      "open_issues": 2058,
-      "language": "TypeScript",
-      "topics": [
-        "ai",
-        "ai-agents",
-        "cli",
-        "gemini",
-        "gemini-api",
-        "mcp-client",
-        "mcp-server"
-      ],
-      "created_at": "2025-04-17T17:04:31Z",
-      "updated_at": "2026-02-12T01:31:00Z",
-      "pushed_at": "2026-02-12T01:34:56Z",
-      "license": "Apache-2.0",
-      "bucket": "ai-agents"
     },
     {
       "id": 793375104,
@@ -476,9 +369,9 @@
       "owner": "Shubhamsaboo",
       "description": "Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models.",
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
-      "stars": 94003,
+      "stars": 94007,
       "forks": 13641,
-      "watchers": 94003,
+      "watchers": 94007,
       "open_issues": 9,
       "language": "Python",
       "topics": [
@@ -488,7 +381,7 @@
         "rag"
       ],
       "created_at": "2024-04-29T05:30:25Z",
-      "updated_at": "2026-02-12T01:28:34Z",
+      "updated_at": "2026-02-12T01:58:32Z",
       "pushed_at": "2026-02-10T20:52:55Z",
       "license": "Apache-2.0",
       "bucket": "ai-agents"
@@ -539,9 +432,9 @@
       "owner": "microsoft",
       "description": "Python tool for converting files and office documents to Markdown.",
       "url": "https://github.com/microsoft/markitdown",
-      "stars": 86859,
+      "stars": 86863,
       "forks": 5047,
-      "watchers": 86859,
+      "watchers": 86863,
       "open_issues": 427,
       "language": "Python",
       "topics": [
@@ -554,7 +447,7 @@
         "pdf"
       ],
       "created_at": "2024-11-13T19:56:40Z",
-      "updated_at": "2026-02-12T01:34:38Z",
+      "updated_at": "2026-02-12T02:01:29Z",
       "pushed_at": "2026-01-08T23:21:33Z",
       "license": "MIT",
       "bucket": "ai-agents"
@@ -567,7 +460,7 @@
       "description": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
       "url": "https://github.com/rasbt/LLMs-from-scratch",
       "stars": 85135,
-      "forks": 12892,
+      "forks": 12893,
       "watchers": 85135,
       "open_issues": 0,
       "language": "Jupyter Notebook",
@@ -602,9 +495,9 @@
       "owner": "microsoft",
       "description": "12 weeks, 26 lessons, 52 quizzes, classic Machine Learning for all",
       "url": "https://github.com/microsoft/ML-For-Beginners",
-      "stars": 83678,
+      "stars": 83679,
       "forks": 19956,
-      "watchers": 83678,
+      "watchers": 83679,
       "open_issues": 4,
       "language": "Jupyter Notebook",
       "topics": [
@@ -622,7 +515,7 @@
         "scikit-learn-python"
       ],
       "created_at": "2021-03-03T01:34:05Z",
-      "updated_at": "2026-02-12T01:14:19Z",
+      "updated_at": "2026-02-12T01:47:47Z",
       "pushed_at": "2026-02-06T21:59:53Z",
       "license": "MIT",
       "bucket": "ai-general"
@@ -634,9 +527,9 @@
       "owner": "browser-use",
       "description": "\ud83c\udf10 Make websites accessible for AI agents. Automate tasks online with ease.",
       "url": "https://github.com/browser-use/browser-use",
-      "stars": 78195,
-      "forks": 9264,
-      "watchers": 78195,
+      "stars": 78198,
+      "forks": 9263,
+      "watchers": 78198,
       "open_issues": 239,
       "language": "Python",
       "topics": [
@@ -649,7 +542,7 @@
         "python"
       ],
       "created_at": "2024-10-31T16:00:56Z",
-      "updated_at": "2026-02-12T00:27:42Z",
+      "updated_at": "2026-02-12T02:00:26Z",
       "pushed_at": "2026-02-12T01:23:40Z",
       "license": "MIT",
       "bucket": "ai-agents"
@@ -701,10 +594,10 @@
       "owner": "lobehub",
       "description": "The ultimate space for work and life \u2014 to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level \u2014 enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
       "url": "https://github.com/lobehub/lobehub",
-      "stars": 72222,
-      "forks": 14634,
-      "watchers": 72222,
-      "open_issues": 768,
+      "stars": 72223,
+      "forks": 14633,
+      "watchers": 72223,
+      "open_issues": 769,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -721,7 +614,7 @@
         "openai"
       ],
       "created_at": "2023-05-21T07:19:12Z",
-      "updated_at": "2026-02-12T00:12:08Z",
+      "updated_at": "2026-02-12T01:38:50Z",
       "pushed_at": "2026-02-12T01:16:31Z",
       "license": "NOASSERTION",
       "bucket": "ai-agents"
@@ -776,9 +669,9 @@
       "owner": "PaddlePaddle",
       "description": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.",
       "url": "https://github.com/PaddlePaddle/PaddleOCR",
-      "stars": 70649,
+      "stars": 70653,
       "forks": 9822,
-      "watchers": 70649,
+      "watchers": 70653,
       "open_issues": 299,
       "language": "Python",
       "topics": [
@@ -797,7 +690,7 @@
         "rag"
       ],
       "created_at": "2020-05-08T10:38:16Z",
-      "updated_at": "2026-02-12T01:36:12Z",
+      "updated_at": "2026-02-12T02:00:32Z",
       "pushed_at": "2026-02-10T08:05:16Z",
       "license": "Apache-2.0",
       "bucket": "ai-infrastructure"
@@ -809,9 +702,9 @@
       "owner": "dair-ai",
       "description": "\ud83d\udc19 Guides, papers, lessons, notebooks and resources for prompt engineering, context engineering, RAG, and AI Agents.",
       "url": "https://github.com/dair-ai/Prompt-Engineering-Guide",
-      "stars": 70248,
+      "stars": 70249,
       "forks": 7504,
-      "watchers": 70248,
+      "watchers": 70249,
       "open_issues": 245,
       "language": "MDX",
       "topics": [
@@ -828,7 +721,7 @@
         "rag"
       ],
       "created_at": "2022-12-16T16:04:50Z",
-      "updated_at": "2026-02-12T01:27:46Z",
+      "updated_at": "2026-02-12T02:01:28Z",
       "pushed_at": "2026-02-01T21:11:28Z",
       "license": "MIT",
       "bucket": "ai-agents"
@@ -865,10 +758,10 @@
       "owner": "vllm-project",
       "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
       "url": "https://github.com/vllm-project/vllm",
-      "stars": 70108,
+      "stars": 70111,
       "forks": 13396,
-      "watchers": 70108,
-      "open_issues": 3334,
+      "watchers": 70111,
+      "open_issues": 3336,
       "language": "Python",
       "topics": [
         "amd",
@@ -893,8 +786,8 @@
         "transformer"
       ],
       "created_at": "2023-02-09T11:23:20Z",
-      "updated_at": "2026-02-12T01:37:31Z",
-      "pushed_at": "2026-02-12T01:29:33Z",
+      "updated_at": "2026-02-12T02:01:30Z",
+      "pushed_at": "2026-02-12T01:39:44Z",
       "license": "Apache-2.0",
       "bucket": "llm-foundation"
     },
@@ -905,9 +798,9 @@
       "owner": "OpenHands",
       "description": "\ud83d\ude4c OpenHands: AI-Driven Development",
       "url": "https://github.com/OpenHands/OpenHands",
-      "stars": 67769,
+      "stars": 67772,
       "forks": 8445,
-      "watchers": 67769,
+      "watchers": 67772,
       "open_issues": 315,
       "language": "Python",
       "topics": [
@@ -922,7 +815,7 @@
         "openai"
       ],
       "created_at": "2024-03-13T03:33:31Z",
-      "updated_at": "2026-02-12T00:48:56Z",
+      "updated_at": "2026-02-12T01:54:32Z",
       "pushed_at": "2026-02-12T00:27:10Z",
       "license": "NOASSERTION",
       "bucket": "ai-agents"
@@ -934,9 +827,9 @@
       "owner": "hiyouga",
       "description": "Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024)",
       "url": "https://github.com/hiyouga/LlamaFactory",
-      "stars": 67186,
+      "stars": 67187,
       "forks": 8174,
-      "watchers": 67186,
+      "watchers": 67187,
       "open_issues": 904,
       "language": "Python",
       "topics": [
@@ -962,7 +855,7 @@
         "transformers"
       ],
       "created_at": "2023-05-28T10:09:12Z",
-      "updated_at": "2026-02-12T01:17:59Z",
+      "updated_at": "2026-02-12T01:50:05Z",
       "pushed_at": "2026-02-10T13:47:48Z",
       "license": "Apache-2.0",
       "bucket": "ai-agents"
@@ -1072,9 +965,9 @@
       "owner": "FoundationAgents",
       "description": "\ud83c\udf1f The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming",
       "url": "https://github.com/FoundationAgents/MetaGPT",
-      "stars": 64132,
+      "stars": 64133,
       "forks": 8065,
-      "watchers": 64132,
+      "watchers": 64133,
       "open_issues": 78,
       "language": "Python",
       "topics": [
@@ -1085,7 +978,7 @@
         "multi-agent"
       ],
       "created_at": "2023-06-30T09:04:55Z",
-      "updated_at": "2026-02-12T01:07:15Z",
+      "updated_at": "2026-02-12T01:49:10Z",
       "pushed_at": "2026-01-21T10:12:33Z",
       "license": "MIT",
       "bucket": "ai-agents"
@@ -1143,39 +1036,6 @@
       "pushed_at": "2026-02-09T09:19:51Z",
       "license": "AGPL-3.0",
       "bucket": "llm-foundation"
-    },
-    {
-      "id": 323048702,
-      "full_name": "OpenBB-finance/OpenBB",
-      "name": "OpenBB",
-      "owner": "OpenBB-finance",
-      "description": "Financial data platform for analysts, quants and AI agents.",
-      "url": "https://github.com/OpenBB-finance/OpenBB",
-      "stars": 60101,
-      "forks": 5871,
-      "watchers": 60101,
-      "open_issues": 57,
-      "language": "Python",
-      "topics": [
-        "ai",
-        "crypto",
-        "derivatives",
-        "economics",
-        "equity",
-        "finance",
-        "fixed-income",
-        "machine-learning",
-        "openbb",
-        "options",
-        "python",
-        "quantitative-finance",
-        "stocks"
-      ],
-      "created_at": "2020-12-20T10:46:38Z",
-      "updated_at": "2026-02-12T01:37:20Z",
-      "pushed_at": "2026-02-10T23:08:14Z",
-      "license": "NOASSERTION",
-      "bucket": "ai-agents"
     },
     {
       "id": 798201435,
@@ -1259,9 +1119,9 @@
       "owner": "microsoft",
       "description": "A programming framework for agentic AI",
       "url": "https://github.com/microsoft/autogen",
-      "stars": 54496,
+      "stars": 54497,
       "forks": 8212,
-      "watchers": 54496,
+      "watchers": 54497,
       "open_issues": 582,
       "language": "Python",
       "topics": [
@@ -1277,48 +1137,9 @@
         "llm-framework"
       ],
       "created_at": "2023-08-18T11:43:45Z",
-      "updated_at": "2026-02-12T01:34:53Z",
+      "updated_at": "2026-02-12T01:51:04Z",
       "pushed_at": "2026-01-22T16:27:56Z",
       "license": "CC-BY-4.0",
-      "bucket": "ai-agents"
-    },
-    {
-      "id": 649170660,
-      "full_name": "Mintplex-Labs/anything-llm",
-      "name": "anything-llm",
-      "owner": "Mintplex-Labs",
-      "description": "The all-in-one Desktop & Docker AI application with built-in RAG, AI agents, No-code agent builder, MCP compatibility,  and more.",
-      "url": "https://github.com/Mintplex-Labs/anything-llm",
-      "stars": 54482,
-      "forks": 5869,
-      "watchers": 54482,
-      "open_issues": 273,
-      "language": "JavaScript",
-      "topics": [
-        "ai-agents",
-        "custom-ai-agents",
-        "deepseek",
-        "kimi",
-        "llama3",
-        "llm",
-        "lmstudio",
-        "local-llm",
-        "localai",
-        "mcp",
-        "mcp-servers",
-        "moonshot",
-        "multimodal",
-        "no-code",
-        "ollama",
-        "qwen3",
-        "rag",
-        "vector-database",
-        "web-scraping"
-      ],
-      "created_at": "2023-06-04T02:29:14Z",
-      "updated_at": "2026-02-12T00:34:35Z",
-      "pushed_at": "2026-02-11T16:53:46Z",
-      "license": "MIT",
       "bucket": "ai-agents"
     },
     {
@@ -1328,9 +1149,9 @@
       "owner": "opendatalab",
       "description": "Transforms complex documents like PDFs into LLM-ready markdown/JSON for your Agentic workflows.",
       "url": "https://github.com/opendatalab/MinerU",
-      "stars": 54238,
+      "stars": 54240,
       "forks": 4511,
-      "watchers": 54238,
+      "watchers": 54240,
       "open_issues": 180,
       "language": "Python",
       "topics": [
@@ -1349,7 +1170,7 @@
         "python"
       ],
       "created_at": "2024-02-29T08:52:34Z",
-      "updated_at": "2026-02-12T01:23:02Z",
+      "updated_at": "2026-02-12T02:02:03Z",
       "pushed_at": "2026-02-09T09:45:11Z",
       "license": "AGPL-3.0",
       "bucket": "ai-agents"
@@ -1361,9 +1182,9 @@
       "owner": "unslothai",
       "description": "Fine-tuning & Reinforcement Learning for LLMs. \ud83e\udda5 Train OpenAI gpt-oss, DeepSeek, Qwen, Llama, Gemma, TTS 2x faster with 70% less VRAM.",
       "url": "https://github.com/unslothai/unsloth",
-      "stars": 51906,
+      "stars": 51908,
       "forks": 4297,
-      "watchers": 51906,
+      "watchers": 51908,
       "open_issues": 949,
       "language": "Python",
       "topics": [
@@ -1389,37 +1210,9 @@
         "voice-cloning"
       ],
       "created_at": "2023-11-29T16:50:09Z",
-      "updated_at": "2026-02-12T01:00:17Z",
+      "updated_at": "2026-02-12T01:46:59Z",
       "pushed_at": "2026-02-11T15:04:02Z",
       "license": "Apache-2.0",
-      "bucket": "ai-agents"
-    },
-    {
-      "id": 895508656,
-      "full_name": "microsoft/ai-agents-for-beginners",
-      "name": "ai-agents-for-beginners",
-      "owner": "microsoft",
-      "description": "12 Lessons to Get Started Building AI Agents",
-      "url": "https://github.com/microsoft/ai-agents-for-beginners",
-      "stars": 50454,
-      "forks": 17652,
-      "watchers": 50454,
-      "open_issues": 8,
-      "language": "Jupyter Notebook",
-      "topics": [
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-rag",
-        "ai-agents",
-        "ai-agents-framework",
-        "autogen",
-        "generative-ai",
-        "semantic-kernel"
-      ],
-      "created_at": "2024-11-28T10:42:52Z",
-      "updated_at": "2026-02-12T01:36:19Z",
-      "pushed_at": "2026-02-06T07:03:17Z",
-      "license": "MIT",
       "bucket": "ai-agents"
     },
     {
@@ -1493,10 +1286,10 @@
       "owner": "mem0ai",
       "description": "Universal memory layer for AI Agents",
       "url": "https://github.com/mem0ai/mem0",
-      "stars": 47174,
-      "forks": 5221,
-      "watchers": 47174,
-      "open_issues": 712,
+      "stars": 47176,
+      "forks": 5223,
+      "watchers": 47176,
+      "open_issues": 713,
       "language": "Python",
       "topics": [
         "agents",
@@ -1515,7 +1308,7 @@
         "state-management"
       ],
       "created_at": "2023-06-20T08:58:36Z",
-      "updated_at": "2026-02-12T01:09:19Z",
+      "updated_at": "2026-02-12T01:56:04Z",
       "pushed_at": "2026-02-03T05:37:18Z",
       "license": "Apache-2.0",
       "bucket": "ai-agents"
@@ -1527,9 +1320,9 @@
       "owner": "run-llama",
       "description": "LlamaIndex is the leading framework for building LLM-powered agents over your data.",
       "url": "https://github.com/run-llama/llama_index",
-      "stars": 46948,
+      "stars": 46949,
       "forks": 6810,
-      "watchers": 46948,
+      "watchers": 46949,
       "open_issues": 302,
       "language": "Python",
       "topics": [
@@ -1545,7 +1338,7 @@
         "vector-database"
       ],
       "created_at": "2022-11-02T04:24:54Z",
-      "updated_at": "2026-02-12T00:43:08Z",
+      "updated_at": "2026-02-12T01:42:06Z",
       "pushed_at": "2026-02-11T23:40:05Z",
       "license": "MIT",
       "bucket": "ai-agents"
@@ -1557,9 +1350,9 @@
       "owner": "ggml-org",
       "description": "Port of OpenAI's Whisper model in C/C++",
       "url": "https://github.com/ggml-org/whisper.cpp",
-      "stars": 46662,
+      "stars": 46663,
       "forks": 5203,
-      "watchers": 46662,
+      "watchers": 46663,
       "open_issues": 1123,
       "language": "C++",
       "topics": [
@@ -1571,7 +1364,7 @@
         "whisper"
       ],
       "created_at": "2022-09-25T18:26:37Z",
-      "updated_at": "2026-02-11T23:01:24Z",
+      "updated_at": "2026-02-12T01:56:32Z",
       "pushed_at": "2026-02-09T10:33:07Z",
       "license": "MIT",
       "bucket": "llm-foundation"
@@ -1619,14 +1412,14 @@
       "owner": "oobabooga",
       "description": "The definitive Web UI for local AI, with powerful features and easy setup.",
       "url": "https://github.com/oobabooga/text-generation-webui",
-      "stars": 46035,
+      "stars": 46036,
       "forks": 5891,
-      "watchers": 46035,
+      "watchers": 46036,
       "open_issues": 2659,
       "language": "Python",
       "topics": [],
       "created_at": "2022-12-21T04:17:37Z",
-      "updated_at": "2026-02-11T20:19:48Z",
+      "updated_at": "2026-02-12T02:00:48Z",
       "pushed_at": "2026-02-03T01:57:51Z",
       "license": "AGPL-3.0",
       "bucket": "ai-general"
@@ -1665,60 +1458,20 @@
       "bucket": "llm-foundation"
     },
     {
-      "id": 159152904,
-      "full_name": "jeecgboot/JeecgBoot",
-      "name": "JeecgBoot",
-      "owner": "jeecgboot",
-      "description": "\u3010AI\u4f4e\u4ee3\u7801\u5e73\u53f0\u3011AI low-code platform empowers enterprises to quickly develop low-code solutions and build AI applications.  \u52a9\u529b\u4f01\u4e1a\u5feb\u901f\u5b9e\u73b0\u4f4e\u4ee3\u7801\u5f00\u53d1\u548c\u6784\u5efaAI\u5e94\u7528\uff01 AI\u5e94\u7528\u5e73\u53f0\u6db5\u76d6\uff1aAI\u5e94\u7528\u3001AI\u6a21\u578b\u3001AI\u804a\u5929\u52a9\u624b\u3001\u77e5\u8bc6\u5e93\u3001AI\u6d41\u7a0b\u7f16\u6392\u3001MCP\u548c\u63d2\u4ef6\uff0c\u804a\u5929\u5f0f\u4e1a\u52a1\u64cd\u4f5c\u7b49\u3002 \u5f3a\u5927\u4ee3\u7801\u751f\u6210\u5668\uff1a\u5b9e\u73b0\u524d\u540e\u7aef\u4e00\u952e\u751f\u6210\uff0c\u65e0\u9700\u624b\u5199\u4ee3\u7801! \u663e\u8457\u63d0\u5347\u6548\u7387\u8282\u7701\u6210\u672c\uff0c\u53c8\u4e0d\u5931\u7075\u6d3b~",
-      "url": "https://github.com/jeecgboot/JeecgBoot",
-      "stars": 45208,
-      "forks": 15819,
-      "watchers": 45208,
-      "open_issues": 50,
-      "language": "Java",
-      "topics": [
-        "activiti",
-        "agent",
-        "ai",
-        "aiflow",
-        "ant-design-vue",
-        "antd",
-        "codegenerator",
-        "deepseek",
-        "flowable",
-        "langchain4j",
-        "llm",
-        "low-code",
-        "mcp",
-        "mybatis-plus",
-        "rag",
-        "spring-ai",
-        "springboot",
-        "springboot3",
-        "springcloud",
-        "vue3"
-      ],
-      "created_at": "2018-11-26T10:40:00Z",
-      "updated_at": "2026-02-11T16:29:06Z",
-      "pushed_at": "2026-02-11T09:11:53Z",
-      "license": "Apache-2.0",
-      "bucket": "ai-agents"
-    },
-    {
       "id": 1075431749,
       "full_name": "karpathy/nanochat",
       "name": "nanochat",
       "owner": "karpathy",
       "description": "The best ChatGPT that $100 can buy.",
       "url": "https://github.com/karpathy/nanochat",
-      "stars": 42929,
-      "forks": 5563,
-      "watchers": 42929,
+      "stars": 42931,
+      "forks": 5564,
+      "watchers": 42931,
       "open_issues": 55,
       "language": "Python",
       "topics": [],
       "created_at": "2025-10-13T13:46:35Z",
-      "updated_at": "2026-02-12T01:37:42Z",
+      "updated_at": "2026-02-12T01:59:32Z",
       "pushed_at": "2026-02-10T23:35:02Z",
       "license": "MIT",
       "bucket": "llm-foundation"
@@ -1730,9 +1483,9 @@
       "owner": "mudler",
       "description": ":robot: The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement,  running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, MCP, Audio, Video, Images, Voice Cloning, Distrib",
       "url": "https://github.com/mudler/LocalAI",
-      "stars": 42744,
+      "stars": 42745,
       "forks": 3553,
-      "watchers": 42744,
+      "watchers": 42745,
       "open_issues": 160,
       "language": "Go",
       "topics": [
@@ -1758,7 +1511,7 @@
         "tts"
       ],
       "created_at": "2023-03-18T22:58:02Z",
-      "updated_at": "2026-02-12T01:34:07Z",
+      "updated_at": "2026-02-12T01:52:47Z",
       "pushed_at": "2026-02-11T21:58:19Z",
       "license": "MIT",
       "bucket": "llm-foundation"
@@ -1865,7 +1618,7 @@
         "wechat"
       ],
       "created_at": "2022-08-07T08:33:41Z",
-      "updated_at": "2026-02-12T01:34:16Z",
+      "updated_at": "2026-02-12T01:49:27Z",
       "pushed_at": "2026-02-10T03:31:45Z",
       "license": "MIT",
       "bucket": "ai-agents"
@@ -1929,9 +1682,9 @@
       "owner": "huggingface",
       "description": "The largest collection of PyTorch image encoders / backbones. Including train, eval, inference, export scripts, and pretrained weights -- ResNet, ResNeXT, EfficientNet, NFNet, Vision Transformer (ViT), MobileNetV4, MobileNet-V3 & V2, RegNet, DPN, CSPNet, Swin Transformer, MaxViT, CoAtNet, ConvNeXt, ",
       "url": "https://github.com/huggingface/pytorch-image-models",
-      "stars": 36354,
-      "forks": 5121,
-      "watchers": 36354,
+      "stars": 36355,
+      "forks": 5122,
+      "watchers": 36355,
       "open_issues": 75,
       "language": "Python",
       "topics": [
@@ -1957,7 +1710,7 @@
         "vision-transformer-models"
       ],
       "created_at": "2019-02-02T05:51:12Z",
-      "updated_at": "2026-02-11T19:19:20Z",
+      "updated_at": "2026-02-12T01:46:51Z",
       "pushed_at": "2026-02-11T19:19:09Z",
       "license": "Apache-2.0",
       "bucket": "llm-foundation"
@@ -1972,7 +1725,7 @@
       "stars": 35804,
       "forks": 5750,
       "watchers": 35804,
-      "open_issues": 1436,
+      "open_issues": 1435,
       "language": "Python",
       "topics": [
         "ai-gateway",
@@ -1991,8 +1744,8 @@
         "vertex-ai"
       ],
       "created_at": "2023-07-27T00:09:52Z",
-      "updated_at": "2026-02-12T01:35:35Z",
-      "pushed_at": "2026-02-12T01:26:38Z",
+      "updated_at": "2026-02-12T02:00:27Z",
+      "pushed_at": "2026-02-12T02:00:21Z",
       "license": "NOASSERTION",
       "bucket": "ai-agents"
     },
@@ -2003,9 +1756,9 @@
       "owner": "danny-avila",
       "description": "Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Pre",
       "url": "https://github.com/danny-avila/LibreChat",
-      "stars": 33814,
-      "forks": 6788,
-      "watchers": 33814,
+      "stars": 33816,
+      "forks": 6790,
+      "watchers": 33816,
       "open_issues": 415,
       "language": "TypeScript",
       "topics": [
@@ -2031,7 +1784,7 @@
         "webui"
       ],
       "created_at": "2023-02-12T01:06:52Z",
-      "updated_at": "2026-02-12T01:36:55Z",
+      "updated_at": "2026-02-12T02:01:10Z",
       "pushed_at": "2026-02-11T16:40:52Z",
       "license": "MIT",
       "bucket": "ai-agents"
@@ -2129,7 +1882,7 @@
         "python"
       ],
       "created_at": "2020-10-25T23:23:54Z",
-      "updated_at": "2026-02-11T22:57:33Z",
+      "updated_at": "2026-02-12T01:49:01Z",
       "pushed_at": "2026-02-11T22:06:21Z",
       "license": "Apache-2.0",
       "bucket": "llm-foundation"
@@ -2180,9 +1933,9 @@
       "owner": "fastai",
       "description": "The fastai deep learning library",
       "url": "https://github.com/fastai/fastai",
-      "stars": 27836,
+      "stars": 27837,
       "forks": 7679,
-      "watchers": 27836,
+      "watchers": 27837,
       "open_issues": 268,
       "language": "Jupyter Notebook",
       "topics": [
@@ -2196,7 +1949,7 @@
         "pytorch"
       ],
       "created_at": "2017-09-09T17:43:36Z",
-      "updated_at": "2026-02-11T22:34:30Z",
+      "updated_at": "2026-02-12T02:02:47Z",
       "pushed_at": "2026-01-29T17:58:03Z",
       "license": "Apache-2.0",
       "bucket": "ai-general"
@@ -2322,9 +2075,9 @@
       "owner": "fishaudio",
       "description": "SOTA Open Source TTS",
       "url": "https://github.com/fishaudio/fish-speech",
-      "stars": 24877,
+      "stars": 24878,
       "forks": 2072,
-      "watchers": 24877,
+      "watchers": 24878,
       "open_issues": 23,
       "language": "Python",
       "topics": [
@@ -2337,7 +2090,7 @@
         "vqvae"
       ],
       "created_at": "2023-10-10T03:16:51Z",
-      "updated_at": "2026-02-11T18:28:16Z",
+      "updated_at": "2026-02-12T02:02:55Z",
       "pushed_at": "2026-02-02T18:42:34Z",
       "license": "Apache-2.0",
       "bucket": "open-source-ai"
@@ -2378,10 +2131,10 @@
       "owner": "langchain-ai",
       "description": "Build resilient language agents as graphs.",
       "url": "https://github.com/langchain-ai/langgraph",
-      "stars": 24618,
-      "forks": 4287,
-      "watchers": 24618,
-      "open_issues": 280,
+      "stars": 24619,
+      "forks": 4288,
+      "watchers": 24619,
+      "open_issues": 282,
       "language": "Python",
       "topics": [
         "agents",
@@ -2404,8 +2157,8 @@
         "rag"
       ],
       "created_at": "2023-08-09T18:33:12Z",
-      "updated_at": "2026-02-12T01:34:54Z",
-      "pushed_at": "2026-02-11T19:30:02Z",
+      "updated_at": "2026-02-12T01:58:16Z",
+      "pushed_at": "2026-02-12T01:50:44Z",
       "license": "MIT",
       "bucket": "ai-agents"
     },
@@ -2469,8 +2222,8 @@
         "prompt-engineering"
       ],
       "created_at": "2018-06-05T16:05:58Z",
-      "updated_at": "2026-02-12T01:22:37Z",
-      "pushed_at": "2026-02-12T01:07:50Z",
+      "updated_at": "2026-02-12T01:53:35Z",
+      "pushed_at": "2026-02-12T02:01:12Z",
       "license": "Apache-2.0",
       "bucket": "ai-agents"
     },
@@ -2503,7 +2256,7 @@
       "stars": 23623,
       "forks": 5946,
       "watchers": 23623,
-      "open_issues": 1578,
+      "open_issues": 1577,
       "language": "C++",
       "topics": [
         "deep-learning",
@@ -2516,8 +2269,8 @@
         "scalability"
       ],
       "created_at": "2016-08-15T06:59:08Z",
-      "updated_at": "2026-02-12T00:59:17Z",
-      "pushed_at": "2026-02-12T00:58:47Z",
+      "updated_at": "2026-02-12T02:00:04Z",
+      "pushed_at": "2026-02-12T01:59:59Z",
       "license": "Apache-2.0",
       "bucket": "ai-general"
     },
@@ -2528,10 +2281,10 @@
       "owner": "sgl-project",
       "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
       "url": "https://github.com/sgl-project/sglang",
-      "stars": 23519,
+      "stars": 23520,
       "forks": 4411,
-      "watchers": 23519,
-      "open_issues": 2216,
+      "watchers": 23520,
+      "open_issues": 2219,
       "language": "Python",
       "topics": [
         "attention",
@@ -2554,7 +2307,7 @@
         "wan"
       ],
       "created_at": "2024-01-08T04:15:52Z",
-      "updated_at": "2026-02-12T01:33:40Z",
+      "updated_at": "2026-02-12T01:45:47Z",
       "pushed_at": "2026-02-12T01:33:36Z",
       "license": "Apache-2.0",
       "bucket": "llm-foundation"
@@ -2710,9 +2463,9 @@
       "owner": "langfuse",
       "description": "\ud83e\udea2 Open source LLM engineering platform: LLM Observability, metrics, evals, prompt management, playground, datasets. Integrates with OpenTelemetry, Langchain, OpenAI SDK, LiteLLM, and more. \ud83c\udf4aYC W23 ",
       "url": "https://github.com/langfuse/langfuse",
-      "stars": 21804,
-      "forks": 2143,
-      "watchers": 21804,
+      "stars": 21806,
+      "forks": 2144,
+      "watchers": 21806,
       "open_issues": 509,
       "language": "TypeScript",
       "topics": [
@@ -2737,7 +2490,7 @@
         "ycombinator"
       ],
       "created_at": "2023-05-18T17:47:09Z",
-      "updated_at": "2026-02-12T01:36:46Z",
+      "updated_at": "2026-02-12T01:58:31Z",
       "pushed_at": "2026-02-11T23:07:02Z",
       "license": "NOASSERTION",
       "bucket": "ai-agents"
@@ -2789,9 +2542,9 @@
       "owner": "onnx",
       "description": "Open standard for machine learning interoperability",
       "url": "https://github.com/onnx/onnx",
-      "stars": 20320,
+      "stars": 20321,
       "forks": 3868,
-      "watchers": 20320,
+      "watchers": 20321,
       "open_issues": 280,
       "language": "Python",
       "topics": [
@@ -2810,7 +2563,7 @@
         "tensorflow"
       ],
       "created_at": "2017-09-07T04:53:45Z",
-      "updated_at": "2026-02-11T23:03:15Z",
+      "updated_at": "2026-02-12T01:39:37Z",
       "pushed_at": "2026-02-11T19:45:01Z",
       "license": "Apache-2.0",
       "bucket": "ai-general"
@@ -2924,9 +2677,9 @@
       "owner": "bytedance",
       "description": "DeerFlow is a community-driven Deep Research framework, combining language models with tools like web search, crawling, and Python execution, while contributing back to the open-source community.",
       "url": "https://github.com/bytedance/deer-flow",
-      "stars": 19804,
+      "stars": 19805,
       "forks": 2487,
-      "watchers": 19804,
+      "watchers": 19805,
       "open_issues": 199,
       "language": "Python",
       "topics": [
@@ -2949,7 +2702,7 @@
         "typescript"
       ],
       "created_at": "2025-05-07T02:50:19Z",
-      "updated_at": "2026-02-11T16:01:55Z",
+      "updated_at": "2026-02-12T01:59:01Z",
       "pushed_at": "2026-02-09T13:54:10Z",
       "license": "MIT",
       "bucket": "ai-agents"
@@ -3019,7 +2772,7 @@
       "description": "Introduction to Machine Learning Systems",
       "url": "https://github.com/harvard-edge/cs249r_book",
       "stars": 18115,
-      "forks": 2121,
+      "forks": 2123,
       "watchers": 18115,
       "open_issues": 32,
       "language": "JavaScript",
@@ -3106,7 +2859,7 @@
       ],
       "created_at": "2023-05-10T12:57:13Z",
       "updated_at": "2026-02-11T21:16:58Z",
-      "pushed_at": "2026-02-12T01:36:39Z",
+      "pushed_at": "2026-02-12T01:44:42Z",
       "license": "Apache-2.0",
       "bucket": "ai-agents"
     },
@@ -3185,12 +2938,12 @@
       "stars": 16975,
       "forks": 3013,
       "watchers": 16975,
-      "open_issues": 201,
+      "open_issues": 199,
       "language": "TypeScript",
       "topics": [],
       "created_at": "2023-02-06T22:50:27Z",
-      "updated_at": "2026-02-12T01:35:55Z",
-      "pushed_at": "2026-02-12T01:36:53Z",
+      "updated_at": "2026-02-12T01:44:08Z",
+      "pushed_at": "2026-02-12T01:45:18Z",
       "license": "MIT",
       "bucket": "ai-agents"
     },
@@ -3240,9 +2993,9 @@
       "owner": "AstrBotDevs",
       "description": "Agentic IM Chatbot infrastructure that integrates lots of IM platforms, LLMs, plugins and AI features. Your clawdbot alternative. \u2728",
       "url": "https://github.com/AstrBotDevs/AstrBot",
-      "stars": 15814,
+      "stars": 15815,
       "forks": 1256,
-      "watchers": 15814,
+      "watchers": 15815,
       "open_issues": 432,
       "language": "Python",
       "topics": [
@@ -3264,7 +3017,7 @@
         "telegram"
       ],
       "created_at": "2022-12-08T13:27:46Z",
-      "updated_at": "2026-02-11T22:11:06Z",
+      "updated_at": "2026-02-12T02:01:04Z",
       "pushed_at": "2026-02-11T17:17:16Z",
       "license": "AGPL-3.0",
       "bucket": "ai-agents"
@@ -3628,14 +3381,14 @@
       "owner": "tensorflow",
       "description": "Play with neural networks!",
       "url": "https://github.com/tensorflow/playground",
-      "stars": 12773,
+      "stars": 12774,
       "forks": 2686,
-      "watchers": 12773,
+      "watchers": 12774,
       "open_issues": 139,
       "language": "TypeScript",
       "topics": [],
       "created_at": "2016-04-04T18:18:40Z",
-      "updated_at": "2026-02-11T15:26:00Z",
+      "updated_at": "2026-02-12T01:55:54Z",
       "pushed_at": "2026-01-21T23:25:42Z",
       "license": "Apache-2.0",
       "bucket": "ai-general"
@@ -3826,7 +3579,7 @@
       "description": "\u672c\u9879\u76ee\u662f\u4e00\u4e2a\u9762\u5411\u5c0f\u767d\u5f00\u53d1\u8005\u7684\u5927\u6a21\u578b\u5e94\u7528\u5f00\u53d1\u6559\u7a0b\uff0c\u5728\u7ebf\u9605\u8bfb\u5730\u5740\uff1ahttps://datawhalechina.github.io/llm-universe/",
       "url": "https://github.com/datawhalechina/llm-universe",
       "stars": 11885,
-      "forks": 1244,
+      "forks": 1245,
       "watchers": 11885,
       "open_issues": 12,
       "language": "Jupyter Notebook",
@@ -4063,9 +3816,9 @@
       "owner": "HKUDS",
       "description": "\"DeepTutor: AI-Powered Personalized Learning Assistant\"",
       "url": "https://github.com/HKUDS/DeepTutor",
-      "stars": 10216,
+      "stars": 10220,
       "forks": 1363,
-      "watchers": 10216,
+      "watchers": 10220,
       "open_issues": 29,
       "language": "Python",
       "topics": [
@@ -4080,7 +3833,7 @@
         "rag"
       ],
       "created_at": "2025-12-28T15:35:54Z",
-      "updated_at": "2026-02-12T01:21:51Z",
+      "updated_at": "2026-02-12T01:56:04Z",
       "pushed_at": "2026-02-12T00:39:17Z",
       "license": "AGPL-3.0",
       "bucket": "ai-agents"
@@ -4410,9 +4163,9 @@
       "owner": "LykosAI",
       "description": "Multi-Platform Package Manager for Stable Diffusion",
       "url": "https://github.com/LykosAI/StabilityMatrix",
-      "stars": 7473,
+      "stars": 7474,
       "forks": 516,
-      "watchers": 7473,
+      "watchers": 7474,
       "open_issues": 213,
       "language": "C#",
       "topics": [
@@ -4427,7 +4180,7 @@
         "text2image"
       ],
       "created_at": "2023-06-13T05:20:38Z",
-      "updated_at": "2026-02-12T01:34:14Z",
+      "updated_at": "2026-02-12T01:47:39Z",
       "pushed_at": "2026-01-30T02:21:37Z",
       "license": "AGPL-3.0",
       "bucket": "ai-image-generation"
@@ -4463,16 +4216,16 @@
       "owner": "google",
       "description": "Flax is a neural network library for JAX that is designed for flexibility.",
       "url": "https://github.com/google/flax",
-      "stars": 7075,
+      "stars": 7076,
       "forks": 789,
-      "watchers": 7075,
+      "watchers": 7076,
       "open_issues": 456,
       "language": "Jupyter Notebook",
       "topics": [
         "jax"
       ],
       "created_at": "2020-01-10T09:48:37Z",
-      "updated_at": "2026-02-12T00:04:25Z",
+      "updated_at": "2026-02-12T01:43:27Z",
       "pushed_at": "2026-02-12T00:04:23Z",
       "license": "Apache-2.0",
       "bucket": "ai-general"
@@ -4574,9 +4327,9 @@
       "owner": "p-e-w",
       "description": "Fully automatic censorship removal for language models",
       "url": "https://github.com/p-e-w/heretic",
-      "stars": 5008,
+      "stars": 5009,
       "forks": 482,
-      "watchers": 5008,
+      "watchers": 5009,
       "open_issues": 49,
       "language": "Python",
       "topics": [
@@ -4585,7 +4338,7 @@
         "transformer"
       ],
       "created_at": "2025-09-21T05:46:16Z",
-      "updated_at": "2026-02-12T01:37:05Z",
+      "updated_at": "2026-02-12T01:44:39Z",
       "pushed_at": "2026-02-11T05:39:31Z",
       "license": "AGPL-3.0",
       "bucket": "ai-general"
@@ -4867,9 +4620,9 @@
       "owner": "mcmonkeyprojects",
       "description": "SwarmUI (formerly StableSwarmUI), A Modular Stable Diffusion Web-User-Interface, with an emphasis on making powertools easily accessible, high performance, and extensibility.",
       "url": "https://github.com/mcmonkeyprojects/SwarmUI",
-      "stars": 3703,
+      "stars": 3704,
       "forks": 367,
-      "watchers": 3703,
+      "watchers": 3704,
       "open_issues": 135,
       "language": "C#",
       "topics": [
@@ -4884,7 +4637,7 @@
         "stable-diffusion"
       ],
       "created_at": "2024-06-21T06:24:53Z",
-      "updated_at": "2026-02-12T01:18:49Z",
+      "updated_at": "2026-02-12T01:44:54Z",
       "pushed_at": "2026-02-09T20:05:07Z",
       "license": "MIT",
       "bucket": "ai-image-generation"
@@ -5206,9 +4959,9 @@
       "owner": "KohakuBlueleaf",
       "description": "Lora beYond Conventional methods, Other Rank adaptation Implementations for Stable diffusion.",
       "url": "https://github.com/KohakuBlueleaf/LyCORIS",
-      "stars": 2475,
+      "stars": 2476,
       "forks": 173,
-      "watchers": 2475,
+      "watchers": 2476,
       "open_issues": 4,
       "language": "Python",
       "topics": [
@@ -5216,7 +4969,7 @@
         "stable-diffusion"
       ],
       "created_at": "2023-02-27T11:05:13Z",
-      "updated_at": "2026-02-10T14:36:01Z",
+      "updated_at": "2026-02-12T01:50:28Z",
       "pushed_at": "2026-01-26T04:00:07Z",
       "license": "Apache-2.0",
       "bucket": "ai-image-generation"
@@ -5315,9 +5068,9 @@
   "bucket_signals": {
     "ai-general": {
       "repo_count": 48,
-      "total_stars": 1286506,
-      "total_forks": 318529,
-      "total_momentum": 1923564,
+      "total_stars": 1286514,
+      "total_forks": 318532,
+      "total_momentum": 1923578,
       "top_repos": [
         {
           "name": "tensorflow/tensorflow",
@@ -5327,13 +5080,13 @@
         },
         {
           "name": "pytorch/pytorch",
-          "stars": 97349,
-          "forks": 26834,
+          "stars": 97350,
+          "forks": 26835,
           "url": "https://github.com/pytorch/pytorch"
         },
         {
           "name": "microsoft/ML-For-Beginners",
-          "stars": 83678,
+          "stars": 83679,
           "forks": 19956,
           "url": "https://github.com/microsoft/ML-For-Beginners"
         },
@@ -5350,37 +5103,37 @@
           "url": "https://github.com/scikit-learn/scikit-learn"
         }
       ],
-      "momentum_share": 0.22776664210081599,
-      "signal_interpretation": "Strong category - significant traction"
+      "momentum_share": 0.2502977166383003,
+      "signal_interpretation": "Dominant category - massive developer interest"
     },
     "llm-foundation": {
       "repo_count": 41,
-      "total_stars": 1828153,
-      "total_forks": 346860,
-      "total_momentum": 2521873,
+      "total_stars": 1828170,
+      "total_forks": 346865,
+      "total_momentum": 2521900,
       "top_repos": [
         {
           "name": "ollama/ollama",
-          "stars": 162418,
-          "forks": 14554,
+          "stars": 162422,
+          "forks": 14555,
           "url": "https://github.com/ollama/ollama"
         },
         {
           "name": "huggingface/transformers",
-          "stars": 156387,
+          "stars": 156389,
           "forks": 32040,
           "url": "https://github.com/huggingface/transformers"
         },
         {
           "name": "f/prompts.chat",
-          "stars": 145090,
+          "stars": 145092,
           "forks": 19157,
           "url": "https://github.com/f/prompts.chat"
         },
         {
           "name": "open-webui/open-webui",
           "stars": 123621,
-          "forks": 17458,
+          "forks": 17459,
           "url": "https://github.com/open-webui/open-webui"
         },
         {
@@ -5390,14 +5143,14 @@
           "url": "https://github.com/microsoft/generative-ai-for-beginners"
         }
       ],
-      "momentum_share": 0.2986116110588008,
+      "momentum_share": 0.3281519187629145,
       "signal_interpretation": "Dominant category - massive developer interest"
     },
     "ai-image-generation": {
       "repo_count": 15,
-      "total_stars": 265126,
+      "total_stars": 265129,
       "total_forks": 41797,
-      "total_momentum": 348720,
+      "total_momentum": 348723,
       "top_repos": [
         {
           "name": "AUTOMATIC1111/stable-diffusion-webui",
@@ -5430,14 +5183,14 @@
           "url": "https://github.com/Sygil-Dev/sygil-webui"
         }
       ],
-      "momentum_share": 0.0412914690820771,
+      "momentum_share": 0.04537615352185251,
       "signal_interpretation": "Niche category - specialized focus"
     },
     "ai-agents": {
-      "repo_count": 49,
-      "total_stars": 2306434,
-      "total_forks": 348333,
-      "total_momentum": 3003100,
+      "repo_count": 42,
+      "total_stars": 1758291,
+      "total_forks": 242293,
+      "total_momentum": 2242877,
       "top_repos": [
         {
           "name": "langflow-ai/langflow",
@@ -5446,43 +5199,43 @@
           "url": "https://github.com/langflow-ai/langflow"
         },
         {
-          "name": "langgenius/dify",
-          "stars": 129430,
-          "forks": 20138,
-          "url": "https://github.com/langgenius/dify"
-        },
-        {
           "name": "langchain-ai/langchain",
-          "stars": 126498,
+          "stars": 126500,
           "forks": 20809,
           "url": "https://github.com/langchain-ai/langchain"
         },
         {
-          "name": "x1xhlol/system-prompts-and-models-of-ai-tools",
-          "stars": 114228,
-          "forks": 29560,
-          "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools"
+          "name": "Shubhamsaboo/awesome-llm-apps",
+          "stars": 94007,
+          "forks": 13641,
+          "url": "https://github.com/Shubhamsaboo/awesome-llm-apps"
         },
         {
-          "name": "google-gemini/gemini-cli",
-          "stars": 94279,
-          "forks": 11136,
-          "url": "https://github.com/google-gemini/gemini-cli"
+          "name": "microsoft/markitdown",
+          "stars": 86863,
+          "forks": 5047,
+          "url": "https://github.com/microsoft/markitdown"
+        },
+        {
+          "name": "browser-use/browser-use",
+          "stars": 78198,
+          "forks": 9263,
+          "url": "https://github.com/browser-use/browser-use"
         }
       ],
-      "momentum_share": 0.3555930568948891,
+      "momentum_share": 0.2918451925529202,
       "signal_interpretation": "Dominant category - massive developer interest"
     },
     "open-source-ai": {
       "repo_count": 8,
-      "total_stars": 234299,
-      "total_forks": 31080,
-      "total_momentum": 296459,
+      "total_stars": 234304,
+      "total_forks": 31081,
+      "total_momentum": 296466,
       "top_repos": [
         {
           "name": "ggml-org/llama.cpp",
-          "stars": 94874,
-          "forks": 14878,
+          "stars": 94878,
+          "forks": 14879,
           "url": "https://github.com/ggml-org/llama.cpp"
         },
         {
@@ -5493,7 +5246,7 @@
         },
         {
           "name": "fishaudio/fish-speech",
-          "stars": 24877,
+          "stars": 24878,
           "forks": 2072,
           "url": "https://github.com/fishaudio/fish-speech"
         },
@@ -5510,18 +5263,18 @@
           "url": "https://github.com/modelscope/ms-swift"
         }
       ],
-      "momentum_share": 0.035103313926942804,
+      "momentum_share": 0.03857642521430914,
       "signal_interpretation": "Niche category - specialized focus"
     },
     "ai-infrastructure": {
       "repo_count": 2,
-      "total_stars": 129980,
+      "total_stars": 129984,
       "total_forks": 11420,
-      "total_momentum": 152820,
+      "total_momentum": 152824,
       "top_repos": [
         {
           "name": "PaddlePaddle/PaddleOCR",
-          "stars": 70649,
+          "stars": 70653,
           "forks": 9822,
           "url": "https://github.com/PaddlePaddle/PaddleOCR"
         },
@@ -5532,7 +5285,7 @@
           "url": "https://github.com/pathwaycom/pathway"
         }
       ],
-      "momentum_share": 0.018095211932562003,
+      "momentum_share": 0.019885597697380405,
       "signal_interpretation": "Niche category - specialized focus"
     },
     "ai-coding": {
@@ -5560,7 +5313,7 @@
           "url": "https://github.com/facebookincubator/AITemplate"
         }
       ],
-      "momentum_share": 0.011781306776954074,
+      "momentum_share": 0.012946640017904637,
       "signal_interpretation": "Niche category - specialized focus"
     },
     "computer-vision": {
@@ -5594,7 +5347,7 @@
           "url": "https://github.com/PaddlePaddle/PaddleSeg"
         }
       ],
-      "momentum_share": 0.00981169707085385,
+      "momentum_share": 0.01078220882844339,
       "signal_interpretation": "Niche category - specialized focus"
     },
     "ai-audio": {
@@ -5610,7 +5363,7 @@
           "url": "https://github.com/PaddlePaddle/PaddleSpeech"
         }
       ],
-      "momentum_share": 0.0019456911561042982,
+      "momentum_share": 0.002138146765974944,
       "signal_interpretation": "Niche category - specialized focus"
     }
   }

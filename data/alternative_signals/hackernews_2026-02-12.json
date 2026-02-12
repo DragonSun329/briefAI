@@ -1,6 +1,6 @@
 {
   "source": "hackernews",
-  "scraped_at": "2026-02-12T09:37:06.091163",
+  "scraped_at": "2026-02-12T10:02:41.220741",
   "period_days": 7,
   "total_stories": 307,
   "stories": [
@@ -49,7 +49,7 @@
       "url": "https://www.latent.space/p/adversarial-reasoning",
       "hn_url": "https://news.ycombinator.com/item?id=46936920",
       "points": 234,
-      "num_comments": 259,
+      "num_comments": 261,
       "author": "aaronng91",
       "created_at": "2026-02-08T18:13:48Z",
       "created_at_i": 1770574428,
@@ -109,6 +109,19 @@
       "sentiment": "neutral"
     },
     {
+      "id": "46982792",
+      "title": "GPT-5 outperforms federal judges 100% to 52% in legal reasoning experiment",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6155012",
+      "hn_url": "https://news.ycombinator.com/item?id=46982792",
+      "points": 137,
+      "num_comments": 101,
+      "author": "droidjj",
+      "created_at": "2026-02-11T23:37:11Z",
+      "created_at_i": 1770853031,
+      "bucket": "llm-foundation",
+      "sentiment": "neutral"
+    },
+    {
       "id": "46912781",
       "title": "LLMs could be, but shouldn't be compilers",
       "url": "https://alperenkeles.com/posts/llms-could-be-but-shouldnt-be-compilers/",
@@ -132,19 +145,6 @@
       "created_at": "2026-02-05T16:13:33Z",
       "created_at_i": 1770308013,
       "bucket": "ai-general",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "46982792",
-      "title": "GPT-5 outperforms federal judges 100% to 52% in legal reasoning experiment",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6155012",
-      "hn_url": "https://news.ycombinator.com/item?id=46982792",
-      "points": 105,
-      "num_comments": 83,
-      "author": "droidjj",
-      "created_at": "2026-02-11T23:37:11Z",
-      "created_at_i": 1770853031,
-      "bucket": "llm-foundation",
       "sentiment": "neutral"
     },
     {
@@ -218,7 +218,7 @@
       "url": "https://github.com/pretzelai/stripe-no-webhooks",
       "hn_url": "https://news.ycombinator.com/item?id=46963177",
       "points": 62,
-      "num_comments": 28,
+      "num_comments": 29,
       "author": "prasoonds",
       "created_at": "2026-02-10T17:14:48Z",
       "created_at_i": 1770743688,
@@ -360,7 +360,7 @@
       "title": "Show HN: Agent Alcove \u2013 Claude, GPT, and Gemini debate across forums",
       "url": "https://agentalcove.ai",
       "hn_url": "https://news.ycombinator.com/item?id=46980273",
-      "points": 19,
+      "points": 23,
       "num_comments": 8,
       "author": "nickvec",
       "created_at": "2026-02-11T20:15:21Z",
@@ -491,7 +491,7 @@
       "url": null,
       "hn_url": "https://news.ycombinator.com/item?id=46966879",
       "points": 11,
-      "num_comments": 4,
+      "num_comments": 5,
       "author": "hardwellvibe",
       "created_at": "2026-02-10T21:03:25Z",
       "created_at_i": 1770757405,
@@ -535,6 +535,19 @@
       "created_at": "2026-02-06T12:04:54Z",
       "created_at_i": 1770379494,
       "bucket": "llm-foundation",
+      "sentiment": "neutral"
+    },
+    {
+      "id": "46974515",
+      "title": "Show HN: CodeRLM \u2013 Tree-sitter-backed code indexing for LLM agents",
+      "url": "https://github.com/JaredStewart/coderlm/blob/main/server/REPL_to_API.md",
+      "hn_url": "https://news.ycombinator.com/item?id=46974515",
+      "points": 10,
+      "num_comments": 2,
+      "author": "jared_stewart",
+      "created_at": "2026-02-11T13:10:23Z",
+      "created_at_i": 1770815423,
+      "bucket": "ai-general",
       "sentiment": "neutral"
     },
     {
@@ -639,19 +652,6 @@
       "created_at": "2026-02-11T10:36:31Z",
       "created_at_i": 1770806191,
       "bucket": "llm-foundation",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "46974515",
-      "title": "Show HN: CodeRLM \u2013 Tree-sitter-backed code indexing for LLM agents",
-      "url": "https://github.com/JaredStewart/coderlm/blob/main/server/REPL_to_API.md",
-      "hn_url": "https://news.ycombinator.com/item?id=46974515",
-      "points": 8,
-      "num_comments": 1,
-      "author": "jared_stewart",
-      "created_at": "2026-02-11T13:10:23Z",
-      "created_at_i": 1770815423,
-      "bucket": "ai-general",
       "sentiment": "neutral"
     },
     {
@@ -785,6 +785,19 @@
       "sentiment": "neutral"
     },
     {
+      "id": "46980194",
+      "title": "Today is my last day at Anthropic. I resigned",
+      "url": "https://twitter.com/MrinankSharma/status/2020881722003583421",
+      "hn_url": "https://news.ycombinator.com/item?id=46980194",
+      "points": 6,
+      "num_comments": 1,
+      "author": "saikatsg",
+      "created_at": "2026-02-11T20:09:56Z",
+      "created_at_i": 1770840596,
+      "bucket": "llm-foundation",
+      "sentiment": "neutral"
+    },
+    {
       "id": "46960241",
       "title": "LLM-as-a-Judge is asking the wrong question",
       "url": "https://veris.ai/blog/llm-as-a-judge",
@@ -915,19 +928,6 @@
       "sentiment": "neutral"
     },
     {
-      "id": "46980194",
-      "title": "Today is my last day at Anthropic. I resigned",
-      "url": "https://twitter.com/MrinankSharma/status/2020881722003583421",
-      "hn_url": "https://news.ycombinator.com/item?id=46980194",
-      "points": 5,
-      "num_comments": 1,
-      "author": "saikatsg",
-      "created_at": "2026-02-11T20:09:56Z",
-      "created_at_i": 1770840596,
-      "bucket": "llm-foundation",
-      "sentiment": "neutral"
-    },
-    {
       "id": "46982247",
       "title": "Anthropic safety researcher quits, warning 'world is in peril'",
       "url": "https://www.semafor.com/article/02/11/2026/anthropic-safety-researcher-quits-warning-world-is-in-peril",
@@ -1042,6 +1042,19 @@
       "created_at": "2026-02-06T05:04:28Z",
       "created_at_i": 1770354268,
       "bucket": "ai-general",
+      "sentiment": "neutral"
+    },
+    {
+      "id": "46982791",
+      "title": "LLM \"reasoning\" continues to be deeply flawed",
+      "url": "https://garymarcus.substack.com/p/breaking-llm-reasoning-continues",
+      "hn_url": "https://news.ycombinator.com/item?id=46982791",
+      "points": 5,
+      "num_comments": 0,
+      "author": "petethomas",
+      "created_at": "2026-02-11T23:37:03Z",
+      "created_at_i": 1770853023,
+      "bucket": "ai-governance",
       "sentiment": "neutral"
     },
     {
@@ -1458,19 +1471,6 @@
       "created_at": "2026-02-06T08:20:29Z",
       "created_at_i": 1770366029,
       "bucket": "ai-general",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "46982791",
-      "title": "LLM \"reasoning\" continues to be deeply flawed",
-      "url": "https://garymarcus.substack.com/p/breaking-llm-reasoning-continues",
-      "hn_url": "https://news.ycombinator.com/item?id=46982791",
-      "points": 4,
-      "num_comments": 0,
-      "author": "petethomas",
-      "created_at": "2026-02-11T23:37:03Z",
-      "created_at_i": 1770853023,
-      "bucket": "ai-governance",
       "sentiment": "neutral"
     },
     {
@@ -2753,7 +2753,7 @@
       "url": "https://medium.com/ai-advances/model-collapse-when-ai-trains-on-ai-generated-data-2c4baf60a016",
       "hn_url": "https://news.ycombinator.com/item?id=46983417",
       "points": 2,
-      "num_comments": 1,
+      "num_comments": 3,
       "author": "Aedelon",
       "created_at": "2026-02-12T00:43:17Z",
       "created_at_i": 1770856997,
@@ -3999,9 +3999,9 @@
   "bucket_signals": {
     "llm-foundation": {
       "story_count": 132,
-      "total_points": 3022,
-      "total_comments": 1688,
-      "total_engagement": 6398,
+      "total_points": 3059,
+      "total_comments": 1706,
+      "total_engagement": 6471,
       "sentiment_counts": {
         "positive": 4,
         "negative": 6,
@@ -4034,20 +4034,20 @@
         },
         {
           "title": "GPT-5 outperforms federal judges 100% to 52% in legal reasoning experiment",
-          "points": 105,
-          "comments": 83,
+          "points": 137,
+          "comments": 101,
           "hn_url": "https://news.ycombinator.com/item?id=46982792"
         }
       ],
       "sentiment_score": -0.015151515151515152,
-      "avg_engagement": 48.46969696969697,
+      "avg_engagement": 49.02272727272727,
       "signal_interpretation": "Neutral/mixed sentiment"
     },
     "ai-general": {
       "story_count": 124,
-      "total_points": 2633,
-      "total_comments": 1269,
-      "total_engagement": 5171,
+      "total_points": 2635,
+      "total_comments": 1275,
+      "total_engagement": 5185,
       "sentiment_counts": {
         "positive": 5,
         "negative": 3,
@@ -4063,7 +4063,7 @@
         {
           "title": "Experts Have World Models. LLMs Have Word Models",
           "points": 234,
-          "comments": 259,
+          "comments": 261,
           "hn_url": "https://news.ycombinator.com/item?id=46936920"
         },
         {
@@ -4086,7 +4086,7 @@
         }
       ],
       "sentiment_score": 0.016129032258064516,
-      "avg_engagement": 41.70161290322581,
+      "avg_engagement": 41.814516129032256,
       "signal_interpretation": "Neutral/mixed sentiment"
     },
     "ai-safety": {
@@ -4137,9 +4137,9 @@
     },
     "ai-governance": {
       "story_count": 10,
-      "total_points": 43,
+      "total_points": 44,
       "total_comments": 7,
-      "total_engagement": 57,
+      "total_engagement": 58,
       "sentiment_counts": {
         "positive": 1,
         "negative": 1,
@@ -4151,6 +4151,12 @@
           "points": 12,
           "comments": 1,
           "hn_url": "https://news.ycombinator.com/item?id=46899642"
+        },
+        {
+          "title": "LLM \"reasoning\" continues to be deeply flawed",
+          "points": 5,
+          "comments": 0,
+          "hn_url": "https://news.ycombinator.com/item?id=46982791"
         },
         {
           "title": "Show HN: I built a RAG engine to search Singaporean laws",
@@ -4169,23 +4175,17 @@
           "points": 4,
           "comments": 2,
           "hn_url": "https://news.ycombinator.com/item?id=46913892"
-        },
-        {
-          "title": "LLM \"reasoning\" continues to be deeply flawed",
-          "points": 4,
-          "comments": 0,
-          "hn_url": "https://news.ycombinator.com/item?id=46982791"
         }
       ],
       "sentiment_score": 0.0,
-      "avg_engagement": 5.7,
+      "avg_engagement": 5.8,
       "signal_interpretation": "Neutral/mixed sentiment"
     },
     "ai-coding": {
       "story_count": 6,
       "total_points": 24,
-      "total_comments": 10,
-      "total_engagement": 44,
+      "total_comments": 11,
+      "total_engagement": 46,
       "sentiment_counts": {
         "positive": 0,
         "negative": 0,
@@ -4195,7 +4195,7 @@
         {
           "title": "Cursor switches pay-per-token when your plan limit end. Calls \"On-Demand usage\"",
           "points": 11,
-          "comments": 4,
+          "comments": 5,
           "hn_url": "https://news.ycombinator.com/item?id=46966879"
         },
         {
@@ -4224,7 +4224,7 @@
         }
       ],
       "sentiment_score": 0.0,
-      "avg_engagement": 7.333333333333333,
+      "avg_engagement": 7.666666666666667,
       "signal_interpretation": "Neutral/mixed sentiment"
     },
     "autonomous-vehicles": {

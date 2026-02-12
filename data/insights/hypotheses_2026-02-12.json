@@ -1,6 +1,6 @@
 {
   "date": "2026-02-12",
-  "generated_at": "2026-02-12T09:45:23.164264",
+  "generated_at": "2026-02-12T10:20:18.337655",
   "version": "2.1",
   "summary": {
     "total_metas": 2,
@@ -31,24 +31,24 @@
               "406761560557",
               "709bc63a75a5",
               "18914f8be318",
-              "399bf415e1ce",
               "0e6c2bfe5040",
               "6a420d39ba65",
-              "6b7fcb81a801"
+              "6b7fcb81a801",
+              "399bf415e1ce"
             ],
             "source_categories": [
               "media"
             ],
             "key_entities": [
-              "claude",
-              "mensch",
-              "ceo",
-              "opus",
-              "mistral",
+              "anthropic",
               "arr",
+              "algo”",
+              "claude",
+              "api",
+              "ceo",
+              "mensch",
+              "ai",
               "china",
-              "meta",
-              "zhao",
               "haijun"
             ],
             "key_quotes": [
@@ -66,13 +66,13 @@
                 "earnings_call"
               ],
               "expected_timeframe_days": 14,
-              "metric": "announcement",
+              "metric": "revenue",
               "speculative": true,
-              "canonical_metric": "custom_metric",
+              "canonical_metric": "arr",
               "observable_query": {
                 "source": "sec",
                 "query": "(api) AND (anthropic)",
-                "aggregation": "count",
+                "aggregation": "sum",
                 "window_days": 14,
                 "expected_direction": "up",
                 "available": true,
@@ -89,12 +89,11 @@
                   ],
                   "query_hints": [],
                   "bucket_terms": [],
-                  "canonical_metric": "custom_metric",
+                  "canonical_metric": "arr",
                   "template_used": "filings:{entity} type:{filing_type}"
                 }
               },
-              "measurable": false,
-              "measurable_reason": "no_canonical_metric_match"
+              "measurable": true
             },
             {
               "category": "technical",
@@ -105,12 +104,12 @@
                 "docs"
               ],
               "expected_timeframe_days": 14,
-              "metric": "release",
+              "metric": "api",
               "speculative": true,
-              "canonical_metric": "repo_activity",
+              "canonical_metric": "api_release",
               "observable_query": {
                 "source": "github",
-                "query": "repo:anthropic metric:repo_activity",
+                "query": "repo:anthropic metric:api_release",
                 "aggregation": "count",
                 "window_days": 14,
                 "expected_direction": "up",
@@ -128,7 +127,7 @@
                   ],
                   "query_hints": [],
                   "bucket_terms": [],
-                  "canonical_metric": "repo_activity",
+                  "canonical_metric": "api_release",
                   "template_used": "repo:{entity} metric:{metric}"
                 }
               },
@@ -243,24 +242,24 @@
               "406761560557",
               "709bc63a75a5",
               "18914f8be318",
-              "399bf415e1ce",
               "0e6c2bfe5040",
               "6a420d39ba65",
-              "6b7fcb81a801"
+              "6b7fcb81a801",
+              "399bf415e1ce"
             ],
             "source_categories": [
               "media"
             ],
             "key_entities": [
-              "claude",
-              "mensch",
-              "ceo",
-              "opus",
-              "mistral",
+              "anthropic",
               "arr",
+              "algo”",
+              "claude",
+              "api",
+              "ceo",
+              "mensch",
+              "ai",
               "china",
-              "meta",
-              "zhao",
               "haijun"
             ],
             "key_quotes": [
@@ -455,12 +454,12 @@
       ],
       "selected_hypothesis_id": "83b5fc95e6c67fb2",
       "bundle_confidence": 0.278,
-      "generated_at": "2026-02-12T09:45:23.084967",
+      "generated_at": "2026-02-12T10:20:18.273428",
       "version": "2.1",
       "what_to_watch_next": [
         "Article count for related coverage continues to increase",
         "Discussion volume and engagement rate increase",
-        "New API integrations or platform releases"
+        "Partnership announcements or revenue share changes"
       ],
       "watch_items": [
         {
@@ -488,7 +487,7 @@
           "measurable": true
         },
         {
-          "description": "New API integrations or platform releases",
+          "description": "Partnership announcements or revenue share changes",
           "watch_priority_score": 0.5388,
           "watch_priority_reason": [
             "hypothesis_confidence:0.28",
@@ -531,16 +530,16 @@
               "media"
             ],
             "key_entities": [
-              "smith",
-              "ai-based",
-              "elon",
-              "apple",
-              "lte",
-              "paul",
-              "samsung",
-              "layer",
-              "indiana",
-              "lebanon"
+              "alphabet",
+              "claude",
+              "bytedance",
+              "bowl",
+              "codex",
+              "chain",
+              "arbitrum",
+              "live",
+              "section",
+              "anthropic's"
             ],
             "key_quotes": [
               "Ai ecosystem dynamics shifting"
@@ -754,16 +753,16 @@
               "media"
             ],
             "key_entities": [
-              "smith",
-              "ai-based",
-              "elon",
-              "apple",
-              "lte",
-              "paul",
-              "samsung",
-              "layer",
-              "indiana",
-              "lebanon"
+              "alphabet",
+              "claude",
+              "bytedance",
+              "bowl",
+              "codex",
+              "chain",
+              "arbitrum",
+              "live",
+              "section",
+              "anthropic's"
             ],
             "key_quotes": [
               "Ai ecosystem dynamics shifting"
@@ -901,13 +900,13 @@
             ],
             "evidence_sources": [
               "signal_name",
-              "entity_tags",
-              "naming_reason"
+              "naming_reason",
+              "entity_tags"
             ],
             "selection_reason": "best_available",
             "evidence_sources_primary": [
-              "entity_tags",
-              "signal_name"
+              "signal_name",
+              "entity_tags"
             ],
             "evidence_sources_secondary": [
               "naming_reason"
@@ -955,7 +954,7 @@
       ],
       "selected_hypothesis_id": "bde53c20ee1abcd3",
       "bundle_confidence": 0.363,
-      "generated_at": "2026-02-12T09:45:23.164004",
+      "generated_at": "2026-02-12T10:20:18.337522",
       "version": "2.1",
       "what_to_watch_next": [
         "Article count for related coverage continues to increase",

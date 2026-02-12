@@ -1,6 +1,6 @@
 {
   "source": "paperswithcode",
-  "scraped_at": "2026-02-12T09:38:13.225932",
+  "scraped_at": "2026-02-12T10:04:06.524236",
   "total_papers": 50,
   "papers": [
     {
@@ -144,27 +144,6 @@
         "Zhewei Yao",
         "Huaxiu Yao",
         "Yuxiong He"
-      ],
-      "tasks": [],
-      "bucket": "llm-foundation"
-    },
-    {
-      "id": "2602.08426",
-      "title": "Prism: Spectral-Aware Block-Sparse Attention",
-      "abstract": "Block-sparse attention is promising for accelerating long-context LLM pre-filling, yet identifying relevant blocks efficiently remains a bottleneck. Existing methods typically employ coarse-grained attention as a proxy for block importance estimation, but often resort to expensive token-level searching or scoring, resulting in significant selection overhead. In this work, we trace the inaccuracy of standard coarse-grained attention via mean pooling to a theoretical root cause: the interaction be",
-      "url_abs": "https://arxiv.org/abs/2602.08426",
-      "url_pdf": "https://arxiv.org/pdf/2602.08426",
-      "arxiv_id": "2602.08426",
-      "github_stars": 32,
-      "published": "2026-02-09T09:31:06.000Z",
-      "authors": [
-        "Xinghao Wang",
-        "Pengyu Wang",
-        "Xiaoran Liu",
-        "Fangxu Liu",
-        "Jason Chu",
-        "Kai Song",
-        "Xipeng Qiu"
       ],
       "tasks": [],
       "bucket": "llm-foundation"
@@ -816,6 +795,30 @@
       "bucket": "ai-image-generation"
     },
     {
+      "id": "2602.08025",
+      "title": "MIND: Benchmarking Memory Consistency and Action Control in World Models",
+      "abstract": "World models aim to understand, remember, and predict dynamic visual environments, yet a unified benchmark for evaluating their fundamental abilities remains lacking. To address this gap, we introduce MIND, the first open-domain closed-loop revisited benchmark for evaluating Memory consIstency and action coNtrol in worlD models. MIND contains 250 high-quality videos at 1080p and 24 FPS, including 100 (first-person) + 100 (third-person) video clips under a shared action space and 25 + 25 clips ac",
+      "url_abs": "https://arxiv.org/abs/2602.08025",
+      "url_pdf": "https://arxiv.org/pdf/2602.08025",
+      "arxiv_id": "2602.08025",
+      "github_stars": 2,
+      "published": "2026-02-08T15:57:23.000Z",
+      "authors": [
+        "Yixuan Ye",
+        "Xuanyu Lu",
+        "Yuxin Jiang",
+        "Yuchao Gu",
+        "Rui Zhao",
+        "Qiwei Liang",
+        "Jiachun Pan",
+        "Fengda Zhang",
+        "Weijia Wu",
+        "Alex Jinpeng Wang"
+      ],
+      "tasks": [],
+      "bucket": "ai-general"
+    },
+    {
       "id": "2602.05085",
       "title": "Locas: Your Models are Principled Initializers of Locally-Supported Parametric Memories",
       "abstract": "In this paper, we aim to bridge test-time-training with a new type of parametric memory that can be flexibly offloaded from or merged into model parameters. We present Locas, a Locally-Supported parametric memory that shares the design of FFN blocks in modern transformers, allowing it to be flexibly permanentized into the model parameters while supporting efficient continual learning. We discuss two major variants of Locas: one with a conventional two-layer MLP design that has a clearer theoreti",
@@ -1122,8 +1125,8 @@
   ],
   "bucket_signals": {
     "llm-foundation": {
-      "paper_count": 29,
-      "total_stars": 753,
+      "paper_count": 28,
+      "total_stars": 721,
       "top_papers": [
         {
           "title": "OPUS: Towards Efficient and Principled Data Selection in Large Language Model Pre-training in Every Iteration",
@@ -1151,8 +1154,8 @@
           "url": "https://arxiv.org/abs/2602.10090"
         }
       ],
-      "star_share": 0.8158179848320694,
-      "avg_stars": 25.96551724137931,
+      "star_share": 0.8073908174692049,
+      "avg_stars": 25.75,
       "signal_interpretation": "Hot research area with high implementation interest"
     },
     "ai-coding": {
@@ -1165,7 +1168,7 @@
           "url": "https://arxiv.org/abs/2602.10104"
         }
       ],
-      "star_share": 0.024918743228602384,
+      "star_share": 0.025755879059350503,
       "avg_stars": 23.0,
       "signal_interpretation": "Research-focused with limited code adoption"
     },
@@ -1199,7 +1202,7 @@
           "url": "https://arxiv.org/abs/2602.05435"
         }
       ],
-      "star_share": 0.05742145178764897,
+      "star_share": 0.0593505039193729,
       "avg_stars": 8.833333333333334,
       "signal_interpretation": "Growing interest in implementations"
     },
@@ -1233,9 +1236,9 @@
           "url": "https://arxiv.org/abs/2602.07755"
         }
       ],
-      "star_share": 0.04875406283856988,
+      "star_share": 0.05039193729003359,
       "avg_stars": 6.428571428571429,
-      "signal_interpretation": "Research-focused with limited code adoption"
+      "signal_interpretation": "Growing interest in implementations"
     },
     "open-source-ai": {
       "paper_count": 3,
@@ -1257,7 +1260,7 @@
           "url": "https://arxiv.org/abs/2602.08344"
         }
       ],
-      "star_share": 0.028169014084507043,
+      "star_share": 0.029115341545352745,
       "avg_stars": 8.666666666666666,
       "signal_interpretation": "Research-focused with limited code adoption"
     },
@@ -1276,7 +1279,7 @@
           "url": "https://arxiv.org/abs/2602.10116"
         }
       ],
-      "star_share": 0.016251354279523293,
+      "star_share": 0.0167973124300112,
       "avg_stars": 7.5,
       "signal_interpretation": "Research-focused with limited code adoption"
     },
@@ -1290,8 +1293,22 @@
           "url": "https://arxiv.org/abs/2602.09823"
         }
       ],
-      "star_share": 0.007583965330444204,
+      "star_share": 0.007838745800671893,
       "avg_stars": 7.0,
+      "signal_interpretation": "Research-focused with limited code adoption"
+    },
+    "ai-general": {
+      "paper_count": 1,
+      "total_stars": 2,
+      "top_papers": [
+        {
+          "title": "MIND: Benchmarking Memory Consistency and Action Control in World Models",
+          "stars": 2,
+          "url": "https://arxiv.org/abs/2602.08025"
+        }
+      ],
+      "star_share": 0.0022396416573348264,
+      "avg_stars": 2.0,
       "signal_interpretation": "Research-focused with limited code adoption"
     },
     "computer-vision": {
@@ -1304,7 +1321,7 @@
           "url": "https://arxiv.org/abs/2602.08519"
         }
       ],
-      "star_share": 0.0010834236186348862,
+      "star_share": 0.0011198208286674132,
       "avg_stars": 1.0,
       "signal_interpretation": "Research-focused with limited code adoption"
     }
