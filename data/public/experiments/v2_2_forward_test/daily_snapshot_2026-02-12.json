@@ -1,9 +1,9 @@
 {
   "date": "2026-02-12",
-  "frozen_at": "2026-02-12T01:45:23.605160Z",
+  "frozen_at": "2026-02-12T02:20:18.842423Z",
   "experiment_id": "v2_2_forward_test",
-  "engine_tag": "ENGINE_v2.2_DAY0",
-  "commit_hash": "325adbf7f2e634c906014f593fb0f1e4ed50c46c",
+  "engine_tag": "ENGINE_v2.2_DAY1",
+  "commit_hash": "42e4f5951b09a2366da726b3158732c0b09176c9",
   "model_version": "2.2",
   "run_type": "forward_test",
   "prediction_count": 8,
@@ -17,7 +17,7 @@
       "confidence": 0.278,
       "category": "financial",
       "predicted_signal": "Partnership announcements or revenue share changes",
-      "canonical_metric": "custom_metric",
+      "canonical_metric": "arr",
       "expected_direction": "unknown",
       "timeframe_days": 14,
       "date": "2026-02-12"
@@ -31,7 +31,7 @@
       "confidence": 0.278,
       "category": "technical",
       "predicted_signal": "New API integrations or platform releases",
-      "canonical_metric": "repo_activity",
+      "canonical_metric": "api_release",
       "expected_direction": "unknown",
       "timeframe_days": 14,
       "date": "2026-02-12"
