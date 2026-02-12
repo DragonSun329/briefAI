@@ -1,0 +1,56 @@
+{
+  "review_date": "2026-02-25",
+  "total_suggestions": 3,
+  "safety_notice": "All suggestions require manual review. Never auto-apply.",
+  "suggestions": [
+    {
+      "suggestion_id": "sug_859d04ea96f4",
+      "target": "confidence_cap",
+      "rationale": "Calibration error of 0.28 indicates systematic overconfidence. Pattern: calibration_error > 0.15",
+      "proposed_change": {
+        "action": "reduce_confidence_multiplier",
+        "factor": 0.85,
+        "scope": "global"
+      },
+      "safety": "manual_review_required",
+      "source_pattern": "calibration_error",
+      "source_category": "metrics",
+      "sample_size": 5,
+      "success_rate": 0.0
+    },
+    {
+      "suggestion_id": "sug_9cdbda875865",
+      "target": "data_coverage",
+      "rationale": "Unclear rate of 60% indicates insufficient signal data coverage. Breakdown: {'data_missing': 3, 'mixed_evidence': 0, 'low_signal': 0}",
+      "proposed_change": {
+        "action": "expand_signal_sources",
+        "unclear_rate": 0.6,
+        "breakdown": {
+          "data_missing": 3,
+          "mixed_evidence": 0,
+          "low_signal": 0
+        }
+      },
+      "safety": "manual_review_required",
+      "source_pattern": "unclear_rate",
+      "source_category": "metrics",
+      "sample_size": 5,
+      "success_rate": 0.0
+    },
+    {
+      "suggestion_id": "sug_d1ff6c42a23a",
+      "target": "signal_retention",
+      "rationale": "3/3 unclear outcomes are due to missing data. Consider longer signal retention or broader entity matching.",
+      "proposed_change": {
+        "action": "extend_signal_retention",
+        "current_days": 7,
+        "suggested_days": 14
+      },
+      "safety": "manual_review_required",
+      "source_pattern": "data_missing",
+      "source_category": "unclear_reason",
+      "sample_size": 3,
+      "success_rate": 0.0
+    }
+  ]
+}

@@ -1,0 +1,435 @@
+{
+  "experiment_id": "v2_2_forward_test",
+  "review_date": "2026-02-25",
+  "period_start": "2026-02-09",
+  "period_end": "2026-02-09",
+  "expired_predictions": [
+    {
+      "prediction_id": "pred_7d80c777d5ae",
+      "entity": "Alternative",
+      "direction": "up",
+      "confidence": 0.278,
+      "check_date": "2026-02-23",
+      "hypothesis_text": "Alternative: Media Attention Spike",
+      "evidence_refs": [],
+      "mechanism": "media_attention_spike",
+      "category": "media",
+      "concept_name": "Mixed Signals Review",
+      "canonical_metric": "article_count",
+      "date_made": "2026-02-09",
+      "hypothesis_id": "79e142730eed5085"
+    },
+    {
+      "prediction_id": "pred_c019f952afee",
+      "entity": "Alternative",
+      "direction": "up",
+      "confidence": 0.278,
+      "check_date": "2026-02-23",
+      "hypothesis_text": "Alternative: Media Attention Spike",
+      "evidence_refs": [],
+      "mechanism": "media_attention_spike",
+      "category": "social",
+      "concept_name": "Mixed Signals Review",
+      "canonical_metric": "discussion_volume",
+      "date_made": "2026-02-09",
+      "hypothesis_id": "79e142730eed5085"
+    },
+    {
+      "prediction_id": "pred_707d48b479c0",
+      "entity": "Distribution",
+      "direction": "unknown",
+      "confidence": 0.178,
+      "check_date": "2026-02-23",
+      "hypothesis_text": "Distribution Channel Shifting",
+      "evidence_refs": [],
+      "mechanism": "distribution_shift",
+      "category": "financial",
+      "concept_name": "Mixed Signals Review",
+      "canonical_metric": "custom_metric",
+      "date_made": "2026-02-09",
+      "hypothesis_id": "66a137e1d3439066"
+    },
+    {
+      "prediction_id": "pred_27e899cfb9f6",
+      "entity": "Distribution",
+      "direction": "unknown",
+      "confidence": 0.178,
+      "check_date": "2026-02-23",
+      "hypothesis_text": "Distribution Channel Shifting",
+      "evidence_refs": [],
+      "mechanism": "distribution_shift",
+      "category": "technical",
+      "concept_name": "Mixed Signals Review",
+      "canonical_metric": "custom_metric",
+      "date_made": "2026-02-09",
+      "hypothesis_id": "66a137e1d3439066"
+    },
+    {
+      "prediction_id": "pred_1bd47593f291",
+      "entity": "Noise",
+      "direction": "unknown",
+      "confidence": 0.243,
+      "check_date": "2026-02-23",
+      "hypothesis_text": "Noise / Insufficient",
+      "evidence_refs": [],
+      "mechanism": "null_hypothesis",
+      "category": "media",
+      "concept_name": "Mixed Signals Review",
+      "canonical_metric": "custom_metric",
+      "date_made": "2026-02-09",
+      "hypothesis_id": "db11c15e09ac397b"
+    }
+  ],
+  "resolved_outcomes": [
+    {
+      "prediction_id": "pred_7d80c777d5ae",
+      "outcome": "incorrect",
+      "confidence_score": 0.0,
+      "supporting_evidence": [],
+      "resolution_method": "bullish_heuristics",
+      "debug_features": {
+        "meta_signal_presence": 0.0,
+        "post_mention_count": 0.0,
+        "mention_delta_7d": 0.0,
+        "momentum_direction": 0.0,
+        "maturity_progressed": 0.0,
+        "signal_persistent": 0.0,
+        "source_diversity_count": 0.0,
+        "final_score": 0.0
+      },
+      "decision_trace": [
+        "Evaluating bullish prediction for entity 'Alternative'",
+        "Period: 2026-02-09 to 2026-02-23",
+        "Post-period mentions: 0",
+        "[  0] Neutral momentum delta: 0.00",
+        "[  0] No maturity progression",
+        "[  0] No signal persistence",
+        "[  0] Limited source diversity: 0 categories",
+        "Final score: 0.00",
+        "Outcome: INCORRECT (score <= 0.0)"
+      ],
+      "unclear_reason": "none"
+    },
+    {
+      "prediction_id": "pred_c019f952afee",
+      "outcome": "incorrect",
+      "confidence_score": 0.0,
+      "supporting_evidence": [],
+      "resolution_method": "bullish_heuristics",
+      "debug_features": {
+        "meta_signal_presence": 0.0,
+        "post_mention_count": 0.0,
+        "mention_delta_7d": 0.0,
+        "momentum_direction": 0.0,
+        "maturity_progressed": 0.0,
+        "signal_persistent": 0.0,
+        "source_diversity_count": 0.0,
+        "final_score": 0.0
+      },
+      "decision_trace": [
+        "Evaluating bullish prediction for entity 'Alternative'",
+        "Period: 2026-02-09 to 2026-02-23",
+        "Post-period mentions: 0",
+        "[  0] Neutral momentum delta: 0.00",
+        "[  0] No maturity progression",
+        "[  0] No signal persistence",
+        "[  0] Limited source diversity: 0 categories",
+        "Final score: 0.00",
+        "Outcome: INCORRECT (score <= 0.0)"
+      ],
+      "unclear_reason": "none"
+    },
+    {
+      "prediction_id": "pred_707d48b479c0",
+      "outcome": "unclear",
+      "confidence_score": 0.3,
+      "supporting_evidence": [],
+      "resolution_method": "unknown_direction_heuristics",
+      "debug_features": {
+        "meta_signal_presence": 0.0,
+        "post_mention_count": 0.0,
+        "mention_delta_7d": 0.0,
+        "momentum_direction": 0.0,
+        "final_score": 0.3,
+        "source_diversity_count": 0.0,
+        "signal_persistent": 0.0
+      },
+      "decision_trace": [
+        "Evaluating neutral/watch prediction for entity 'Distribution'",
+        "Period: 2026-02-09 to 2026-02-23",
+        "Post-period mentions: 0",
+        "[?] No activity detected",
+        "Outcome: UNCLEAR - no signal data available"
+      ],
+      "unclear_reason": "data_missing"
+    },
+    {
+      "prediction_id": "pred_27e899cfb9f6",
+      "outcome": "unclear",
+      "confidence_score": 0.3,
+      "supporting_evidence": [],
+      "resolution_method": "unknown_direction_heuristics",
+      "debug_features": {
+        "meta_signal_presence": 0.0,
+        "post_mention_count": 0.0,
+        "mention_delta_7d": 0.0,
+        "momentum_direction": 0.0,
+        "final_score": 0.3,
+        "source_diversity_count": 0.0,
+        "signal_persistent": 0.0
+      },
+      "decision_trace": [
+        "Evaluating neutral/watch prediction for entity 'Distribution'",
+        "Period: 2026-02-09 to 2026-02-23",
+        "Post-period mentions: 0",
+        "[?] No activity detected",
+        "Outcome: UNCLEAR - no signal data available"
+      ],
+      "unclear_reason": "data_missing"
+    },
+    {
+      "prediction_id": "pred_1bd47593f291",
+      "outcome": "unclear",
+      "confidence_score": 0.3,
+      "supporting_evidence": [],
+      "resolution_method": "unknown_direction_heuristics",
+      "debug_features": {
+        "meta_signal_presence": 0.0,
+        "post_mention_count": 0.0,
+        "mention_delta_7d": 0.0,
+        "momentum_direction": 0.0,
+        "final_score": 0.3,
+        "source_diversity_count": 0.0,
+        "signal_persistent": 0.0
+      },
+      "decision_trace": [
+        "Evaluating neutral/watch prediction for entity 'Noise'",
+        "Period: 2026-02-09 to 2026-02-23",
+        "Post-period mentions: 0",
+        "[?] No activity detected",
+        "Outcome: UNCLEAR - no signal data available"
+      ],
+      "unclear_reason": "data_missing"
+    }
+  ],
+  "metrics": {
+    "total_predictions": 5,
+    "total_resolved": 2,
+    "total_unclear": 3,
+    "overall_accuracy": 0.0,
+    "overall_correct": 0,
+    "overall_incorrect": 2,
+    "unclear_rate": 0.6,
+    "unclear_breakdown": {
+      "data_missing": 3,
+      "mixed_evidence": 0,
+      "low_signal": 0
+    },
+    "accuracy_excluding_unclear": 0.0,
+    "bullish_accuracy": 0.0,
+    "bullish_count": 2,
+    "bearish_accuracy": 0.0,
+    "bearish_count": 0,
+    "high_confidence_accuracy": 0.0,
+    "high_confidence_count": 0,
+    "medium_confidence_accuracy": 0.0,
+    "medium_confidence_count": 0,
+    "low_confidence_accuracy": 0.0,
+    "low_confidence_count": 2,
+    "calibration_error": 0.278,
+    "calibration_buckets": {
+      "0.0-0.1": {
+        "total": 0,
+        "correct": 0,
+        "avg_confidence": 0.0
+      },
+      "0.1-0.2": {
+        "total": 0,
+        "correct": 0,
+        "avg_confidence": 0.0
+      },
+      "0.2-0.3": {
+        "total": 2,
+        "correct": 0,
+        "avg_confidence": 0.278,
+        "actual_accuracy": 0.0
+      },
+      "0.3-0.4": {
+        "total": 0,
+        "correct": 0,
+        "avg_confidence": 0.0
+      },
+      "0.4-0.5": {
+        "total": 0,
+        "correct": 0,
+        "avg_confidence": 0.0
+      },
+      "0.5-0.6": {
+        "total": 0,
+        "correct": 0,
+        "avg_confidence": 0.0
+      },
+      "0.6-0.7": {
+        "total": 0,
+        "correct": 0,
+        "avg_confidence": 0.0
+      },
+      "0.7-0.8": {
+        "total": 0,
+        "correct": 0,
+        "avg_confidence": 0.0
+      },
+      "0.8-0.9": {
+        "total": 0,
+        "correct": 0,
+        "avg_confidence": 0.0
+      },
+      "0.9-1.0": {
+        "total": 0,
+        "correct": 0,
+        "avg_confidence": 0.0
+      }
+    },
+    "avg_time_to_resolution_days": 14.0
+  },
+  "insights": [
+    {
+      "category": "mechanism",
+      "pattern": "media_attention_spike",
+      "success_rate": 0.0,
+      "sample_size": 2,
+      "interpretation": "Mechanism 'media_attention_spike' is unreliable - consider reducing confidence",
+      "confidence_level": "low",
+      "insight_strength": "weak",
+      "reliability_score": 1.0
+    },
+    {
+      "category": "entity_type",
+      "pattern": "other",
+      "success_rate": 0.0,
+      "sample_size": 2,
+      "interpretation": "Weak accuracy for other - may need different approach",
+      "confidence_level": "low",
+      "insight_strength": "weak",
+      "reliability_score": 1.0
+    },
+    {
+      "category": "calibration",
+      "pattern": "low",
+      "success_rate": 0.0,
+      "sample_size": 2,
+      "interpretation": "Well-calibrated at low level",
+      "confidence_level": "low",
+      "insight_strength": "weak",
+      "reliability_score": 1.0
+    },
+    {
+      "category": "direction",
+      "pattern": "up",
+      "success_rate": 0.0,
+      "sample_size": 2,
+      "interpretation": "Bullish predictions underperform - may be too optimistic",
+      "confidence_level": "low",
+      "insight_strength": "weak",
+      "reliability_score": 1.0
+    },
+    {
+      "category": "timeframe",
+      "pattern": "medium_term",
+      "success_rate": 0.0,
+      "sample_size": 2,
+      "interpretation": "Medium-term predictions (0% accurate)",
+      "confidence_level": "low",
+      "insight_strength": "weak",
+      "reliability_score": 1.0
+    }
+  ],
+  "lessons": [
+    {
+      "lesson_text": "System predictions are below 50% accuracy - fundamental review needed",
+      "supporting_patterns": [
+        "overall_accuracy"
+      ],
+      "priority": "high",
+      "actionable": true,
+      "sample_size": 0,
+      "success_rate": 0.0,
+      "insight_strength": "weak"
+    },
+    {
+      "lesson_text": "Confidence scores are poorly calibrated (error: 0.28) - adjust confidence algorithm",
+      "supporting_patterns": [
+        "calibration"
+      ],
+      "priority": "high",
+      "actionable": true,
+      "sample_size": 0,
+      "success_rate": 0.0,
+      "insight_strength": "weak"
+    },
+    {
+      "lesson_text": "[Weak] Mechanism 'media_attention_spike' may underperform (0% accuracy, n=2) - needs more data",
+      "supporting_patterns": [
+        "mechanism_media_attention_spike"
+      ],
+      "priority": "normal",
+      "actionable": true,
+      "sample_size": 2,
+      "success_rate": 0.0,
+      "insight_strength": "weak"
+    }
+  ],
+  "suggestions": [
+    {
+      "suggestion_id": "sug_859d04ea96f4",
+      "target": "confidence_cap",
+      "rationale": "Calibration error of 0.28 indicates systematic overconfidence. Pattern: calibration_error > 0.15",
+      "proposed_change": {
+        "action": "reduce_confidence_multiplier",
+        "factor": 0.85,
+        "scope": "global"
+      },
+      "safety": "manual_review_required",
+      "source_pattern": "calibration_error",
+      "source_category": "metrics",
+      "sample_size": 5,
+      "success_rate": 0.0
+    },
+    {
+      "suggestion_id": "sug_9cdbda875865",
+      "target": "data_coverage",
+      "rationale": "Unclear rate of 60% indicates insufficient signal data coverage. Breakdown: {'data_missing': 3, 'mixed_evidence': 0, 'low_signal': 0}",
+      "proposed_change": {
+        "action": "expand_signal_sources",
+        "unclear_rate": 0.6,
+        "breakdown": {
+          "data_missing": 3,
+          "mixed_evidence": 0,
+          "low_signal": 0
+        }
+      },
+      "safety": "manual_review_required",
+      "source_pattern": "unclear_rate",
+      "source_category": "metrics",
+      "sample_size": 5,
+      "success_rate": 0.0
+    },
+    {
+      "suggestion_id": "sug_d1ff6c42a23a",
+      "target": "signal_retention",
+      "rationale": "3/3 unclear outcomes are due to missing data. Consider longer signal retention or broader entity matching.",
+      "proposed_change": {
+        "action": "extend_signal_retention",
+        "current_days": 7,
+        "suggested_days": 14
+      },
+      "safety": "manual_review_required",
+      "source_pattern": "data_missing",
+      "source_category": "unclear_reason",
+      "sample_size": 3,
+      "success_rate": 0.0
+    }
+  ],
+  "generation_timestamp": "2026-02-11T09:02:21.228847Z",
+  "review_version": "1.1.0"
+}

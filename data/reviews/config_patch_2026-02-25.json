@@ -1,0 +1,50 @@
+{
+  "review_date": "2026-02-25",
+  "generated_from": "suggestions_2026-02-25.json",
+  "total_patches": 3,
+  "actionable_patches": 2,
+  "safety_notice": "All patches require manual review and approval before application.",
+  "patches": [
+    {
+      "patch_id": "patch_e80d3948bdec",
+      "config_file": "config/signal_config.json",
+      "parameter_path": "confidence.global_multiplier",
+      "old_value": 1.0,
+      "proposed_value": 0.85,
+      "rationale": "Calibration error of 0.28 indicates systematic overconfidence. Pattern: calibration_error > 0.15",
+      "source_suggestion_id": "sug_859d04ea96f4",
+      "requires_manual_review": true,
+      "is_actionable": true
+    },
+    {
+      "patch_id": "patch_8409aa5935e5",
+      "config_file": "config/sources.json",
+      "parameter_path": null,
+      "old_value": null,
+      "proposed_value": {
+        "action": "expand_signal_sources",
+        "unclear_rate": 0.6,
+        "breakdown": {
+          "data_missing": 3,
+          "mixed_evidence": 0,
+          "low_signal": 0
+        }
+      },
+      "rationale": "[MANUAL EXPANSION REQUIRED] Unclear rate of 60% indicates insufficient signal data coverage. Breakdown: {'data_missing': 3, 'mixed_evidence': 0, 'low_signal': 0}",
+      "source_suggestion_id": "sug_9cdbda875865",
+      "requires_manual_review": true,
+      "is_actionable": false
+    },
+    {
+      "patch_id": "patch_150bdb9a2500",
+      "config_file": "config/signal_config.json",
+      "parameter_path": "storage.signal_retention_days",
+      "old_value": 7,
+      "proposed_value": 14,
+      "rationale": "3/3 unclear outcomes are due to missing data. Consider longer signal retention or broader entity matching.",
+      "source_suggestion_id": "sug_d1ff6c42a23a",
+      "requires_manual_review": true,
+      "is_actionable": true
+    }
+  ]
+}
