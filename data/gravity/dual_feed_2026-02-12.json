@@ -1,0 +1,1473 @@
+{
+  "version": "2.2",
+  "date": "2026-02-12",
+  "generated_at": "2026-02-12T09:44:44.159203",
+  "summary": {
+    "candidate_articles": 30,
+    "events": {
+      "clusters": 0,
+      "singletons": 30,
+      "top_k_items": 30
+    },
+    "themes": {
+      "clusters": 5,
+      "singletons": 20,
+      "top_k_items": 25
+    }
+  },
+  "top_events": {
+    "items": [
+      {
+        "item_type": "singleton",
+        "rank_score": 7.55,
+        "gravity_score": 7.55,
+        "article": {
+          "title": "Source: to catch leakers, OpenAI security staff use a custom ChatGPT with access to Slack, email, and docs that cross-references news articles with access logs",
+          "url": "https://www.theinformation.com/articles/openai-uses-chatgpt-catch-leakers",
+          "source": "Theinformation",
+          "published_at": "2026-02-12T09:39:32.334791",
+          "tldr": "",
+          "key_insight": "OpenAI has deployed an internal AI surveillance system that ingests employee communications across Slack, email, and documents to identify leakers by correlating news articles with access logs—raising critical questions about trust, transparency, and the company's own stance on AI safety and privacy."
+        },
+        "gravity_details": {
+          "impact": 6.5,
+          "gravity": 6.8,
+          "signals": 7.67,
+          "quality_flags": 2.0,
+          "novelty": 8,
+          "editorial_verdict": "Significant investigative scoop revealing internal surveillance practices with major implications for AI governance, employee privacy, and corporate security norms",
+          "key_insight": "OpenAI has deployed an internal AI surveillance system that ingests employee communications across Slack, email, and documents to identify leakers by correlating news articles with access logs—raising critical questions about trust, transparency, and the company's own stance on AI safety and privacy.",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 7.08,
+        "gravity_score": 7.08,
+        "article": {
+          "title": "Source: OpenAI disbanded its mission alignment team in recent weeks and transferred its employees; team lead Joshua Achiam will take on a “chief futurist” role",
+          "url": "https://www.platformer.news/openai-mission-alignment-team-joshua-achiam/",
+          "source": "Platformer",
+          "published_at": "2026-02-12T09:39:32.326671",
+          "tldr": "This is a column about AI. My boyfriend works at Anthropic. See my full ethics disclosure here. OpenAI disbanded its mission alignment team in recent weeks and transferred its seven employees to other teams, Platformer has learned.",
+          "key_insight": "OpenAI's dissolution of its mission alignment team and elevation of its lead to 'chief futurist' suggests a strategic deprioritization of near-term safety work in favor of longer-horizon AGI development, continuing the pattern of safety researchers departing amid commercial pressures."
+        },
+        "gravity_details": {
+          "impact": 6.5,
+          "gravity": 6.0,
+          "signals": 7.33,
+          "quality_flags": 2.5,
+          "novelty": 7,
+          "editorial_verdict": "Significant organizational signal with broad implications for AI governance",
+          "key_insight": "OpenAI's dissolution of its mission alignment team and elevation of its lead to 'chief futurist' suggests a strategic deprioritization of near-term safety work in favor of longer-horizon AGI development, continuing the pattern of safety researchers departing amid commercial pressures.",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.88,
+        "gravity_score": 6.88,
+        "article": {
+          "title": "Sources: ByteDance plans to produce 100K+ units of its in-house AI inference chip in 2026, is in talks with Samsung to manufacture it, before ramping up to 350K",
+          "url": "https://www.reuters.com/world/asia-pacific/bytedance-developing-ai-chip-manufacturing-talks-with-samsung-sources-say-2026-02-11/",
+          "source": "Reuters",
+          "published_at": "2026-02-12T09:39:32.335311",
+          "tldr": "",
+          "key_insight": "ByteDance's 450K-unit AI chip roadmap signals hyperscalers are accelerating custom silicon independence from Nvidia, with Samsung positioned as alternative foundry amid US-China tech tensions"
+        },
+        "gravity_details": {
+          "impact": 5.75,
+          "gravity": 6.2,
+          "signals": 7.0,
+          "quality_flags": 2.75,
+          "novelty": 8,
+          "editorial_verdict": "Significant strategic leak revealing major AI chip supply chain realignment with geopolitical implications",
+          "key_insight": "ByteDance's 450K-unit AI chip roadmap signals hyperscalers are accelerating custom silicon independence from Nvidia, with Samsung positioned as alternative foundry amid US-China tech tensions",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.72,
+        "gravity_score": 6.72,
+        "article": {
+          "title": "SMIC CEO Zhao Haijun says the industry is “a bit panicked” about the memory chip shortage, and more supply may arrive in nine months; prices are up 80%+ in 2026",
+          "url": "https://www.wsj.com/tech/smic-ceo-says-industry-panicked-about-memory-supply-shortage-f0e1aaed?st=cHRnm5&reflink=desktopwebshare_permalink",
+          "source": "Wsj",
+          "published_at": "2026-02-12T09:39:32.335095",
+          "tldr": "",
+          "key_insight": "SMIC CEO confirms memory shortage panic with 80%+ price spike and 9-month supply lag, signaling sustained pressure on downstream electronics manufacturing"
+        },
+        "gravity_details": {
+          "impact": 7.0,
+          "gravity": 5.6,
+          "signals": 6.33,
+          "quality_flags": 2.0,
+          "novelty": 6,
+          "editorial_verdict": "Credible market signal from major foundry CEO with concrete data points",
+          "key_insight": "SMIC CEO confirms memory shortage panic with 80%+ price spike and 9-month supply lag, signaling sustained pressure on downstream electronics manufacturing",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.63,
+        "gravity_score": 6.63,
+        "article": {
+          "title": "EssilorLuxottica says it sold over 7M Meta AI glasses in 2025, up from the 2M that the company sold in 2023 and 2024 combined",
+          "url": "https://www.cnbc.com/2026/02/11/ray-ban-maker-essilorluxottica-triples-sales-of-meta-ai-glasses.html",
+          "source": "Cnbc",
+          "published_at": "2026-02-12T09:39:32.332442",
+          "tldr": "EssilorLuxottica's more than tripled its Meta artificial intelligence glasses sales last year, the Ray-Ban maker said on Wednesday in its fourth-quarter results. The French-Italian eyewear brand said it sold over 7 million AI glasses last year.",
+          "key_insight": "AI glasses crossed the chasm from tech demo to mass-market product with 3.5x sales acceleration, establishing the first proven consumer AI hardware form factor beyond smartphones"
+        },
+        "gravity_details": {
+          "impact": 5.5,
+          "gravity": 5.8,
+          "signals": 7.33,
+          "quality_flags": 2.75,
+          "novelty": 7,
+          "editorial_verdict": "Significant hard data point validating AI wearables as a genuine consumer category, not just hype",
+          "key_insight": "AI glasses crossed the chasm from tech demo to mass-market product with 3.5x sales acceleration, establishing the first proven consumer AI hardware form factor beyond smartphones",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.62,
+        "gravity_score": 6.62,
+        "article": {
+          "title": "OpenAI announced Monday that the US military will get access to ChatGPT via GenAI.mil; sources say the move came after months of deliberation among employees",
+          "url": "https://www.semafor.com/article/02/11/2026/how-openai-got-comfortable-with-the-pentagon-using-chatgpt-for-war",
+          "source": "Semafor",
+          "published_at": "2026-02-12T09:39:32.333509",
+          "tldr": "The Scoop OpenAI’s announcement Monday that the US military will get access to ChatGPT came after months of deliberation over whether employees would accept the deployment, according to people briefed on the matter.",
+          "key_insight": "OpenAI's military reversal marks a watershed moment for AI governance, erasing the company's founding non-military-use commitment and setting precedent for defense-sector LLM deployment"
+        },
+        "gravity_details": {
+          "impact": 6.0,
+          "gravity": 5.8,
+          "signals": 6.67,
+          "quality_flags": 2.75,
+          "novelty": 7,
+          "editorial_verdict": "Significant policy shift with substantial industry and geopolitical implications, though thin on technical specifics",
+          "key_insight": "OpenAI's military reversal marks a watershed moment for AI governance, erasing the company's founding non-military-use commitment and setting precedent for defense-sector LLM deployment",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.26,
+        "gravity_score": 6.26,
+        "article": {
+          "title": "Mistral CEO Arthur Mensch says the startup's annualized revenue run rate was “north of $400M”, up from $20M a year ago, and it is set to hit $1B ARR by 2026-end",
+          "url": "https://t.co/JBh6MtDCyc",
+          "source": "T",
+          "published_at": "2026-02-12T09:39:32.332953",
+          "tldr": "A required part of this site couldn’t load. This may be due to a browser extension, network issues, or browser settings. Please check your connection, disable any ad blockers, or try using a different browser..",
+          "key_insight": "Mistral's 20x ARR growth in one year and path to $1B by 2026 signals open-source AI models are achieving commercial viability at scale, challenging assumptions about closed-model dominance and forcing recalculation of AI infrastructure economics across the industry."
+        },
+        "gravity_details": {
+          "impact": 5.0,
+          "gravity": 5.4,
+          "signals": 7.33,
+          "quality_flags": 3.0,
+          "novelty": 7,
+          "editorial_verdict": "Significant financial disclosure with major competitive implications for AI infrastructure economics",
+          "key_insight": "Mistral's 20x ARR growth in one year and path to $1B by 2026 signals open-source AI models are achieving commercial viability at scale, challenging assumptions about closed-model dominance and forcing recalculation of AI infrastructure economics across the industry.",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.23,
+        "gravity_score": 6.23,
+        "article": {
+          "title": "Q&A with Fidji Simo on ChatGPT ads, OpenAI's efforts to ship a new model soon to end Sam Altman's Code Red, Anthropic's Super Bowl ads, Sora, Codex, and more",
+          "url": "https://sources.news/p/openais-fidji-simo-on-ads-in-chatgpt",
+          "source": "Sources",
+          "published_at": "2026-02-12T09:39:32.335209",
+          "tldr": "",
+          "key_insight": "OpenAI board member confirms internal 'Code Red' pressure to ship new model amid intensifying competition with Anthropic and urgent monetization push through ChatGPT ads"
+        },
+        "gravity_details": {
+          "impact": 6.0,
+          "gravity": 5.6,
+          "signals": 6.33,
+          "quality_flags": 3.75,
+          "novelty": 7,
+          "editorial_verdict": "High-value insider interview with board-level perspective on OpenAI crisis management and competitive positioning, though actual newsworthiness depends on specific quotes and revelations in full content",
+          "key_insight": "OpenAI board member confirms internal 'Code Red' pressure to ship new model amid intensifying competition with Anthropic and urgent monetization push through ChatGPT ads",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.14,
+        "gravity_score": 6.14,
+        "article": {
+          "title": "Meta launches an AI feature that lets Threads users temporarily personalize their feed by specifying topics in a public post that begins with “Dear Algo”",
+          "url": "https://www.cnbc.com/2026/02/11/meta-threads-dear-algo-ai-algorithm-personalization.html",
+          "source": "Cnbc",
+          "published_at": "2026-02-12T09:39:32.329314",
+          "tldr": "Meta on Wednesday debuted an AI feature called \"Dear Algo\" that lets Threads users personalize their content-recommendation algorithms.",
+          "key_insight": "Meta's 'Dear Algo' represents a notable shift toward giving users explicit, if limited, control over recommendation systems—potentially foreshadowing broader industry moves toward algorithmic explainability and user steerability."
+        },
+        "gravity_details": {
+          "impact": 4.5,
+          "gravity": 5.8,
+          "signals": 7.0,
+          "quality_flags": 3.0,
+          "novelty": 7,
+          "editorial_verdict": "Genuine product news with meaningful signal on algorithmic transparency trend",
+          "key_insight": "Meta's 'Dear Algo' represents a notable shift toward giving users explicit, if limited, control over recommendation systems—potentially foreshadowing broader industry moves toward algorithmic explainability and user steerability.",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.12,
+        "gravity_score": 6.12,
+        "article": {
+          "title": "Inertia, co-founded by ex-Twilio CEO Jeff Lawson to build one of the world's most powerful lasers for a grid-scale fusion power plant, raised a $450M Series A",
+          "url": "https://techcrunch.com/2026/02/11/twilio-co-founders-fusion-power-startup-raises-450m-from-bessemer-and-alphabets-gv/",
+          "source": "Techcrunch",
+          "published_at": "2026-02-12T09:39:32.331897",
+          "tldr": "Inertia Enterprises has raised $450 million to build one of the world’s most powerful lasers, which it hopes will serve as the foundation of a grid-scale power plant the fusion startup intends to start construction on in 2030.",
+          "key_insight": "A $450M Series A for fusion—one of the largest ever—signals serious capital is betting on inertial confinement as a viable path to grid-scale fusion, with a credible operator at the helm"
+        },
+        "gravity_details": {
+          "impact": 5.25,
+          "gravity": 6.0,
+          "signals": 6.33,
+          "quality_flags": 3.75,
+          "novelty": 7,
+          "editorial_verdict": "Significant funding news with genuine implications for energy/climate tech, though light on technical specifics",
+          "key_insight": "A $450M Series A for fusion—one of the largest ever—signals serious capital is betting on inertial confinement as a viable path to grid-scale fusion, with a credible operator at the helm",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.05,
+        "gravity_score": 6.05,
+        "article": {
+          "title": "Meta plans to spend more than $10B to build a 1GW data center campus in Lebanon, Indiana, expected to be operational at the end of 2027 or in early 2028",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-11/meta-to-spend-more-than-10-billion-on-indiana-based-data-center",
+          "source": "Bloomberg",
+          "published_at": "2026-02-12T09:39:32.331210",
+          "tldr": "Meta Platforms Inc. said it will spend more than $10 billion to build a data center campus in Lebanon, Indiana, ranking it among the company’s largest artificial intelligence infrastructure investments to date.",
+          "key_insight": "Meta's $10B+ 1GW Indiana campus confirms hyperscaler AI infrastructure race is accelerating into Midwest markets with 2027-28 timelines, signaling massive power demand commitments years ahead."
+        },
+        "gravity_details": {
+          "impact": 5.0,
+          "gravity": 5.6,
+          "signals": 6.67,
+          "quality_flags": 2.25,
+          "novelty": 6,
+          "editorial_verdict": "Solid infrastructure news with meaningful scale signals",
+          "key_insight": "Meta's $10B+ 1GW Indiana campus confirms hyperscaler AI infrastructure race is accelerating into Midwest markets with 2027-28 timelines, signaling massive power demand commitments years ahead.",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 5.78,
+        "gravity_score": 5.78,
+        "article": {
+          "title": "Austin-based humanoid robot startup Apptronik raised $520M led by Google and others at a $5.5B+ valuation, up ~3x from when it raised $415M in February 2025",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-11/apptronik-raises-520-million-in-new-funding-to-build-more-humanoids",
+          "source": "Bloomberg",
+          "published_at": "2026-02-12T09:39:32.331497",
+          "tldr": "Apptronik, a fast-growing startup that makes artificial intelligence-powered humanoid robots, has secured about $520 million in a new funding round that values the company at more than $5.5 billion, around three times its valuation from its initial Series A raise last year.",
+          "key_insight": "Google's second major bet on Apptronik in 10 months signals Big Tech's urgency to secure humanoid robot supply chains before commercial deployment accelerates"
+        },
+        "gravity_details": {
+          "impact": 5.0,
+          "gravity": 5.4,
+          "signals": 6.33,
+          "quality_flags": 3.25,
+          "novelty": 6,
+          "editorial_verdict": "Significant funding signal with strategic implications, light on technical substance",
+          "key_insight": "Google's second major bet on Apptronik in 10 months signals Big Tech's urgency to secure humanoid robot supply chains before commercial deployment accelerates",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 5.76,
+        "gravity_score": 5.76,
+        "article": {
+          "title": "Google told advertisers that it is integrating shopping features into Search's AI Mode and Gemini; users can now buy items from Etsy and Wayfair within Gemini",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-11/google-pushes-ai-shopping-features-in-search-and-gemini-chatbot",
+          "source": "Bloomberg",
+          "published_at": "2026-02-12T09:39:32.330104",
+          "tldr": "Google is adding a way for consumers to buy things while seeking artificial intelligence-powered answers on search and in its Gemini chatbot — part of a plan to make money more directly from consumers’ AI use. The Alphabet Inc.",
+          "key_insight": "Google is weaponizing its AI interfaces as commerce channels, directly threatening Amazon's search-to-buy dominance while opening a new front in AI platform wars"
+        },
+        "gravity_details": {
+          "impact": 5.0,
+          "gravity": 5.2,
+          "signals": 6.33,
+          "quality_flags": 2.75,
+          "novelty": 6,
+          "editorial_verdict": "Solid industry story signaling Google's AI commerce push, though light on implementation details",
+          "key_insight": "Google is weaponizing its AI interfaces as commerce channels, directly threatening Amazon's search-to-buy dominance while opening a new front in AI platform wars",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 5.6,
+        "gravity_score": 5.6,
+        "article": {
+          "title": "Anthropic says it will upgrade power grid infrastructure, generate new power, and cover consumer price increases to minimize the effects of its data centers",
+          "url": "https://www.nbcnews.com/tech/tech-news/anthropic-cover-costs-electricity-price-increases-data-centers-rcna258554",
+          "source": "Nbcnews",
+          "published_at": "2026-02-12T09:39:32.330662",
+          "tldr": "Artificial intelligence company Anthropic announced Wednesday that it will ensure consumer electricity costs remain steady as it expands its data center footprint.",
+          "key_insight": "Anthropic's infrastructure pledge signals AI industry pivot toward energy self-sufficiency as grid constraints become binding, potentially establishing template for Big Tech energy strategy"
+        },
+        "gravity_details": {
+          "impact": 5.0,
+          "gravity": 5.4,
+          "signals": 6.33,
+          "quality_flags": 4.25,
+          "novelty": 7,
+          "editorial_verdict": "Significant policy commitment with trend implications, but light on specifics",
+          "key_insight": "Anthropic's infrastructure pledge signals AI industry pivot toward energy self-sufficiency as grid constraints become binding, potentially establishing template for Big Tech energy strategy",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 5.48,
+        "gravity_score": 5.48,
+        "article": {
+          "title": "T-Mobile announces a network-level, AI-based Live Translation feature for phone calls on 4G LTE and 5G, supporting 50+ languages, coming “this spring” in beta",
+          "url": "https://www.theverge.com/tech/877008/t-mobile-live-translation-languages-ai-network",
+          "source": "Theverge",
+          "published_at": "2026-02-12T09:39:32.329861",
+          "tldr": "T-Mobile is preparing to test a new AI feature that translates live phone calls into more than 50 languages. Live Translation is launching in beta “this Spring,” according to a press release, with registration for eligible T-Mobile customers available starting today.",
+          "key_insight": "Network-level translation removes device/app friction but faces latency, accuracy, and privacy questions that will determine whether this becomes a genuine differentiator or another carrier feature that underdelivers"
+        },
+        "gravity_details": {
+          "impact": 5.0,
+          "gravity": 5.2,
+          "signals": 5.67,
+          "quality_flags": 3.25,
+          "novelty": 6,
+          "editorial_verdict": "Solid carrier innovation with real consumer utility, though execution risks and competitive pressure temper enthusiasm",
+          "key_insight": "Network-level translation removes device/app friction but faces latency, accuracy, and privacy questions that will determine whether this becomes a genuine differentiator or another carrier feature that underdelivers",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 5.41,
+        "gravity_score": 5.41,
+        "article": {
+          "title": "An OpenAI researcher who helped shape how models were built and priced says she quit after two years due to “deep reservations” about ads and OpenAI's strategy",
+          "url": "https://www.nytimes.com/2026/02/11/opinion/openai-ads-chatgpt.html?unlocked_article_code=1.LVA.L5JX.YWVrwH-_6Xoh&smid=re-nytopinion",
+          "source": "Nytimes",
+          "published_at": "2026-02-12T09:39:32.326590",
+          "tldr": "",
+          "key_insight": "A senior researcher who shaped OpenAI's model architecture and pricing strategy departed over strategic disagreements, with advertising models flagged as a specific concern—suggesting internal friction around monetization direction"
+        },
+        "gravity_details": {
+          "impact": 5.0,
+          "gravity": 4.8,
+          "signals": 6.33,
+          "quality_flags": 3.25,
+          "novelty": 5,
+          "editorial_verdict": "Newsworthy insider departure but light on specifics—signals growing tension between OpenAI's commercialization push and researcher concerns",
+          "key_insight": "A senior researcher who shaped OpenAI's model architecture and pricing strategy departed over strategic disagreements, with advertising models flagged as a specific concern—suggesting internal friction around monetization direction",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 5.36,
+        "gravity_score": 5.36,
+        "article": {
+          "title": "Robinhood launches a public testnet for Robinhood Chain, an Ethereum Layer 2 network on Arbitrum supporting 24/7 trading, with a broader rollout later in 2026",
+          "url": "https://www.coindesk.com/business/2026/02/11/robinhood-starts-testing-its-own-blockchain-as-crypto-and-tokenization-push-deepens",
+          "source": "Coindesk",
+          "published_at": "2026-02-12T09:39:32.328949",
+          "tldr": "Robinhood starts testing its own blockchain as crypto and tokenization push deepens The Robinhood Chain, built on Ethereum-based Arbitrum, aims to become key plumbing for around-the-clock trading and plugging tokenized stocks into DeFi.",
+          "key_insight": "Robinhood's L2 move signals major retail finance platforms are building proprietary blockchain infrastructure rather than relying on public networks, potentially fragmenting liquidity but accelerating institutional DeFi adoption"
+        },
+        "gravity_details": {
+          "impact": 4.25,
+          "gravity": 5.6,
+          "signals": 5.67,
+          "quality_flags": 3.25,
+          "novelty": 6,
+          "editorial_verdict": "Solid product launch with strategic implications for TradFi-crypto convergence, though light on technical specifics",
+          "key_insight": "Robinhood's L2 move signals major retail finance platforms are building proprietary blockchain infrastructure rather than relying on public networks, potentially fragmenting liquidity but accelerating institutional DeFi adoption",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 5.07,
+        "gravity_score": 5.07,
+        "article": {
+          "title": "Anthropic says Claude users on the free plan can now create files, connect to external services, use skills, and more",
+          "url": "https://www.engadget.com/ai/anthropic-beefs-up-claudes-free-tier-as-openai-prepares-to-stuff-ads-into-chatgpts-194100939.html",
+          "source": "Engadget",
+          "published_at": "2026-02-12T09:39:32.329554",
+          "tldr": "Anthropic is upgrading Claude's free tier, apparently to capitalize on OpenAI's planned integration of ads into ChatGPT. On Wednesday, Anthropic said free Claude users can now create files, connect to external services, use skills and more.",
+          "key_insight": "Anthropic is aggressively democratizing premium AI features to free users, signaling intensifying competition with OpenAI and pressure to expand adoption before monetization"
+        },
+        "gravity_details": {
+          "impact": 5.0,
+          "gravity": 4.4,
+          "signals": 5.67,
+          "quality_flags": 3.0,
+          "novelty": 5,
+          "editorial_verdict": "Solid product news with competitive implications, but thin on details",
+          "key_insight": "Anthropic is aggressively democratizing premium AI features to free users, signaling intensifying competition with OpenAI and pressure to expand adoption before monetization",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 4.9,
+        "gravity_score": 4.9,
+        "article": {
+          "title": "Brandlight, which develops tools that help brands monitor how AI models perceive them, raised a $30M Series A led by Pelion Venture Partners",
+          "url": "https://www.axios.com/pro/enterprise-software-deals/2026/02/11/marketing-tech-brandlight-30-million",
+          "source": "Axios",
+          "published_at": "2026-02-12T09:39:32.330841",
+          "tldr": "",
+          "key_insight": "AI perception monitoring is becoming a recognized software category as brands confront how LLMs represent them"
+        },
+        "gravity_details": {
+          "impact": 4.0,
+          "gravity": 4.8,
+          "signals": 6.0,
+          "quality_flags": 3.25,
+          "novelty": 5,
+          "editorial_verdict": "Solid funding announcement with genuine emerging category signal",
+          "key_insight": "AI perception monitoring is becoming a recognized software category as brands confront how LLMs represent them",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 4.84,
+        "gravity_score": 4.84,
+        "article": {
+          "title": "GPT-5.3-Codex and Claude Opus 4.6 can meaningfully contribute to the improvement of AI models, a sign of what's coming for most knowledge work within five years",
+          "url": "https://shumer.dev/something-big-is-happening",
+          "source": "Shumer",
+          "published_at": "2026-02-12T09:39:32.327973",
+          "tldr": "Think back to February 2020. If you were paying close attention, you might have noticed a few people talking about a virus spreading overseas. But most of us weren't paying close attention.",
+          "key_insight": "Claims about non-existent model versions (GPT-5.3-Codex, Claude Opus 4.6) suggest this is speculative forecasting dressed as reporting, though recursive AI improvement is a real trend worth watching"
+        },
+        "gravity_details": {
+          "impact": 5.5,
+          "gravity": 5.0,
+          "signals": 5.67,
+          "quality_flags": 5.25,
+          "novelty": 4,
+          "editorial_verdict": "Speculative trend piece lacking concrete evidence; model versions appear fabricated",
+          "key_insight": "Claims about non-existent model versions (GPT-5.3-Codex, Claude Opus 4.6) suggest this is speculative forecasting dressed as reporting, though recursive AI improvement is a real trend worth watching",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 4.59,
+        "gravity_score": 4.59,
+        "article": {
+          "title": "Mistral says it will spend €1.2B to build AI infrastructure in Sweden with partner EcoDataCenter, set to open in 2027 as its first data center outside France",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-11/mistral-invests-1-2-billion-in-swedish-ai-data-center-buildout",
+          "source": "Bloomberg",
+          "published_at": "2026-02-12T09:39:32.333049",
+          "tldr": "French startup Mistral AI is investing €1.2 billion ($1.4 billion) to build AI infrastructure in Sweden, as it pushes to become the go-to artificial intelligence supplier for governments and enterprises in Europe.",
+          "key_insight": "Mistral's €1.2B Sweden data center signals European AI sovereignty push and challenges cloud-provider dependency for model training"
+        },
+        "gravity_details": {
+          "impact": 3.75,
+          "gravity": 4.6,
+          "signals": 5.33,
+          "quality_flags": 3.25,
+          "novelty": 6,
+          "editorial_verdict": "Solid infrastructure expansion news with geopolitical undertones",
+          "key_insight": "Mistral's €1.2B Sweden data center signals European AI sovereignty push and challenges cloud-provider dependency for model training",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 4.34,
+        "gravity_score": 4.34,
+        "article": {
+          "title": "xAI will be organized into four core areas: Grok's chatbot and voice products, Coding, Imagine, and Macrohard, which will build digital agents to run companies",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-11/musk-restructures-xai-s-teams-after-co-founders-exit",
+          "source": "Bloomberg",
+          "published_at": "2026-02-12T09:39:32.325550",
+          "tldr": "Elon Musk said he restructured xAI, his artificial intelligence startup, following the exit of two of its co-founders earlier this week.",
+          "key_insight": "xAI's 'Macrohard' unit signals Musk's bet on AI agents replacing human executives, a naming shot at Microsoft that reveals competitive positioning more than product readiness"
+        },
+        "gravity_details": {
+          "impact": 3.75,
+          "gravity": 4.4,
+          "signals": 5.33,
+          "quality_flags": 3.5,
+          "novelty": 5,
+          "editorial_verdict": "Organizational news with strategic implications but thin on execution details",
+          "key_insight": "xAI's 'Macrohard' unit signals Musk's bet on AI agents replacing human executives, a naming shot at Microsoft that reveals competitive positioning more than product readiness",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 4.3,
+        "gravity_score": 4.3,
+        "article": {
+          "title": "KPMG citing PitchBook data: UK fintech investment totaled almost $11B in 2025 across 418 deals, down from ~$13.4B in 2024 across 527 deals; Revolut raised ~$4B",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-11/uk-fintech-funding-fell-21-last-year-hitting-lowest-since-2020",
+          "source": "Bloomberg",
+          "published_at": "2026-02-12T09:39:32.335128",
+          "tldr": "Investment in the UK financial technology world plummeted by more than 20% last year to the lowest levels since the start of the Covid-19 pandemic, as backers hesitated on macroeconomic risks and flocked to US opportunities.",
+          "key_insight": "UK fintech investment declined ~18% YoY in deal value despite Revolut's outsized $4B raise, suggesting underlying market contraction masked by one mega-deal"
+        },
+        "gravity_details": {
+          "impact": 4.25,
+          "gravity": 4.0,
+          "signals": 5.0,
+          "quality_flags": 2.25,
+          "novelty": 4,
+          "editorial_verdict": "Standard data point useful for trend tracking but not breaking news",
+          "key_insight": "UK fintech investment declined ~18% YoY in deal value despite Revolut's outsized $4B raise, suggesting underlying market contraction masked by one mega-deal",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 4.25,
+        "gravity_score": 4.25,
+        "article": {
+          "title": "GitGuardian, which integrates with GitHub to offer nonhuman identity and AI agent security services, raised a $50M Series C, taking its total funding to ~$106M",
+          "url": "https://siliconangle.com/2026/02/11/gitguardian-raises-50m-expand-non-human-identity-ai-agent-security/",
+          "source": "Siliconangle",
+          "published_at": "2026-02-12T09:39:32.334865",
+          "tldr": "",
+          "key_insight": "Security vendors are rebranding around AI agent risks as the next growth vector, but this round reflects incremental expansion rather than breakthrough capability"
+        },
+        "gravity_details": {
+          "impact": 4.25,
+          "gravity": 4.2,
+          "signals": 5.0,
+          "quality_flags": 3.5,
+          "novelty": 4,
+          "editorial_verdict": "Standard funding announcement with limited new information; 'AI agent security' framing feels opportunistic",
+          "key_insight": "Security vendors are rebranding around AI agent risks as the next growth vector, but this round reflects incremental expansion rather than breakthrough capability",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 4.13,
+        "gravity_score": 4.13,
+        "article": {
+          "title": "Meridian, which uses AI to make financial modeling and spreadsheets more “predictable and auditable”, exits stealth and raised a $17M seed at a $100M valuation",
+          "url": "https://techcrunch.com/2026/02/11/meridian-ai-raises-17-million-to-remake-the-agentic-spreadsheet/",
+          "source": "Techcrunch",
+          "published_at": "2026-02-12T09:39:32.334828",
+          "tldr": "The fight to tame spreadsheets with AI isn’t over yet. A new company called Meridian has emerged from stealth with a more comprehensive IDE-based approach to agentic financial modeling — and plenty of funding to build it.",
+          "key_insight": "$100M seed valuation signals continued investor appetite for AI infrastructure plays targeting enterprise finance workflows, but 'predictable and auditable' positioning lacks technical specifics to distinguish from existing players."
+        },
+        "gravity_details": {
+          "impact": 3.75,
+          "gravity": 4.2,
+          "signals": 5.33,
+          "quality_flags": 4.0,
+          "novelty": 5,
+          "editorial_verdict": "Standard funding announcement with modest differentiation in crowded AI-for-finance space",
+          "key_insight": "$100M seed valuation signals continued investor appetite for AI infrastructure plays targeting enterprise finance workflows, but 'predictable and auditable' positioning lacks technical specifics to distinguish from existing players.",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 3.51,
+        "gravity_score": 3.51,
+        "article": {
+          "title": "London-based commerce and payments infrastructure provider Rezolve Ai agrees to acquire London-based cashback rewards company Reward for $230M",
+          "url": "https://www.pymnts.com/acquisitions/2026/rezolve-ai-acquires-reward-to-bolster-ai-commerce-strategy/",
+          "source": "Pymnts",
+          "published_at": "2026-02-12T09:39:32.334754",
+          "tldr": "Commerce and payments infrastructure provider Rezolve Ai has acquired U.K.-based cash-back rewards company Reward. The $230 million deal, announced Wednesday (Feb. 11), is designed to bolster Rezolve’s AI commerce platform with Reward’s “live enterprise” retail and banking deployments.",
+          "key_insight": "Rezolve AI's $230M acquisition of Reward signals consolidation in embedded finance as AI commerce platforms seek to own loyalty/rewards data moats"
+        },
+        "gravity_details": {
+          "impact": 3.5,
+          "gravity": 3.6,
+          "signals": 4.33,
+          "quality_flags": 4.0,
+          "novelty": 5,
+          "editorial_verdict": "Standard M&A announcement with limited strategic detail—solid business news but no transformative insight",
+          "key_insight": "Rezolve AI's $230M acquisition of Reward signals consolidation in embedded finance as AI commerce platforms seek to own loyalty/rewards data moats",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 3.5,
+        "gravity_score": 3.5,
+        "article": {
+          "title": "Z.ai launches GLM-5, its flagship open-weight model, saying it has best-in-class performance among open-source models in reasoning, coding, and agentic tasks",
+          "url": "https://z.ai/blog/glm-5",
+          "source": "Z",
+          "published_at": "2026-02-12T09:39:32.326057",
+          "tldr": "",
+          "key_insight": "Chinese AI lab Z.ai releases GLM-5 with unverified 'best-in-class' claims; significance depends on independent benchmark validation"
+        },
+        "gravity_details": {
+          "impact": 3.75,
+          "gravity": 4.6,
+          "signals": 4.67,
+          "quality_flags": 6.5,
+          "novelty": 5,
+          "editorial_verdict": "Thin product announcement lacking verification or technical substance",
+          "key_insight": "Chinese AI lab Z.ai releases GLM-5 with unverified 'best-in-class' claims; significance depends on independent benchmark validation",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 3.44,
+        "gravity_score": 3.44,
+        "article": {
+          "title": "Elon Musk announces an xAI reorganization that “required parting ways with some people”, after two xAI co-founders announced they were leaving this week",
+          "url": "https://www.cnbc.com/2026/02/11/musk-announces-xai-re-org-following-key-departures-spacex-merger.html",
+          "source": "Cnbc",
+          "published_at": "2026-02-12T09:39:32.325432",
+          "tldr": "SpaceX CEO Elon Musk on Wednesday announced that the company's xAI artificial intelligence venture implemented a reorganization that \"required parting ways with some people.\" The overhaul was done \"to improve speed of execution,\" Musk said in a post on X.",
+          "key_insight": "Musk reframes known co-founder exits as proactive 'reorganization' rather than talent loss, but offers no specifics on xAI's direction"
+        },
+        "gravity_details": {
+          "impact": 3.25,
+          "gravity": 3.6,
+          "signals": 4.67,
+          "quality_flags": 4.0,
+          "novelty": 4,
+          "editorial_verdict": "Follow-up confirmation of already-reported departures with Musk's spin framing; thin on new information",
+          "key_insight": "Musk reframes known co-founder exits as proactive 'reorganization' rather than talent loss, but offers no specifics on xAI's direction",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 3.05,
+        "gravity_score": 3.05,
+        "article": {
+          "title": "xAI all-hands meeting: Elon Musk told employees that xAI needs a factory on the moon to build AI satellites and a massive catapult to launch them into space",
+          "url": "https://www.nytimes.com/2026/02/10/technology/elon-musk-lunar-factory.html",
+          "source": "Nytimes",
+          "published_at": "2026-02-12T09:39:32.325587",
+          "tldr": "",
+          "key_insight": "Musk's moon factory/catapult comments appear to be aspirational vision-casting rather than funded engineering plans, typical of his pattern of announcing spectacular long-term goals to motivate teams and generate headlines without near-term deliverables."
+        },
+        "gravity_details": {
+          "impact": 2.75,
+          "gravity": 3.6,
+          "signals": 4.67,
+          "quality_flags": 4.75,
+          "novelty": 3,
+          "editorial_verdict": "Colorful Musk rhetoric lacking concrete substance; reads as internal morale theater or strategic distraction rather than actionable news",
+          "key_insight": "Musk's moon factory/catapult comments appear to be aspirational vision-casting rather than funded engineering plans, typical of his pattern of announcing spectacular long-term goals to motivate teams and generate headlines without near-term deliverables.",
+          "passes_novelty_gate": false
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 2.88,
+        "gravity_score": 2.88,
+        "article": {
+          "title": "Anthropic CCO Paul Smith says the startup is focused on “growing revenue” rather than “flashy headlines”, calls the software stock selloff “hyperbole”, and more",
+          "url": "https://www.cnbc.com/2026/02/11/anthropic-vs-openai-ads-spending-criticism.html",
+          "source": "Cnbc",
+          "published_at": "2026-02-12T09:39:32.334942",
+          "tldr": "Anthropic is focused on growing its business rather than making \"flashy headlines,\" its commercial chief told CNBC in a thinly-veiled swipe at rival OpenAI as the public war of words between the AI giants continues.",
+          "key_insight": "Anthropic's commercial leadership is signaling fiscal discipline and downplaying market volatility, but offers no concrete details on revenue growth, profitability timeline, or competitive positioning"
+        },
+        "gravity_details": {
+          "impact": 2.5,
+          "gravity": 3.0,
+          "signals": 4.67,
+          "quality_flags": 4.25,
+          "novelty": 3,
+          "editorial_verdict": "Executive interview with minimal substance—standard positioning statements, no new product or strategic information",
+          "key_insight": "Anthropic's commercial leadership is signaling fiscal discipline and downplaying market volatility, but offers no concrete details on revenue growth, profitability timeline, or competitive positioning",
+          "passes_novelty_gate": false
+        }
+      }
+    ]
+  },
+  "top_themes": {
+    "items": [
+      {
+        "item_type": "cluster",
+        "rank_score": 7.908,
+        "gravity_score": 7.55,
+        "cluster_id": "3e17d9fd7b6a",
+        "coverage_bonus": 0.198,
+        "entropy_bonus": 0.06,
+        "confidence_bonus": 0.1,
+        "domain_entropy": 1.0,
+        "unique_domains": 2,
+        "canonical": {
+          "title": "Source: to catch leakers, OpenAI security staff use a custom ChatGPT with access to Slack, email, and docs that cross-references news articles with access logs",
+          "url": "https://www.theinformation.com/articles/openai-uses-chatgpt-catch-leakers",
+          "source": "Theinformation",
+          "published_at": "2026-02-12T09:39:32.334791",
+          "tldr": "",
+          "key_insight": "OpenAI has deployed an internal AI surveillance system that ingests employee communications across Slack, email, and documents to identify leakers by correlating news articles with access logs—raising critical questions about trust, transparency, and the company's own stance on AI safety and privacy.",
+          "gravity_score": 7.55
+        },
+        "related": [
+          {
+            "title": "OpenAI announced Monday that the US military will get access to ChatGPT via GenAI.mil; sources say the move came after months of deliberation among employees",
+            "url": "https://www.semafor.com/article/02/11/2026/how-openai-got-comfortable-with-the-pentagon-using-chatgpt-for-war",
+            "source": "Semafor",
+            "published_at": "2026-02-12T09:39:32.333509"
+          }
+        ],
+        "cluster_stats": {
+          "cluster_size": 2,
+          "unique_domain_count": 2,
+          "domain_entropy": 1.0,
+          "avg_pair_similarity": 0.5583767294883728,
+          "max_pair_similarity": 0.5583767294883728,
+          "cluster_confidence": 0.33291500681071595,
+          "gate_mix": {
+            "merges_by_entity": 1,
+            "merges_by_bucket": 0,
+            "merges_blocked_by_time": 0
+          },
+          "shared_entities": [
+            "us",
+            "openai",
+            "genai.mil",
+            "gpt",
+            "chatgpt",
+            "slack",
+            "monday"
+          ],
+          "shared_bucket_tags": [],
+          "time_span_hours": 0.0
+        },
+        "gravity_details": {},
+        "merge_evidence": [
+          "sim=0.56+entity(gpt,chatgpt,openai)"
+        ],
+        "top_domains": [
+          "theinformation.com",
+          "semafor.com"
+        ]
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 7.08,
+        "gravity_score": 7.08,
+        "article": {
+          "title": "Source: OpenAI disbanded its mission alignment team in recent weeks and transferred its employees; team lead Joshua Achiam will take on a “chief futurist” role",
+          "url": "https://www.platformer.news/openai-mission-alignment-team-joshua-achiam/",
+          "source": "Platformer",
+          "published_at": "2026-02-12T09:39:32.326671",
+          "tldr": "This is a column about AI. My boyfriend works at Anthropic. See my full ethics disclosure here. OpenAI disbanded its mission alignment team in recent weeks and transferred its seven employees to other teams, Platformer has learned.",
+          "key_insight": "OpenAI's dissolution of its mission alignment team and elevation of its lead to 'chief futurist' suggests a strategic deprioritization of near-term safety work in favor of longer-horizon AGI development, continuing the pattern of safety researchers departing amid commercial pressures."
+        },
+        "gravity_details": {
+          "impact": 6.5,
+          "gravity": 6.0,
+          "signals": 7.33,
+          "quality_flags": 2.5,
+          "novelty": 7,
+          "editorial_verdict": "Significant organizational signal with broad implications for AI governance",
+          "key_insight": "OpenAI's dissolution of its mission alignment team and elevation of its lead to 'chief futurist' suggests a strategic deprioritization of near-term safety work in favor of longer-horizon AGI development, continuing the pattern of safety researchers departing amid commercial pressures.",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.88,
+        "gravity_score": 6.88,
+        "article": {
+          "title": "Sources: ByteDance plans to produce 100K+ units of its in-house AI inference chip in 2026, is in talks with Samsung to manufacture it, before ramping up to 350K",
+          "url": "https://www.reuters.com/world/asia-pacific/bytedance-developing-ai-chip-manufacturing-talks-with-samsung-sources-say-2026-02-11/",
+          "source": "Reuters",
+          "published_at": "2026-02-12T09:39:32.335311",
+          "tldr": "",
+          "key_insight": "ByteDance's 450K-unit AI chip roadmap signals hyperscalers are accelerating custom silicon independence from Nvidia, with Samsung positioned as alternative foundry amid US-China tech tensions"
+        },
+        "gravity_details": {
+          "impact": 5.75,
+          "gravity": 6.2,
+          "signals": 7.0,
+          "quality_flags": 2.75,
+          "novelty": 8,
+          "editorial_verdict": "Significant strategic leak revealing major AI chip supply chain realignment with geopolitical implications",
+          "key_insight": "ByteDance's 450K-unit AI chip roadmap signals hyperscalers are accelerating custom silicon independence from Nvidia, with Samsung positioned as alternative foundry amid US-China tech tensions",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.72,
+        "gravity_score": 6.72,
+        "article": {
+          "title": "SMIC CEO Zhao Haijun says the industry is “a bit panicked” about the memory chip shortage, and more supply may arrive in nine months; prices are up 80%+ in 2026",
+          "url": "https://www.wsj.com/tech/smic-ceo-says-industry-panicked-about-memory-supply-shortage-f0e1aaed?st=cHRnm5&reflink=desktopwebshare_permalink",
+          "source": "Wsj",
+          "published_at": "2026-02-12T09:39:32.335095",
+          "tldr": "",
+          "key_insight": "SMIC CEO confirms memory shortage panic with 80%+ price spike and 9-month supply lag, signaling sustained pressure on downstream electronics manufacturing"
+        },
+        "gravity_details": {
+          "impact": 7.0,
+          "gravity": 5.6,
+          "signals": 6.33,
+          "quality_flags": 2.0,
+          "novelty": 6,
+          "editorial_verdict": "Credible market signal from major foundry CEO with concrete data points",
+          "key_insight": "SMIC CEO confirms memory shortage panic with 80%+ price spike and 9-month supply lag, signaling sustained pressure on downstream electronics manufacturing",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "cluster",
+        "rank_score": 6.694,
+        "gravity_score": 6.26,
+        "cluster_id": "a66883b854a8",
+        "coverage_bonus": 0.198,
+        "entropy_bonus": 0.06,
+        "confidence_bonus": 0.176,
+        "domain_entropy": 1.0,
+        "unique_domains": 2,
+        "canonical": {
+          "title": "Mistral CEO Arthur Mensch says the startup's annualized revenue run rate was “north of $400M”, up from $20M a year ago, and it is set to hit $1B ARR by 2026-end",
+          "url": "https://t.co/JBh6MtDCyc",
+          "source": "T",
+          "published_at": "2026-02-12T09:39:32.332953",
+          "tldr": "A required part of this site couldn’t load. This may be due to a browser extension, network issues, or browser settings. Please check your connection, disable any ad blockers, or try using a different browser..",
+          "key_insight": "Mistral's 20x ARR growth in one year and path to $1B by 2026 signals open-source AI models are achieving commercial viability at scale, challenging assumptions about closed-model dominance and forcing recalculation of AI infrastructure economics across the industry.",
+          "gravity_score": 6.26
+        },
+        "related": [
+          {
+            "title": "Mistral says it will spend €1.2B to build AI infrastructure in Sweden with partner EcoDataCenter, set to open in 2027 as its first data center outside France",
+            "url": "https://www.bloomberg.com/news/articles/2026-02-11/mistral-invests-1-2-billion-in-swedish-ai-data-center-buildout",
+            "source": "Bloomberg",
+            "published_at": "2026-02-12T09:39:32.333049"
+          }
+        ],
+        "cluster_stats": {
+          "cluster_size": 2,
+          "unique_domain_count": 2,
+          "domain_entropy": 1.0,
+          "avg_pair_similarity": 0.6408362984657288,
+          "max_pair_similarity": 0.6408362984657288,
+          "cluster_confidence": 0.5875146483722242,
+          "gate_mix": {
+            "merges_by_entity": 1,
+            "merges_by_bucket": 0,
+            "merges_blocked_by_time": 0
+          },
+          "shared_entities": [
+            "mistral",
+            "ceo",
+            "mensch",
+            "arr",
+            "ai",
+            "arthur",
+            "sweden",
+            "france",
+            "ecodatacenter"
+          ],
+          "shared_bucket_tags": [],
+          "time_span_hours": 0.0
+        },
+        "gravity_details": {},
+        "merge_evidence": [
+          "sim=0.64+entity(mistral)"
+        ],
+        "top_domains": [
+          "t.co",
+          "bloomberg.com"
+        ]
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.63,
+        "gravity_score": 6.63,
+        "article": {
+          "title": "EssilorLuxottica says it sold over 7M Meta AI glasses in 2025, up from the 2M that the company sold in 2023 and 2024 combined",
+          "url": "https://www.cnbc.com/2026/02/11/ray-ban-maker-essilorluxottica-triples-sales-of-meta-ai-glasses.html",
+          "source": "Cnbc",
+          "published_at": "2026-02-12T09:39:32.332442",
+          "tldr": "EssilorLuxottica's more than tripled its Meta artificial intelligence glasses sales last year, the Ray-Ban maker said on Wednesday in its fourth-quarter results. The French-Italian eyewear brand said it sold over 7 million AI glasses last year.",
+          "key_insight": "AI glasses crossed the chasm from tech demo to mass-market product with 3.5x sales acceleration, establishing the first proven consumer AI hardware form factor beyond smartphones"
+        },
+        "gravity_details": {
+          "impact": 5.5,
+          "gravity": 5.8,
+          "signals": 7.33,
+          "quality_flags": 2.75,
+          "novelty": 7,
+          "editorial_verdict": "Significant hard data point validating AI wearables as a genuine consumer category, not just hype",
+          "key_insight": "AI glasses crossed the chasm from tech demo to mass-market product with 3.5x sales acceleration, establishing the first proven consumer AI hardware form factor beyond smartphones",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "cluster",
+        "rank_score": 6.597,
+        "gravity_score": 6.23,
+        "cluster_id": "91b48879e52e",
+        "coverage_bonus": 0.198,
+        "entropy_bonus": 0.06,
+        "confidence_bonus": 0.109,
+        "domain_entropy": 1.0,
+        "unique_domains": 2,
+        "canonical": {
+          "title": "Q&A with Fidji Simo on ChatGPT ads, OpenAI's efforts to ship a new model soon to end Sam Altman's Code Red, Anthropic's Super Bowl ads, Sora, Codex, and more",
+          "url": "https://sources.news/p/openais-fidji-simo-on-ads-in-chatgpt",
+          "source": "Sources",
+          "published_at": "2026-02-12T09:39:32.335209",
+          "tldr": "",
+          "key_insight": "OpenAI board member confirms internal 'Code Red' pressure to ship new model amid intensifying competition with Anthropic and urgent monetization push through ChatGPT ads",
+          "gravity_score": 6.23
+        },
+        "related": [
+          {
+            "title": "An OpenAI researcher who helped shape how models were built and priced says she quit after two years due to “deep reservations” about ads and OpenAI's strategy",
+            "url": "https://www.nytimes.com/2026/02/11/opinion/openai-ads-chatgpt.html?unlocked_article_code=1.LVA.L5JX.YWVrwH-_6Xoh&smid=re-nytopinion",
+            "source": "Nytimes",
+            "published_at": "2026-02-12T09:39:32.326590"
+          }
+        ],
+        "cluster_stats": {
+          "cluster_size": 2,
+          "unique_domain_count": 2,
+          "domain_entropy": 1.0,
+          "avg_pair_similarity": 0.5523021817207336,
+          "max_pair_similarity": 0.5523021817207336,
+          "cluster_confidence": 0.362915006810716,
+          "gate_mix": {
+            "merges_by_entity": 1,
+            "merges_by_bucket": 0,
+            "merges_blocked_by_time": 0
+          },
+          "shared_entities": [
+            "red",
+            "codex",
+            "anthropic's",
+            "sam",
+            "bowl",
+            "code",
+            "gpt",
+            "simo",
+            "chatgpt",
+            "anthropic"
+          ],
+          "shared_bucket_tags": [],
+          "time_span_hours": 0.0
+        },
+        "gravity_details": {},
+        "merge_evidence": [
+          "sim=0.55+entity(openai's,openai)"
+        ],
+        "top_domains": [
+          "sources.news",
+          "nytimes.com"
+        ]
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.14,
+        "gravity_score": 6.14,
+        "article": {
+          "title": "Meta launches an AI feature that lets Threads users temporarily personalize their feed by specifying topics in a public post that begins with “Dear Algo”",
+          "url": "https://www.cnbc.com/2026/02/11/meta-threads-dear-algo-ai-algorithm-personalization.html",
+          "source": "Cnbc",
+          "published_at": "2026-02-12T09:39:32.329314",
+          "tldr": "Meta on Wednesday debuted an AI feature called \"Dear Algo\" that lets Threads users personalize their content-recommendation algorithms.",
+          "key_insight": "Meta's 'Dear Algo' represents a notable shift toward giving users explicit, if limited, control over recommendation systems—potentially foreshadowing broader industry moves toward algorithmic explainability and user steerability."
+        },
+        "gravity_details": {
+          "impact": 4.5,
+          "gravity": 5.8,
+          "signals": 7.0,
+          "quality_flags": 3.0,
+          "novelty": 7,
+          "editorial_verdict": "Genuine product news with meaningful signal on algorithmic transparency trend",
+          "key_insight": "Meta's 'Dear Algo' represents a notable shift toward giving users explicit, if limited, control over recommendation systems—potentially foreshadowing broader industry moves toward algorithmic explainability and user steerability.",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.12,
+        "gravity_score": 6.12,
+        "article": {
+          "title": "Inertia, co-founded by ex-Twilio CEO Jeff Lawson to build one of the world's most powerful lasers for a grid-scale fusion power plant, raised a $450M Series A",
+          "url": "https://techcrunch.com/2026/02/11/twilio-co-founders-fusion-power-startup-raises-450m-from-bessemer-and-alphabets-gv/",
+          "source": "Techcrunch",
+          "published_at": "2026-02-12T09:39:32.331897",
+          "tldr": "Inertia Enterprises has raised $450 million to build one of the world’s most powerful lasers, which it hopes will serve as the foundation of a grid-scale power plant the fusion startup intends to start construction on in 2030.",
+          "key_insight": "A $450M Series A for fusion—one of the largest ever—signals serious capital is betting on inertial confinement as a viable path to grid-scale fusion, with a credible operator at the helm"
+        },
+        "gravity_details": {
+          "impact": 5.25,
+          "gravity": 6.0,
+          "signals": 6.33,
+          "quality_flags": 3.75,
+          "novelty": 7,
+          "editorial_verdict": "Significant funding news with genuine implications for energy/climate tech, though light on technical specifics",
+          "key_insight": "A $450M Series A for fusion—one of the largest ever—signals serious capital is betting on inertial confinement as a viable path to grid-scale fusion, with a credible operator at the helm",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 6.05,
+        "gravity_score": 6.05,
+        "article": {
+          "title": "Meta plans to spend more than $10B to build a 1GW data center campus in Lebanon, Indiana, expected to be operational at the end of 2027 or in early 2028",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-11/meta-to-spend-more-than-10-billion-on-indiana-based-data-center",
+          "source": "Bloomberg",
+          "published_at": "2026-02-12T09:39:32.331210",
+          "tldr": "Meta Platforms Inc. said it will spend more than $10 billion to build a data center campus in Lebanon, Indiana, ranking it among the company’s largest artificial intelligence infrastructure investments to date.",
+          "key_insight": "Meta's $10B+ 1GW Indiana campus confirms hyperscaler AI infrastructure race is accelerating into Midwest markets with 2027-28 timelines, signaling massive power demand commitments years ahead."
+        },
+        "gravity_details": {
+          "impact": 5.0,
+          "gravity": 5.6,
+          "signals": 6.67,
+          "quality_flags": 2.25,
+          "novelty": 6,
+          "editorial_verdict": "Solid infrastructure news with meaningful scale signals",
+          "key_insight": "Meta's $10B+ 1GW Indiana campus confirms hyperscaler AI infrastructure race is accelerating into Midwest markets with 2027-28 timelines, signaling massive power demand commitments years ahead.",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 5.78,
+        "gravity_score": 5.78,
+        "article": {
+          "title": "Austin-based humanoid robot startup Apptronik raised $520M led by Google and others at a $5.5B+ valuation, up ~3x from when it raised $415M in February 2025",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-11/apptronik-raises-520-million-in-new-funding-to-build-more-humanoids",
+          "source": "Bloomberg",
+          "published_at": "2026-02-12T09:39:32.331497",
+          "tldr": "Apptronik, a fast-growing startup that makes artificial intelligence-powered humanoid robots, has secured about $520 million in a new funding round that values the company at more than $5.5 billion, around three times its valuation from its initial Series A raise last year.",
+          "key_insight": "Google's second major bet on Apptronik in 10 months signals Big Tech's urgency to secure humanoid robot supply chains before commercial deployment accelerates"
+        },
+        "gravity_details": {
+          "impact": 5.0,
+          "gravity": 5.4,
+          "signals": 6.33,
+          "quality_flags": 3.25,
+          "novelty": 6,
+          "editorial_verdict": "Significant funding signal with strategic implications, light on technical substance",
+          "key_insight": "Google's second major bet on Apptronik in 10 months signals Big Tech's urgency to secure humanoid robot supply chains before commercial deployment accelerates",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 5.76,
+        "gravity_score": 5.76,
+        "article": {
+          "title": "Google told advertisers that it is integrating shopping features into Search's AI Mode and Gemini; users can now buy items from Etsy and Wayfair within Gemini",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-11/google-pushes-ai-shopping-features-in-search-and-gemini-chatbot",
+          "source": "Bloomberg",
+          "published_at": "2026-02-12T09:39:32.330104",
+          "tldr": "Google is adding a way for consumers to buy things while seeking artificial intelligence-powered answers on search and in its Gemini chatbot — part of a plan to make money more directly from consumers’ AI use. The Alphabet Inc.",
+          "key_insight": "Google is weaponizing its AI interfaces as commerce channels, directly threatening Amazon's search-to-buy dominance while opening a new front in AI platform wars"
+        },
+        "gravity_details": {
+          "impact": 5.0,
+          "gravity": 5.2,
+          "signals": 6.33,
+          "quality_flags": 2.75,
+          "novelty": 6,
+          "editorial_verdict": "Solid industry story signaling Google's AI commerce push, though light on implementation details",
+          "key_insight": "Google is weaponizing its AI interfaces as commerce channels, directly threatening Amazon's search-to-buy dominance while opening a new front in AI platform wars",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 5.6,
+        "gravity_score": 5.6,
+        "article": {
+          "title": "Anthropic says it will upgrade power grid infrastructure, generate new power, and cover consumer price increases to minimize the effects of its data centers",
+          "url": "https://www.nbcnews.com/tech/tech-news/anthropic-cover-costs-electricity-price-increases-data-centers-rcna258554",
+          "source": "Nbcnews",
+          "published_at": "2026-02-12T09:39:32.330662",
+          "tldr": "Artificial intelligence company Anthropic announced Wednesday that it will ensure consumer electricity costs remain steady as it expands its data center footprint.",
+          "key_insight": "Anthropic's infrastructure pledge signals AI industry pivot toward energy self-sufficiency as grid constraints become binding, potentially establishing template for Big Tech energy strategy"
+        },
+        "gravity_details": {
+          "impact": 5.0,
+          "gravity": 5.4,
+          "signals": 6.33,
+          "quality_flags": 4.25,
+          "novelty": 7,
+          "editorial_verdict": "Significant policy commitment with trend implications, but light on specifics",
+          "key_insight": "Anthropic's infrastructure pledge signals AI industry pivot toward energy self-sufficiency as grid constraints become binding, potentially establishing template for Big Tech energy strategy",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 5.48,
+        "gravity_score": 5.48,
+        "article": {
+          "title": "T-Mobile announces a network-level, AI-based Live Translation feature for phone calls on 4G LTE and 5G, supporting 50+ languages, coming “this spring” in beta",
+          "url": "https://www.theverge.com/tech/877008/t-mobile-live-translation-languages-ai-network",
+          "source": "Theverge",
+          "published_at": "2026-02-12T09:39:32.329861",
+          "tldr": "T-Mobile is preparing to test a new AI feature that translates live phone calls into more than 50 languages. Live Translation is launching in beta “this Spring,” according to a press release, with registration for eligible T-Mobile customers available starting today.",
+          "key_insight": "Network-level translation removes device/app friction but faces latency, accuracy, and privacy questions that will determine whether this becomes a genuine differentiator or another carrier feature that underdelivers"
+        },
+        "gravity_details": {
+          "impact": 5.0,
+          "gravity": 5.2,
+          "signals": 5.67,
+          "quality_flags": 3.25,
+          "novelty": 6,
+          "editorial_verdict": "Solid carrier innovation with real consumer utility, though execution risks and competitive pressure temper enthusiasm",
+          "key_insight": "Network-level translation removes device/app friction but faces latency, accuracy, and privacy questions that will determine whether this becomes a genuine differentiator or another carrier feature that underdelivers",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 5.36,
+        "gravity_score": 5.36,
+        "article": {
+          "title": "Robinhood launches a public testnet for Robinhood Chain, an Ethereum Layer 2 network on Arbitrum supporting 24/7 trading, with a broader rollout later in 2026",
+          "url": "https://www.coindesk.com/business/2026/02/11/robinhood-starts-testing-its-own-blockchain-as-crypto-and-tokenization-push-deepens",
+          "source": "Coindesk",
+          "published_at": "2026-02-12T09:39:32.328949",
+          "tldr": "Robinhood starts testing its own blockchain as crypto and tokenization push deepens The Robinhood Chain, built on Ethereum-based Arbitrum, aims to become key plumbing for around-the-clock trading and plugging tokenized stocks into DeFi.",
+          "key_insight": "Robinhood's L2 move signals major retail finance platforms are building proprietary blockchain infrastructure rather than relying on public networks, potentially fragmenting liquidity but accelerating institutional DeFi adoption"
+        },
+        "gravity_details": {
+          "impact": 4.25,
+          "gravity": 5.6,
+          "signals": 5.67,
+          "quality_flags": 3.25,
+          "novelty": 6,
+          "editorial_verdict": "Solid product launch with strategic implications for TradFi-crypto convergence, though light on technical specifics",
+          "key_insight": "Robinhood's L2 move signals major retail finance platforms are building proprietary blockchain infrastructure rather than relying on public networks, potentially fragmenting liquidity but accelerating institutional DeFi adoption",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 5.07,
+        "gravity_score": 5.07,
+        "article": {
+          "title": "Anthropic says Claude users on the free plan can now create files, connect to external services, use skills, and more",
+          "url": "https://www.engadget.com/ai/anthropic-beefs-up-claudes-free-tier-as-openai-prepares-to-stuff-ads-into-chatgpts-194100939.html",
+          "source": "Engadget",
+          "published_at": "2026-02-12T09:39:32.329554",
+          "tldr": "Anthropic is upgrading Claude's free tier, apparently to capitalize on OpenAI's planned integration of ads into ChatGPT. On Wednesday, Anthropic said free Claude users can now create files, connect to external services, use skills and more.",
+          "key_insight": "Anthropic is aggressively democratizing premium AI features to free users, signaling intensifying competition with OpenAI and pressure to expand adoption before monetization"
+        },
+        "gravity_details": {
+          "impact": 5.0,
+          "gravity": 4.4,
+          "signals": 5.67,
+          "quality_flags": 3.0,
+          "novelty": 5,
+          "editorial_verdict": "Solid product news with competitive implications, but thin on details",
+          "key_insight": "Anthropic is aggressively democratizing premium AI features to free users, signaling intensifying competition with OpenAI and pressure to expand adoption before monetization",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 4.9,
+        "gravity_score": 4.9,
+        "article": {
+          "title": "Brandlight, which develops tools that help brands monitor how AI models perceive them, raised a $30M Series A led by Pelion Venture Partners",
+          "url": "https://www.axios.com/pro/enterprise-software-deals/2026/02/11/marketing-tech-brandlight-30-million",
+          "source": "Axios",
+          "published_at": "2026-02-12T09:39:32.330841",
+          "tldr": "",
+          "key_insight": "AI perception monitoring is becoming a recognized software category as brands confront how LLMs represent them"
+        },
+        "gravity_details": {
+          "impact": 4.0,
+          "gravity": 4.8,
+          "signals": 6.0,
+          "quality_flags": 3.25,
+          "novelty": 5,
+          "editorial_verdict": "Solid funding announcement with genuine emerging category signal",
+          "key_insight": "AI perception monitoring is becoming a recognized software category as brands confront how LLMs represent them",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 4.84,
+        "gravity_score": 4.84,
+        "article": {
+          "title": "GPT-5.3-Codex and Claude Opus 4.6 can meaningfully contribute to the improvement of AI models, a sign of what's coming for most knowledge work within five years",
+          "url": "https://shumer.dev/something-big-is-happening",
+          "source": "Shumer",
+          "published_at": "2026-02-12T09:39:32.327973",
+          "tldr": "Think back to February 2020. If you were paying close attention, you might have noticed a few people talking about a virus spreading overseas. But most of us weren't paying close attention.",
+          "key_insight": "Claims about non-existent model versions (GPT-5.3-Codex, Claude Opus 4.6) suggest this is speculative forecasting dressed as reporting, though recursive AI improvement is a real trend worth watching"
+        },
+        "gravity_details": {
+          "impact": 5.5,
+          "gravity": 5.0,
+          "signals": 5.67,
+          "quality_flags": 5.25,
+          "novelty": 4,
+          "editorial_verdict": "Speculative trend piece lacking concrete evidence; model versions appear fabricated",
+          "key_insight": "Claims about non-existent model versions (GPT-5.3-Codex, Claude Opus 4.6) suggest this is speculative forecasting dressed as reporting, though recursive AI improvement is a real trend worth watching",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "cluster",
+        "rank_score": 4.617,
+        "gravity_score": 4.25,
+        "cluster_id": "c29f4ef33cd3",
+        "coverage_bonus": 0.198,
+        "entropy_bonus": 0.06,
+        "confidence_bonus": 0.109,
+        "domain_entropy": 1.0,
+        "unique_domains": 2,
+        "canonical": {
+          "title": "GitGuardian, which integrates with GitHub to offer nonhuman identity and AI agent security services, raised a $50M Series C, taking its total funding to ~$106M",
+          "url": "https://siliconangle.com/2026/02/11/gitguardian-raises-50m-expand-non-human-identity-ai-agent-security/",
+          "source": "Siliconangle",
+          "published_at": "2026-02-12T09:39:32.334865",
+          "tldr": "",
+          "key_insight": "Security vendors are rebranding around AI agent risks as the next growth vector, but this round reflects incremental expansion rather than breakthrough capability",
+          "gravity_score": 4.25
+        },
+        "related": [
+          {
+            "title": "Meridian, which uses AI to make financial modeling and spreadsheets more “predictable and auditable”, exits stealth and raised a $17M seed at a $100M valuation",
+            "url": "https://techcrunch.com/2026/02/11/meridian-ai-raises-17-million-to-remake-the-agentic-spreadsheet/",
+            "source": "Techcrunch",
+            "published_at": "2026-02-12T09:39:32.334828"
+          }
+        ],
+        "cluster_stats": {
+          "cluster_size": 2,
+          "unique_domain_count": 2,
+          "domain_entropy": 1.0,
+          "avg_pair_similarity": 0.5544993281364441,
+          "max_pair_similarity": 0.5544993281364441,
+          "cluster_confidence": 0.362915006810716,
+          "gate_mix": {
+            "merges_by_entity": 1,
+            "merges_by_bucket": 0,
+            "merges_blocked_by_time": 0
+          },
+          "shared_entities": [
+            "github",
+            "ai",
+            "series"
+          ],
+          "shared_bucket_tags": [],
+          "time_span_hours": 0.0
+        },
+        "gravity_details": {},
+        "merge_evidence": [
+          "sim=0.55+entity(ai)"
+        ],
+        "top_domains": [
+          "siliconangle.com",
+          "techcrunch.com"
+        ]
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 4.34,
+        "gravity_score": 4.34,
+        "article": {
+          "title": "xAI will be organized into four core areas: Grok's chatbot and voice products, Coding, Imagine, and Macrohard, which will build digital agents to run companies",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-11/musk-restructures-xai-s-teams-after-co-founders-exit",
+          "source": "Bloomberg",
+          "published_at": "2026-02-12T09:39:32.325550",
+          "tldr": "Elon Musk said he restructured xAI, his artificial intelligence startup, following the exit of two of its co-founders earlier this week.",
+          "key_insight": "xAI's 'Macrohard' unit signals Musk's bet on AI agents replacing human executives, a naming shot at Microsoft that reveals competitive positioning more than product readiness"
+        },
+        "gravity_details": {
+          "impact": 3.75,
+          "gravity": 4.4,
+          "signals": 5.33,
+          "quality_flags": 3.5,
+          "novelty": 5,
+          "editorial_verdict": "Organizational news with strategic implications but thin on execution details",
+          "key_insight": "xAI's 'Macrohard' unit signals Musk's bet on AI agents replacing human executives, a naming shot at Microsoft that reveals competitive positioning more than product readiness",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 4.3,
+        "gravity_score": 4.3,
+        "article": {
+          "title": "KPMG citing PitchBook data: UK fintech investment totaled almost $11B in 2025 across 418 deals, down from ~$13.4B in 2024 across 527 deals; Revolut raised ~$4B",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-11/uk-fintech-funding-fell-21-last-year-hitting-lowest-since-2020",
+          "source": "Bloomberg",
+          "published_at": "2026-02-12T09:39:32.335128",
+          "tldr": "Investment in the UK financial technology world plummeted by more than 20% last year to the lowest levels since the start of the Covid-19 pandemic, as backers hesitated on macroeconomic risks and flocked to US opportunities.",
+          "key_insight": "UK fintech investment declined ~18% YoY in deal value despite Revolut's outsized $4B raise, suggesting underlying market contraction masked by one mega-deal"
+        },
+        "gravity_details": {
+          "impact": 4.25,
+          "gravity": 4.0,
+          "signals": 5.0,
+          "quality_flags": 2.25,
+          "novelty": 4,
+          "editorial_verdict": "Standard data point useful for trend tracking but not breaking news",
+          "key_insight": "UK fintech investment declined ~18% YoY in deal value despite Revolut's outsized $4B raise, suggesting underlying market contraction masked by one mega-deal",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "cluster",
+        "rank_score": 3.807,
+        "gravity_score": 3.44,
+        "cluster_id": "12cbb2da4815",
+        "coverage_bonus": 0.198,
+        "entropy_bonus": 0.06,
+        "confidence_bonus": 0.109,
+        "domain_entropy": 1.0,
+        "unique_domains": 2,
+        "canonical": {
+          "title": "Elon Musk announces an xAI reorganization that “required parting ways with some people”, after two xAI co-founders announced they were leaving this week",
+          "url": "https://www.cnbc.com/2026/02/11/musk-announces-xai-re-org-following-key-departures-spacex-merger.html",
+          "source": "Cnbc",
+          "published_at": "2026-02-12T09:39:32.325432",
+          "tldr": "SpaceX CEO Elon Musk on Wednesday announced that the company's xAI artificial intelligence venture implemented a reorganization that \"required parting ways with some people.\" The overhaul was done \"to improve speed of execution,\" Musk said in a post on X.",
+          "key_insight": "Musk reframes known co-founder exits as proactive 'reorganization' rather than talent loss, but offers no specifics on xAI's direction",
+          "gravity_score": 3.44
+        },
+        "related": [
+          {
+            "title": "xAI all-hands meeting: Elon Musk told employees that xAI needs a factory on the moon to build AI satellites and a massive catapult to launch them into space",
+            "url": "https://www.nytimes.com/2026/02/10/technology/elon-musk-lunar-factory.html",
+            "source": "Nytimes",
+            "published_at": "2026-02-12T09:39:32.325587"
+          }
+        ],
+        "cluster_stats": {
+          "cluster_size": 2,
+          "unique_domain_count": 2,
+          "domain_entropy": 1.0,
+          "avg_pair_similarity": 0.5836735963821411,
+          "max_pair_similarity": 0.5836735963821411,
+          "cluster_confidence": 0.362915006810716,
+          "gate_mix": {
+            "merges_by_entity": 1,
+            "merges_by_bucket": 0,
+            "merges_blocked_by_time": 0
+          },
+          "shared_entities": [
+            "elon",
+            "ai",
+            "musk"
+          ],
+          "shared_bucket_tags": [],
+          "time_span_hours": 0.0
+        },
+        "gravity_details": {},
+        "merge_evidence": [
+          "sim=0.58+entity(musk)"
+        ],
+        "top_domains": [
+          "cnbc.com",
+          "nytimes.com"
+        ]
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 3.51,
+        "gravity_score": 3.51,
+        "article": {
+          "title": "London-based commerce and payments infrastructure provider Rezolve Ai agrees to acquire London-based cashback rewards company Reward for $230M",
+          "url": "https://www.pymnts.com/acquisitions/2026/rezolve-ai-acquires-reward-to-bolster-ai-commerce-strategy/",
+          "source": "Pymnts",
+          "published_at": "2026-02-12T09:39:32.334754",
+          "tldr": "Commerce and payments infrastructure provider Rezolve Ai has acquired U.K.-based cash-back rewards company Reward. The $230 million deal, announced Wednesday (Feb. 11), is designed to bolster Rezolve’s AI commerce platform with Reward’s “live enterprise” retail and banking deployments.",
+          "key_insight": "Rezolve AI's $230M acquisition of Reward signals consolidation in embedded finance as AI commerce platforms seek to own loyalty/rewards data moats"
+        },
+        "gravity_details": {
+          "impact": 3.5,
+          "gravity": 3.6,
+          "signals": 4.33,
+          "quality_flags": 4.0,
+          "novelty": 5,
+          "editorial_verdict": "Standard M&A announcement with limited strategic detail—solid business news but no transformative insight",
+          "key_insight": "Rezolve AI's $230M acquisition of Reward signals consolidation in embedded finance as AI commerce platforms seek to own loyalty/rewards data moats",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 3.5,
+        "gravity_score": 3.5,
+        "article": {
+          "title": "Z.ai launches GLM-5, its flagship open-weight model, saying it has best-in-class performance among open-source models in reasoning, coding, and agentic tasks",
+          "url": "https://z.ai/blog/glm-5",
+          "source": "Z",
+          "published_at": "2026-02-12T09:39:32.326057",
+          "tldr": "",
+          "key_insight": "Chinese AI lab Z.ai releases GLM-5 with unverified 'best-in-class' claims; significance depends on independent benchmark validation"
+        },
+        "gravity_details": {
+          "impact": 3.75,
+          "gravity": 4.6,
+          "signals": 4.67,
+          "quality_flags": 6.5,
+          "novelty": 5,
+          "editorial_verdict": "Thin product announcement lacking verification or technical substance",
+          "key_insight": "Chinese AI lab Z.ai releases GLM-5 with unverified 'best-in-class' claims; significance depends on independent benchmark validation",
+          "passes_novelty_gate": true
+        }
+      },
+      {
+        "item_type": "singleton",
+        "rank_score": 2.88,
+        "gravity_score": 2.88,
+        "article": {
+          "title": "Anthropic CCO Paul Smith says the startup is focused on “growing revenue” rather than “flashy headlines”, calls the software stock selloff “hyperbole”, and more",
+          "url": "https://www.cnbc.com/2026/02/11/anthropic-vs-openai-ads-spending-criticism.html",
+          "source": "Cnbc",
+          "published_at": "2026-02-12T09:39:32.334942",
+          "tldr": "Anthropic is focused on growing its business rather than making \"flashy headlines,\" its commercial chief told CNBC in a thinly-veiled swipe at rival OpenAI as the public war of words between the AI giants continues.",
+          "key_insight": "Anthropic's commercial leadership is signaling fiscal discipline and downplaying market volatility, but offers no concrete details on revenue growth, profitability timeline, or competitive positioning"
+        },
+        "gravity_details": {
+          "impact": 2.5,
+          "gravity": 3.0,
+          "signals": 4.67,
+          "quality_flags": 4.25,
+          "novelty": 3,
+          "editorial_verdict": "Executive interview with minimal substance—standard positioning statements, no new product or strategic information",
+          "key_insight": "Anthropic's commercial leadership is signaling fiscal discipline and downplaying market volatility, but offers no concrete details on revenue growth, profitability timeline, or competitive positioning",
+          "passes_novelty_gate": false
+        }
+      }
+    ]
+  }
+}

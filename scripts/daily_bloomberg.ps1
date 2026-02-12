@@ -24,7 +24,8 @@ param(
     [switch]$Verbose
 )
 
-$ErrorActionPreference = "Stop"
+# Don't use "Stop" - it treats stderr (including INFO logs) as fatal errors
+$ErrorActionPreference = "Continue"
 $ProgressPreference = "SilentlyContinue"
 
 # Paths
@@ -101,8 +102,7 @@ $RunStartTime = Get-Date
 # ============================================================================
 Log-Message "STEP 0: Pre-run integrity check..."
 
-try {
-    $IntegrityResult = python -c "
+$IntegrityResult = python -c "
 import sys
 sys.path.insert(0, '.')
 from utils.run_lock import verify_run_integrity
@@ -111,20 +111,14 @@ report.print_report()
 sys.exit(0 if report.valid else 1)
 " 2>&1
 
-    if ($LASTEXITCODE -ne 0) {
-        $ErrorOutput = $IntegrityResult | Out-String
-        Fail-Step -StepNum 0 -StepName "Run Integrity" `
-            -ErrorMsg "Pre-run integrity check failed. HEAD must be at engine tag." `
-            -NextAction "git checkout ENGINE_v2.1 (or the correct engine tag for this experiment)"
-    }
-    
-    Log-Success "Run integrity verified"
-}
-catch {
+if ($LASTEXITCODE -ne 0) {
+    $ErrorOutput = $IntegrityResult | Out-String
     Fail-Step -StepNum 0 -StepName "Run Integrity" `
-        -ErrorMsg $_.Exception.Message `
-        -NextAction "Check that utils/run_lock.py exists and config/experiments.json is valid"
+        -ErrorMsg "Pre-run integrity check failed. HEAD must be at engine tag." `
+        -NextAction "git checkout ENGINE_v2.1 (or the correct engine tag for this experiment)"
 }
+
+Log-Success "Run integrity verified"
 
 # ============================================================================
 # STEP 1: RUN SCRAPERS (Data Collection)
@@ -132,34 +126,28 @@ catch {
 if (-not $SkipScrapers) {
     Log-Message "STEP 1: Running scrapers..."
     
-    try {
-        # Original scrapers
-        Log-Message "  Running original scrapers..."
-        python scrapers/run_all_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
-        
-        # Expanded scrapers
-        Log-Message "  Running expanded scrapers..."
-        python scrapers/run_expanded_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
-        
-        # Import scraped signals
-        Log-Message "  Importing scraped signals..."
-        python scripts/import_scraped_signals.py 2>&1 | Tee-Object -FilePath $LogFile -Append
-        
-        # High-value scrapers
-        Log-Message "  Running high-value scrapers..."
-        python scrapers/run_high_value_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
-        
-        # Insider trading
-        Log-Message "  Running insider trading scraper..."
-        python scrapers/insider_trading_scraper.py 2>&1 | Tee-Object -FilePath $LogFile -Append
-        
-        Log-Success "Scrapers complete"
-    }
-    catch {
-        Fail-Step -StepNum 1 -StepName "Scrapers" `
-            -ErrorMsg $_.Exception.Message `
-            -NextAction "Check scraper logs in $LogFile and fix the failing scraper"
-    }
+    # Original scrapers
+    Log-Message "  Running original scrapers..."
+    python scrapers/run_all_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+    # Don't fail on scraper errors - some may be down, continue with what we have
+    
+    # Expanded scrapers
+    Log-Message "  Running expanded scrapers..."
+    python scrapers/run_expanded_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+    
+    # Import scraped signals
+    Log-Message "  Importing scraped signals..."
+    python scripts/import_scraped_signals.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+    
+    # High-value scrapers
+    Log-Message "  Running high-value scrapers..."
+    python scrapers/run_high_value_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+    
+    # Insider trading
+    Log-Message "  Running insider trading scraper..."
+    python scrapers/insider_trading_scraper.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+    
+    Log-Success "Scrapers complete"
 }
 else {
     Log-Message "STEP 1: Scrapers SKIPPED (--SkipScrapers flag)"
@@ -170,12 +158,11 @@ else {
 # ============================================================================
 Log-Message "STEP 2: Rebuilding signal profiles..."
 
-try {
-    python scripts/rebuild_profiles_v2.py 2>&1 | Tee-Object -FilePath $LogFile -Append
-    Log-Success "Profiles rebuilt"
-}
-catch {
+python scripts/rebuild_profiles_v2.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+if ($LASTEXITCODE -ne 0) {
     Log-Message "Profile rebuild had warnings (non-fatal), continuing..." -Level "WARN"
+} else {
+    Log-Success "Profiles rebuilt"
 }
 
 # ============================================================================
@@ -183,13 +170,12 @@ catch {
 # ============================================================================
 Log-Message "STEP 3: Accumulating predictions and validation..."
 
-try {
-    python scripts/accumulate_predictions.py 2>&1 | Tee-Object -FilePath $LogFile -Append
-    python scripts/realtime_validator.py --entities NVDA,META,MSFT,GOOGL,AMD 2>&1 | Tee-Object -FilePath $LogFile -Append
-    Log-Success "Accumulation and validation complete"
-}
-catch {
+python scripts/accumulate_predictions.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+python scripts/realtime_validator.py --entities NVDA,META,MSFT,GOOGL,AMD 2>&1 | Tee-Object -FilePath $LogFile -Append
+if ($LASTEXITCODE -ne 0) {
     Log-Message "Accumulation/validation had warnings (non-fatal), continuing..." -Level "WARN"
+} else {
+    Log-Success "Accumulation and validation complete"
 }
 
 # ============================================================================
@@ -197,61 +183,46 @@ catch {
 # ============================================================================
 Log-Message "STEP 4: Generating forecasts and writing to ledger..."
 
-try {
-    $ForecastResult = python scripts/run_forecast_phase.py --experiment $ExperimentId 2>&1
-    $ForecastOutput = $ForecastResult | Out-String
-    Add-Content -Path $LogFile -Value $ForecastOutput -Encoding UTF8
-    
-    if ($LASTEXITCODE -ne 0) {
-        Fail-Step -StepNum 4 -StepName "Forecast Generation" `
-            -ErrorMsg "Forecast phase failed. Ledger may be incomplete." `
-            -NextAction "Check forecast phase output and fix signal/hypothesis generation"
-    }
-    
-    Log-Success "Forecasts generated and written to ledger"
-}
-catch {
+$ForecastResult = python scripts/run_forecast_phase.py --experiment $ExperimentId 2>&1
+$ForecastOutput = $ForecastResult | Out-String
+Add-Content -Path $LogFile -Value $ForecastOutput -Encoding UTF8
+
+if ($LASTEXITCODE -ne 0) {
     Fail-Step -StepNum 4 -StepName "Forecast Generation" `
-        -ErrorMsg $_.Exception.Message `
-        -NextAction "Check scripts/run_forecast_phase.py and signal/meta-signal pipeline"
+        -ErrorMsg "Forecast phase failed. Ledger may be incomplete." `
+        -NextAction "Check forecast phase output and fix signal/hypothesis generation"
 }
+
+Log-Success "Forecasts generated and written to ledger"
 
 # ============================================================================
 # STEP 5: VERIFY LEDGER INTEGRITY
 # ============================================================================
 Log-Message "STEP 5: Verifying ledger integrity..."
 
-try {
-    $VerifyResult = python scripts/verify_ledger_integrity.py --experiment $ExperimentId 2>&1
-    $VerifyOutput = $VerifyResult | Out-String
-    Add-Content -Path $LogFile -Value $VerifyOutput -Encoding UTF8
-    
-    if ($LASTEXITCODE -eq 2) {
-        Fail-Step -StepNum 5 -StepName "Ledger Verification" `
-            -ErrorMsg "Ledger file not found" `
-            -NextAction "Check that forecast phase created forecast_history.jsonl in experiment folder"
-    }
-    elseif ($LASTEXITCODE -ne 0) {
-        Fail-Step -StepNum 5 -StepName "Ledger Verification" `
-            -ErrorMsg "Ledger integrity check FAILED. Hash chain may be broken." `
-            -NextAction "Run: python scripts/verify_ledger_integrity.py --experiment $ExperimentId --repair"
-    }
-    
-    Log-Success "Ledger integrity verified"
-}
-catch {
+$VerifyResult = python scripts/verify_ledger_integrity.py --experiment $ExperimentId 2>&1
+$VerifyOutput = $VerifyResult | Out-String
+Add-Content -Path $LogFile -Value $VerifyOutput -Encoding UTF8
+
+if ($LASTEXITCODE -eq 2) {
     Fail-Step -StepNum 5 -StepName "Ledger Verification" `
-        -ErrorMsg $_.Exception.Message `
-        -NextAction "Check scripts/verify_ledger_integrity.py"
+        -ErrorMsg "Ledger file not found" `
+        -NextAction "Check that forecast phase created forecast_history.jsonl in experiment folder"
 }
+elseif ($LASTEXITCODE -ne 0) {
+    Fail-Step -StepNum 5 -StepName "Ledger Verification" `
+        -ErrorMsg "Ledger integrity check FAILED. Hash chain may be broken." `
+        -NextAction "Run: python scripts/verify_ledger_integrity.py --experiment $ExperimentId --repair"
+}
+
+Log-Success "Ledger integrity verified"
 
 # ============================================================================
 # STEP 6: VERIFY ARTIFACT CONTRACT
 # ============================================================================
 Log-Message "STEP 6: Verifying artifact contract..."
 
-try {
-    $ArtifactResult = python -c "
+$ArtifactResult = python -c "
 import sys
 sys.path.insert(0, '.')
 from utils.run_artifact_contract import verify_run_artifacts
@@ -259,30 +230,23 @@ report = verify_run_artifacts(run_date='$DateStr', experiment_id='$ExperimentId'
 report.print_report()
 sys.exit(0 if report.all_passed else 1)
 " 2>&1
-    $ArtifactOutput = $ArtifactResult | Out-String
-    Add-Content -Path $LogFile -Value $ArtifactOutput -Encoding UTF8
-    
-    if ($LASTEXITCODE -ne 0) {
-        Fail-Step -StepNum 6 -StepName "Artifact Contract" `
-            -ErrorMsg "Required artifacts missing or invalid" `
-            -NextAction "Check experiment folder: data/public/experiments/$ExperimentId/"
-    }
-    
-    Log-Success "Artifact contract verified"
-}
-catch {
+$ArtifactOutput = $ArtifactResult | Out-String
+Add-Content -Path $LogFile -Value $ArtifactOutput -Encoding UTF8
+
+if ($LASTEXITCODE -ne 0) {
     Fail-Step -StepNum 6 -StepName "Artifact Contract" `
-        -ErrorMsg $_.Exception.Message `
-        -NextAction "Check utils/run_artifact_contract.py"
+        -ErrorMsg "Required artifacts missing or invalid" `
+        -NextAction "Check experiment folder: data/public/experiments/$ExperimentId/"
 }
+
+Log-Success "Artifact contract verified"
 
 # ============================================================================
 # STEP 7: GENERATE DAILY BRIEF (Only after all verification passes)
 # ============================================================================
 Log-Message "STEP 7: Generating daily brief..."
 
-try {
-    $BriefResult = python -c "
+$BriefResult = python -c "
 import asyncio
 from modules.daily_brief import DailyBriefGenerator
 
@@ -293,34 +257,27 @@ async def main():
 
 asyncio.run(main())
 " 2>&1
-    $BriefOutput = $BriefResult | Out-String
-    Add-Content -Path $LogFile -Value $BriefOutput -Encoding UTF8
-    
-    if ($LASTEXITCODE -ne 0) {
-        Fail-Step -StepNum 7 -StepName "Daily Brief" `
-            -ErrorMsg "Daily brief generation failed" `
-            -NextAction "Check modules/daily_brief.py and LLM provider status"
-    }
-    
-    Log-Success "Daily brief generated"
-}
-catch {
+$BriefOutput = $BriefResult | Out-String
+Add-Content -Path $LogFile -Value $BriefOutput -Encoding UTF8
+
+if ($LASTEXITCODE -ne 0) {
     Fail-Step -StepNum 7 -StepName "Daily Brief" `
-        -ErrorMsg $_.Exception.Message `
-        -NextAction "Check LLM providers and daily_brief module"
+        -ErrorMsg "Daily brief generation failed" `
+        -NextAction "Check modules/daily_brief.py and LLM provider status"
 }
+
+Log-Success "Daily brief generated"
 
 # ============================================================================
 # STEP 8: DATABASE HEALTH CHECK
 # ============================================================================
 Log-Message "STEP 8: Database health check..."
 
-try {
-    python scripts/db_health_check.py 2>&1 | Tee-Object -FilePath $LogFile -Append
-    Log-Success "Health check complete"
-}
-catch {
+python scripts/db_health_check.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+if ($LASTEXITCODE -ne 0) {
     Log-Message "Health check had warnings (non-fatal)" -Level "WARN"
+} else {
+    Log-Success "Health check complete"
 }
 
 # ============================================================================
