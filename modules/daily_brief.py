@@ -151,6 +151,8 @@ class DailyBriefGenerator:
             # Stats
             "total_articles_scraped": news_data.get("total_scraped", 0),
             "total_articles_included": news_data.get("total_included", 0),
+            # Delta stats (novelty detection)
+            "delta_stats": news_data.get("delta_stats", {}),
         }
 
         # Render
@@ -213,6 +215,53 @@ class DailyBriefGenerator:
                 logger.warning("No scraped articles found for news evaluation")
                 return result
             
+            # Delta detection: filter out articles that are semantic duplicates of recent days
+            try:
+                from utils.delta_detector import DeltaDetector
+                detector = DeltaDetector(similarity_threshold=0.75)
+                
+                # Load recent articles for comparison (look back up to 3 days)
+                recent_articles = []
+                today_str = datetime.now().strftime("%Y-%m-%d")
+                
+                for days_back in range(1, 4):  # Check 1, 2, 3 days ago
+                    check_date = (datetime.now() - timedelta(days=days_back)).strftime("%Y-%m-%d")
+                    recent_news = list(data_dir.glob(f"news_signals/*_{check_date}.json"))
+                    for rf in recent_news:
+                        try:
+                            with open(rf, encoding='utf-8') as f:
+                                rd = json.load(f)
+                                if isinstance(rd, dict) and "articles" in rd:
+                                    recent_articles.extend(rd["articles"])
+                                elif isinstance(rd, list):
+                                    recent_articles.extend(rd)
+                        except Exception:
+                            pass
+                    if recent_articles:
+                        logger.debug(f"Loaded {len(recent_articles)} recent articles from {check_date}")
+                        break  # Use most recent available day
+                
+                yesterday_articles = recent_articles  # Keep variable name for compatibility
+                
+                if yesterday_articles:
+                    novel_articles, duplicate_articles = detector.find_novel_stories(
+                        all_articles, yesterday_articles
+                    )
+                    result["delta_stats"] = {
+                        "total": len(all_articles),
+                        "novel": len(novel_articles),
+                        "duplicates": len(duplicate_articles),
+                        "novelty_rate": len(novel_articles) / max(1, len(all_articles))
+                    }
+                    # Mark novel articles
+                    for article in novel_articles:
+                        article["_is_novel"] = True
+                    # Include all articles but prioritize novel ones in scoring
+                    all_articles = novel_articles + duplicate_articles
+                    logger.info(f"Delta detection: {len(novel_articles)} novel, {len(duplicate_articles)} duplicates")
+            except Exception as e:
+                logger.warning(f"Delta detection skipped: {e}")
+            
             # Pre-filter by AI relevance score if available
             scored_articles = []
             for article in all_articles:
@@ -235,7 +284,9 @@ class DailyBriefGenerator:
                         recency_boost = 0.5
                 except:
                     recency_boost = 0.5
-                article["_combined_score"] = article["_relevance"] * 0.6 + recency_boost * 0.4
+                # Boost novel articles (not duplicates from yesterday)
+                novelty_boost = 0.2 if article.get("_is_novel", False) else 0.0
+                article["_combined_score"] = article["_relevance"] * 0.5 + recency_boost * 0.3 + novelty_boost
             
             # Sort by combined score
             scored_articles.sort(key=lambda x: x.get("_combined_score", 0), reverse=True)

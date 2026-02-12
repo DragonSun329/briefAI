@@ -36,16 +36,18 @@ def get_cellcog_client() -> Optional[Any]:
     if not CELLCOG_AVAILABLE:
         return None
     
+    # Check for API key in environment or .env file
     api_key = os.environ.get('CELLCOG_API_KEY')
     
     if not api_key:
-        # Check .env file
+        # Load from .env file into environment
         env_file = Path(__file__).parent.parent / ".env"
         if env_file.exists():
             with open(env_file) as f:
                 for line in f:
                     if line.startswith('CELLCOG_API_KEY='):
                         api_key = line.split('=', 1)[1].strip().strip('"\'')
+                        os.environ['CELLCOG_API_KEY'] = api_key
                         break
     
     if not api_key:
@@ -53,8 +55,8 @@ def get_cellcog_client() -> Optional[Any]:
         logger.info("Get your API key from: https://cellcog.ai/profile?tab=api-keys")
         return None
     
+    # SDK v1.1+ reads API key from environment automatically
     client = CellCogClient()
-    client.set_api_key(api_key)
     
     try:
         status = client.get_account_status()

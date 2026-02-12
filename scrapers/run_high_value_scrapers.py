@@ -157,6 +157,13 @@ def main():
         return len(r) if r else 0
     results["insider"] = run_scraper("INSIDER TRADING", run_insider)
     
+    # 16. CellCog Deep Research
+    def run_cellcog():
+        from scrapers.cellcog_research import run_daily_research
+        r = run_daily_research()
+        return r.get('count', 0) if isinstance(r, dict) else 0
+    results["cellcog"] = run_scraper("CELLCOG DEEP RESEARCH", run_cellcog)
+    
     # Summary
     print("\n" + "=" * 70)
     print("FINAL SUMMARY")

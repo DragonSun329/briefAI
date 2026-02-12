@@ -184,4 +184,4 @@ _SEC Form 4 data from OpenInsider — executives buying their own stock._
 
 ---
 
-_{{ total_articles_scraped }} articles scraped → {{ total_articles_included }} selected. Powered by briefAI._
+_{{ total_articles_scraped }} articles scraped → {{ total_articles_included }} selected.{% if delta_stats and delta_stats.novel %} ({{ delta_stats.novel }} novel, {{ delta_stats.duplicates }} repeats){% endif %} Powered by briefAI._
