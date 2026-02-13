@@ -15,15 +15,24 @@ from datetime import datetime
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+# Set global socket timeout (fixes feedparser hangs)
+from scrapers.scraper_timeout import run_with_timeout  # noqa: E402
+
+
+SCRAPER_TIMEOUT = 120
+
 
 def run_scraper(name: str, scraper_func):
-    """Run a scraper with error handling."""
+    """Run a scraper with error handling and hard timeout."""
     print(f"\n{'=' * 60}")
     print(f"{name}")
     print(f"{'=' * 60}")
     try:
-        result = scraper_func()
+        result = run_with_timeout(scraper_func, timeout=SCRAPER_TIMEOUT, name=name)
         return result
+    except TimeoutError as e:
+        print(f"  TIMEOUT: {e}")
+        return 0
     except Exception as e:
         print(f"  ERROR: {e}")
         return 0

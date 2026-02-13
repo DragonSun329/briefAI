@@ -12,6 +12,12 @@ from typing import Dict, Any, List
 import traceback
 import sys
 
+# Set global socket timeout BEFORE importing scrapers (fixes feedparser hangs)
+from scraper_timeout import run_with_timeout  # noqa: E402 - also sets socket default timeout
+
+# Per-scraper hard timeout in seconds
+SCRAPER_TIMEOUT = 120
+
 # Import all scrapers
 from polymarket_scraper import PolymarketScraper
 from metaculus_scraper import MetaculusScraper
@@ -69,25 +75,30 @@ class AlternativeDataRunner:
         print(f"RUNNING: {name.upper()}")
         print(f"{'='*60}")
 
-        try:
+        def _execute():
             # Handle scrapers with different constructor signatures
             if name == "huggingface":
-                scraper = scraper_class()  # HuggingFace uses api_token param
+                scraper = scraper_class()
             elif name == "us_tech_news":
                 scraper = scraper_class(output_dir=self.output_dir)
-                result = scraper.run(save=True, days_back=7)  # Last 7 days for daily runs
-                return {
-                    "status": "success",
-                    "source": name,
-                    "data": result,
-                }
+                return scraper.run(save=True, days_back=7)
             else:
                 scraper = scraper_class(output_dir=self.output_dir)
-            result = scraper.run(save=True)
+            return scraper.run(save=True)
+
+        try:
+            result = run_with_timeout(_execute, timeout=SCRAPER_TIMEOUT, name=name)
             return {
                 "status": "success",
                 "source": name,
                 "data": result,
+            }
+        except TimeoutError as e:
+            print(f"TIMEOUT in {name}: {e}")
+            return {
+                "status": "error",
+                "source": name,
+                "error": str(e),
             }
         except Exception as e:
             print(f"ERROR in {name}: {e}")

@@ -9,8 +9,14 @@ import sys
 from pathlib import Path
 from datetime import datetime, timezone
 import uuid
+import traceback
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
+
+# Set global socket timeout (fixes feedparser hangs)
+from scrapers.scraper_timeout import run_with_timeout  # noqa: E402
+
+SCRAPER_TIMEOUT = 120
 
 from utils.signal_store import SignalStore
 from utils.signal_models import (
@@ -238,11 +244,22 @@ def main():
     print(f"Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 60)
     
+    def _safe_run(name, func):
+        try:
+            return run_with_timeout(func, timeout=SCRAPER_TIMEOUT, name=name)
+        except TimeoutError as e:
+            print(f"  TIMEOUT: {e}")
+            return 0
+        except Exception as e:
+            print(f"  ERROR: {e}")
+            traceback.print_exc()
+            return 0
+
     results = {
-        "tech_news": run_tech_news_scraper(),
-        "newsletters": run_newsletter_scraper(),
-        "reddit": run_reddit_scraper(),
-        "financial": run_financial_scraper(),
+        "tech_news": _safe_run("tech_news", run_tech_news_scraper),
+        "newsletters": _safe_run("newsletters", run_newsletter_scraper),
+        "reddit": _safe_run("reddit", run_reddit_scraper),
+        "financial": _safe_run("financial", run_financial_scraper),
     }
     
     print("\n" + "=" * 60)
