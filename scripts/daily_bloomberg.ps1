@@ -239,33 +239,9 @@ elseif ($LASTEXITCODE -ne 0) {
 Log-Success "Ledger integrity verified"
 
 # ============================================================================
-# STEP 6: VERIFY ARTIFACT CONTRACT
+# STEP 6: GENERATE DAILY BRIEF
 # ============================================================================
-Log-Message "STEP 6: Verifying artifact contract..."
-
-$ArtifactResult = python -c "
-import sys
-sys.path.insert(0, '.')
-from utils.run_artifact_contract import verify_run_artifacts
-report = verify_run_artifacts(run_date='$DateStr', experiment_id='$ExperimentId')
-report.print_report()
-sys.exit(0 if report.all_passed else 1)
-" 2>&1
-$ArtifactOutput = $ArtifactResult | Out-String
-Add-Content -Path $LogFile -Value $ArtifactOutput -Encoding UTF8
-
-if ($LASTEXITCODE -ne 0) {
-    Fail-Step -StepNum 6 -StepName "Artifact Contract" `
-        -ErrorMsg "Required artifacts missing or invalid" `
-        -NextAction "Check experiment folder: data/public/experiments/$ExperimentId/"
-}
-
-Log-Success "Artifact contract verified"
-
-# ============================================================================
-# STEP 7: GENERATE DAILY BRIEF (Only after all verification passes)
-# ============================================================================
-Log-Message "STEP 7: Generating daily brief..."
+Log-Message "STEP 6: Generating daily brief..."
 
 $BriefResult = python -c "
 import asyncio
@@ -282,12 +258,36 @@ $BriefOutput = $BriefResult | Out-String
 Add-Content -Path $LogFile -Value $BriefOutput -Encoding UTF8
 
 if ($LASTEXITCODE -ne 0) {
-    Fail-Step -StepNum 7 -StepName "Daily Brief" `
+    Fail-Step -StepNum 6 -StepName "Daily Brief" `
         -ErrorMsg "Daily brief generation failed" `
         -NextAction "Check modules/daily_brief.py and LLM provider status"
 }
 
 Log-Success "Daily brief generated"
+
+# ============================================================================
+# STEP 7: VERIFY ARTIFACT CONTRACT (after all artifacts are generated)
+# ============================================================================
+Log-Message "STEP 7: Verifying artifact contract..."
+
+$ArtifactResult = python -c "
+import sys
+sys.path.insert(0, '.')
+from utils.run_artifact_contract import verify_run_artifacts
+report = verify_run_artifacts(run_date='$DateStr', experiment_id='$ExperimentId')
+report.print_report()
+sys.exit(0 if report.all_passed else 1)
+" 2>&1
+$ArtifactOutput = $ArtifactResult | Out-String
+Add-Content -Path $LogFile -Value $ArtifactOutput -Encoding UTF8
+
+if ($LASTEXITCODE -ne 0) {
+    Fail-Step -StepNum 7 -StepName "Artifact Contract" `
+        -ErrorMsg "Required artifacts missing or invalid" `
+        -NextAction "Check experiment folder: data/public/experiments/$ExperimentId/"
+}
+
+Log-Success "Artifact contract verified"
 
 # ============================================================================
 # STEP 8: DATABASE HEALTH CHECK
