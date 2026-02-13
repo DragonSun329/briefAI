@@ -103,13 +103,7 @@ def main():
         return len(r.get("federal_register", []))
     results["policy"] = run_scraper("GOV POLICY", run_policy)
     
-    # 8. China Tech
-    def run_china():
-        from scrapers.china_tech_scraper import ChinaTechScraper
-        s = ChinaTechScraper()
-        r = s.run()
-        return len(r.get("ai_articles", []))
-    results["china"] = run_scraper("CHINA TECH", run_china)
+    # 8. China Tech - REMOVED (unreliable, hangs on feeds from CN)
     
     # 9. Glassdoor (cached data)
     def run_glassdoor():
