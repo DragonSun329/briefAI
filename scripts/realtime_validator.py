@@ -22,6 +22,7 @@ from dataclasses import dataclass, field
 from loguru import logger
 
 import numpy as np
+import pandas as pd
 
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -214,11 +215,25 @@ class RealtimeValidator:
             stock = yf.Ticker(ticker)
             hist = stock.history(period=period)
             
-            if hist.empty:
+            if hist is None or hist.empty:
                 logger.warning(f"No data for {ticker}")
                 return {}
             
+            # Handle MultiIndex columns (yfinance >= 1.0 sometimes returns these)
+            if isinstance(hist.columns, pd.MultiIndex):
+                hist.columns = hist.columns.get_level_values(0)
+            
+            # Verify required columns exist
+            required_cols = ['Close', 'Volume']
+            for col in required_cols:
+                if col not in hist.columns:
+                    logger.warning(f"Missing column '{col}' for {ticker}, columns: {hist.columns.tolist()}")
+                    return {}
+            
             current_price = hist['Close'].iloc[-1]
+            if current_price is None or (hasattr(current_price, '__float__') and np.isnan(float(current_price))):
+                logger.warning(f"Invalid price data for {ticker}")
+                return {}
             
             # Calculate price changes
             changes = {}
@@ -947,12 +962,17 @@ async def main():
     print("\n" + "=" * 60)
     print("VALIDATION SUMMARY")
     print("=" * 60)
-    print(f"Total Entities: {report['total_entities']}")
-    print(f"Average Score: {report['summary']['average_validation_score']:.1%}")
-    print(f"Direction Aligned: {report['summary']['direction_aligned_pct']:.1f}%")
-    print(f"Technical Confirmed: {report['summary']['technical_confirmed_pct']:.1f}%")
-    print(f"\nGrade Distribution: {report['grade_distribution']}")
-    print(f"\nReport saved to: {output_path}")
+    if 'error' in report:
+        print(f"Error: {report['error']}")
+    else:
+        print(f"Total Entities: {report.get('total_entities', 0)}")
+        summary = report.get('summary', {})
+        print(f"Average Score: {summary.get('average_validation_score', 0):.1%}")
+        print(f"Direction Aligned: {summary.get('direction_aligned_pct', 0):.1f}%")
+        print(f"Technical Confirmed: {summary.get('technical_confirmed_pct', 0):.1f}%")
+        print(f"\nGrade Distribution: {report.get('grade_distribution', {})}")
+        if output_path:
+            print(f"\nReport saved to: {output_path}")
 
 
 if __name__ == "__main__":
