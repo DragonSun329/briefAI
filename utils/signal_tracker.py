@@ -1080,6 +1080,18 @@ class SignalTracker:
                 self._compute_metrics(signal, current_date)
                 self._update_signal_status(signal, current_date)
     
+    @staticmethod
+    def _find_recent_dual_feed(dual_feed_dir: Path, target_date: str, max_days: int = 3) -> Optional[Path]:
+        """Find the most recent dual feed file within max_days before target_date."""
+        from datetime import datetime, timedelta
+        target = datetime.strptime(target_date, "%Y-%m-%d").date()
+        for i in range(1, max_days + 1):
+            fallback_date = (target - timedelta(days=i)).strftime("%Y-%m-%d")
+            candidate = dual_feed_dir / f"dual_feed_{fallback_date}.json"
+            if candidate.exists():
+                return candidate
+        return None
+
     def process_days(
         self,
         dates: List[str],
@@ -1105,8 +1117,14 @@ class SignalTracker:
             feed_file = dual_feed_dir / f"dual_feed_{date}.json"
             
             if not feed_file.exists():
-                logger.warning(f"No dual feed for {date}, skipping")
-                continue
+                # Fallback: find most recent dual feed within 3 days
+                fallback_file = self._find_recent_dual_feed(dual_feed_dir, date, max_days=3)
+                if fallback_file:
+                    logger.warning(f"No dual feed for {date}, using fallback: {fallback_file.name}")
+                    feed_file = fallback_file
+                else:
+                    logger.warning(f"No dual feed for {date} and no recent fallback, skipping")
+                    continue
             
             try:
                 with open(feed_file, 'r', encoding='utf-8') as f:

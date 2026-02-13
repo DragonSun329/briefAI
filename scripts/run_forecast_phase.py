@@ -61,7 +61,18 @@ def run_signal_generation(target_date: str, verbose: bool = False) -> Tuple[bool
         all_stats = tracker.process_days([target_date], dual_feed_dir)
         
         if not all_stats:
-            logger.warning("No signal stats returned")
+            # Check if we have existing signals we can still work with
+            active_signals = tracker.get_active_signals()
+            if active_signals:
+                logger.warning(f"No new signal stats, but {len(active_signals)} existing signals available - proceeding")
+                return True, {
+                    'signals_created': 0,
+                    'signals_updated': 0,
+                    'items_processed': 0,
+                    'fallback': True,
+                    'existing_signals': len(active_signals),
+                }
+            logger.warning("No signal stats returned and no existing signals")
             return False, {'error': 'no_stats'}
         
         stats = all_stats[-1]
