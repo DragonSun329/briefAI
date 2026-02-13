@@ -19,7 +19,7 @@
 # ============================================================================
 
 param(
-    [string]$ExperimentId = "v2_1_forward_test",
+    [string]$ExperimentId = "",
     [switch]$SkipScrapers,
     [switch]$Verbose
 )
@@ -30,6 +30,13 @@ $ProgressPreference = "SilentlyContinue"
 
 # Paths
 $ProjectRoot = "C:\Users\admin\briefAI"
+
+# Auto-detect experiment from config if not provided
+if (-not $ExperimentId) {
+    $ExpConfig = Get-Content "$ProjectRoot\config\experiments.json" -Raw | ConvertFrom-Json
+    $ExperimentId = $ExpConfig.active_experiment
+}
+
 $LogDir = "$ProjectRoot\logs"
 $DateStr = Get-Date -Format "yyyy-MM-dd"
 $LogFile = "$LogDir\daily_bloomberg_$DateStr.log"
@@ -126,26 +133,35 @@ Log-Success "Run integrity verified"
 if (-not $SkipScrapers) {
     Log-Message "STEP 1: Running scrapers..."
     
-    # Original scrapers
-    Log-Message "  Running original scrapers..."
-    python scrapers/run_all_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
-    # Don't fail on scraper errors - some may be down, continue with what we have
+    # Helper: run a command with timeout (default 120s)
+    function Run-WithTimeout {
+        param([string]$Label, [string]$Command, [int]$TimeoutSec = 120)
+        Log-Message "  $Label..."
+        $proc = Start-Process -FilePath "python" -ArgumentList ($Command -replace '^python\s+','') -NoNewWindow -PassThru -RedirectStandardOutput "$LogDir\tmp_stdout.txt" -RedirectStandardError "$LogDir\tmp_stderr.txt" -WorkingDirectory $ProjectRoot
+        if ($proc.WaitForExit($TimeoutSec * 1000)) {
+            Get-Content "$LogDir\tmp_stdout.txt" -ErrorAction SilentlyContinue | Tee-Object -FilePath $LogFile -Append
+            Get-Content "$LogDir\tmp_stderr.txt" -ErrorAction SilentlyContinue | Tee-Object -FilePath $LogFile -Append
+        } else {
+            Log-Message "  [TIMEOUT] $Label exceeded ${TimeoutSec}s - killing" -Level "WARN"
+            $proc | Stop-Process -Force
+        }
+        Remove-Item "$LogDir\tmp_stdout.txt","$LogDir\tmp_stderr.txt" -ErrorAction SilentlyContinue
+    }
+
+    # Original scrapers (timeout 180s - these hit multiple sites)
+    Run-WithTimeout "Running original scrapers" "python scrapers/run_all_scrapers.py" 180
     
     # Expanded scrapers
-    Log-Message "  Running expanded scrapers..."
-    python scrapers/run_expanded_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+    Run-WithTimeout "Running expanded scrapers" "python scrapers/run_expanded_scrapers.py" 120
     
     # Import scraped signals
-    Log-Message "  Importing scraped signals..."
-    python scripts/import_scraped_signals.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+    Run-WithTimeout "Importing scraped signals" "python scripts/import_scraped_signals.py" 60
     
     # High-value scrapers
-    Log-Message "  Running high-value scrapers..."
-    python scrapers/run_high_value_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+    Run-WithTimeout "Running high-value scrapers" "python scrapers/run_high_value_scrapers.py" 120
     
     # Insider trading
-    Log-Message "  Running insider trading scraper..."
-    python scrapers/insider_trading_scraper.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+    Run-WithTimeout "Running insider trading scraper" "python scrapers/insider_trading_scraper.py" 60
     
     Log-Success "Scrapers complete"
 }
