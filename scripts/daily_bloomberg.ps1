@@ -133,35 +133,40 @@ Log-Success "Run integrity verified"
 if (-not $SkipScrapers) {
     Log-Message "STEP 1: Running scrapers..."
     
-    # Helper: run a command with timeout (default 120s)
+    # Helper: run a python script with timeout (default 120s)
     function Run-WithTimeout {
-        param([string]$Label, [string]$Command, [int]$TimeoutSec = 120)
+        param([string]$Label, [string]$ScriptPath, [int]$TimeoutSec = 120)
         Log-Message "  $Label..."
-        $proc = Start-Process -FilePath "python" -ArgumentList ($Command -replace '^python\s+','') -NoNewWindow -PassThru -RedirectStandardOutput "$LogDir\tmp_stdout.txt" -RedirectStandardError "$LogDir\tmp_stderr.txt" -WorkingDirectory $ProjectRoot
-        if ($proc.WaitForExit($TimeoutSec * 1000)) {
-            Get-Content "$LogDir\tmp_stdout.txt" -ErrorAction SilentlyContinue | Tee-Object -FilePath $LogFile -Append
-            Get-Content "$LogDir\tmp_stderr.txt" -ErrorAction SilentlyContinue | Tee-Object -FilePath $LogFile -Append
+        $tmpOut = "$LogDir\tmp_out_$([guid]::NewGuid().ToString('N').Substring(0,8)).txt"
+        $tmpErr = "$LogDir\tmp_err_$([guid]::NewGuid().ToString('N').Substring(0,8)).txt"
+        $proc = Start-Process -FilePath "python" -ArgumentList $ScriptPath -WorkingDirectory $ProjectRoot -RedirectStandardOutput $tmpOut -RedirectStandardError $tmpErr -PassThru -WindowStyle Hidden
+        $exited = $proc.WaitForExit($TimeoutSec * 1000)
+        if ($exited) {
+            if (Test-Path $tmpOut) { Get-Content $tmpOut | Tee-Object -FilePath $LogFile -Append }
+            if (Test-Path $tmpErr) { Get-Content $tmpErr | Tee-Object -FilePath $LogFile -Append }
         } else {
             Log-Message "  [TIMEOUT] $Label exceeded ${TimeoutSec}s - killing" -Level "WARN"
-            $proc | Stop-Process -Force
+            $proc | Stop-Process -Force -ErrorAction SilentlyContinue
+            # Also kill child processes
+            Get-CimInstance Win32_Process | Where-Object { $_.ParentProcessId -eq $proc.Id } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }
         }
-        Remove-Item "$LogDir\tmp_stdout.txt","$LogDir\tmp_stderr.txt" -ErrorAction SilentlyContinue
+        Remove-Item $tmpOut, $tmpErr -ErrorAction SilentlyContinue
     }
 
     # Original scrapers (timeout 180s - these hit multiple sites)
-    Run-WithTimeout "Running original scrapers" "python scrapers/run_all_scrapers.py" 180
+    Run-WithTimeout "Running original scrapers" "scrapers/run_all_scrapers.py" 180
     
     # Expanded scrapers
-    Run-WithTimeout "Running expanded scrapers" "python scrapers/run_expanded_scrapers.py" 120
+    Run-WithTimeout "Running expanded scrapers" "scrapers/run_expanded_scrapers.py" 120
     
     # Import scraped signals
-    Run-WithTimeout "Importing scraped signals" "python scripts/import_scraped_signals.py" 60
+    Run-WithTimeout "Importing scraped signals" "scripts/import_scraped_signals.py" 60
     
     # High-value scrapers
-    Run-WithTimeout "Running high-value scrapers" "python scrapers/run_high_value_scrapers.py" 120
+    Run-WithTimeout "Running high-value scrapers" "scrapers/run_high_value_scrapers.py" 120
     
     # Insider trading
-    Run-WithTimeout "Running insider trading scraper" "python scrapers/insider_trading_scraper.py" 60
+    Run-WithTimeout "Running insider trading scraper" "scrapers/insider_trading_scraper.py" 60
     
     Log-Success "Scrapers complete"
 }
