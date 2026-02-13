@@ -133,40 +133,25 @@ Log-Success "Run integrity verified"
 if (-not $SkipScrapers) {
     Log-Message "STEP 1: Running scrapers..."
     
-    # Helper: run a python script with timeout (default 120s)
-    function Run-WithTimeout {
-        param([string]$Label, [string]$ScriptPath, [int]$TimeoutSec = 120)
-        Log-Message "  $Label..."
-        $tmpOut = "$LogDir\tmp_out_$([guid]::NewGuid().ToString('N').Substring(0,8)).txt"
-        $tmpErr = "$LogDir\tmp_err_$([guid]::NewGuid().ToString('N').Substring(0,8)).txt"
-        $proc = Start-Process -FilePath "python" -ArgumentList $ScriptPath -WorkingDirectory $ProjectRoot -RedirectStandardOutput $tmpOut -RedirectStandardError $tmpErr -PassThru -WindowStyle Hidden
-        $exited = $proc.WaitForExit($TimeoutSec * 1000)
-        if ($exited) {
-            if (Test-Path $tmpOut) { Get-Content $tmpOut | Tee-Object -FilePath $LogFile -Append }
-            if (Test-Path $tmpErr) { Get-Content $tmpErr | Tee-Object -FilePath $LogFile -Append }
-        } else {
-            Log-Message "  [TIMEOUT] $Label exceeded ${TimeoutSec}s - killing" -Level "WARN"
-            $proc | Stop-Process -Force -ErrorAction SilentlyContinue
-            # Also kill child processes
-            Get-CimInstance Win32_Process | Where-Object { $_.ParentProcessId -eq $proc.Id } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }
-        }
-        Remove-Item $tmpOut, $tmpErr -ErrorAction SilentlyContinue
-    }
-
-    # Original scrapers (timeout 180s - these hit multiple sites)
-    Run-WithTimeout "Running original scrapers" "scrapers/run_all_scrapers.py" 180
+    # Original scrapers (each scraper has internal 120s daemon thread timeout via scraper_timeout.py)
+    Log-Message "  Running original scrapers..."
+    python -u scrapers/run_all_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
     
     # Expanded scrapers
-    Run-WithTimeout "Running expanded scrapers" "scrapers/run_expanded_scrapers.py" 120
+    Log-Message "  Running expanded scrapers..."
+    python -u scrapers/run_expanded_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
     
     # Import scraped signals
-    Run-WithTimeout "Importing scraped signals" "scripts/import_scraped_signals.py" 60
+    Log-Message "  Importing scraped signals..."
+    python -u scripts/import_scraped_signals.py 2>&1 | Tee-Object -FilePath $LogFile -Append
     
     # High-value scrapers
-    Run-WithTimeout "Running high-value scrapers" "scrapers/run_high_value_scrapers.py" 120
+    Log-Message "  Running high-value scrapers..."
+    python -u scrapers/run_high_value_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
     
     # Insider trading
-    Run-WithTimeout "Running insider trading scraper" "scrapers/insider_trading_scraper.py" 60
+    Log-Message "  Running insider trading scraper..."
+    python -u scrapers/insider_trading_scraper.py 2>&1 | Tee-Object -FilePath $LogFile -Append
     
     Log-Success "Scrapers complete"
 }
