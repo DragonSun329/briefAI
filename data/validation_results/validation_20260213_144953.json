@@ -1,0 +1,226 @@
+{
+  "generated_at": "2026-02-13T14:49:53.077855",
+  "total_entities": 2,
+  "summary": {
+    "average_validation_score": 0.549,
+    "direction_aligned_pct": 50.0,
+    "technical_confirmed_pct": 100.0
+  },
+  "grade_distribution": {
+    "A": 1,
+    "B": 0,
+    "C": 0,
+    "D": 0,
+    "F": 1
+  },
+  "top_validated": [
+    {
+      "entity_id": "NVDA",
+      "ticker": "NVDA",
+      "timestamp": "2026-02-13T14:49:43.954403",
+      "briefai_signal": {
+        "sentiment": 8.25,
+        "momentum": "bullish",
+        "confidence": 0.687
+      },
+      "market_reality": {
+        "current_price": 186.94000244140625,
+        "price_change_1d": "-1.64%",
+        "price_change_5d": "8.76%",
+        "price_change_20d": "2.07%"
+      },
+      "technicals": {
+        "rsi_14": 52.21,
+        "macd_histogram": 0.3657,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "0.77%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.844,
+        "grade": "A",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move",
+          "Technical confirmation (3/4)"
+        ]
+      }
+    },
+    {
+      "entity_id": "META",
+      "ticker": "META",
+      "timestamp": "2026-02-13T14:49:53.077769",
+      "briefai_signal": {
+        "sentiment": 4.64,
+        "momentum": "neutral",
+        "confidence": 0.691
+      },
+      "market_reality": {
+        "current_price": 649.8099975585938,
+        "price_change_1d": "-2.82%",
+        "price_change_5d": "-3.04%",
+        "price_change_20d": "5.57%"
+      },
+      "technicals": {
+        "rsi_14": 45.51,
+        "macd_histogram": -3.4312,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "-2.27%"
+      },
+      "validation": {
+        "direction_aligned": false,
+        "magnitude_aligned": false,
+        "technical_confirmed": true,
+        "score": 0.254,
+        "grade": "F",
+        "notes": [
+          "Neutral conditions",
+          "Weak signal but significant price move",
+          "Technical confirmation (4/4)"
+        ]
+      }
+    }
+  ],
+  "lowest_validated": [
+    {
+      "entity_id": "META",
+      "ticker": "META",
+      "timestamp": "2026-02-13T14:49:53.077769",
+      "briefai_signal": {
+        "sentiment": 4.64,
+        "momentum": "neutral",
+        "confidence": 0.691
+      },
+      "market_reality": {
+        "current_price": 649.8099975585938,
+        "price_change_1d": "-2.82%",
+        "price_change_5d": "-3.04%",
+        "price_change_20d": "5.57%"
+      },
+      "technicals": {
+        "rsi_14": 45.51,
+        "macd_histogram": -3.4312,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "-2.27%"
+      },
+      "validation": {
+        "direction_aligned": false,
+        "magnitude_aligned": false,
+        "technical_confirmed": true,
+        "score": 0.254,
+        "grade": "F",
+        "notes": [
+          "Neutral conditions",
+          "Weak signal but significant price move",
+          "Technical confirmation (4/4)"
+        ]
+      }
+    },
+    {
+      "entity_id": "NVDA",
+      "ticker": "NVDA",
+      "timestamp": "2026-02-13T14:49:43.954403",
+      "briefai_signal": {
+        "sentiment": 8.25,
+        "momentum": "bullish",
+        "confidence": 0.687
+      },
+      "market_reality": {
+        "current_price": 186.94000244140625,
+        "price_change_1d": "-1.64%",
+        "price_change_5d": "8.76%",
+        "price_change_20d": "2.07%"
+      },
+      "technicals": {
+        "rsi_14": 52.21,
+        "macd_histogram": 0.3657,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "0.77%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.844,
+        "grade": "A",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move",
+          "Technical confirmation (3/4)"
+        ]
+      }
+    }
+  ],
+  "all_results": [
+    {
+      "entity_id": "NVDA",
+      "ticker": "NVDA",
+      "timestamp": "2026-02-13T14:49:43.954403",
+      "briefai_signal": {
+        "sentiment": 8.25,
+        "momentum": "bullish",
+        "confidence": 0.687
+      },
+      "market_reality": {
+        "current_price": 186.94000244140625,
+        "price_change_1d": "-1.64%",
+        "price_change_5d": "8.76%",
+        "price_change_20d": "2.07%"
+      },
+      "technicals": {
+        "rsi_14": 52.21,
+        "macd_histogram": 0.3657,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "0.77%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.844,
+        "grade": "A",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move",
+          "Technical confirmation (3/4)"
+        ]
+      }
+    },
+    {
+      "entity_id": "META",
+      "ticker": "META",
+      "timestamp": "2026-02-13T14:49:53.077769",
+      "briefai_signal": {
+        "sentiment": 4.64,
+        "momentum": "neutral",
+        "confidence": 0.691
+      },
+      "market_reality": {
+        "current_price": 649.8099975585938,
+        "price_change_1d": "-2.82%",
+        "price_change_5d": "-3.04%",
+        "price_change_20d": "5.57%"
+      },
+      "technicals": {
+        "rsi_14": 45.51,
+        "macd_histogram": -3.4312,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "-2.27%"
+      },
+      "validation": {
+        "direction_aligned": false,
+        "magnitude_aligned": false,
+        "technical_confirmed": true,
+        "score": 0.254,
+        "grade": "F",
+        "notes": [
+          "Neutral conditions",
+          "Weak signal but significant price move",
+          "Technical confirmation (4/4)"
+        ]
+      }
+    }
+  ]
+}

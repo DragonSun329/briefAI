@@ -1,0 +1,2420 @@
+{
+  "date": "2026-02-13",
+  "generated_at": "2026-02-13T16:11:51.169907",
+  "stats": {
+    "date": "2026-02-13",
+    "items_processed": 25,
+    "signals_created": 0,
+    "signals_updated": 25,
+    "links": [
+      {
+        "cluster_id": "3e17d9fd7b6a",
+        "signal_id": "aa6175183361",
+        "signal_name": "openai & genai.mil",
+        "match_score": 0.792857142857143
+      },
+      {
+        "cluster_id": "22b6eeca0efe",
+        "signal_id": "24272477a647",
+        "signal_name": "achiam & joshua",
+        "match_score": 0.85
+      },
+      {
+        "cluster_id": "5cd6ec4835e7",
+        "signal_id": "be2c71395cd0",
+        "signal_name": "samsung & bytedance",
+        "match_score": 0.85
+      },
+      {
+        "cluster_id": "7c70324da69b",
+        "signal_id": "0e6c2bfe5040",
+        "signal_name": "zhao & haijun",
+        "match_score": 0.85
+      },
+      {
+        "cluster_id": "a66883b854a8",
+        "signal_id": "18914f8be318",
+        "signal_name": "mistral & ceo",
+        "match_score": 0.7611111111111113
+      },
+      {
+        "cluster_id": "071d3d6eacf6",
+        "signal_id": "039573f1dce2",
+        "signal_name": "meta",
+        "match_score": 0.8500000000000002
+      },
+      {
+        "cluster_id": "91b48879e52e",
+        "signal_id": "825cbeb814c9",
+        "signal_name": "red & codex",
+        "match_score": 0.75
+      },
+      {
+        "cluster_id": "fd1ac3f8bc22",
+        "signal_id": "6a420d39ba65",
+        "signal_name": "meta & algo”",
+        "match_score": 0.85
+      },
+      {
+        "cluster_id": "becf53396d0c",
+        "signal_id": "61fcec3672fa",
+        "signal_name": "lawson & jeff",
+        "match_score": 0.85
+      },
+      {
+        "cluster_id": "2e18ea07695d",
+        "signal_id": "568daf7c9ddd",
+        "signal_name": "meta & lebanon",
+        "match_score": 0.8500000000000002
+      },
+      {
+        "cluster_id": "1e4f53832c97",
+        "signal_id": "469eac2ef7c2",
+        "signal_name": "apptronik & google",
+        "match_score": 0.85
+      },
+      {
+        "cluster_id": "a7bf40a7f411",
+        "signal_id": "4a8e6e75a4de",
+        "signal_name": "wayfair & search's",
+        "match_score": 0.7357142857142858
+      },
+      {
+        "cluster_id": "7d698178ba50",
+        "signal_id": "6b7fcb81a801",
+        "signal_name": "anthropic",
+        "match_score": 0.85
+      },
+      {
+        "cluster_id": "da3359299ff0",
+        "signal_id": "ade953ae7376",
+        "signal_name": "live & lte",
+        "match_score": 0.85
+      },
+      {
+        "cluster_id": "febaca484270",
+        "signal_id": "e25ee0f99bd8",
+        "signal_name": "robinhood & chain",
+        "match_score": 0.85
+      },
+      {
+        "cluster_id": "a71ad313e045",
+        "signal_id": "60730d9c3702",
+        "signal_name": "claude & anthropic",
+        "match_score": 0.85
+      },
+      {
+        "cluster_id": "61604f98e921",
+        "signal_id": "22f7e25d7c4c",
+        "signal_name": "pelion & venture",
+        "match_score": 0.85
+      },
+      {
+        "cluster_id": "1b60de021867",
+        "signal_id": "1e36cf8e64bb",
+        "signal_name": "claude & opus",
+        "match_score": 0.8500000000000002
+      },
+      {
+        "cluster_id": "c29f4ef33cd3",
+        "signal_id": "ec1961156410",
+        "signal_name": "github & series",
+        "match_score": 0.8500000000000002
+      },
+      {
+        "cluster_id": "4cc2a4bac961",
+        "signal_id": "b164f892a7db",
+        "signal_name": "coding & grok's",
+        "match_score": 0.8500000000000002
+      },
+      {
+        "cluster_id": "48f03289e53c",
+        "signal_id": "006db888e05f",
+        "signal_name": "revolut & pitchbook",
+        "match_score": 0.8500000000000002
+      },
+      {
+        "cluster_id": "12cbb2da4815",
+        "signal_id": "ab662e303358",
+        "signal_name": "elon & musk",
+        "match_score": 0.8500000000000002
+      },
+      {
+        "cluster_id": "acfd19f32ec9",
+        "signal_id": "2796869e6613",
+        "signal_name": "rezolve & london-based",
+        "match_score": 0.85
+      },
+      {
+        "cluster_id": "7f6c18d112d5",
+        "signal_id": "9471c836c282",
+        "signal_name": "glm-5",
+        "match_score": 0.85
+      },
+      {
+        "cluster_id": "963561066585",
+        "signal_id": "9a34c8f15ffc",
+        "signal_name": "smith & anthropic",
+        "match_score": 0.85
+      }
+    ]
+  },
+  "top_signals": [
+    {
+      "signal_id": "79f88a9ab05a",
+      "name": "opus & claude",
+      "created_at": "2026-02-09T16:49:05.600103",
+      "first_seen_date": "2026-02-09",
+      "last_seen_date": "2026-02-09",
+      "status": "emerging",
+      "cluster_refs": [
+        {
+          "date": "2026-02-09",
+          "cluster_id": "1c7f09062b1b",
+          "rank_score": 7.5,
+          "gravity_score": 7.5,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Simonwillison"
+          ],
+          "domains": [
+            "simonwillison.net"
+          ],
+          "entities": [
+            "opus",
+            "claude",
+            "anthropic"
+          ],
+          "buckets": [],
+          "title": "Anthropic rolls out a fast mode for Claude Opus 4.6 in research preview, saying it offers the same model quality 2.5 times faster but costs six times more",
+          "url": "https://simonwillison.net/2026/Feb/7/claude-fast-mode/"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "1c7f09062b1b",
+          "rank_score": 7.5,
+          "gravity_score": 7.5,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Simonwillison"
+          ],
+          "domains": [
+            "simonwillison.net"
+          ],
+          "entities": [
+            "opus",
+            "claude",
+            "anthropic"
+          ],
+          "buckets": [],
+          "title": "Anthropic rolls out a fast mode for Claude Opus 4.6 in research preview, saying it offers the same model quality 2.5 times faster but costs six times more",
+          "url": "https://simonwillison.net/2026/Feb/7/claude-fast-mode/"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "1c7f09062b1b",
+          "rank_score": 7.5,
+          "gravity_score": 7.5,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Simonwillison"
+          ],
+          "domains": [
+            "simonwillison.net"
+          ],
+          "entities": [
+            "claude",
+            "anthropic",
+            "opus"
+          ],
+          "buckets": [],
+          "title": "Anthropic rolls out a fast mode for Claude Opus 4.6 in research preview, saying it offers the same model quality 2.5 times faster but costs six times more",
+          "url": "https://simonwillison.net/2026/Feb/7/claude-fast-mode/"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "1c7f09062b1b",
+          "rank_score": 7.5,
+          "gravity_score": 7.5,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Simonwillison"
+          ],
+          "domains": [
+            "simonwillison.net"
+          ],
+          "entities": [
+            "opus",
+            "claude",
+            "anthropic"
+          ],
+          "buckets": [],
+          "title": "Anthropic rolls out a fast mode for Claude Opus 4.6 in research preview, saying it offers the same model quality 2.5 times faster but costs six times more",
+          "url": "https://simonwillison.net/2026/Feb/7/claude-fast-mode/"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "1c7f09062b1b",
+          "rank_score": 7.5,
+          "gravity_score": 7.5,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Simonwillison"
+          ],
+          "domains": [
+            "simonwillison.net"
+          ],
+          "entities": [
+            "opus",
+            "claude",
+            "anthropic"
+          ],
+          "buckets": [],
+          "title": "Anthropic rolls out a fast mode for Claude Opus 4.6 in research preview, saying it offers the same model quality 2.5 times faster but costs six times more",
+          "url": "https://simonwillison.net/2026/Feb/7/claude-fast-mode/"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "1c7f09062b1b",
+          "rank_score": 7.5,
+          "gravity_score": 7.5,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Simonwillison"
+          ],
+          "domains": [
+            "simonwillison.net"
+          ],
+          "entities": [
+            "claude",
+            "opus",
+            "anthropic"
+          ],
+          "buckets": [],
+          "title": "Anthropic rolls out a fast mode for Claude Opus 4.6 in research preview, saying it offers the same model quality 2.5 times faster but costs six times more",
+          "url": "https://simonwillison.net/2026/Feb/7/claude-fast-mode/"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "1c7f09062b1b",
+          "rank_score": 7.5,
+          "gravity_score": 7.5,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Simonwillison"
+          ],
+          "domains": [
+            "simonwillison.net"
+          ],
+          "entities": [
+            "anthropic",
+            "claude",
+            "opus"
+          ],
+          "buckets": [],
+          "title": "Anthropic rolls out a fast mode for Claude Opus 4.6 in research preview, saying it offers the same model quality 2.5 times faster but costs six times more",
+          "url": "https://simonwillison.net/2026/Feb/7/claude-fast-mode/"
+        }
+      ],
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 7.5,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      },
+      "profile": {
+        "top_entities": [
+          "opus",
+          "claude",
+          "anthropic"
+        ],
+        "top_buckets": [],
+        "example_titles": [
+          "Anthropic rolls out a fast mode for Claude Opus 4.6 in research preview, saying it offers the same model quality 2.5 times faster but costs six times more"
+        ],
+        "key_insight": ""
+      },
+      "_hysteresis": {
+        "consecutive_mainstream_days": 0,
+        "consecutive_fading_weeks": 0,
+        "last_velocity": 7.0
+      }
+    },
+    {
+      "signal_id": "5049f989e692",
+      "name": "anthropic & anthropic's",
+      "created_at": "2026-02-09T16:49:05.623958",
+      "first_seen_date": "2026-02-09",
+      "last_seen_date": "2026-02-09",
+      "status": "emerging",
+      "cluster_refs": [
+        {
+          "date": "2026-02-09",
+          "cluster_id": "e3ecbb328197",
+          "rank_score": 6.0,
+          "gravity_score": 6.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Ft"
+          ],
+          "domains": [
+            "ft.com"
+          ],
+          "entities": [
+            "anthropic",
+            "anthropic's"
+          ],
+          "buckets": [],
+          "title": "How Anthropic's bet on enterprise users is paying off; sources: Anthropic's guidance to investors claims annualized revenue will exceed $30B by the end of 2026",
+          "url": "https://www.ft.com/content/a75555a6-24c3-4468-aba9-7fe12b5def31?accessToken=zwAGSjHgWEiYkdOnVVWmJMNEaNOrqX_hK13vMQ.MEQCIDs3XjaBZUL2KOnciRZbCAqqzCUwunmkYUAA6UEeFjvXAiBFV0O6hl3sd0N9NI2JjB7qlsREziD9CbdrGmwheChuAA&sharetype=gift&token=fe4f4fac-e494-4463-8bdc-4ce56416cabf"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "e3ecbb328197",
+          "rank_score": 6.0,
+          "gravity_score": 6.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Ft"
+          ],
+          "domains": [
+            "ft.com"
+          ],
+          "entities": [
+            "anthropic's",
+            "anthropic"
+          ],
+          "buckets": [],
+          "title": "How Anthropic's bet on enterprise users is paying off; sources: Anthropic's guidance to investors claims annualized revenue will exceed $30B by the end of 2026",
+          "url": "https://www.ft.com/content/a75555a6-24c3-4468-aba9-7fe12b5def31?accessToken=zwAGSjHgWEiYkdOnVVWmJMNEaNOrqX_hK13vMQ.MEQCIDs3XjaBZUL2KOnciRZbCAqqzCUwunmkYUAA6UEeFjvXAiBFV0O6hl3sd0N9NI2JjB7qlsREziD9CbdrGmwheChuAA&sharetype=gift&token=fe4f4fac-e494-4463-8bdc-4ce56416cabf"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "e3ecbb328197",
+          "rank_score": 6.0,
+          "gravity_score": 6.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Ft"
+          ],
+          "domains": [
+            "ft.com"
+          ],
+          "entities": [
+            "anthropic",
+            "anthropic's"
+          ],
+          "buckets": [],
+          "title": "How Anthropic's bet on enterprise users is paying off; sources: Anthropic's guidance to investors claims annualized revenue will exceed $30B by the end of 2026",
+          "url": "https://www.ft.com/content/a75555a6-24c3-4468-aba9-7fe12b5def31?accessToken=zwAGSjHgWEiYkdOnVVWmJMNEaNOrqX_hK13vMQ.MEQCIDs3XjaBZUL2KOnciRZbCAqqzCUwunmkYUAA6UEeFjvXAiBFV0O6hl3sd0N9NI2JjB7qlsREziD9CbdrGmwheChuAA&sharetype=gift&token=fe4f4fac-e494-4463-8bdc-4ce56416cabf"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "e3ecbb328197",
+          "rank_score": 6.0,
+          "gravity_score": 6.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Ft"
+          ],
+          "domains": [
+            "ft.com"
+          ],
+          "entities": [
+            "anthropic's",
+            "anthropic"
+          ],
+          "buckets": [],
+          "title": "How Anthropic's bet on enterprise users is paying off; sources: Anthropic's guidance to investors claims annualized revenue will exceed $30B by the end of 2026",
+          "url": "https://www.ft.com/content/a75555a6-24c3-4468-aba9-7fe12b5def31?accessToken=zwAGSjHgWEiYkdOnVVWmJMNEaNOrqX_hK13vMQ.MEQCIDs3XjaBZUL2KOnciRZbCAqqzCUwunmkYUAA6UEeFjvXAiBFV0O6hl3sd0N9NI2JjB7qlsREziD9CbdrGmwheChuAA&sharetype=gift&token=fe4f4fac-e494-4463-8bdc-4ce56416cabf"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "e3ecbb328197",
+          "rank_score": 6.0,
+          "gravity_score": 6.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Ft"
+          ],
+          "domains": [
+            "ft.com"
+          ],
+          "entities": [
+            "anthropic's",
+            "anthropic"
+          ],
+          "buckets": [],
+          "title": "How Anthropic's bet on enterprise users is paying off; sources: Anthropic's guidance to investors claims annualized revenue will exceed $30B by the end of 2026",
+          "url": "https://www.ft.com/content/a75555a6-24c3-4468-aba9-7fe12b5def31?accessToken=zwAGSjHgWEiYkdOnVVWmJMNEaNOrqX_hK13vMQ.MEQCIDs3XjaBZUL2KOnciRZbCAqqzCUwunmkYUAA6UEeFjvXAiBFV0O6hl3sd0N9NI2JjB7qlsREziD9CbdrGmwheChuAA&sharetype=gift&token=fe4f4fac-e494-4463-8bdc-4ce56416cabf"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "e3ecbb328197",
+          "rank_score": 6.0,
+          "gravity_score": 6.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Ft"
+          ],
+          "domains": [
+            "ft.com"
+          ],
+          "entities": [
+            "anthropic's",
+            "anthropic"
+          ],
+          "buckets": [],
+          "title": "How Anthropic's bet on enterprise users is paying off; sources: Anthropic's guidance to investors claims annualized revenue will exceed $30B by the end of 2026",
+          "url": "https://www.ft.com/content/a75555a6-24c3-4468-aba9-7fe12b5def31?accessToken=zwAGSjHgWEiYkdOnVVWmJMNEaNOrqX_hK13vMQ.MEQCIDs3XjaBZUL2KOnciRZbCAqqzCUwunmkYUAA6UEeFjvXAiBFV0O6hl3sd0N9NI2JjB7qlsREziD9CbdrGmwheChuAA&sharetype=gift&token=fe4f4fac-e494-4463-8bdc-4ce56416cabf"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "e3ecbb328197",
+          "rank_score": 6.0,
+          "gravity_score": 6.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Ft"
+          ],
+          "domains": [
+            "ft.com"
+          ],
+          "entities": [
+            "anthropic",
+            "anthropic's"
+          ],
+          "buckets": [],
+          "title": "How Anthropic's bet on enterprise users is paying off; sources: Anthropic's guidance to investors claims annualized revenue will exceed $30B by the end of 2026",
+          "url": "https://www.ft.com/content/a75555a6-24c3-4468-aba9-7fe12b5def31?accessToken=zwAGSjHgWEiYkdOnVVWmJMNEaNOrqX_hK13vMQ.MEQCIDs3XjaBZUL2KOnciRZbCAqqzCUwunmkYUAA6UEeFjvXAiBFV0O6hl3sd0N9NI2JjB7qlsREziD9CbdrGmwheChuAA&sharetype=gift&token=fe4f4fac-e494-4463-8bdc-4ce56416cabf"
+        }
+      ],
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 6.0,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      },
+      "profile": {
+        "top_entities": [
+          "anthropic",
+          "anthropic's"
+        ],
+        "top_buckets": [],
+        "example_titles": [
+          "How Anthropic's bet on enterprise users is paying off; sources: Anthropic's guidance to investors claims annualized revenue will exceed $30B by the end of 2026"
+        ],
+        "key_insight": ""
+      },
+      "_hysteresis": {
+        "consecutive_mainstream_days": 0,
+        "consecutive_fading_weeks": 0,
+        "last_velocity": 7.0
+      }
+    },
+    {
+      "signal_id": "aa6175183361",
+      "name": "openai & genai.mil",
+      "created_at": "2026-02-12T09:45:12.684566",
+      "first_seen_date": "2026-02-12",
+      "last_seen_date": "2026-02-13",
+      "status": "emerging",
+      "cluster_refs": [
+        {
+          "date": "2026-02-12",
+          "cluster_id": "3e17d9fd7b6a",
+          "rank_score": 7.908,
+          "gravity_score": 7.55,
+          "cluster_confidence": 0.33291500681071595,
+          "sources": [
+            "Semafor",
+            "Theinformation"
+          ],
+          "domains": [
+            "theinformation.com",
+            "semafor.com"
+          ],
+          "entities": [
+            "us",
+            "openai",
+            "genai.mil",
+            "gpt",
+            "chatgpt",
+            "slack",
+            "monday"
+          ],
+          "buckets": [],
+          "title": "Source: to catch leakers, OpenAI security staff use a custom ChatGPT with access to Slack, email, and docs that cross-references news articles with access logs",
+          "url": "https://www.theinformation.com/articles/openai-uses-chatgpt-catch-leakers"
+        },
+        {
+          "date": "2026-02-12",
+          "cluster_id": "3e17d9fd7b6a",
+          "rank_score": 7.908,
+          "gravity_score": 7.55,
+          "cluster_confidence": 0.33291500681071595,
+          "sources": [
+            "Theinformation",
+            "Semafor"
+          ],
+          "domains": [
+            "theinformation.com",
+            "semafor.com"
+          ],
+          "entities": [
+            "us",
+            "openai",
+            "genai.mil",
+            "gpt",
+            "chatgpt",
+            "slack",
+            "monday"
+          ],
+          "buckets": [],
+          "title": "Source: to catch leakers, OpenAI security staff use a custom ChatGPT with access to Slack, email, and docs that cross-references news articles with access logs",
+          "url": "https://www.theinformation.com/articles/openai-uses-chatgpt-catch-leakers"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "3e17d9fd7b6a",
+          "rank_score": 7.908,
+          "gravity_score": 7.55,
+          "cluster_confidence": 0.33291500681071595,
+          "sources": [
+            "Theinformation",
+            "Semafor"
+          ],
+          "domains": [
+            "theinformation.com",
+            "semafor.com"
+          ],
+          "entities": [
+            "us",
+            "openai",
+            "genai.mil",
+            "gpt",
+            "chatgpt",
+            "slack",
+            "monday"
+          ],
+          "buckets": [],
+          "title": "Source: to catch leakers, OpenAI security staff use a custom ChatGPT with access to Slack, email, and docs that cross-references news articles with access logs",
+          "url": "https://www.theinformation.com/articles/openai-uses-chatgpt-catch-leakers"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "3e17d9fd7b6a",
+          "rank_score": 7.908,
+          "gravity_score": 7.55,
+          "cluster_confidence": 0.33291500681071595,
+          "sources": [
+            "Theinformation",
+            "Semafor"
+          ],
+          "domains": [
+            "theinformation.com",
+            "semafor.com"
+          ],
+          "entities": [
+            "us",
+            "openai",
+            "genai.mil",
+            "gpt",
+            "chatgpt",
+            "slack",
+            "monday"
+          ],
+          "buckets": [],
+          "title": "Source: to catch leakers, OpenAI security staff use a custom ChatGPT with access to Slack, email, and docs that cross-references news articles with access logs",
+          "url": "https://www.theinformation.com/articles/openai-uses-chatgpt-catch-leakers"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "3e17d9fd7b6a",
+          "rank_score": 7.908,
+          "gravity_score": 7.55,
+          "cluster_confidence": 0.33291500681071595,
+          "sources": [
+            "Semafor",
+            "Theinformation"
+          ],
+          "domains": [
+            "theinformation.com",
+            "semafor.com"
+          ],
+          "entities": [
+            "us",
+            "openai",
+            "genai.mil",
+            "gpt",
+            "chatgpt",
+            "slack",
+            "monday"
+          ],
+          "buckets": [],
+          "title": "Source: to catch leakers, OpenAI security staff use a custom ChatGPT with access to Slack, email, and docs that cross-references news articles with access logs",
+          "url": "https://www.theinformation.com/articles/openai-uses-chatgpt-catch-leakers"
+        }
+      ],
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 2,
+        "coverage_domains_7d": 2,
+        "avg_gravity_7d": 7.55,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.592
+      },
+      "profile": {
+        "top_entities": [
+          "us",
+          "openai",
+          "genai.mil",
+          "gpt",
+          "chatgpt"
+        ],
+        "top_buckets": [],
+        "example_titles": [
+          "Source: to catch leakers, OpenAI security staff use a custom ChatGPT with access to Slack, email, and docs that cross-references news articles with access logs"
+        ],
+        "key_insight": ""
+      },
+      "_hysteresis": {
+        "consecutive_mainstream_days": 0,
+        "consecutive_fading_weeks": 0,
+        "last_velocity": 5.0
+      }
+    },
+    {
+      "signal_id": "2276848ec9cf",
+      "name": "australia's & firmus",
+      "created_at": "2026-02-09T16:49:05.638673",
+      "first_seen_date": "2026-02-09",
+      "last_seen_date": "2026-02-09",
+      "status": "emerging",
+      "cluster_refs": [
+        {
+          "date": "2026-02-09",
+          "cluster_id": "c1117b6433c0",
+          "rank_score": 5.0,
+          "gravity_score": 5.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Bloomberg"
+          ],
+          "domains": [
+            "bloomberg.com"
+          ],
+          "entities": [
+            "ai",
+            "australia's",
+            "firmus",
+            "australian",
+            "coatue"
+          ],
+          "buckets": [],
+          "title": "Blackstone and Coatue grant a $10B loan to Australian AI infrastructure startup Firmus for data center expansion, among Australia's largest private credit deals",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/blackstone-coatue-grant-10-billion-loan-to-australia-ai-firm"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "c1117b6433c0",
+          "rank_score": 5.0,
+          "gravity_score": 5.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Bloomberg"
+          ],
+          "domains": [
+            "bloomberg.com"
+          ],
+          "entities": [
+            "coatue",
+            "australia's",
+            "australian",
+            "firmus",
+            "ai"
+          ],
+          "buckets": [],
+          "title": "Blackstone and Coatue grant a $10B loan to Australian AI infrastructure startup Firmus for data center expansion, among Australia's largest private credit deals",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/blackstone-coatue-grant-10-billion-loan-to-australia-ai-firm"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "c1117b6433c0",
+          "rank_score": 5.0,
+          "gravity_score": 5.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Bloomberg"
+          ],
+          "domains": [
+            "bloomberg.com"
+          ],
+          "entities": [
+            "ai",
+            "australia's",
+            "firmus",
+            "coatue",
+            "australian"
+          ],
+          "buckets": [],
+          "title": "Blackstone and Coatue grant a $10B loan to Australian AI infrastructure startup Firmus for data center expansion, among Australia's largest private credit deals",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/blackstone-coatue-grant-10-billion-loan-to-australia-ai-firm"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "c1117b6433c0",
+          "rank_score": 5.0,
+          "gravity_score": 5.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Bloomberg"
+          ],
+          "domains": [
+            "bloomberg.com"
+          ],
+          "entities": [
+            "coatue",
+            "australian",
+            "firmus",
+            "ai",
+            "australia's"
+          ],
+          "buckets": [],
+          "title": "Blackstone and Coatue grant a $10B loan to Australian AI infrastructure startup Firmus for data center expansion, among Australia's largest private credit deals",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/blackstone-coatue-grant-10-billion-loan-to-australia-ai-firm"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "c1117b6433c0",
+          "rank_score": 5.0,
+          "gravity_score": 5.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Bloomberg"
+          ],
+          "domains": [
+            "bloomberg.com"
+          ],
+          "entities": [
+            "coatue",
+            "australian",
+            "australia's",
+            "firmus",
+            "ai"
+          ],
+          "buckets": [],
+          "title": "Blackstone and Coatue grant a $10B loan to Australian AI infrastructure startup Firmus for data center expansion, among Australia's largest private credit deals",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/blackstone-coatue-grant-10-billion-loan-to-australia-ai-firm"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "c1117b6433c0",
+          "rank_score": 5.0,
+          "gravity_score": 5.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Bloomberg"
+          ],
+          "domains": [
+            "bloomberg.com"
+          ],
+          "entities": [
+            "ai",
+            "firmus",
+            "australia's",
+            "coatue",
+            "australian"
+          ],
+          "buckets": [],
+          "title": "Blackstone and Coatue grant a $10B loan to Australian AI infrastructure startup Firmus for data center expansion, among Australia's largest private credit deals",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/blackstone-coatue-grant-10-billion-loan-to-australia-ai-firm"
+        },
+        {
+          "date": "2026-02-09",
+          "cluster_id": "c1117b6433c0",
+          "rank_score": 5.0,
+          "gravity_score": 5.0,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Bloomberg"
+          ],
+          "domains": [
+            "bloomberg.com"
+          ],
+          "entities": [
+            "ai",
+            "firmus",
+            "australia's",
+            "australian",
+            "coatue"
+          ],
+          "buckets": [],
+          "title": "Blackstone and Coatue grant a $10B loan to Australian AI infrastructure startup Firmus for data center expansion, among Australia's largest private credit deals",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-09/blackstone-coatue-grant-10-billion-loan-to-australia-ai-firm"
+        }
+      ],
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 5.0,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      },
+      "profile": {
+        "top_entities": [
+          "ai",
+          "australia's",
+          "firmus",
+          "australian",
+          "coatue"
+        ],
+        "top_buckets": [],
+        "example_titles": [
+          "Blackstone and Coatue grant a $10B loan to Australian AI infrastructure startup Firmus for data center expansion, among Australia's largest private credit deals"
+        ],
+        "key_insight": ""
+      },
+      "_hysteresis": {
+        "consecutive_mainstream_days": 0,
+        "consecutive_fading_weeks": 0,
+        "last_velocity": 7.0
+      }
+    },
+    {
+      "signal_id": "18914f8be318",
+      "name": "mistral & ceo",
+      "created_at": "2026-02-12T09:45:12.751952",
+      "first_seen_date": "2026-02-12",
+      "last_seen_date": "2026-02-13",
+      "status": "trending",
+      "cluster_refs": [
+        {
+          "date": "2026-02-12",
+          "cluster_id": "a66883b854a8",
+          "rank_score": 6.694,
+          "gravity_score": 6.26,
+          "cluster_confidence": 0.5875146483722242,
+          "sources": [
+            "T",
+            "Bloomberg"
+          ],
+          "domains": [
+            "t.co",
+            "bloomberg.com"
+          ],
+          "entities": [
+            "mistral",
+            "ceo",
+            "mensch",
+            "arr",
+            "ai",
+            "arthur",
+            "sweden",
+            "france",
+            "ecodatacenter"
+          ],
+          "buckets": [],
+          "title": "Mistral CEO Arthur Mensch says the startup's annualized revenue run rate was “north of $400M”, up from $20M a year ago, and it is set to hit $1B ARR by 2026-end",
+          "url": "https://t.co/JBh6MtDCyc"
+        },
+        {
+          "date": "2026-02-12",
+          "cluster_id": "a66883b854a8",
+          "rank_score": 6.694,
+          "gravity_score": 6.26,
+          "cluster_confidence": 0.5875146483722242,
+          "sources": [
+            "T",
+            "Bloomberg"
+          ],
+          "domains": [
+            "t.co",
+            "bloomberg.com"
+          ],
+          "entities": [
+            "mistral",
+            "ceo",
+            "mensch",
+            "arr",
+            "ai",
+            "arthur",
+            "sweden",
+            "france",
+            "ecodatacenter"
+          ],
+          "buckets": [],
+          "title": "Mistral CEO Arthur Mensch says the startup's annualized revenue run rate was “north of $400M”, up from $20M a year ago, and it is set to hit $1B ARR by 2026-end",
+          "url": "https://t.co/JBh6MtDCyc"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "a66883b854a8",
+          "rank_score": 6.694,
+          "gravity_score": 6.26,
+          "cluster_confidence": 0.5875146483722242,
+          "sources": [
+            "Bloomberg",
+            "T"
+          ],
+          "domains": [
+            "t.co",
+            "bloomberg.com"
+          ],
+          "entities": [
+            "mistral",
+            "ceo",
+            "mensch",
+            "arr",
+            "ai",
+            "arthur",
+            "sweden",
+            "france",
+            "ecodatacenter"
+          ],
+          "buckets": [],
+          "title": "Mistral CEO Arthur Mensch says the startup's annualized revenue run rate was “north of $400M”, up from $20M a year ago, and it is set to hit $1B ARR by 2026-end",
+          "url": "https://t.co/JBh6MtDCyc"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "a66883b854a8",
+          "rank_score": 6.694,
+          "gravity_score": 6.26,
+          "cluster_confidence": 0.5875146483722242,
+          "sources": [
+            "Bloomberg",
+            "T"
+          ],
+          "domains": [
+            "t.co",
+            "bloomberg.com"
+          ],
+          "entities": [
+            "mistral",
+            "ceo",
+            "mensch",
+            "arr",
+            "ai",
+            "arthur",
+            "sweden",
+            "france",
+            "ecodatacenter"
+          ],
+          "buckets": [],
+          "title": "Mistral CEO Arthur Mensch says the startup's annualized revenue run rate was “north of $400M”, up from $20M a year ago, and it is set to hit $1B ARR by 2026-end",
+          "url": "https://t.co/JBh6MtDCyc"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "a66883b854a8",
+          "rank_score": 6.694,
+          "gravity_score": 6.26,
+          "cluster_confidence": 0.5875146483722242,
+          "sources": [
+            "T",
+            "Bloomberg"
+          ],
+          "domains": [
+            "t.co",
+            "bloomberg.com"
+          ],
+          "entities": [
+            "mistral",
+            "ceo",
+            "mensch",
+            "arr",
+            "ai",
+            "arthur",
+            "sweden",
+            "france",
+            "ecodatacenter"
+          ],
+          "buckets": [],
+          "title": "Mistral CEO Arthur Mensch says the startup's annualized revenue run rate was “north of $400M”, up from $20M a year ago, and it is set to hit $1B ARR by 2026-end",
+          "url": "https://t.co/JBh6MtDCyc"
+        }
+      ],
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 2,
+        "coverage_domains_7d": 2,
+        "avg_gravity_7d": 6.26,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.655
+      },
+      "profile": {
+        "top_entities": [
+          "mistral",
+          "ceo",
+          "mensch",
+          "arr",
+          "ai"
+        ],
+        "top_buckets": [],
+        "example_titles": [
+          "Mistral CEO Arthur Mensch says the startup's annualized revenue run rate was “north of $400M”, up from $20M a year ago, and it is set to hit $1B ARR by 2026-end"
+        ],
+        "key_insight": ""
+      },
+      "_hysteresis": {
+        "consecutive_mainstream_days": 0,
+        "consecutive_fading_weeks": 0,
+        "last_velocity": 5.0
+      }
+    },
+    {
+      "signal_id": "24272477a647",
+      "name": "achiam & joshua",
+      "created_at": "2026-02-12T09:45:12.704655",
+      "first_seen_date": "2026-02-12",
+      "last_seen_date": "2026-02-13",
+      "status": "emerging",
+      "cluster_refs": [
+        {
+          "date": "2026-02-12",
+          "cluster_id": "22b6eeca0efe",
+          "rank_score": 7.08,
+          "gravity_score": 7.08,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Platformer"
+          ],
+          "domains": [
+            "platformer.news"
+          ],
+          "entities": [
+            "achiam",
+            "joshua",
+            "openai"
+          ],
+          "buckets": [],
+          "title": "Source: OpenAI disbanded its mission alignment team in recent weeks and transferred its employees; team lead Joshua Achiam will take on a “chief futurist” role",
+          "url": "https://www.platformer.news/openai-mission-alignment-team-joshua-achiam/"
+        },
+        {
+          "date": "2026-02-12",
+          "cluster_id": "22b6eeca0efe",
+          "rank_score": 7.08,
+          "gravity_score": 7.08,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Platformer"
+          ],
+          "domains": [
+            "platformer.news"
+          ],
+          "entities": [
+            "openai",
+            "joshua",
+            "achiam"
+          ],
+          "buckets": [],
+          "title": "Source: OpenAI disbanded its mission alignment team in recent weeks and transferred its employees; team lead Joshua Achiam will take on a “chief futurist” role",
+          "url": "https://www.platformer.news/openai-mission-alignment-team-joshua-achiam/"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "22b6eeca0efe",
+          "rank_score": 7.08,
+          "gravity_score": 7.08,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Platformer"
+          ],
+          "domains": [
+            "platformer.news"
+          ],
+          "entities": [
+            "openai",
+            "joshua",
+            "achiam"
+          ],
+          "buckets": [],
+          "title": "Source: OpenAI disbanded its mission alignment team in recent weeks and transferred its employees; team lead Joshua Achiam will take on a “chief futurist” role",
+          "url": "https://www.platformer.news/openai-mission-alignment-team-joshua-achiam/"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "22b6eeca0efe",
+          "rank_score": 7.08,
+          "gravity_score": 7.08,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Platformer"
+          ],
+          "domains": [
+            "platformer.news"
+          ],
+          "entities": [
+            "openai",
+            "achiam",
+            "joshua"
+          ],
+          "buckets": [],
+          "title": "Source: OpenAI disbanded its mission alignment team in recent weeks and transferred its employees; team lead Joshua Achiam will take on a “chief futurist” role",
+          "url": "https://www.platformer.news/openai-mission-alignment-team-joshua-achiam/"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "22b6eeca0efe",
+          "rank_score": 7.08,
+          "gravity_score": 7.08,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Platformer"
+          ],
+          "domains": [
+            "platformer.news"
+          ],
+          "entities": [
+            "achiam",
+            "openai",
+            "joshua"
+          ],
+          "buckets": [],
+          "title": "Source: OpenAI disbanded its mission alignment team in recent weeks and transferred its employees; team lead Joshua Achiam will take on a “chief futurist” role",
+          "url": "https://www.platformer.news/openai-mission-alignment-team-joshua-achiam/"
+        }
+      ],
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 7.08,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      },
+      "profile": {
+        "top_entities": [
+          "achiam",
+          "joshua",
+          "openai"
+        ],
+        "top_buckets": [],
+        "example_titles": [
+          "Source: OpenAI disbanded its mission alignment team in recent weeks and transferred its employees; team lead Joshua Achiam will take on a “chief futurist” role"
+        ],
+        "key_insight": ""
+      },
+      "_hysteresis": {
+        "consecutive_mainstream_days": 0,
+        "consecutive_fading_weeks": 0,
+        "last_velocity": 5.0
+      }
+    },
+    {
+      "signal_id": "825cbeb814c9",
+      "name": "red & codex",
+      "created_at": "2026-02-12T09:45:12.788222",
+      "first_seen_date": "2026-02-12",
+      "last_seen_date": "2026-02-13",
+      "status": "emerging",
+      "cluster_refs": [
+        {
+          "date": "2026-02-12",
+          "cluster_id": "91b48879e52e",
+          "rank_score": 6.597,
+          "gravity_score": 6.23,
+          "cluster_confidence": 0.362915006810716,
+          "sources": [
+            "Sources",
+            "Nytimes"
+          ],
+          "domains": [
+            "sources.news",
+            "nytimes.com"
+          ],
+          "entities": [
+            "red",
+            "codex",
+            "anthropic's",
+            "sam",
+            "bowl",
+            "code",
+            "gpt",
+            "simo",
+            "chatgpt",
+            "anthropic"
+          ],
+          "buckets": [],
+          "title": "Q&A with Fidji Simo on ChatGPT ads, OpenAI's efforts to ship a new model soon to end Sam Altman's Code Red, Anthropic's Super Bowl ads, Sora, Codex, and more",
+          "url": "https://sources.news/p/openais-fidji-simo-on-ads-in-chatgpt"
+        },
+        {
+          "date": "2026-02-12",
+          "cluster_id": "91b48879e52e",
+          "rank_score": 6.597,
+          "gravity_score": 6.23,
+          "cluster_confidence": 0.362915006810716,
+          "sources": [
+            "Nytimes",
+            "Sources"
+          ],
+          "domains": [
+            "sources.news",
+            "nytimes.com"
+          ],
+          "entities": [
+            "red",
+            "codex",
+            "anthropic's",
+            "sam",
+            "bowl",
+            "code",
+            "gpt",
+            "simo",
+            "chatgpt",
+            "anthropic"
+          ],
+          "buckets": [],
+          "title": "Q&A with Fidji Simo on ChatGPT ads, OpenAI's efforts to ship a new model soon to end Sam Altman's Code Red, Anthropic's Super Bowl ads, Sora, Codex, and more",
+          "url": "https://sources.news/p/openais-fidji-simo-on-ads-in-chatgpt"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "91b48879e52e",
+          "rank_score": 6.597,
+          "gravity_score": 6.23,
+          "cluster_confidence": 0.362915006810716,
+          "sources": [
+            "Sources",
+            "Nytimes"
+          ],
+          "domains": [
+            "sources.news",
+            "nytimes.com"
+          ],
+          "entities": [
+            "red",
+            "codex",
+            "anthropic's",
+            "sam",
+            "bowl",
+            "code",
+            "gpt",
+            "simo",
+            "chatgpt",
+            "anthropic"
+          ],
+          "buckets": [],
+          "title": "Q&A with Fidji Simo on ChatGPT ads, OpenAI's efforts to ship a new model soon to end Sam Altman's Code Red, Anthropic's Super Bowl ads, Sora, Codex, and more",
+          "url": "https://sources.news/p/openais-fidji-simo-on-ads-in-chatgpt"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "91b48879e52e",
+          "rank_score": 6.597,
+          "gravity_score": 6.23,
+          "cluster_confidence": 0.362915006810716,
+          "sources": [
+            "Nytimes",
+            "Sources"
+          ],
+          "domains": [
+            "sources.news",
+            "nytimes.com"
+          ],
+          "entities": [
+            "red",
+            "codex",
+            "anthropic's",
+            "sam",
+            "bowl",
+            "code",
+            "gpt",
+            "simo",
+            "chatgpt",
+            "anthropic"
+          ],
+          "buckets": [],
+          "title": "Q&A with Fidji Simo on ChatGPT ads, OpenAI's efforts to ship a new model soon to end Sam Altman's Code Red, Anthropic's Super Bowl ads, Sora, Codex, and more",
+          "url": "https://sources.news/p/openais-fidji-simo-on-ads-in-chatgpt"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "91b48879e52e",
+          "rank_score": 6.597,
+          "gravity_score": 6.23,
+          "cluster_confidence": 0.362915006810716,
+          "sources": [
+            "Nytimes",
+            "Sources"
+          ],
+          "domains": [
+            "sources.news",
+            "nytimes.com"
+          ],
+          "entities": [
+            "red",
+            "codex",
+            "anthropic's",
+            "sam",
+            "bowl",
+            "code",
+            "gpt",
+            "simo",
+            "chatgpt",
+            "anthropic"
+          ],
+          "buckets": [],
+          "title": "Q&A with Fidji Simo on ChatGPT ads, OpenAI's efforts to ship a new model soon to end Sam Altman's Code Red, Anthropic's Super Bowl ads, Sora, Codex, and more",
+          "url": "https://sources.news/p/openais-fidji-simo-on-ads-in-chatgpt"
+        }
+      ],
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 2,
+        "coverage_domains_7d": 2,
+        "avg_gravity_7d": 6.23,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.599
+      },
+      "profile": {
+        "top_entities": [
+          "red",
+          "codex",
+          "anthropic's",
+          "sam",
+          "bowl"
+        ],
+        "top_buckets": [],
+        "example_titles": [
+          "Q&A with Fidji Simo on ChatGPT ads, OpenAI's efforts to ship a new model soon to end Sam Altman's Code Red, Anthropic's Super Bowl ads, Sora, Codex, and more"
+        ],
+        "key_insight": ""
+      },
+      "_hysteresis": {
+        "consecutive_mainstream_days": 0,
+        "consecutive_fading_weeks": 0,
+        "last_velocity": 5.0
+      }
+    },
+    {
+      "signal_id": "be2c71395cd0",
+      "name": "samsung & bytedance",
+      "created_at": "2026-02-12T09:45:12.718442",
+      "first_seen_date": "2026-02-12",
+      "last_seen_date": "2026-02-13",
+      "status": "emerging",
+      "cluster_refs": [
+        {
+          "date": "2026-02-12",
+          "cluster_id": "5cd6ec4835e7",
+          "rank_score": 6.88,
+          "gravity_score": 6.88,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Reuters"
+          ],
+          "domains": [
+            "reuters.com"
+          ],
+          "entities": [
+            "samsung",
+            "ai",
+            "bytedance"
+          ],
+          "buckets": [],
+          "title": "Sources: ByteDance plans to produce 100K+ units of its in-house AI inference chip in 2026, is in talks with Samsung to manufacture it, before ramping up to 350K",
+          "url": "https://www.reuters.com/world/asia-pacific/bytedance-developing-ai-chip-manufacturing-talks-with-samsung-sources-say-2026-02-11/"
+        },
+        {
+          "date": "2026-02-12",
+          "cluster_id": "5cd6ec4835e7",
+          "rank_score": 6.88,
+          "gravity_score": 6.88,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Reuters"
+          ],
+          "domains": [
+            "reuters.com"
+          ],
+          "entities": [
+            "samsung",
+            "ai",
+            "bytedance"
+          ],
+          "buckets": [],
+          "title": "Sources: ByteDance plans to produce 100K+ units of its in-house AI inference chip in 2026, is in talks with Samsung to manufacture it, before ramping up to 350K",
+          "url": "https://www.reuters.com/world/asia-pacific/bytedance-developing-ai-chip-manufacturing-talks-with-samsung-sources-say-2026-02-11/"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "5cd6ec4835e7",
+          "rank_score": 6.88,
+          "gravity_score": 6.88,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Reuters"
+          ],
+          "domains": [
+            "reuters.com"
+          ],
+          "entities": [
+            "ai",
+            "samsung",
+            "bytedance"
+          ],
+          "buckets": [],
+          "title": "Sources: ByteDance plans to produce 100K+ units of its in-house AI inference chip in 2026, is in talks with Samsung to manufacture it, before ramping up to 350K",
+          "url": "https://www.reuters.com/world/asia-pacific/bytedance-developing-ai-chip-manufacturing-talks-with-samsung-sources-say-2026-02-11/"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "5cd6ec4835e7",
+          "rank_score": 6.88,
+          "gravity_score": 6.88,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Reuters"
+          ],
+          "domains": [
+            "reuters.com"
+          ],
+          "entities": [
+            "samsung",
+            "bytedance",
+            "ai"
+          ],
+          "buckets": [],
+          "title": "Sources: ByteDance plans to produce 100K+ units of its in-house AI inference chip in 2026, is in talks with Samsung to manufacture it, before ramping up to 350K",
+          "url": "https://www.reuters.com/world/asia-pacific/bytedance-developing-ai-chip-manufacturing-talks-with-samsung-sources-say-2026-02-11/"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "5cd6ec4835e7",
+          "rank_score": 6.88,
+          "gravity_score": 6.88,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Reuters"
+          ],
+          "domains": [
+            "reuters.com"
+          ],
+          "entities": [
+            "bytedance",
+            "samsung",
+            "ai"
+          ],
+          "buckets": [],
+          "title": "Sources: ByteDance plans to produce 100K+ units of its in-house AI inference chip in 2026, is in talks with Samsung to manufacture it, before ramping up to 350K",
+          "url": "https://www.reuters.com/world/asia-pacific/bytedance-developing-ai-chip-manufacturing-talks-with-samsung-sources-say-2026-02-11/"
+        }
+      ],
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 6.88,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      },
+      "profile": {
+        "top_entities": [
+          "samsung",
+          "ai",
+          "bytedance"
+        ],
+        "top_buckets": [],
+        "example_titles": [
+          "Sources: ByteDance plans to produce 100K+ units of its in-house AI inference chip in 2026, is in talks with Samsung to manufacture it, before ramping up to 350K"
+        ],
+        "key_insight": ""
+      },
+      "_hysteresis": {
+        "consecutive_mainstream_days": 0,
+        "consecutive_fading_weeks": 0,
+        "last_velocity": 5.0
+      }
+    },
+    {
+      "signal_id": "0e6c2bfe5040",
+      "name": "zhao & haijun",
+      "created_at": "2026-02-12T09:45:12.731013",
+      "first_seen_date": "2026-02-12",
+      "last_seen_date": "2026-02-13",
+      "status": "emerging",
+      "cluster_refs": [
+        {
+          "date": "2026-02-12",
+          "cluster_id": "7c70324da69b",
+          "rank_score": 6.72,
+          "gravity_score": 6.72,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Wsj"
+          ],
+          "domains": [
+            "wsj.com"
+          ],
+          "entities": [
+            "zhao",
+            "haijun",
+            "ceo"
+          ],
+          "buckets": [],
+          "title": "SMIC CEO Zhao Haijun says the industry is “a bit panicked” about the memory chip shortage, and more supply may arrive in nine months; prices are up 80%+ in 2026",
+          "url": "https://www.wsj.com/tech/smic-ceo-says-industry-panicked-about-memory-supply-shortage-f0e1aaed?st=cHRnm5&reflink=desktopwebshare_permalink"
+        },
+        {
+          "date": "2026-02-12",
+          "cluster_id": "7c70324da69b",
+          "rank_score": 6.72,
+          "gravity_score": 6.72,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Wsj"
+          ],
+          "domains": [
+            "wsj.com"
+          ],
+          "entities": [
+            "haijun",
+            "zhao",
+            "ceo"
+          ],
+          "buckets": [],
+          "title": "SMIC CEO Zhao Haijun says the industry is “a bit panicked” about the memory chip shortage, and more supply may arrive in nine months; prices are up 80%+ in 2026",
+          "url": "https://www.wsj.com/tech/smic-ceo-says-industry-panicked-about-memory-supply-shortage-f0e1aaed?st=cHRnm5&reflink=desktopwebshare_permalink"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "7c70324da69b",
+          "rank_score": 6.72,
+          "gravity_score": 6.72,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Wsj"
+          ],
+          "domains": [
+            "wsj.com"
+          ],
+          "entities": [
+            "haijun",
+            "ceo",
+            "zhao"
+          ],
+          "buckets": [],
+          "title": "SMIC CEO Zhao Haijun says the industry is “a bit panicked” about the memory chip shortage, and more supply may arrive in nine months; prices are up 80%+ in 2026",
+          "url": "https://www.wsj.com/tech/smic-ceo-says-industry-panicked-about-memory-supply-shortage-f0e1aaed?st=cHRnm5&reflink=desktopwebshare_permalink"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "7c70324da69b",
+          "rank_score": 6.72,
+          "gravity_score": 6.72,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Wsj"
+          ],
+          "domains": [
+            "wsj.com"
+          ],
+          "entities": [
+            "haijun",
+            "zhao",
+            "ceo"
+          ],
+          "buckets": [],
+          "title": "SMIC CEO Zhao Haijun says the industry is “a bit panicked” about the memory chip shortage, and more supply may arrive in nine months; prices are up 80%+ in 2026",
+          "url": "https://www.wsj.com/tech/smic-ceo-says-industry-panicked-about-memory-supply-shortage-f0e1aaed?st=cHRnm5&reflink=desktopwebshare_permalink"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "7c70324da69b",
+          "rank_score": 6.72,
+          "gravity_score": 6.72,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Wsj"
+          ],
+          "domains": [
+            "wsj.com"
+          ],
+          "entities": [
+            "ceo",
+            "haijun",
+            "zhao"
+          ],
+          "buckets": [],
+          "title": "SMIC CEO Zhao Haijun says the industry is “a bit panicked” about the memory chip shortage, and more supply may arrive in nine months; prices are up 80%+ in 2026",
+          "url": "https://www.wsj.com/tech/smic-ceo-says-industry-panicked-about-memory-supply-shortage-f0e1aaed?st=cHRnm5&reflink=desktopwebshare_permalink"
+        }
+      ],
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 6.72,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      },
+      "profile": {
+        "top_entities": [
+          "zhao",
+          "haijun",
+          "ceo"
+        ],
+        "top_buckets": [],
+        "example_titles": [
+          "SMIC CEO Zhao Haijun says the industry is “a bit panicked” about the memory chip shortage, and more supply may arrive in nine months; prices are up 80%+ in 2026"
+        ],
+        "key_insight": ""
+      },
+      "_hysteresis": {
+        "consecutive_mainstream_days": 0,
+        "consecutive_fading_weeks": 0,
+        "last_velocity": 5.0
+      }
+    },
+    {
+      "signal_id": "039573f1dce2",
+      "name": "meta",
+      "created_at": "2026-02-12T09:45:12.771147",
+      "first_seen_date": "2026-02-12",
+      "last_seen_date": "2026-02-13",
+      "status": "emerging",
+      "cluster_refs": [
+        {
+          "date": "2026-02-12",
+          "cluster_id": "071d3d6eacf6",
+          "rank_score": 6.63,
+          "gravity_score": 6.63,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Cnbc"
+          ],
+          "domains": [
+            "cnbc.com"
+          ],
+          "entities": [
+            "meta",
+            "ai"
+          ],
+          "buckets": [],
+          "title": "EssilorLuxottica says it sold over 7M Meta AI glasses in 2025, up from the 2M that the company sold in 2023 and 2024 combined",
+          "url": "https://www.cnbc.com/2026/02/11/ray-ban-maker-essilorluxottica-triples-sales-of-meta-ai-glasses.html"
+        },
+        {
+          "date": "2026-02-12",
+          "cluster_id": "071d3d6eacf6",
+          "rank_score": 6.63,
+          "gravity_score": 6.63,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Cnbc"
+          ],
+          "domains": [
+            "cnbc.com"
+          ],
+          "entities": [
+            "ai",
+            "meta"
+          ],
+          "buckets": [],
+          "title": "EssilorLuxottica says it sold over 7M Meta AI glasses in 2025, up from the 2M that the company sold in 2023 and 2024 combined",
+          "url": "https://www.cnbc.com/2026/02/11/ray-ban-maker-essilorluxottica-triples-sales-of-meta-ai-glasses.html"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "071d3d6eacf6",
+          "rank_score": 6.63,
+          "gravity_score": 6.63,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Cnbc"
+          ],
+          "domains": [
+            "cnbc.com"
+          ],
+          "entities": [
+            "ai",
+            "meta"
+          ],
+          "buckets": [],
+          "title": "EssilorLuxottica says it sold over 7M Meta AI glasses in 2025, up from the 2M that the company sold in 2023 and 2024 combined",
+          "url": "https://www.cnbc.com/2026/02/11/ray-ban-maker-essilorluxottica-triples-sales-of-meta-ai-glasses.html"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "071d3d6eacf6",
+          "rank_score": 6.63,
+          "gravity_score": 6.63,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Cnbc"
+          ],
+          "domains": [
+            "cnbc.com"
+          ],
+          "entities": [
+            "meta",
+            "ai"
+          ],
+          "buckets": [],
+          "title": "EssilorLuxottica says it sold over 7M Meta AI glasses in 2025, up from the 2M that the company sold in 2023 and 2024 combined",
+          "url": "https://www.cnbc.com/2026/02/11/ray-ban-maker-essilorluxottica-triples-sales-of-meta-ai-glasses.html"
+        },
+        {
+          "date": "2026-02-13",
+          "cluster_id": "071d3d6eacf6",
+          "rank_score": 6.63,
+          "gravity_score": 6.63,
+          "cluster_confidence": 0.3,
+          "sources": [
+            "Cnbc"
+          ],
+          "domains": [
+            "cnbc.com"
+          ],
+          "entities": [
+            "ai",
+            "meta"
+          ],
+          "buckets": [],
+          "title": "EssilorLuxottica says it sold over 7M Meta AI glasses in 2025, up from the 2M that the company sold in 2023 and 2024 combined",
+          "url": "https://www.cnbc.com/2026/02/11/ray-ban-maker-essilorluxottica-triples-sales-of-meta-ai-glasses.html"
+        }
+      ],
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 6.63,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      },
+      "profile": {
+        "top_entities": [
+          "meta",
+          "ai"
+        ],
+        "top_buckets": [],
+        "example_titles": [
+          "EssilorLuxottica says it sold over 7M Meta AI glasses in 2025, up from the 2M that the company sold in 2023 and 2024 combined"
+        ],
+        "key_insight": ""
+      },
+      "_hysteresis": {
+        "consecutive_mainstream_days": 0,
+        "consecutive_fading_weeks": 0,
+        "last_velocity": 5.0
+      }
+    }
+  ],
+  "all_signals": [
+    {
+      "signal_id": "79f88a9ab05a",
+      "name": "opus & claude",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 7.5,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      }
+    },
+    {
+      "signal_id": "5049f989e692",
+      "name": "anthropic & anthropic's",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 6.0,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      }
+    },
+    {
+      "signal_id": "aa6175183361",
+      "name": "openai & genai.mil",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 2,
+        "coverage_domains_7d": 2,
+        "avg_gravity_7d": 7.55,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.592
+      }
+    },
+    {
+      "signal_id": "2276848ec9cf",
+      "name": "australia's & firmus",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 5.0,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      }
+    },
+    {
+      "signal_id": "18914f8be318",
+      "name": "mistral & ceo",
+      "status": "trending",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 2,
+        "coverage_domains_7d": 2,
+        "avg_gravity_7d": 6.26,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.655
+      }
+    },
+    {
+      "signal_id": "24272477a647",
+      "name": "achiam & joshua",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 7.08,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "825cbeb814c9",
+      "name": "red & codex",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 2,
+        "coverage_domains_7d": 2,
+        "avg_gravity_7d": 6.23,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.599
+      }
+    },
+    {
+      "signal_id": "be2c71395cd0",
+      "name": "samsung & bytedance",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 6.88,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "0e6c2bfe5040",
+      "name": "zhao & haijun",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 6.72,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "039573f1dce2",
+      "name": "meta",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 6.63,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "6a420d39ba65",
+      "name": "meta & algo”",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 6.14,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "61fcec3672fa",
+      "name": "lawson & jeff",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 6.12,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "568daf7c9ddd",
+      "name": "meta & lebanon",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 6.05,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "469eac2ef7c2",
+      "name": "apptronik & google",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 5.78,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "4a8e6e75a4de",
+      "name": "wayfair & search's",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 5.76,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "6b7fcb81a801",
+      "name": "anthropic",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 5.6,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "ade953ae7376",
+      "name": "live & lte",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 5.48,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "e25ee0f99bd8",
+      "name": "robinhood & chain",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 5.36,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "857b24ca007e",
+      "name": "fomo",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 3.5,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      }
+    },
+    {
+      "signal_id": "60730d9c3702",
+      "name": "claude & anthropic",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 5.07,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "22f7e25d7c4c",
+      "name": "pelion & venture",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 4.9,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "1e36cf8e64bb",
+      "name": "claude & opus",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 4.84,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "ec1961156410",
+      "name": "github & series",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 2,
+        "coverage_domains_7d": 2,
+        "avg_gravity_7d": 4.25,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.599
+      }
+    },
+    {
+      "signal_id": "31dbe38d7fb1",
+      "name": "ai's & proof”",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 3.0,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      }
+    },
+    {
+      "signal_id": "5ea6131d17bb",
+      "name": "google & meta",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 3.0,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      }
+    },
+    {
+      "signal_id": "b164f892a7db",
+      "name": "coding & grok's",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 4.34,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "006db888e05f",
+      "name": "revolut & pitchbook",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 4.3,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "ab662e303358",
+      "name": "elon & musk",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 2,
+        "coverage_domains_7d": 2,
+        "avg_gravity_7d": 3.44,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.599
+      }
+    },
+    {
+      "signal_id": "2796869e6613",
+      "name": "rezolve & london-based",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 3.51,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "9471c836c282",
+      "name": "glm-5",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 3.5,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "406761560557",
+      "name": "api",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 2.0,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      }
+    },
+    {
+      "signal_id": "9a34c8f15ffc",
+      "name": "smith & anthropic",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 5,
+        "mentions_21d": 5,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 2.88,
+        "velocity": 5.0,
+        "acceleration": 1.0,
+        "confidence": 0.542
+      }
+    },
+    {
+      "signal_id": "93edcce77570",
+      "name": "alphabet & meta",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 1.5,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      }
+    },
+    {
+      "signal_id": "709bc63a75a5",
+      "name": "china",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 1.5,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      }
+    },
+    {
+      "signal_id": "a0ef26f91b56",
+      "name": "nittobo",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 1.5,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      }
+    },
+    {
+      "signal_id": "b9adcb79e600",
+      "name": "pro & apple",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 1.5,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      }
+    },
+    {
+      "signal_id": "f1d85a16f41d",
+      "name": "jeannette & fürstenberg",
+      "status": "emerging",
+      "metrics": {
+        "mentions_7d": 7,
+        "mentions_21d": 7,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 1.0,
+        "velocity": 7.0,
+        "acceleration": 0.0,
+        "confidence": 0.592
+      }
+    },
+    {
+      "signal_id": "777c5b6fbe2e",
+      "name": "Unnamed Signal",
+      "status": "weak_signal",
+      "metrics": {
+        "mentions_7d": 1,
+        "mentions_21d": 1,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 3.0,
+        "velocity": 1.0,
+        "acceleration": 0.0,
+        "confidence": 0.242
+      }
+    },
+    {
+      "signal_id": "399bf415e1ce",
+      "name": "Unnamed Signal",
+      "status": "weak_signal",
+      "metrics": {
+        "mentions_7d": 1,
+        "mentions_21d": 1,
+        "coverage_sources_7d": 1,
+        "coverage_domains_7d": 1,
+        "avg_gravity_7d": 3.0,
+        "velocity": 1.0,
+        "acceleration": 0.0,
+        "confidence": 0.242
+      }
+    }
+  ]
+}
