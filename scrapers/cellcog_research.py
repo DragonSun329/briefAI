@@ -214,33 +214,46 @@ def run_daily_research() -> Dict[str, Any]:
     today = datetime.now().strftime("%Y-%m-%d")
     results = []
     
-    # For now, just create async tasks (they'll notify when done)
-    for topic in RESEARCH_TOPICS[:3]:  # Limit to 3 for cost control
-        logger.info(f"Creating research task: {topic}")
-        result = create_research_task(client, topic)
-        if result:
+    # Run synchronous research (waits for results) for top topics
+    for topic in RESEARCH_TOPICS[:2]:  # Limit to 2 for cost/time control
+        logger.info(f"Running sync research: {topic}")
+        print(f"  Researching: {topic}...")
+        res = run_sync_research(topic)
+        if res:
             results.append({
                 'topic': topic,
-                'chat_id': result.get('chat_id'),
-                'status': 'pending'
+                'chat_id': res.get('chat_id'),
+                'status': 'completed',
+                'result': res.get('result', ''),
             })
+            print(f"  ✓ Completed: {topic}")
+        else:
+            # Fall back to async for remaining
+            logger.info(f"Sync failed, creating async task: {topic}")
+            result = create_research_task(client, topic)
+            if result:
+                results.append({
+                    'topic': topic,
+                    'chat_id': result.get('chat_id'),
+                    'status': 'pending'
+                })
     
-    # Save task info
+    # Save results
     output_file = DATA_DIR / f"research_tasks_{today}.json"
     with open(output_file, 'w') as f:
         json.dump({
             'date': today,
             'tasks': results,
-            'note': 'Results will be delivered to agent session when complete'
-        }, f, indent=2)
+        }, f, indent=2, ensure_ascii=False)
     
-    print(f"\nCreated {len(results)} research tasks")
-    print(f"Tasks saved to: {output_file}")
-    print("\nResults will be delivered to your agent session when complete.")
+    completed = sum(1 for r in results if r['status'] == 'completed')
+    print(f"\nResearch: {completed} completed, {len(results) - completed} pending")
+    print(f"Saved to: {output_file}")
     
     return {
-        'status': 'tasks_created',
+        'status': 'completed' if completed > 0 else 'tasks_created',
         'count': len(results),
+        'completed': completed,
         'tasks': results
     }
 

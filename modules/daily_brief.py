@@ -714,27 +714,32 @@ Only include articles scoring 6+. Categories: Product Launch, Funding, Partnersh
         result = {"reports": [], "insider_trades": []}
         today = date.today()
         today_str = today.isoformat()
-        # Also match patterns like "feb_2026" or "feb_9_2026"
-        month_patterns = [
-            today.strftime("%b_%Y").lower(),  # feb_2026
-            today.strftime("%b_%d_%Y").lower(),  # feb_09_2026
-            f"{today.strftime('%b').lower()}_{today.day}_{today.year}",  # feb_9_2026
-            today_str,  # 2026-02-09
-            today_str.replace("-", ""),  # 20260209
-        ]
+        # Match today and recent dates (up to 2 days back for freshness)
+        date_patterns = []
+        for days_back in range(3):  # today, yesterday, day before
+            d = today - timedelta(days=days_back)
+            d_str = d.isoformat()
+            date_patterns.append(d_str)                                    # 2026-02-14
+            date_patterns.append(d_str.replace("-", ""))                   # 20260214
+            date_patterns.append(d.strftime("%b_%d_%Y").lower())           # feb_14_2026
+            date_patterns.append(f"{d.strftime('%b').lower()}_{d.day}_{d.year}")  # feb_14_2026
+            # Note: intentionally NOT matching month-only patterns like "feb_2026"
+            # to avoid loading stale reports from earlier in the month
+        month_patterns = date_patterns  # keep variable name for downstream compat
         
         try:
-            # Load CellCog research reports
+            # Load CellCog research reports from ~/.cellcog/chats/
+            # Only match files from recent dates (not stale month-wide patterns)
             cellcog_dir = Path.home() / ".cellcog" / "chats"
             if cellcog_dir.exists():
                 for chat_dir in cellcog_dir.iterdir():
                     if chat_dir.is_dir():
                         for json_file in chat_dir.glob("*.json"):
                             try:
-                                # Check if file matches any of today's patterns
+                                # Check if file matches recent date patterns
                                 fname_lower = json_file.name.lower()
-                                matches_today = any(p in fname_lower for p in month_patterns)
-                                if not matches_today:
+                                matches_recent = any(p in fname_lower for p in month_patterns)
+                                if not matches_recent:
                                     continue
                                     
                                 with open(json_file, "r", encoding="utf-8") as f:
