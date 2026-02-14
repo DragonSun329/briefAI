@@ -177,9 +177,10 @@ class EvidenceWeights:
             'max_confidence': 0.98,
         }
         self.safety_caps = {
-            'review_required': 0.60,
+            'review_required': 0.55,  # REVIEW_REQUIRED_CAP from hypothesis engine
+            'media_only': 0.50,       # MEDIA_ONLY_CAP from hypothesis engine  
             'weakly_validated': 0.75,
-            'default': 0.95,
+            'default': 0.85,          # Lower default cap to allow real confidence variance
         }
     
     def get_metric_weight(self, metric: str) -> float:

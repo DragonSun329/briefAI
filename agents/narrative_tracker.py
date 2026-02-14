@@ -191,9 +191,9 @@ class NarrativeTrackerAgent(BaseAgent):
                 if len(mentions) < 3:
                     continue
 
-                # Build event list from mentions
+                # Build event list from mentions (cap events sent to LLM for token efficiency)
                 events = []
-                for m in mentions[:15]:  # Cap per entity
+                for m in mentions[:15]:  # Cap per entity for LLM prompt
                     events.append({
                         "title": m.title or m.source_name,
                         "source": m.source_name,
@@ -204,7 +204,8 @@ class NarrativeTrackerAgent(BaseAgent):
                 narratives.append({
                     "topic": name,
                     "events": events,
-                    "event_count": len(mentions),
+                    "event_count": len(mentions),  # Use actual mention count, not capped events
+                    "all_mentions": mentions,      # Keep full mentions for accurate analytics
                 })
 
         except Exception as e:
@@ -227,17 +228,32 @@ class NarrativeTrackerAgent(BaseAgent):
             if not events:
                 continue
 
-            # Mention volume by time window
+            # Mention volume by time window (use actual mentions, not capped events)
             now = datetime.now()
-            mentions_7d = sum(
-                1 for e in events
-                if e.get("date") and self._parse_date(e["date"]) >= now - timedelta(days=7)
-            )
-            mentions_14d = sum(
-                1 for e in events
-                if e.get("date") and self._parse_date(e["date"]) >= now - timedelta(days=14)
-            )
-            mentions_30d = len(events)
+            all_mentions = timeline.get("all_mentions", [])
+            
+            # Use actual mentions if available, otherwise fall back to events
+            if all_mentions:
+                mentions_7d = sum(
+                    1 for m in all_mentions
+                    if hasattr(m, 'date') and m.date and self._parse_date(m.date) >= now - timedelta(days=7)
+                )
+                mentions_14d = sum(
+                    1 for m in all_mentions
+                    if hasattr(m, 'date') and m.date and self._parse_date(m.date) >= now - timedelta(days=14)
+                )
+                mentions_30d = len(all_mentions)
+            else:
+                # Fallback to events (but this will still be capped)
+                mentions_7d = sum(
+                    1 for e in events
+                    if e.get("date") and self._parse_date(e["date"]) >= now - timedelta(days=7)
+                )
+                mentions_14d = sum(
+                    1 for e in events
+                    if e.get("date") and self._parse_date(e["date"]) >= now - timedelta(days=14)
+                )
+                mentions_30d = len(events)
 
             # Momentum: compare recent vs older
             if mentions_14d > 0:

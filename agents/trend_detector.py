@@ -75,9 +75,9 @@ Output as a JSON object with key "emerging_trends":
       "trend_name": "Trend Name",
       "entities": ["Entity1", "Entity2"],
       "evidence_chain": [
-        {"source_type": "arxiv", "signal": "3 papers published in 2 weeks", "date": "2024-01-15"},
-        {"source_type": "github", "signal": "new repo 500 stars in 3 days", "date": "2024-01-18"},
-        {"source_type": "news", "signal": "TechCrunch coverage", "date": "2024-01-20"}
+        {"source_type": "arxiv", "signal": "3 papers published in 2 weeks", "date": "YYYY-MM-DD"},
+        {"source_type": "github", "signal": "new repo 500 stars in 3 days", "date": "YYYY-MM-DD"},
+        {"source_type": "news", "signal": "TechCrunch coverage", "date": "YYYY-MM-DD"}
       ],
       "emergence_score": 82,
       "source_diversity": 4,
@@ -88,6 +88,8 @@ Output as a JSON object with key "emerging_trends":
     }
   ]
 }
+
+IMPORTANT: Use actual dates from the signal data, not the placeholder YYYY-MM-DD format.
 
 Keep it concise — max 5 trends, max 3 evidence items per trend.
 
@@ -467,7 +469,10 @@ class TrendDetectorAgent(BaseAgent):
 
     def _build_prompt(self, scored: List[Dict], stealth: List[Dict]) -> str:
         """Build LLM prompt from scored clusters and stealth signals."""
-        prompt_parts = ["## Emerging Signal Clusters (ranked by emergence score)\n"]
+        today = datetime.now().strftime("%Y-%m-%d")
+        prompt_parts = [f"## Emerging Signal Clusters (ranked by emergence score)\n"]
+        prompt_parts.append(f"**Analysis Date: {today}**\n")
+        prompt_parts.append("Use actual dates from the signal data in evidence chains, not placeholder dates.\n")
 
         for i, item in enumerate(scored[:15]):
             prompt_parts.append(

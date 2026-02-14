@@ -169,7 +169,7 @@ class PredictionAccumulator:
         
         # Boost confidence with conviction score
         if conviction > 7.0:
-            confidence = min(0.95, confidence + 0.1)
+            confidence = confidence + 0.1
         
         now = datetime.now()
         horizon_date = now + timedelta(days=horizon_days)
