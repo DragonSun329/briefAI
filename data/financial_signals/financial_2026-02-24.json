@@ -1,0 +1,45 @@
+{
+  "scraped_at": "2026-02-24T02:09:46.306914+00:00",
+  "sec_filings": [
+    {
+      "id": "sec_AMD_2026-02-17_8-K",
+      "signal_type": "sec_filing",
+      "entity": "AMD",
+      "ticker": "AMD",
+      "title": "AMD (AMD) files 8-K: 8-K",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=8-K",
+      "source": "sec_edgar",
+      "published_at": "2026-02-17",
+      "summary": "SEC 8-K filing by AMD",
+      "filing_type": "8-K",
+      "relevance": 1.0
+    },
+    {
+      "id": "sec_PLTR_2026-02-17_10-K",
+      "signal_type": "sec_filing",
+      "entity": "Palantir",
+      "ticker": "PLTR",
+      "title": "Palantir (PLTR) files 10-K: 10-K",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655&type=10-K",
+      "source": "sec_edgar",
+      "published_at": "2026-02-17",
+      "summary": "SEC 10-K filing by Palantir",
+      "filing_type": "10-K",
+      "relevance": 1.0
+    },
+    {
+      "id": "sec_UPST_2026-02-19_8-K",
+      "signal_type": "sec_filing",
+      "entity": "Upstart",
+      "ticker": "UPST",
+      "title": "Upstart (UPST) files 8-K: 8-K",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001647639&type=8-K",
+      "source": "sec_edgar",
+      "published_at": "2026-02-19",
+      "summary": "SEC 8-K filing by Upstart",
+      "filing_type": "8-K",
+      "relevance": 1.0
+    }
+  ],
+  "upcoming_earnings": []
+}

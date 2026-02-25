@@ -153,6 +153,10 @@ if (-not $SkipScrapers) {
     Log-Message "  Running insider trading scraper..."
     python -u scrapers/insider_trading_scraper.py 2>&1 | Tee-Object -FilePath $LogFile -Append
     
+    # Market-News Correlator (cross-references price moves with news articles)
+    Log-Message "  Running market-news correlator..."
+    python -u scrapers/market_news_correlator.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+    
     Log-Success "Scrapers complete"
 }
 else {

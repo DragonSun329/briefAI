@@ -129,7 +129,14 @@ def main():
         return len(r.get("verticals", {}))
     results["verticals"] = run_scraper("AI VERTICALS", run_verticals)
     
-    # 12. TechMeme (NEW - top tech stories)
+    # 12. Market Data: Finnhub (primary, reliable from China) — run early so prices are available
+    def run_market_data():
+        from scrapers.finnhub_scraper import run as finnhub_run
+        r = finnhub_run()
+        return len(r.get("stocks", []))
+    results["market_data"] = run_scraper("MARKET DATA (Finnhub)", run_market_data)
+    
+    # 13. TechMeme (top tech stories)
     def run_techmeme():
         from scrapers.techmeme_scraper import scrape_techmeme, save_signals
         r = scrape_techmeme()
@@ -137,7 +144,7 @@ def main():
         return len(r.get("stories", []))
     results["techmeme"] = run_scraper("TECHMEME", run_techmeme)
     
-    # 13. Twitter/X API (NEW - AI sentiment via AIsa)
+    # 14. Twitter/X API (AI sentiment via AIsa)
     def run_twitter():
         from scrapers.twitter_api_scraper import scrape_ai_twitter_signals, save_signals
         r = scrape_ai_twitter_signals()
@@ -145,15 +152,14 @@ def main():
         return len(r.get("trends", [])) + len(r.get("ai_mentions", []))
     results["twitter"] = run_scraper("TWITTER API", run_twitter)
     
-    # 14. Yahoo Finance (NEW - AI stock prices)
-    def run_yahoo():
-        from scrapers.yahoo_finance_scraper import scrape_market_signals, save_signals
-        r = scrape_market_signals()
-        save_signals(r)
-        return len(r.get("stocks", []))
-    results["yahoo_finance"] = run_scraper("YAHOO FINANCE", run_yahoo)
+    # 15. Podcasts (YouTube transcripts from top AI/tech podcasts)
+    def run_podcasts():
+        from scrapers.podcast_scraper import scrape_podcasts
+        r = scrape_podcasts(max_per_channel=2, days_back=3)
+        return len(r)
+    results["podcasts"] = run_scraper("PODCASTS", run_podcasts)
     
-    # 15. Insider Trading (OpenInsider)
+    # 16. Insider Trading (OpenInsider)
     def run_insider():
         from scrapers.insider_trading_scraper import fetch_insider_trades
         r = fetch_insider_trades()

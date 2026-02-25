@@ -38,6 +38,7 @@ from stackoverflow_scraper import StackOverflowScraper
 from yc_scraper import YCScraper
 from app_store_scraper import AppStoreScraper
 from earnings_scraper import EarningsScraper
+from blog_rss_scraper import BlogRSSScraper
 
 
 class AlternativeDataRunner:
@@ -63,6 +64,7 @@ class AlternativeDataRunner:
         "yc_companies": YCScraper,
         "app_store": AppStoreScraper,
         "earnings": EarningsScraper,
+        "blog_signals": BlogRSSScraper,
     }
 
     def __init__(self, output_dir: Path = None):

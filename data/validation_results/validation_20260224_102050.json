@@ -1,0 +1,392 @@
+{
+  "generated_at": "2026-02-24T10:20:50.285571",
+  "total_entities": 5,
+  "summary": {
+    "average_validation_score": 0.706,
+    "direction_aligned_pct": 60.0,
+    "technical_confirmed_pct": 100.0
+  },
+  "grade_distribution": {
+    "A": 3,
+    "B": 0,
+    "C": 2,
+    "D": 0,
+    "F": 0
+  },
+  "top_validated": [
+    {
+      "entity_id": "NVDA",
+      "ticker": "NVDA",
+      "timestamp": "2026-02-24T10:20:27.012350",
+      "briefai_signal": {
+        "sentiment": 7.09,
+        "momentum": "bullish",
+        "confidence": 0.687
+      },
+      "market_reality": {
+        "current_price": 191.5500030517578,
+        "price_change_1d": "0.91%",
+        "price_change_5d": "4.78%",
+        "price_change_20d": "2.07%"
+      },
+      "technicals": {
+        "rsi_14": 55.89,
+        "macd_histogram": 0.5552,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "2.76%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.844,
+        "grade": "A",
+        "notes": [
+          "Direction aligned with price action",
+          "Technical confirmation (3/4)"
+        ]
+      }
+    },
+    {
+      "entity_id": "AMD",
+      "ticker": "AMD",
+      "timestamp": "2026-02-24T10:20:50.285502",
+      "briefai_signal": {
+        "sentiment": 1.74,
+        "momentum": "bearish",
+        "confidence": 0.687
+      },
+      "market_reality": {
+        "current_price": 196.60000610351562,
+        "price_change_1d": "-1.77%",
+        "price_change_5d": "-5.17%",
+        "price_change_20d": "-24.29%"
+      },
+      "technicals": {
+        "rsi_14": 36.94,
+        "macd_histogram": -2.6441,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "-10.52%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.844,
+        "grade": "A",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move",
+          "Technical confirmation (4/4)"
+        ]
+      }
+    },
+    {
+      "entity_id": "MSFT",
+      "ticker": "MSFT",
+      "timestamp": "2026-02-24T10:20:38.920961",
+      "briefai_signal": {
+        "sentiment": 2.93,
+        "momentum": "bearish",
+        "confidence": 0.671
+      },
+      "market_reality": {
+        "current_price": 384.4700012207031,
+        "price_change_1d": "-3.21%",
+        "price_change_5d": "-3.98%",
+        "price_change_20d": "-17.30%"
+      },
+      "technicals": {
+        "rsi_14": 28.23,
+        "macd_histogram": -0.5122,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "-7.74%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.836,
+        "grade": "A",
+        "notes": [
+          "Direction aligned with price action",
+          "RSI oversold (28.2)",
+          "Technical confirmation (3/4)"
+        ]
+      }
+    }
+  ],
+  "lowest_validated": [
+    {
+      "entity_id": "GOOGL",
+      "ticker": "GOOGL",
+      "timestamp": "2026-02-24T10:20:44.857654",
+      "briefai_signal": {
+        "sentiment": 5.02,
+        "momentum": "neutral",
+        "confidence": 0.671
+      },
+      "market_reality": {
+        "current_price": 311.489990234375,
+        "price_change_1d": "-1.11%",
+        "price_change_5d": "1.89%",
+        "price_change_20d": "-5.01%"
+      },
+      "technicals": {
+        "rsi_14": 43.58,
+        "macd_histogram": -1.8679,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "-3.47%"
+      },
+      "validation": {
+        "direction_aligned": false,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.501,
+        "grade": "C",
+        "notes": [
+          "Neutral conditions",
+          "Technical confirmation (4/4)"
+        ]
+      }
+    },
+    {
+      "entity_id": "META",
+      "ticker": "META",
+      "timestamp": "2026-02-24T10:20:33.527281",
+      "briefai_signal": {
+        "sentiment": 4.59,
+        "momentum": "neutral",
+        "confidence": 0.691
+      },
+      "market_reality": {
+        "current_price": 637.25,
+        "price_change_1d": "-2.81%",
+        "price_change_5d": "-0.39%",
+        "price_change_20d": "-3.27%"
+      },
+      "technicals": {
+        "rsi_14": 44.41,
+        "macd_histogram": -4.2768,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "-4.85%"
+      },
+      "validation": {
+        "direction_aligned": false,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.507,
+        "grade": "C",
+        "notes": [
+          "Neutral conditions",
+          "Weak signal matched by small price move",
+          "Technical confirmation (4/4)"
+        ]
+      }
+    },
+    {
+      "entity_id": "MSFT",
+      "ticker": "MSFT",
+      "timestamp": "2026-02-24T10:20:38.920961",
+      "briefai_signal": {
+        "sentiment": 2.93,
+        "momentum": "bearish",
+        "confidence": 0.671
+      },
+      "market_reality": {
+        "current_price": 384.4700012207031,
+        "price_change_1d": "-3.21%",
+        "price_change_5d": "-3.98%",
+        "price_change_20d": "-17.30%"
+      },
+      "technicals": {
+        "rsi_14": 28.23,
+        "macd_histogram": -0.5122,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "-7.74%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.836,
+        "grade": "A",
+        "notes": [
+          "Direction aligned with price action",
+          "RSI oversold (28.2)",
+          "Technical confirmation (3/4)"
+        ]
+      }
+    }
+  ],
+  "all_results": [
+    {
+      "entity_id": "NVDA",
+      "ticker": "NVDA",
+      "timestamp": "2026-02-24T10:20:27.012350",
+      "briefai_signal": {
+        "sentiment": 7.09,
+        "momentum": "bullish",
+        "confidence": 0.687
+      },
+      "market_reality": {
+        "current_price": 191.5500030517578,
+        "price_change_1d": "0.91%",
+        "price_change_5d": "4.78%",
+        "price_change_20d": "2.07%"
+      },
+      "technicals": {
+        "rsi_14": 55.89,
+        "macd_histogram": 0.5552,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "2.76%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.844,
+        "grade": "A",
+        "notes": [
+          "Direction aligned with price action",
+          "Technical confirmation (3/4)"
+        ]
+      }
+    },
+    {
+      "entity_id": "META",
+      "ticker": "META",
+      "timestamp": "2026-02-24T10:20:33.527281",
+      "briefai_signal": {
+        "sentiment": 4.59,
+        "momentum": "neutral",
+        "confidence": 0.691
+      },
+      "market_reality": {
+        "current_price": 637.25,
+        "price_change_1d": "-2.81%",
+        "price_change_5d": "-0.39%",
+        "price_change_20d": "-3.27%"
+      },
+      "technicals": {
+        "rsi_14": 44.41,
+        "macd_histogram": -4.2768,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "-4.85%"
+      },
+      "validation": {
+        "direction_aligned": false,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.507,
+        "grade": "C",
+        "notes": [
+          "Neutral conditions",
+          "Weak signal matched by small price move",
+          "Technical confirmation (4/4)"
+        ]
+      }
+    },
+    {
+      "entity_id": "MSFT",
+      "ticker": "MSFT",
+      "timestamp": "2026-02-24T10:20:38.920961",
+      "briefai_signal": {
+        "sentiment": 2.93,
+        "momentum": "bearish",
+        "confidence": 0.671
+      },
+      "market_reality": {
+        "current_price": 384.4700012207031,
+        "price_change_1d": "-3.21%",
+        "price_change_5d": "-3.98%",
+        "price_change_20d": "-17.30%"
+      },
+      "technicals": {
+        "rsi_14": 28.23,
+        "macd_histogram": -0.5122,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "-7.74%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.836,
+        "grade": "A",
+        "notes": [
+          "Direction aligned with price action",
+          "RSI oversold (28.2)",
+          "Technical confirmation (3/4)"
+        ]
+      }
+    },
+    {
+      "entity_id": "GOOGL",
+      "ticker": "GOOGL",
+      "timestamp": "2026-02-24T10:20:44.857654",
+      "briefai_signal": {
+        "sentiment": 5.02,
+        "momentum": "neutral",
+        "confidence": 0.671
+      },
+      "market_reality": {
+        "current_price": 311.489990234375,
+        "price_change_1d": "-1.11%",
+        "price_change_5d": "1.89%",
+        "price_change_20d": "-5.01%"
+      },
+      "technicals": {
+        "rsi_14": 43.58,
+        "macd_histogram": -1.8679,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "-3.47%"
+      },
+      "validation": {
+        "direction_aligned": false,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.501,
+        "grade": "C",
+        "notes": [
+          "Neutral conditions",
+          "Technical confirmation (4/4)"
+        ]
+      }
+    },
+    {
+      "entity_id": "AMD",
+      "ticker": "AMD",
+      "timestamp": "2026-02-24T10:20:50.285502",
+      "briefai_signal": {
+        "sentiment": 1.74,
+        "momentum": "bearish",
+        "confidence": 0.687
+      },
+      "market_reality": {
+        "current_price": 196.60000610351562,
+        "price_change_1d": "-1.77%",
+        "price_change_5d": "-5.17%",
+        "price_change_20d": "-24.29%"
+      },
+      "technicals": {
+        "rsi_14": 36.94,
+        "macd_histogram": -2.6441,
+        "bollinger_position": "above_upper",
+        "sma_20_distance": "-10.52%"
+      },
+      "validation": {
+        "direction_aligned": true,
+        "magnitude_aligned": true,
+        "technical_confirmed": true,
+        "score": 0.844,
+        "grade": "A",
+        "notes": [
+          "Direction aligned with price action",
+          "Strong signal matched by significant price move",
+          "Technical confirmation (4/4)"
+        ]
+      }
+    }
+  ]
+}

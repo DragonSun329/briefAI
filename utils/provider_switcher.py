@@ -401,6 +401,15 @@ class ProviderSwitcher:
                         logger.error(f"[{task_name}] All providers and models exhausted!")
                         raise RuntimeError("All LLM providers exhausted")
                 else:
+                    # Check if it's a timeout — switch provider, don't retry same one
+                    err_str = str(e).lower()
+                    is_timeout = "timeout" in err_str or "timed out" in err_str
+                    if is_timeout:
+                        logger.warning(f"[{task_name}] Timeout on {self.current_provider_id}, switching provider...")
+                        next_provider = self.switch_to_next_provider()
+                        if next_provider:
+                            continue
+                        # No more providers — fall through to retry
                     # Other errors - retry with same provider
                     if attempt < max_retries - 1:
                         logger.warning(f"[{task_name}] Retrying with same provider...")

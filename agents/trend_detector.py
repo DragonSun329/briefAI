@@ -271,8 +271,128 @@ class TrendDetectorAgent(BaseAgent):
         except Exception as e:
             logger.error(f"Failed to gather signal clusters: {e}")
 
+        # Supplement with direct reads from today's scraped files
+        # This fills gaps where scraped data hasn't been imported into EntityStore
+        self._supplement_from_today_files(clusters)
+
         # Filter out entities with no mentions
         return {k: v for k, v in clusters.items() if v["total_mentions"] > 0}
+
+    def _supplement_from_today_files(self, clusters: Dict[str, Dict[str, Any]]) -> None:
+        """
+        Read today's scraped data files directly and extract entity mentions.
+        This supplements EntityStore data, which may be missing sources like
+        HackerNews, blogs, newsletters, podcasts, etc.
+        """
+        import re
+        data_dir = Path("data")
+        today = datetime.now().strftime("%Y-%m-%d")
+
+        # Known entities from EntityStore (for matching)
+        known_entities = set(clusters.keys())
+
+        # Also build a quick alias map for common entities
+        ENTITY_ALIASES = {
+            "openai": "OpenAI", "open ai": "OpenAI",
+            "anthropic": "Anthropic", "claude": "Anthropic",
+            "google": "Google/Alphabet", "deepmind": "Google/Alphabet", "gemini": "Google/Alphabet",
+            "microsoft": "Microsoft", "copilot": "Microsoft",
+            "meta": "Meta", "llama": "Meta",
+            "nvidia": "NVIDIA", "nvda": "NVIDIA",
+            "amazon": "Amazon", "aws": "Amazon",
+            "apple": "Apple",
+            "amd": "AMD",
+            "databricks": "Databricks",
+            "snowflake": "Snowflake",
+            "salesforce": "Salesforce",
+            "oracle": "Oracle",
+            "ibm": "IBM",
+            "tesla": "Tesla",
+            "palantir": "Palantir", "pltr": "Palantir",
+            "crowdstrike": "CrowdStrike", "crwd": "CrowdStrike",
+            "openclaw": "OpenClaw",
+            "mistral": "Mistral",
+            "hugging face": "Hugging Face", "huggingface": "Hugging Face",
+            "stability ai": "Stability AI",
+            "cohere": "Cohere",
+            "perplexity": "Perplexity",
+        }
+
+        # Source configs: (glob_pattern, container_key, source_type)
+        source_configs = [
+            ("alternative_signals/hackernews_*.json", "stories", "hackernews"),
+            ("alternative_signals/blog_signals_*.json", "posts", "blogs"),
+            ("alternative_signals/news_search_*.json", "articles", "news_search"),
+            ("newsletter_signals/newsletters_*.json", "posts", "newsletters"),
+            ("alternative_signals/podcasts_*.json", None, "podcasts"),
+            ("alternative_signals/arxiv_*.json", "papers", "arxiv"),
+            ("alternative_signals/reddit_*.json", "posts", "reddit"),
+        ]
+
+        for glob_pat, container_key, source_type in source_configs:
+            try:
+                files = sorted(data_dir.glob(glob_pat), reverse=True)
+                if not files:
+                    continue
+
+                with open(files[0], "r", encoding="utf-8") as f:
+                    data = json.load(f)
+
+                # Extract items
+                if container_key:
+                    items = data.get(container_key, []) if isinstance(data, dict) else data
+                else:
+                    items = data if isinstance(data, list) else []
+
+                if not isinstance(items, list):
+                    continue
+
+                # Extract entity mentions from titles
+                entity_counts: Dict[str, int] = defaultdict(int)
+                entity_titles: Dict[str, List[str]] = defaultdict(list)
+
+                for item in items:
+                    title = item.get("title", item.get("headline", item.get("name", "")))
+                    if not title:
+                        continue
+                    title_lower = title.lower()
+
+                    # Match against known aliases
+                    matched = set()
+                    for alias, canonical in ENTITY_ALIASES.items():
+                        if alias in title_lower:
+                            matched.add(canonical)
+
+                    for entity_name in matched:
+                        entity_counts[entity_name] += 1
+                        if len(entity_titles[entity_name]) < 3:
+                            entity_titles[entity_name].append(title[:100])
+
+                # Merge into clusters
+                for entity_name, count in entity_counts.items():
+                    if entity_name not in clusters:
+                        clusters[entity_name] = {
+                            "sources": defaultdict(list),
+                            "first_seen": None,
+                            "total_mentions": 0,
+                            "sentiments": [],
+                        }
+
+                    # Only add if this source type isn't already present
+                    if source_type not in clusters[entity_name]["sources"]:
+                        for t in entity_titles[entity_name]:
+                            clusters[entity_name]["sources"][source_type].append({
+                                "title": t,
+                                "date": today,
+                                "url": "",
+                                "score": count,
+                            })
+                        clusters[entity_name]["total_mentions"] += count
+
+                logger.debug(f"Trend supplement: {source_type} -> {len(entity_counts)} entities")
+
+            except Exception as e:
+                logger.debug(f"Trend supplement failed for {source_type}: {e}")
 
     def _categorize_source(self, source: str) -> str:
         """Map raw source strings to source categories."""
@@ -302,6 +422,10 @@ class TrendDetectorAgent(BaseAgent):
             "product_hunt": "product_hunt",
             "twitter": "social",
             "threads": "social",
+            "blog": "blogs",
+            "news_search": "news_search",
+            "newsletters": "newsletter",
+            "podcasts": "podcast",
         }
         for key, category in mappings.items():
             if key in source_lower:

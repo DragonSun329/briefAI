@@ -205,23 +205,27 @@ class TechNewsRSSScraper:
             return []
     
     def calculate_ai_relevance(self, text: str) -> float:
-        """Calculate AI relevance score (0-1) based on keywords."""
+        """Calculate AI relevance score (0-1) based on keywords.
+
+        Uses diminishing returns to avoid score inflation:
+        - First high match: +0.35, extras: +0.10 each (max 3 extra)
+        - Medium matches: +0.10 each (max 2)
+        - Low matches: +0.05 each (max 2)
+        Max possible: 0.35 + 0.30 + 0.20 + 0.10 = 0.95
+        """
         text_lower = text.lower()
+
+        high_hits = sum(1 for kw in self.AI_KEYWORDS["high"] if kw in text_lower)
+        med_hits = sum(1 for kw in self.AI_KEYWORDS["medium"] if kw in text_lower)
+        low_hits = sum(1 for kw in self.AI_KEYWORDS["low"] if kw in text_lower)
+
         score = 0.0
-        
-        for kw in self.AI_KEYWORDS["high"]:
-            if kw in text_lower:
-                score += 0.3
-        
-        for kw in self.AI_KEYWORDS["medium"]:
-            if kw in text_lower:
-                score += 0.15
-        
-        for kw in self.AI_KEYWORDS["low"]:
-            if kw in text_lower:
-                score += 0.05
-        
-        return min(score, 1.0)
+        if high_hits >= 1:
+            score += 0.35 + min(3, high_hits - 1) * 0.10
+        score += min(2, med_hits) * 0.10
+        score += min(2, low_hits) * 0.05
+
+        return min(round(score, 2), 1.0)
     
     def extract_sentiment_keywords(self, text: str) -> List[str]:
         """Extract sentiment-indicating keywords."""

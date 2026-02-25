@@ -363,10 +363,14 @@ class AIVerticalsScraper:
             "trough_disillusionment": 30,
             "slope_enlightenment": 70,
             "plateau_productivity": 50,
+            "validating": 55,
+            "establishing": 45,
         }.get(phase, 50)
         
-        # Investment attractiveness (inverse of hype for alpha)
-        investment_score = 100 - abs(hype_score - 50)  # Sweet spot is balanced
+        # Investment attractiveness: combines tech maturity with contrarian hype positioning
+        # Best score = high maturity + moderate hype (not over-hyped, not ignored)
+        hype_penalty = (abs(hype_score - 50) / 50)  # 0-1, penalty for extreme hype or no hype
+        investment_score = tech_momentum * (1 - 0.5 * hype_penalty)  # Maturity-weighted, hype-adjusted
         
         return {
             "vertical_id": vertical_id,

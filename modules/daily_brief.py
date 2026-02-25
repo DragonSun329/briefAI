@@ -94,6 +94,8 @@ class DailyBriefGenerator:
             self._gather_alerts() if include_alerts else _empty_dict(),
             self._gather_deep_research(),  # CellCog integration
             self._gather_action_predictions(),  # v3.0: Action-based predictions
+            self._gather_market_movers(),  # Finnhub + correlator
+            self._gather_podcast_insights(),  # Podcast transcripts
             return_exceptions=True,
         )
 
@@ -105,6 +107,8 @@ class DailyBriefGenerator:
         alert_data = _safe_result(sections[4], "alerts")
         deep_research_data = _safe_result(sections[5], "deep_research")
         action_prediction_data = _safe_result(sections[6], "action_predictions")
+        market_mover_data = _safe_result(sections[7], "market_movers")
+        podcast_data = _safe_result(sections[8], "podcast_insights")
 
         # Gather entity heatmap (sync, fast)
         heatmap = self._build_heatmap(top_n_entities)
@@ -145,6 +149,10 @@ class DailyBriefGenerator:
             "action_predictions": action_prediction_data.get("action_predictions", []),
             # Heatmap
             "top_entities": heatmap,
+            # Market Movers (Finnhub + correlator)
+            "market_movers": market_mover_data if market_mover_data.get("correlations") else None,
+            # Podcast Intelligence
+            "podcast_insights": podcast_data.get("episodes", []),
             # Deep Research (CellCog)
             "deep_research": deep_research_data.get("reports", []),
             "insider_trades": deep_research_data.get("insider_trades", []),
@@ -174,78 +182,321 @@ class DailyBriefGenerator:
     # Section generators
     # -------------------------------------------------------------------
 
+    def _load_all_sources(self, data_dir: Path) -> List[Dict]:
+        """
+        Load articles from ALL scraped data sources with unified schema.
+        Each article gets: title, url, source, summary, published_at,
+        _raw_score (0-1 normalized), _source_type, _source_quality.
+        """
+        all_articles = []
+        today_str = datetime.now().strftime("%Y-%m-%d")
+
+        # Source configs: (glob_pattern, container_key, field_mapping, quality_weight)
+        # quality_weight: how much we trust this source's editorial signal (0-1)
+        source_configs = [
+            # TechMeme / RSS tech news — curated but ai_relevance_score inflated
+            # (31% of articles scored 1.0 including irrelevant ones)
+            ("news_signals/tech_news_*.json", "articles", {
+                "score_field": "ai_relevance_score",
+                "date_field": "published_at",
+            }, "techmeme", 0.75),
+            # US tech news (Tavily) — broad, company-focused
+            ("alternative_signals/us_tech_news_*.json", "_auto", {
+                "score_field": "ai_relevance_score",
+                "date_field": "published_date",
+            }, "us_tech_news", 0.6),
+            # News search (Tavily/SearXNG) — broad web search, scores often inflated
+            ("alternative_signals/news_search_*.json", "articles", {
+                "score_field": "score",  # use Tavily's relevance score, not keyword score
+                "date_field": "published_date",
+            }, "news_search", 0.55),
+            # HackerNews — developer community signal (points = strong curation)
+            ("alternative_signals/hackernews_*.json", "stories", {
+                "score_field": "points",
+                "score_normalize": "hn_points",  # special: normalize 0-2000 -> 0-1
+                "date_field": "created_at",
+                "title_field": "title",
+            }, "hackernews", 0.95),
+            # Blog RSS — curated tech blogs with LLM scoring
+            ("alternative_signals/blog_signals_*.json", "posts", {
+                "score_field": "llm_score",  # prefer LLM score over keyword score
+                "score_fallback": "ai_relevance_score",
+                "date_field": "published_at",
+                "source_field": "blog",
+            }, "blogs", 0.8),
+            # Reddit — community signal (noisy but catches trends)
+            ("alternative_signals/reddit_*.json", "posts", {
+                "score_field": "score",
+                "score_normalize": "reddit_score",  # special: normalize 0-5000 -> 0-1
+                "date_field": "created_utc",
+                "title_field": "title",
+                "url_field": "url",
+            }, "reddit", 0.5),
+            # Newsletters — curated by humans, high signal
+            ("newsletter_signals/newsletters_*.json", "posts", {
+                "score_field": "influence_score",
+                "score_normalize": "linear_100",  # 0-100 -> 0-1
+                "date_field": "published_at",
+            }, "newsletters", 0.75),
+            # Podcasts — high-signal, long-form (credibility_score is 1-10)
+            ("alternative_signals/podcasts_*.json", "_auto", {
+                "score_field": "credibility_score",
+                "score_normalize": "linear_10",  # 1-10 -> 0-1
+                "date_field": "date",
+                "source_field": "podcast_channel",
+            }, "podcasts", 0.7),
+            # ArXiv papers — research signal
+            ("alternative_signals/arxiv_*.json", "papers", {
+                "score_field": "ai_relevance_score",
+                "date_field": "published_at",
+            }, "arxiv", 0.4),
+        ]
+
+        for glob_pat, container_key, field_map, source_type, quality in source_configs:
+            try:
+                files = sorted(data_dir.glob(glob_pat), reverse=True)
+                if not files:
+                    continue
+                with open(files[0], "r", encoding="utf-8") as f:
+                    data = json.load(f)
+
+                # Extract items from container
+                if container_key == "_auto":
+                    items = data if isinstance(data, list) else data.get("articles", data.get("items", []))
+                else:
+                    items = data.get(container_key, []) if isinstance(data, dict) else data
+
+                if not isinstance(items, list):
+                    continue
+
+                loaded = 0
+                for item in items:
+                    if not isinstance(item, dict):
+                        continue
+                    title = item.get("title", item.get("headline", item.get("name", "")))
+                    if not title:
+                        continue
+
+                    # Normalize score to 0-1
+                    raw_score = item.get(field_map.get("score_field", "ai_relevance_score"), None)
+                    if raw_score is None and "score_fallback" in field_map:
+                        raw_score = item.get(field_map["score_fallback"], 0.5)
+                    if raw_score is None:
+                        raw_score = 0.5
+
+                    norm_method = field_map.get("score_normalize", "linear_1")
+                    if norm_method == "hn_points":
+                        score = min(1.0, max(0, float(raw_score)) / 1500)
+                    elif norm_method == "reddit_score":
+                        score = min(1.0, max(0, float(raw_score)) / 3000)
+                    elif norm_method == "linear_100":
+                        score = min(1.0, max(0, float(raw_score)) / 100)
+                    elif norm_method == "linear_10":
+                        score = min(1.0, max(0, float(raw_score)) / 10)
+                    else:  # linear_1 — already 0-1 (or close)
+                        score = min(1.0, max(0, float(raw_score)))
+
+                    # Build unified article
+                    raw_date = item.get(field_map.get("date_field", "published_at"), "")
+                    # Format human-readable date
+                    readable_date = ""
+                    try:
+                        if isinstance(raw_date, (int, float)) and raw_date > 1e9:
+                            readable_date = datetime.fromtimestamp(raw_date).strftime("%b %d, %Y")
+                        elif isinstance(raw_date, str) and raw_date:
+                            from dateutil.parser import parse as _parse_date
+                            readable_date = _parse_date(raw_date).strftime("%b %d, %Y")
+                    except Exception:
+                        readable_date = str(raw_date)[:10] if raw_date else ""
+
+                    article = {
+                        "title": str(title).strip(),
+                        "url": item.get("url", item.get("hn_url", "")),
+                        "source": item.get(field_map.get("source_field", "source"), source_type),
+                        "summary": item.get("summary", item.get("selftext", item.get("content", "")))[:300],
+                        "published_at": raw_date,
+                        "published_date": readable_date,
+                        "ai_relevance_score": score,
+                        "_raw_score": score,
+                        "_source_type": source_type,
+                        "_source_quality": quality,
+                    }
+                    # Carry over useful metadata
+                    for extra in ["categories", "sentiment_keywords", "evaluation", "ticker",
+                                  "podcast_channel", "duration_min", "num_comments", "points",
+                                  "subreddit", "blog", "author"]:
+                        if extra in item:
+                            article[extra] = item[extra]
+
+                    # Downgrade arxiv/academic papers that snuck into curated feeds
+                    if source_type in ("techmeme", "us_tech_news"):
+                        url = article.get("url", "")
+                        title_lower = article["title"].lower()
+                        is_paper = False
+                        if "arxiv.org" in url:
+                            is_paper = True
+                        elif ":" in title_lower:
+                            # Academic paper pattern: "Title Word: Subtitle with Technical Terms"
+                            academic_kw = [
+                                "neural", "transformer", "optimization", "quantiz",
+                                "reinforcement", "adversarial", "topology", "forecasting",
+                                "probabilistic", "causal", "graph", "convergence",
+                                "multi-", "scalable", "efficient", "robust",
+                                "attention", "embedding", "llm", "fine-tun",
+                                "benchmark", "dataset", "framework", "architecture",
+                                "personali", "decoding", "inference", "bilevel",
+                                "cross-", "multi-material", "physics-inform",
+                                "preserving", "leveraging", "bridging",
+                            ]
+                            # If title has colon AND 2+ academic keywords, it's likely a paper
+                            matches = sum(1 for kw in academic_kw if kw in title_lower)
+                            if matches >= 2:
+                                is_paper = True
+                        if is_paper:
+                            article["_source_quality"] = 0.3
+                            article["_source_type"] = "arxiv_via_" + source_type
+
+                    all_articles.append(article)
+                    loaded += 1
+
+                logger.info(f"Loaded {loaded} items from {source_type} ({files[0].name})")
+            except Exception as e:
+                logger.warning(f"Failed to load {source_type}: {e}")
+
+        return all_articles
+
+    def _compute_cross_source_boost(self, articles: List[Dict]) -> Dict[str, float]:
+        """
+        Count how many different source types mention similar topics.
+        Returns a title-key -> boost mapping (0-0.3).
+        """
+        from collections import defaultdict
+        import re
+
+        # Extract keywords from titles (simplified)
+        def title_key(t: str) -> str:
+            # Normalize: lowercase, strip punctuation, take first 6 significant words
+            words = re.sub(r'[^\w\s]', '', t.lower()).split()
+            # Remove common stop words
+            stops = {'the', 'a', 'an', 'is', 'are', 'was', 'were', 'in', 'on', 'at', 'to',
+                     'for', 'of', 'with', 'by', 'from', 'and', 'or', 'but', 'not', 'that',
+                     'this', 'its', 'it', 'as', 'be', 'has', 'have', 'had', 'will', 'can',
+                     'new', 'how', 'what', 'why', 'when', 'who'}
+            sig = [w for w in words if w not in stops and len(w) > 2][:6]
+            return ' '.join(sig)
+
+        # Map topics -> set of source types
+        topic_sources: Dict[str, set] = defaultdict(set)
+        title_to_key: Dict[int, str] = {}
+
+        for i, art in enumerate(articles):
+            key = title_key(art.get("title", ""))
+            if key:
+                title_to_key[i] = key
+                topic_sources[key].add(art.get("_source_type", ""))
+
+        # Entity-level cross-source detection
+        # Only count specific/distinctive entities (not generic ones like "AI", "LLM")
+        generic_entities = {
+            'the', 'this', 'that', 'with', 'from', 'have', 'will', 'been', 'more',
+            'what', 'when', 'how', 'why', 'new', 'first', 'last', 'just', 'like',
+            # Generic tech terms that appear in every source
+            'model', 'models', 'learning', 'data', 'code', 'open', 'source',
+            'agent', 'agents', 'based', 'using', 'large', 'language', 'neural',
+            'deep', 'machine', 'training', 'inference', 'benchmark', 'scale',
+            'reasoning', 'generation', 'transformer', 'attention', 'optimization',
+            # Ubiquitous company names — appear in nearly every source, not a signal
+            'openai', 'google', 'microsoft', 'anthropic', 'meta', 'nvidia',
+            'amazon', 'apple', 'claude', 'gemini', 'chatgpt',
+        }
+        entity_sources: Dict[str, set] = defaultdict(set)
+        for art in articles:
+            src = art.get("_source_type", "")
+            # Extract proper nouns / product names (capitalized, 4+ chars)
+            entities = set(re.findall(r'\b[A-Z][a-zA-Z]{3,}\b', art.get("title", "")))
+            for ent in entities:
+                if ent.lower() not in generic_entities:
+                    entity_sources[ent.lower()].add(src)
+
+        # Count how many source types each entity appears in
+        total_source_types = len(set(a.get("_source_type", "") for a in articles))
+        # Entities in too many sources (>60% of all source types) are noise
+        ubiquity_cutoff = max(4, int(total_source_types * 0.6))
+
+        # Build boost map
+        boost_map: Dict[int, float] = {}
+        for i, art in enumerate(articles):
+            boost = 0.0
+            # Direct title-key match across sources (strongest signal)
+            key = title_to_key.get(i, "")
+            if key and len(topic_sources.get(key, set())) > 1:
+                boost = min(0.25, (len(topic_sources[key]) - 1) * 0.12)
+            # Distinctive entity overlap boost
+            entities = set(re.findall(r'\b[A-Z][a-zA-Z]{3,}\b', art.get("title", "")))
+            for ent in entities:
+                if ent.lower() in generic_entities:
+                    continue
+                n_sources = len(entity_sources.get(ent.lower(), set()))
+                # Must appear in 2+ sources but not be ubiquitous
+                if 2 <= n_sources < ubiquity_cutoff:
+                    ent_boost = min(0.20, (n_sources - 1) * 0.07)
+                    boost = max(boost, ent_boost)
+            boost_map[i] = boost
+
+        return boost_map
+
     async def _gather_news(self, top_n: int) -> Dict[str, Any]:
         """
-        Gather top stories from scraped news data.
-        
-        Loads recent scraped articles and evaluates them using LLM.
-        Falls back to OpenRouter if Kimi is rate-limited.
+        Gather top stories from ALL scraped data sources.
+
+        Loads articles from 9 source types (TechMeme, HackerNews, blogs,
+        Reddit, newsletters, news search, US tech news, podcasts, arxiv),
+        normalizes scores, applies cross-source boost, deduplicates, and
+        selects the best stories via LLM evaluation.
         """
         result = {"articles_by_category": {}, "total_scraped": 0, "total_included": 0}
-        
+
         try:
-            # Load most recent scraped news
-            all_articles = []
             data_dir = Path("data")
-            
-            # Check news_signals (RSS feeds, newsletters)
-            news_files = sorted(data_dir.glob("news_signals/tech_news_*.json"), reverse=True)
-            if news_files:
-                with open(news_files[0], "r", encoding="utf-8") as f:
-                    data = json.load(f)
-                    articles = data.get("articles", [])
-                    all_articles.extend(articles)
-                    logger.info(f"Loaded {len(articles)} articles from {news_files[0].name}")
-            
-            # Check alternative_signals for US tech news
-            us_news_files = sorted(data_dir.glob("alternative_signals/us_tech_news_*.json"), reverse=True)
-            if us_news_files:
-                with open(us_news_files[0], "r", encoding="utf-8") as f:
-                    data = json.load(f)
-                    # This file has a different structure - list of article dicts
-                    if isinstance(data, list):
-                        all_articles.extend(data)
-                    elif isinstance(data, dict) and "articles" in data:
-                        all_articles.extend(data["articles"])
-                    logger.info(f"Loaded articles from {us_news_files[0].name}")
-            
+
+            # ---- Step 1: Load ALL sources ----
+            all_articles = self._load_all_sources(data_dir)
             result["total_scraped"] = len(all_articles)
-            
+            logger.info(f"Loaded {len(all_articles)} total articles from all sources")
+
             if not all_articles:
                 logger.warning("No scraped articles found for news evaluation")
                 return result
-            
-            # Delta detection: filter out articles that are semantic duplicates of recent days
+
+            # ---- Step 2: Delta detection (skip duplicates from yesterday) ----
             try:
                 from utils.delta_detector import DeltaDetector
                 detector = DeltaDetector(similarity_threshold=0.75)
-                
-                # Load recent articles for comparison (look back up to 3 days)
+
                 recent_articles = []
-                today_str = datetime.now().strftime("%Y-%m-%d")
-                
-                for days_back in range(1, 4):  # Check 1, 2, 3 days ago
+                for days_back in range(1, 4):
                     check_date = (datetime.now() - timedelta(days=days_back)).strftime("%Y-%m-%d")
-                    recent_news = list(data_dir.glob(f"news_signals/*_{check_date}.json"))
-                    for rf in recent_news:
-                        try:
-                            with open(rf, encoding='utf-8') as f:
-                                rd = json.load(f)
-                                if isinstance(rd, dict) and "articles" in rd:
-                                    recent_articles.extend(rd["articles"])
-                                elif isinstance(rd, list):
-                                    recent_articles.extend(rd)
-                        except Exception:
-                            pass
+                    for pattern in ["news_signals/*_{}.json", "alternative_signals/*_{}.json",
+                                    "newsletter_signals/*_{}.json"]:
+                        for rf in data_dir.glob(pattern.format(check_date)):
+                            try:
+                                with open(rf, encoding='utf-8') as f:
+                                    rd = json.load(f)
+                                    if isinstance(rd, dict):
+                                        for key in ["articles", "stories", "posts", "papers"]:
+                                            if key in rd:
+                                                recent_articles.extend(rd[key])
+                                                break
+                                    elif isinstance(rd, list):
+                                        recent_articles.extend(rd)
+                            except Exception:
+                                pass
                     if recent_articles:
-                        logger.debug(f"Loaded {len(recent_articles)} recent articles from {check_date}")
-                        break  # Use most recent available day
-                
-                yesterday_articles = recent_articles  # Keep variable name for compatibility
-                
-                if yesterday_articles:
+                        break
+
+                if recent_articles:
                     novel_articles, duplicate_articles = detector.find_novel_stories(
-                        all_articles, yesterday_articles
+                        all_articles, recent_articles
                     )
                     result["delta_stats"] = {
                         "total": len(all_articles),
@@ -253,63 +504,114 @@ class DailyBriefGenerator:
                         "duplicates": len(duplicate_articles),
                         "novelty_rate": len(novel_articles) / max(1, len(all_articles))
                     }
-                    # Mark novel articles
                     for article in novel_articles:
                         article["_is_novel"] = True
-                    # Include all articles but prioritize novel ones in scoring
                     all_articles = novel_articles + duplicate_articles
                     logger.info(f"Delta detection: {len(novel_articles)} novel, {len(duplicate_articles)} duplicates")
             except Exception as e:
                 logger.warning(f"Delta detection skipped: {e}")
-            
-            # Pre-filter by AI relevance score if available
-            scored_articles = []
-            for article in all_articles:
-                score = article.get("ai_relevance_score", 0.5)
-                if score >= 0.3:  # Basic relevance threshold
-                    article["_relevance"] = score
-                    scored_articles.append(article)
-            
-            # Sort by relevance and recency
+
+            # ---- Step 3: Cross-source boost ----
+            cross_boost = self._compute_cross_source_boost(all_articles)
+
+            # ---- Step 4: Unified scoring ----
             from datetime import datetime as dt
             now = dt.now()
-            for article in scored_articles:
+
+            scored_articles = []
+            for i, article in enumerate(all_articles):
+                relevance = article.get("_raw_score", 0.5)
+                quality = article.get("_source_quality", 0.5)
+
+                # Recency
                 pub_date = article.get("published_at", "")
                 try:
                     if pub_date:
-                        parsed = dt.fromisoformat(pub_date.replace("Z", "+00:00").replace("+00:00", ""))
-                        hours_old = (now - parsed.replace(tzinfo=None)).total_seconds() / 3600
-                        recency_boost = max(0, 1 - (hours_old / 72))  # Decay over 72h
+                        if isinstance(pub_date, (int, float)):
+                            # Unix timestamp (Reddit)
+                            parsed = dt.fromtimestamp(pub_date)
+                        else:
+                            parsed = dt.fromisoformat(str(pub_date).replace("Z", "+00:00").replace("+00:00", ""))
+                            parsed = parsed.replace(tzinfo=None)
+                        hours_old = max(0, (now - parsed).total_seconds() / 3600)
+                        recency = max(0, 1 - (hours_old / 72))
                     else:
-                        recency_boost = 0.5
-                except:
-                    recency_boost = 0.5
-                # Boost novel articles (not duplicates from yesterday)
-                novelty_boost = 0.2 if article.get("_is_novel", False) else 0.0
-                article["_combined_score"] = article["_relevance"] * 0.5 + recency_boost * 0.3 + novelty_boost
-            
-            # Sort by combined score
+                        recency = 0.3
+                except Exception:
+                    recency = 0.3
+
+                novelty = 0.15 if article.get("_is_novel", False) else 0.0
+                cross = cross_boost.get(i, 0.0)
+
+                # Social proof boost: very high engagement = strong community curation
+                social_proof = 0.0
+                points = article.get("points", 0) or 0
+                reddit_score = article.get("score") if article.get("_source_type") == "reddit" else 0
+                if isinstance(reddit_score, (int, float)):
+                    reddit_score = float(reddit_score)
+                else:
+                    reddit_score = 0
+                if points >= 500:
+                    social_proof = min(0.2, (points - 500) / 3000)  # 500->0, 2000->0.16
+                elif reddit_score >= 1000:
+                    social_proof = min(0.15, (reddit_score - 1000) / 10000)
+
+                # Combined score: weighted blend
+                # relevance*quality gives high-quality sources more weight
+                combined = (relevance * quality * 0.4
+                            + recency * 0.2
+                            + quality * 0.15
+                            + novelty
+                            + cross
+                            + social_proof)
+
+                article["_combined_score"] = combined
+                article["_cross_source_boost"] = cross
+                scored_articles.append(article)
+
+            # Sort and take top candidates
             scored_articles.sort(key=lambda x: x.get("_combined_score", 0), reverse=True)
-            
-            # Take top candidates for LLM evaluation (if we have an LLM client)
-            candidates = scored_articles[:min(30, len(scored_articles))]
-            
+
+            # Deduplicate by similar titles (keep highest scored)
+            seen_titles = set()
+            deduped = []
+            for art in scored_articles:
+                import re
+                # Simple dedup key: first 8 significant words lowercase
+                words = re.sub(r'[^\w\s]', '', art.get("title", "").lower()).split()
+                key = ' '.join(words[:8])
+                if key not in seen_titles:
+                    seen_titles.add(key)
+                    deduped.append(art)
+            scored_articles = deduped
+
+            # Log top 5 for debugging
+            for art in scored_articles[:5]:
+                logger.info(
+                    f"Top candidate: [{art.get('_source_type')}] "
+                    f"score={art.get('_combined_score', 0):.3f} "
+                    f"cross={art.get('_cross_source_boost', 0):.2f} "
+                    f"title={art.get('title', '?')[:60]}"
+                )
+
+            # ---- Step 5: LLM evaluation on top candidates ----
+            candidates = scored_articles[:min(40, len(scored_articles))]
+
             if self.llm_client and len(candidates) > top_n:
-                # Run lightweight batch evaluation
                 evaluated = await self._evaluate_articles_batch(candidates, top_n)
                 if evaluated:
                     result["articles_by_category"] = self._group_articles(evaluated)
                     result["total_included"] = len(evaluated)
                     return result
-            
-            # Fallback: just take top by score without LLM
+
+            # Fallback: just take top by score
             top_articles = candidates[:top_n]
             result["articles_by_category"] = self._group_articles(top_articles)
             result["total_included"] = len(top_articles)
-            
+
         except Exception as e:
             logger.error(f"Failed to gather news: {e}")
-        
+
         return result
     
     async def _evaluate_articles_batch(
@@ -324,11 +626,20 @@ class DailyBriefGenerator:
         try:
             # Build evaluation prompt
             article_summaries = []
-            for i, article in enumerate(articles[:20]):  # Limit to 20 for token efficiency
+            for i, article in enumerate(articles[:30]):  # Top 30 candidates for LLM eval
                 title = article.get("title", "No title")[:100]
                 source = article.get("source", "Unknown")
+                src_type = article.get("_source_type", "")
                 summary = article.get("summary", "")[:150]
-                article_summaries.append(f"{i+1}. [{source}] {title}\n   {summary}")
+                # Add engagement signal for community-sourced articles
+                engagement = ""
+                pts = article.get("points", 0)
+                if pts and int(pts) > 100:
+                    engagement = f" [HN {pts} pts]"
+                comments = article.get("num_comments", 0)
+                if comments and int(comments) > 50:
+                    engagement += f" [{comments} comments]"
+                article_summaries.append(f"{i+1}. [{source}]{engagement} {title}\n   {summary}")
             
             prompt = f"""Evaluate these AI/tech news articles for a daily intelligence brief.
 Score each 1-10 based on: Impact (industry significance), Novelty (new information), Actionability (investment/business relevance).
@@ -356,7 +667,7 @@ Only include articles scoring 6+. Categories: Product Launch, Funding, Partnersh
                 # Map scores back to articles
                 score_map = {s["id"]: s for s in response["scores"]}
                 evaluated = []
-                for i, article in enumerate(articles[:20]):
+                for i, article in enumerate(articles[:30]):
                     if (i + 1) in score_map:
                         score_data = score_map[i + 1]
                         article["evaluation"] = {
@@ -706,6 +1017,92 @@ Only include articles scoring 6+. Categories: Product Launch, Funding, Partnersh
             return "\n\n".join(parts)
 
         return "No significant signals detected today."
+
+    async def _gather_market_movers(self) -> Dict[str, Any]:
+        """Gather Finnhub market data + news correlations."""
+        result = {}
+        today_str = date.today().isoformat()
+        data_dir = Path("data")
+
+        try:
+            # Load Finnhub data for sector performance + TA
+            finnhub_path = data_dir / "market_signals" / f"finnhub_{today_str}.json"
+            finnhub_data = {}
+            if finnhub_path.exists():
+                with open(finnhub_path, "r", encoding="utf-8") as f:
+                    finnhub_data = json.load(f)
+
+            # Sector performance from Finnhub
+            if finnhub_data.get("stocks"):
+                sectors = {
+                    "Big Tech": ['NVDA', 'MSFT', 'GOOGL', 'META', 'AMZN', 'AAPL'],
+                    "Semis": ['AMD', 'INTC', 'AVGO', 'QCOM', 'ARM', 'TSM', 'ASML', 'MRVL'],
+                    "AI Pure-play": ['AI', 'PLTR', 'PATH', 'SNOW', 'DDOG', 'CRWD', 'UPST'],
+                    "Enterprise": ['CRM', 'ORCL', 'IBM', 'NOW', 'ADBE', 'WDAY'],
+                }
+                quote_map = {q["ticker"]: q for q in finnhub_data["stocks"]}
+                sector_perf = {}
+                for sector, tickers in sectors.items():
+                    changes = [quote_map[t]["change_pct"] for t in tickers if t in quote_map]
+                    if changes:
+                        sector_perf[sector] = sum(changes) / len(changes)
+                result["sector_performance"] = sector_perf
+
+                # TA data keyed by ticker
+                ta_map = finnhub_data.get("technical_analysis", {})
+            else:
+                ta_map = {}
+
+            # Load correlations
+            corr_path = data_dir / "market_correlations" / f"market_news_{today_str}.json"
+            if corr_path.exists():
+                with open(corr_path, "r", encoding="utf-8") as f:
+                    corr_data = json.load(f)
+                correlations = corr_data.get("correlations", [])
+                # Enrich with TA from Finnhub
+                for c in correlations:
+                    ta = ta_map.get(c["ticker"])
+                    if ta:
+                        c["technical"] = {
+                            "rsi": ta.get("rsi"),
+                            "ta_signals": ta.get("ta_signals", []),
+                        }
+                result["correlations"] = correlations
+                result["summary"] = corr_data.get("summary", {})
+            else:
+                result["correlations"] = []
+
+        except Exception as e:
+            logger.warning(f"Failed to gather market movers: {e}")
+            result["correlations"] = []
+
+        return result
+
+    async def _gather_podcast_insights(self) -> Dict[str, Any]:
+        """Gather podcast transcript insights."""
+        result = {"episodes": []}
+        today_str = date.today().isoformat()
+        data_dir = Path("data/alternative_signals")
+
+        try:
+            podcast_path = data_dir / f"podcasts_{today_str}.json"
+            if not podcast_path.exists():
+                # Check yesterday
+                yesterday = (date.today() - timedelta(days=1)).isoformat()
+                podcast_path = data_dir / f"podcasts_{yesterday}.json"
+            
+            if podcast_path.exists():
+                with open(podcast_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                episodes = data if isinstance(data, list) else data.get("episodes", [])
+                # Sort by duration (longer = more substance)
+                episodes.sort(key=lambda e: e.get("duration_min", 0), reverse=True)
+                result["episodes"] = episodes
+                logger.info(f"Loaded {len(episodes)} podcast episodes")
+        except Exception as e:
+            logger.warning(f"Failed to gather podcast insights: {e}")
+
+        return result
 
     async def _gather_deep_research(self) -> Dict[str, Any]:
         """

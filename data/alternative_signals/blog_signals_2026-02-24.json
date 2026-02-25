@@ -1,0 +1,3777 @@
+{
+  "scraped_at": "2026-02-24T11:45:29.951583",
+  "source": "blog_rss",
+  "description": "Independent blogs popular on Hacker News (opinion leader layer)",
+  "stats": {
+    "tier1": 42,
+    "tier2": 29,
+    "tier3": 47,
+    "errors": 1,
+    "total_fetched": 610,
+    "category_distribution": {
+      "AI/ML": 20,
+      "Security": 4,
+      "Opinion": 23,
+      "Engineering": 33,
+      "Tools/OSS": 5,
+      "Other": 33
+    }
+  },
+  "trends": [
+    {
+      "trend": "AI-Assisted Software Development",
+      "description": "AI is increasingly integrated into the software development lifecycle, from code generation and compilation to testing and optimization. This trend suggests a future where AI tools augment and potentially transform how software is created, impacting developer productivity and the nature of programming tasks themselves.",
+      "evidence": [
+        "Writing about Agentic Engineering Patterns",
+        "Ladybird adopts Rust, with help from AI",
+        "The Claude C Compiler: What It Reveals About the Future of Software",
+        "Writing code is cheap now",
+        "SWE-bench February 2026 leaderboard update"
+      ],
+      "category": "AI/ML",
+      "strength": 9
+    },
+    {
+      "trend": "AI Performance and Scalability",
+      "description": "There's a strong focus on improving the performance and scalability of AI models, especially large language models (LLMs). This includes optimizing inference speed, exploring local AI solutions, and benchmarking different models. The goal is to make AI more accessible and efficient for a wider range of applications.",
+      "evidence": [
+        "Taalas serves Llama 3.1 8B at 17,000 tokens/second",
+        "ggml.ai joins Hugging Face to ensure the long-term progress of Local AI",
+        "Frigate with Hailo for object detection on a Raspberry Pi"
+      ],
+      "category": "AI/ML",
+      "strength": 8
+    },
+    {
+      "trend": "AI Hype vs. Reality",
+      "description": "A counter-narrative is emerging that questions the overblown hype surrounding AI, particularly AGI and generative AI. This trend highlights the limitations and potential scams associated with current AI technologies, urging a more critical and realistic assessment of their capabilities and impact.",
+      "evidence": [
+        "Rumors of AGI’s arrival have been greatly exaggerated",
+        "Turns out Generative AI was a scam",
+        "AI is a NAND Maximiser",
+        "Premium: The Hater's Guide to Anthropic"
+      ],
+      "category": "AI/ML",
+      "strength": 7
+    }
+  ],
+  "post_count": 118,
+  "posts": [
+    {
+      "id": "blog_simonwillison_2b262b7595e0",
+      "title": "Writing about Agentic Engineering Patterns",
+      "url": "https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-23T17:43:02+00:00",
+      "summary": "<p>I've started a new project to collect and document <strong><a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/\">Agentic Engineering Patterns</a></strong> - coding practices and patterns to help get the best results out of this new era of coding agent development we find ourselves entering.</p>\n<p>I'm using <strong>Agentic Engineering</strong> to refer to building software using coding agents - tools like Claude Code and OpenAI Codex, where the defining feature is that they",
+      "categories": [
+        "blogging",
+        "design-patterns",
+        "projects",
+        "writing",
+        "ai",
+        "generative-ai",
+        "llms",
+        "ai-assisted-programming",
+        "vibe-coding",
+        "coding-agents",
+        "agentic-engineering",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.8,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 10,
+      "llm_quality": 9,
+      "llm_timeliness": 9,
+      "llm_score": 0.94,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "Agentic Engineering",
+        "Patterns",
+        "AI Agents",
+        "Software Engineering"
+      ],
+      "llm_summary": "A new project documents Agentic Engineering Patterns, highlighting coding practices for AI agents."
+    },
+    {
+      "id": "blog_garymarcus_7f7c27767bd2",
+      "title": "Rumors of AGI’s arrival have been greatly exaggerated",
+      "url": "https://garymarcus.substack.com/p/rumors-of-agis-arrival-have-been",
+      "blog": "Gary Marcus",
+      "blog_id": "garymarcus",
+      "author": "Gary Marcus",
+      "published_at": "2026-02-17T16:05:48",
+      "summary": "Statistical approximation &#8800; general intelligence",
+      "categories": [
+        "ai_criticism",
+        "agi",
+        "policy"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 9,
+      "llm_quality": 9,
+      "llm_timeliness": 8,
+      "llm_score": 0.88,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "AGI",
+        "general intelligence",
+        "statistical approximation"
+      ],
+      "llm_summary": "Contends that current AI systems are merely statistical approximations and fall far short of achieving Artificial General Intelligence (AGI)."
+    },
+    {
+      "id": "blog_simonwillison_b70ab0e5f683",
+      "title": "Ladybird adopts Rust, with help from AI",
+      "url": "https://simonwillison.net/2026/Feb/23/ladybird-adopts-rust/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-23T18:52:53+00:00",
+      "summary": "<p><strong><a href=\"https://ladybird.org/posts/adopting-rust/\">Ladybird adopts Rust, with help from AI</a></strong></p>\nReally interesting case-study from Andreas Kling on advanced, sophisticated use of coding agents for ambitious coding projects with critical code. After a few years hoping Swift's platform support outside of the Apple ecosystem would mature they switched tracks to Rust their memory-safe language of choice, starting with an AI-assisted port of a critical library:</p>\n<blockquote",
+      "categories": [
+        "browsers",
+        "javascript",
+        "ai",
+        "rust",
+        "generative-ai",
+        "llms",
+        "ai-assisted-programming",
+        "andreas-kling",
+        "ladybird",
+        "coding-agents",
+        "conformance-suites",
+        "agentic-engineering",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 9,
+      "llm_quality": 8,
+      "llm_timeliness": 9,
+      "llm_score": 0.86,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "Ladybird",
+        "Rust",
+        "AI",
+        "programming"
+      ],
+      "llm_summary": "Ladybird browser adopts Rust with AI assistance, showcasing advanced AI usage in software development."
+    },
+    {
+      "id": "blog_simonwillison_aa4766009a85",
+      "title": "The Claude C Compiler: What It Reveals About the Future of Software",
+      "url": "https://simonwillison.net/2026/Feb/22/ccc/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-22T23:58:43+00:00",
+      "summary": "<p><strong><a href=\"https://www.modular.com/blog/the-claude-c-compiler-what-it-reveals-about-the-future-of-software\">The Claude C Compiler: What It Reveals About the Future of Software</a></strong></p>\nOn February 5th Anthropic's Nicholas Carlini wrote about a project to use <a href=\"https://www.anthropic.com/engineering/building-c-compiler\">parallel Claudes to build a C compiler</a> on top of the brand new Opus 4.6</p>\n<p>Chris Lattner (Swift, LLVM, Clang, Mojo) knows more about C compilers tha",
+      "categories": [
+        "c",
+        "compilers",
+        "open-source",
+        "ai",
+        "ai-assisted-programming",
+        "anthropic",
+        "claude",
+        "nicholas-carlini",
+        "coding-agents",
+        "agentic-engineering",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.65,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 9,
+      "llm_quality": 8,
+      "llm_timeliness": 9,
+      "llm_score": 0.86,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "Claude C Compiler",
+        "Modular",
+        "Software",
+        "Future"
+      ],
+      "llm_summary": "The Claude C Compiler reveals insights into the future of software development and AI's role."
+    },
+    {
+      "id": "blog_simonwillison_e874a90c4123",
+      "title": "Taalas serves Llama 3.1 8B at 17,000 tokens/second",
+      "url": "https://simonwillison.net/2026/Feb/20/taalas/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-20T22:10:04+00:00",
+      "summary": "<p><strong><a href=\"https://taalas.com/the-path-to-ubiquitous-ai/\">Taalas serves Llama 3.1 8B at 17,000 tokens/second</a></strong></p>\nThis new Canadian hardware startup just announced their first product - a custom hardware implementation of the Llama 3.1 8B model (from <a href=\"https://simonwillison.net/2024/Jul/23/introducing-llama-31/\">July 2024</a>) that can run at a staggering 17,000 tokens/second.</p>\n<p>I was going to include a video of their demo but it's so fast it would look more like",
+      "categories": [
+        "ai",
+        "generative-ai",
+        "llama",
+        "llms",
+        "llm-performance",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.5,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 9,
+      "llm_quality": 8,
+      "llm_timeliness": 9,
+      "llm_score": 0.86,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "Taalas",
+        "Llama 3.1",
+        "Hardware",
+        "AI",
+        "Performance"
+      ],
+      "llm_summary": "Taalas serves Llama 3.1 8B at 17,000 tokens/second, showcasing new hardware for AI acceleration."
+    },
+    {
+      "id": "blog_simonwillison_cf5e72c273e7",
+      "title": "Gemini 3.1 Pro",
+      "url": "https://simonwillison.net/2026/Feb/19/gemini-31-pro/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-19T17:58:37+00:00",
+      "summary": "<p><strong><a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/\">Gemini 3.1 Pro</a></strong></p>\nThe first in the Gemini 3.1 series, priced the same as Gemini 3 Pro ($2/million input, $12/million output under 200,000 tokens, $4/$18 for 200,000 to 1,000,000). That's less than half the price of Claude Opus 4.6 with very similar benchmark scores to that model.</p>\n<p>They boast about its improved SVG animation performance compared to Gemini 3 Pro in the a",
+      "categories": [
+        "google",
+        "svg",
+        "ai",
+        "generative-ai",
+        "llms",
+        "llm",
+        "gemini",
+        "pelican-riding-a-bicycle",
+        "llm-release",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 1.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 9,
+      "llm_quality": 8,
+      "llm_timeliness": 9,
+      "llm_score": 0.86,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "Gemini 3.1 Pro",
+        "Google AI",
+        "LLM",
+        "AI Model"
+      ],
+      "llm_summary": "Google's Gemini 3.1 Pro is a new large language model that is priced competitively."
+    },
+    {
+      "id": "blog_krebsonsecurity_b3192555c03e",
+      "title": "‘Starkiller’ Phishing Service Proxies Real Login Pages, MFA",
+      "url": "https://krebsonsecurity.com/2026/02/starkiller-phishing-service-proxies-real-login-pages-mfa/",
+      "blog": "Krebs on Security",
+      "blog_id": "krebsonsecurity",
+      "author": "BrianKrebs",
+      "published_at": "2026-02-20T20:00:30+00:00",
+      "summary": "Most phishing websites are little more than static copies of login pages for popular online destinations, and they are often quickly taken down by anti-abuse activists and security firms. But a stealthy new phishing-as-a-service offering lets customers sidestep both of these pitfalls: It uses cleverly disguised links to load the target brand's real website, and then acts as a relay between the target and the legitimate site -- forwarding the victim's username, password and multi-factor authentic",
+      "categories": [
+        "A Little Sunshine",
+        "Latest Warnings",
+        "The Coming Storm",
+        "Web Fraud 2.0",
+        "Abnormal AI",
+        "Callie Baron",
+        "Jinkusu",
+        "Piotr Wojtyla",
+        "Starkiller",
+        "security",
+        "cybercrime"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 9,
+      "llm_quality": 8,
+      "llm_timeliness": 9,
+      "llm_score": 0.86,
+      "llm_category": "Security",
+      "llm_keywords": [
+        "phishing",
+        "security",
+        "MFA",
+        "Starkiller"
+      ],
+      "llm_summary": "Details a sophisticated phishing service that proxies real login pages and MFA, posing a significant security threat."
+    },
+    {
+      "id": "blog_simonwillison_3fbb1c0944dc",
+      "title": "Quoting Thibault Sottiaux",
+      "url": "https://simonwillison.net/2026/Feb/21/thibault-sottiaux/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-21T01:30:21+00:00",
+      "summary": "<blockquote cite=\"https://twitter.com/thsottiaux/status/2024947946849186064\"><p>We’ve made GPT-5.3-Codex-Spark about 30% faster. It is now serving at over 1200 tokens per second.</p></blockquote>\n<p class=\"cite\">&mdash; <a href=\"https://twitter.com/thsottiaux/status/2024947946849186064\">Thibault Sottiaux</a>, OpenAI</p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/openai\">openai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</",
+      "categories": [
+        "openai",
+        "llms",
+        "ai",
+        "generative-ai",
+        "llm-performance",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 1.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 9,
+      "llm_quality": 7,
+      "llm_timeliness": 8,
+      "llm_score": 0.8,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "GPT-5.3",
+        "Codex",
+        "Spark",
+        "Performance",
+        "Tokens"
+      ],
+      "llm_summary": "GPT-5.3-Codex-Spark has been significantly sped up, now serving at over 1200 tokens per second."
+    },
+    {
+      "id": "blog_shkspr_9303c2d86112",
+      "title": "AI is a NAND Maximiser",
+      "url": "https://shkspr.mobi/blog/2026/02/ai-is-a-nand-maximiser/",
+      "blog": "Terence Eden",
+      "blog_id": "shkspr",
+      "author": "@edent",
+      "published_at": "2026-02-19T12:34:33+00:00",
+      "summary": "PC Gamer is reporting that the current demand by AI companies for computer chips is having a disastrous effect on the rest of the industry.  In an interview, the CEO of Phison said:  If NVIDIA Vera Rubin ships tens of millions of units, each requiring 20+TB SSDs, it will consume approximately 20% of last year&#039;s global NAND production capacity  駿HaYaO  NAND is a type of microchip. Rather than b…",
+      "categories": [
+        "/etc/",
+        "AI",
+        "philosophy",
+        "web_standards",
+        "open_source",
+        "policy"
+      ],
+      "ai_relevance_score": 0.5,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 8,
+      "llm_quality": 8,
+      "llm_timeliness": 8,
+      "llm_score": 0.8,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "AI",
+        "NAND",
+        "Chip Shortage"
+      ],
+      "llm_summary": "AI's demand for computer chips is impacting the broader industry, creating shortages and price increases."
+    },
+    {
+      "id": "blog_simonwillison_2cc36850fcad",
+      "title": "Writing code is cheap now",
+      "url": "https://simonwillison.net/guides/agentic-engineering-patterns/code-is-cheap/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-23T16:20:42+00:00",
+      "summary": "<p><em><a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/\">Agentic Engineering Patterns</a> &gt;</em></p>\n    <p>The biggest challenge in adopting agentic engineering practices is getting comfortable with the consequences of the fact that <em>writing code is cheap now</em>.</p>\n<p>Code has always been expensive. Producing a few hundred lines of clean, tested code takes most software developers a full day or more. Many of our engineering habits, at both the macro and micro le",
+      "categories": [
+        "llms",
+        "ai",
+        "generative-ai",
+        "ai-assisted-programming",
+        "coding-agents",
+        "agentic-engineering",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.05,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 8,
+      "llm_quality": 7,
+      "llm_timeliness": 9,
+      "llm_score": 0.78,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "Agentic Engineering",
+        "AI Agents",
+        "Coding",
+        "Productivity"
+      ],
+      "llm_summary": "The challenge in adopting agentic engineering is shifting focus from code writing to higher-level concerns."
+    },
+    {
+      "id": "blog_simonwillison_ef02aedaaa15",
+      "title": "ggml.ai joins Hugging Face to ensure the long-term progress of Local AI",
+      "url": "https://simonwillison.net/2026/Feb/20/ggmlai-joins-hugging-face/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-20T17:12:55+00:00",
+      "summary": "<p><strong><a href=\"https://github.com/ggml-org/llama.cpp/discussions/19759\">ggml.ai joins Hugging Face to ensure the long-term progress of Local AI</a></strong></p>\nI don't normally cover acquisition news like this, but I have some thoughts.</p>\n<p>It's hard to overstate the impact Georgi Gerganov has had on the local model space. Back in March 2023 his release of <a href=\"https://github.com/ggml-org/llama.cpp\">llama.cpp</a> made it possible to run a local LLM on consumer hardware. The <a href=",
+      "categories": [
+        "open-source",
+        "transformers",
+        "ai",
+        "generative-ai",
+        "llama",
+        "local-llms",
+        "llms",
+        "hugging-face",
+        "llama-cpp",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.75,
+      "sentiment_keywords": [
+        "+release"
+      ],
+      "tier": "tier1",
+      "llm_relevance": 8,
+      "llm_quality": 7,
+      "llm_timeliness": 9,
+      "llm_score": 0.78,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "ggml.ai",
+        "Hugging Face",
+        "Local AI",
+        "Acquisition"
+      ],
+      "llm_summary": "ggml.ai joins Hugging Face to advance the development of Local AI technologies."
+    },
+    {
+      "id": "blog_simonwillison_2b34bdd53715",
+      "title": "SWE-bench February 2026 leaderboard update",
+      "url": "https://simonwillison.net/2026/Feb/19/swe-bench/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-19T04:48:47+00:00",
+      "summary": "<p><strong><a href=\"https://www.swebench.com/\">SWE-bench February 2026 leaderboard update</a></strong></p>\nSWE-bench is one of the benchmarks that the labs love to list in their model releases. The official leaderboard is infrequently updated but they just did a full run of it against the current generation of models, which is notable because it's always good to see benchmark results like this that <em>weren't</em> self-reported by the labs.</p>\n<p>The fresh results are for their \"Bash Only\" ben",
+      "categories": [
+        "benchmarks",
+        "django",
+        "ai",
+        "openai",
+        "generative-ai",
+        "llms",
+        "anthropic",
+        "claude",
+        "coding-agents",
+        "ai-in-china",
+        "browser-agents",
+        "minimax",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.3,
+      "sentiment_keywords": [
+        "+release"
+      ],
+      "tier": "tier1",
+      "llm_relevance": 8,
+      "llm_quality": 7,
+      "llm_timeliness": 9,
+      "llm_score": 0.78,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "SWE-bench",
+        "AI benchmarks",
+        "model evaluation",
+        "performance"
+      ],
+      "llm_summary": "SWE-bench is a key benchmark used to evaluate the performance of AI models in software engineering tasks."
+    },
+    {
+      "id": "blog_garymarcus_17a2dec908a5",
+      "title": "Turns out Generative AI was a scam",
+      "url": "https://garymarcus.substack.com/p/turns-out-generative-ai-was-a-scam",
+      "blog": "Gary Marcus",
+      "blog_id": "garymarcus",
+      "author": "Gary Marcus",
+      "published_at": "2026-02-23T14:39:25",
+      "summary": "Or at least very very far from what it has been cracked up to be",
+      "categories": [
+        "ai_criticism",
+        "agi",
+        "policy"
+      ],
+      "ai_relevance_score": 0.45,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 8,
+      "llm_quality": 8,
+      "llm_timeliness": 7,
+      "llm_score": 0.78,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "generative AI",
+        "AI hype",
+        "limitations"
+      ],
+      "llm_summary": "Argues that the capabilities of generative AI have been significantly overhyped and are further from true intelligence than commonly believed."
+    },
+    {
+      "id": "blog_simonwillison_23de592cd101",
+      "title": "How I think about Codex",
+      "url": "https://simonwillison.net/2026/Feb/22/how-i-think-about-codex/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-22T15:53:43+00:00",
+      "summary": "<p><strong><a href=\"https://www.linkedin.com/pulse/how-i-think-codex-gabriel-chua-ukhic\">How I think about Codex</a></strong></p>\nGabriel Chua (Developer Experience Engineer for APAC at OpenAI) provides his take on the confusing terminology behind the term \"Codex\", which can refer to a bunch of of different things within the OpenAI ecosystem:</p>\n<blockquote>\n<p>In plain terms, Codex is OpenAI’s software engineering agent, available through multiple interfaces, and an agent is a model plus instr",
+      "categories": [
+        "definitions",
+        "openai",
+        "generative-ai",
+        "llms",
+        "ai-assisted-programming",
+        "codex-cli",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.65,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 8,
+      "llm_quality": 7,
+      "llm_timeliness": 8,
+      "llm_score": 0.76,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "Codex",
+        "OpenAI",
+        "Developer Experience",
+        "AI"
+      ],
+      "llm_summary": "Gabriel Chua from OpenAI shares his perspective on Codex and its impact on developer experience."
+    },
+    {
+      "id": "blog_simonwillison_011013b122bc",
+      "title": "Quoting Thariq Shihipar",
+      "url": "https://simonwillison.net/2026/Feb/20/thariq-shihipar/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-20T07:13:19+00:00",
+      "summary": "<blockquote cite=\"https://twitter.com/trq212/status/2024574133011673516\"><p>Long running agentic products like Claude Code are made feasible by prompt caching which allows us to reuse computation from previous roundtrips and significantly decrease latency and cost. [...]</p>\n<p>At Claude Code, we build our entire harness around prompt caching. A high prompt cache hit rate decreases costs and helps us create more generous rate limits for our subscription plans, so we run alerts on our prompt cach",
+      "categories": [
+        "prompt-engineering",
+        "anthropic",
+        "claude-code",
+        "ai-agents",
+        "generative-ai",
+        "ai",
+        "llms",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.3,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 8,
+      "llm_quality": 7,
+      "llm_timeliness": 7,
+      "llm_score": 0.74,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "agentic products",
+        "prompt caching",
+        "Claude Code",
+        "AI"
+      ],
+      "llm_summary": "Prompt caching is enabling long-running agentic AI products like Claude Code by reusing computation."
+    },
+    {
+      "id": "blog_jeffgeerling_ee099022cb9f",
+      "title": "Frigate with Hailo for object detection on a Raspberry Pi",
+      "url": "https://www.jeffgeerling.com/blog/2026/frigate-with-hailo-for-object-detection-on-a-raspberry-pi/",
+      "blog": "Jeff Geerling",
+      "blog_id": "jeffgeerling",
+      "author": "jeff@jeffgeerling.com (Jeff Geerling)",
+      "published_at": "2026-02-18T14:50:00-06:00",
+      "summary": "<p>I run <a href=\"https://frigate.video\">Frigate</a> to record security cameras and detect people, cars, and animals when in view. My <a href=\"https://www.jeffgeerling.com/blog/2024/building-pi-frigate-nvr-axzezs-interceptor-1u-case/\">current Frigate server</a> runs on a Raspberry Pi CM4 and a <a href=\"https://amzn.to/4aWdOpQ\">Coral TPU</a> plugged in via USB.</p>\n<p>Raspberry Pi offers <a href=\"https://www.raspberrypi.com/products/ai-hat/\">multiple AI HAT+'s</a> for the Raspberry Pi 5 with buil",
+      "categories": [
+        "homelab",
+        "raspberry_pi",
+        "devops"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [
+        "+record"
+      ],
+      "tier": "tier3",
+      "llm_relevance": 7,
+      "llm_quality": 7,
+      "llm_timeliness": 8,
+      "llm_score": 0.72,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "Frigate",
+        "Hailo",
+        "object detection",
+        "Raspberry Pi"
+      ],
+      "llm_summary": "Using Frigate with Hailo for object detection on a Raspberry Pi improves security camera performance."
+    },
+    {
+      "id": "blog_daringfireball_c72da1857d65",
+      "title": "Paul Ford: ‘The A.I. Disruption Has Arrived, and It Sure Is Fun’",
+      "url": "https://www.nytimes.com/2026/02/18/opinion/ai-software.html?unlocked_article_code=1.NFA.djaw.TBlAp8kE_N-i",
+      "blog": "Daring Fireball (John Gruber)",
+      "blog_id": "daringfireball",
+      "author": "John Gruber",
+      "published_at": "2026-02-18T21:15:10+00:00",
+      "summary": "<p>Paul Ford, in an op-ed for The New York Times (gift link):</p>\n\n<blockquote>\n  <p>All of the people I love hate this stuff, and all the people I hate love it. And yet, likely because of the same personality flaws that drew me to technology in the first place, I am annoyingly excited.</p>\n</blockquote>\n\n<div>\n<a href=\"https://daringfireball.net/linked/2026/02/18/ford-ai-fun\" title=\"Permanent link to ‘Paul Ford: ‘The A.I. Disruption Has Arrived, and It Sure Is Fun’’\">&nbsp;★&nbsp;</a>\n</div>",
+      "categories": [
+        "apple",
+        "tech_culture",
+        "product"
+      ],
+      "ai_relevance_score": 0.2,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 7,
+      "llm_quality": 7,
+      "llm_timeliness": 7,
+      "llm_score": 0.7,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "AI",
+        "disruption",
+        "opinion"
+      ],
+      "llm_summary": "An opinion piece on the AI disruption and its polarizing effects."
+    },
+    {
+      "id": "blog_simonwillison_123d07a181e2",
+      "title": "Red/green TDD",
+      "url": "https://simonwillison.net/guides/agentic-engineering-patterns/red-green-tdd/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-23T07:12:28+00:00",
+      "summary": "<p><em><a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/\">Agentic Engineering Patterns</a> &gt;</em></p>\n    <p>\"<strong>Use red/green TDD</strong>\" is a pleasingly succinct way to get better results out of a coding agent.</p>\n<p>TDD stands for Test Driven Development. It's a programming style where you ensure every piece of code you write is accompanied by automated tests that demonstrate the code works.</p>\n<p>The most disciplined form of TDD is test-first development. Yo",
+      "categories": [
+        "tdd",
+        "testing",
+        "ai-assisted-programming",
+        "coding-agents",
+        "agentic-engineering",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 7,
+      "llm_quality": 6,
+      "llm_timeliness": 8,
+      "llm_score": 0.68,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "TDD",
+        "Red/Green",
+        "Agentic Engineering",
+        "Testing"
+      ],
+      "llm_summary": "Advocating for red/green TDD as a useful practice within agentic engineering workflows."
+    },
+    {
+      "id": "blog_seangoedecke_c324e5626650",
+      "title": "What's so hard about continuous learning?",
+      "url": "https://seangoedecke.com/continuous-learning/",
+      "blog": "Sean Goedecke",
+      "blog_id": "seangoedecke",
+      "author": "Sean Goedecke",
+      "published_at": "2026-02-23T00:00:00",
+      "summary": "<p>Why can’t models continue to get smarter after they’re deployed? If you hire a human employee, they will grow more familiar with your systems over time, and (if they stick around long enough) eventually become a genuine domain expert. AI models are not like this. They are always exactly as capable as the first moment you use them.</p>\n<p>This is because model weights are frozen once the model is released. The model can only “learn” as much as can be stuffed into its context window: in effect,",
+      "categories": [
+        "engineering",
+        "career"
+      ],
+      "ai_relevance_score": 0.45,
+      "sentiment_keywords": [
+        "+release"
+      ],
+      "tier": "tier3",
+      "llm_relevance": 7,
+      "llm_quality": 6,
+      "llm_timeliness": 8,
+      "llm_score": 0.68,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "continuous learning",
+        "models",
+        "deployment"
+      ],
+      "llm_summary": "An exploration of the challenges of continuous learning for AI models after deployment."
+    },
+    {
+      "id": "blog_ericmigi_5bd668624849",
+      "title": "CloudPebble Returns! Plus New Pure JavaScript and Round 2 SDK",
+      "url": "https://repebble.com/blog/cloudpebble-returns-plus-pure-javascript-and-round-2-sdk",
+      "blog": "Eric Migicovsky",
+      "blog_id": "ericmigi",
+      "author": "Eric Migicovsky",
+      "published_at": "2026-02-20T00:00:00",
+      "summary": "As mentioned in our software roadmap, we’ve been working on many improvements to Pebble’s already pretty awesome SDK and developer…",
+      "categories": [
+        "hardware",
+        "startups",
+        "pebble"
+      ],
+      "ai_relevance_score": 0.05,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 6,
+      "llm_quality": 7,
+      "llm_timeliness": 8,
+      "llm_score": 0.68,
+      "llm_category": "Tools/OSS",
+      "llm_keywords": [
+        "CloudPebble",
+        "JavaScript",
+        "SDK",
+        "Pebble"
+      ],
+      "llm_summary": "CloudPebble returns with new JavaScript and Round 2 SDK for Pebble development."
+    },
+    {
+      "id": "blog_troyhunt_dc0b936bda49",
+      "title": "Weekly Update 492",
+      "url": "https://www.troyhunt.com/weekly-update-492/",
+      "blog": "Troy Hunt",
+      "blog_id": "troyhunt",
+      "author": "Troy Hunt",
+      "published_at": "2026-02-24T00:38:59",
+      "summary": "<p>The recurring theme this week seems to be around the gap between breaches happening and individual victims finding out about them. It&apos;s tempting to blame this on the corporate victim of the breach (the hacked company), but they&apos;re simultaneously dealing with a criminal intrusion, a ransom</p>",
+      "categories": [
+        "Weekly update",
+        "security",
+        "privacy",
+        "breaches"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 7,
+      "llm_quality": 6,
+      "llm_timeliness": 7,
+      "llm_score": 0.66,
+      "llm_category": "Security",
+      "llm_keywords": [
+        "data breach",
+        "security",
+        "privacy"
+      ],
+      "llm_summary": "Discussion on the time gap between data breaches and victim notification, highlighting security concerns."
+    },
+    {
+      "id": "blog_fabiensanglard_f11357828acf",
+      "title": "How Michael Abrash doubled Quake framerate",
+      "url": "https://fabiensanglard.net/quake_asm_optimizations/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 6,
+      "llm_quality": 8,
+      "llm_timeliness": 4,
+      "llm_score": 0.64,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "Quake",
+        "Optimization",
+        "Abrash"
+      ],
+      "llm_summary": "An analysis of Michael Abrash's techniques for optimizing Quake's framerate, relevant to game development and performance engineering."
+    },
+    {
+      "id": "blog_wheresyoured_a914b38bddd0",
+      "title": "Premium: The Hater's Guide to Anthropic",
+      "url": "https://www.wheresyoured.at/premium-the-haters-guide-to-anthropic/",
+      "blog": "Where's Your Ed At",
+      "blog_id": "wheresyoured",
+      "author": "Edward Zitron",
+      "published_at": "2026-02-20T18:26:41",
+      "summary": "<p>In May 2021, Dario Amodei and a crew of other former OpenAI researchers <a href=\"https://techcrunch.com/2021/05/28/anthropic-is-the-new-ai-research-outfit-from-openais-dario-amodei-and-it-has-124m-to-burn/?ref=wheresyoured.at\"><u>formed Anthropic</u></a> and dedicated themselves to building the single-most-annoying Large Language Model company of all time.&#xa0;</p><p>Pardon me, sorry, I mean <em>safest</em>, <a href=\"https://finance.yahoo.com/news/anthropic-ceo-says-why-quit-194409797.html?r",
+      "categories": [
+        "tech_criticism",
+        "ai_hype",
+        "culture"
+      ],
+      "ai_relevance_score": 1.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 6,
+      "llm_quality": 7,
+      "llm_timeliness": 6,
+      "llm_score": 0.64,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "Anthropic",
+        "AI",
+        "Claude"
+      ],
+      "llm_summary": "A critical overview of Anthropic, an AI research company, and its products."
+    },
+    {
+      "id": "blog_simonwillison_388ecf4f997e",
+      "title": "Reply guy",
+      "url": "https://simonwillison.net/2026/Feb/23/reply-guy/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-23T13:11:57+00:00",
+      "summary": "<p>The latest scourge of Twitter is AI bots that reply to your tweets with generic, banal commentary slop, often accompanied by a question to \"drive engagement\" and waste as much of your time as possible.</p>\n<p>I just <a href=\"https://twitter.com/simonw/status/2025918174894673986\">found out</a> that the category name for this genre of software is <strong>reply guy</strong> tools. Amazing.</p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/ai-ethics\">ai-ethics</a>, <a href=\"https://simonw",
+      "categories": [
+        "ai-ethics",
+        "twitter",
+        "slop",
+        "generative-ai",
+        "definitions",
+        "ai",
+        "llms",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.2,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 6,
+      "llm_quality": 5,
+      "llm_timeliness": 8,
+      "llm_score": 0.6,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "AI Bots",
+        "Twitter",
+        "Engagement",
+        "Spam"
+      ],
+      "llm_summary": "AI bots on Twitter are generating generic replies to drive engagement, highlighting a negative application of AI."
+    },
+    {
+      "id": "blog_simonwillison_26c78ce3be39",
+      "title": "Quoting Paul Ford",
+      "url": "https://simonwillison.net/2026/Feb/23/paul-ford/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-23T16:00:32+00:00",
+      "summary": "<blockquote cite=\"https://ftrain.com/leading-thoughts\"><p>The paper asked me to explain vibe coding, and I did so, because I think something big is coming there, and I'm deep in, and I worry that normal people are not able to see it and I want them to be prepared. But people can't just read something and hate you quietly; they can't see that you have provided them with a utility or a warning; they need their screech. You are distributed to millions of people, and become the local proxy for the e",
+      "categories": [
+        "vibe-coding",
+        "new-york-times",
+        "paul-ford",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [
+        "-warning"
+      ],
+      "tier": "tier1",
+      "llm_relevance": 5,
+      "llm_quality": 6,
+      "llm_timeliness": 7,
+      "llm_score": 0.58,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "Vibe Coding",
+        "AI",
+        "Future",
+        "Normcore"
+      ],
+      "llm_summary": "Discussion of 'vibe coding' suggests a potentially significant shift in software development approaches."
+    },
+    {
+      "id": "blog_daringfireball_2cda331478b7",
+      "title": "Sentry",
+      "url": "https://sentry.io/resources/ios-workshop-jan-2026/?utm_source=daringfireball&utm_medium=paid-display&utm_campaign=general-fy27q1-evergreen&utm_content=static-ad-mobilerss-trysentry",
+      "blog": "Daring Fireball (John Gruber)",
+      "blog_id": "daringfireball",
+      "author": "John Gruber",
+      "published_at": "2026-02-22T20:58:55+00:00",
+      "summary": "<p>My thanks to Sentry for sponsoring last week at DF. Sentry is running a hands-on workshop: “<a href=\"https://sentry.io/resources/ios-workshop-jan-2026/?utm_source=daringfireball&amp;utm_medium=paid-display&amp;utm_campaign=general-fy27q1-evergreen&amp;utm_content=static-ad-mobilerss-trysentry\">Crash Reporting, Tracing, and Logs for iOS in Sentry</a>”. You can watch it on demand. You’ll learn how to connect the dots between slowdowns, crashes, and the user experience in your iOS app. It’ll sho",
+      "categories": [
+        "apple",
+        "tech_culture",
+        "product"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 6,
+      "llm_quality": 5,
+      "llm_timeliness": 7,
+      "llm_score": 0.58,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "Sentry",
+        "debugging",
+        "workshop"
+      ],
+      "llm_summary": "Sentry, a debugging tool, sponsors Daring Fireball and runs a workshop."
+    },
+    {
+      "id": "blog_shkspr_ad7e8a18d56c",
+      "title": "How close are we to a vision for 2010?",
+      "url": "https://shkspr.mobi/blog/2026/02/how-close-are-we-to-a-vision-for-2010/",
+      "blog": "Terence Eden",
+      "blog_id": "shkspr",
+      "author": "@edent",
+      "published_at": "2026-02-22T12:34:58+00:00",
+      "summary": "Twenty five years ago today, the EU&#039;s IST advisory group published a paper about the future of \"Ambient Intelligence\". Way before the world got distracted with cryptoscams and AI slop, we genuinely thought that computers would be so pervasive and well-integrated that the dream of \"Ubiquitous Computing\" would become a reality.  The ISTAG published an optimistic paper called \"Scenarios for ambient…",
+      "categories": [
+        "/etc/",
+        "AI",
+        "future",
+        "predictions",
+        "web_standards",
+        "open_source",
+        "policy"
+      ],
+      "ai_relevance_score": 0.2,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 6,
+      "llm_quality": 7,
+      "llm_timeliness": 3,
+      "llm_score": 0.58,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "Ambient Intelligence",
+        "AI",
+        "Future"
+      ],
+      "llm_summary": "A look back at early visions of Ambient Intelligence and how they compare to current AI development."
+    },
+    {
+      "id": "blog_fabiensanglard_95e87a00ff48",
+      "title": "How the DevTeam conquered the iPhone",
+      "url": "https://fabiensanglard.net/iSummer/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 5,
+      "llm_quality": 8,
+      "llm_timeliness": 3,
+      "llm_score": 0.58,
+      "llm_category": "Security",
+      "llm_keywords": [
+        "iPhone",
+        "Jailbreaking",
+        "Security",
+        "Exploits"
+      ],
+      "llm_summary": "Understanding how the iPhone was initially jailbroken provides historical context for mobile security vulnerabilities."
+    },
+    {
+      "id": "blog_berthub_b52bcc06f3f8",
+      "title": "De digitale coalitieplannen: gaat het ook echt gebeuren?",
+      "url": "https://berthub.eu/articles/posts/digitale-coalitieplannen/",
+      "blog": "Bert Hubert",
+      "blog_id": "berthub",
+      "author": "Bert Hubert",
+      "published_at": "2026-02-17T20:50:00+01:00",
+      "summary": "In het eerdere stuk Digitaal zoet en zuur in het coalitieakkoord schreef ik over de bemoedigende en minder bemoedigende stukken van de coalitieplannen.\nEn er staan mooie digitale voornemens in:\nEen revolutie in de ICT in de Rijksoverheid: centrale aansturing, centrale inkoop, verplichte standaarden, geen geld als men zich niet aan die standaarden houdt. Ook pleit men voor een &ldquo;Nederlandse Digitale Dienst&rdquo; binnen de overheid met &ldquo;doorzettingsmacht&rdquo;, met meer waardering voo",
+      "categories": [
+        "dns",
+        "networking",
+        "policy"
+      ],
+      "ai_relevance_score": 0.05,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 5,
+      "llm_quality": 6,
+      "llm_timeliness": 7,
+      "llm_score": 0.58,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "digital policy",
+        "coalition",
+        "Netherlands"
+      ],
+      "llm_summary": "Discusses the digital plans of the Dutch coalition government, highlighting both promising and concerning aspects."
+    },
+    {
+      "id": "blog_paulgraham_ecb0e37aa484",
+      "title": "Crazy New Ideas",
+      "url": "http://www.paulgraham.com/newideas.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 6,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.56,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "innovation",
+        "ideas",
+        "technology"
+      ],
+      "llm_summary": "Advocates for embracing unconventional ideas, crucial for breakthroughs in AI and other tech fields."
+    },
+    {
+      "id": "blog_hillelwayne_333651c28864",
+      "title": "New Blog Post: Some Silly Z3 Scripts I Wrote",
+      "url": "https://buttondown.com/hillelwayne/archive/new-blog-post-some-silly-z3-scripts-i-wrote/",
+      "blog": "Hillel Wayne",
+      "blog_id": "hillelwayne",
+      "author": "Hillel Wayne",
+      "published_at": "2026-02-23T16:49:10+00:00",
+      "summary": "<p>Now that I'm not spending all my time on Logic for Programmers, I have time to update my website again! So here's the first blog post in five months: <a href=\"https://www.hillelwayne.com/post/z3-examples/\" target=\"_blank\">Some Silly Z3 Scripts I Wrote</a>.</p>\n<p>Normally I'd also put a link to the Patreon notes but I've decided I don't like publishing gated content and am going to wind that whole thing down. So some quick notes about this post:</p>\n<ul>\n<li>Part of the point is admittedly to",
+      "categories": [
+        "formal_methods",
+        "engineering",
+        "cs_history"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 5,
+      "llm_quality": 6,
+      "llm_timeliness": 6,
+      "llm_score": 0.56,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "Z3",
+        "Scripts",
+        "Logic"
+      ],
+      "llm_summary": "A blog post about using the Z3 theorem prover, relevant to software engineers and those interested in formal methods."
+    },
+    {
+      "id": "blog_fabiensanglard_48293b23be2b",
+      "title": "Let's compile Quake like it's 1997!",
+      "url": "https://fabiensanglard.net/compile_like_1997/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 5,
+      "llm_quality": 7,
+      "llm_timeliness": 4,
+      "llm_score": 0.56,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "Quake",
+        "Compilation",
+        "Retro"
+      ],
+      "llm_summary": "An exploration of compiling Quake using tools and techniques from 1997, relevant to understanding software history and low-level programming."
+    },
+    {
+      "id": "blog_fabiensanglard_8f21dfbaefd5",
+      "title": "Building a 1997 Quake PC: Benchmarking GLquake",
+      "url": "https://fabiensanglard.net/quake_pc/glquake/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 5,
+      "llm_quality": 7,
+      "llm_timeliness": 4,
+      "llm_score": 0.56,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "Quake",
+        "PC",
+        "Benchmarking"
+      ],
+      "llm_summary": "Benchmarking GLQuake on a 1997-era PC, providing insights into hardware performance and software optimization of the time."
+    },
+    {
+      "id": "blog_fabiensanglard_6340e4051f36",
+      "title": "Building a 1997 Quake PC: Benchmarking Vquake",
+      "url": "https://fabiensanglard.net/quake_pc/vquake/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 5,
+      "llm_quality": 7,
+      "llm_timeliness": 4,
+      "llm_score": 0.56,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "Quake",
+        "PC",
+        "Benchmarking"
+      ],
+      "llm_summary": "Benchmarking VQuake on a 1997-era PC, providing insights into hardware performance and software optimization of the time."
+    },
+    {
+      "id": "blog_daringfireball_f93dd1a3e6c3",
+      "title": "One More Spitball Idea for Apple’s March 4 Media Event ‘Experience’: Immersive F1 on Vision Pro?",
+      "url": "https://www.formula1.com/en/latest/article/official-grand-prix-start-times-for-2026-f1-season-confirmed.2UgPfArqH76tzlOYh21jSG",
+      "blog": "Daring Fireball (John Gruber)",
+      "blog_id": "daringfireball",
+      "author": "John Gruber",
+      "published_at": "2026-02-19T04:41:38+00:00",
+      "summary": "<p>A reader pointed out that <a href=\"https://www.formula1.com/en/latest/article/official-grand-prix-start-times-for-2026-f1-season-confirmed.2UgPfArqH76tzlOYh21jSG\">the 2026 Formula 1 season</a> starts in Australia on March 8. You will recall from October <a href=\"https://daringfireball.net/linked/2025/10/17/apple-formula-1\">that Apple TV is now the exclusive broadcast partner for F1 in the U.S.</a> Apple is already dabbling with live immersive sports broadcasting for VisionOS <a href=\"https://",
+      "categories": [
+        "apple",
+        "tech_culture",
+        "product"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 5,
+      "llm_quality": 5,
+      "llm_timeliness": 7,
+      "llm_score": 0.54,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Apple",
+        "Vision Pro",
+        "F1",
+        "immersive"
+      ],
+      "llm_summary": "Speculation about Apple's March event including immersive F1 experiences on Vision Pro."
+    },
+    {
+      "id": "blog_oldnewthing_08fd6270a877",
+      "title": "Customizing the ways the dialog manager dismisses itself: Detecting the ESC key, second (failed) attempt",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20260223-00/?p=112080",
+      "blog": "The Old New Thing (Raymond Chen)",
+      "blog_id": "oldnewthing",
+      "author": "Raymond Chen",
+      "published_at": "2026-02-23T15:00:00+00:00",
+      "summary": "<p>Sniffing the synchronous keyboard state is still not precise enough.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/oldnewthing/20260223-00/?p=112080\">Customizing the ways the dialog manager dismisses itself: Detecting the ESC key, second (failed) attempt</a> appeared first on <a href=\"https://devblogs.microsoft.com/oldnewthing\">The Old New Thing</a>.</p>",
+      "categories": [
+        "Old New Thing",
+        "Code",
+        "windows",
+        "systems",
+        "engineering"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [
+        "-fail"
+      ],
+      "tier": "tier2",
+      "llm_relevance": 4,
+      "llm_quality": 6,
+      "llm_timeliness": 7,
+      "llm_score": 0.54,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "dialog manager",
+        "ESC key",
+        "keyboard state"
+      ],
+      "llm_summary": "A deep dive into customizing dialog dismissal, focusing on ESC key detection."
+    },
+    {
+      "id": "blog_oldnewthing_350ebf85e8e1",
+      "title": "Customizing the ways the dialog manager dismisses itself: Detecting the ESC key, first (failed) attempt",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20260220-00/?p=112074",
+      "blog": "The Old New Thing (Raymond Chen)",
+      "blog_id": "oldnewthing",
+      "author": "Raymond Chen",
+      "published_at": "2026-02-20T15:00:00+00:00",
+      "summary": "<p>Sniffing the asynchronous keyboard state.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/oldnewthing/20260220-00/?p=112074\">Customizing the ways the dialog manager dismisses itself: Detecting the ESC key, first (failed) attempt</a> appeared first on <a href=\"https://devblogs.microsoft.com/oldnewthing\">The Old New Thing</a>.</p>",
+      "categories": [
+        "Old New Thing",
+        "Code",
+        "windows",
+        "systems",
+        "engineering"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [
+        "-fail"
+      ],
+      "tier": "tier2",
+      "llm_relevance": 4,
+      "llm_quality": 6,
+      "llm_timeliness": 7,
+      "llm_score": 0.54,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "dialog manager",
+        "ESC key",
+        "keyboard state"
+      ],
+      "llm_summary": "An attempt to customize dialog dismissal by sniffing the asynchronous keyboard state."
+    },
+    {
+      "id": "blog_oldnewthing_3d7420353cba",
+      "title": "Exploring the signals the dialog manager uses for dismissing a dialog",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20260219-00/?p=112072",
+      "blog": "The Old New Thing (Raymond Chen)",
+      "blog_id": "oldnewthing",
+      "author": "Raymond Chen",
+      "published_at": "2026-02-19T15:00:00+00:00",
+      "summary": "<p>Summarizing the flow.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/oldnewthing/20260219-00/?p=112072\">Exploring the signals the dialog manager uses for dismissing a dialog</a> appeared first on <a href=\"https://devblogs.microsoft.com/oldnewthing\">The Old New Thing</a>.</p>",
+      "categories": [
+        "Old New Thing",
+        "Code",
+        "windows",
+        "systems",
+        "engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 4,
+      "llm_quality": 6,
+      "llm_timeliness": 7,
+      "llm_score": 0.54,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "dialog manager",
+        "dismissing",
+        "signals"
+      ],
+      "llm_summary": "An exploration of the signals used by the dialog manager for dismissing a dialog."
+    },
+    {
+      "id": "blog_paulgraham_5cf8acde137e",
+      "title": "Beyond Smart",
+      "url": "http://www.paulgraham.com/smart.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 5,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.52,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "intelligence",
+        "innovation",
+        "thinking"
+      ],
+      "llm_summary": "Explores the nature of intelligence and its potential beyond current limitations, relevant for understanding future AI development."
+    },
+    {
+      "id": "blog_paulgraham_ac2cfa9f0515",
+      "title": "Fierce Nerds",
+      "url": "http://www.paulgraham.com/fn.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 5,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.52,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "nerds",
+        "innovation",
+        "technology"
+      ],
+      "llm_summary": "Celebrates the passion and drive of technically skilled individuals, highlighting their role in technological advancement."
+    },
+    {
+      "id": "blog_hillelwayne_b09b910efac5",
+      "title": "Stream of Consciousness Driven Development",
+      "url": "https://buttondown.com/hillelwayne/archive/stream-of-consciousness-driven-development/",
+      "blog": "Hillel Wayne",
+      "blog_id": "hillelwayne",
+      "author": "Hillel Wayne",
+      "published_at": "2026-02-18T16:33:08+00:00",
+      "summary": "<p>This is something I just tried out last week but it seems to have enough potential to be worth showing unpolished. I was pairing with a client on writing a spec. I saw a problem with the spec, a convoluted way of fixing the spec. Instead of trying to verbally explain it, I started by creating a new markdown file:</p>\n<div class=\"codehilite\"><pre><span></span><code>NameOfProblem.md\n</code></pre></div>\n\n<p>Then I started typing. First the problem summary, then a detailed description, then the s",
+      "categories": [
+        "formal_methods",
+        "engineering",
+        "cs_history"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 4,
+      "llm_quality": 6,
+      "llm_timeliness": 6,
+      "llm_score": 0.52,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "Development",
+        "Spec",
+        "Pairing"
+      ],
+      "llm_summary": "A discussion of a 'stream of consciousness' approach to software specification development."
+    },
+    {
+      "id": "blog_fabiensanglard_b91b9d708e52",
+      "title": "Why WinQuake exists and how it works",
+      "url": "https://fabiensanglard.net/winquake/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 4,
+      "llm_quality": 8,
+      "llm_timeliness": 2,
+      "llm_score": 0.52,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "Quake",
+        "WinQuake",
+        "Game Engine",
+        "Software Architecture"
+      ],
+      "llm_summary": "Examining the rationale and implementation of WinQuake reveals historical software design choices."
+    },
+    {
+      "id": "blog_fabiensanglard_e028d5642bc3",
+      "title": "How quake.exe got its TCP/IP stack",
+      "url": "https://fabiensanglard.net/quake_chunnel/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 4,
+      "llm_quality": 8,
+      "llm_timeliness": 2,
+      "llm_score": 0.52,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "Quake",
+        "TCP/IP",
+        "Networking",
+        "Game Development"
+      ],
+      "llm_summary": "Understanding how Quake integrated TCP/IP networking sheds light on early online gaming architectures."
+    },
+    {
+      "id": "blog_fabiensanglard_a954922b73d8",
+      "title": "Why fastDoom is fast",
+      "url": "https://fabiensanglard.net/fastdoom/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 4,
+      "llm_quality": 8,
+      "llm_timeliness": 2,
+      "llm_score": 0.52,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "Doom",
+        "Game Engine",
+        "Optimization",
+        "Performance"
+      ],
+      "llm_summary": "Analyzing FastDoom's optimizations can inform modern performance engineering strategies."
+    },
+    {
+      "id": "blog_simonwillison_b1fe70baf784",
+      "title": "Quoting Summer Yue",
+      "url": "https://simonwillison.net/2026/Feb/23/summer-yue/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-23T13:01:13+00:00",
+      "summary": "<blockquote cite=\"https://twitter.com/summeryue0/status/2025836517831405980\"><p>Nothing humbles you like telling your OpenClaw “confirm before acting” and watching it speedrun deleting your inbox. I couldn’t stop it from my phone. I had to RUN to my Mac mini like I was defusing a bomb.</p>\n<p>I said “Check this inbox too and suggest what you would archive or delete, don’t action until I tell you to.” This has been working well for my toy inbox, but my real inbox was too huge and triggered compac",
+      "categories": [
+        "ai-ethics",
+        "generative-ai",
+        "ai-agents",
+        "openclaw",
+        "ai",
+        "llms",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 4,
+      "llm_quality": 5,
+      "llm_timeliness": 7,
+      "llm_score": 0.5,
+      "llm_category": "AI/ML",
+      "llm_keywords": [
+        "OpenClaw",
+        "Automation",
+        "AI Safety",
+        "Mistakes"
+      ],
+      "llm_summary": "A cautionary tale about the potential for AI automation to cause unintended consequences."
+    },
+    {
+      "id": "blog_simonwillison_ae38530b7263",
+      "title": "Andrej Karpathy talks about \"Claws\"",
+      "url": "https://simonwillison.net/2026/Feb/21/claws/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-21T00:37:45+00:00",
+      "summary": "<p><strong><a href=\"https://twitter.com/karpathy/status/2024987174077432126\">Andrej Karpathy talks about &quot;Claws&quot;</a></strong></p>\nAndrej Karpathy tweeted a mini-essay about buying a Mac Mini (\"The apple store person told me they are selling like hotcakes and everyone is confused\") to tinker with Claws:</p>\n<blockquote>\n<p>I'm definitely a bit sus'd to run OpenClaw specifically [...] But I do love the concept and I think that just like LLM agents were a new layer on top of LLMs, Claws a",
+      "categories": [
+        "definitions",
+        "ai",
+        "andrej-karpathy",
+        "generative-ai",
+        "llms",
+        "ai-agents",
+        "openclaw",
+        "agentic-engineering",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.3,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 4,
+      "llm_quality": 5,
+      "llm_timeliness": 7,
+      "llm_score": 0.5,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Andrej Karpathy",
+        "Claws",
+        "Mac Mini",
+        "Hardware"
+      ],
+      "llm_summary": "Andrej Karpathy shares his thoughts on buying a Mac Mini."
+    },
+    {
+      "id": "blog_simonwillison_46d9be782357",
+      "title": "Recovering lost code",
+      "url": "https://simonwillison.net/2026/Feb/19/recovering-lost-code/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-19T23:48:35+00:00",
+      "summary": "<p>Reached the stage of parallel agent psychosis where I've lost a whole feature - I know I had it yesterday, but I can't seem to find the branch or worktree or cloud instance or checkout with it in.</p>\n<p>... found it! Turns out I'd been hacking on a random prototype in <code>/tmp</code> and then my computer crashed and rebooted and I lost the code... but it's all still there in <code>~/.claude/projects/</code> session logs and Claude Code can extract it out and spin up the missing feature aga",
+      "categories": [
+        "parallel-agents",
+        "coding-agents",
+        "claude-code",
+        "generative-ai",
+        "ai",
+        "llms",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.35,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 4,
+      "llm_quality": 5,
+      "llm_timeliness": 7,
+      "llm_score": 0.5,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "code management",
+        "debugging",
+        "version control",
+        "development"
+      ],
+      "llm_summary": "This highlights the challenges of managing code and versions in complex AI development workflows."
+    },
+    {
+      "id": "blog_simonwillison_be0c66c8d18c",
+      "title": "Experimenting with sponsorship for my blog and newsletter",
+      "url": "https://simonwillison.net/2026/Feb/19/sponsorship/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-19T05:44:29+00:00",
+      "summary": "<p>I've long been resistant to the idea of accepting sponsorship for my blog. I value my credibility as an independent voice, and I don't want to risk compromising that reputation.</p>\n<p>Then I learned about Troy Hunt's <a href=\"https://www.troyhunt.com/sponsorship/\">approach to sponsorship</a>, which he first wrote about <a href=\"https://www.troyhunt.com/im-now-offering-sponsorship-of-this-blog/\">in 2016</a>. Troy runs with a simple text row in the page banner - no JavaScript, no cookies, unob",
+      "categories": [
+        "newsletter",
+        "blogging",
+        "troy-hunt",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [
+        "-risk"
+      ],
+      "tier": "tier1",
+      "llm_relevance": 3,
+      "llm_quality": 6,
+      "llm_timeliness": 7,
+      "llm_score": 0.5,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "blogging",
+        "sponsorship",
+        "credibility",
+        "monetization"
+      ],
+      "llm_summary": "This discusses the ethical considerations of accepting sponsorships for tech blogs."
+    },
+    {
+      "id": "blog_daringfireball_b999347f94f9",
+      "title": "NetNewsWire 7 for Mac",
+      "url": "https://netnewswire.blog/2026/01/27/netnewswire-for-mac.html",
+      "blog": "Daring Fireball (John Gruber)",
+      "blog_id": "daringfireball",
+      "author": "John Gruber",
+      "published_at": "2026-02-23T21:41:00+00:00",
+      "summary": "<p>Brent Simmons, last month:</p>\n\n<blockquote>\n  <p>The big change from 6.2.1 is that it adopts the Liquid Glass UI\nand it requires macOS 26.</p>\n\n<p>(Note to people who aren’t on macOS 26: we fixed a lot of bugs in\n6.2 and 6.2.1 knowing that many people might skip, or at least\ndelay, installing macOS 26. Also note that there’s a page where\nyou can <a href=\"https://netnewswire.com/old-versions.html\">get old versions of NetNewsWire</a>.)</p>\n</blockquote>\n\n<p>It feels a little weird for me <em>n",
+      "categories": [
+        "apple",
+        "tech_culture",
+        "product"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [
+        "-delay"
+      ],
+      "tier": "tier2",
+      "llm_relevance": 3,
+      "llm_quality": 6,
+      "llm_timeliness": 7,
+      "llm_score": 0.5,
+      "llm_category": "Tools/OSS",
+      "llm_keywords": [
+        "NetNewsWire",
+        "RSS reader",
+        "MacOS",
+        "open source"
+      ],
+      "llm_summary": "Announces the release of a new version of an open-source RSS reader for MacOS, showcasing ongoing development in the open-source community."
+    },
+    {
+      "id": "blog_xeiaso_c086831c7aea",
+      "title": "Portable monitors are good",
+      "url": "https://xeiaso.net/blog/2026/portable-monitors-are-good/",
+      "blog": "Xe Iaso",
+      "blog_id": "xeiaso",
+      "author": "Xe Iaso",
+      "published_at": "2026-02-24T00:00:00",
+      "summary": "A review of portable monitors for travel",
+      "categories": [
+        "devops",
+        "ai",
+        "engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 4,
+      "llm_quality": 5,
+      "llm_timeliness": 7,
+      "llm_score": 0.5,
+      "llm_category": "Tools/OSS",
+      "llm_keywords": [
+        "portable monitor",
+        "hardware",
+        "review"
+      ],
+      "llm_summary": "A review of portable monitors, relevant for remote work and productivity tools."
+    },
+    {
+      "id": "blog_steveblank_89c0717efe70",
+      "title": "You Only Think They Work For You",
+      "url": "https://steveblank.com/2026/02/18/you-only-think-they-work-for-you/",
+      "blog": "Steve Blank",
+      "blog_id": "steveblank",
+      "author": "steve blank",
+      "published_at": "2026-02-18T14:00:39+00:00",
+      "summary": "When I was a new VP of Marketing I got a painful lesson of who my PR (Public Relations) agency actually worked for. Later I realized that it was true for all of my external vendors. And much later I realized what I really should have been asking them to do. The lessons still apply [&#8230;]",
+      "categories": [
+        "Marketing",
+        "startups",
+        "strategy",
+        "innovation"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 3,
+      "llm_quality": 6,
+      "llm_timeliness": 7,
+      "llm_score": 0.5,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "PR",
+        "vendors",
+        "agency"
+      ],
+      "llm_summary": "A VP of Marketing learns that external vendors don't always work for you."
+    },
+    {
+      "id": "blog_oldnewthing_ad359c97b02c",
+      "title": "Could Write­Process­Memory be made faster by avoiding the intermediate buffer?",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20260218-00/?p=112069",
+      "blog": "The Old New Thing (Raymond Chen)",
+      "blog_id": "oldnewthing",
+      "author": "Raymond Chen",
+      "published_at": "2026-02-18T15:00:00+00:00",
+      "summary": "<p>I guess it could, but why bother?</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/oldnewthing/20260218-00/?p=112069\">Could &lt;CODE&gt;Write&shy;Process&shy;Memory&lt;/CODE&gt; be made faster by avoiding the intermediate buffer?</a> appeared first on <a href=\"https://devblogs.microsoft.com/oldnewthing\">The Old New Thing</a>.</p>",
+      "categories": [
+        "Old New Thing",
+        "Code",
+        "windows",
+        "systems",
+        "engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 4,
+      "llm_quality": 5,
+      "llm_timeliness": 7,
+      "llm_score": 0.5,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "WriteProcessMemory",
+        "performance",
+        "optimization"
+      ],
+      "llm_summary": "A discussion on optimizing WriteProcessMemory by avoiding intermediate buffers."
+    },
+    {
+      "id": "blog_paulgraham_f8b4832637ce",
+      "title": "Superlinear Returns",
+      "url": "http://www.paulgraham.com/superlinear.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 4,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.48,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "productivity",
+        "career",
+        "success",
+        "growth"
+      ],
+      "llm_summary": "This is a general essay on achieving superlinear returns in one's career."
+    },
+    {
+      "id": "blog_paulgraham_ee94d981e826",
+      "title": "How to Do Great Work",
+      "url": "http://www.paulgraham.com/greatwork.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 4,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.48,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "productivity",
+        "career",
+        "success",
+        "work"
+      ],
+      "llm_summary": "This is a general essay on how to do great work."
+    },
+    {
+      "id": "blog_paulgraham_f564864bf8e2",
+      "title": "How to Get New Ideas",
+      "url": "http://www.paulgraham.com/getideas.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 4,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.48,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "productivity",
+        "career",
+        "success",
+        "ideas"
+      ],
+      "llm_summary": "This is a general essay on how to get new ideas."
+    },
+    {
+      "id": "blog_paulgraham_8e5da652135e",
+      "title": "What I've Learned from Users",
+      "url": "http://www.paulgraham.com/users.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 4,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.48,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "productivity",
+        "career",
+        "success",
+        "users"
+      ],
+      "llm_summary": "This is a general essay on lessons learned from users."
+    },
+    {
+      "id": "blog_paulgraham_bd7174299bfc",
+      "title": "A Project of One's Own",
+      "url": "http://www.paulgraham.com/own.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 4,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.48,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "projects",
+        "motivation",
+        "innovation"
+      ],
+      "llm_summary": "Emphasizes the importance of personal projects for learning and growth, applicable to tech and AI enthusiasts."
+    },
+    {
+      "id": "blog_daringfireball_00f75cc6040b",
+      "title": "The Pants-Shitting Saga of Resizing Windows on MacOS 26 Tahoe Continues",
+      "url": "https://noheger.at/blog/2026/02/12/resizing-windows-on-macos-tahoe-the-saga-continues/",
+      "blog": "Daring Fireball (John Gruber)",
+      "blog_id": "daringfireball",
+      "author": "John Gruber",
+      "published_at": "2026-02-24T00:31:00+00:00",
+      "summary": "<p>Norbert Heger:</p>\n\n<blockquote>\n  <p>In the release notes for macOS 26.3 RC, Apple stated that the\nwindow-resizing issue I demonstrated in <a href=\"https://noheger.at/blog/2026/01/11/the-struggle-of-resizing-windows-on-macos-tahoe/\">my recent blog\npost</a> had been resolved.</p>\n</blockquote>\n\n<p>You’ll never guess what happened between the RC (release candidate) version and the actual shipping version of 26.3.</p>\n\n<p>Just kidding, you’ll guess.</p>\n\n<div>\n<a href=\"https://daringfireball.ne",
+      "categories": [
+        "apple",
+        "tech_culture",
+        "product"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [
+        "+release",
+        "-struggle"
+      ],
+      "tier": "tier2",
+      "llm_relevance": 3,
+      "llm_quality": 6,
+      "llm_timeliness": 6,
+      "llm_score": 0.48,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "MacOS",
+        "UI",
+        "window resizing",
+        "bug"
+      ],
+      "llm_summary": "Describes an ongoing issue with window resizing on MacOS, relevant to software engineering and user experience."
+    },
+    {
+      "id": "blog_fabiensanglard_a7eea6d072e1",
+      "title": "Is QSpy still cool? Let's play QuakeWorld!",
+      "url": "https://fabiensanglard.net/quakeworld/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 4,
+      "llm_quality": 6,
+      "llm_timeliness": 4,
+      "llm_score": 0.48,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "QuakeWorld",
+        "Retro Gaming",
+        "Networking"
+      ],
+      "llm_summary": "A look at the QuakeWorld online multiplayer experience, relevant to understanding early online gaming and networking technologies."
+    },
+    {
+      "id": "blog_fabiensanglard_7a1eee86715e",
+      "title": "Building a 1997 Quake PC: Benchmarking Quake",
+      "url": "https://fabiensanglard.net/quake_pc/quake/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 3,
+      "llm_quality": 8,
+      "llm_timeliness": 2,
+      "llm_score": 0.48,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "Quake",
+        "Benchmarking",
+        "PC",
+        "Retro Computing"
+      ],
+      "llm_summary": "Understanding performance optimization in older game engines can offer insights into resource-constrained environments."
+    },
+    {
+      "id": "blog_fabiensanglard_6bb2d0c2f73b",
+      "title": "How the SNES Graphics System works",
+      "url": "https://fabiensanglard.net/snes_ppus_how/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 3,
+      "llm_quality": 8,
+      "llm_timeliness": 2,
+      "llm_score": 0.48,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "SNES",
+        "Graphics System",
+        "Hardware",
+        "Video Processing"
+      ],
+      "llm_summary": "Examining the SNES graphics system reveals historical approaches to video processing and hardware design."
+    },
+    {
+      "id": "blog_computer_rip_05bd33e75a9b",
+      "title": "air traffic control: the IBM 9020",
+      "url": "https://computer.rip/2026-01-17-air-traffic-control-9020.html",
+      "blog": "computer.rip (J. B. Crawford)",
+      "blog_id": "computer_rip",
+      "author": "computer.rip (J. B. Crawford)",
+      "published_at": null,
+      "summary": "<p>Previously on <em>Computers Are Bad,</em> we discussed the <a href=\"https://computer.rip/2025-05-11-air-traffic-control.html\">early history of air\ntraffic control in the United States</a>.\nThe technical demands of air traffic control are well known in computer history\ncircles because of the prominence of SAGE, but what's less well known is that\nSAGE itself was not an air traffic control system at all. SAGE was an air <em>defense</em>\nsystem, designed for the military with a specific task of g",
+      "categories": [
+        "telecom",
+        "infrastructure",
+        "history"
+      ],
+      "ai_relevance_score": 0.35,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 4,
+      "llm_quality": 6,
+      "llm_timeliness": 4,
+      "llm_score": 0.48,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "air traffic control",
+        "IBM 9020",
+        "history"
+      ],
+      "llm_summary": "Details the history and technology behind the IBM 9020 air traffic control system."
+    },
+    {
+      "id": "blog_computer_rip_14e1ce9de496",
+      "title": "Flock and Urban Surveillance",
+      "url": "https://computer.rip/2025-12-26-Flock-and-Urban-Surveillance.html",
+      "blog": "computer.rip (J. B. Crawford)",
+      "blog_id": "computer_rip",
+      "author": "computer.rip (J. B. Crawford)",
+      "published_at": null,
+      "summary": "<p>Some years ago, I had a frustrating and largely fruitless encounter with the\npolitics of policing. As a member of an oversight commission, I was\nparticularly interested in the regulation of urban surveillance. The Albuquerque\nPolice Department, for reasons good and bad, has often been an early adopter\nof surveillance technology. APD deployed automated license plate readers,\nmounted on patrol cars and portable trailers, in 2013. Initially, the department\nkept a six-month history of license pla",
+      "categories": [
+        "telecom",
+        "infrastructure",
+        "history"
+      ],
+      "ai_relevance_score": 0.2,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 4,
+      "llm_quality": 6,
+      "llm_timeliness": 4,
+      "llm_score": 0.48,
+      "llm_category": "Security",
+      "llm_keywords": [
+        "surveillance",
+        "Flock",
+        "urban policing"
+      ],
+      "llm_summary": "Examines the use of Flock and other technologies in urban surveillance and policing."
+    },
+    {
+      "id": "blog_daringfireball_d588b5772d50",
+      "title": "IMAX and Apple Collaborate to Screen F1 Races Live in Theaters",
+      "url": "https://www.motorsport.com/f1/news/f1-to-screen-live-in-imax-theatres-in-2026-as-apple-tv-unveils-new-us-viewing-experience/10798974/",
+      "blog": "Daring Fireball (John Gruber)",
+      "blog_id": "daringfireball",
+      "author": "John Gruber",
+      "published_at": "2026-02-19T23:29:06+00:00",
+      "summary": "<p>Lydia Mee, reporting for Motorsport:</p>\n\n<blockquote>\n  <p>IMAX has announced that a select number of races will be shown\nlive in IMAX locations across the United States in 2026. The new\nfan viewing experience is part of a collaboration with Apple TV,\nwhich has taken over the broadcasting rights for the championship\nin the US on a multi-year deal from 2026.</p>\n\n<p>“F1 is a rapidly growing force in sports and culture in the US,\nand by bringing F1 on Apple TV live to IMAX theatres nationwide,",
+      "categories": [
+        "apple",
+        "tech_culture",
+        "product"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 4,
+      "llm_quality": 4,
+      "llm_timeliness": 7,
+      "llm_score": 0.46,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "IMAX",
+        "Apple",
+        "F1"
+      ],
+      "llm_summary": "IMAX and Apple collaborate to screen F1 races live in theaters, potentially relevant to immersive experiences."
+    },
+    {
+      "id": "blog_daringfireball_2589b152de9a",
+      "title": "★ Apple Releases iOS 26 Adoption Rates, and They’re Pretty Much in Line With the Last Few Years",
+      "url": "https://daringfireball.net/2026/02/apple_releases_ios_26_adoption_rates",
+      "blog": "Daring Fireball (John Gruber)",
+      "blog_id": "daringfireball",
+      "author": "John Gruber",
+      "published_at": "2026-02-17T18:49:55+00:00",
+      "summary": "At least according to Apple’s own numbers from the App Store, iOS 26 adoption is pretty much exactly in line with the rates for iOS 18 and 17.",
+      "categories": [
+        "apple",
+        "tech_culture",
+        "product"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [
+        "+release"
+      ],
+      "tier": "tier2",
+      "llm_relevance": 4,
+      "llm_quality": 4,
+      "llm_timeliness": 7,
+      "llm_score": 0.46,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "Apple",
+        "iOS",
+        "adoption rate"
+      ],
+      "llm_summary": "iOS 26 adoption rates are in line with previous years, indicating stable user upgrades."
+    },
+    {
+      "id": "blog_pluralistic_b2bb94ac4784",
+      "title": "Pluralistic: Deplatform yourself (23 Feb 2026)",
+      "url": "https://pluralistic.net/2026/02/23/goodharts-lawbreaker/",
+      "blog": "Cory Doctorow (Pluralistic)",
+      "blog_id": "pluralistic",
+      "author": "Cory Doctorow",
+      "published_at": "2026-02-23T10:52:48+00:00",
+      "summary": "Today's links Deplatform yourself: Copyright infringement is your least entertainment dollar. Hey look at this: Delights to delectate. Object permanence: \"Lawer\" threatens suit; Landmark metaphotos; 3DP v (c); Forced arbitration; Imperial Scott Walker; Keysigning ritual; Polyfingered robot dictaphone; DNS bug; Register of copyright damns term extension; How Anonymous decides; Christchurch quake people-finder; Minor HP disenshittification; US v developing world at WIPO; TfL v anagram tube-map; Di",
+      "categories": [
+        "Uncategorized",
+        "become unoptimizable",
+        "blogging",
+        "bohemianism",
+        "copyright infringement",
+        "disenshittification",
+        "garbage day",
+        "iron lung",
+        "nirvanna",
+        "people's joker",
+        "ryan broderick",
+        "unmonetizable content",
+        "web theory",
+        "policy",
+        "antitrust",
+        "tech_culture"
+      ],
+      "ai_relevance_score": 0.2,
+      "sentiment_keywords": [
+        "-enshittification"
+      ],
+      "tier": "tier2",
+      "llm_relevance": 3,
+      "llm_quality": 5,
+      "llm_timeliness": 7,
+      "llm_score": 0.46,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "copyright",
+        "deplatform",
+        "corporate power"
+      ],
+      "llm_summary": "Discussion on deplatforming and copyright infringement, tangentially related to tech policy."
+    },
+    {
+      "id": "blog_pluralistic_1b4151e618f7",
+      "title": "Pluralistic: A perforated corporate veil (20 Feb 2026)",
+      "url": "https://pluralistic.net/2026/02/20/karioca-konzernrecht/",
+      "blog": "Cory Doctorow (Pluralistic)",
+      "blog_id": "pluralistic",
+      "author": "Cory Doctorow",
+      "published_at": "2026-02-20T14:53:08+00:00",
+      "summary": "Today's links A perforated corporate veil: The Brazilian method for curbing corporate power. Hey look at this: Delights to delectate. Object permanence: Social media turned US parties into host organisms for third parties; \"Citizens\" are hired actors; Insured exoskeletons; Talking with Snowden and Gibson. Upcoming appearances: Where to find me. Recent appearances: Where I've been. Latest books: You keep readin' em, I'll keep writin' 'em. Upcoming books: Like I said, I'll keep writin' 'em. Coloph",
+      "categories": [
+        "Uncategorized",
+        "brazil",
+        "corporate governance",
+        "elon musk",
+        "finance law",
+        "joint and several liability",
+        "law and political economy",
+        "liability",
+        "limited liability",
+        "scholarship",
+        "starlink",
+        "twitter",
+        "policy",
+        "antitrust",
+        "tech_culture"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 3,
+      "llm_quality": 5,
+      "llm_timeliness": 7,
+      "llm_score": 0.46,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "corporate power",
+        "social media",
+        "politics"
+      ],
+      "llm_summary": "Analysis of corporate power and the influence of social media on political parties."
+    },
+    {
+      "id": "blog_construction_physics_9afb22ff6f30",
+      "title": "Is the Future “AWS for Everything”?",
+      "url": "https://www.construction-physics.com/p/is-the-future-aws-for-everything",
+      "blog": "Construction Physics",
+      "blog_id": "construction_physics",
+      "author": "Brian Potter",
+      "published_at": "2026-02-19T13:01:06",
+      "summary": "A theme running through my book is the idea that efficiency improvements, and the various methods for making products cheaper over time, have historically been dependent on some degree of repetition, on running your production process over and over again.",
+      "categories": [
+        "infrastructure",
+        "economics",
+        "progress"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 3,
+      "llm_quality": 5,
+      "llm_timeliness": 7,
+      "llm_score": 0.46,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "AWS",
+        "cloud",
+        "efficiency"
+      ],
+      "llm_summary": "An exploration of whether the future will be 'AWS for Everything' in terms of efficiency improvements."
+    },
+    {
+      "id": "blog_seangoedecke_173bb3175fae",
+      "title": "Insider amnesia",
+      "url": "https://seangoedecke.com/insider-amnesia/",
+      "blog": "Sean Goedecke",
+      "blog_id": "seangoedecke",
+      "author": "Sean Goedecke",
+      "published_at": "2026-02-23T00:00:00",
+      "summary": "<p>Speculation about what’s really going on inside a tech company is almost always wrong. </p>\n<p>When some problem with your company is posted on the internet, and you read people’s thoughts on it, their thoughts are almost always ridiculous. For instance, they might blame product managers for a particular decision, when in fact the decision in question was engineering-driven and the product org was pushing back on it. Or they might attribute an incident to overuse of AI, when the system in que",
+      "categories": [
+        "engineering",
+        "career"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 3,
+      "llm_quality": 5,
+      "llm_timeliness": 7,
+      "llm_score": 0.46,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "tech company",
+        "speculation",
+        "insider"
+      ],
+      "llm_summary": "Speculation about what's happening inside a tech company is usually wrong."
+    },
+    {
+      "id": "blog_simonwillison_73dca3d1d7a8",
+      "title": "London Stock Exchange: Raspberry Pi Holdings plc",
+      "url": "https://simonwillison.net/2026/Feb/22/raspberry-pi-openclaw/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-22T23:54:39+00:00",
+      "summary": "<p><strong><a href=\"https://www.londonstockexchange.com/stock/RPI/raspberry-pi-holdings-plc/company-page\">London Stock Exchange: Raspberry Pi Holdings plc</a></strong></p>\nStriking graph illustrating stock in the UK Raspberry Pi holding company spiking on Tuesday:</p>\n<p><img alt=\"Stock price line chart for RASPBERRY PI showing a 3-month daily view from 24 Nov to 16 Feb. The price trends downward from around 325 to a low near 260, then sharply spikes upward. A tooltip highlights &quot;RASPBERRY ",
+      "categories": [
+        "ai",
+        "generative-ai",
+        "raspberry-pi",
+        "llms",
+        "ai-agents",
+        "openclaw",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 3,
+      "llm_quality": 4,
+      "llm_timeliness": 8,
+      "llm_score": 0.44,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Raspberry Pi",
+        "Stock Exchange",
+        "RPI",
+        "Market"
+      ],
+      "llm_summary": "Raspberry Pi Holdings plc's stock market performance is illustrated with a graph."
+    },
+    {
+      "id": "blog_paulgraham_f6b2377c9073",
+      "title": "The Need to Read",
+      "url": "http://www.paulgraham.com/read.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 3,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.44,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "productivity",
+        "career",
+        "success",
+        "reading"
+      ],
+      "llm_summary": "This is a general essay on the importance of reading."
+    },
+    {
+      "id": "blog_paulgraham_6bd6fdc3ef42",
+      "title": "What You (Want to)* Want",
+      "url": "http://www.paulgraham.com/want.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 3,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.44,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "productivity",
+        "career",
+        "success",
+        "goals"
+      ],
+      "llm_summary": "This is a general essay on understanding what you want."
+    },
+    {
+      "id": "blog_paulgraham_f54cb42b34b1",
+      "title": "Alien Truth",
+      "url": "http://www.paulgraham.com/alien.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 3,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.44,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "productivity",
+        "career",
+        "success",
+        "truth"
+      ],
+      "llm_summary": "This is a general essay on the nature of truth."
+    },
+    {
+      "id": "blog_paulgraham_3347094652c9",
+      "title": "Heresy",
+      "url": "http://www.paulgraham.com/heresy.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 3,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.44,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "productivity",
+        "career",
+        "success",
+        "heresy"
+      ],
+      "llm_summary": "This is a general essay on the value of heresy."
+    },
+    {
+      "id": "blog_paulgraham_084ef6f1c0f4",
+      "title": "Putting Ideas into Words",
+      "url": "http://www.paulgraham.com/words.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 3,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.44,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "productivity",
+        "career",
+        "success",
+        "writing"
+      ],
+      "llm_summary": "This is a general essay on putting ideas into words."
+    },
+    {
+      "id": "blog_paulgraham_9a3e77784cbb",
+      "title": "Is There Such a Thing as Good Taste?",
+      "url": "http://www.paulgraham.com/goodtaste.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 3,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.44,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "productivity",
+        "career",
+        "success",
+        "taste"
+      ],
+      "llm_summary": "This is a general essay on the nature of good taste."
+    },
+    {
+      "id": "blog_paulgraham_ea9546620ca6",
+      "title": "How to Work Hard",
+      "url": "http://www.paulgraham.com/hwh.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 3,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.44,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "productivity",
+        "work ethic",
+        "success"
+      ],
+      "llm_summary": "Offers insights on effective work habits, indirectly relevant to the dedication required in tech and AI fields."
+    },
+    {
+      "id": "blog_paulgraham_ad39bc53b080",
+      "title": "Write Simply",
+      "url": "http://www.paulgraham.com/simply.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 3,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.44,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "writing",
+        "communication",
+        "clarity"
+      ],
+      "llm_summary": "Emphasizes the importance of clear communication, a valuable skill in any technical field."
+    },
+    {
+      "id": "blog_fabiensanglard_c5b20844dccf",
+      "title": "Quake Engine Indicators",
+      "url": "https://fabiensanglard.net/quake_indicators/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 3,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.44,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "Quake",
+        "Game Engine",
+        "Performance",
+        "Metrics"
+      ],
+      "llm_summary": "Analyzing Quake's engine indicators provides insight into real-time performance monitoring techniques."
+    },
+    {
+      "id": "blog_fabiensanglard_b9eb3e3fad43",
+      "title": "SNES: Sprites and backgrounds rendering",
+      "url": "https://fabiensanglard.net/snes_ppus_why/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 3,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.44,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "SNES",
+        "Sprites",
+        "Backgrounds",
+        "Graphics Rendering"
+      ],
+      "llm_summary": "Understanding SNES sprite and background rendering provides insight into early graphics processing techniques."
+    },
+    {
+      "id": "blog_fabiensanglard_a9505aed112e",
+      "title": "Carving the Super Nintendo Video System",
+      "url": "https://fabiensanglard.net/snes_video/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 3,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.44,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "SNES",
+        "Video System",
+        "Hardware",
+        "Reverse Engineering"
+      ],
+      "llm_summary": "Reverse engineering the SNES video system offers insights into embedded systems and hardware limitations."
+    },
+    {
+      "id": "blog_fabiensanglard_28a481118996",
+      "title": "Inside the Super Nintendo cartridges",
+      "url": "https://fabiensanglard.net/snes_carts/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 3,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.44,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "SNES",
+        "Cartridges",
+        "Hardware",
+        "Memory"
+      ],
+      "llm_summary": "Understanding SNES cartridges provides insight into early game storage and memory management."
+    },
+    {
+      "id": "blog_fabiensanglard_e400fcc89332",
+      "title": "The evolution of the Super Nintendo motherboard",
+      "url": "https://fabiensanglard.net/snes_mobos/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 3,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.44,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "SNES",
+        "Motherboard",
+        "Hardware",
+        "Evolution"
+      ],
+      "llm_summary": "Tracing the evolution of the SNES motherboard reveals hardware design trends and component integration."
+    },
+    {
+      "id": "blog_fabiensanglard_36bc3b30e7a1",
+      "title": "The hearts of the Super Nintendo",
+      "url": "https://fabiensanglard.net/snes_hearts/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 3,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.44,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "SNES",
+        "Hardware",
+        "Processors",
+        "Custom Chips"
+      ],
+      "llm_summary": "Examining the SNES's core processors and custom chips provides insight into specialized hardware design."
+    },
+    {
+      "id": "blog_paulgraham_c974eb7e7849",
+      "title": "How People Get Rich Now",
+      "url": "http://www.paulgraham.com/richnow.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 3,
+      "llm_quality": 6,
+      "llm_timeliness": 3,
+      "llm_score": 0.42,
+      "llm_category": "Opinion",
+      "llm_keywords": [
+        "wealth",
+        "economics",
+        "technology"
+      ],
+      "llm_summary": "Analyzes modern wealth creation, with some relevance to the economic impact of technology and AI."
+    },
+    {
+      "id": "blog_daringfireball_b3c340cb5c8f",
+      "title": "Apple Invites Media to Special ‘Experience’ in New York, London, and Shanghai on March 4",
+      "url": "https://www.macrumors.com/2026/02/16/apple-announces-special-event-in-new-york/",
+      "blog": "Daring Fireball (John Gruber)",
+      "blog_id": "daringfireball",
+      "author": "John Gruber",
+      "published_at": "2026-02-18T00:08:45+00:00",
+      "summary": "<p>Hartley Charlton, MacRumors:</p>\n\n<blockquote>\n  <p>Apple invited select members of the media to the event in three\nmajor cities around the world. It is simply described as a\n“special Apple Experience,” and there is no further information\nabout what it may entail. The invitation features a 3D Apple logo\ndesign composed of yellow, green, and blue discs.</p>\n\n<p>It is notable that Apple is specifically using the word\n“experience,” rather than “event.” Unlike a full live-streamed\nevent from Appl",
+      "categories": [
+        "apple",
+        "tech_culture",
+        "product"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 4,
+      "llm_quality": 3,
+      "llm_timeliness": 7,
+      "llm_score": 0.42,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Apple",
+        "event",
+        "media"
+      ],
+      "llm_summary": "Apple invites media to a special event in New York, London, and Shanghai."
+    },
+    {
+      "id": "blog_xeiaso_c764286b3070",
+      "title": "Anubis v1.25.0: Necron",
+      "url": "https://github.com/TecharoHQ/anubis/releases/tag/v1.25.0",
+      "blog": "Xe Iaso",
+      "blog_id": "xeiaso",
+      "author": "Xe Iaso",
+      "published_at": "2026-02-18T00:00:00",
+      "summary": "<p>Hey all,</p>\n        <p>I'm sure you've all been aware that things have been slowing down a little with Anubis development, and I want to apologize for that. A lot has been going on in my life lately (my blog will have a post out on Friday with more information), and as a result I haven't really had the energy to work on Anubis in publicly visible ways. There are things going on behind the scenes, but nothing is really shippable yet, sorry!</p>\n        <p>I've also been feeling some burnout i",
+      "categories": [
+        "external",
+        "devops",
+        "ai",
+        "engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 3,
+      "llm_quality": 4,
+      "llm_timeliness": 7,
+      "llm_score": 0.42,
+      "llm_category": "Tools/OSS",
+      "llm_keywords": [
+        "Anubis",
+        "Necron",
+        "development"
+      ],
+      "llm_summary": "Anubis v1.25.0 is released, but development has slowed down."
+    },
+    {
+      "id": "blog_shkspr_dc977ff186dd",
+      "title": "Gadget Review: Epomaker Split 70 Mechanical Keyboard ★★★★⯪",
+      "url": "https://shkspr.mobi/blog/2026/02/gadget-review-epomaker-split-70-mechanical-keyboard/",
+      "blog": "Terence Eden",
+      "blog_id": "shkspr",
+      "author": "@edent",
+      "published_at": "2026-02-17T12:34:09+00:00",
+      "summary": "The good folks at Epomaker know that I love an ergonomic keyboard, so they&#039;ve sent me their new \"Split 70\" model to review.  This isn&#039;t your traditional ergonomic keyboard. Essentially, this is two separate halves joined by a USB-C cable; so you can position it however you like.    Here&#039;s a quick video showing it in action:  https://shkspr.mobi/blog/wp-content/uploads/2026/02/split-new.mp4  It is …",
+      "categories": [
+        "/etc/",
+        "ergonomic",
+        "gadget",
+        "keyboard",
+        "review",
+        "web_standards",
+        "open_source",
+        "policy"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 3,
+      "llm_quality": 5,
+      "llm_timeliness": 5,
+      "llm_score": 0.42,
+      "llm_category": "Tools/OSS",
+      "llm_keywords": [
+        "Keyboard",
+        "Ergonomic",
+        "Gadget Review"
+      ],
+      "llm_summary": "A review of an ergonomic keyboard, relevant to developers and tech professionals concerned with productivity."
+    },
+    {
+      "id": "blog_fabiensanglard_902ff05050ae",
+      "title": "Building a 1997 Quake PC!",
+      "url": "https://fabiensanglard.net/quake_pc/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 2,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.4,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "Quake",
+        "Retro Computing",
+        "Hardware"
+      ],
+      "llm_summary": "Recreating a vintage PC setup provides a hands-on understanding of past hardware limitations."
+    },
+    {
+      "id": "blog_fabiensanglard_89918a399fd9",
+      "title": "Building my childhood dream PC",
+      "url": "https://fabiensanglard.net/2168/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 2,
+      "llm_quality": 7,
+      "llm_timeliness": 2,
+      "llm_score": 0.4,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Retro Computing",
+        "Hardware",
+        "Personal Project"
+      ],
+      "llm_summary": "A personal journey into building a dream PC offers a nostalgic look at computing history."
+    },
+    {
+      "id": "blog_daringfireball_33902bce0c07",
+      "title": "How to Force Restart an iPhone",
+      "url": "https://support.apple.com/guide/iphone/force-restart-iphone-iph8903c3ee6/ios",
+      "blog": "Daring Fireball (John Gruber)",
+      "blog_id": "daringfireball",
+      "author": "John Gruber",
+      "published_at": "2026-02-17T17:20:01+00:00",
+      "summary": "<p>Apple Support:</p>\n\n<blockquote>\n  <p>If iPhone isn’t responding, and you can’t <a href=\"https://support.apple.com/guide/iphone/turn-iphone-on-or-off-iph841379c3d/26/ios/26#iph6c6b41f36\">turn it off then\non</a>, try forcing it to restart.</p>\n\n<ol>\n<li>Press and quickly release the volume up button.</li>\n<li>Press and quickly release the volume down button.</li>\n<li>Press and hold the side button.</li>\n<li>When the Apple logo appears, release the side button.</li>\n</ol>\n</blockquote>\n\n<p>I up",
+      "categories": [
+        "apple",
+        "tech_culture",
+        "product"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [
+        "+release"
+      ],
+      "tier": "tier2",
+      "llm_relevance": 3,
+      "llm_quality": 3,
+      "llm_timeliness": 7,
+      "llm_score": 0.38,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "iPhone",
+        "restart",
+        "troubleshooting"
+      ],
+      "llm_summary": "Instructions on how to force restart an iPhone, basic troubleshooting information."
+    },
+    {
+      "id": "blog_pluralistic_4d89aeb86edb",
+      "title": "Pluralistic: Six Years of Pluralistic (19 Feb 2026)",
+      "url": "https://pluralistic.net/2026/02/19/now-we-are-six/",
+      "blog": "Cory Doctorow (Pluralistic)",
+      "blog_id": "pluralistic",
+      "author": "Cory Doctorow",
+      "published_at": "2026-02-19T14:08:05+00:00",
+      "summary": "Today's links Six years of Pluralistic: Time flies when you're writing the web. Hey look at this: Delights to delectate. Object permanence: MBA phrenology; Sony's DRM CEO is out; Midwestern Tahrir; Reverse Centaurs and AI. Upcoming appearances: Where to find me. Recent appearances: Where I've been. Latest books: You keep readin' em, I'll keep writin' 'em. Upcoming books: Like I said, I'll keep writin' 'em. Colophon: All the rest. Six years of Pluralistic (permalink) Six years ago today, after 19",
+      "categories": [
+        "Uncategorized",
+        "blogging",
+        "memex method",
+        "posse",
+        "process notes",
+        "Web Writing",
+        "writing",
+        "policy",
+        "antitrust",
+        "tech_culture"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 2,
+      "llm_quality": 4,
+      "llm_timeliness": 7,
+      "llm_score": 0.38,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "DRM",
+        "Sony",
+        "MBA"
+      ],
+      "llm_summary": "A reflective post on the blog's anniversary, with links to articles on DRM and corporate culture."
+    },
+    {
+      "id": "blog_oldnewthing_e42b348c4798",
+      "title": "Microspeak: Escrow",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20260217-00/?p=112067",
+      "blog": "The Old New Thing (Raymond Chen)",
+      "blog_id": "oldnewthing",
+      "author": "Raymond Chen",
+      "published_at": "2026-02-17T15:00:00+00:00",
+      "summary": "<p>Final build, final, final, final 2, ship this one.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/oldnewthing/20260217-00/?p=112067\">Microspeak: Escrow</a> appeared first on <a href=\"https://devblogs.microsoft.com/oldnewthing\">The Old New Thing</a>.</p>",
+      "categories": [
+        "Old New Thing",
+        "Microspeak",
+        "Other",
+        "windows",
+        "systems",
+        "engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 2,
+      "llm_quality": 4,
+      "llm_timeliness": 7,
+      "llm_score": 0.38,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Microspeak",
+        "Escrow",
+        "terminology"
+      ],
+      "llm_summary": "An explanation of the term 'Escrow' in the context of Microsoft terminology."
+    },
+    {
+      "id": "blog_computer_rip_d6f64ee0c543",
+      "title": "RuBee",
+      "url": "https://computer.rip/2025-11-22-RuBee.html",
+      "blog": "computer.rip (J. B. Crawford)",
+      "blog_id": "computer_rip",
+      "author": "computer.rip (J. B. Crawford)",
+      "published_at": null,
+      "summary": "<p>I have at least a few readers for which the sound of a man's voice saying\n&quot;government cell phone detected&quot; will elicit a palpable reaction. In\nDepartment of Energy facilities across the country, incidences of employees\naccidentally carrying phones into secure areas are reduced through a sort of\nautomated nagging. A device at the door monitors for the presence of a tag;\nwhen the tag is detected it plays an audio clip. Because this is the government,\nthe device in question is highly s",
+      "categories": [
+        "telecom",
+        "infrastructure",
+        "history"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 3,
+      "llm_quality": 5,
+      "llm_timeliness": 3,
+      "llm_score": 0.38,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "RuBee",
+        "tracking",
+        "government"
+      ],
+      "llm_summary": "Explores the RuBee tracking technology and its use in government facilities."
+    },
+    {
+      "id": "blog_matklad_eb9b6dcbcb5b",
+      "title": "Wrapping Code Comments",
+      "url": "https://matklad.github.io/2026/02/21/wrapping-code-comments.html",
+      "blog": "matklad (Alex Kladov)",
+      "blog_id": "matklad",
+      "author": "Alex Kladov",
+      "published_at": "2026-02-21T00:00:00+00:00",
+      "summary": "I was today years old when I realized that:",
+      "categories": [
+        "rust",
+        "compilers",
+        "engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 2,
+      "llm_quality": 3,
+      "llm_timeliness": 7,
+      "llm_score": 0.34,
+      "llm_category": "Engineering",
+      "llm_keywords": [
+        "code comments",
+        "formatting",
+        "style"
+      ],
+      "llm_summary": "The author reflects on a realization about wrapping code comments."
+    },
+    {
+      "id": "blog_construction_physics_9f5446a065bf",
+      "title": "Reading List 02/21/26",
+      "url": "https://www.construction-physics.com/p/reading-list-022126",
+      "blog": "Construction Physics",
+      "blog_id": "construction_physics",
+      "author": "Brian Potter",
+      "published_at": "2026-02-21T13:37:44",
+      "summary": "Welcome to the reading list, a weekly roundup of news and links related to buildings, infrastructure, and industrial technology.",
+      "categories": [
+        "infrastructure",
+        "economics",
+        "progress"
+      ],
+      "ai_relevance_score": 0.05,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 2,
+      "llm_quality": 3,
+      "llm_timeliness": 7,
+      "llm_score": 0.34,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "buildings",
+        "infrastructure",
+        "industrial technology"
+      ],
+      "llm_summary": "A weekly roundup of news and links related to buildings, infrastructure, and industrial technology."
+    },
+    {
+      "id": "blog_computer_rip_6c5198b8fb32",
+      "title": "forecourt networking",
+      "url": "https://computer.rip/2026-02-08-forecourt-networking.html",
+      "blog": "computer.rip (J. B. Crawford)",
+      "blog_id": "computer_rip",
+      "author": "computer.rip (J. B. Crawford)",
+      "published_at": null,
+      "summary": "<p>The way I see it, few parts of American life are as quintessentially American\nas buying gas. We love our cars, we love our oil, and an industry about as old\nas automobiles themselves has developed a highly consistent, fully automated,\nand fairly user friendly system for filling the former with the latter.</p>\n<p>I grew up in Oregon. While these rules have since been relaxed, many know\nOregon for its long identity as one of two states where you cannot pump\nyour own gas (the other being New Jer",
+      "categories": [
+        "telecom",
+        "infrastructure",
+        "history"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 2,
+      "llm_quality": 5,
+      "llm_timeliness": 3,
+      "llm_score": 0.34,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "gas stations",
+        "networking",
+        "infrastructure"
+      ],
+      "llm_summary": "Explores the networking aspects of gas stations in American culture."
+    },
+    {
+      "id": "blog_computer_rip_5dabdb24fc4b",
+      "title": "the essence of frigidity",
+      "url": "https://computer.rip/2026-01-25-the-essence-of-frigidity.html",
+      "blog": "computer.rip (J. B. Crawford)",
+      "blog_id": "computer_rip",
+      "author": "computer.rip (J. B. Crawford)",
+      "published_at": null,
+      "summary": "<p>The front of the American grocery store contains a strange, liminal space: the\ntransitional area between parking lot and checkstand, along the front exterior\nand interior of the building, that fills with oddball commodities. Ice is a\nfixture at nearly every store, filtered water at most, firewood at some. This\nretail purgatory, both too early and too late in the shopping journey for\nimpulse purchases, is mostly good only for items people know they will need as\nthey check out. One of the stand",
+      "categories": [
+        "telecom",
+        "infrastructure",
+        "history"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 2,
+      "llm_quality": 5,
+      "llm_timeliness": 3,
+      "llm_score": 0.34,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "grocery stores",
+        "design",
+        "liminal space"
+      ],
+      "llm_summary": "Analyzes the transitional space at the front of American grocery stores."
+    },
+    {
+      "id": "blog_computer_rip_889b4278ff8c",
+      "title": "speed reading (the meaning of language)",
+      "url": "https://computer.rip/2025-12-08-speed-reading.html",
+      "blog": "computer.rip (J. B. Crawford)",
+      "blog_id": "computer_rip",
+      "author": "computer.rip (J. B. Crawford)",
+      "published_at": null,
+      "summary": "<p>One of the difficult things about describing a grift, or at least what became\na grift, is judging the sincerity with which the whole thing started. Scams\noften crystallize around a kernel of truth: genuinely good intentions that\nstart rolling down the hill to profitability and end up crashing through every\nsolid object along the way. I'm not totally sure about Evelyn Wood; she seems\nto have had all the best in mind but still turned so quickly to hotel conference\nroom seminars that I have trou",
+      "categories": [
+        "telecom",
+        "infrastructure",
+        "history"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 2,
+      "llm_quality": 5,
+      "llm_timeliness": 3,
+      "llm_score": 0.34,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "speed reading",
+        "language",
+        "grift"
+      ],
+      "llm_summary": "Discusses the history and potential for abuse in speed reading techniques."
+    },
+    {
+      "id": "blog_simonwillison_30e03f6e6f26",
+      "title": "Adding TILs, releases, museums, tools and research to my blog",
+      "url": "https://simonwillison.net/2026/Feb/20/beats/#atom-everything",
+      "blog": "Simon Willison",
+      "blog_id": "simonwillison",
+      "author": "Simon Willison",
+      "published_at": "2026-02-20T23:47:10+00:00",
+      "summary": "<p>I've been wanting to add indications of my various other online activities to my blog for a while now. I just turned on a new feature I'm calling \"beats\" (after story beats, naming this was hard!) which adds five new types of content to my site, all corresponding to activity elsewhere.</p>\n<p>Here's what beats look like:</p>\n<p><img alt=\"Screenshot of a fragment of a page showing three entries from 30th Dec 2025. First: [RELEASE] &quot;datasette-turnstile 0.1a0 — Configurable CAPTCHAs for Dat",
+      "categories": [
+        "blogging",
+        "museums",
+        "ai",
+        "til",
+        "generative-ai",
+        "llms",
+        "ai-assisted-programming",
+        "claude-artifacts",
+        "claude-code",
+        "ai_tools",
+        "llm",
+        "open_source"
+      ],
+      "ai_relevance_score": 0.3,
+      "sentiment_keywords": [
+        "+release"
+      ],
+      "tier": "tier1",
+      "llm_relevance": 2,
+      "llm_quality": 3,
+      "llm_timeliness": 6,
+      "llm_score": 0.32,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Blog",
+        "TILs",
+        "Releases",
+        "Museums",
+        "Tools"
+      ],
+      "llm_summary": "The author adds indicators of various online activities to their blog."
+    },
+    {
+      "id": "blog_paulgraham_78079255946b",
+      "title": "Weird Languages",
+      "url": "http://www.paulgraham.com/weird.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 2,
+      "llm_quality": 5,
+      "llm_timeliness": 2,
+      "llm_score": 0.32,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "NFT",
+        "charity",
+        "technology"
+      ],
+      "llm_summary": "Discusses a specific NFT project with a charitable cause, tangentially related to the application of technology for social good."
+    },
+    {
+      "id": "blog_ericmigi_f8ee080801da",
+      "title": "February Pebble Production and Software Updates",
+      "url": "https://repebble.com/blog/february-pebble-production-and-software-updates",
+      "blog": "Eric Migicovsky",
+      "blog_id": "ericmigi",
+      "author": "Eric Migicovsky",
+      "published_at": "2026-02-18T00:00:00",
+      "summary": "Mega update on Pebble Time 2, Pebble Round 2 and Index 01 Things are busy in Pebbleland! We’re getting close to shipping 3 new hardware…",
+      "categories": [
+        "hardware",
+        "startups",
+        "pebble"
+      ],
+      "ai_relevance_score": 0.05,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 2,
+      "llm_quality": 5,
+      "llm_timeliness": 2,
+      "llm_score": 0.32,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Pebble",
+        "Hardware",
+        "Software"
+      ],
+      "llm_summary": "A historical update on Pebble's hardware and software development, relevant for understanding past tech trends."
+    },
+    {
+      "id": "blog_shkspr_fed1e99626a4",
+      "title": "OpenBenches at FOSDEM",
+      "url": "https://shkspr.mobi/blog/2026/02/openbenches-at-fosdem/",
+      "blog": "Terence Eden",
+      "blog_id": "shkspr",
+      "author": "@edent",
+      "published_at": "2026-02-21T12:34:03+00:00",
+      "summary": "At the recent FOSDEM, I did a very quick lightning talk about our OpenBenches project.  Sadly, despite the best efforts of the AV team, the video had a missing section. I took my own audio recording and zipkid took some photos, so I was able to recreate it using the Flowblade video editor.  Enjoy!    Many thanks to Edward Betts for running the dev room and providing the display laptop. …",
+      "categories": [
+        "/etc/",
+        "fosdem",
+        "OpenBenches",
+        "web_standards",
+        "open_source",
+        "policy"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [
+        "+record"
+      ],
+      "tier": "tier3",
+      "llm_relevance": 2,
+      "llm_quality": 4,
+      "llm_timeliness": 3,
+      "llm_score": 0.3,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "OpenBenches",
+        "FOSDEM",
+        "Open Source"
+      ],
+      "llm_summary": "A report on an OpenBenches project presentation at FOSDEM, with limited relevance to AI/tech industry trends."
+    },
+    {
+      "id": "blog_computer_rip_3335e22e7e1e",
+      "title": "the steorn orbo",
+      "url": "https://computer.rip/2025-10-28-the-steorn-orbo.html",
+      "blog": "computer.rip (J. B. Crawford)",
+      "blog_id": "computer_rip",
+      "author": "computer.rip (J. B. Crawford)",
+      "published_at": null,
+      "summary": "<blockquote>\n<p>We think that we're converting time into energy... that's the engineering\nprinciple.</p>\n</blockquote>\n<p>In the 1820s, stacks, ovens, and gasometers rose over the docklands of Dublin.\nThe Hibernian Gas Company, one of several gasworks that would eventually occupy\nthe land around the Grand Canal Docks, heated coal to produce town gas. That gas\nwould soon supply thousands of lights on the streets of Dublin, a quiet\nrevolution in municipal development that paved the way for\nelectri",
+      "categories": [
+        "telecom",
+        "infrastructure",
+        "history"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 2,
+      "llm_quality": 4,
+      "llm_timeliness": 3,
+      "llm_score": 0.3,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Steorn Orbo",
+        "energy",
+        "scam"
+      ],
+      "llm_summary": "Discusses the Steorn Orbo, a supposed free energy device."
+    },
+    {
+      "id": "blog_paulgraham_d081f5d500fd",
+      "title": "The Real Reason to End the Death Penalty",
+      "url": "http://www.paulgraham.com/real.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 1,
+      "llm_quality": 5,
+      "llm_timeliness": 2,
+      "llm_score": 0.28,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "death penalty",
+        "ethics",
+        "society"
+      ],
+      "llm_summary": "Presents an argument against the death penalty, unrelated to AI or tech industry trends."
+    },
+    {
+      "id": "blog_daringfireball_70ebdffd288b",
+      "title": "Trader Joe’s Dark Chocolate Peanut Butter Cups",
+      "url": "https://www.traderjoes.com/home/products/pdp/dark-chocolate-peanut-butter-cups-094064",
+      "blog": "Daring Fireball (John Gruber)",
+      "blog_id": "daringfireball",
+      "author": "John Gruber",
+      "published_at": "2026-02-23T21:40:48+00:00",
+      "summary": "<p>Trader Joe’s:</p>\n\n<blockquote>\n  <p>Like their milk chocolate brethren on our shelves, our Dark\nChocolate Peanut Butter Cups are made with real peanut butter\nthat’s made with slowly roasted and ground Virginia peanuts. The\nluscious, smooth, rich, dark chocolate enveloping that peanut\nbutter is crafted from high quality cacao beans. Other purveyors\nof peanut butter cups fill theirs with all kinds of “extraneous”\ningredients. Ours are free of such things. We eschew artificial\nflavors and prese",
+      "categories": [
+        "apple",
+        "tech_culture",
+        "product"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 1,
+      "llm_quality": 2,
+      "llm_timeliness": 7,
+      "llm_score": 0.26,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "food",
+        "chocolate",
+        "peanut butter"
+      ],
+      "llm_summary": "A blog post about Trader Joe's peanut butter cups, irrelevant to tech/AI."
+    },
+    {
+      "id": "blog_daringfireball_de37a9382c86",
+      "title": "Grandson of Inventor of Reese’s Peanut Butter Cups Goes Public With the Obvious: They Taste Like Shit Now",
+      "url": "https://apnews.com/article/reeses-peanut-butter-cups-hershey-chocolate-1a66ec75247fd146888b7a747a740cd3",
+      "blog": "Daring Fireball (John Gruber)",
+      "blog_id": "daringfireball",
+      "author": "John Gruber",
+      "published_at": "2026-02-23T21:28:14+00:00",
+      "summary": "<p><a href=\"https://www.linkedin.com/posts/bradreesecom_reeses-brandstewardship-corporateaccountability-activity-7428545969430016001-zOL7/\">Brad Reese, on LinkedIn last week</a>:</p>\n\n<blockquote>\n  <p>My grandfather, H. B. Reese (Who Invented Reese’s), built Reese’s\non a simple, enduring architecture: Milk Chocolate + Peanut\nButter. Not a flavor idea. Not a marketing construct. A real,\ntangible product identity that consumers have trusted for a\ncentury.</p>\n\n<p>But today, Reese’s identity is be",
+      "categories": [
+        "apple",
+        "tech_culture",
+        "product"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 1,
+      "llm_quality": 2,
+      "llm_timeliness": 7,
+      "llm_score": 0.26,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "food",
+        "chocolate",
+        "peanut butter"
+      ],
+      "llm_summary": "A blog post about Reese's peanut butter cups, irrelevant to tech/AI."
+    },
+    {
+      "id": "blog_computer_rip_0e9edf40cfba",
+      "title": "memories of .us",
+      "url": "https://computer.rip/2025-11-11-dot-us.html",
+      "blog": "computer.rip (J. B. Crawford)",
+      "blog_id": "computer_rip",
+      "author": "computer.rip (J. B. Crawford)",
+      "published_at": null,
+      "summary": "<p>How much do you remember from elementary school? I remember vinyl tile floors,\nthe playground, the teacher sentencing me to standing in the hallway. I had a\nteacher who was a chess fanatic; he painted a huge chess board in the paved\nschoolyard and got someone to fabricate big wooden chess pieces. It was enough\nof an event to get us on the evening news. I remember Run for the Arts, where I\ntried to talk people into donating money on the theory that I could run, which\nI could not. I'm about six",
+      "categories": [
+        "telecom",
+        "infrastructure",
+        "history"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 1,
+      "llm_quality": 4,
+      "llm_timeliness": 2,
+      "llm_score": 0.24,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "memory",
+        "elementary school",
+        "personal"
+      ],
+      "llm_summary": "Reflects on memories from elementary school."
+    },
+    {
+      "id": "blog_computer_rip_76e7764f711c",
+      "title": "The Ascent to Sandia Crest II",
+      "url": "https://computer.rip/2025-10-20-ascent-to-sandia-crest-2.html",
+      "blog": "computer.rip (J. B. Crawford)",
+      "blog_id": "computer_rip",
+      "author": "computer.rip (J. B. Crawford)",
+      "published_at": null,
+      "summary": "<p><a href=\"https://computer.rip/2025-09-28-the-ascent-to-sandia-crest-part-1.html\">Where we left\noff</a>,\nAlbuquerque's boosters, together with the Forest Service, had completed\nconstruction of the Ellis Ranch Loop and a spur to the Sandia Crest. It was\npossible, even easy, to drive from Albuquerque east through Tijeras Pass, north\nto the present-day location of Sandia Park, and through the mountains to\nPlacitas before reaching Bernalillo to return by the highway. The road\nprovided access to th",
+      "categories": [
+        "telecom",
+        "infrastructure",
+        "history"
+      ],
+      "ai_relevance_score": 0.35,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 1,
+      "llm_quality": 4,
+      "llm_timeliness": 2,
+      "llm_score": 0.24,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Sandia Crest",
+        "history",
+        "Albuquerque"
+      ],
+      "llm_summary": "Continues the story of the construction of the Sandia Crest road."
+    },
+    {
+      "id": "blog_computer_rip_1dc5b4f4c9a1",
+      "title": "The Ascent to Sandia Crest",
+      "url": "https://computer.rip/2025-09-28-the-ascent-to-sandia-crest-part-1.html",
+      "blog": "computer.rip (J. B. Crawford)",
+      "blog_id": "computer_rip",
+      "author": "computer.rip (J. B. Crawford)",
+      "published_at": null,
+      "summary": "<blockquote>\n<p>The Rotary Club will take immediate action on the Ellis ranch loop project.\nThe Rotarians reached this decision at their weekly luncheon, held yesterday\nat the Albarado hotel.</p>\n<p>The club's plan is not merely to give Albuquerque a good, short road to the\nEllis ranch... They embrace the building of a seventy-mile scenic loop. <sup class=\"footnote-ref\" id=\"fnref-1\"><a href=\"#fn-1\">1</a></sup></p>\n</blockquote>\n<p>Many Western cities are defined, in part, by their mountains. Tho",
+      "categories": [
+        "telecom",
+        "infrastructure",
+        "history"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 1,
+      "llm_quality": 4,
+      "llm_timeliness": 2,
+      "llm_score": 0.24,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Sandia Crest",
+        "history",
+        "Albuquerque"
+      ],
+      "llm_summary": "Details the early history of the construction of the Sandia Crest road."
+    },
+    {
+      "id": "blog_xeiaso_881ae22e1d51",
+      "title": "Life Update: On medical leave",
+      "url": "https://xeiaso.net/notes/2026/life-update-medical-leave/",
+      "blog": "Xe Iaso",
+      "blog_id": "xeiaso",
+      "author": "Xe Iaso",
+      "published_at": "2026-02-20T00:00:00",
+      "summary": "Taking some time off for medical reasons until early April",
+      "categories": [
+        "devops",
+        "ai",
+        "engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 1,
+      "llm_quality": 1,
+      "llm_timeliness": 7,
+      "llm_score": 0.22,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "medical leave",
+        "personal"
+      ],
+      "llm_summary": "Personal update about medical leave, irrelevant to tech/AI."
+    },
+    {
+      "id": "blog_oldnewthing_e88e64f218cf",
+      "title": "The 2026/2027 Seattle Symphony subscription season at a glance",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20260220-01/?p=112076",
+      "blog": "The Old New Thing (Raymond Chen)",
+      "blog_id": "oldnewthing",
+      "author": "Raymond Chen",
+      "published_at": "2026-02-20T15:00:01+00:00",
+      "summary": "<p>The pocket reference guide for 2026/2027.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/oldnewthing/20260220-01/?p=112076\">The 2026/2027 Seattle Symphony subscription season at a glance</a> appeared first on <a href=\"https://devblogs.microsoft.com/oldnewthing\">The Old New Thing</a>.</p>",
+      "categories": [
+        "Old New Thing",
+        "Non-Computer",
+        "windows",
+        "systems",
+        "engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier2",
+      "llm_relevance": 1,
+      "llm_quality": 1,
+      "llm_timeliness": 7,
+      "llm_score": 0.22,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Seattle Symphony",
+        "subscription",
+        "2026/2027"
+      ],
+      "llm_summary": "An announcement about the Seattle Symphony's 2026/2027 season."
+    },
+    {
+      "id": "blog_experimental_history_b00bea360e97",
+      "title": "I swear the UFO is coming any minute",
+      "url": "https://www.experimental-history.com/p/i-swear-the-ufo-is-coming-any-minute",
+      "blog": "Experimental History",
+      "blog_id": "experimental_history",
+      "author": "Adam Mastroianni",
+      "published_at": "2026-02-17T16:15:11",
+      "summary": "Links 'n' updates",
+      "categories": [
+        "science",
+        "psychology",
+        "culture"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 1,
+      "llm_quality": 3,
+      "llm_timeliness": 3,
+      "llm_score": 0.22,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "UFO",
+        "links",
+        "updates"
+      ],
+      "llm_summary": "A collection of links and updates, possibly related to UFOs."
+    },
+    {
+      "id": "blog_shkspr_a534b35518e5",
+      "title": "Book Review: A Geography of Time by Robert V. Levine ★★★☆☆",
+      "url": "https://shkspr.mobi/blog/2026/02/book-review-a-geography-of-time-by-robert-v-levine/",
+      "blog": "Terence Eden",
+      "blog_id": "shkspr",
+      "author": "@edent",
+      "published_at": "2026-02-23T12:34:07+00:00",
+      "summary": "This book doesn&#039;t know what it wants to be. Is it a sociology textbook, travel guide, history book, or guide to the mysteries of the world? Subtitled \"the temporal misadventures of a social psychologist\" it veers between hard data and well-worn anecdotes until it becomes a sort of self-help book for the time-poor 1990s American executive.  Despite being well-caveated against the \"dangers in…",
+      "categories": [
+        "/etc/",
+        "Book Review",
+        "web_standards",
+        "open_source",
+        "policy"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 1,
+      "llm_quality": 3,
+      "llm_timeliness": 1,
+      "llm_score": 0.18,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Book Review",
+        "Sociology",
+        "Time"
+      ],
+      "llm_summary": "A book review unrelated to AI or tech industry trends."
+    },
+    {
+      "id": "blog_shkspr_c06cd589666e",
+      "title": "Book Review: Families And How To Survive Them by John Cleese and Robin Skynner ★★⯪☆☆",
+      "url": "https://shkspr.mobi/blog/2026/02/book-review-families-and-how-to-survive-them-by-john-cleese-and-robin-skynner/",
+      "blog": "Terence Eden",
+      "blog_id": "shkspr",
+      "author": "@edent",
+      "published_at": "2026-02-20T12:34:57+00:00",
+      "summary": "This is a curious and mostly charming book about therapy. It is presented as a (somewhat contrived) Socratic dialogue between Skynner the teacher and Cleese the pupil. Skynner lectures on while Cleese interjects with \"that&#039;s too clever to be convincing\" and other witty remarks. It is fun to have a somewhat sceptical interlocutor but it does get a little wearisome after a while.  The basic of…",
+      "categories": [
+        "/etc/",
+        "Book Review",
+        "web_standards",
+        "open_source",
+        "policy"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 1,
+      "llm_quality": 3,
+      "llm_timeliness": 1,
+      "llm_score": 0.18,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Book Review",
+        "Therapy",
+        "Psychology"
+      ],
+      "llm_summary": "A book review unrelated to AI or tech industry trends."
+    },
+    {
+      "id": "blog_shkspr_a6c4d9c07fc0",
+      "title": "Book Review: All Systems Red - The Murderbot Diaries by Martha Wells ★★⯪☆☆",
+      "url": "https://shkspr.mobi/blog/2026/02/book-review-all-systems-red-the-murderbot-diaries-by-martha-wells/",
+      "blog": "Terence Eden",
+      "blog_id": "shkspr",
+      "author": "@edent",
+      "published_at": "2026-02-18T12:34:05+00:00",
+      "summary": "Everyone raves about this series, so I thought I&#039;d grab the first book. It&#039;s basically fine, I guess.  It is moderately amusing having the Muderbot be an awkward teenage boy who just wants to watch videos and cringes when people stare at him. But it is a bit one-note. Similarly, evil corporations hiding details from exo-planet surveyors is a trope which has been a thousand times before.  This…",
+      "categories": [
+        "/etc/",
+        "Book Review",
+        "Sci Fi",
+        "web_standards",
+        "open_source",
+        "policy"
+      ],
+      "ai_relevance_score": 0.15,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 1,
+      "llm_quality": 3,
+      "llm_timeliness": 1,
+      "llm_score": 0.18,
+      "llm_category": "Other",
+      "llm_keywords": [
+        "Book Review",
+        "Science Fiction",
+        "Murderbot"
+      ],
+      "llm_summary": "A book review unrelated to AI or tech industry trends."
+    },
+    {
+      "id": "blog_fabiensanglard_ccfe27557575",
+      "title": "Watching sunsets",
+      "url": "https://fabiensanglard.net/sunset/index.html",
+      "blog": "Fabien Sanglard",
+      "blog_id": "fabiensanglard",
+      "author": "Fabien Sanglard",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "game_engines",
+        "graphics",
+        "reverse_engineering"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier3",
+      "llm_relevance": 1,
+      "llm_quality": 2,
+      "llm_timeliness": 1,
+      "llm_score": 0.14,
+      "llm_category": "Other",
+      "llm_keywords": [],
+      "llm_summary": "This post is not relevant to AI/tech industry trends."
+    },
+    {
+      "id": "blog_paulgraham_8b33c983a75d",
+      "title": "An NFT That Saves Lives",
+      "url": "http://www.paulgraham.com/nft.html",
+      "blog": "Paul Graham",
+      "blog_id": "paulgraham",
+      "author": "Paul Graham",
+      "published_at": null,
+      "summary": "",
+      "categories": [
+        "startups",
+        "thinking",
+        "technology"
+      ],
+      "ai_relevance_score": 0.0,
+      "sentiment_keywords": [],
+      "tier": "tier1",
+      "llm_relevance": 0,
+      "llm_quality": 0,
+      "llm_timeliness": 0,
+      "llm_score": 0.0,
+      "llm_category": "Other",
+      "llm_keywords": [],
+      "llm_summary": ""
+    }
+  ]
+}

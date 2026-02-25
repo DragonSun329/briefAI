@@ -1,0 +1,1397 @@
+{
+  "scraped_at": "2026-02-24T14:57:36.265688",
+  "source": "finnhub",
+  "ticker_count": 33,
+  "mover_count": 23,
+  "correlation_count": 14,
+  "stocks": [
+    {
+      "ticker": "NVDA",
+      "current_price": 191.55,
+      "open": 191.4,
+      "day_high": 193.95,
+      "day_low": 189.57,
+      "previous_close": 189.82,
+      "change": 1.73,
+      "change_pct": 0.91,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 45.1
+    },
+    {
+      "ticker": "MSFT",
+      "current_price": 384.47,
+      "open": 395,
+      "day_high": 395.36,
+      "day_low": 383.1,
+      "previous_close": 397.23,
+      "change": -12.76,
+      "change_pct": -3.21,
+      "signal": "slightly_bearish",
+      "score": -0.161,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 11.2
+    },
+    {
+      "ticker": "GOOGL",
+      "current_price": 311.49,
+      "open": 319.05,
+      "day_high": 319.51,
+      "day_low": 309.87,
+      "previous_close": 314.98,
+      "change": -3.49,
+      "change_pct": -1.11,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 16.8
+    },
+    {
+      "ticker": "META",
+      "current_price": 637.25,
+      "open": 652.54,
+      "day_high": 657.7,
+      "day_low": 636,
+      "previous_close": 655.66,
+      "change": -18.41,
+      "change_pct": -2.81,
+      "signal": "slightly_bearish",
+      "score": -0.14,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 5.8
+    },
+    {
+      "ticker": "AMZN",
+      "current_price": 205.27,
+      "open": 208.09,
+      "day_high": 208.43,
+      "day_low": 203.11,
+      "previous_close": 210.11,
+      "change": -4.84,
+      "change_pct": -2.3,
+      "signal": "slightly_bearish",
+      "score": -0.115,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 40.6
+    },
+    {
+      "ticker": "AAPL",
+      "current_price": 266.18,
+      "open": 263.49,
+      "day_high": 269.43,
+      "day_low": 263.38,
+      "previous_close": 264.58,
+      "change": 1.6,
+      "change_pct": 0.6,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 46.3
+    },
+    {
+      "ticker": "AMD",
+      "current_price": 196.6,
+      "open": 198.09,
+      "day_high": 199.38,
+      "day_low": 194.15,
+      "previous_close": 200.15,
+      "change": -3.55,
+      "change_pct": -1.77,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 46.8
+    },
+    {
+      "ticker": "INTC",
+      "current_price": 43.63,
+      "open": 44.09,
+      "day_high": 44.55,
+      "day_low": 43.18,
+      "previous_close": 44.11,
+      "change": -0.48,
+      "change_pct": -1.09,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 32.8
+    },
+    {
+      "ticker": "AI",
+      "current_price": 9.79,
+      "open": 10.3,
+      "day_high": 10.3,
+      "day_low": 9.53,
+      "previous_close": 10.38,
+      "change": -0.59,
+      "change_pct": -5.68,
+      "signal": "bearish",
+      "score": -0.568,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 33.8
+    },
+    {
+      "ticker": "PLTR",
+      "current_price": 130.6,
+      "open": 132.04,
+      "day_high": 132.04,
+      "day_low": 127.39,
+      "previous_close": 135.24,
+      "change": -4.64,
+      "change_pct": -3.43,
+      "signal": "slightly_bearish",
+      "score": -0.172,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 69.0
+    },
+    {
+      "ticker": "PATH",
+      "current_price": 10.17,
+      "open": 10.58,
+      "day_high": 10.58,
+      "day_low": 10.04,
+      "previous_close": 10.8,
+      "change": -0.63,
+      "change_pct": -5.83,
+      "signal": "bearish",
+      "score": -0.583,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 24.8
+    },
+    {
+      "ticker": "SNOW",
+      "current_price": 157.6,
+      "open": 169.68,
+      "day_high": 169.68,
+      "day_low": 155.38,
+      "previous_close": 172.5,
+      "change": -14.9,
+      "change_pct": -8.64,
+      "signal": "bearish",
+      "score": -0.8,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 15.5
+    },
+    {
+      "ticker": "DDOG",
+      "current_price": 102.61,
+      "open": 113.87,
+      "day_high": 113.87,
+      "day_low": 101.44,
+      "previous_close": 115.66,
+      "change": -13.04,
+      "change_pct": -11.28,
+      "signal": "bearish",
+      "score": -0.8,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 9.5
+    },
+    {
+      "ticker": "MDB",
+      "current_price": 305.37,
+      "open": 337.65,
+      "day_high": 337.95,
+      "day_low": 298,
+      "previous_close": 344.56,
+      "change": -39.19,
+      "change_pct": -11.37,
+      "signal": "bearish",
+      "score": -0.8,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 18.4
+    },
+    {
+      "ticker": "CRWD",
+      "current_price": 350.33,
+      "open": 384.96,
+      "day_high": 385.11,
+      "day_low": 342.72,
+      "previous_close": 388.6,
+      "change": -38.27,
+      "change_pct": -9.85,
+      "signal": "bearish",
+      "score": -0.8,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 18.0
+    },
+    {
+      "ticker": "ZS",
+      "current_price": 143.28,
+      "open": 157.44,
+      "day_high": 157.61,
+      "day_low": 141.56,
+      "previous_close": 159.75,
+      "change": -16.47,
+      "change_pct": -10.31,
+      "signal": "bearish",
+      "score": -0.8,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 10.7
+    },
+    {
+      "ticker": "AVGO",
+      "current_price": 330.34,
+      "open": 332.25,
+      "day_high": 338.5,
+      "day_low": 325.32,
+      "previous_close": 332.65,
+      "change": -2.31,
+      "change_pct": -0.69,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 38.1
+    },
+    {
+      "ticker": "QCOM",
+      "current_price": 140.41,
+      "open": 141.97,
+      "day_high": 144.06,
+      "day_low": 139.64,
+      "previous_close": 142.88,
+      "change": -2.47,
+      "change_pct": -1.73,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 17.4
+    },
+    {
+      "ticker": "ARM",
+      "current_price": 123.78,
+      "open": 123.7,
+      "day_high": 126.71,
+      "day_low": 121.91,
+      "previous_close": 125.58,
+      "change": -1.8,
+      "change_pct": -1.43,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 39.0
+    },
+    {
+      "ticker": "TSM",
+      "current_price": 370.04,
+      "open": 367.01,
+      "day_high": 373.43,
+      "day_low": 366.46,
+      "previous_close": 370.54,
+      "change": -0.5,
+      "change_pct": -0.13,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 51.4
+    },
+    {
+      "ticker": "ASML",
+      "current_price": 1485.99,
+      "open": 1471.39,
+      "day_high": 1493.01,
+      "day_low": 1462.0,
+      "previous_close": 1469.59,
+      "change": 16.4,
+      "change_pct": 1.12,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 77.4
+    },
+    {
+      "ticker": "MRVL",
+      "current_price": 77.79,
+      "open": 78.39,
+      "day_high": 79.11,
+      "day_low": 76.07,
+      "previous_close": 79.48,
+      "change": -1.69,
+      "change_pct": -2.13,
+      "signal": "slightly_bearish",
+      "score": -0.106,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 56.7
+    },
+    {
+      "ticker": "CRM",
+      "current_price": 178.16,
+      "open": 181.27,
+      "day_high": 182.47,
+      "day_low": 174.57,
+      "previous_close": 185.16,
+      "change": -7,
+      "change_pct": -3.78,
+      "signal": "slightly_bearish",
+      "score": -0.189,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 45.4
+    },
+    {
+      "ticker": "ORCL",
+      "current_price": 141.31,
+      "open": 145.69,
+      "day_high": 145.8,
+      "day_low": 138.59,
+      "previous_close": 148.08,
+      "change": -6.77,
+      "change_pct": -4.57,
+      "signal": "slightly_bearish",
+      "score": -0.229,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 37.8
+    },
+    {
+      "ticker": "IBM",
+      "current_price": 223.35,
+      "open": 254.37,
+      "day_high": 255.19,
+      "day_low": 220.72,
+      "previous_close": 257.16,
+      "change": -33.81,
+      "change_pct": -13.15,
+      "signal": "bearish",
+      "score": -0.8,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 7.6
+    },
+    {
+      "ticker": "NOW",
+      "current_price": 100.8,
+      "open": 101.94,
+      "day_high": 101.94,
+      "day_low": 99.18,
+      "previous_close": 104.27,
+      "change": -3.47,
+      "change_pct": -3.33,
+      "signal": "slightly_bearish",
+      "score": -0.166,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 58.7
+    },
+    {
+      "ticker": "ADBE",
+      "current_price": 246.68,
+      "open": 254.14,
+      "day_high": 254.5,
+      "day_low": 244.8,
+      "previous_close": 258.61,
+      "change": -11.93,
+      "change_pct": -4.61,
+      "signal": "slightly_bearish",
+      "score": -0.231,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 19.4
+    },
+    {
+      "ticker": "WDAY",
+      "current_price": 129.21,
+      "open": 134.41,
+      "day_high": 134.52,
+      "day_low": 125.83,
+      "previous_close": 137.81,
+      "change": -8.6,
+      "change_pct": -6.24,
+      "signal": "bearish",
+      "score": -0.624,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 38.9
+    },
+    {
+      "ticker": "UPST",
+      "current_price": 27.26,
+      "open": 28.68,
+      "day_high": 29.01,
+      "day_low": 27.04,
+      "previous_close": 29.29,
+      "change": -2.03,
+      "change_pct": -6.93,
+      "signal": "bearish",
+      "score": -0.693,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 11.2
+    },
+    {
+      "ticker": "DOCS",
+      "current_price": 23.76,
+      "open": 25.21,
+      "day_high": 25.28,
+      "day_low": 23.58,
+      "previous_close": 25.55,
+      "change": -1.79,
+      "change_pct": -7.01,
+      "signal": "bearish",
+      "score": -0.701,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 10.6
+    },
+    {
+      "ticker": "S",
+      "current_price": 12.37,
+      "open": 12.8,
+      "day_high": 12.8,
+      "day_low": 12.23,
+      "previous_close": 12.97,
+      "change": -0.6,
+      "change_pct": -4.63,
+      "signal": "slightly_bearish",
+      "score": -0.231,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 23.9
+    },
+    {
+      "ticker": "NET",
+      "current_price": 160.19,
+      "open": 174.84,
+      "day_high": 176.74,
+      "day_low": 158.83,
+      "previous_close": 177.14,
+      "change": -16.95,
+      "change_pct": -9.57,
+      "signal": "bearish",
+      "score": -0.8,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 7.6
+    },
+    {
+      "ticker": "U",
+      "current_price": 17.13,
+      "open": 18.08,
+      "day_high": 18.08,
+      "day_low": 16.78,
+      "previous_close": 18.25,
+      "change": -1.12,
+      "change_pct": -6.14,
+      "signal": "bearish",
+      "score": -0.614,
+      "timestamp": 1771880400,
+      "source": "finnhub",
+      "intraday_range_pct": 26.9
+    }
+  ],
+  "movers": [
+    {
+      "ticker": "IBM",
+      "change_pct": -13.15,
+      "signal": "bearish"
+    },
+    {
+      "ticker": "MDB",
+      "change_pct": -11.37,
+      "signal": "bearish"
+    },
+    {
+      "ticker": "DDOG",
+      "change_pct": -11.28,
+      "signal": "bearish"
+    },
+    {
+      "ticker": "ZS",
+      "change_pct": -10.31,
+      "signal": "bearish"
+    },
+    {
+      "ticker": "CRWD",
+      "change_pct": -9.85,
+      "signal": "bearish"
+    },
+    {
+      "ticker": "NET",
+      "change_pct": -9.57,
+      "signal": "bearish"
+    },
+    {
+      "ticker": "SNOW",
+      "change_pct": -8.64,
+      "signal": "bearish"
+    },
+    {
+      "ticker": "DOCS",
+      "change_pct": -7.01,
+      "signal": "bearish"
+    },
+    {
+      "ticker": "UPST",
+      "change_pct": -6.93,
+      "signal": "bearish"
+    },
+    {
+      "ticker": "WDAY",
+      "change_pct": -6.24,
+      "signal": "bearish"
+    },
+    {
+      "ticker": "U",
+      "change_pct": -6.14,
+      "signal": "bearish"
+    },
+    {
+      "ticker": "PATH",
+      "change_pct": -5.83,
+      "signal": "bearish"
+    },
+    {
+      "ticker": "AI",
+      "change_pct": -5.68,
+      "signal": "bearish"
+    },
+    {
+      "ticker": "S",
+      "change_pct": -4.63,
+      "signal": "slightly_bearish"
+    },
+    {
+      "ticker": "ADBE",
+      "change_pct": -4.61,
+      "signal": "slightly_bearish"
+    },
+    {
+      "ticker": "ORCL",
+      "change_pct": -4.57,
+      "signal": "slightly_bearish"
+    },
+    {
+      "ticker": "CRM",
+      "change_pct": -3.78,
+      "signal": "slightly_bearish"
+    },
+    {
+      "ticker": "PLTR",
+      "change_pct": -3.43,
+      "signal": "slightly_bearish"
+    },
+    {
+      "ticker": "NOW",
+      "change_pct": -3.33,
+      "signal": "slightly_bearish"
+    },
+    {
+      "ticker": "MSFT",
+      "change_pct": -3.21,
+      "signal": "slightly_bearish"
+    },
+    {
+      "ticker": "META",
+      "change_pct": -2.81,
+      "signal": "slightly_bearish"
+    },
+    {
+      "ticker": "AMZN",
+      "change_pct": -2.3,
+      "signal": "slightly_bearish"
+    },
+    {
+      "ticker": "MRVL",
+      "change_pct": -2.13,
+      "signal": "slightly_bearish"
+    }
+  ],
+  "technical_analysis": {
+    "IBM": {
+      "symbol": "IBM",
+      "metrics": {
+        "52w_high": 324.9,
+        "52w_low": 214.5,
+        "10d_avg_volume": 7.35605,
+        "3m_avg_volume": 5.15469,
+        "beta": 0.7142481,
+        "pe_ratio": 20.0707,
+        "pb_ratio": 8.481,
+        "dividend_yield": 2.6131592,
+        "market_cap": 212628.89
+      },
+      "52w_position_pct": 8.0,
+      "rsi": 22.9,
+      "macd": {
+        "macd": -14.034,
+        "signal": -8.83,
+        "histogram": -5.203,
+        "trend": "bearish"
+      },
+      "bollinger": {
+        "upper": 324.7,
+        "middle": 280.36,
+        "lower": 236.03,
+        "position_pct": -14.3,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 280.36,
+        "sma50": 292.44,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "oversold",
+        "macd_bearish",
+        "near_lower_band"
+      ]
+    },
+    "MDB": {
+      "symbol": "MDB",
+      "metrics": {
+        "52w_high": 444.72,
+        "52w_low": 140.78,
+        "10d_avg_volume": 1.53299,
+        "3m_avg_volume": 1.64459,
+        "beta": 1.4818686,
+        "pe_ratio": null,
+        "pb_ratio": 10.1349,
+        "dividend_yield": null,
+        "market_cap": 24854.6
+      },
+      "52w_position_pct": 54.2,
+      "rsi": 32.9,
+      "macd": {
+        "macd": -14.557,
+        "signal": -11.746,
+        "histogram": -2.811,
+        "trend": "bearish"
+      },
+      "bollinger": {
+        "upper": 415.66,
+        "middle": 362.73,
+        "lower": 309.8,
+        "position_pct": -4.2,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 362.73,
+        "sma50": 394.65,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "macd_bearish",
+        "near_lower_band"
+      ]
+    },
+    "DDOG": {
+      "symbol": "DDOG",
+      "metrics": {
+        "52w_high": 201.69,
+        "52w_low": 81.63,
+        "10d_avg_volume": 8.22403,
+        "3m_avg_volume": 5.13878,
+        "beta": 1.395313,
+        "pe_ratio": 335.9032,
+        "pb_ratio": 12.7774,
+        "dividend_yield": null,
+        "market_cap": 36190.55
+      },
+      "52w_position_pct": 17.5,
+      "rsi": 31.6,
+      "macd": {
+        "macd": -4.603,
+        "signal": -3.793,
+        "histogram": -0.811,
+        "trend": "bearish"
+      },
+      "bollinger": {
+        "upper": 142.67,
+        "middle": 123.07,
+        "lower": 103.46,
+        "position_pct": -2.2,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 123.07,
+        "sma50": 129.9,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "macd_bearish",
+        "near_lower_band"
+      ]
+    },
+    "ZS": {
+      "symbol": "ZS",
+      "metrics": {
+        "52w_high": 336.99,
+        "52w_low": 159.66,
+        "10d_avg_volume": 2.83775,
+        "3m_avg_volume": 1.86947,
+        "beta": 1.1155716,
+        "pe_ratio": null,
+        "pb_ratio": 26.4435,
+        "dividend_yield": null,
+        "market_cap": 23384.443
+      },
+      "52w_position_pct": -9.2,
+      "ta_signals": [
+        "no_history"
+      ]
+    },
+    "CRWD": {
+      "symbol": "CRWD",
+      "metrics": {
+        "52w_high": 566.9,
+        "52w_low": 298,
+        "10d_avg_volume": 4.80757,
+        "3m_avg_volume": 2.76151,
+        "beta": 1.139209,
+        "pe_ratio": null,
+        "pb_ratio": 33.9279,
+        "dividend_yield": null,
+        "market_cap": 88317.65
+      },
+      "52w_position_pct": 19.5,
+      "rsi": 28.4,
+      "macd": {
+        "macd": -18.833,
+        "signal": -15.919,
+        "histogram": -2.914,
+        "trend": "bearish"
+      },
+      "bollinger": {
+        "upper": 481.07,
+        "middle": 420.92,
+        "lower": 360.76,
+        "position_pct": -8.7,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 420.92,
+        "sma50": 451.74,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "oversold",
+        "macd_bearish",
+        "near_lower_band"
+      ]
+    },
+    "NET": {
+      "symbol": "NET",
+      "metrics": {
+        "52w_high": 260,
+        "52w_low": 89.42,
+        "10d_avg_volume": 7.35112,
+        "3m_avg_volume": 3.70947,
+        "beta": 2.0610495,
+        "pe_ratio": null,
+        "pb_ratio": 47.3284,
+        "dividend_yield": null,
+        "market_cap": 56037.38
+      },
+      "52w_position_pct": 41.5,
+      "rsi": 37.4,
+      "macd": {
+        "macd": -1.943,
+        "signal": -1.584,
+        "histogram": -0.359,
+        "trend": "bearish"
+      },
+      "bollinger": {
+        "upper": 204.57,
+        "middle": 181.65,
+        "lower": 158.73,
+        "position_pct": 3.2,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 181.65,
+        "sma50": 188.58,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "macd_bearish",
+        "near_lower_band"
+      ]
+    },
+    "SNOW": {
+      "symbol": "SNOW",
+      "metrics": {
+        "52w_high": 280.67,
+        "52w_low": 120.1,
+        "10d_avg_volume": 6.70394,
+        "3m_avg_volume": 5.13238,
+        "beta": 1.2237868,
+        "pe_ratio": null,
+        "pb_ratio": 43.6626,
+        "dividend_yield": null,
+        "market_cap": 59029.5
+      },
+      "52w_position_pct": 23.4,
+      "rsi": 32.3,
+      "macd": {
+        "macd": -10.86,
+        "signal": -10.919,
+        "histogram": 0.06,
+        "trend": "bullish"
+      },
+      "bollinger": {
+        "upper": 215.28,
+        "middle": 182.07,
+        "lower": 148.87,
+        "position_pct": 13.1,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 182.07,
+        "sma50": 203.88,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "macd_bullish"
+      ]
+    },
+    "DOCS": {
+      "symbol": "DOCS",
+      "metrics": {
+        "52w_high": 76.92,
+        "52w_low": 23.66,
+        "10d_avg_volume": 6.30493,
+        "3m_avg_volume": 2.96884,
+        "beta": 1.4321641,
+        "pe_ratio": 19.7135,
+        "pb_ratio": 8.5129,
+        "dividend_yield": null,
+        "market_cap": 4719.324
+      },
+      "52w_position_pct": 0.2,
+      "rsi": 17.0,
+      "macd": {
+        "macd": -4.55,
+        "signal": -4.326,
+        "histogram": -0.223,
+        "trend": "bearish"
+      },
+      "bollinger": {
+        "upper": 42.83,
+        "middle": 30.88,
+        "lower": 18.93,
+        "position_pct": 20.2,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 30.88,
+        "sma50": 38.36,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "oversold",
+        "macd_bearish"
+      ]
+    }
+  },
+  "correlations": [
+    {
+      "ticker": "IBM",
+      "change_pct": -13.15,
+      "signal": "bearish",
+      "price": 223.35,
+      "related_news_count": 2,
+      "news": [
+        {
+          "title": "Introducing Mistral 3 | Mistral AI",
+          "url": "https://mistral.ai/news/mistral-3",
+          "matched_term": "IBM"
+        },
+        {
+          "title": "air traffic control: the IBM 9020",
+          "url": "https://computer.rip/2026-01-17-air-traffic-control-9020.html",
+          "matched_term": "IBM"
+        }
+      ],
+      "narrative": "IBM down 13.2% — possibly related to: Introducing Mistral 3 | Mistral AI",
+      "technical": {
+        "rsi": 22.9,
+        "macd": {
+          "macd": -14.034,
+          "signal": -8.83,
+          "histogram": -5.203,
+          "trend": "bearish"
+        },
+        "bollinger_position": -14.3,
+        "sma_cross": "none",
+        "ta_signals": [
+          "oversold",
+          "macd_bearish",
+          "near_lower_band"
+        ]
+      }
+    },
+    {
+      "ticker": "ZS",
+      "change_pct": -10.31,
+      "signal": "bearish",
+      "price": 143.28,
+      "related_news_count": 2,
+      "news": [
+        {
+          "title": "Anthropic AI cybersecurity stocks crash today: What is Claude Code ...",
+          "url": "https://economictimes.indiatimes.com/news/international/us/what-is-claude-code-security-why-anthropics-new-ai-tool-has-investors-worried-as-cybersecurity-stocks-crash/articleshow/128727570.cms",
+          "matched_term": "ZS"
+        },
+        {
+          "title": "Frigate with Hailo for object detection on a Raspberry Pi",
+          "url": "https://www.jeffgeerling.com/blog/2026/frigate-with-hailo-for-object-detection-on-a-raspberry-pi/",
+          "matched_term": "ZS"
+        }
+      ],
+      "narrative": "ZS down 10.3% — possibly related to: Anthropic AI cybersecurity stocks crash today: What is Claude Code ...",
+      "technical": {
+        "rsi": null,
+        "macd": null,
+        "bollinger_position": null,
+        "sma_cross": null,
+        "ta_signals": [
+          "no_history"
+        ]
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "change_pct": -9.85,
+      "signal": "bearish",
+      "price": 350.33,
+      "related_news_count": 1,
+      "news": [
+        {
+          "title": "Anthropic AI cybersecurity stocks crash today: What is Claude Code ...",
+          "url": "https://economictimes.indiatimes.com/news/international/us/what-is-claude-code-security-why-anthropics-new-ai-tool-has-investors-worried-as-cybersecurity-stocks-crash/articleshow/128727570.cms",
+          "matched_term": "CrowdStrike"
+        }
+      ],
+      "narrative": "CRWD down 9.8% — possibly related to: Anthropic AI cybersecurity stocks crash today: What is Claude Code ...",
+      "technical": {
+        "rsi": 28.4,
+        "macd": {
+          "macd": -18.833,
+          "signal": -15.919,
+          "histogram": -2.914,
+          "trend": "bearish"
+        },
+        "bollinger_position": -8.7,
+        "sma_cross": "none",
+        "ta_signals": [
+          "oversold",
+          "macd_bearish",
+          "near_lower_band"
+        ]
+      }
+    },
+    {
+      "ticker": "NET",
+      "change_pct": -9.57,
+      "signal": "bearish",
+      "price": 160.19,
+      "related_news_count": 5,
+      "news": [
+        {
+          "title": "Small Business Technology News: How Will ChatGPT Ads Actually Work? - Forbes",
+          "url": "https://www.forbes.com/sites/quickerbettertech/2026/02/21/small-business-technology-news-how-will-chatgpt-ads-actually-work/",
+          "matched_term": "NET"
+        },
+        {
+          "title": "The Year of the Agent: OpenAI Strikes Deal With OpenClaw Founder - CNET",
+          "url": "https://www.cnet.com/tech/services-and-software/openai-strikes-deal-with-openclaw-founder/",
+          "matched_term": "NET"
+        },
+        {
+          "title": "Ericsson, Mistral AI team up to develop AI agents for next-generation networks - Developing Telecoms",
+          "url": "https://developingtelecoms.com/telecom-business/operator-news/19810-ericsso-mistral-ai-team-up-to-develop-ai-agents-for-next-generation-networks.html",
+          "matched_term": "NET"
+        },
+        {
+          "title": "Ericsso, Mistral AI team up to develop AI agents for next-generation networks - Developing Telecoms",
+          "url": "https://www.developingtelecoms.com/telecom-business/operator-news/19810-ericsso-mistral-ai-team-up-to-develop-ai-agents-for-next-generation-networks.html",
+          "matched_term": "NET"
+        },
+        {
+          "title": "Anthropic Says Its Newest AI Model Is Getting Pretty Good at Using a Computer - CNET",
+          "url": "https://www.cnet.com/tech/services-and-software/anthropic-says-its-newest-ai-model-is-getting-pretty-good-at-using-a-computer/",
+          "matched_term": "NET"
+        }
+      ],
+      "narrative": "NET down 9.6% — possibly related to: Small Business Technology News: How Will ChatGPT Ads Actually Work? - Forbes",
+      "technical": {
+        "rsi": 37.4,
+        "macd": {
+          "macd": -1.943,
+          "signal": -1.584,
+          "histogram": -0.359,
+          "trend": "bearish"
+        },
+        "bollinger_position": 3.2,
+        "sma_cross": "none",
+        "ta_signals": [
+          "macd_bearish",
+          "near_lower_band"
+        ]
+      }
+    },
+    {
+      "ticker": "SNOW",
+      "change_pct": -8.64,
+      "signal": "bearish",
+      "price": 157.6,
+      "related_news_count": 3,
+      "news": [
+        {
+          "title": "Meta's LLaMA News | Latest News - NewsNow",
+          "url": "https://www.newsnow.com/us/Science/AI/Llama",
+          "matched_term": "SNOW"
+        },
+        {
+          "title": "Microsoft Copilot News | Latest News - NewsNow",
+          "url": "https://www.newsnow.com/us/Science/AI/Microsoft+Copilot",
+          "matched_term": "SNOW"
+        },
+        {
+          "title": "Pluralistic: A perforated corporate veil (20 Feb 2026)",
+          "url": "https://pluralistic.net/2026/02/20/karioca-konzernrecht/",
+          "matched_term": "SNOW"
+        }
+      ],
+      "narrative": "SNOW down 8.6% — possibly related to: Meta's LLaMA News | Latest News - NewsNow",
+      "technical": {
+        "rsi": 32.3,
+        "macd": {
+          "macd": -10.86,
+          "signal": -10.919,
+          "histogram": 0.06,
+          "trend": "bullish"
+        },
+        "bollinger_position": 13.1,
+        "sma_cross": "none",
+        "ta_signals": [
+          "macd_bullish"
+        ]
+      }
+    },
+    {
+      "ticker": "UPST",
+      "change_pct": -6.93,
+      "signal": "bearish",
+      "price": 27.26,
+      "related_news_count": 1,
+      "news": [
+        {
+          "title": "Mistral AI buys cloud startup Koyeb - The Next Web",
+          "url": "https://thenextweb.com/news/mistral-ai-buys-cloud-startup-koyeb",
+          "matched_term": "UPST"
+        }
+      ],
+      "narrative": "UPST down 6.9% — possibly related to: Mistral AI buys cloud startup Koyeb - The Next Web"
+    },
+    {
+      "ticker": "U",
+      "change_pct": -6.14,
+      "signal": "bearish",
+      "price": 17.13,
+      "related_news_count": 5,
+      "news": [
+        {
+          "title": "Small Business Technology News: How Will ChatGPT Ads Actually Work? - Forbes",
+          "url": "https://www.forbes.com/sites/quickerbettertech/2026/02/21/small-business-technology-news-how-will-chatgpt-ads-actually-work/",
+          "matched_term": "U"
+        },
+        {
+          "title": "Regulation of clinical Artificial Intelligence (AI) in the Age of Agents: Unconfined Non-Deterministic Clinical Software (UNDCS) systems for healthcare - Nature",
+          "url": "https://www.nature.com/articles/s41746-026-02420-z",
+          "matched_term": "U"
+        },
+        {
+          "title": "AI News | Latest News | Insights Powering AI-Driven Business Growth",
+          "url": "https://www.artificialintelligence-news.com/",
+          "matched_term": "U"
+        },
+        {
+          "title": "Premium: The Hater's Guide to Anthropic - Ed Zitron's Where's Your Ed At",
+          "url": "https://www.wheresyoured.at/premium-the-haters-guide-to-anthropic/",
+          "matched_term": "U"
+        },
+        {
+          "title": "Google launches Gemini 3.1 Pro, retaking AI crown with 2X+ reasoning performance boost - Venturebeat",
+          "url": "https://venturebeat.com/technology/google-launches-gemini-3-1-pro-retaking-ai-crown-with-2x-reasoning",
+          "matched_term": "U"
+        }
+      ],
+      "narrative": "U down 6.1% — possibly related to: Small Business Technology News: How Will ChatGPT Ads Actually Work? - Forbes"
+    },
+    {
+      "ticker": "PATH",
+      "change_pct": -5.83,
+      "signal": "bearish",
+      "price": 10.17,
+      "related_news_count": 5,
+      "news": [
+        {
+          "title": "A smarter way for large language models to think about hard ... - MIT News",
+          "url": "https://news.mit.edu/2025/smarter-way-large-language-models-think-about-hard-problems-1204",
+          "matched_term": "PATH"
+        },
+        {
+          "title": "Gemini 3: Introducing the latest Gemini AI model from Google",
+          "url": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+          "matched_term": "PATH"
+        },
+        {
+          "title": "Newsroom \\ Anthropic",
+          "url": "https://www.anthropic.com/news",
+          "matched_term": "PATH"
+        },
+        {
+          "title": "A new job title emerging at Meta shows how AI is already changing tech career paths - Business Insider",
+          "url": "https://www.businessinsider.com/meta-pms-ai-builders-tech-industry-2026-2",
+          "matched_term": "PATH"
+        },
+        {
+          "title": "Taalas serves Llama 3.1 8B at 17,000 tokens/second",
+          "url": "https://simonwillison.net/2026/Feb/20/taalas/#atom-everything",
+          "matched_term": "PATH"
+        }
+      ],
+      "narrative": "PATH down 5.8% — possibly related to: A smarter way for large language models to think about hard ... - MIT News"
+    },
+    {
+      "ticker": "AI",
+      "change_pct": -5.68,
+      "signal": "bearish",
+      "price": 9.79,
+      "related_news_count": 5,
+      "news": [
+        {
+          "title": "Small Business Technology News: How Will ChatGPT Ads Actually Work? - Forbes",
+          "url": "https://www.forbes.com/sites/quickerbettertech/2026/02/21/small-business-technology-news-how-will-chatgpt-ads-actually-work/",
+          "matched_term": "AI"
+        },
+        {
+          "title": "Regulation of clinical Artificial Intelligence (AI) in the Age of Agents: Unconfined Non-Deterministic Clinical Software (UNDCS) systems for healthcare - Nature",
+          "url": "https://www.nature.com/articles/s41746-026-02420-z",
+          "matched_term": "AI"
+        },
+        {
+          "title": "AI News | Latest News | Insights Powering AI-Driven Business Growth",
+          "url": "https://www.artificialintelligence-news.com/",
+          "matched_term": "AI"
+        },
+        {
+          "title": "Premium: The Hater's Guide to Anthropic - Ed Zitron's Where's Your Ed At",
+          "url": "https://www.wheresyoured.at/premium-the-haters-guide-to-anthropic/",
+          "matched_term": "AI"
+        },
+        {
+          "title": "Google launches Gemini 3.1 Pro, retaking AI crown with 2X+ reasoning performance boost - Venturebeat",
+          "url": "https://venturebeat.com/technology/google-launches-gemini-3-1-pro-retaking-ai-crown-with-2x-reasoning",
+          "matched_term": "AI"
+        }
+      ],
+      "narrative": "AI down 5.7% — possibly related to: Small Business Technology News: How Will ChatGPT Ads Actually Work? - Forbes"
+    },
+    {
+      "ticker": "S",
+      "change_pct": -4.63,
+      "signal": "slightly_bearish",
+      "price": 12.37,
+      "related_news_count": 5,
+      "news": [
+        {
+          "title": "Small Business Technology News: How Will ChatGPT Ads Actually Work? - Forbes",
+          "url": "https://www.forbes.com/sites/quickerbettertech/2026/02/21/small-business-technology-news-how-will-chatgpt-ads-actually-work/",
+          "matched_term": "S"
+        },
+        {
+          "title": "Regulation of clinical Artificial Intelligence (AI) in the Age of Agents: Unconfined Non-Deterministic Clinical Software (UNDCS) systems for healthcare - Nature",
+          "url": "https://www.nature.com/articles/s41746-026-02420-z",
+          "matched_term": "S"
+        },
+        {
+          "title": "AI News | Latest News | Insights Powering AI-Driven Business Growth",
+          "url": "https://www.artificialintelligence-news.com/",
+          "matched_term": "S"
+        },
+        {
+          "title": "Premium: The Hater's Guide to Anthropic - Ed Zitron's Where's Your Ed At",
+          "url": "https://www.wheresyoured.at/premium-the-haters-guide-to-anthropic/",
+          "matched_term": "S"
+        },
+        {
+          "title": "Google launches Gemini 3.1 Pro, retaking AI crown with 2X+ reasoning performance boost - Venturebeat",
+          "url": "https://venturebeat.com/technology/google-launches-gemini-3-1-pro-retaking-ai-crown-with-2x-reasoning",
+          "matched_term": "S"
+        }
+      ],
+      "narrative": "S down 4.6% — possibly related to: Small Business Technology News: How Will ChatGPT Ads Actually Work? - Forbes"
+    },
+    {
+      "ticker": "NOW",
+      "change_pct": -3.33,
+      "signal": "slightly_bearish",
+      "price": 100.8,
+      "related_news_count": 5,
+      "news": [
+        {
+          "title": "Will self-driving ‘robot labs’ replace biologists? Paper sparks debate - Nature",
+          "url": "https://www.nature.com/articles/d41586-026-00453-8",
+          "matched_term": "NOW"
+        },
+        {
+          "title": "Is GenAI good at creating passwords? - GovTech",
+          "url": "https://www.govtech.com/question-of-the-day/is-genai-good-at-creating-passwords",
+          "matched_term": "NOW"
+        },
+        {
+          "title": "AI Medical Advice May Pose ‘Dangerous’ Risk—What To Know - Newsweek",
+          "url": "https://www.newsweek.com/ai-medical-advice-may-pose-dangerous-risk-11541992",
+          "matched_term": "NOW"
+        },
+        {
+          "title": "Latest Large Language Model News: What's Happening Now?",
+          "url": "https://www.thedetroitbureau.com/today-report/latest-large-language-model-news-whats-happening-now-1764807055",
+          "matched_term": "NOW"
+        },
+        {
+          "title": "Anthropic hits a $380B valuation as it ... - Associated Press News",
+          "url": "https://apnews.com/article/anthropic-claude-380b-valuation-openai-rivalry-ipo-65c08aa4fab90cde952f37d32625394a",
+          "matched_term": "NOW"
+        }
+      ],
+      "narrative": "NOW down 3.3% — possibly related to: Will self-driving ‘robot labs’ replace biologists? Paper sparks debate - Nature"
+    },
+    {
+      "ticker": "MSFT",
+      "change_pct": -3.21,
+      "signal": "slightly_bearish",
+      "price": 384.47,
+      "related_news_count": 5,
+      "news": [
+        {
+          "title": "Microsoft pursues AI self-sufficiency, reduces reliance on OpenAI - Mugglehead Magazine",
+          "url": "https://mugglehead.com/microsoft-pursues-ai-self-sufficiency-reduces-reliance-on-openai/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-pursues-ai-self-sufficiency-reduces-reliance-on-openai",
+          "matched_term": "Microsoft"
+        },
+        {
+          "title": "Anthropic, OpenAI rivalry spills into new Super Bowl ads as both fight ...",
+          "url": "https://apnews.com/article/openai-anthropic-chatgpt-claude-rivalry-c19e0cca22c37190cc4e0dc08e889ef0",
+          "matched_term": "Microsoft"
+        },
+        {
+          "title": "OpenAI reportedly finalizing $100B deal at more than $850B ...",
+          "url": "https://techcrunch.com/2026/02/19/openai-reportedly-finalizing-100b-deal-at-more-than-850b-valuation/",
+          "matched_term": "Microsoft"
+        },
+        {
+          "title": "Microsoft says Office bug exposed customers’ confidential emails to Copilot AI - TechCrunch",
+          "url": "https://techcrunch.com/2026/02/18/microsoft-says-office-bug-exposed-customers-confidential-emails-to-copilot-ai/",
+          "matched_term": "Microsoft"
+        },
+        {
+          "title": "As Microsoft Bets on ‘True Self-Sufficiency,’ Should You Bet on MSFT Stock? - Barchart.com",
+          "url": "https://www.barchart.com/story/news/260700/as-microsoft-bets-on-true-self-sufficiency-should-you-bet-on-msft-stock",
+          "matched_term": "MSFT"
+        }
+      ],
+      "narrative": "MSFT down 3.2% — possibly related to: Microsoft pursues AI self-sufficiency, reduces reliance on OpenAI - Mugglehead M"
+    },
+    {
+      "ticker": "META",
+      "change_pct": -2.81,
+      "signal": "slightly_bearish",
+      "price": 637.25,
+      "related_news_count": 5,
+      "news": [
+        {
+          "title": "Nvidia tightens its hold on Meta with a 'multigenerational' deal - Business Insider",
+          "url": "https://www.businessinsider.com/nvidia-pushing-into-intel-amd-cpu-turf-with-meta-deal-2026-2",
+          "matched_term": "META"
+        },
+        {
+          "title": "Meta expands Nvidia deal to use millions of AI chips in data center build-out, including standalone CPUs - CNBC",
+          "url": "https://www.cnbc.com/2026/02/17/meta-nvidia-deal-ai-data-center-chips.html",
+          "matched_term": "META"
+        },
+        {
+          "title": "Meta's LLaMA News | Latest News - NewsNow",
+          "url": "https://www.newsnow.com/us/Science/AI/Llama",
+          "matched_term": "META"
+        },
+        {
+          "title": "Nvidia’s Deal With Meta Signals a New Era in Computing Power - WIRED",
+          "url": "https://www.wired.com/story/nvidias-deal-with-meta-signals-a-new-era-in-computing-power/",
+          "matched_term": "META"
+        },
+        {
+          "title": "Meta’s new deal with Nvidia buys up millions of AI chips - The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/880513/nvidia-meta-ai-grace-vera-chips",
+          "matched_term": "META"
+        }
+      ],
+      "narrative": "META down 2.8% — possibly related to: Nvidia tightens its hold on Meta with a 'multigenerational' deal - Business Insi"
+    },
+    {
+      "ticker": "AMZN",
+      "change_pct": -2.3,
+      "signal": "slightly_bearish",
+      "price": 205.27,
+      "related_news_count": 5,
+      "news": [
+        {
+          "title": "Anthropic, OpenAI rivalry spills into new Super Bowl ads as both fight ...",
+          "url": "https://apnews.com/article/openai-anthropic-chatgpt-claude-rivalry-c19e0cca22c37190cc4e0dc08e889ef0",
+          "matched_term": "Amazon"
+        },
+        {
+          "title": "OpenAI reportedly finalizing $100B deal at more than $850B ...",
+          "url": "https://techcrunch.com/2026/02/19/openai-reportedly-finalizing-100b-deal-at-more-than-850b-valuation/",
+          "matched_term": "Amazon"
+        },
+        {
+          "title": "Google is in early talks to deepen its investment in Anthropic",
+          "url": "https://www.businessinsider.com/google-deepen-investment-in-ai-anthropic-2025-11?op=1",
+          "matched_term": "Amazon"
+        },
+        {
+          "title": "Nvidia Blackwell, Google TPUs, AWS Trainium: Comparing top AI …",
+          "url": "https://www.cnbc.com/2025/11/21/nvidia-gpus-google-tpus-aws-trainium-comparing-the-top-ai-chips.html?msockid=325ba67e35026bba0849b17434276a1b",
+          "matched_term": "AWS"
+        },
+        {
+          "title": "Nvidia Blackwell, Google TPUs, AWS Trainium: Comparing top AI chips - CNBC",
+          "url": "https://www.cnbc.com/2025/11/21/nvidia-gpus-google-tpus-aws-trainium-comparing-the-top-ai-chips.html",
+          "matched_term": "AWS"
+        }
+      ],
+      "narrative": "AMZN down 2.3% — possibly related to: Anthropic, OpenAI rivalry spills into new Super Bowl ads as both fight ..."
+    }
+  ]
+}

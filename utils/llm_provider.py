@@ -41,7 +41,7 @@ class BaseLLMProvider(ABC):
 
         # Initialize OpenAI-compatible client
         if api_key and base_url:
-            self.client = OpenAI(api_key=api_key, base_url=base_url)
+            self.client = OpenAI(api_key=api_key, base_url=base_url, timeout=60.0)
         else:
             self.client = None
 
@@ -412,7 +412,7 @@ class Kimi25Provider(BaseLLMProvider):
                 f"{self.base_url}/messages",
                 headers=headers,
                 json=payload,
-                timeout=120,
+                timeout=(10, 60),  # (connect_timeout, read_timeout) in seconds
             )
 
             if resp.status_code == 429:

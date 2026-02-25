@@ -237,6 +237,40 @@ def run_financial_scraper():
     return 0
 
 
+def run_news_search_v2():
+    """Run Tavily + SearXNG news search (replaces old news_search_scraper)."""
+    print("\n" + "=" * 60)
+    print("NEWS SEARCH v2 (Tavily + SearXNG)")
+    print("=" * 60)
+
+    try:
+        from scrapers.news_search_scraper_v2 import NewsSearchScraperV2
+
+        scraper = NewsSearchScraperV2()
+        result = scraper.run()
+        return result.get("article_count", 0)
+    except Exception as e:
+        print(f"  Error: {e}")
+    return 0
+
+
+def run_blog_rss_scraper():
+    """Run HN top blogs RSS scraper (opinion leader layer)."""
+    print("\n" + "=" * 60)
+    print("BLOG RSS (HN Top Blogs)")
+    print("=" * 60)
+
+    try:
+        from scrapers.blog_rss_scraper import BlogRSSScraper
+
+        scraper = BlogRSSScraper()
+        result = scraper.run()
+        return result.get("post_count", 0)
+    except Exception as e:
+        print(f"  Error: {e}")
+    return 0
+
+
 def main():
     """Run all expanded scrapers."""
     print("=" * 60)
@@ -257,6 +291,8 @@ def main():
 
     results = {
         "tech_news": _safe_run("tech_news", run_tech_news_scraper),
+        "news_search_v2": _safe_run("news_search_v2", run_news_search_v2),
+        "blog_rss": _safe_run("blog_rss", run_blog_rss_scraper),
         "newsletters": _safe_run("newsletters", run_newsletter_scraper),
         "reddit": _safe_run("reddit", run_reddit_scraper),
         "financial": _safe_run("financial", run_financial_scraper),

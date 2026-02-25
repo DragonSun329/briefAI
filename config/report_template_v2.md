@@ -78,7 +78,7 @@ _Non-news signals with zero media coverage — potential early alpha._
 > 💡 {{ article.key_takeaway }}
 {% endif %}
 
-_{{ article.source }} · {{ article.published_date }}_
+_{{ article.source }}{% if article._source_type %} [{{ article._source_type }}]{% endif %} · {{ article.published_date or article.published_at or '' }}_
 
 {% endfor %}
 {% endfor %}
@@ -115,6 +115,44 @@ Key inflection points:
 
 {% for alert in alerts %}
 - **{{ alert.severity | upper }}** — {{ alert.type }}: {{ alert.message }}
+{% endfor %}
+
+---
+{% endif %}
+
+{% if market_movers %}
+## 📉 Market Movers & News Correlations
+
+_AI stock price moves matched to today's news. Source: Finnhub + briefAI correlator._
+
+{% if market_movers.sector_performance %}
+**Sector Performance:**
+{% for sector, avg in market_movers.sector_performance.items() %}
+- **{{ sector }}**: {{ "%.2f"|format(avg) }}%
+{% endfor %}
+{% endif %}
+
+{% for mover in market_movers.correlations[:10] %}
+- **{{ mover.ticker }}** {{ mover.direction }} {{ "%.1f"|format(mover.price_change_pct|abs) }}% (${{ mover.current_price }}) — {% if mover.top_articles %}{{ mover.explanation_strength }}: _{{ mover.top_articles[0].title[:100] }}_{% else %}unexplained{% endif %}{% if mover.technical and mover.technical.rsi %} | RSI {{ mover.technical.rsi }}{% if mover.technical.ta_signals %} [{{ mover.technical.ta_signals | join(', ') }}]{% endif %}{% endif %}
+
+{% endfor %}
+
+---
+{% endif %}
+
+{% if podcast_insights %}
+## 🎙️ Podcast Intelligence
+
+_Key insights from this week's top AI/tech podcasts._
+
+{% for ep in podcast_insights[:8] %}
+### {{ ep.title[:80] }}
+**{{ ep.podcast_channel }}** · {{ ep.duration_min }} min
+
+{% if ep.summary %}{{ ep.summary[:300] }}{% endif %}
+
+{% if ep.entities %}**Entities:** {{ ep.entities[:8] | join(', ') }}{% endif %}
+
 {% endfor %}
 
 ---

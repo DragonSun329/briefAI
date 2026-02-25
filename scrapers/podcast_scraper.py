@@ -115,6 +115,37 @@ PODCAST_CHANNELS = {
         "credibility": 7,
         "focus": ["AI", "ML", "applications", "tutorials"],
     },
+    # --- Added 2026-02-24: insider-quality sources ---
+    "acquired": {
+        "channel_id": "UCyFqFYfTW2VoIQKylJ04Rtw",
+        "name": "Acquired",
+        "credibility": 9,
+        "focus": ["tech history", "M&A", "strategy", "business models"],
+    },
+    "a16z": {
+        "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA",
+        "name": "a16z",
+        "credibility": 9,
+        "focus": ["AI", "investing", "founders", "enterprise"],
+    },
+    "bg2pod": {
+        "channel_id": "UC-yRDvpR99LUc5l7i7jLzew",
+        "name": "BG2 Pod (Bill Gurley & Brad Gerstner)",
+        "credibility": 9,
+        "focus": ["investing", "AI", "public markets", "tech strategy"],
+    },
+    "logan-bartlett": {
+        "channel_id": "UCpj11vfHVMEMM0JiT6lcJJg",
+        "name": "The Logan Bartlett Show",
+        "credibility": 8,
+        "focus": ["founders", "startups", "AI", "growth"],
+    },
+    "cognitive-revolution": {
+        "channel_id": "UCjNRVMBVI30Sak_p6HRWhIA",
+        "name": "The Cognitive Revolution",
+        "credibility": 8,
+        "focus": ["AI", "research", "applications", "safety"],
+    },
 }
 
 
@@ -364,7 +395,7 @@ def scrape_podcasts(
         channels = list(PODCAST_CHANNELS.keys())
 
     if output_dir is None:
-        output_dir = Path(__file__).parent.parent / "data" / "cache"
+        output_dir = Path(__file__).parent.parent / "data" / "alternative_signals"
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -412,7 +443,7 @@ def scrape_podcasts(
 
     # Save results
     if all_articles:
-        output_file = output_dir / f"podcasts_{datetime.now().strftime('%Y%m%d')}.json"
+        output_file = output_dir / f"podcasts_{datetime.now().strftime('%Y-%m-%d')}.json"
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(all_articles, f, ensure_ascii=False, indent=2)
         logger.info(f"Saved {len(all_articles)} podcast articles to {output_file}")

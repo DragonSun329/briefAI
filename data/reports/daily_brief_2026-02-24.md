@@ -1,16 +1,16 @@
 # AI Intelligence Daily Brief
 
-**2026-02-24** | Generated 2026-02-24 10:22 | Experiment: `v2_2_forward_test`
+**2026-02-24** | Generated 2026-02-24 16:34 | Experiment: `v2_2_forward_test`
 
 ---
 
 ## 📊 Executive Summary
 
-**Emerging Trends:** 1 cross-source trends detected.
+**Emerging Trends:** 5 cross-source trends detected.
 
-Top emerging: **AI Safety Regulatory Scrutiny Convergence** (score 56, steady).
+Top emerging: **Meta** (score 100, steady).
 
-**8 top stories** selected from today's scrape.
+**15 top stories** selected from today's scrape.
 
 ---
 
@@ -18,31 +18,177 @@ Top emerging: **AI Safety Regulatory Scrutiny Convergence** (score 56, steady).
 ## 🔥 Emerging Trends
 
 
-### 1. AI Safety Regulatory Scrutiny Convergence
+### 1. Meta
 
-**Emergence Score**: 56/100 | **Velocity**: steady | **Sources**: 2 types
+**Emergence Score**: 100/100 | **Velocity**: steady | **Sources**: 7 types
 
-Established AI labs simultaneously drawing technical press attention suggests shared regulatory inflection point rather than competitive news cycle. Cross-coverage pattern indicates external pressure (policy, safety incident, or competitive dynamic) affecting both organizations.
+Detected across 7 source types with 206 total mentions
 
 
 Evidence chain:
 
 
-- **[news]** Ars Technica coverage on OpenAI _(2026-02-24)_
+- news
 
 
 
-- **[news]** Ars Technica coverage on Anthropic _(2026-02-24)_
+- hackernews
 
 
 
-- **[news]** The Register technical analysis _(2026-02-24)_
+- blogs
+
+
+
+- news_search
+
+
+
+- newsletters
 
 
 
 
 
-> 🔮 **Prediction**: Coordinated policy response or joint industry framework announcement within 2 weeks as regulatory pressure mounts on frontier labs
+
+---
+
+### 2. Amazon
+
+**Emergence Score**: 100/100 | **Velocity**: steady | **Sources**: 6 types
+
+Detected across 6 source types with 162 total mentions
+
+
+Evidence chain:
+
+
+- news
+
+
+
+- hackernews
+
+
+
+- blogs
+
+
+
+- news_search
+
+
+
+- newsletters
+
+
+
+
+
+
+---
+
+### 3. Microsoft
+
+**Emergence Score**: 100/100 | **Velocity**: steady | **Sources**: 5 types
+
+Detected across 5 source types with 210 total mentions
+
+
+Evidence chain:
+
+
+- news
+
+
+
+- hackernews
+
+
+
+- news_search
+
+
+
+- newsletters
+
+
+
+- reddit
+
+
+
+
+
+
+---
+
+### 4. NVIDIA
+
+**Emergence Score**: 100/100 | **Velocity**: steady | **Sources**: 5 types
+
+Detected across 5 source types with 217 total mentions
+
+
+Evidence chain:
+
+
+- news
+
+
+
+- hackernews
+
+
+
+- news_search
+
+
+
+- newsletters
+
+
+
+- reddit
+
+
+
+
+
+
+---
+
+### 5. Apple
+
+**Emergence Score**: 100/100 | **Velocity**: steady | **Sources**: 5 types
+
+Detected across 5 source types with 160 total mentions
+
+
+Evidence chain:
+
+
+- news
+
+
+
+- hackernews
+
+
+
+- blogs
+
+
+
+- newsletters
+
+
+
+- arxiv
+
+
+
+
 
 
 ---
@@ -56,83 +202,154 @@ Evidence chain:
 ## 📰 Top Stories
 
 
+### Product Launch
+
+
+**1. [Claude Sonnet 4.6](https://www.anthropic.com/news/claude-sonnet-4-6)**
+
+
+
+
+
+_hackernews [hackernews] · Feb 17, 2026_
+
+
+**2. [Gemini 3.1 Pro](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/)**
+
+
+
+
+
+_hackernews [hackernews] · Feb 19, 2026_
+
+
+**3. [Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment](https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in)**
+
+
+
+
+
+_VentureBeat AI [techmeme] · Jan 07, 2026_
+
+
+
 ### Regulation
 
 
-**1. [Anthropic accuses Chinese AI labs of mining Claude as US debates AI chip exports](https://techcrunch.com/2026/02/23/anthropic-accuses-chinese-ai-labs-of-mining-claude-as-us-debates-ai-chip-exports/)**
+**1. [Defense Secretary summons Anthropic’s Amodei over military use of Claude](https://techcrunch.com/2026/02/23/defense-secretary-summons-anthropics-amodei-over-military-use-of-claude/)**
 
 
 
 
 
-_TechCrunch AI · _
+_TechCrunch AI [techmeme] · Feb 23, 2026_
+
+
+**2. [Anthropic accuses Chinese AI labs of mining Claude as US debates AI chip exports](https://techcrunch.com/2026/02/23/anthropic-accuses-chinese-ai-labs-of-mining-claude-as-us-debates-ai-chip-exports/)**
+
+
+
+
+
+_TechCrunch AI [techmeme] · Feb 23, 2026_
+
+
+**3. [Anthropic CEO Dario Amodei to meet with Defense Secretary Pete Hegseth on AI DOD model use](https://www.cnbc.com/2026/02/23/anthropic-ai-dario-defense-secretary-pete-hegseth.html)**
+
+
+
+
+
+_CNBC Tech [techmeme] · Feb 23, 2026_
 
 
 
 ### Research
 
 
-**1. [BioBridge: Bridging Proteins and Language for Enhanced Biological Reasoning with LLMs](https://arxiv.org/abs/2602.17680)**
+**1. [The Claude C Compiler: What It Reveals About the Future of Software](https://simonwillison.net/2026/Feb/22/ccc/#atom-everything)**
 
 
 
 
 
-_ArXiv Machine Learning · _
+_Simon Willison [blogs] · Feb 22, 2026_
 
 
-**2. [CodeScaler: Scaling Code LLM Training and Test-Time Inference via Execution-Free Reward Models](https://arxiv.org/abs/2602.17684)**
-
-
-
-
-
-_ArXiv Machine Learning · _
-
-
-**3. [Tethered Reasoning: Decoupling Entropy from Hallucination in Quantized LLMs via Manifold Steering](https://arxiv.org/abs/2602.17691)**
+**2. [The U.S. and China Are Pursuing Different AI Futures](https://spectrum.ieee.org/us-china-ai)**
 
 
 
 
 
-_ArXiv Machine Learning · _
+_IEEE Spectrum AI [techmeme] · Feb 19, 2026_
 
 
-**4. [Can LLM Safety Be Ensured by Constraining Parameter Regions?](https://arxiv.org/abs/2602.17696)**
-
-
-
-
-
-_ArXiv Machine Learning · _
-
-
-**5. [ScaleBITS: Scalable Bitwidth Search for Hardware-Aligned Mixed-Precision LLMs](https://arxiv.org/abs/2602.17698)**
+**3. [Was 2025 Really the Year of AI Agents?](https://spectrum.ieee.org/2025-year-of-ai-agents)**
 
 
 
 
 
-_ArXiv Machine Learning · _
+_IEEE Spectrum AI [techmeme] · Jan 29, 2026_
 
 
-**6. [Provable Adversarial Robustness in In-Context Learning](https://arxiv.org/abs/2602.17743)**
-
-
-
-
-
-_ArXiv Machine Learning · _
-
-
-**7. [Influence-Preserving Proxies for Gradient-Based Data Selection in LLM Fine-tuning](https://arxiv.org/abs/2602.17835)**
+**4. [Why AI Keeps Falling for Prompt Injection Attacks](https://spectrum.ieee.org/prompt-injection-attack)**
 
 
 
 
 
-_ArXiv Machine Learning · _
+_IEEE Spectrum AI [techmeme] · Jan 21, 2026_
+
+
+**5. [AI Boosts Research Careers but Flattens Scientific Discovery](https://spectrum.ieee.org/ai-science-research-flattens-discovery)**
+
+
+
+
+
+_IEEE Spectrum AI [techmeme] · Jan 19, 2026_
+
+
+
+### Other
+
+
+**1. [All the important news from the ongoing India AI Impact Summit](https://techcrunch.com/2026/02/22/all-the-important-news-from-the-ongoing-india-ai-summit/)**
+
+
+
+
+
+_TechCrunch AI [techmeme] · Feb 22, 2026_
+
+
+**2. [AI Enterprise - Databricks & Glean | BG2 Guest Interview](https://www.youtube.com/watch?v=jA8ZQfq_Hzs)**
+
+
+
+
+
+_Bg2 Pod [podcasts] · _
+
+
+**3. [Should AI chatbots have ads? Anthropic says no.](https://arstechnica.com/ai/2026/02/should-ai-chatbots-have-ads-anthropic-says-no/)**
+
+
+
+
+
+_Ars Technica [techmeme] · Feb 04, 2026_
+
+
+**4. [How and When the Memory Chip Shortage Will End](https://spectrum.ieee.org/dram-shortage)**
+
+
+
+
+
+_IEEE Spectrum AI [techmeme] · Feb 10, 2026_
 
 
 
@@ -143,107 +360,72 @@ _ArXiv Machine Learning · _
 ## 📖 Active Narratives
 
 
-### Big Tech Earnings & Corporate Performance — fading
+### Meta — fading
 
-**Momentum**: decelerating | **Mentions**: 335 (7d) / 5519 (30d)
+**Momentum**: decelerating | **Mentions**: 40 (7d) / 718 (30d)
 
-This is a classic post-earnings, pre-quiet-period narrative collapse. All ten companies show identical patterns: high 30-day baselines, moderate 14-day activity, then dramatic 7-day deceleration (70-85% drop). The synchronized timing suggests coordinated disclosure windows (likely Q4 2025 earnings or annual reports). Expect dormancy until next earnings cycle or unexpected catalyst. NVIDIA and Microsoft maintain highest absolute volumes, suggesting residual AI infrastructure interest.
-
-
-Key inflection points:
-
-- 2026-02-24 synchronized corporate communications wave
-
-- Peak mention volume at 14-day mark followed by 80% collapse in 7-day window
+Narrative is in terminal decline with minimal new developments. Expect continued fading as coverage shifts to newer stories.
 
 
 
 
-> 📈 **Outlook**: This is a classic post-earnings, pre-quiet-period narrative collapse. All ten companies show identical patterns: high 30-day baselines, moderate 14-day activity, then dramatic 7-day deceleration (70-85% drop). The synchronized timing suggests coordinated disclosure windows (likely Q4 2025 earnings or annual reports). Expect dormancy until next earnings cycle or unexpected catalyst. NVIDIA and Microsoft maintain highest absolute volumes, suggesting residual AI infrastructure interest.
+> 📈 **Outlook**: Narrative is in terminal decline with minimal new developments. Expect continued fading as coverage shifts to newer stories.
 
 
 ---
 
-### AI Infrastructure & Compute Dominance — fading
+### Databricks — fading
 
-**Momentum**: decelerating | **Mentions**: 109 (7d) / 1804 (30d)
+**Momentum**: decelerating | **Mentions**: 17 (7d) / 296 (30d)
 
-The AI infrastructure narrative is experiencing its first major correction cycle. NVIDIA's 95% mention velocity drop (30d to 7d) is unprecedented, suggesting market saturation with 'AI chip demand' stories. Microsoft's parallel deceleration indicates cloud AI service narratives are also fatigued. OpenAI's Reddit presence (unique among these) suggests grassroots discourse may outlast corporate messaging. Watch for: custom silicon announcements (threat to NVIDIA), OpenAI model releases, or Microsoft/Azure capacity constraints to reactivate.
-
-
-Key inflection points:
-
-- NVIDIA's 30-day mention peak (851) vs 7-day collapse (43) signals narrative exhaustion
-
-- OpenAI's Reddit-native origin vs others' corporate newsroom origin indicates divergent discourse channels
+Data analytics company narrative fading as market attention shifts. May see brief resurgence with major product announcements.
 
 
 
 
-> 📈 **Outlook**: The AI infrastructure narrative is experiencing its first major correction cycle. NVIDIA's 95% mention velocity drop (30d to 7d) is unprecedented, suggesting market saturation with 'AI chip demand' stories. Microsoft's parallel deceleration indicates cloud AI service narratives are also fatigued. OpenAI's Reddit presence (unique among these) suggests grassroots discourse may outlast corporate messaging. Watch for: custom silicon announcements (threat to NVIDIA), OpenAI model releases, or Microsoft/Azure capacity constraints to reactivate.
+> 📈 **Outlook**: Data analytics company narrative fading as market attention shifts. May see brief resurgence with major product announcements.
 
 
 ---
 
-### Cloud Data Platform Wars — fading
+### Amazon — fading
 
-**Momentum**: decelerating | **Mentions**: 44 (7d) / 788 (30d)
+**Momentum**: decelerating | **Mentions**: 37 (7d) / 516 (30d)
 
-The modern data stack narrative is in hibernation. Databricks and Snowflake's synchronized collapse suggests sector-wide investor fatigue with 'data lakehouse' and 'cloud data warehouse' differentiation stories. Both companies face pressure from hyperscaler native solutions (AWS Redshift, Google BigQuery, Azure Synapse). The Google News vs Yahoo Finance source split is notable—Databricks in tech press, Snowflake in finance press—suggesting different stakeholder concerns (product vs stock performance). Reactivation likely requires: major customer win/loss, pricing war escalation, or AI-native data platform pivot.
-
-
-Key inflection points:
-
-- Databricks' 94% mention drop (14d to 7d) is steepest in dataset
-
-- Snowflake's 83% drop suggests parallel narrative exhaustion
+E-commerce and cloud giant narrative stabilizing at lower volume. Focus shifting to specific business segments rather than company-wide coverage.
 
 
 
 
-> 📈 **Outlook**: The modern data stack narrative is in hibernation. Databricks and Snowflake's synchronized collapse suggests sector-wide investor fatigue with 'data lakehouse' and 'cloud data warehouse' differentiation stories. Both companies face pressure from hyperscaler native solutions (AWS Redshift, Google BigQuery, Azure Synapse). The Google News vs Yahoo Finance source split is notable—Databricks in tech press, Snowflake in finance press—suggesting different stakeholder concerns (product vs stock performance). Reactivation likely requires: major customer win/loss, pricing war escalation, or AI-native data platform pivot.
+> 📈 **Outlook**: E-commerce and cloud giant narrative stabilizing at lower volume. Focus shifting to specific business segments rather than company-wide coverage.
 
 
 ---
 
-### Enterprise Software Consolidation — fading
+### Microsoft — fading
 
-**Momentum**: decelerating | **Mentions**: 112 (7d) / 1871 (30d)
+**Momentum**: decelerating | **Mentions**: 49 (7d) / 735 (30d)
 
-Enterprise software narratives are in maintenance mode. Oracle's mixed source profile (corporate + financial press) hints at ongoing cloud transition or acquisition stories that failed to sustain attention. Microsoft's deceleration suggests Copilot/AI assistant narratives haven't displaced traditional enterprise coverage. Meta's inclusion here is anomalous—likely reflecting Workplace product line or metaverse enterprise applications that haven't gained narrative traction. This cluster lacks catalyst; expect continued fade unless: major acquisition (Oracle's pattern suggests hunting), Microsoft Teams/365 AI pricing controversy, or Meta enterprise VR breakthrough.
-
-
-Key inflection points:
-
-- Oracle's unique dual-source pattern (newsroom + finance) suggests M&A or earnings narrative
-
-- Meta's presence in 'enterprise' cluster reflects workplace/metaverse pivot attempts
+Software giant narrative maturing with steady but declining coverage. AI integration efforts remain key focus area.
 
 
 
 
-> 📈 **Outlook**: Enterprise software narratives are in maintenance mode. Oracle's mixed source profile (corporate + financial press) hints at ongoing cloud transition or acquisition stories that failed to sustain attention. Microsoft's deceleration suggests Copilot/AI assistant narratives haven't displaced traditional enterprise coverage. Meta's inclusion here is anomalous—likely reflecting Workplace product line or metaverse enterprise applications that haven't gained narrative traction. This cluster lacks catalyst; expect continued fade unless: major acquisition (Oracle's pattern suggests hunting), Microsoft Teams/365 AI pricing controversy, or Meta enterprise VR breakthrough.
+> 📈 **Outlook**: Software giant narrative maturing with steady but declining coverage. AI integration efforts remain key focus area.
 
 
 ---
 
-### Consumer Tech & Platform Economics — fading
+### OpenAI — fading
 
-**Momentum**: decelerating | **Mentions**: 111 (7d) / 1733 (30d)
+**Momentum**: decelerating | **Mentions**: 13 (7d) / 158 (30d)
 
-Consumer platform narratives are experiencing regulatory and cyclical fatigue. The exclusive Yahoo Finance sourcing for all three (unlike mixed sources for others) suggests investor-focused rather than product-focused coverage—likely DOJ/EU antitrust updates or earnings guidance that markets have priced in. Amazon's AWS/retail split, Apple's hardware/services tension, and Google's search/AI overlap are well-worn stories lacking new angles. This cluster needs external catalyst: adverse antitrust ruling, unexpected product launch, or AI consumer application breakthrough. Current trajectory suggests dormancy through Q1 2026.
-
-
-Key inflection points:
-
-- Synchronous Yahoo Finance coverage suggests coordinated financial journalism cycle
-
-- All three show similar deceleration patterns (~80% 14d to 7d drop)
+AI leader narrative declining as initial hype fades. Future coverage likely tied to specific product launches or controversies.
 
 
 
 
-> 📈 **Outlook**: Consumer platform narratives are experiencing regulatory and cyclical fatigue. The exclusive Yahoo Finance sourcing for all three (unlike mixed sources for others) suggests investor-focused rather than product-focused coverage—likely DOJ/EU antitrust updates or earnings guidance that markets have priced in. Amazon's AWS/retail split, Apple's hardware/services tension, and Google's search/AI overlap are well-worn stories lacking new angles. This cluster needs external catalyst: adverse antitrust ruling, unexpected product launch, or AI consumer application breakthrough. Current trajectory suggests dormancy through Q1 2026.
+> 📈 **Outlook**: AI leader narrative declining as initial hype fades. Future coverage likely tied to specific product launches or controversies.
 
 
 ---
@@ -265,6 +447,101 @@ Key inflection points:
 - **LOW** — anomaly: Databricks has only 17 mentions in the last 7 days — down from a weekly average of 68.8. Activity has significantly decreased.
 
 - **LOW** — anomaly: Meta has only 40 mentions in the last 7 days — down from a weekly average of 167.0. Activity has significantly decreased.
+
+
+---
+
+
+
+## 📉 Market Movers & News Correlations
+
+_AI stock price moves matched to today's news. Source: Finnhub + briefAI correlator._
+
+
+**Sector Performance:**
+
+- **Big Tech**: -1.32%
+
+- **Semis**: -0.98%
+
+- **AI Pure-play**: -7.38%
+
+- **Enterprise**: -5.95%
+
+
+
+
+- **IBM** down 13.2% ($223.35) — strong: _IBM stock dives after Anthropic points out AI can rewrite COBOL fast_ | RSI 22.9 [oversold, macd_bearish, near_lower_band]
+
+
+- **MDB** down 11.4% ($305.37) — weak: _Cerebras plans humongous AI supercomputer in India backed by UAE_ | RSI 32.9 [macd_bearish, near_lower_band]
+
+
+- **DDOG** down 11.3% ($102.61) — unexplained | RSI 31.6 [macd_bearish, near_lower_band]
+
+
+- **ZS** down 10.3% ($143.28) — strong: _Anthropic AI cybersecurity stocks crash today: What is Claude Code ..._
+
+
+- **CRWD** down 9.8% ($350.33) — strong: _Anthropic AI cybersecurity stocks crash today: What is Claude Code ..._ | RSI 28.4 [oversold, macd_bearish, near_lower_band]
+
+
+- **NET** down 9.6% ($160.19) — strong: _All the important news from the ongoing India AI Impact Summit_ | RSI 37.4 [macd_bearish, near_lower_band]
+
+
+- **SNOW** down 8.6% ($157.6) — strong: _Meta's LLaMA News | Latest News - NewsNow_ | RSI 32.3 [macd_bullish]
+
+
+- **DOCS** down 7.0% ($23.76) — strong: _The creator of Claude Code just revealed his workflow, and developers are losing their minds_ | RSI 17.0 [oversold, macd_bearish]
+
+
+- **UPST** down 6.9% ($27.26) — moderate: _Upstart Sarvam Unveils AI Model Customized for India Market_
+
+
+- **WDAY** down 6.2% ($129.21) — unexplained
+
+
+
+---
+
+
+
+## 🎙️ Podcast Intelligence
+
+_Key insights from this week's top AI/tech podcasts._
+
+
+### The NFL (2026 Update)
+**Acquired** · 257.0 min
+
+The NFL is nearly synonymous with America today. Practically nothing is more quintessentially and universally American than tuning in every Sunday (and Monday, and Thursday… and sometimes...
+
+
+
+
+### Inside The Life of Silicon Valley's First Athlete Investor | Magic Johnson
+**a16z** · 65.0 min
+
+a16z’s Chris Lyons speaks with Earvin "Magic" Johnson about his 30-year journey from athlete to billionaire businessman. They cover the art of deal-making, lessons from mentors Michael Ovitz...
+
+
+
+
+### Intelligence with Everyone: RL @ MiniMax, with Olive Song, from AIE NYC & Infere
+**Cognitive Revolution "How AI Changes Everything"** · 54.0 min
+
+Olive Song from MiniMax shares how her team trains the M series frontier open-weight models using reinforcement learning, tight product feedback loops, and systematic environment perturbations....
+
+
+
+
+### AI Enterprise - Databricks & Glean | BG2 Guest Interview
+**Bg2 Pod** · 45.0 min
+
+In this BG2 guest interview, Altimeter partner Apoorv Agrawal sits down with Ali Ghodsi (Databricks) and Arvind Jain (Glean) for a candid, operator-level discussion on what’s actually working...
+
+
+
 
 
 ---
@@ -342,4 +619,4 @@ Key inflection points:
 
 ---
 
-_718 articles scraped → 8 selected. Powered by briefAI._
+_2339 articles scraped → 15 selected. Powered by briefAI._

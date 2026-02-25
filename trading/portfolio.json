@@ -1,0 +1,55 @@
+{
+  "cash": 2988.9,
+  "positions": {
+    "IBM": {
+      "ticker": "IBM",
+      "side": "long",
+      "entry_price": 223.35,
+      "entry_date": "2026-02-24",
+      "shares": 2.2386,
+      "entry_reason": "The significant drop without clear news warrants a mean reversion trade, but the Mistral AI competition necessitates a tighter stop-loss and smaller position size.",
+      "signal_source": "MEAN_REVERSION",
+      "stop_loss": 214.416,
+      "take_profit": 241.21800000000002
+    },
+    "NET": {
+      "ticker": "NET",
+      "side": "long",
+      "entry_price": 160.19,
+      "entry_date": "2026-02-24",
+      "shares": 2.8092,
+      "entry_reason": "The significant drop without a clear catalyst suggests a potential mean reversion opportunity, and the risk/reward is favorable with a tight stop-loss to manage downside risk, while our portfolio is not heavily exposed to this specific sector.",
+      "signal_source": "MEAN_REVERSION",
+      "stop_loss": 153.7824,
+      "take_profit": 173.0052
+    },
+    "SNOW": {
+      "ticker": "SNOW",
+      "side": "long",
+      "entry_price": 157.6,
+      "entry_date": "2026-02-24",
+      "shares": 2.5698,
+      "entry_reason": "Despite competition concerns, the significant drop without a clear catalyst suggests a potential mean reversion opportunity, and a tight stop-loss will mitigate downside risk.",
+      "signal_source": "MEAN_REVERSION",
+      "stop_loss": 151.296,
+      "take_profit": 170.208
+    },
+    "MDB": {
+      "ticker": "MDB",
+      "side": "long",
+      "entry_price": 305.37,
+      "entry_date": "2026-02-25",
+      "shares": 2.1485,
+      "entry_reason": "Down -11.4% with weak news explanation",
+      "signal_source": "MEAN_REVERSION",
+      "stop_loss": 290.1015,
+      "take_profit": 329.79960000000005
+    }
+  },
+  "total_trades": 4,
+  "winning_trades": 0,
+  "losing_trades": 0,
+  "total_pnl": 0.0,
+  "created_at": "2026-02-24T16:55:50.794544",
+  "last_updated": "2026-02-25T09:31:55.968274"
+}

@@ -161,47 +161,52 @@ def extract_source(url: str) -> str:
 
 def score_ai_relevance(title: str) -> float:
     """
-    Score how relevant a story is to AI.
-    
+    Score how relevant a story is to AI/tech.
+
+    Uses tiered keyword matching with diminishing returns:
+    - First high-keyword match: +0.35
+    - Each additional high match: +0.10 (up to 3 extra = +0.30)
+    - Medium matches: +0.10 each (up to 2 = +0.20)
+    - Low matches: +0.05 each (up to 2 = +0.10)
+    Max possible: 0.35 + 0.30 + 0.20 + 0.10 = 0.95
+
     Returns:
         Float 0-1 indicating AI relevance
     """
     title_lower = title.lower()
-    
-    # High relevance keywords
+
+    # High relevance keywords (AI-specific)
     high_keywords = [
         'ai', 'artificial intelligence', 'gpt', 'llm', 'chatgpt', 'claude',
         'openai', 'anthropic', 'deepmind', 'machine learning', 'neural',
-        'transformer', 'generative', 'copilot', 'gemini', 'llama', 'mistral'
+        'transformer', 'generative', 'copilot', 'gemini', 'llama', 'mistral',
+        'deep learning', 'large language', 'foundation model', 'diffusion',
     ]
-    
-    # Medium relevance
+
+    # Medium relevance (AI-adjacent)
     medium_keywords = [
         'nvidia', 'chips', 'gpu', 'semiconductor', 'autonomous', 'robot',
-        'automation', 'data center', 'cloud', 'microsoft', 'google', 'meta',
-        'training', 'model', 'inference'
+        'automation', 'data center', 'cloud computing', 'training', 'inference',
+        'fine-tuning', 'embedding', 'vector', 'rag', 'agent',
     ]
-    
-    # Low relevance
+
+    # Low relevance (general tech)
     low_keywords = [
-        'tech', 'startup', 'funding', 'vc', 'software', 'saas', 'developer'
+        'tech', 'startup', 'funding', 'vc', 'software', 'saas', 'developer',
+        'microsoft', 'google', 'meta', 'amazon', 'apple', 'cloud',
     ]
-    
-    score = 0
-    
-    for kw in high_keywords:
-        if kw in title_lower:
-            score += 0.3
-    
-    for kw in medium_keywords:
-        if kw in title_lower:
-            score += 0.15
-    
-    for kw in low_keywords:
-        if kw in title_lower:
-            score += 0.05
-    
-    return min(1.0, score)
+
+    high_hits = sum(1 for kw in high_keywords if kw in title_lower)
+    med_hits = sum(1 for kw in medium_keywords if kw in title_lower)
+    low_hits = sum(1 for kw in low_keywords if kw in title_lower)
+
+    score = 0.0
+    if high_hits >= 1:
+        score += 0.35 + min(3, high_hits - 1) * 0.10  # first=0.35, extras=0.10 each
+    score += min(2, med_hits) * 0.10
+    score += min(2, low_hits) * 0.05
+
+    return min(1.0, round(score, 2))
 
 
 def scrape_techmeme(limit: int = 30) -> Dict[str, Any]:
