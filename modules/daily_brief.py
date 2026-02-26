@@ -194,12 +194,18 @@ class DailyBriefGenerator:
         # Source configs: (glob_pattern, container_key, field_mapping, quality_weight)
         # quality_weight: how much we trust this source's editorial signal (0-1)
         source_configs = [
-            # TechMeme / RSS tech news — curated but ai_relevance_score inflated
+            # TechMeme (actual curated scrape) — highest editorial quality
+            # Human-curated by Gabe Rivera, every story is editorially selected
+            ("news_signals/techmeme_*.json", "ai_stories", {
+                "score_field": "ai_relevance",
+                "date_field": "scraped_at",
+            }, "techmeme", 0.95),
+            # RSS tech news feeds — broad, ai_relevance_score often inflated
             # (31% of articles scored 1.0 including irrelevant ones)
             ("news_signals/tech_news_*.json", "articles", {
                 "score_field": "ai_relevance_score",
                 "date_field": "published_at",
-            }, "techmeme", 0.75),
+            }, "tech_rss", 0.60),
             # US tech news (Tavily) — broad, company-focused
             ("alternative_signals/us_tech_news_*.json", "_auto", {
                 "score_field": "ai_relevance_score",
@@ -324,7 +330,7 @@ class DailyBriefGenerator:
                     # Carry over useful metadata
                     for extra in ["categories", "sentiment_keywords", "evaluation", "ticker",
                                   "podcast_channel", "duration_min", "num_comments", "points",
-                                  "subreddit", "blog", "author"]:
+                                  "subreddit", "blog", "author", "related_count", "related"]:
                         if extra in item:
                             article[extra] = item[extra]
 
@@ -556,6 +562,15 @@ class DailyBriefGenerator:
                 elif reddit_score >= 1000:
                     social_proof = min(0.15, (reddit_score - 1000) / 10000)
 
+                # TechMeme related_count boost: stories with many related articles
+                # are editorially significant (TechMeme clusters related coverage)
+                techmeme_boost = 0.0
+                if article.get("_source_type") == "techmeme":
+                    related = article.get("related_count", 0) or 0
+                    if related >= 1:
+                        # 1 related -> 0.10, 3+ -> 0.20, 5+ -> 0.30
+                        techmeme_boost = min(0.30, related * 0.06)
+
                 # Combined score: weighted blend
                 # relevance*quality gives high-quality sources more weight
                 combined = (relevance * quality * 0.4
@@ -563,7 +578,8 @@ class DailyBriefGenerator:
                             + quality * 0.15
                             + novelty
                             + cross
-                            + social_proof)
+                            + social_proof
+                            + techmeme_boost)
 
                 article["_combined_score"] = combined
                 article["_cross_source_boost"] = cross
