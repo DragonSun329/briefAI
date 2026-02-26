@@ -133,31 +133,44 @@ Log-Success "Run integrity verified"
 if (-not $SkipScrapers) {
     Log-Message "STEP 1: Running scrapers..."
     
-    # Original scrapers (each scraper has internal 120s daemon thread timeout via scraper_timeout.py)
-    Log-Message "  Running original scrapers..."
-    python -u scrapers/run_all_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+    # Helper function to run scrapers with resilience
+    function Run-ScraperStep {
+        param(
+            [string]$Name,
+            [string]$Command
+        )
+        Log-Message "  Running $Name..."
+        $StepStart = Get-Date
+        
+        try {
+            Invoke-Expression "$Command 2>&1" | Tee-Object -FilePath $LogFile -Append
+            $StepExitCode = $LASTEXITCODE
+            $Duration = ((Get-Date) - $StepStart).TotalSeconds
+            
+            if ($StepExitCode -eq 0) {
+                Log-Message "  ✓ $Name completed successfully ($([math]::Round($Duration, 1))s)" -Level "OK"
+            } else {
+                Log-Message "  ⚠ $Name exited with code $StepExitCode, but continuing ($([math]::Round($Duration, 1))s)" -Level "WARN"
+            }
+        }
+        catch {
+            $Duration = ((Get-Date) - $StepStart).TotalSeconds
+            Log-Message "  ✗ $Name failed: $($_.Exception.Message), but continuing ($([math]::Round($Duration, 1))s)" -Level "WARN"
+        }
+        
+        # Reset error state for next step
+        $Global:LASTEXITCODE = 0
+    }
     
-    # Expanded scrapers
-    Log-Message "  Running expanded scrapers..."
-    python -u scrapers/run_expanded_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
+    # Run each scraper step independently - failures are non-fatal
+    Run-ScraperStep "original scrapers" "python -u scrapers/run_all_scrapers.py"
+    Run-ScraperStep "expanded scrapers" "python -u scrapers/run_expanded_scrapers.py"
+    Run-ScraperStep "signal import" "python -u scripts/import_scraped_signals.py"
+    Run-ScraperStep "high-value scrapers" "python -u scrapers/run_high_value_scrapers.py"
+    Run-ScraperStep "insider trading" "python -u scrapers/insider_trading_scraper.py"
+    Run-ScraperStep "market-news correlator" "python -u scrapers/market_news_correlator.py"
     
-    # Import scraped signals
-    Log-Message "  Importing scraped signals..."
-    python -u scripts/import_scraped_signals.py 2>&1 | Tee-Object -FilePath $LogFile -Append
-    
-    # High-value scrapers
-    Log-Message "  Running high-value scrapers..."
-    python -u scrapers/run_high_value_scrapers.py 2>&1 | Tee-Object -FilePath $LogFile -Append
-    
-    # Insider trading
-    Log-Message "  Running insider trading scraper..."
-    python -u scrapers/insider_trading_scraper.py 2>&1 | Tee-Object -FilePath $LogFile -Append
-    
-    # Market-News Correlator (cross-references price moves with news articles)
-    Log-Message "  Running market-news correlator..."
-    python -u scrapers/market_news_correlator.py 2>&1 | Tee-Object -FilePath $LogFile -Append
-    
-    Log-Success "Scrapers complete"
+    Log-Success "Scrapers phase complete (individual failures are non-fatal)"
 }
 else {
     Log-Message "STEP 1: Scrapers SKIPPED (--SkipScrapers flag)"
