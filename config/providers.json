@@ -8,7 +8,11 @@
       "api_key_env": "PERPLEXITY_API_KEY",
       "models": {
         "default": "sonar",
-        "available": ["sonar", "sonar-pro", "sonar-deep-research"]
+        "available": [
+          "sonar",
+          "sonar-pro",
+          "sonar-deep-research"
+        ]
       },
       "rate_limits": {
         "rpm": 20,
@@ -18,8 +22,16 @@
       "enabled": true,
       "notes": "Search-grounded research - use sparingly ($5 budget)",
       "pricing_per_million": {
-        "sonar": {"input": 1, "output": 1, "search_request": 5},
-        "sonar-pro": {"input": 3, "output": 15, "search_request": 5}
+        "sonar": {
+          "input": 1,
+          "output": 1,
+          "search_request": 5
+        },
+        "sonar-pro": {
+          "input": 3,
+          "output": 15,
+          "search_request": 5
+        }
       }
     },
     {
@@ -31,7 +43,9 @@
       "api_format": "anthropic",
       "models": {
         "default": "kimi-2.5",
-        "available": ["kimi-2.5"]
+        "available": [
+          "kimi-2.5"
+        ]
       },
       "rate_limits": {
         "rpm": 30,
@@ -49,7 +63,11 @@
       "api_key_env": "MOONSHOT_API_KEY",
       "models": {
         "default": "moonshot-v1-8k",
-        "available": ["moonshot-v1-8k", "moonshot-v1-32k", "moonshot-v1-128k"]
+        "available": [
+          "moonshot-v1-8k",
+          "moonshot-v1-32k",
+          "moonshot-v1-128k"
+        ]
       },
       "rate_limits": {
         "rpm": 3,
@@ -76,19 +94,19 @@
         "tier1_quality": {
           "description": "Best quality - reasoning models (VERIFIED WORKING)",
           "models": [
-            "tngtech/deepseek-r1t-chimera:free",
-            "tngtech/deepseek-r1t2-chimera:free",
-            "arcee-ai/trinity-large-preview:free",
-            "deepseek/deepseek-r1-0528:free"
+            "meta-llama/llama-3.3-70b-instruct:free",
+            "nousresearch/hermes-3-llama-3.1-405b:free",
+            "openai/gpt-oss-120b:free",
+            "qwen/qwen3-coder:free"
           ]
         },
         "tier2_balanced": {
           "description": "Good quality and reasonable speed (VERIFIED WORKING)",
           "models": [
-            "nvidia/nemotron-3-nano-30b-a3b:free",
-            "z-ai/glm-4.5-air:free",
-            "upstage/solar-pro-3:free",
-            "google/gemma-3-12b-it:free"
+            "mistralai/mistral-small-3.1-24b-instruct:free",
+            "google/gemma-3-27b-it:free",
+            "stepfun/step-3.5-flash:free",
+            "z-ai/glm-4.5-air:free"
           ]
         },
         "tier3_fast": {
@@ -96,7 +114,7 @@
           "models": [
             "nvidia/nemotron-nano-9b-v2:free",
             "google/gemma-3-4b-it:free",
-            "google/gemma-3n-e4b-it:free",
+            "qwen/qwen3-4b:free",
             "arcee-ai/trinity-mini:free"
           ]
         }
