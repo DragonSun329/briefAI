@@ -78,32 +78,40 @@ class AlternativeDataRunner:
         print(f"{'='*60}")
 
         def _execute():
-            # Handle scrapers with different constructor signatures
-            if name == "huggingface":
-                scraper = scraper_class()
-            elif name == "us_tech_news":
-                scraper = scraper_class(output_dir=self.output_dir)
-                return scraper.run(save=True, days_back=7)
-            else:
-                scraper = scraper_class(output_dir=self.output_dir)
-            return scraper.run(save=True)
+            try:
+                # Handle scrapers with different constructor signatures
+                if name == "huggingface":
+                    scraper = scraper_class()
+                elif name == "us_tech_news":
+                    scraper = scraper_class(output_dir=self.output_dir)
+                    return scraper.run(save=True, days_back=7)
+                else:
+                    scraper = scraper_class(output_dir=self.output_dir)
+                return scraper.run(save=True)
+            except Exception as e:
+                print(f"  SCRAPER INTERNAL ERROR in {name}: {e}")
+                traceback.print_exc()
+                raise e
 
         try:
             result = run_with_timeout(_execute, timeout=SCRAPER_TIMEOUT, name=name)
+            print(f"  SUCCESS: {name} completed")
             return {
                 "status": "success",
                 "source": name,
                 "data": result,
             }
         except TimeoutError as e:
-            print(f"TIMEOUT in {name}: {e}")
+            print(f"  TIMEOUT in {name}: {e}")
+            print(f"  Continuing with next scraper...")
             return {
-                "status": "error",
+                "status": "timeout",
                 "source": name,
                 "error": str(e),
             }
         except Exception as e:
-            print(f"ERROR in {name}: {e}")
+            print(f"  ERROR in {name}: {e}")
+            print(f"  Continuing with next scraper...")
             traceback.print_exc()
             return {
                 "status": "error",

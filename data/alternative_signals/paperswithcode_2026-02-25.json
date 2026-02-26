@@ -1,0 +1,1284 @@
+{
+  "source": "paperswithcode",
+  "scraped_at": "2026-02-25T10:15:21.124062",
+  "total_papers": 50,
+  "papers": [
+    {
+      "id": "2602.20159",
+      "title": "A Very Big Video Reasoning Suite",
+      "abstract": "Rapid progress in video models has largely focused on visual quality, leaving their reasoning capabilities underexplored. Video reasoning grounds intelligence in spatiotemporally consistent visual environments that go beyond what text can naturally capture, enabling intuitive reasoning over spatiotemporal structure such as continuity, interaction, and causality. However, systematically studying video reasoning and its scaling behavior is hindered by the lack of large-scale training data. To addr",
+      "url_abs": "https://arxiv.org/abs/2602.20159",
+      "url_pdf": "https://arxiv.org/pdf/2602.20159",
+      "arxiv_id": "2602.20159",
+      "github_stars": 305,
+      "published": "2026-02-23T18:59:41.000Z",
+      "authors": [
+        "Maijunxian Wang",
+        "Ruisi Wang",
+        "Juyi Lin",
+        "Ran Ji",
+        "Thadd\u00e4us Wiedemer",
+        "Qingying Gao",
+        "Dezhi Luo",
+        "Yaoyao Qian",
+        "Lianyu Huang",
+        "Zelong Hong",
+        "Jiahui Ge",
+        "Qianli Ma",
+        "Hang He",
+        "Yifan Zhou",
+        "Lingzi Guo",
+        "Lantao Mei",
+        "Jiachen Li",
+        "Hanwen Xing",
+        "Tianqi Zhao",
+        "Fengyuan Yu",
+        "Weihang Xiao",
+        "Yizheng Jiao",
+        "Jianheng Hou",
+        "Danyang Zhang",
+        "Pengcheng Xu",
+        "Boyang Zhong",
+        "Zehong Zhao",
+        "Gaoyun Fang",
+        "John Kitaoka",
+        "Yile Xu",
+        "Hua Xu",
+        "Kenton Blacutt",
+        "Tin Nguyen",
+        "Siyuan Song",
+        "Haoran Sun",
+        "Shaoyue Wen",
+        "Linyang He",
+        "Runming Wang",
+        "Yanzhi Wang",
+        "Mengyue Yang",
+        "Ziqiao Ma",
+        "Rapha\u00ebl Milli\u00e8re",
+        "Freda Shi",
+        "Nuno Vasconcelos",
+        "Daniel Khashabi",
+        "Alan Yuille",
+        "Yilun Du",
+        "Ziming Liu",
+        "Bo Li",
+        "Dahua Lin",
+        "Ziwei Liu",
+        "Vikash Kumar",
+        "Yijiang Li",
+        "Lei Yang",
+        "Zhongang Cai",
+        "Hokin Deng"
+      ],
+      "tasks": [],
+      "bucket": "ai-agents"
+    },
+    {
+      "id": "2602.08354",
+      "title": "Does Your Reasoning Model Implicitly Know When to Stop Thinking?",
+      "abstract": "Recent advancements in large reasoning models (LRMs) have greatly improved their capabilities on complex reasoning tasks through Long Chains of Thought (CoTs). However, this approach often results in substantial redundancy, impairing computational efficiency and causing significant delays in real-time applications. Recent studies show that longer reasoning chains are frequently uncorrelated with correctness and can even be detrimental to accuracy. In a further in-depth analysis of this phenomeno",
+      "url_abs": "https://arxiv.org/abs/2602.08354",
+      "url_pdf": "https://arxiv.org/pdf/2602.08354",
+      "arxiv_id": "2602.08354",
+      "github_stars": 170,
+      "published": "2026-02-09T07:38:22.000Z",
+      "authors": [
+        "Zixuan Huang",
+        "Xin Xia",
+        "Yuxi Ren",
+        "Jianbin Zheng",
+        "Xuanda Wang",
+        "Zhixia Zhang",
+        "Hongyan Xie",
+        "Songshi Liang",
+        "Zehao Chen",
+        "Xuefeng Xiao",
+        "Fuzhen Zhuang",
+        "Jianxin Li",
+        "Yikun Ban",
+        "Deqing Wang"
+      ],
+      "tasks": [],
+      "bucket": "ai-research"
+    },
+    {
+      "id": "2602.10693",
+      "title": "VESPO: Variational Sequence-Level Soft Policy Optimization for Stable Off-Policy LLM Training",
+      "abstract": "Training stability remains a central challenge in reinforcement learning (RL) for large language models (LLMs). Policy staleness, asynchronous training, and mismatches between training and inference engines all cause the behavior policy to diverge from the current policy, risking training collapse. Importance sampling provides a principled correction for this distribution shift but suffers from high variance; existing remedies such as token-level clipping and sequence-level normalization lack a ",
+      "url_abs": "https://arxiv.org/abs/2602.10693",
+      "url_pdf": "https://arxiv.org/pdf/2602.10693",
+      "arxiv_id": "2602.10693",
+      "github_stars": 167,
+      "published": "2026-02-11T09:48:08.000Z",
+      "authors": [
+        "Guobin Shen",
+        "Chenxiao Zhao",
+        "Xiang Cheng",
+        "Lei Huang",
+        "Xing Yu"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.18532",
+      "title": "VLANeXt: Recipes for Building Strong VLA Models",
+      "abstract": "Following the rise of large foundation models, Vision-Language-Action models (VLAs) emerged, leveraging strong visual and language understanding for general-purpose policy learning. Yet, the current VLA landscape remains fragmented and exploratory. Although many groups have proposed their own VLA models, inconsistencies in training protocols and evaluation settings make it difficult to identify which design choices truly matter. To bring structure to this evolving space, we reexamine the VLA des",
+      "url_abs": "https://arxiv.org/abs/2602.18532",
+      "url_pdf": "https://arxiv.org/pdf/2602.18532",
+      "arxiv_id": "2602.18532",
+      "github_stars": 39,
+      "published": "2026-02-20T09:26:17.000Z",
+      "authors": [
+        "Xiao-Ming Wu",
+        "Bin Fan",
+        "Kang Liao",
+        "Jian-Jian Jiang",
+        "Runze Yang",
+        "Yihang Luo",
+        "Zhonghua Wu",
+        "Wei-Shi Zheng",
+        "Chen Change Loy"
+      ],
+      "tasks": [],
+      "bucket": "ai-research"
+    },
+    {
+      "id": "2602.19672",
+      "title": "SkillOrchestra: Learning to Route Agents via Skill Transfer",
+      "abstract": "Compound AI systems promise capabilities beyond those of individual models, yet their success depends critically on effective orchestration. Existing routing approaches face two limitations: (1) input-level routers make coarse query-level decisions that ignore evolving task requirements; (2) RL-trained orchestrators are expensive to adapt and often suffer from routing collapse, repeatedly invoking one strong but costly option in multi-turn scenarios. We introduce SkillOrchestra, a framework for ",
+      "url_abs": "https://arxiv.org/abs/2602.19672",
+      "url_pdf": "https://arxiv.org/pdf/2602.19672",
+      "arxiv_id": "2602.19672",
+      "github_stars": 31,
+      "published": "2026-02-23T10:17:25.000Z",
+      "authors": [
+        "Jiayu Wang",
+        "Yifei Ming",
+        "Zixuan Ke",
+        "Shafiq Joty",
+        "Aws Albarghouthi",
+        "Frederic Sala"
+      ],
+      "tasks": [],
+      "bucket": "ai-research"
+    },
+    {
+      "id": "2602.18422",
+      "title": "Generated Reality: Human-centric World Simulation using Interactive Video Generation with Hand and Camera Control",
+      "abstract": "Extended reality (XR) demands generative models that respond to users' tracked real-world motion, yet current video world models accept only coarse control signals such as text or keyboard input, limiting their utility for embodied interaction. We introduce a human-centric video world model that is conditioned on both tracked head pose and joint-level hand poses. For this purpose, we evaluate existing diffusion transformer conditioning strategies and propose an effective mechanism for 3D head an",
+      "url_abs": "https://arxiv.org/abs/2602.18422",
+      "url_pdf": "https://arxiv.org/pdf/2602.18422",
+      "arxiv_id": "2602.18422",
+      "github_stars": 22,
+      "published": "2026-02-20T18:45:29.000Z",
+      "authors": [
+        "Linxi Xie",
+        "Lisong C. Sun",
+        "Ashley Neall",
+        "Tong Wu",
+        "Shengqu Cai",
+        "Gordon Wetzstein"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.20093",
+      "title": "ManCAR: Manifold-Constrained Latent Reasoning with Adaptive Test-Time Computation for Sequential Recommendation",
+      "abstract": "Sequential recommendation increasingly employs latent multi-step reasoning to enhance test-time computation. Despite empirical gains, existing approaches largely drive intermediate reasoning states via target-dominant objectives without imposing explicit feasibility constraints. This results in latent drift, where reasoning trajectories deviate into implausible regions. We argue that effective recommendation reasoning should instead be viewed as navigation on a collaborative manifold rather than",
+      "url_abs": "https://arxiv.org/abs/2602.20093",
+      "url_pdf": "https://arxiv.org/pdf/2602.20093",
+      "arxiv_id": "2602.20093",
+      "github_stars": 21,
+      "published": "2026-02-23T18:02:50.000Z",
+      "authors": [
+        "Kun Yang",
+        "Yuxuan Zhu",
+        "Yazhe Chen",
+        "Siyao Zheng",
+        "Bangyang Hong",
+        "Kangle Wu",
+        "Yabo Ni",
+        "Anxiang Zeng",
+        "Cong Fu",
+        "Hui Li"
+      ],
+      "tasks": [],
+      "bucket": "ai-agents"
+    },
+    {
+      "id": "2602.19313",
+      "title": "TOPReward: Token Probabilities as Hidden Zero-Shot Rewards for Robotics",
+      "abstract": "While Vision-Language-Action (VLA) models have seen rapid progress in pretraining, their advancement in Reinforcement Learning (RL) remains hampered by low sample efficiency and sparse rewards in real-world settings. Developing generalizable process reward models is essential for providing the fine-grained feedback necessary to bridge this gap, yet existing temporal value functions often fail to generalize beyond their training domains. We introduce TOPReward, a novel, probabilistically grounded",
+      "url_abs": "https://arxiv.org/abs/2602.19313",
+      "url_pdf": "https://arxiv.org/pdf/2602.19313",
+      "arxiv_id": "2602.19313",
+      "github_stars": 21,
+      "published": "2026-02-22T19:25:48.000Z",
+      "authors": [
+        "Shirui Chen",
+        "Cole Harrison",
+        "Ying-Chun Lee",
+        "Angela Jin Yang",
+        "Zhongzheng Ren",
+        "Lillian J. Ratliff",
+        "Jiafei Duan",
+        "Dieter Fox",
+        "Ranjay Krishna"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.20161",
+      "title": "Mobile-O: Unified Multimodal Understanding and Generation on Mobile Device",
+      "abstract": "Unified multimodal models can both understand and generate visual content within a single architecture. Existing models, however, remain data-hungry and too heavy for deployment on edge devices. We present Mobile-O, a compact vision-language-diffusion model that brings unified multimodal intelligence to a mobile device. Its core module, the Mobile Conditioning Projector (MCP), fuses vision-language features with a diffusion generator using depthwise-separable convolutions and layerwise alignment",
+      "url_abs": "https://arxiv.org/abs/2602.20161",
+      "url_pdf": "https://arxiv.org/pdf/2602.20161",
+      "arxiv_id": "2602.20161",
+      "github_stars": 18,
+      "published": "2026-02-23T18:59:58.000Z",
+      "authors": [
+        "Abdelrahman Shaker",
+        "Ahmed Heakl",
+        "Jaseel Muhammad",
+        "Ritesh Thawkar",
+        "Omkar Thawakar",
+        "Senmao Li",
+        "Hisham Cholakkal",
+        "Ian Reid",
+        "Eric P. Xing",
+        "Salman Khan",
+        "Fahad Shahbaz Khan"
+      ],
+      "tasks": [],
+      "bucket": "ai-image-generation"
+    },
+    {
+      "id": "2602.20021",
+      "title": "Agents of Chaos",
+      "abstract": "We report an exploratory red-teaming study of autonomous language-model-powered agents deployed in a live laboratory environment with persistent memory, email accounts, Discord access, file systems, and shell execution. Over a two-week period, twenty AI researchers interacted with the agents under benign and adversarial conditions. Focusing on failures emerging from the integration of language models with autonomy, tool use, and multi-party communication, we document eleven representative case s",
+      "url_abs": "https://arxiv.org/abs/2602.20021",
+      "url_pdf": "https://arxiv.org/pdf/2602.20021",
+      "arxiv_id": "2602.20021",
+      "github_stars": 14,
+      "published": "2026-02-23T16:28:48.000Z",
+      "authors": [
+        "Natalie Shapira",
+        "Chris Wendler",
+        "Avery Yen",
+        "Gabriele Sarti",
+        "Koyena Pal",
+        "Olivia Floody",
+        "Adam Belfki",
+        "Alex Loftus",
+        "Aditya Ratan Jannali",
+        "Nikhil Prakash",
+        "Jasmine Cui",
+        "Giordano Rogers",
+        "Jannik Brinkmann",
+        "Can Rager",
+        "Amir Zur",
+        "Michael Ripa",
+        "Aruna Sankaranarayanan",
+        "David Atkinson",
+        "Rohit Gandikota",
+        "Jaden Fiotto-Kaufman",
+        "EunJeong Hwang",
+        "Hadas Orgad",
+        "P Sam Sahil",
+        "Negev Taglicht",
+        "Tomer Shabtay",
+        "Atai Ambus",
+        "Nitay Alon",
+        "Shiri Oron",
+        "Ayelet Gordon-Tapiero",
+        "Yotam Kaplan",
+        "Vered Shwartz",
+        "Tamar Rott Shaham",
+        "Christoph Riedl",
+        "Reuth Mirsky",
+        "Maarten Sap",
+        "David Manheim",
+        "Tomer Ullman",
+        "David Bau"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.16699",
+      "title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents",
+      "abstract": "LLMs are increasingly being used for complex problems which are not necessarily resolved in a single response, but require interacting with an environment to acquire information. In these scenarios, LLMs must reason about inherent cost-uncertainty tradeoffs in when to stop exploring and commit to an answer. For instance, on a programming task, an LLM should test a generated code snippet if it is uncertain about the correctness of that code; the cost of writing a test is nonzero, but typically lo",
+      "url_abs": "https://arxiv.org/abs/2602.16699",
+      "url_pdf": "https://arxiv.org/pdf/2602.16699",
+      "arxiv_id": "2602.16699",
+      "github_stars": 14,
+      "published": "2026-02-18T18:46:14.000Z",
+      "authors": [
+        "Wenxuan Ding",
+        "Nicholas Tomlin",
+        "Greg Durrett"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.18996",
+      "title": "Learning Cross-View Object Correspondence via Cycle-Consistent Mask Prediction",
+      "abstract": "We study the task of establishing object-level visual correspondence across different viewpoints in videos, focusing on the challenging egocentric-to-exocentric and exocentric-to-egocentric scenarios. We propose a simple yet effective framework based on conditional binary segmentation, where an object query mask is encoded into a latent representation to guide the localization of the corresponding object in a target video. To encourage robust, view-invariant representations, we introduce a cycle",
+      "url_abs": "https://arxiv.org/abs/2602.18996",
+      "url_pdf": "https://arxiv.org/pdf/2602.18996",
+      "arxiv_id": "2602.18996",
+      "github_stars": 13,
+      "published": "2026-02-22T00:53:03.000Z",
+      "authors": [
+        "Shannan Yan",
+        "Leqi Zheng",
+        "Keyu Lv",
+        "Jingchen Ni",
+        "Hongyang Wei",
+        "Jiajun Zhang",
+        "Guangting Wang",
+        "Jing Lyu",
+        "Chun Yuan",
+        "Fengyun Rao"
+      ],
+      "tasks": [],
+      "bucket": "computer-vision"
+    },
+    {
+      "id": "2602.16863",
+      "title": "SimToolReal: An Object-Centric Policy for Zero-Shot Dexterous Tool Manipulation",
+      "abstract": "The ability to manipulate tools significantly expands the set of tasks a robot can perform. Yet, tool manipulation represents a challenging class of dexterity, requiring grasping thin objects, in-hand object rotations, and forceful interactions. Since collecting teleoperation data for these behaviors is challenging, sim-to-real reinforcement learning (RL) is a promising alternative. However, prior approaches typically require substantial engineering effort to model objects and tune reward functi",
+      "url_abs": "https://arxiv.org/abs/2602.16863",
+      "url_pdf": "https://arxiv.org/pdf/2602.16863",
+      "arxiv_id": "2602.16863",
+      "github_stars": 11,
+      "published": "2026-02-18T20:42:39.000Z",
+      "authors": [
+        "Kushal Kedia",
+        "Tyler Ga Wei Lum",
+        "Jeannette Bohg",
+        "C. Karen Liu"
+      ],
+      "tasks": [],
+      "bucket": "ai-research"
+    },
+    {
+      "id": "2602.15727",
+      "title": "Spanning the Visual Analogy Space with a Weight Basis of LoRAs",
+      "abstract": "Visual analogy learning enables image manipulation through demonstration rather than textual description, allowing users to specify complex transformations difficult to articulate in words. Given a triplet {a, a', b}, the goal is to generate b' such that a : a' :: b : b'. Recent methods adapt text-to-image models to this task using a single Low-Rank Adaptation (LoRA) module, but they face a fundamental limitation: attempting to capture the diverse space of visual transformations within a fixed a",
+      "url_abs": "https://arxiv.org/abs/2602.15727",
+      "url_pdf": "https://arxiv.org/pdf/2602.15727",
+      "arxiv_id": "2602.15727",
+      "github_stars": 11,
+      "published": "2026-02-17T17:02:38.000Z",
+      "authors": [
+        "Hila Manor",
+        "Rinon Gal",
+        "Haggai Maron",
+        "Tomer Michaeli",
+        "Gal Chechik"
+      ],
+      "tasks": [],
+      "bucket": "ai-image-generation"
+    },
+    {
+      "id": "2602.19895",
+      "title": "DSDR: Dual-Scale Diversity Regularization for Exploration in LLM Reasoning",
+      "abstract": "Reinforcement learning with verifiers (RLVR) is a central paradigm for improving large language model (LLM) reasoning, yet existing methods often suffer from limited exploration. Policies tend to collapse onto a few reasoning patterns and prematurely stop deep exploration, while conventional entropy regularization introduces only local stochasticity and fails to induce meaningful path-level diversity, leading to weak and unstable learning signals in group-based policy optimization. We propose DS",
+      "url_abs": "https://arxiv.org/abs/2602.19895",
+      "url_pdf": "https://arxiv.org/pdf/2602.19895",
+      "arxiv_id": "2602.19895",
+      "github_stars": 10,
+      "published": "2026-02-23T14:37:01.000Z",
+      "authors": [
+        "Zhongwei Wan",
+        "Yun Shen",
+        "Zhihao Dou",
+        "Donghao Zhou",
+        "Yu Zhang",
+        "Xin Wang",
+        "Hui Shen",
+        "Jing Xiong",
+        "Chaofan Tao",
+        "Zixuan Zhong",
+        "Peizhou Huang",
+        "Mi Zhang"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.18292",
+      "title": "Decoding as Optimisation on the Probability Simplex: From Top-K to Top-P (Nucleus) to Best-of-K Samplers",
+      "abstract": "Decoding sits between a language model and everything we do with it, yet it is still treated as a heuristic knob-tuning exercise. We argue decoding should be understood as a principled optimisation layer: at each token, we solve a regularised problem over the probability simplex that trades off model score against structural preferences and constraints. This single template recovers greedy decoding, Softmax sampling, Top-K, Top-P, and Sparsemax-style sparsity as special cases, and explains their",
+      "url_abs": "https://arxiv.org/abs/2602.18292",
+      "url_pdf": "https://arxiv.org/pdf/2602.18292",
+      "arxiv_id": "2602.18292",
+      "github_stars": 10,
+      "published": "2026-02-20T15:38:16.000Z",
+      "authors": [
+        "Xiaotong Ji",
+        "Rasul Tutunov",
+        "Matthieu Zimmer",
+        "Haitham Bou-Ammar"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.16872",
+      "title": "DODO: Discrete OCR Diffusion Models",
+      "abstract": "Optical Character Recognition (OCR) is a fundamental task for digitizing information, serving as a critical bridge between visual data and textual understanding. While modern Vision-Language Models (VLM) have achieved high accuracy in this domain, they predominantly rely on autoregressive decoding, which becomes computationally expensive and slow for long documents as it requires a sequential forward pass for every generated token. We identify a key opportunity to overcome this bottleneck: unlik",
+      "url_abs": "https://arxiv.org/abs/2602.16872",
+      "url_pdf": "https://arxiv.org/pdf/2602.16872",
+      "arxiv_id": "2602.16872",
+      "github_stars": 7,
+      "published": "2026-02-18T20:59:22.000Z",
+      "authors": [
+        "Sean Man",
+        "Roy Ganz",
+        "Roi Ronen",
+        "Shahar Tsiper",
+        "Shai Mazor",
+        "Niv Nayman"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.18742",
+      "title": "RoboCurate: Harnessing Diversity with Action-Verified Neural Trajectory for Robot Learning",
+      "abstract": "Synthetic data generated by video generative models has shown promise for robot learning as a scalable pipeline, but it often suffers from inconsistent action quality due to imperfectly generated videos. Recently, vision-language models (VLMs) have been leveraged to validate video quality, but they have limitations in distinguishing physically accurate videos and, even then, cannot directly evaluate the generated actions themselves. To tackle this issue, we introduce RoboCurate, a novel syntheti",
+      "url_abs": "https://arxiv.org/abs/2602.18742",
+      "url_pdf": "https://arxiv.org/pdf/2602.18742",
+      "arxiv_id": "2602.18742",
+      "github_stars": 7,
+      "published": "2026-02-21T07:33:24.000Z",
+      "authors": [
+        "Seungku Kim",
+        "Suhyeok Jang",
+        "Byungjun Yoon",
+        "Dongyoung Kim",
+        "John Won",
+        "Jinwoo Shin"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.18071",
+      "title": "EgoPush: Learning End-to-End Egocentric Multi-Object Rearrangement for Mobile Robots",
+      "abstract": "Humans can rearrange objects in cluttered environments using egocentric perception, navigating occlusions without global coordinates. Inspired by this capability, we study long-horizon multi-object non-prehensile rearrangement for mobile robots using a single egocentric camera. We introduce EgoPush, a policy learning framework that enables egocentric, perception-driven rearrangement without relying on explicit global state estimation that often fails in dynamic scenes. EgoPush designs an object-",
+      "url_abs": "https://arxiv.org/abs/2602.18071",
+      "url_pdf": "https://arxiv.org/pdf/2602.18071",
+      "arxiv_id": "2602.18071",
+      "github_stars": 6,
+      "published": "2026-02-20T08:54:20.000Z",
+      "authors": [
+        "Boyuan An",
+        "Zhexiong Wang",
+        "Yipeng Wang",
+        "Jiaqi Li",
+        "Sihang Li",
+        "Jing Zhang",
+        "Chen Feng"
+      ],
+      "tasks": [],
+      "bucket": "ai-research"
+    },
+    {
+      "id": "2602.16849",
+      "title": "On the Mechanism and Dynamics of Modular Addition: Fourier Features, Lottery Ticket, and Grokking",
+      "abstract": "We present a comprehensive analysis of how two-layer neural networks learn features to solve the modular addition task. Our work provides a full mechanistic interpretation of the learned model and a theoretical explanation of its training dynamics. While prior work has identified that individual neurons learn single-frequency Fourier features and phase alignment, it does not fully explain how these features combine into a global solution. We bridge this gap by formalizing a diversification condi",
+      "url_abs": "https://arxiv.org/abs/2602.16849",
+      "url_pdf": "https://arxiv.org/pdf/2602.16849",
+      "arxiv_id": "2602.16849",
+      "github_stars": 6,
+      "published": "2026-02-18T20:25:13.000Z",
+      "authors": [
+        "Jianliang He",
+        "Leda Wang",
+        "Siyu Chen",
+        "Zhuoran Yang"
+      ],
+      "tasks": [],
+      "bucket": "ai-general"
+    },
+    {
+      "id": "2602.19320",
+      "title": "Anatomy of Agentic Memory: Taxonomy and Empirical Analysis of Evaluation and System Limitations",
+      "abstract": "Agentic memory systems enable large language model (LLM) agents to maintain state across long interactions, supporting long-horizon reasoning and personalization beyond fixed context windows. Despite rapid architectural development, the empirical foundations of these systems remain fragile: existing benchmarks are often underscaled, evaluation metrics are misaligned with semantic utility, performance varies significantly across backbone models, and system-level costs are frequently overlooked. T",
+      "url_abs": "https://arxiv.org/abs/2602.19320",
+      "url_pdf": "https://arxiv.org/pdf/2602.19320",
+      "arxiv_id": "2602.19320",
+      "github_stars": 5,
+      "published": "2026-02-22T19:50:01.000Z",
+      "authors": [
+        "Dongming Jiang",
+        "Yi Li",
+        "Songtao Wei",
+        "Jinxin Yang",
+        "Ayushi Kishore",
+        "Alysa Zhao",
+        "Dingyi Kang",
+        "Xu Hu",
+        "Feng Chen",
+        "Qiannan Li",
+        "Bingzhe Li"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.17807",
+      "title": "VidEoMT: Your ViT is Secretly Also a Video Segmentation Model",
+      "abstract": "Existing online video segmentation models typically combine a per-frame segmenter with complex specialized tracking modules. While effective, these modules introduce significant architectural complexity and computational overhead. Recent studies suggest that plain Vision Transformer (ViT) encoders, when scaled with sufficient capacity and large-scale pre-training, can conduct accurate image segmentation without requiring specialized modules. Motivated by this observation, we propose the Video En",
+      "url_abs": "https://arxiv.org/abs/2602.17807",
+      "url_pdf": "https://arxiv.org/pdf/2602.17807",
+      "arxiv_id": "2602.17807",
+      "github_stars": 5,
+      "published": "2026-02-19T20:14:14.000Z",
+      "authors": [
+        "Narges Norouzi",
+        "Idil Esen Zulfikar",
+        "Niccol`o Cavagnero",
+        "Tommie Kerssies",
+        "Bastian Leibe",
+        "Gijs Dubbelman",
+        "Daan de Geus"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.18432",
+      "title": "SARAH: Spatially Aware Real-time Agentic Humans",
+      "abstract": "As embodied agents become central to VR, telepresence, and digital human applications, their motion must go beyond speech-aligned gestures: agents should turn toward users, respond to their movement, and maintain natural gaze. Current methods lack this spatial awareness. We close this gap with the first real-time, fully causal method for spatially-aware conversational motion, deployable on a streaming VR headset. Given a user's position and dyadic audio, our approach produces full-body motion th",
+      "url_abs": "https://arxiv.org/abs/2602.18432",
+      "url_pdf": "https://arxiv.org/pdf/2602.18432",
+      "arxiv_id": "2602.18432",
+      "github_stars": 5,
+      "published": "2026-02-20T18:59:35.000Z",
+      "authors": [
+        "Evonne Ng",
+        "Siwei Zhang",
+        "Zhang Chen",
+        "Michael Zollhoefer",
+        "Alexander Richard"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.19128",
+      "title": "K-Search: LLM Kernel Generation via Co-Evolving Intrinsic World Model",
+      "abstract": "Optimizing GPU kernels is critical for efficient modern machine learning systems yet remains challenging due to the complex interplay of design factors and rapid hardware evolution. Existing automated approaches typically treat Large Language Models (LLMs) merely as stochastic code generators within heuristic-guided evolutionary loops. These methods often struggle with complex kernels requiring coordinated, multi-step structural transformations, as they lack explicit planning capabilities and fr",
+      "url_abs": "https://arxiv.org/abs/2602.19128",
+      "url_pdf": "https://arxiv.org/pdf/2602.19128",
+      "arxiv_id": "2602.19128",
+      "github_stars": 4,
+      "published": "2026-02-22T11:06:22.000Z",
+      "authors": [
+        "Shiyi Cao",
+        "Ziming Mao",
+        "Joseph E. Gonzalez",
+        "Ion Stoica"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.17664",
+      "title": "Sink-Aware Pruning for Diffusion Language Models",
+      "abstract": "Diffusion Language Models (DLMs) incur high inference cost due to iterative denoising, motivating efficient pruning. Existing pruning heuristics largely inherited from autoregressive (AR) LLMs, typically preserve attention sink tokens because AR sinks serve as stable global anchors. We show that this assumption does not hold for DLMs: the attention-sink position exhibits substantially higher variance over the full generation trajectory (measured by how the dominant sink locations shift across ti",
+      "url_abs": "https://arxiv.org/abs/2602.17664",
+      "url_pdf": "https://arxiv.org/pdf/2602.17664",
+      "arxiv_id": "2602.17664",
+      "github_stars": 3,
+      "published": "2026-02-19T18:59:50.000Z",
+      "authors": [
+        "Aidar Myrzakhan",
+        "Tianyi Li",
+        "Bowei Guo",
+        "Shengkun Tang",
+        "Zhiqiang Shen"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.16742",
+      "title": "DeepVision-103K: A Visually Diverse, Broad-Coverage, and Verifiable Mathematical Dataset for Multimodal Reasoning",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has been shown effective in enhancing the visual reflection and reasoning capabilities of Large Multimodal Models (LMMs). However, existing datasets are predominantly derived from either small-scale manual construction or recombination of prior resources, which limits data diversity and coverage, thereby constraining further gains in model performance. To this end, we introduce DeepVision-103K, a comprehensive dataset for RLVR training that c",
+      "url_abs": "https://arxiv.org/abs/2602.16742",
+      "url_pdf": "https://arxiv.org/pdf/2602.16742",
+      "arxiv_id": "2602.16742",
+      "github_stars": 3,
+      "published": "2026-02-18T01:51:21.000Z",
+      "authors": [
+        "Haoxiang Sun",
+        "Lizhen Xu",
+        "Bing Zhao",
+        "Wotao Yin",
+        "Wei Wang",
+        "Boyu Yang",
+        "Rui Wang",
+        "Hu Wei"
+      ],
+      "tasks": [],
+      "bucket": "ai-research"
+    },
+    {
+      "id": "2602.17588",
+      "title": "Modeling Distinct Human Interaction in Web Agents",
+      "abstract": "Despite rapid progress in autonomous web agents, human involvement remains essential for shaping preferences and correcting agent behavior as tasks unfold. However, current agentic systems lack a principled understanding of when and why humans intervene, often proceeding autonomously past critical decision points or requesting unnecessary confirmation. In this work, we introduce the task of modeling human intervention to support collaborative web task execution. We collect CowCorpus, a dataset o",
+      "url_abs": "https://arxiv.org/abs/2602.17588",
+      "url_pdf": "https://arxiv.org/pdf/2602.17588",
+      "arxiv_id": "2602.17588",
+      "github_stars": 3,
+      "published": "2026-02-19T18:11:28.000Z",
+      "authors": [
+        "Faria Huq",
+        "Zora Zhiruo Wang",
+        "Zhanqiu Guo",
+        "Venu Arvind Arangarajan",
+        "Tianyue Ou",
+        "Frank Xu",
+        "Shuyan Zhou",
+        "Graham Neubig",
+        "Jeffrey P. Bigham"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.15823",
+      "title": "CrispEdit: Low-Curvature Projections for Scalable Non-Destructive LLM Editing",
+      "abstract": "A central challenge in large language model (LLM) editing is capability preservation: methods that successfully change targeted behavior can quietly game the editing proxy and corrupt general capabilities, producing degenerate behaviors reminiscent of proxy/reward hacking. We present CrispEdit, a scalable and principled second-order editing algorithm that treats capability preservation as an explicit constraint, unifying and generalizing several existing editing approaches. CrispEdit formulates ",
+      "url_abs": "https://arxiv.org/abs/2602.15823",
+      "url_pdf": "https://arxiv.org/pdf/2602.15823",
+      "arxiv_id": "2602.15823",
+      "github_stars": 3,
+      "published": "2026-02-17T18:58:04.000Z",
+      "authors": [
+        "Zarif Ikram",
+        "Arad Firouzkouhi",
+        "Stephen Tu",
+        "Mahdi Soltanolkotabi",
+        "Paria Rashidinejad"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.16756",
+      "title": "NESSiE: The Necessary Safety Benchmark -- Identifying Errors that should not Exist",
+      "abstract": "We introduce NESSiE, the NEceSsary SafEty benchmark for large language models (LLMs). With minimal test cases of information and access security, NESSiE reveals safety-relevant failures that should not exist, given the low complexity of the tasks. NESSiE is intended as a lightweight, easy-to-use sanity check for language model safety and, as such, is not sufficient for guaranteeing safety in general -- but we argue that passing this test is necessary for any deployment. However, even state-of-th",
+      "url_abs": "https://arxiv.org/abs/2602.16756",
+      "url_pdf": "https://arxiv.org/pdf/2602.16756",
+      "arxiv_id": "2602.16756",
+      "github_stars": 3,
+      "published": "2026-02-18T09:41:51.000Z",
+      "authors": [
+        "Johannes Bertram",
+        "Jonas Geiping"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.19626",
+      "title": "Nacrith: Neural Lossless Compression via Ensemble Context Modeling and High-Precision CDF Coding",
+      "abstract": "We present Nacrith, a lossless compression system that combines a 135M-parameter transformer language model (SmolLM2-135M) with an ensemble of lightweight online predictors and a 32-bit arithmetic coder. Beyond the base LLM-plus-arithmetic-coding paradigm, Nacrith introduces several contributions: (1) a CDF precision upgrade from 2^16 to 2^24 that eliminates ~75% of quantization overhead caused by minimum-probability floors in large vocabularies; (2) a token-level N-gram model for fast local pre",
+      "url_abs": "https://arxiv.org/abs/2602.19626",
+      "url_pdf": "https://arxiv.org/pdf/2602.19626",
+      "arxiv_id": "2602.19626",
+      "github_stars": 2,
+      "published": "2026-02-23T09:14:05.000Z",
+      "authors": [
+        "Roberto Tacconelli"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.18224",
+      "title": "SimVLA: A Simple VLA Baseline for Robotic Manipulation",
+      "abstract": "Vision-Language-Action (VLA) models have emerged as a promising paradigm for general-purpose robotic manipulation, leveraging large-scale pre-training to achieve strong performance. The field has rapidly evolved with additional spatial priors and diverse architectural innovations. However, these advancements are often accompanied by varying training recipes and implementation details, which can make it challenging to disentangle the precise source of empirical gains. In this work, we introduce S",
+      "url_abs": "https://arxiv.org/abs/2602.18224",
+      "url_pdf": "https://arxiv.org/pdf/2602.18224",
+      "arxiv_id": "2602.18224",
+      "github_stars": 2,
+      "published": "2026-02-20T14:04:27.000Z",
+      "authors": [
+        "Yuankai Luo",
+        "Woping Chen",
+        "Tong Liang",
+        "Baiqiao Wang",
+        "Zhenguo Li"
+      ],
+      "tasks": [],
+      "bucket": "ai-general"
+    },
+    {
+      "id": "2602.13576",
+      "title": "Rubrics as an Attack Surface: Stealthy Preference Drift in LLM Judges",
+      "abstract": "Evaluation and alignment pipelines for large language models increasingly rely on LLM-based judges, whose behavior is guided by natural-language rubrics and validated on benchmarks. We identify a previously under-recognized vulnerability in this workflow, which we term Rubric-Induced Preference Drift (RIPD). Even when rubric edits pass benchmark validation, they can still produce systematic and directional shifts in a judge's preferences on target domains. Because rubrics serve as a high-level d",
+      "url_abs": "https://arxiv.org/abs/2602.13576",
+      "url_pdf": "https://arxiv.org/pdf/2602.13576",
+      "arxiv_id": "2602.13576",
+      "github_stars": 2,
+      "published": "2026-02-14T03:19:14.000Z",
+      "authors": [
+        "Ruomeng Ding",
+        "Yifei Pang",
+        "He Sun",
+        "Yizhong Wang",
+        "Zhiwei Steven Wu",
+        "Zhun Deng"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.15814",
+      "title": "Avey-B",
+      "abstract": "Compact pretrained bidirectional encoders remain the backbone of industrial NLP under tight compute and memory budgets. Their effectiveness stems from self-attention's ability to deliver high-quality bidirectional contextualization with sequence-level parallelism, as popularized by BERT-style architectures. Recently, Avey was introduced as an autoregressive, attention-free alternative that naturally admits an encoder-only adaptation. In this paper, we reformulate Avey for the encoder-only paradi",
+      "url_abs": "https://arxiv.org/abs/2602.15814",
+      "url_pdf": "https://arxiv.org/pdf/2602.15814",
+      "arxiv_id": "2602.15814",
+      "github_stars": 2,
+      "published": "2026-02-17T18:50:40.000Z",
+      "authors": [
+        "Devang Acharya",
+        "Mohammad Hammoud"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.17186",
+      "title": "Selective Training for Large Vision Language Models via Visual Information Gain",
+      "abstract": "Large Vision Language Models (LVLMs) have achieved remarkable progress, yet they often suffer from language bias, producing answers without relying on visual evidence. While prior work attempts to mitigate this issue through decoding strategies, architectural modifications, or curated instruction data, they typically lack a quantitative measure of how much individual training samples or tokens actually benefit from the image. In this work, we introduce Visual Information Gain (VIG), a perplexity",
+      "url_abs": "https://arxiv.org/abs/2602.17186",
+      "url_pdf": "https://arxiv.org/pdf/2602.17186",
+      "arxiv_id": "2602.17186",
+      "github_stars": 2,
+      "published": "2026-02-19T09:12:21.000Z",
+      "authors": [
+        "Seulbi Lee",
+        "Sangheum Hwang"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.10377",
+      "title": "Hardware Co-Design Scaling Laws via Roofline Modelling for On-Device LLMs",
+      "abstract": "Vision-Language-Action Models (VLAs) have emerged as a key paradigm of Physical AI and are increasingly deployed in autonomous vehicles, robots, and smart spaces. In these resource-constrained on-device settings, selecting an appropriate large language model (LLM) backbone is a critical challenge: models must balance accuracy with strict inference latency and hardware efficiency constraints. This makes hardware-software co-design a game-changing requirement for on-device LLM deployment, where ea",
+      "url_abs": "https://arxiv.org/abs/2602.10377",
+      "url_pdf": "https://arxiv.org/pdf/2602.10377",
+      "arxiv_id": "2602.10377",
+      "github_stars": 2,
+      "published": "2026-02-10T23:51:00.000Z",
+      "authors": [
+        "Luoyang Sun",
+        "Jiwen Jiang",
+        "Yifeng Ding",
+        "Fengfa Li",
+        "Yan Song",
+        "Haifeng Zhang",
+        "Jian Ying",
+        "Lei Ren",
+        "Kun Zhan",
+        "Wei Chen",
+        "Yan Xie",
+        "Cheng Deng"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.18640",
+      "title": "Decoding ML Decision: An Agentic Reasoning Framework for Large-Scale Ranking System",
+      "abstract": "Modern large-scale ranking systems operate within a sophisticated landscape of competing objectives, operational constraints, and evolving product requirements. Progress in this domain is increasingly bottlenecked by the engineering context constraint: the arduous process of translating ambiguous product intent into reasonable, executable, verifiable hypotheses, rather than by modeling techniques alone. We present GEARS (Generative Engine for Agentic Ranking Systems), a framework that reframes r",
+      "url_abs": "https://arxiv.org/abs/2602.18640",
+      "url_pdf": "https://arxiv.org/pdf/2602.18640",
+      "arxiv_id": "2602.18640",
+      "github_stars": 1,
+      "published": "2026-02-20T22:24:01.000Z",
+      "authors": [
+        "Longfei Yun",
+        "Yihan Wu",
+        "Haoran Liu",
+        "Xiaoxuan Liu",
+        "Ziyun Xu",
+        "Yi Wang",
+        "Yang Xia",
+        "Pengfei Wang",
+        "Mingze Gao",
+        "Yunxiang Wang",
+        "Changfan Chen",
+        "Junfeng Pan"
+      ],
+      "tasks": [],
+      "bucket": "ai-agents"
+    },
+    {
+      "id": "2602.17393",
+      "title": "Contact-Anchored Proprioceptive Odometry for Quadruped Robots",
+      "abstract": "Reliable odometry for legged robots without cameras or LiDAR remains challenging due to IMU drift and noisy joint velocity sensing. This paper presents a purely proprioceptive state estimator that uses only IMU and motor measurements to jointly estimate body pose and velocity, with a unified formulation applicable to biped, quadruped, and wheel-legged robots. The key idea is to treat each contacting leg as a kinematic anchor: joint-torque--based foot wrench estimation selects reliable contacts, ",
+      "url_abs": "https://arxiv.org/abs/2602.17393",
+      "url_pdf": "https://arxiv.org/pdf/2602.17393",
+      "arxiv_id": "2602.17393",
+      "github_stars": 1,
+      "published": "2026-02-19T14:18:26.000Z",
+      "authors": [
+        "Minxing Sun",
+        "Yao Mao"
+      ],
+      "tasks": [],
+      "bucket": "ai-coding"
+    },
+    {
+      "id": "2602.12100",
+      "title": "AssetFormer: Modular 3D Assets Generation with Autoregressive Transformer",
+      "abstract": "The digital industry demands high-quality, diverse modular 3D assets, especially for user-generated content~(UGC). In this work, we introduce AssetFormer, an autoregressive Transformer-based model designed to generate modular 3D assets from textual descriptions. Our pilot study leverages real-world modular assets collected from online platforms. AssetFormer tackles the challenge of creating assets composed of primitives that adhere to constrained design parameters for various applications. By in",
+      "url_abs": "https://arxiv.org/abs/2602.12100",
+      "url_pdf": "https://arxiv.org/pdf/2602.12100",
+      "arxiv_id": "2602.12100",
+      "github_stars": 1,
+      "published": "2026-02-12T15:55:21.000Z",
+      "authors": [
+        "Lingting Zhu",
+        "Shengju Qian",
+        "Haidi Fan",
+        "Jiayu Dong",
+        "Zhenchao Jin",
+        "Siwei Zhou",
+        "Gen Dong",
+        "Xin Wang",
+        "Lequan Yu"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.18915",
+      "title": "AAVGen: Precision Engineering of Adeno-associated Viral Capsids for Renal Selective Targeting",
+      "abstract": "Adeno-associated viruses (AAVs) are promising vectors for gene therapy, but their native serotypes face limitations in tissue tropism, immune evasion, and production efficiency. Engineering capsids to overcome these hurdles is challenging due to the vast sequence space and the difficulty of simultaneously optimizing multiple functional properties. The complexity also adds when it comes to the kidney, which presents unique anatomical barriers and cellular targets that require precise and efficien",
+      "url_abs": "https://arxiv.org/abs/2602.18915",
+      "url_pdf": "https://arxiv.org/pdf/2602.18915",
+      "arxiv_id": "2602.18915",
+      "github_stars": 1,
+      "published": "2026-02-21T17:46:34.000Z",
+      "authors": [
+        "Mohammadreza Ghaffarzadeh-Esfahani",
+        "Yousof Gheisari"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.20160",
+      "title": "tttLRM: Test-Time Training for Long Context and Autoregressive 3D Reconstruction",
+      "abstract": "We propose tttLRM, a novel large 3D reconstruction model that leverages a Test-Time Training (TTT) layer to enable long-context, autoregressive 3D reconstruction with linear computational complexity, further scaling the model's capability. Our framework efficiently compresses multiple image observations into the fast weights of the TTT layer, forming an implicit 3D representation in the latent space that can be decoded into various explicit formats, such as Gaussian Splats (GS) for downstream ap",
+      "url_abs": "https://arxiv.org/abs/2602.20160",
+      "url_pdf": "https://arxiv.org/pdf/2602.20160",
+      "arxiv_id": "2602.20160",
+      "github_stars": 1,
+      "published": "2026-02-23T18:59:45.000Z",
+      "authors": [
+        "Chen Wang",
+        "Hao Tan",
+        "Wang Yifan",
+        "Zhiqin Chen",
+        "Yuheng Liu",
+        "Kalyan Sunkavalli",
+        "Sai Bi",
+        "Lingjie Liu",
+        "Yiwei Hu"
+      ],
+      "tasks": [],
+      "bucket": "ai-coding"
+    },
+    {
+      "id": "2602.14279",
+      "title": "Whom to Query for What: Adaptive Group Elicitation via Multi-Turn LLM Interactions",
+      "abstract": "Eliciting information to reduce uncertainty about latent group-level properties from surveys and other collective assessments requires allocating limited questioning effort under real costs and missing data. Although large language models enable adaptive, multi-turn interactions in natural language, most existing elicitation methods optimize what to ask with a fixed respondent pool, and do not adapt respondent selection or leverage population structure when responses are partial or incomplete. T",
+      "url_abs": "https://arxiv.org/abs/2602.14279",
+      "url_pdf": "https://arxiv.org/pdf/2602.14279",
+      "arxiv_id": "2602.14279",
+      "github_stars": 1,
+      "published": "2026-02-15T19:05:34.000Z",
+      "authors": [
+        "Ruomeng Ding",
+        "Tianwei Gao",
+        "Thomas P. Zollo",
+        "Eitan Bachmat",
+        "Richard Zemel",
+        "Zhun Deng"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.17022",
+      "title": "ReIn: Conversational Error Recovery with Reasoning Inception",
+      "abstract": "Conversational agents powered by large language models (LLMs) with tool integration achieve strong performance on fixed task-oriented dialogue datasets but remain vulnerable to unanticipated, user-induced errors. Rather than focusing on error prevention, this work focuses on error recovery, which necessitates the accurate diagnosis of erroneous dialogue contexts and execution of proper recovery plans. Under realistic constraints precluding model fine-tuning or prompt modification due to signific",
+      "url_abs": "https://arxiv.org/abs/2602.17022",
+      "url_pdf": "https://arxiv.org/pdf/2602.17022",
+      "arxiv_id": "2602.17022",
+      "github_stars": 1,
+      "published": "2026-02-19T02:37:29.000Z",
+      "authors": [
+        "Takyoung Kim",
+        "Jinseok Nam",
+        "Chandrayee Basu",
+        "Xing Fan",
+        "Chengyuan Ma",
+        "Heng Ji",
+        "Gokhan Tur",
+        "Dilek Hakkani-T\u00fcr"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.17080",
+      "title": "Adam Improves Muon: Adaptive Moment Estimation with Orthogonalized Momentum",
+      "abstract": "Efficient stochastic optimization typically integrates an update direction that performs well in the deterministic regime with a mechanism adapting to stochastic perturbations. While Adam uses adaptive moment estimates to promote stability, Muon utilizes the weight layers' matrix structure via orthogonalized momentum, showing superior performance in large language model training. We propose a new optimizer and a diagonal extension, NAMO and NAMO-D, providing the first principled integration of o",
+      "url_abs": "https://arxiv.org/abs/2602.17080",
+      "url_pdf": "https://arxiv.org/pdf/2602.17080",
+      "arxiv_id": "2602.17080",
+      "github_stars": 1,
+      "published": "2026-02-19T05:00:39.000Z",
+      "authors": [
+        "Minxin Zhang",
+        "Yuxuan Liu",
+        "Hayden Scheaffer"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.10094",
+      "title": "4RC: 4D Reconstruction via Conditional Querying Anytime and Anywhere",
+      "abstract": "We present 4RC, a unified feed-forward framework for 4D reconstruction from monocular videos. Unlike existing approaches that typically decouple motion from geometry or produce limited 4D attributes such as sparse trajectories or two-view scene flow, 4RC learns a holistic 4D representation that jointly captures dense scene geometry and motion dynamics. At its core, 4RC introduces a novel encode-once, query-anywhere and anytime paradigm: a transformer backbone encodes the entire video into a comp",
+      "url_abs": "https://arxiv.org/abs/2602.10094",
+      "url_pdf": "https://arxiv.org/pdf/2602.10094",
+      "arxiv_id": "2602.10094",
+      "github_stars": 1,
+      "published": "2026-02-10T18:57:04.000Z",
+      "authors": [
+        "Yihang Luo",
+        "Shangchen Zhou",
+        "Yushi Lan",
+        "Xingang Pan",
+        "Chen Change Loy"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.18312",
+      "title": "Learning Smooth Time-Varying Linear Policies with an Action Jacobian Penalty",
+      "abstract": "Reinforcement learning provides a framework for learning control policies that can reproduce diverse motions for simulated characters. However, such policies often exploit unnatural high-frequency signals that are unachievable by humans or physical robots, making them poor representations of real-world behaviors. Existing work addresses this issue by adding a reward term that penalizes a large change in actions over time. This term often requires substantial tuning efforts. We propose to use the",
+      "url_abs": "https://arxiv.org/abs/2602.18312",
+      "url_pdf": "https://arxiv.org/pdf/2602.18312",
+      "arxiv_id": "2602.18312",
+      "github_stars": 1,
+      "published": "2026-02-20T16:11:19.000Z",
+      "authors": [
+        "Zhaoming Xie",
+        "Kevin Karol",
+        "Jessica Hodgins"
+      ],
+      "tasks": [],
+      "bucket": "ai-research"
+    },
+    {
+      "id": "2602.16835",
+      "title": "NeST: Neuron Selective Tuning for LLM Safety",
+      "abstract": "Safety alignment is essential for the responsible deployment of large language models (LLMs). Yet, existing approaches often rely on heavyweight fine-tuning that is costly to update, audit, and maintain across model families. Full fine-tuning incurs substantial computational and storage overhead, while parameter-efficient methods such as LoRA trade efficiency for inconsistent safety gains and sensitivity to design choices. Safety intervention mechanisms such as circuit breakers reduce unsafe out",
+      "url_abs": "https://arxiv.org/abs/2602.16835",
+      "url_pdf": "https://arxiv.org/pdf/2602.16835",
+      "arxiv_id": "2602.16835",
+      "github_stars": 1,
+      "published": "2026-02-18T20:01:01.000Z",
+      "authors": [
+        "Sasha Behrouzi",
+        "Lichao Wu",
+        "Mohamadreza Rostami",
+        "Ahmad-Reza Sadeghi"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.19089",
+      "title": "Ani3DHuman: Photorealistic 3D Human Animation with Self-guided Stochastic Sampling",
+      "abstract": "Current 3D human animation methods struggle to achieve photorealism: kinematics-based approaches lack non-rigid dynamics (e.g., clothing dynamics), while methods that leverage video diffusion priors can synthesize non-rigid motion but suffer from quality artifacts and identity loss. To overcome these limitations, we present Ani3DHuman, a framework that marries kinematics-based animation with video diffusion priors. We first introduce a layered motion representation that disentangles rigid motion",
+      "url_abs": "https://arxiv.org/abs/2602.19089",
+      "url_pdf": "https://arxiv.org/pdf/2602.19089",
+      "arxiv_id": "2602.19089",
+      "github_stars": 0,
+      "published": "2026-02-22T08:07:28.000Z",
+      "authors": [
+        "Qi Sun",
+        "Can Wang",
+        "Jiaxiang Shang",
+        "Yingchun Liu",
+        "Jing Liao"
+      ],
+      "tasks": [],
+      "bucket": "ai-image-generation"
+    },
+    {
+      "id": "2602.18333",
+      "title": "On the \"Induction Bias\" in Sequence Models",
+      "abstract": "Despite the remarkable practical success of transformer-based language models, recent work has raised concerns about their ability to perform state tracking. In particular, a growing body of literature has shown this limitation primarily through failures in out-of-distribution (OOD) generalization, such as length extrapolation. In this work, we shift attention to the in-distribution implications of these limitations. We conduct a large-scale experimental study of the data efficiency of transform",
+      "url_abs": "https://arxiv.org/abs/2602.18333",
+      "url_pdf": "https://arxiv.org/pdf/2602.18333",
+      "arxiv_id": "2602.18333",
+      "github_stars": 0,
+      "published": "2026-02-20T16:39:07.000Z",
+      "authors": [
+        "M. Reza Ebrahimi",
+        "Micha\u00ebl Defferrard",
+        "Sunny Panchal",
+        "Roland Memisevic"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.18662",
+      "title": "Large Causal Models for Temporal Causal Discovery",
+      "abstract": "Causal discovery for both cross-sectional and temporal data has traditionally followed a dataset-specific paradigm, where a new model is fitted for each individual dataset. Such an approach limits the potential of multi-dataset pretraining. The concept of large causal models (LCMs) envisions a class of pre-trained neural architectures specifically designed for temporal causal discovery. Prior approaches are constrained to small variable counts, degrade with larger inputs, and rely heavily on syn",
+      "url_abs": "https://arxiv.org/abs/2602.18662",
+      "url_pdf": "https://arxiv.org/pdf/2602.18662",
+      "arxiv_id": "2602.18662",
+      "github_stars": 0,
+      "published": "2026-02-20T23:47:55.000Z",
+      "authors": [
+        "Nikolaos Kougioulis",
+        "Nikolaos Gkorgkolis",
+        "MingXue Wang",
+        "Bora Caglayan",
+        "Dario Simionato",
+        "Andrea Tonon",
+        "Ioannis Tsamardinos"
+      ],
+      "tasks": [],
+      "bucket": "ai-general"
+    },
+    {
+      "id": "2602.19455",
+      "title": "SenTSR-Bench: Thinking with Injected Knowledge for Time-Series Reasoning",
+      "abstract": "Time-series diagnostic reasoning is essential for many applications, yet existing solutions face a persistent gap: general reasoning large language models (GRLMs) possess strong reasoning skills but lack the domain-specific knowledge to understand complex time-series patterns. Conversely, fine-tuned time-series LLMs (TSLMs) understand these patterns but lack the capacity to generalize reasoning for more complicated questions. To bridge this gap, we propose a hybrid knowledge-injection framework ",
+      "url_abs": "https://arxiv.org/abs/2602.19455",
+      "url_pdf": "https://arxiv.org/pdf/2602.19455",
+      "arxiv_id": "2602.19455",
+      "github_stars": 0,
+      "published": "2026-02-23T02:55:32.000Z",
+      "authors": [
+        "Zelin He",
+        "Boran Han",
+        "Xiyuan Zhang",
+        "Shuai Zhang",
+        "Haotian Lin",
+        "Qi Zhu",
+        "Haoyang Fang",
+        "Danielle C. Maddix",
+        "Abdul Fatir Ansari",
+        "Akash Chandrayan",
+        "Abhinav Pradhan",
+        "Bernie Wang",
+        "Matthew Reimherr"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    }
+  ],
+  "bucket_signals": {
+    "ai-agents": {
+      "paper_count": 3,
+      "total_stars": 327,
+      "top_papers": [
+        {
+          "title": "A Very Big Video Reasoning Suite",
+          "stars": 305,
+          "url": "https://arxiv.org/abs/2602.20159"
+        },
+        {
+          "title": "ManCAR: Manifold-Constrained Latent Reasoning with Adaptive Test-Time Computation for Sequential Recommendation",
+          "stars": 21,
+          "url": "https://arxiv.org/abs/2602.20093"
+        },
+        {
+          "title": "Decoding ML Decision: An Agentic Reasoning Framework for Large-Scale Ranking System",
+          "stars": 1,
+          "url": "https://arxiv.org/abs/2602.18640"
+        }
+      ],
+      "star_share": 0.340625,
+      "avg_stars": 109.0,
+      "signal_interpretation": "Hot research area with high implementation interest"
+    },
+    "ai-research": {
+      "paper_count": 7,
+      "total_stars": 261,
+      "top_papers": [
+        {
+          "title": "Does Your Reasoning Model Implicitly Know When to Stop Thinking?",
+          "stars": 170,
+          "url": "https://arxiv.org/abs/2602.08354"
+        },
+        {
+          "title": "VLANeXt: Recipes for Building Strong VLA Models",
+          "stars": 39,
+          "url": "https://arxiv.org/abs/2602.18532"
+        },
+        {
+          "title": "SkillOrchestra: Learning to Route Agents via Skill Transfer",
+          "stars": 31,
+          "url": "https://arxiv.org/abs/2602.19672"
+        },
+        {
+          "title": "SimToolReal: An Object-Centric Policy for Zero-Shot Dexterous Tool Manipulation",
+          "stars": 11,
+          "url": "https://arxiv.org/abs/2602.16863"
+        },
+        {
+          "title": "EgoPush: Learning End-to-End Egocentric Multi-Object Rearrangement for Mobile Robots",
+          "stars": 6,
+          "url": "https://arxiv.org/abs/2602.18071"
+        }
+      ],
+      "star_share": 0.271875,
+      "avg_stars": 37.285714285714285,
+      "signal_interpretation": "Hot research area with high implementation interest"
+    },
+    "llm-foundation": {
+      "paper_count": 31,
+      "total_stars": 320,
+      "top_papers": [
+        {
+          "title": "VESPO: Variational Sequence-Level Soft Policy Optimization for Stable Off-Policy LLM Training",
+          "stars": 167,
+          "url": "https://arxiv.org/abs/2602.10693"
+        },
+        {
+          "title": "Generated Reality: Human-centric World Simulation using Interactive Video Generation with Hand and Camera Control",
+          "stars": 22,
+          "url": "https://arxiv.org/abs/2602.18422"
+        },
+        {
+          "title": "TOPReward: Token Probabilities as Hidden Zero-Shot Rewards for Robotics",
+          "stars": 21,
+          "url": "https://arxiv.org/abs/2602.19313"
+        },
+        {
+          "title": "Agents of Chaos",
+          "stars": 14,
+          "url": "https://arxiv.org/abs/2602.20021"
+        },
+        {
+          "title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents",
+          "stars": 14,
+          "url": "https://arxiv.org/abs/2602.16699"
+        }
+      ],
+      "star_share": 0.3333333333333333,
+      "avg_stars": 10.32258064516129,
+      "signal_interpretation": "Hot research area with high implementation interest"
+    },
+    "ai-image-generation": {
+      "paper_count": 3,
+      "total_stars": 29,
+      "top_papers": [
+        {
+          "title": "Mobile-O: Unified Multimodal Understanding and Generation on Mobile Device",
+          "stars": 18,
+          "url": "https://arxiv.org/abs/2602.20161"
+        },
+        {
+          "title": "Spanning the Visual Analogy Space with a Weight Basis of LoRAs",
+          "stars": 11,
+          "url": "https://arxiv.org/abs/2602.15727"
+        },
+        {
+          "title": "Ani3DHuman: Photorealistic 3D Human Animation with Self-guided Stochastic Sampling",
+          "stars": 0,
+          "url": "https://arxiv.org/abs/2602.19089"
+        }
+      ],
+      "star_share": 0.030208333333333334,
+      "avg_stars": 9.666666666666666,
+      "signal_interpretation": "Research-focused with limited code adoption"
+    },
+    "computer-vision": {
+      "paper_count": 1,
+      "total_stars": 13,
+      "top_papers": [
+        {
+          "title": "Learning Cross-View Object Correspondence via Cycle-Consistent Mask Prediction",
+          "stars": 13,
+          "url": "https://arxiv.org/abs/2602.18996"
+        }
+      ],
+      "star_share": 0.013541666666666667,
+      "avg_stars": 13.0,
+      "signal_interpretation": "Research-focused with limited code adoption"
+    },
+    "ai-general": {
+      "paper_count": 3,
+      "total_stars": 8,
+      "top_papers": [
+        {
+          "title": "On the Mechanism and Dynamics of Modular Addition: Fourier Features, Lottery Ticket, and Grokking",
+          "stars": 6,
+          "url": "https://arxiv.org/abs/2602.16849"
+        },
+        {
+          "title": "SimVLA: A Simple VLA Baseline for Robotic Manipulation",
+          "stars": 2,
+          "url": "https://arxiv.org/abs/2602.18224"
+        },
+        {
+          "title": "Large Causal Models for Temporal Causal Discovery",
+          "stars": 0,
+          "url": "https://arxiv.org/abs/2602.18662"
+        }
+      ],
+      "star_share": 0.008333333333333333,
+      "avg_stars": 2.6666666666666665,
+      "signal_interpretation": "Research-focused with limited code adoption"
+    },
+    "ai-coding": {
+      "paper_count": 2,
+      "total_stars": 2,
+      "top_papers": [
+        {
+          "title": "Contact-Anchored Proprioceptive Odometry for Quadruped Robots",
+          "stars": 1,
+          "url": "https://arxiv.org/abs/2602.17393"
+        },
+        {
+          "title": "tttLRM: Test-Time Training for Long Context and Autoregressive 3D Reconstruction",
+          "stars": 1,
+          "url": "https://arxiv.org/abs/2602.20160"
+        }
+      ],
+      "star_share": 0.0020833333333333333,
+      "avg_stars": 1.0,
+      "signal_interpretation": "Research-focused with limited code adoption"
+    }
+  },
+  "tasks_count": 0
+}

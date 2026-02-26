@@ -29,12 +29,17 @@ def run_scraper(name: str, scraper_func):
     print(f"{'=' * 60}")
     try:
         result = run_with_timeout(scraper_func, timeout=SCRAPER_TIMEOUT, name=name)
+        print(f"  SUCCESS: {name} completed")
         return result
     except TimeoutError as e:
-        print(f"  TIMEOUT: {e}")
+        print(f"  TIMEOUT in {name}: {e}")
+        print(f"  Continuing with next scraper...")
         return 0
     except Exception as e:
-        print(f"  ERROR: {e}")
+        print(f"  ERROR in {name}: {e}")
+        print(f"  Continuing with next scraper...")
+        import traceback
+        traceback.print_exc()
         return 0
 
 
@@ -172,6 +177,36 @@ def main():
         r = run_daily_research()
         return r.get('count', 0) if isinstance(r, dict) else 0
     results["cellcog"] = run_scraper("CELLCOG DEEP RESEARCH", run_cellcog)
+    
+    # 17. Yahoo Finance Market Data
+    def run_yahoo_finance():
+        from scrapers.yahoo_finance_scraper import scrape_market_signals
+        r = scrape_market_signals()
+        return len(r.get("stocks", []))
+    results["yahoo_finance"] = run_scraper("YAHOO FINANCE", run_yahoo_finance)
+    
+    # 18. Financial Data (SEC Filings, Earnings)
+    def run_financial_data():
+        from scrapers.financial_data_scraper import FinancialDataScraper
+        s = FinancialDataScraper()
+        r = s.run()
+        return len(r.get("sec_filings", [])) + len(r.get("upcoming_earnings", []))
+    results["financial_data"] = run_scraper("FINANCIAL DATA", run_financial_data)
+    
+    # 19. Hiring Signals
+    def run_hiring_signals():
+        from scrapers.hiring_signals_scraper import run
+        r = run()
+        return len(r.get("company_signals", []))
+    results["hiring_signals"] = run_scraper("HIRING SIGNALS", run_hiring_signals)
+    
+    # 20. Private Company Tracker
+    def run_private_companies():
+        import asyncio
+        from scrapers.private_company_tracker import main as private_main
+        r = asyncio.run(private_main())
+        return 0  # main() doesn't return count, but saves data
+    results["private_companies"] = run_scraper("PRIVATE COMPANIES", run_private_companies)
     
     # Summary
     print("\n" + "=" * 70)

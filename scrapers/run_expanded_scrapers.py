@@ -280,12 +280,17 @@ def main():
     
     def _safe_run(name, func):
         try:
-            return run_with_timeout(func, timeout=SCRAPER_TIMEOUT, name=name)
+            print(f"\nStarting {name}...")
+            result = run_with_timeout(func, timeout=SCRAPER_TIMEOUT, name=name)
+            print(f"  SUCCESS: {name} completed")
+            return result
         except TimeoutError as e:
-            print(f"  TIMEOUT: {e}")
+            print(f"  TIMEOUT in {name}: {e}")
+            print(f"  Continuing with next scraper...")
             return 0
         except Exception as e:
-            print(f"  ERROR: {e}")
+            print(f"  ERROR in {name}: {e}")
+            print(f"  Continuing with next scraper...")
             traceback.print_exc()
             return 0
 
@@ -299,14 +304,29 @@ def main():
     }
     
     print("\n" + "=" * 60)
-    print("SUMMARY")
+    print("EXPANDED SCRAPERS SUMMARY")
     print("=" * 60)
     
+    failed_count = 0
+    success_count = 0
     for source, count in results.items():
-        print(f"  {source}: {count} items scraped")
+        if count == 0:
+            failed_count += 1
+            status = "FAILED/TIMEOUT"
+        else:
+            success_count += 1
+            status = "SUCCESS"
+        print(f"  {source:15} {count:>6} items  [{status}]")
     
-    print(f"\nTotal: {sum(results.values())} items")
-    print("\nRun `python scripts/rebuild_profiles.py` to update signal radar.")
+    total = sum(results.values())
+    print(f"\n  {'TOTAL':15} {total:>6} items")
+    print(f"  Success: {success_count}, Failed: {failed_count}")
+    
+    # Always exit 0 - failures are non-fatal for the pipeline
+    print(f"\nExpanded scrapers completed. Failures are non-fatal.")
+    print("Run `python scripts/rebuild_profiles.py` to update signal radar.")
+    
+    return 0  # Always return success for pipeline resilience
 
 
 if __name__ == "__main__":

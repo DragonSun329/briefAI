@@ -1,0 +1,783 @@
+{
+  "scraped_at": "2026-02-26T09:47:20.653855",
+  "source": "finnhub",
+  "ticker_count": 27,
+  "mover_count": 12,
+  "correlation_count": 0,
+  "stocks": [
+    {
+      "ticker": "NVDA",
+      "current_price": 195.56,
+      "open": 194.45,
+      "day_high": 197.63,
+      "day_low": 193.79,
+      "previous_close": 192.85,
+      "change": 2.71,
+      "change_pct": 1.41,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 46.1
+    },
+    {
+      "ticker": "MSFT",
+      "current_price": 400.6,
+      "open": 390.52,
+      "day_high": 401.47,
+      "day_low": 390.16,
+      "previous_close": 389,
+      "change": 11.6,
+      "change_pct": 2.98,
+      "signal": "slightly_bullish",
+      "score": 0.149,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 92.3
+    },
+    {
+      "ticker": "GOOGL",
+      "current_price": 312.9,
+      "open": 312.06,
+      "day_high": 313.64,
+      "day_low": 309.44,
+      "previous_close": 310.9,
+      "change": 2,
+      "change_pct": 0.64,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 82.4
+    },
+    {
+      "ticker": "META",
+      "current_price": 653.69,
+      "open": 642.53,
+      "day_high": 653.88,
+      "day_low": 642.14,
+      "previous_close": 639.3,
+      "change": 14.39,
+      "change_pct": 2.25,
+      "signal": "slightly_bullish",
+      "score": 0.113,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 98.4
+    },
+    {
+      "ticker": "AMZN",
+      "current_price": 210.64,
+      "open": 210.46,
+      "day_high": 211.59,
+      "day_low": 208.93,
+      "previous_close": 208.56,
+      "change": 2.08,
+      "change_pct": 1.0,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 64.3
+    },
+    {
+      "ticker": "AAPL",
+      "current_price": 274.23,
+      "open": 271.78,
+      "day_high": 274.94,
+      "day_low": 271.05,
+      "previous_close": 272.14,
+      "change": 2.09,
+      "change_pct": 0.77,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 81.7
+    },
+    {
+      "ticker": "AMD",
+      "current_price": 210.86,
+      "open": 214.82,
+      "day_high": 216.7,
+      "day_low": 210.33,
+      "previous_close": 213.84,
+      "change": -2.98,
+      "change_pct": -1.39,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 8.3
+    },
+    {
+      "ticker": "INTC",
+      "current_price": 46.88,
+      "open": 46.09,
+      "day_high": 46.97,
+      "day_low": 45.08,
+      "previous_close": 46.12,
+      "change": 0.76,
+      "change_pct": 1.65,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 95.2
+    },
+    {
+      "ticker": "AI",
+      "current_price": 10.31,
+      "open": 10.21,
+      "day_high": 10.53,
+      "day_low": 10,
+      "previous_close": 10.12,
+      "change": 0.19,
+      "change_pct": 1.88,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 58.5
+    },
+    {
+      "ticker": "PLTR",
+      "current_price": 134.19,
+      "open": 130.61,
+      "day_high": 136.09,
+      "day_low": 129.18,
+      "previous_close": 128.84,
+      "change": 5.35,
+      "change_pct": 4.15,
+      "signal": "slightly_bullish",
+      "score": 0.208,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 72.5
+    },
+    {
+      "ticker": "PATH",
+      "current_price": 9.94,
+      "open": 10.16,
+      "day_high": 10.17,
+      "day_low": 9.46,
+      "previous_close": 10.1,
+      "change": -0.16,
+      "change_pct": -1.58,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 67.4
+    },
+    {
+      "ticker": "SNOW",
+      "current_price": 169.21,
+      "open": 161.43,
+      "day_high": 170.47,
+      "day_low": 160,
+      "previous_close": 161.06,
+      "change": 8.15,
+      "change_pct": 5.06,
+      "signal": "bullish",
+      "score": 0.506,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 88.0
+    },
+    {
+      "ticker": "DDOG",
+      "current_price": 110.33,
+      "open": 104.87,
+      "day_high": 110.85,
+      "day_low": 104.43,
+      "previous_close": 104.43,
+      "change": 5.9,
+      "change_pct": 5.65,
+      "signal": "bullish",
+      "score": 0.565,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 91.9
+    },
+    {
+      "ticker": "MDB",
+      "current_price": 314.99,
+      "open": 311.29,
+      "day_high": 319.19,
+      "day_low": 305.75,
+      "previous_close": 312.51,
+      "change": 2.48,
+      "change_pct": 0.79,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 68.8
+    },
+    {
+      "ticker": "CRWD",
+      "current_price": 363.31,
+      "open": 349.57,
+      "day_high": 365.98,
+      "day_low": 346.5,
+      "previous_close": 350.25,
+      "change": 13.06,
+      "change_pct": 3.73,
+      "signal": "slightly_bullish",
+      "score": 0.186,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 86.3
+    },
+    {
+      "ticker": "ZS",
+      "current_price": 155.7,
+      "open": 149.8,
+      "day_high": 155.79,
+      "day_low": 147.17,
+      "previous_close": 149.36,
+      "change": 6.34,
+      "change_pct": 4.24,
+      "signal": "slightly_bullish",
+      "score": 0.212,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 99.0
+    },
+    {
+      "ticker": "AVGO",
+      "current_price": 332.31,
+      "open": 330.74,
+      "day_high": 335.91,
+      "day_low": 329.28,
+      "previous_close": 325.49,
+      "change": 6.82,
+      "change_pct": 2.1,
+      "signal": "slightly_bullish",
+      "score": 0.105,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 45.7
+    },
+    {
+      "ticker": "QCOM",
+      "current_price": 145.82,
+      "open": 145.6,
+      "day_high": 146.03,
+      "day_low": 144.02,
+      "previous_close": 144.78,
+      "change": 1.04,
+      "change_pct": 0.72,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 89.8
+    },
+    {
+      "ticker": "ARM",
+      "current_price": 131.74,
+      "open": 128.35,
+      "day_high": 133.28,
+      "day_low": 128.35,
+      "previous_close": 128.14,
+      "change": 3.6,
+      "change_pct": 2.81,
+      "signal": "slightly_bullish",
+      "score": 0.14,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 68.8
+    },
+    {
+      "ticker": "TSM",
+      "current_price": 387.73,
+      "open": 390.2,
+      "day_high": 390.2,
+      "day_low": 384.83,
+      "previous_close": 385.75,
+      "change": 1.98,
+      "change_pct": 0.51,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 54.0
+    },
+    {
+      "ticker": "ASML",
+      "current_price": 1526.51,
+      "open": 1522.4,
+      "day_high": 1547.22,
+      "day_low": 1516.48,
+      "previous_close": 1497.8,
+      "change": 28.71,
+      "change_pct": 1.92,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 32.6
+    },
+    {
+      "ticker": "MRVL",
+      "current_price": 80.92,
+      "open": 79.01,
+      "day_high": 81.19,
+      "day_low": 78.97,
+      "previous_close": 78.39,
+      "change": 2.53,
+      "change_pct": 3.23,
+      "signal": "slightly_bullish",
+      "score": 0.161,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 87.9
+    },
+    {
+      "ticker": "CRM",
+      "current_price": 191.75,
+      "open": 183,
+      "day_high": 192.6,
+      "day_low": 182.26,
+      "previous_close": 185.42,
+      "change": 6.33,
+      "change_pct": 3.41,
+      "signal": "slightly_bullish",
+      "score": 0.171,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 91.8
+    },
+    {
+      "ticker": "ORCL",
+      "current_price": 147.89,
+      "open": 149.16,
+      "day_high": 153.28,
+      "day_low": 147.34,
+      "previous_close": 146.14,
+      "change": 1.75,
+      "change_pct": 1.2,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 9.3
+    },
+    {
+      "ticker": "IBM",
+      "current_price": 237.54,
+      "open": 233.22,
+      "day_high": 239.55,
+      "day_low": 231.22,
+      "previous_close": 229.32,
+      "change": 8.22,
+      "change_pct": 3.58,
+      "signal": "slightly_bullish",
+      "score": 0.179,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 75.9
+    },
+    {
+      "ticker": "NOW",
+      "current_price": 104.23,
+      "open": 101.63,
+      "day_high": 104.73,
+      "day_low": 100.16,
+      "previous_close": 102.49,
+      "change": 1.74,
+      "change_pct": 1.7,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 89.1
+    },
+    {
+      "ticker": "ADBE",
+      "current_price": 257.81,
+      "open": 253.33,
+      "day_high": 257.99,
+      "day_low": 250.7,
+      "previous_close": 255.17,
+      "change": 2.64,
+      "change_pct": 1.03,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 97.5
+    }
+  ],
+  "movers": [
+    {
+      "ticker": "DDOG",
+      "change_pct": 5.65,
+      "signal": "bullish"
+    },
+    {
+      "ticker": "SNOW",
+      "change_pct": 5.06,
+      "signal": "bullish"
+    },
+    {
+      "ticker": "ZS",
+      "change_pct": 4.24,
+      "signal": "slightly_bullish"
+    },
+    {
+      "ticker": "PLTR",
+      "change_pct": 4.15,
+      "signal": "slightly_bullish"
+    },
+    {
+      "ticker": "CRWD",
+      "change_pct": 3.73,
+      "signal": "slightly_bullish"
+    },
+    {
+      "ticker": "IBM",
+      "change_pct": 3.58,
+      "signal": "slightly_bullish"
+    },
+    {
+      "ticker": "CRM",
+      "change_pct": 3.41,
+      "signal": "slightly_bullish"
+    },
+    {
+      "ticker": "MRVL",
+      "change_pct": 3.23,
+      "signal": "slightly_bullish"
+    },
+    {
+      "ticker": "MSFT",
+      "change_pct": 2.98,
+      "signal": "slightly_bullish"
+    },
+    {
+      "ticker": "ARM",
+      "change_pct": 2.81,
+      "signal": "slightly_bullish"
+    },
+    {
+      "ticker": "META",
+      "change_pct": 2.25,
+      "signal": "slightly_bullish"
+    },
+    {
+      "ticker": "AVGO",
+      "change_pct": 2.1,
+      "signal": "slightly_bullish"
+    }
+  ],
+  "technical_analysis": {
+    "DDOG": {
+      "symbol": "DDOG",
+      "metrics": {
+        "52w_high": 201.69,
+        "52w_low": 81.63,
+        "10d_avg_volume": 7.95301,
+        "3m_avg_volume": 5.19029,
+        "beta": 1.3826638,
+        "pe_ratio": 361.1578,
+        "pb_ratio": 12.7774,
+        "dividend_yield": null,
+        "market_cap": 38911.5
+      },
+      "52w_position_pct": 23.9,
+      "rsi": 40.1,
+      "macd": {
+        "macd": -5.508,
+        "signal": -4.396,
+        "histogram": -1.112,
+        "trend": "bearish"
+      },
+      "bollinger": {
+        "upper": 139.23,
+        "middle": 120.06,
+        "lower": 100.89,
+        "position_pct": 24.6,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 120.06,
+        "sma50": 128.17,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "macd_bearish"
+      ]
+    },
+    "SNOW": {
+      "symbol": "SNOW",
+      "metrics": {
+        "52w_high": 280.67,
+        "52w_low": 120.1,
+        "10d_avg_volume": 6.83287,
+        "3m_avg_volume": 5.27366,
+        "beta": 1.2348335,
+        "pe_ratio": null,
+        "pb_ratio": 43.6626,
+        "dividend_yield": null,
+        "market_cap": 57903.664
+      },
+      "52w_position_pct": 30.6,
+      "rsi": 40.8,
+      "macd": {
+        "macd": -10.689,
+        "signal": -10.87,
+        "histogram": 0.181,
+        "trend": "bullish"
+      },
+      "bollinger": {
+        "upper": 205.26,
+        "middle": 177.39,
+        "lower": 149.51,
+        "position_pct": 35.3,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 177.39,
+        "sma50": 201.74,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "macd_bullish"
+      ]
+    },
+    "ZS": {
+      "symbol": "ZS",
+      "metrics": {
+        "52w_high": 336.99,
+        "52w_low": 141.56,
+        "10d_avg_volume": 3.16229,
+        "3m_avg_volume": 1.9557,
+        "beta": 1.1283094,
+        "pe_ratio": null,
+        "pb_ratio": 26.4435,
+        "dividend_yield": null,
+        "market_cap": 24317.363
+      },
+      "52w_position_pct": 7.2,
+      "rsi": 32.0,
+      "macd": {
+        "macd": -15.119,
+        "signal": -13.949,
+        "histogram": -1.17,
+        "trend": "bearish"
+      },
+      "bollinger": {
+        "upper": 210.82,
+        "middle": 175.58,
+        "lower": 140.35,
+        "position_pct": 21.8,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 175.58,
+        "sma50": 203.52,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "macd_bearish"
+      ]
+    },
+    "PLTR": {
+      "symbol": "PLTR",
+      "metrics": {
+        "52w_high": 207.52,
+        "52w_low": 66.12,
+        "10d_avg_volume": 53.60279,
+        "3m_avg_volume": 48.37758,
+        "beta": 1.7556409,
+        "pe_ratio": 197.4969,
+        "pb_ratio": 57.3495,
+        "dividend_yield": null,
+        "market_cap": 320938.97
+      },
+      "52w_position_pct": 48.1,
+      "rsi": 40.0,
+      "macd": {
+        "macd": -8.974,
+        "signal": -9.706,
+        "histogram": 0.732,
+        "trend": "bullish"
+      },
+      "bollinger": {
+        "upper": 156.44,
+        "middle": 138.88,
+        "lower": 121.32,
+        "position_pct": 36.6,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 138.88,
+        "sma50": 162.95,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "macd_bullish"
+      ]
+    },
+    "CRWD": {
+      "symbol": "CRWD",
+      "metrics": {
+        "52w_high": 566.9,
+        "52w_low": 298,
+        "10d_avg_volume": 5.23885,
+        "3m_avg_volume": 2.81007,
+        "beta": 1.1274803,
+        "pe_ratio": null,
+        "pb_ratio": 33.9279,
+        "dividend_yield": null,
+        "market_cap": 91589.88
+      },
+      "52w_position_pct": 24.3,
+      "rsi": 33.8,
+      "macd": {
+        "macd": -23.015,
+        "signal": -18.436,
+        "histogram": -4.578,
+        "trend": "bearish"
+      },
+      "bollinger": {
+        "upper": 469.96,
+        "middle": 409.35,
+        "lower": 348.73,
+        "position_pct": 12.0,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 409.35,
+        "sma50": 445.26,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "macd_bearish"
+      ]
+    },
+    "IBM": {
+      "symbol": "IBM",
+      "metrics": {
+        "52w_high": 324.9,
+        "52w_low": 214.5,
+        "10d_avg_volume": 8.23125,
+        "3m_avg_volume": 5.26937,
+        "beta": 0.6947088,
+        "pe_ratio": 20.9588,
+        "pb_ratio": 8.481,
+        "dividend_yield": 2.9304028,
+        "market_cap": 222037
+      },
+      "52w_position_pct": 20.9,
+      "rsi": 32.8,
+      "macd": {
+        "macd": -16.275,
+        "signal": -11.495,
+        "histogram": -4.779,
+        "trend": "bearish"
+      },
+      "bollinger": {
+        "upper": 325.75,
+        "middle": 274.37,
+        "lower": 222.98,
+        "position_pct": 14.2,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 274.37,
+        "sma50": 289.38,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "macd_bearish"
+      ]
+    },
+    "CRM": {
+      "symbol": "CRM",
+      "metrics": {
+        "52w_high": 313.7,
+        "52w_low": 174.57,
+        "10d_avg_volume": 13.64057,
+        "3m_avg_volume": 9.58767,
+        "beta": 1.3142339,
+        "pe_ratio": 24.8781,
+        "pb_ratio": 4.1304,
+        "dividend_yield": 0.8974221,
+        "market_cap": 179669.75
+      },
+      "52w_position_pct": 12.3,
+      "rsi": 41.2,
+      "macd": {
+        "macd": -12.008,
+        "signal": -13.448,
+        "histogram": 1.44,
+        "trend": "bullish"
+      },
+      "bollinger": {
+        "upper": 218.96,
+        "middle": 194.39,
+        "lower": 169.82,
+        "position_pct": 44.6,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 194.39,
+        "sma50": 228.12,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "macd_bullish"
+      ]
+    },
+    "MRVL": {
+      "symbol": "MRVL",
+      "metrics": {
+        "52w_high": 104.67,
+        "52w_low": 47.085,
+        "10d_avg_volume": 9.77604,
+        "3m_avg_volume": 15.8414,
+        "beta": 2.003627,
+        "pe_ratio": 28.5666,
+        "pb_ratio": 5.5424,
+        "dividend_yield": 0.3061615,
+        "market_cap": 70679.56
+      },
+      "52w_position_pct": 58.8,
+      "rsi": 51.9,
+      "macd": {
+        "macd": -0.9,
+        "signal": -1.242,
+        "histogram": 0.342,
+        "trend": "bullish"
+      },
+      "bollinger": {
+        "upper": 84.12,
+        "middle": 79.16,
+        "lower": 74.19,
+        "position_pct": 67.7,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 79.16,
+        "sma50": 82.11,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "macd_bullish"
+      ]
+    }
+  },
+  "correlations": []
+}
