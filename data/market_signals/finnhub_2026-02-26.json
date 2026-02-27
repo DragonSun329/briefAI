@@ -1,9 +1,9 @@
 {
-  "scraped_at": "2026-02-26T09:47:20.653855",
+  "scraped_at": "2026-02-26T10:21:44.032054",
   "source": "finnhub",
-  "ticker_count": 27,
-  "mover_count": 12,
-  "correlation_count": 0,
+  "ticker_count": 33,
+  "mover_count": 14,
+  "correlation_count": 6,
   "stocks": [
     {
       "ticker": "NVDA",
@@ -409,6 +409,96 @@
       "timestamp": 1772053200,
       "source": "finnhub",
       "intraday_range_pct": 97.5
+    },
+    {
+      "ticker": "WDAY",
+      "current_price": 133.15,
+      "open": 119.56,
+      "day_high": 133.88,
+      "day_low": 117.76,
+      "previous_close": 130.23,
+      "change": 2.92,
+      "change_pct": 2.24,
+      "signal": "slightly_bullish",
+      "score": 0.112,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 95.5
+    },
+    {
+      "ticker": "UPST",
+      "current_price": 28.44,
+      "open": 28.79,
+      "day_high": 28.93,
+      "day_low": 27.95,
+      "previous_close": 28.14,
+      "change": 0.3,
+      "change_pct": 1.07,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 50.3
+    },
+    {
+      "ticker": "DOCS",
+      "current_price": 24.4,
+      "open": 24.32,
+      "day_high": 24.71,
+      "day_low": 23.53,
+      "previous_close": 24.07,
+      "change": 0.33,
+      "change_pct": 1.37,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 73.7
+    },
+    {
+      "ticker": "S",
+      "current_price": 12.92,
+      "open": 12.82,
+      "day_high": 13.01,
+      "day_low": 12.55,
+      "previous_close": 12.76,
+      "change": 0.16,
+      "change_pct": 1.25,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 81.4
+    },
+    {
+      "ticker": "NET",
+      "current_price": 171.8,
+      "open": 163.79,
+      "day_high": 173.26,
+      "day_low": 162.53,
+      "previous_close": 163.81,
+      "change": 7.99,
+      "change_pct": 4.88,
+      "signal": "slightly_bullish",
+      "score": 0.244,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 86.4
+    },
+    {
+      "ticker": "U",
+      "current_price": 18.58,
+      "open": 18.05,
+      "day_high": 18.65,
+      "day_low": 17.62,
+      "previous_close": 18.29,
+      "change": 0.29,
+      "change_pct": 1.59,
+      "signal": "neutral",
+      "score": 0,
+      "timestamp": 1772053200,
+      "source": "finnhub",
+      "intraday_range_pct": 93.2
     }
   ],
   "movers": [
@@ -421,6 +511,11 @@
       "ticker": "SNOW",
       "change_pct": 5.06,
       "signal": "bullish"
+    },
+    {
+      "ticker": "NET",
+      "change_pct": 4.88,
+      "signal": "slightly_bullish"
     },
     {
       "ticker": "ZS",
@@ -465,6 +560,11 @@
     {
       "ticker": "META",
       "change_pct": 2.25,
+      "signal": "slightly_bullish"
+    },
+    {
+      "ticker": "WDAY",
+      "change_pct": 2.24,
       "signal": "slightly_bullish"
     },
     {
@@ -548,6 +648,44 @@
       },
       "ta_signals": [
         "macd_bullish"
+      ]
+    },
+    "NET": {
+      "symbol": "NET",
+      "metrics": {
+        "52w_high": 260,
+        "52w_low": 89.42,
+        "10d_avg_volume": 7.36491,
+        "3m_avg_volume": 3.73345,
+        "beta": 2.0549498,
+        "pe_ratio": null,
+        "pb_ratio": 47.3284,
+        "dividend_yield": null,
+        "market_cap": 60098.77
+      },
+      "52w_position_pct": 48.3,
+      "rsi": 44.9,
+      "macd": {
+        "macd": -3.504,
+        "signal": -2.275,
+        "histogram": -1.229,
+        "trend": "bearish"
+      },
+      "bollinger": {
+        "upper": 199.71,
+        "middle": 178.67,
+        "lower": 157.62,
+        "position_pct": 33.7,
+        "squeeze": false
+      },
+      "sma_cross": {
+        "sma20": 178.67,
+        "sma50": 186.86,
+        "sma20_above_sma50": false,
+        "crossover": "none"
+      },
+      "ta_signals": [
+        "macd_bearish"
       ]
     },
     "ZS": {
@@ -739,45 +877,210 @@
       "ta_signals": [
         "macd_bullish"
       ]
-    },
-    "MRVL": {
-      "symbol": "MRVL",
-      "metrics": {
-        "52w_high": 104.67,
-        "52w_low": 47.085,
-        "10d_avg_volume": 9.77604,
-        "3m_avg_volume": 15.8414,
-        "beta": 2.003627,
-        "pe_ratio": 28.5666,
-        "pb_ratio": 5.5424,
-        "dividend_yield": 0.3061615,
-        "market_cap": 70679.56
-      },
-      "52w_position_pct": 58.8,
-      "rsi": 51.9,
-      "macd": {
-        "macd": -0.9,
-        "signal": -1.242,
-        "histogram": 0.342,
-        "trend": "bullish"
-      },
-      "bollinger": {
-        "upper": 84.12,
-        "middle": 79.16,
-        "lower": 74.19,
-        "position_pct": 67.7,
-        "squeeze": false
-      },
-      "sma_cross": {
-        "sma20": 79.16,
-        "sma50": 82.11,
-        "sma20_above_sma50": false,
-        "crossover": "none"
-      },
-      "ta_signals": [
-        "macd_bullish"
-      ]
     }
   },
-  "correlations": []
+  "correlations": [
+    {
+      "ticker": "SNOW",
+      "change_pct": 5.06,
+      "signal": "bullish",
+      "price": 169.21,
+      "related_news_count": 1,
+      "news": [
+        {
+          "title": "Pluralistic: A perforated corporate veil (20 Feb 2026)",
+          "url": "https://pluralistic.net/2026/02/20/karioca-konzernrecht/",
+          "matched_term": "SNOW"
+        }
+      ],
+      "narrative": "SNOW up 5.1% -- possibly related to: Pluralistic: A perforated corporate veil (20 Feb 2026)",
+      "technical": {
+        "rsi": 40.8,
+        "macd": {
+          "macd": -10.689,
+          "signal": -10.87,
+          "histogram": 0.181,
+          "trend": "bullish"
+        },
+        "bollinger_position": 35.3,
+        "sma_cross": "none",
+        "ta_signals": [
+          "macd_bullish"
+        ]
+      }
+    },
+    {
+      "ticker": "NET",
+      "change_pct": 4.88,
+      "signal": "slightly_bullish",
+      "price": 171.8,
+      "related_news_count": 5,
+      "news": [
+        {
+          "title": "China accused of tapping US AI models in escalating tech showdown - Ynetnews",
+          "url": "https://www.ynetnews.com/tech-and-digital/article/skpibai00wx",
+          "matched_term": "NET"
+        },
+        {
+          "title": "Anthropic Warned to Let Military Use the Company's AI Tech as It Sees Fit - Manufacturing Business Technology",
+          "url": "https://www.mbtmag.com/artificial-intelligence/news/22961381/anthropic-warned-to-let-military-use-the-companys-ai-tech-as-it-sees-fit",
+          "matched_term": "NET"
+        },
+        {
+          "title": "Ericsson, Mistral AI target AI for network ops - RCR Wireless News",
+          "url": "https://www.rcrwireless.com/20260220/ai/ericsson-mistral-ai",
+          "matched_term": "NET"
+        },
+        {
+          "title": "What’s Really Fueling The Google Stock Rally? - Forbes",
+          "url": "https://www.forbes.com/sites/greatspeculations/2026/02/23/whats-really-fueling-the-google-stock-rally/",
+          "matched_term": "NET"
+        },
+        {
+          "title": "AI agents are fast, loose and out of control, MIT study finds - ZDNET",
+          "url": "https://www.zdnet.com/article/ai-agents-are-fast-loose-and-out-of-control-mit-study-find/",
+          "matched_term": "NET"
+        }
+      ],
+      "narrative": "NET up 4.9% -- possibly related to: China accused of tapping US AI models in escalating tech showdown - Ynetnews",
+      "technical": {
+        "rsi": 44.9,
+        "macd": {
+          "macd": -3.504,
+          "signal": -2.275,
+          "histogram": -1.229,
+          "trend": "bearish"
+        },
+        "bollinger_position": 33.7,
+        "sma_cross": "none",
+        "ta_signals": [
+          "macd_bearish"
+        ]
+      }
+    },
+    {
+      "ticker": "IBM",
+      "change_pct": 3.58,
+      "signal": "slightly_bullish",
+      "price": 237.54,
+      "related_news_count": 1,
+      "news": [
+        {
+          "title": "air traffic control: the IBM 9020",
+          "url": "https://computer.rip/2026-01-17-air-traffic-control-9020.html",
+          "matched_term": "IBM"
+        }
+      ],
+      "narrative": "IBM up 3.6% -- possibly related to: air traffic control: the IBM 9020",
+      "technical": {
+        "rsi": 32.8,
+        "macd": {
+          "macd": -16.275,
+          "signal": -11.495,
+          "histogram": -4.779,
+          "trend": "bearish"
+        },
+        "bollinger_position": 14.2,
+        "sma_cross": "none",
+        "ta_signals": [
+          "macd_bearish"
+        ]
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "change_pct": 2.98,
+      "signal": "slightly_bullish",
+      "price": 400.6,
+      "related_news_count": 5,
+      "news": [
+        {
+          "title": "“The World Is Not Prepared,” Says OpenAI CEO Sam Altman as AGI Timeline Speeds Up - TipRanks",
+          "url": "https://www.tipranks.com/news/the-world-is-not-prepared-says-openai-ceo-sam-altman-as-agi-timeline-speeds-up",
+          "matched_term": "MSFT"
+        },
+        {
+          "title": "OpenAI and Microsoft sign up to UK’s AI ‘Alignment Project’ - Telecoms",
+          "url": "https://www.telecoms.com/ai/openai-and-microsoft-sign-up-to-uk-s-ai-alignment-project-",
+          "matched_term": "Microsoft"
+        },
+        {
+          "title": "Intercepting messages before Is­Dialog­Message can process them",
+          "url": "https://devblogs.microsoft.com/oldnewthing/20260225-00/?p=112087",
+          "matched_term": "Microsoft"
+        },
+        {
+          "title": "Customizing the ways the dialog manager dismisses itself: Isolating the Close pathway",
+          "url": "https://devblogs.microsoft.com/oldnewthing/20260224-00/?p=112082",
+          "matched_term": "Microsoft"
+        },
+        {
+          "title": "Customizing the ways the dialog manager dismisses itself: Detecting the ESC key, second (failed) attempt",
+          "url": "https://devblogs.microsoft.com/oldnewthing/20260223-00/?p=112080",
+          "matched_term": "Microsoft"
+        }
+      ],
+      "narrative": "MSFT up 3.0% -- possibly related to: “The World Is Not Prepared,” Says OpenAI CEO Sam Altman as AGI Timeline Speeds U"
+    },
+    {
+      "ticker": "ARM",
+      "change_pct": 2.81,
+      "signal": "slightly_bullish",
+      "price": 131.74,
+      "related_news_count": 3,
+      "news": [
+        {
+          "title": "How AI is driving the 4th Agricultural Revolution in farming - Farm Progress",
+          "url": "https://www.farmprogress.com/technology/artificial-intelligence-powering-4th-agricultural-revolution",
+          "matched_term": "ARM"
+        },
+        {
+          "title": "Book Review: Of Monsters and Mainframes - Barbara Truelove ★★★⯪☆",
+          "url": "https://shkspr.mobi/blog/2026/02/book-review-of-monsters-and-mainframes-barbara-truelove/",
+          "matched_term": "ARM"
+        },
+        {
+          "title": "Book Review: Families And How To Survive Them by John Cleese and Robin Skynner ★★⯪☆☆",
+          "url": "https://shkspr.mobi/blog/2026/02/book-review-families-and-how-to-survive-them-by-john-cleese-and-robin-skynner/",
+          "matched_term": "ARM"
+        }
+      ],
+      "narrative": "ARM up 2.8% -- possibly related to: How AI is driving the 4th Agricultural Revolution in farming - Farm Progress"
+    },
+    {
+      "ticker": "META",
+      "change_pct": 2.25,
+      "signal": "slightly_bullish",
+      "price": 653.69,
+      "related_news_count": 5,
+      "news": [
+        {
+          "title": "Racing to Catch up With Nvidia, AMD Signs Chips-for-Stock Deal With Meta - The New York Times",
+          "url": "https://www.nytimes.com/2026/02/24/business/meta-amd-chips-ai.html",
+          "matched_term": "META"
+        },
+        {
+          "title": "Meta and AMD Team Up to Take on Nvidia in Massive AI Chip Deal - Gizmodo",
+          "url": "https://gizmodo.com/meta-and-amd-team-up-to-take-on-nvidia-in-massive-ai-chip-deal-2000725893",
+          "matched_term": "META"
+        },
+        {
+          "title": "AMD strikes blockbuster $100B AI chip deal with Mark Zuckerberg’s Meta - New York Post",
+          "url": "https://nypost.com/2026/02/24/business/amd-strikes-blockbuster-100b-ai-chip-deal-with-mark-zuckerbergs-meta/",
+          "matched_term": "META"
+        },
+        {
+          "title": "Meta To Spend Billions More On AMD AI Chips 02/25/2026 - MediaPost",
+          "url": "https://www.mediapost.com/publications/article/413045/meta-to-spend-billions-more-on-amd-ai-chips.html",
+          "matched_term": "META"
+        },
+        {
+          "title": "Meta and AMD Agree To Massive AI Chips Deal - Forbes",
+          "url": "https://www.forbes.com/sites/zacharyfolk/2026/02/24/meta-announces-major-ai-chips-deal-with-amd-months-after-chipmakers-similar-move-with-openai/",
+          "matched_term": "META"
+        }
+      ],
+      "narrative": "META up 2.2% -- possibly related to: Racing to Catch up With Nvidia, AMD Signs Chips-for-Stock Deal With Meta - The N"
+    }
+  ]
 }

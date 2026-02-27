@@ -1,0 +1,449 @@
+{
+  "scraped_at": "2026-02-26T02:21:02.862199+00:00",
+  "source": "levels.fyi (cached Q1 2026)",
+  "companies": [
+    {
+      "company": "OpenAI",
+      "roles": {
+        "ML Engineer L4": {
+          "base": 200000,
+          "stock": 250000,
+          "bonus": 30000,
+          "tc": 480000
+        },
+        "ML Engineer L5": {
+          "base": 250000,
+          "stock": 400000,
+          "bonus": 50000,
+          "tc": 700000
+        },
+        "Research Scientist": {
+          "base": 280000,
+          "stock": 500000,
+          "bonus": 60000,
+          "tc": 840000
+        }
+      },
+      "levels": [
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "Staff",
+        "Senior Staff"
+      ],
+      "yoe_range": "2-10+",
+      "avg_tc": 673333,
+      "avg_base": 243333,
+      "avg_stock": 383333,
+      "min_tc": 480000,
+      "max_tc": 840000
+    },
+    {
+      "company": "Anthropic",
+      "roles": {
+        "ML Engineer L4": {
+          "base": 210000,
+          "stock": 300000,
+          "bonus": 35000,
+          "tc": 545000
+        },
+        "ML Engineer L5": {
+          "base": 260000,
+          "stock": 450000,
+          "bonus": 55000,
+          "tc": 765000
+        },
+        "Research Scientist": {
+          "base": 290000,
+          "stock": 550000,
+          "bonus": 65000,
+          "tc": 905000
+        }
+      },
+      "levels": [
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "Staff"
+      ],
+      "yoe_range": "2-10+",
+      "avg_tc": 738333,
+      "avg_base": 253333,
+      "avg_stock": 433333,
+      "min_tc": 545000,
+      "max_tc": 905000
+    },
+    {
+      "company": "Google",
+      "roles": {
+        "ML Engineer L4": {
+          "base": 185000,
+          "stock": 150000,
+          "bonus": 25000,
+          "tc": 360000
+        },
+        "ML Engineer L5": {
+          "base": 220000,
+          "stock": 250000,
+          "bonus": 40000,
+          "tc": 510000
+        },
+        "ML Engineer L6": {
+          "base": 270000,
+          "stock": 400000,
+          "bonus": 60000,
+          "tc": 730000
+        },
+        "Research Scientist L5": {
+          "base": 240000,
+          "stock": 300000,
+          "bonus": 50000,
+          "tc": 590000
+        }
+      },
+      "levels": [
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8",
+        "Fellow"
+      ],
+      "yoe_range": "0-20+",
+      "avg_tc": 547500,
+      "avg_base": 228750,
+      "avg_stock": 275000,
+      "min_tc": 360000,
+      "max_tc": 730000
+    },
+    {
+      "company": "DeepMind",
+      "roles": {
+        "Research Scientist": {
+          "base": 250000,
+          "stock": 400000,
+          "bonus": 50000,
+          "tc": 700000
+        },
+        "Senior Research Scientist": {
+          "base": 320000,
+          "stock": 600000,
+          "bonus": 70000,
+          "tc": 990000
+        }
+      },
+      "levels": [
+        "RS",
+        "SRS",
+        "Staff RS",
+        "Principal RS"
+      ],
+      "yoe_range": "3-15+",
+      "avg_tc": 845000,
+      "avg_base": 285000,
+      "avg_stock": 500000,
+      "min_tc": 700000,
+      "max_tc": 990000
+    },
+    {
+      "company": "Meta",
+      "roles": {
+        "ML Engineer E4": {
+          "base": 180000,
+          "stock": 150000,
+          "bonus": 20000,
+          "tc": 350000
+        },
+        "ML Engineer E5": {
+          "base": 220000,
+          "stock": 280000,
+          "bonus": 35000,
+          "tc": 535000
+        },
+        "ML Engineer E6": {
+          "base": 280000,
+          "stock": 450000,
+          "bonus": 55000,
+          "tc": 785000
+        },
+        "Research Scientist": {
+          "base": 260000,
+          "stock": 350000,
+          "bonus": 45000,
+          "tc": 655000
+        }
+      },
+      "levels": [
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "yoe_range": "0-15+",
+      "avg_tc": 581250,
+      "avg_base": 235000,
+      "avg_stock": 307500,
+      "min_tc": 350000,
+      "max_tc": 785000
+    },
+    {
+      "company": "Microsoft",
+      "roles": {
+        "ML Engineer L62": {
+          "base": 165000,
+          "stock": 100000,
+          "bonus": 20000,
+          "tc": 285000
+        },
+        "ML Engineer L63": {
+          "base": 190000,
+          "stock": 150000,
+          "bonus": 30000,
+          "tc": 370000
+        },
+        "ML Engineer L64": {
+          "base": 220000,
+          "stock": 220000,
+          "bonus": 40000,
+          "tc": 480000
+        },
+        "ML Engineer L65": {
+          "base": 260000,
+          "stock": 350000,
+          "bonus": 55000,
+          "tc": 665000
+        }
+      },
+      "levels": [
+        "L59",
+        "L60",
+        "L61",
+        "L62",
+        "L63",
+        "L64",
+        "L65",
+        "L66",
+        "L67"
+      ],
+      "yoe_range": "0-20+",
+      "avg_tc": 450000,
+      "avg_base": 208750,
+      "avg_stock": 205000,
+      "min_tc": 285000,
+      "max_tc": 665000
+    },
+    {
+      "company": "Amazon",
+      "roles": {
+        "ML Engineer L5": {
+          "base": 165000,
+          "stock": 80000,
+          "bonus": 25000,
+          "tc": 270000
+        },
+        "ML Engineer L6": {
+          "base": 195000,
+          "stock": 150000,
+          "bonus": 35000,
+          "tc": 380000
+        },
+        "ML Engineer L7": {
+          "base": 250000,
+          "stock": 300000,
+          "bonus": 50000,
+          "tc": 600000
+        },
+        "Applied Scientist L5": {
+          "base": 180000,
+          "stock": 100000,
+          "bonus": 30000,
+          "tc": 310000
+        }
+      },
+      "levels": [
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8",
+        "Principal"
+      ],
+      "yoe_range": "0-15+",
+      "avg_tc": 390000,
+      "avg_base": 197500,
+      "avg_stock": 157500,
+      "min_tc": 270000,
+      "max_tc": 600000
+    },
+    {
+      "company": "Apple",
+      "roles": {
+        "ML Engineer ICT3": {
+          "base": 175000,
+          "stock": 100000,
+          "bonus": 25000,
+          "tc": 300000
+        },
+        "ML Engineer ICT4": {
+          "base": 210000,
+          "stock": 180000,
+          "bonus": 35000,
+          "tc": 425000
+        },
+        "ML Engineer ICT5": {
+          "base": 260000,
+          "stock": 300000,
+          "bonus": 50000,
+          "tc": 610000
+        }
+      },
+      "levels": [
+        "ICT2",
+        "ICT3",
+        "ICT4",
+        "ICT5",
+        "ICT6"
+      ],
+      "yoe_range": "0-15+",
+      "avg_tc": 445000,
+      "avg_base": 215000,
+      "avg_stock": 193333,
+      "min_tc": 300000,
+      "max_tc": 610000
+    },
+    {
+      "company": "NVIDIA",
+      "roles": {
+        "ML Engineer": {
+          "base": 190000,
+          "stock": 200000,
+          "bonus": 30000,
+          "tc": 420000
+        },
+        "Senior ML Engineer": {
+          "base": 240000,
+          "stock": 350000,
+          "bonus": 50000,
+          "tc": 640000
+        },
+        "Research Scientist": {
+          "base": 220000,
+          "stock": 280000,
+          "bonus": 40000,
+          "tc": 540000
+        }
+      },
+      "levels": [
+        "Junior",
+        "Mid",
+        "Senior",
+        "Staff",
+        "Principal"
+      ],
+      "yoe_range": "0-15+",
+      "avg_tc": 533333,
+      "avg_base": 216666,
+      "avg_stock": 276666,
+      "min_tc": 420000,
+      "max_tc": 640000
+    },
+    {
+      "company": "Databricks",
+      "roles": {
+        "ML Engineer L4": {
+          "base": 180000,
+          "stock": 200000,
+          "bonus": 25000,
+          "tc": 405000
+        },
+        "ML Engineer L5": {
+          "base": 220000,
+          "stock": 350000,
+          "bonus": 40000,
+          "tc": 610000
+        },
+        "ML Engineer L6": {
+          "base": 270000,
+          "stock": 500000,
+          "bonus": 55000,
+          "tc": 825000
+        }
+      },
+      "levels": [
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7"
+      ],
+      "yoe_range": "1-12+",
+      "avg_tc": 613333,
+      "avg_base": 223333,
+      "avg_stock": 350000,
+      "min_tc": 405000,
+      "max_tc": 825000
+    },
+    {
+      "company": "Scale AI",
+      "roles": {
+        "ML Engineer": {
+          "base": 175000,
+          "stock": 150000,
+          "bonus": 25000,
+          "tc": 350000
+        },
+        "Senior ML Engineer": {
+          "base": 220000,
+          "stock": 280000,
+          "bonus": 40000,
+          "tc": 540000
+        },
+        "Research Scientist": {
+          "base": 200000,
+          "stock": 220000,
+          "bonus": 35000,
+          "tc": 455000
+        }
+      },
+      "levels": [
+        "L3",
+        "L4",
+        "L5",
+        "L6"
+      ],
+      "yoe_range": "1-10+",
+      "avg_tc": 448333,
+      "avg_base": 198333,
+      "avg_stock": 216666,
+      "min_tc": 350000,
+      "max_tc": 540000
+    }
+  ],
+  "market_analysis": {
+    "top_payers": [
+      "DeepMind",
+      "Anthropic",
+      "OpenAI",
+      "Databricks",
+      "Meta"
+    ],
+    "market_p50": 547500,
+    "market_p75": 673333,
+    "market_p90": 738333,
+    "startup_premium": {
+      "startup_avg_tc": 618333,
+      "bigtech_avg_tc": 482750,
+      "premium_percent": 28.1
+    },
+    "insights": [
+      "DeepMind leads ML compensation at $845,000 avg TC",
+      "Anthropic paying 10% more than OpenAI",
+      "8 companies pay more in stock than base salary"
+    ]
+  }
+}

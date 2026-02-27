@@ -1,6 +1,6 @@
 {
   "source": "paperswithcode",
-  "scraped_at": "2026-02-26T09:42:52.784886",
+  "scraped_at": "2026-02-26T16:00:36.658633",
   "total_papers": 50,
   "papers": [
     {
@@ -10,7 +10,7 @@
       "url_abs": "https://arxiv.org/abs/2602.21193",
       "url_pdf": "https://arxiv.org/pdf/2602.21193",
       "arxiv_id": "2602.21193",
-      "github_stars": 64,
+      "github_stars": 75,
       "published": "2026-02-24T18:51:04.000Z",
       "authors": [
         "Renjie Pi",
@@ -24,56 +24,13 @@
       "bucket": "llm-foundation"
     },
     {
-      "id": "2602.18532",
-      "title": "VLANeXt: Recipes for Building Strong VLA Models",
-      "abstract": "Following the rise of large foundation models, Vision-Language-Action models (VLAs) emerged, leveraging strong visual and language understanding for general-purpose policy learning. Yet, the current VLA landscape remains fragmented and exploratory. Although many groups have proposed their own VLA models, inconsistencies in training protocols and evaluation settings make it difficult to identify which design choices truly matter. To bring structure to this evolving space, we reexamine the VLA des",
-      "url_abs": "https://arxiv.org/abs/2602.18532",
-      "url_pdf": "https://arxiv.org/pdf/2602.18532",
-      "arxiv_id": "2602.18532",
-      "github_stars": 44,
-      "published": "2026-02-20T09:26:17.000Z",
-      "authors": [
-        "Xiao-Ming Wu",
-        "Bin Fan",
-        "Kang Liao",
-        "Jian-Jian Jiang",
-        "Runze Yang",
-        "Yihang Luo",
-        "Zhonghua Wu",
-        "Wei-Shi Zheng",
-        "Chen Change Loy"
-      ],
-      "tasks": [],
-      "bucket": "ai-research"
-    },
-    {
-      "id": "2602.19672",
-      "title": "SkillOrchestra: Learning to Route Agents via Skill Transfer",
-      "abstract": "Compound AI systems promise capabilities beyond those of individual models, yet their success depends critically on effective orchestration. Existing routing approaches face two limitations: (1) input-level routers make coarse query-level decisions that ignore evolving task requirements; (2) RL-trained orchestrators are expensive to adapt and often suffer from routing collapse, repeatedly invoking one strong but costly option in multi-turn scenarios. We introduce SkillOrchestra, a framework for ",
-      "url_abs": "https://arxiv.org/abs/2602.19672",
-      "url_pdf": "https://arxiv.org/pdf/2602.19672",
-      "arxiv_id": "2602.19672",
-      "github_stars": 44,
-      "published": "2026-02-23T10:17:25.000Z",
-      "authors": [
-        "Jiayu Wang",
-        "Yifei Ming",
-        "Zixuan Ke",
-        "Shafiq Joty",
-        "Aws Albarghouthi",
-        "Frederic Sala"
-      ],
-      "tasks": [],
-      "bucket": "ai-research"
-    },
-    {
       "id": "2602.12192",
       "title": "Query-focused and Memory-aware Reranker for Long Context Processing",
       "abstract": "Built upon the existing analysis of retrieval heads in large language models, we propose an alternative reranking framework that trains models to estimate passage-query relevance using the attention scores of selected heads. This approach provides a listwise solution that leverages holistic information within the entire candidate shortlist during ranking. At the same time, it naturally produces continuous relevance scores, enabling training on arbitrary retrieval datasets without requiring Liker",
       "url_abs": "https://arxiv.org/abs/2602.12192",
       "url_pdf": "https://arxiv.org/pdf/2602.12192",
       "arxiv_id": "2602.12192",
-      "github_stars": 35,
+      "github_stars": 40,
       "published": "2026-02-12T17:23:38.000Z",
       "authors": [
         "Yuqing Li",
@@ -88,37 +45,13 @@
       "bucket": "llm-foundation"
     },
     {
-      "id": "2602.20093",
-      "title": "ManCAR: Manifold-Constrained Latent Reasoning with Adaptive Test-Time Computation for Sequential Recommendation",
-      "abstract": "Sequential recommendation increasingly employs latent multi-step reasoning to enhance test-time computation. Despite empirical gains, existing approaches largely drive intermediate reasoning states via target-dominant objectives without imposing explicit feasibility constraints. This results in latent drift, where reasoning trajectories deviate into implausible regions. We argue that effective recommendation reasoning should instead be viewed as navigation on a collaborative manifold rather than",
-      "url_abs": "https://arxiv.org/abs/2602.20093",
-      "url_pdf": "https://arxiv.org/pdf/2602.20093",
-      "arxiv_id": "2602.20093",
-      "github_stars": 23,
-      "published": "2026-02-23T18:02:50.000Z",
-      "authors": [
-        "Kun Yang",
-        "Yuxuan Zhu",
-        "Yazhe Chen",
-        "Siyao Zheng",
-        "Bangyang Hong",
-        "Kangle Wu",
-        "Yabo Ni",
-        "Anxiang Zeng",
-        "Cong Fu",
-        "Hui Li"
-      ],
-      "tasks": [],
-      "bucket": "ai-agents"
-    },
-    {
       "id": "2602.20739",
       "title": "PyVision-RL: Forging Open Agentic Vision Models via RL",
       "abstract": "Reinforcement learning for agentic multimodal models often suffers from interaction collapse, where models learn to reduce tool usage and multi-turn reasoning, limiting the benefits of agentic behavior. We introduce PyVision-RL, a reinforcement learning framework for open-weight multimodal models that stabilizes training and sustains interaction. Our approach combines an oversampling-filtering-ranking rollout strategy with an accumulative tool reward to prevent collapse and encourage multi-turn ",
       "url_abs": "https://arxiv.org/abs/2602.20739",
       "url_pdf": "https://arxiv.org/pdf/2602.20739",
       "arxiv_id": "2602.20739",
-      "github_stars": 22,
+      "github_stars": 24,
       "published": "2026-02-24T10:08:33.000Z",
       "authors": [
         "Shitian Zhao",
@@ -139,7 +72,7 @@
       "url_abs": "https://arxiv.org/abs/2602.21204",
       "url_pdf": "https://arxiv.org/pdf/2602.21204",
       "arxiv_id": "2602.21204",
-      "github_stars": 21,
+      "github_stars": 23,
       "published": "2026-02-24T18:59:30.000Z",
       "authors": [
         "Junchen Liu",
@@ -183,7 +116,7 @@
       "url_abs": "https://arxiv.org/abs/2602.21202",
       "url_pdf": "https://arxiv.org/pdf/2602.21202",
       "arxiv_id": "2602.21202",
-      "github_stars": 18,
+      "github_stars": 20,
       "published": "2026-02-24T18:57:33.000Z",
       "authors": [
         "Hanxiang Qin",
@@ -197,46 +130,28 @@
       "bucket": "ai-audio"
     },
     {
-      "id": "2602.16863",
-      "title": "SimToolReal: An Object-Centric Policy for Zero-Shot Dexterous Tool Manipulation",
-      "abstract": "The ability to manipulate tools significantly expands the set of tasks a robot can perform. Yet, tool manipulation represents a challenging class of dexterity, requiring grasping thin objects, in-hand object rotations, and forceful interactions. Since collecting teleoperation data for these behaviors is challenging, sim-to-real reinforcement learning (RL) is a promising alternative. However, prior approaches typically require substantial engineering effort to model objects and tune reward functi",
-      "url_abs": "https://arxiv.org/abs/2602.16863",
-      "url_pdf": "https://arxiv.org/pdf/2602.16863",
-      "arxiv_id": "2602.16863",
-      "github_stars": 14,
-      "published": "2026-02-18T20:42:39.000Z",
+      "id": "2602.12160",
+      "title": "DreamID-Omni: Unified Framework for Controllable Human-Centric Audio-Video Generation",
+      "abstract": "Recent advancements in foundation models have revolutionized joint audio-video generation. However, existing approaches typically treat human-centric tasks including reference-based audio-video generation (R2AV), video editing (RV2AV) and audio-driven video animation (RA2V) as isolated objectives. Furthermore, achieving precise, disentangled control over multiple character identities and voice timbres within a single framework remains an open challenge. In this paper, we propose DreamID-Omni, a ",
+      "url_abs": "https://arxiv.org/abs/2602.12160",
+      "url_pdf": "https://arxiv.org/pdf/2602.12160",
+      "arxiv_id": "2602.12160",
+      "github_stars": 19,
+      "published": "2026-02-12T16:41:52.000Z",
       "authors": [
-        "Kushal Kedia",
-        "Tyler Ga Wei Lum",
-        "Jeannette Bohg",
-        "C. Karen Liu"
+        "Xu Guo",
+        "Fulong Ye",
+        "Qichao Sun",
+        "Liyang Chen",
+        "Bingchuan Li",
+        "Pengze Zhang",
+        "Jiawei Liu",
+        "Songtao Zhao",
+        "Qian He",
+        "Xiangwang Hou"
       ],
       "tasks": [],
-      "bucket": "ai-research"
-    },
-    {
-      "id": "2602.18996",
-      "title": "Learning Cross-View Object Correspondence via Cycle-Consistent Mask Prediction",
-      "abstract": "We study the task of establishing object-level visual correspondence across different viewpoints in videos, focusing on the challenging egocentric-to-exocentric and exocentric-to-egocentric scenarios. We propose a simple yet effective framework based on conditional binary segmentation, where an object query mask is encoded into a latent representation to guide the localization of the corresponding object in a target video. To encourage robust, view-invariant representations, we introduce a cycle",
-      "url_abs": "https://arxiv.org/abs/2602.18996",
-      "url_pdf": "https://arxiv.org/pdf/2602.18996",
-      "arxiv_id": "2602.18996",
-      "github_stars": 14,
-      "published": "2026-02-22T00:53:03.000Z",
-      "authors": [
-        "Shannan Yan",
-        "Leqi Zheng",
-        "Keyu Lv",
-        "Jingchen Ni",
-        "Hongyang Wei",
-        "Jiajun Zhang",
-        "Guangting Wang",
-        "Jing Lyu",
-        "Chun Yuan",
-        "Fengyun Rao"
-      ],
-      "tasks": [],
-      "bucket": "computer-vision"
+      "bucket": "llm-foundation"
     },
     {
       "id": "2602.20951",
@@ -259,13 +174,41 @@
       "bucket": "llm-foundation"
     },
     {
+      "id": "2602.21534",
+      "title": "ARLArena: A Unified Framework for Stable Agentic Reinforcement Learning",
+      "abstract": "Agentic reinforcement learning (ARL) has rapidly gained attention as a promising paradigm for training agents to solve complex, multi-step interactive tasks. Despite encouraging early results, ARL remains highly unstable, often leading to training collapse. This instability limits scalability to larger environments and longer interaction horizons, and constrains systematic exploration of algorithmic design choices. In this paper, we first propose ARLArena, a stable training recipe and systematic",
+      "url_abs": "https://arxiv.org/abs/2602.21534",
+      "url_pdf": "https://arxiv.org/pdf/2602.21534",
+      "arxiv_id": "2602.21534",
+      "github_stars": 11,
+      "published": "2026-02-25T03:43:34.000Z",
+      "authors": [
+        "Xiaoxuan Wang",
+        "Han Zhang",
+        "Haixin Wang",
+        "Yidan Shi",
+        "Ruoyan Li",
+        "Kaiqiao Han",
+        "Chenyi Tong",
+        "Haoran Deng",
+        "Renliang Sun",
+        "Alexander Taylor",
+        "Yanqiao Zhu",
+        "Jason Cong",
+        "Yizhou Sun",
+        "Wei Wang"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
       "id": "2602.18940",
       "title": "DREAM: Deep Research Evaluation with Agentic Metrics",
       "abstract": "Deep Research Agents generate analyst-grade reports, yet evaluating them remains challenging due to the absence of a single ground truth and the multidimensional nature of research quality. Recent benchmarks propose distinct methodologies, yet they suffer from the Mirage of Synthesis, where strong surface-level fluency and citation alignment can obscure underlying factual and reasoning defects. We characterize this gap by introducing a taxonomy across four verticals that exposes a critical capab",
       "url_abs": "https://arxiv.org/abs/2602.18940",
       "url_pdf": "https://arxiv.org/pdf/2602.18940",
       "arxiv_id": "2602.18940",
-      "github_stars": 10,
+      "github_stars": 11,
       "published": "2026-02-21T19:14:31.000Z",
       "authors": [
         "Elad Ben Avraham",
@@ -290,7 +233,7 @@
       "url_abs": "https://arxiv.org/abs/2602.14337",
       "url_pdf": "https://arxiv.org/pdf/2602.14337",
       "arxiv_id": "2602.14337",
-      "github_stars": 10,
+      "github_stars": 11,
       "published": "2026-02-15T23:12:57.000Z",
       "authors": [
         "Yukang Feng",
@@ -317,33 +260,13 @@
       "bucket": "llm-foundation"
     },
     {
-      "id": "2602.18742",
-      "title": "RoboCurate: Harnessing Diversity with Action-Verified Neural Trajectory for Robot Learning",
-      "abstract": "Synthetic data generated by video generative models has shown promise for robot learning as a scalable pipeline, but it often suffers from inconsistent action quality due to imperfectly generated videos. Recently, vision-language models (VLMs) have been leveraged to validate video quality, but they have limitations in distinguishing physically accurate videos and, even then, cannot directly evaluate the generated actions themselves. To tackle this issue, we introduce RoboCurate, a novel syntheti",
-      "url_abs": "https://arxiv.org/abs/2602.18742",
-      "url_pdf": "https://arxiv.org/pdf/2602.18742",
-      "arxiv_id": "2602.18742",
-      "github_stars": 9,
-      "published": "2026-02-21T07:33:24.000Z",
-      "authors": [
-        "Seungku Kim",
-        "Suhyeok Jang",
-        "Byungjun Yoon",
-        "Dongyoung Kim",
-        "John Won",
-        "Jinwoo Shin"
-      ],
-      "tasks": [],
-      "bucket": "llm-foundation"
-    },
-    {
       "id": "2602.20309",
       "title": "QuantVLA: Scale-Calibrated Post-Training Quantization for Vision-Language-Action Models",
       "abstract": "Vision-language-action (VLA) models unify perception, language, and control for embodied agents but face significant challenges in practical deployment due to rapidly increasing compute and memory demands, especially as models scale to longer horizons and larger backbones. To address these bottlenecks, we introduce QuantVLA, a training-free post-training quantization (PTQ) framework that, to our knowledge, is the first PTQ approach for VLA systems and the first to successfully quantize a diffusi",
       "url_abs": "https://arxiv.org/abs/2602.20309",
       "url_pdf": "https://arxiv.org/pdf/2602.20309",
       "arxiv_id": "2602.20309",
-      "github_stars": 8,
+      "github_stars": 10,
       "published": "2026-02-23T19:55:54.000Z",
       "authors": [
         "Jingxuan Zhang",
@@ -387,24 +310,199 @@
       "bucket": "llm-foundation"
     },
     {
-      "id": "2602.16872",
-      "title": "DODO: Discrete OCR Diffusion Models",
-      "abstract": "Optical Character Recognition (OCR) is a fundamental task for digitizing information, serving as a critical bridge between visual data and textual understanding. While modern Vision-Language Models (VLM) have achieved high accuracy in this domain, they predominantly rely on autoregressive decoding, which becomes computationally expensive and slow for long documents as it requires a sequential forward pass for every generated token. We identify a key opportunity to overcome this bottleneck: unlik",
-      "url_abs": "https://arxiv.org/abs/2602.16872",
-      "url_pdf": "https://arxiv.org/pdf/2602.16872",
-      "arxiv_id": "2602.16872",
-      "github_stars": 8,
-      "published": "2026-02-18T20:59:22.000Z",
+      "id": "2602.18283",
+      "title": "HyTRec: A Hybrid Temporal-Aware Attention Architecture for Long Behavior Sequential Recommendation",
+      "abstract": "Modeling long sequences of user behaviors has emerged as a critical frontier in generative recommendation. However, existing solutions face a dilemma: linear attention mechanisms achieve efficiency at the cost of retrieval precision due to limited state capacity, while softmax attention suffers from prohibitive computational overhead. To address this challenge, we propose HyTRec, a model featuring a Hybrid Attention architecture that explicitly decouples long-term stable preferences from short-t",
+      "url_abs": "https://arxiv.org/abs/2602.18283",
+      "url_pdf": "https://arxiv.org/pdf/2602.18283",
+      "arxiv_id": "2602.18283",
+      "github_stars": 7,
+      "published": "2026-02-20T15:11:40.000Z",
       "authors": [
-        "Sean Man",
-        "Roy Ganz",
-        "Roi Ronen",
-        "Shahar Tsiper",
-        "Shai Mazor",
-        "Niv Nayman"
+        "Lei Xin",
+        "Yuhao Zheng",
+        "Ke Cheng",
+        "Changjiang Jiang",
+        "Zifan Zhang",
+        "Fanhu Zeng"
+      ],
+      "tasks": [],
+      "bucket": "ai-image-generation"
+    },
+    {
+      "id": "2602.21818",
+      "title": "SkyReels-V4: Multi-modal Video-Audio Generation, Inpainting and Editing model",
+      "abstract": "SkyReels V4 is a unified multi modal video foundation model for joint video audio generation, inpainting, and editing. The model adopts a dual stream Multimodal Diffusion Transformer (MMDiT) architecture, where one branch synthesizes video and the other generates temporally aligned audio, while sharing a powerful text encoder based on the Multimodal Large Language Models (MMLM). SkyReels V4 accepts rich multi modal instructions, including text, images, video clips, masks, and audio references. B",
+      "url_abs": "https://arxiv.org/abs/2602.21818",
+      "url_pdf": "https://arxiv.org/pdf/2602.21818",
+      "arxiv_id": "2602.21818",
+      "github_stars": 6,
+      "published": "2026-02-25T11:47:00.000Z",
+      "authors": [
+        "Guibin Chen",
+        "Dixuan Lin",
+        "Jiangping Yang",
+        "Youqiang Zhang",
+        "Zhengcong Fei",
+        "Debang Li",
+        "Sheng Chen",
+        "Chaofeng Ao",
+        "Nuo Pang",
+        "Yiming Wang",
+        "Yikun Dou",
+        "Zheng Chen",
+        "Mingyuan Fan",
+        "Tuanhui Li",
+        "Mingshan Chang",
+        "Hao Zhang",
+        "Xiaopeng Sun",
+        "Jingtao Xu",
+        "Yuqiang Xie",
+        "Jiahua Wang",
+        "Zhiheng Xu",
+        "Weiming Xiong",
+        "Yuzhe Jin",
+        "Baoxuan Gu",
+        "Binjie Mao",
+        "Yunjie Yu",
+        "Jujie He",
+        "Yuhao Feng",
+        "Shiwen Tu",
+        "Chaojie Wang",
+        "Rui Yan",
+        "Wei Shen",
+        "Jingchen Wu",
+        "Peng Zhao",
+        "Xuanyue Zhong",
+        "Zhuangzhuang Liu",
+        "Kaifei Wang",
+        "Fuxiang Zhang",
+        "Weikai Xu",
+        "Wenyan Liu",
+        "Binglu Zhang",
+        "Yu Shen",
+        "Tianhui Xiong",
+        "Bin Peng",
+        "Liang Zeng",
+        "Xuchen Song",
+        "Haoxiang Guo",
+        "Peiyu Wang",
+        "Yahui Zhou"
       ],
       "tasks": [],
       "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.22208",
+      "title": "Solaris: Building a Multiplayer Video World Model in Minecraft",
+      "abstract": "Existing action-conditioned video generation models (video world models) are limited to single-agent perspectives, failing to capture the multi-agent interactions of real-world environments. We introduce Solaris, a multiplayer video world model that simulates consistent multi-view observations. To enable this, we develop a multiplayer data system designed for robust, continuous, and automated data collection on video games such as Minecraft. Unlike prior platforms built for single-player setting",
+      "url_abs": "https://arxiv.org/abs/2602.22208",
+      "url_pdf": "https://arxiv.org/pdf/2602.22208",
+      "arxiv_id": "2602.22208",
+      "github_stars": 6,
+      "published": "2026-02-25T18:59:01.000Z",
+      "authors": [
+        "Georgy Savva",
+        "Oscar Michel",
+        "Daohan Lu",
+        "Suppakit Waiwitlikhit",
+        "Timothy Meehan",
+        "Dhairya Mishra",
+        "Srivats Poddar",
+        "Jack Lu",
+        "Saining Xie"
+      ],
+      "tasks": [],
+      "bucket": "ai-agents"
+    },
+    {
+      "id": "2602.18998",
+      "title": "Benchmark Test-Time Scaling of General LLM Agents",
+      "abstract": "LLM agents are increasingly expected to function as general-purpose systems capable of resolving open-ended user requests. While existing benchmarks focus on domain-aware environments for developing specialized agents, evaluating general-purpose agents requires more realistic settings that challenge them to operate across multiple skills and tools within a unified environment. We introduce General AgentBench, a benchmark that provides such a unified framework for evaluating general LLM agents ac",
+      "url_abs": "https://arxiv.org/abs/2602.18998",
+      "url_pdf": "https://arxiv.org/pdf/2602.18998",
+      "arxiv_id": "2602.18998",
+      "github_stars": 6,
+      "published": "2026-02-22T01:08:02.000Z",
+      "authors": [
+        "Xiaochuan Li",
+        "Ryan Ming",
+        "Pranav Setlur",
+        "Abhijay Paladugu",
+        "Andy Tang",
+        "Hao Kang",
+        "Shuai Shao",
+        "Rong Jin",
+        "Chenyan Xiong"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.19633",
+      "title": "TAPE: Tool-Guided Adaptive Planning and Constrained Execution in Language Model Agents",
+      "abstract": "Language Model (LM) agents have demonstrated remarkable capabilities in solving tasks that require multiple interactions with the environment. However, they remain vulnerable in environments where a single error often leads to irrecoverable failure, particularly under strict feasibility constraints. We systematically analyze existing agent frameworks, identifying imperfect planning and stochastic execution as the primary causes. To address these challenges, we propose Tool-guided Adaptive Planni",
+      "url_abs": "https://arxiv.org/abs/2602.19633",
+      "url_pdf": "https://arxiv.org/pdf/2602.19633",
+      "arxiv_id": "2602.19633",
+      "github_stars": 6,
+      "published": "2026-02-23T09:19:56.000Z",
+      "authors": [
+        "Jongwon Jeong",
+        "Jungtaek Kim",
+        "Kangwook Lee"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.22190",
+      "title": "GUI-Libra: Training Native GUI Agents to Reason and Act with Action-aware Supervision and Partially Verifiable RL",
+      "abstract": "Open-source native GUI agents still lag behind closed-source systems on long-horizon navigation tasks. This gap stems from two limitations: a shortage of high-quality, action-aligned reasoning data, and the direct adoption of generic post-training pipelines that overlook the unique challenges of GUI agents. We identify two fundamental issues in these pipelines: (i) standard SFT with CoT reasoning often hurts grounding, and (ii) step-wise RLVR-tyle training faces partial verifiability, where mult",
+      "url_abs": "https://arxiv.org/abs/2602.22190",
+      "url_pdf": "https://arxiv.org/pdf/2602.22190",
+      "arxiv_id": "2602.22190",
+      "github_stars": 5,
+      "published": "2026-02-25T18:34:57.000Z",
+      "authors": [
+        "Rui Yang",
+        "Qianhui Wu",
+        "Zhaoyang Wang",
+        "Hanyang Chen",
+        "Ke Yang",
+        "Hao Cheng",
+        "Huaxiu Yao",
+        "Baoling Peng",
+        "Huan Zhang",
+        "Jianfeng Gao",
+        "Tong Zhang"
+      ],
+      "tasks": [],
+      "bucket": "ai-agents"
+    },
+    {
+      "id": "2602.19163",
+      "title": "JavisDiT++: Unified Modeling and Optimization for Joint Audio-Video Generation",
+      "abstract": "AIGC has rapidly expanded from text-to-image generation toward high-quality multimodal synthesis across video and audio. Within this context, joint audio-video generation (JAVG) has emerged as a fundamental task that produces synchronized and semantically aligned sound and vision from textual descriptions. However, compared with advanced commercial models such as Veo3, existing open-source methods still suffer from limitations in generation quality, temporal synchrony, and alignment with human p",
+      "url_abs": "https://arxiv.org/abs/2602.19163",
+      "url_pdf": "https://arxiv.org/pdf/2602.19163",
+      "arxiv_id": "2602.19163",
+      "github_stars": 5,
+      "published": "2026-02-22T12:44:28.000Z",
+      "authors": [
+        "Kai Liu",
+        "Yanhao Zheng",
+        "Kai Wang",
+        "Shengqiong Wu",
+        "Rongjunchen Zhang",
+        "Jiebo Luo",
+        "Dimitrios Hatzinakos",
+        "Ziwei Liu",
+        "Hao Fei",
+        "Tat-Seng Chua"
+      ],
+      "tasks": [],
+      "bucket": "ai-image-generation"
     },
     {
       "id": "2602.16745",
@@ -428,72 +526,45 @@
       "bucket": "ai-agents"
     },
     {
-      "id": "2602.18640",
-      "title": "Decoding ML Decision: An Agentic Reasoning Framework for Large-Scale Ranking System",
-      "abstract": "Modern large-scale ranking systems operate within a sophisticated landscape of competing objectives, operational constraints, and evolving product requirements. Progress in this domain is increasingly bottlenecked by the engineering context constraint: the arduous process of translating ambiguous product intent into reasonable, executable, verifiable hypotheses, rather than by modeling techniques alone. We present GEARS (Generative Engine for Agentic Ranking Systems), a framework that reframes r",
-      "url_abs": "https://arxiv.org/abs/2602.18640",
-      "url_pdf": "https://arxiv.org/pdf/2602.18640",
-      "arxiv_id": "2602.18640",
-      "github_stars": 5,
-      "published": "2026-02-20T22:24:01.000Z",
-      "authors": [
-        "Longfei Yun",
-        "Yihan Wu",
-        "Haoran Liu",
-        "Xiaoxuan Liu",
-        "Ziyun Xu",
-        "Yi Wang",
-        "Yang Xia",
-        "Pengfei Wang",
-        "Mingze Gao",
-        "Yunxiang Wang",
-        "Changfan Chen",
-        "Junfeng Pan"
-      ],
-      "tasks": [],
-      "bucket": "ai-agents"
-    },
-    {
-      "id": "2602.19320",
-      "title": "Anatomy of Agentic Memory: Taxonomy and Empirical Analysis of Evaluation and System Limitations",
-      "abstract": "Agentic memory systems enable large language model (LLM) agents to maintain state across long interactions, supporting long-horizon reasoning and personalization beyond fixed context windows. Despite rapid architectural development, the empirical foundations of these systems remain fragile: existing benchmarks are often underscaled, evaluation metrics are misaligned with semantic utility, performance varies significantly across backbone models, and system-level costs are frequently overlooked. T",
-      "url_abs": "https://arxiv.org/abs/2602.19320",
-      "url_pdf": "https://arxiv.org/pdf/2602.19320",
-      "arxiv_id": "2602.19320",
-      "github_stars": 5,
-      "published": "2026-02-22T19:50:01.000Z",
-      "authors": [
-        "Dongming Jiang",
-        "Yi Li",
-        "Songtao Wei",
-        "Jinxin Yang",
-        "Ayushi Kishore",
-        "Alysa Zhao",
-        "Dingyi Kang",
-        "Xu Hu",
-        "Feng Chen",
-        "Qiannan Li",
-        "Bingzhe Li"
-      ],
-      "tasks": [],
-      "bucket": "llm-foundation"
-    },
-    {
-      "id": "2602.19633",
-      "title": "TAPE: Tool-Guided Adaptive Planning and Constrained Execution in Language Model Agents",
-      "abstract": "Language Model (LM) agents have demonstrated remarkable capabilities in solving tasks that require multiple interactions with the environment. However, they remain vulnerable in environments where a single error often leads to irrecoverable failure, particularly under strict feasibility constraints. We systematically analyze existing agent frameworks, identifying imperfect planning and stochastic execution as the primary causes. To address these challenges, we propose Tool-guided Adaptive Planni",
-      "url_abs": "https://arxiv.org/abs/2602.19633",
-      "url_pdf": "https://arxiv.org/pdf/2602.19633",
-      "arxiv_id": "2602.19633",
+      "id": "2602.20122",
+      "title": "NanoKnow: How to Know What Your Language Model Knows",
+      "abstract": "How do large language models (LLMs) know what they know? Answering this question has been difficult because pre-training data is often a \"black box\" -- unknown or inaccessible. The recent release of nanochat -- a family of small LLMs with fully open pre-training data -- addresses this as it provides a transparent view into where a model's parametric knowledge comes from. Towards the goal of understanding how knowledge is encoded by LLMs, we release NanoKnow, a benchmark dataset that partitions q",
+      "url_abs": "https://arxiv.org/abs/2602.20122",
+      "url_pdf": "https://arxiv.org/pdf/2602.20122",
+      "arxiv_id": "2602.20122",
       "github_stars": 4,
-      "published": "2026-02-23T09:19:56.000Z",
+      "published": "2026-02-23T18:37:49.000Z",
       "authors": [
-        "Jongwon Jeong",
-        "Jungtaek Kim",
-        "Kangwook Lee"
+        "Lingwei Gu",
+        "Nour Jedidi",
+        "Jimmy Lin"
       ],
       "tasks": [],
       "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.22010",
+      "title": "World Guidance: World Modeling in Condition Space for Action Generation",
+      "abstract": "Leveraging future observation modeling to facilitate action generation presents a promising avenue for enhancing the capabilities of Vision-Language-Action (VLA) models. However, existing approaches struggle to strike a balance between maintaining efficient, predictable future representations and preserving sufficient fine-grained information to guide precise action generation. To address this limitation, we propose WoG (World Guidance), a framework that maps future observations into compact con",
+      "url_abs": "https://arxiv.org/abs/2602.22010",
+      "url_pdf": "https://arxiv.org/pdf/2602.22010",
+      "arxiv_id": "2602.22010",
+      "github_stars": 4,
+      "published": "2026-02-25T15:27:09.000Z",
+      "authors": [
+        "Yue Su",
+        "Sijin Chen",
+        "Haixin Shi",
+        "Mingyu Liu",
+        "Zhengshen Zhang",
+        "Ningyuan Huang",
+        "Weiheng Zhong",
+        "Zhengbang Zhu",
+        "Yuxiao Liu",
+        "Xihui Liu"
+      ],
+      "tasks": [],
+      "bucket": "ai-general"
     },
     {
       "id": "2602.20731",
@@ -515,6 +586,48 @@
       ],
       "tasks": [],
       "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.16813",
+      "title": "One-step Language Modeling via Continuous Denoising",
+      "abstract": "Language models based on discrete diffusion have attracted widespread interest for their potential to provide faster generation than autoregressive models. In practice, however, they exhibit a sharp degradation of sample quality in the few-step regime, failing to realize this promise. Here we show that language models leveraging flow-based continuous denoising can outperform discrete diffusion in both quality and speed. By revisiting the fundamentals of flows over discrete modalities, we build a",
+      "url_abs": "https://arxiv.org/abs/2602.16813",
+      "url_pdf": "https://arxiv.org/pdf/2602.16813",
+      "arxiv_id": "2602.16813",
+      "github_stars": 4,
+      "published": "2026-02-18T19:23:07.000Z",
+      "authors": [
+        "Chanhyuk Lee",
+        "Jaehoon Yoo",
+        "Manan Agarwal",
+        "Sheel Shah",
+        "Jerry Huang",
+        "Aditi Raghunathan",
+        "Seunghoon Hong",
+        "Nicholas M. Boffi",
+        "Jinwoo Kim"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.20540",
+      "title": "Generative AI and Machine Learning Collaboration for Container Dwell Time Prediction via Data Standardization",
+      "abstract": "Import container dwell time (ICDT) prediction is a key task for improving productivity in container terminals, as accurate predictions enable the reduction of container re-handling operations by yard cranes. Achieving this objective requires accurately predicting the dwell time of individual containers. However, the primary determinants of dwell time-owner information and cargo information-are recorded as unstructured text, which limits their effective use in machine learning models. This study ",
+      "url_abs": "https://arxiv.org/abs/2602.20540",
+      "url_pdf": "https://arxiv.org/pdf/2602.20540",
+      "arxiv_id": "2602.20540",
+      "github_stars": 4,
+      "published": "2026-02-24T04:38:31.000Z",
+      "authors": [
+        "Minseop Kim",
+        "Takhyeong Kim",
+        "Taekhyun Park",
+        "Hanbyeol Park",
+        "Hyerim Bae"
+      ],
+      "tasks": [],
+      "bucket": "ai-coding"
     },
     {
       "id": "2602.21198",
@@ -555,41 +668,22 @@
       "bucket": "llm-foundation"
     },
     {
-      "id": "2602.18224",
-      "title": "SimVLA: A Simple VLA Baseline for Robotic Manipulation",
-      "abstract": "Vision-Language-Action (VLA) models have emerged as a promising paradigm for general-purpose robotic manipulation, leveraging large-scale pre-training to achieve strong performance. The field has rapidly evolved with additional spatial priors and diverse architectural innovations. However, these advancements are often accompanied by varying training recipes and implementation details, which can make it challenging to disentangle the precise source of empirical gains. In this work, we introduce S",
-      "url_abs": "https://arxiv.org/abs/2602.18224",
-      "url_pdf": "https://arxiv.org/pdf/2602.18224",
-      "arxiv_id": "2602.18224",
-      "github_stars": 4,
-      "published": "2026-02-20T14:04:27.000Z",
+      "id": "2602.15030",
+      "title": "Image Generation with a Sphere Encoder",
+      "abstract": "We introduce the Sphere Encoder, an efficient generative framework capable of producing images in a single forward pass and competing with many-step diffusion models using fewer than five steps. Our approach works by learning an encoder that maps natural images uniformly onto a spherical latent space, and a decoder that maps random latent vectors back to the image space. Trained solely through image reconstruction losses, the model generates an image by simply decoding a random point on the sphe",
+      "url_abs": "https://arxiv.org/abs/2602.15030",
+      "url_pdf": "https://arxiv.org/pdf/2602.15030",
+      "arxiv_id": "2602.15030",
+      "github_stars": 3,
+      "published": "2026-02-16T18:59:57.000Z",
       "authors": [
-        "Yuankai Luo",
-        "Woping Chen",
-        "Tong Liang",
-        "Baiqiao Wang",
-        "Zhenguo Li"
+        "Kaiyu Yue",
+        "Menglin Jia",
+        "Ji Hou",
+        "Tom Goldstein"
       ],
       "tasks": [],
-      "bucket": "ai-general"
-    },
-    {
-      "id": "2602.19128",
-      "title": "K-Search: LLM Kernel Generation via Co-Evolving Intrinsic World Model",
-      "abstract": "Optimizing GPU kernels is critical for efficient modern machine learning systems yet remains challenging due to the complex interplay of design factors and rapid hardware evolution. Existing automated approaches typically treat Large Language Models (LLMs) merely as stochastic code generators within heuristic-guided evolutionary loops. These methods often struggle with complex kernels requiring coordinated, multi-step structural transformations, as they lack explicit planning capabilities and fr",
-      "url_abs": "https://arxiv.org/abs/2602.19128",
-      "url_pdf": "https://arxiv.org/pdf/2602.19128",
-      "arxiv_id": "2602.19128",
-      "github_stars": 4,
-      "published": "2026-02-22T11:06:22.000Z",
-      "authors": [
-        "Shiyi Cao",
-        "Ziming Mao",
-        "Joseph E. Gonzalez",
-        "Ion Stoica"
-      ],
-      "tasks": [],
-      "bucket": "llm-foundation"
+      "bucket": "ai-image-generation"
     },
     {
       "id": "2602.16932",
@@ -605,52 +699,6 @@
         "Fangchen Li",
         "Dae Hoon Park",
         "Yi Fang"
-      ],
-      "tasks": [],
-      "bucket": "llm-foundation"
-    },
-    {
-      "id": "2602.18998",
-      "title": "Benchmark Test-Time Scaling of General LLM Agents",
-      "abstract": "LLM agents are increasingly expected to function as general-purpose systems capable of resolving open-ended user requests. While existing benchmarks focus on domain-aware environments for developing specialized agents, evaluating general-purpose agents requires more realistic settings that challenge them to operate across multiple skills and tools within a unified environment. We introduce General AgentBench, a benchmark that provides such a unified framework for evaluating general LLM agents ac",
-      "url_abs": "https://arxiv.org/abs/2602.18998",
-      "url_pdf": "https://arxiv.org/pdf/2602.18998",
-      "arxiv_id": "2602.18998",
-      "github_stars": 3,
-      "published": "2026-02-22T01:08:02.000Z",
-      "authors": [
-        "Xiaochuan Li",
-        "Ryan Ming",
-        "Pranav Setlur",
-        "Abhijay Paladugu",
-        "Andy Tang",
-        "Hao Kang",
-        "Shuai Shao",
-        "Rong Jin",
-        "Chenyan Xiong"
-      ],
-      "tasks": [],
-      "bucket": "llm-foundation"
-    },
-    {
-      "id": "2602.16813",
-      "title": "One-step Language Modeling via Continuous Denoising",
-      "abstract": "Language models based on discrete diffusion have attracted widespread interest for their potential to provide faster generation than autoregressive models. In practice, however, they exhibit a sharp degradation of sample quality in the few-step regime, failing to realize this promise. Here we show that language models leveraging flow-based continuous denoising can outperform discrete diffusion in both quality and speed. By revisiting the fundamentals of flows over discrete modalities, we build a",
-      "url_abs": "https://arxiv.org/abs/2602.16813",
-      "url_pdf": "https://arxiv.org/pdf/2602.16813",
-      "arxiv_id": "2602.16813",
-      "github_stars": 3,
-      "published": "2026-02-18T19:23:07.000Z",
-      "authors": [
-        "Chanhyuk Lee",
-        "Jaehoon Yoo",
-        "Manan Agarwal",
-        "Sheel Shah",
-        "Jerry Huang",
-        "Aditi Raghunathan",
-        "Seunghoon Hong",
-        "Nicholas M. Boffi",
-        "Jinwoo Kim"
       ],
       "tasks": [],
       "bucket": "llm-foundation"
@@ -691,63 +739,13 @@
       "bucket": "llm-foundation"
     },
     {
-      "id": "2602.20424",
-      "title": "Implicit Intelligence -- Evaluating Agents on What Users Don't Say",
-      "abstract": "Real-world requests to AI agents are fundamentally underspecified. Natural human communication relies on shared context and unstated constraints that speakers expect listeners to infer. Current agentic benchmarks test explicit instruction-following but fail to evaluate whether agents can reason about implicit requirements spanning accessibility needs, privacy boundaries, catastrophic risks, and contextual constraints. We present Implicit Intelligence, an evaluation framework testing whether AI a",
-      "url_abs": "https://arxiv.org/abs/2602.20424",
-      "url_pdf": "https://arxiv.org/pdf/2602.20424",
-      "arxiv_id": "2602.20424",
-      "github_stars": 3,
-      "published": "2026-02-23T23:46:55.000Z",
-      "authors": [
-        "Ved Sirdeshmukh",
-        "Marc Wetter"
-      ],
-      "tasks": [],
-      "bucket": "llm-foundation"
-    },
-    {
-      "id": "2602.18333",
-      "title": "On the \"Induction Bias\" in Sequence Models",
-      "abstract": "Despite the remarkable practical success of transformer-based language models, recent work has raised concerns about their ability to perform state tracking. In particular, a growing body of literature has shown this limitation primarily through failures in out-of-distribution (OOD) generalization, such as length extrapolation. In this work, we shift attention to the in-distribution implications of these limitations. We conduct a large-scale experimental study of the data efficiency of transform",
-      "url_abs": "https://arxiv.org/abs/2602.18333",
-      "url_pdf": "https://arxiv.org/pdf/2602.18333",
-      "arxiv_id": "2602.18333",
-      "github_stars": 3,
-      "published": "2026-02-20T16:39:07.000Z",
-      "authors": [
-        "M. Reza Ebrahimi",
-        "Micha\u00ebl Defferrard",
-        "Sunny Panchal",
-        "Roland Memisevic"
-      ],
-      "tasks": [],
-      "bucket": "llm-foundation"
-    },
-    {
-      "id": "2602.20792",
-      "title": "SIMSPINE: A Biomechanics-Aware Simulation Framework for 3D Spine Motion Annotation and Benchmarking",
-      "abstract": "Modeling spinal motion is fundamental to understanding human biomechanics, yet remains underexplored in computer vision due to the spine's complex multi-joint kinematics and the lack of large-scale 3D annotations. We present a biomechanics-aware keypoint simulation framework that augments existing human pose datasets with anatomically consistent 3D spinal keypoints derived from musculoskeletal modeling. Using this framework, we create the first open dataset, named SIMSPINE, which provides sparse",
-      "url_abs": "https://arxiv.org/abs/2602.20792",
-      "url_pdf": "https://arxiv.org/pdf/2602.20792",
-      "arxiv_id": "2602.20792",
-      "github_stars": 2,
-      "published": "2026-02-24T11:31:20.000Z",
-      "authors": [
-        "Muhammad Saif Ullah Khan",
-        "Didier Stricker"
-      ],
-      "tasks": [],
-      "bucket": "open-source-ai"
-    },
-    {
       "id": "2602.21201",
       "title": "Aletheia tackles FirstProof autonomously",
       "abstract": "We report the performance of Aletheia (Feng et al., 2026b), a mathematics research agent powered by Gemini 3 Deep Think, on the inaugural FirstProof challenge. Within the allowed timeframe of the challenge, Aletheia autonomously solved 6 problems (2, 5, 7, 8, 9, 10) out of 10 according to majority expert assessments; we note that experts were not unanimous on Problem 8 (only). For full transparency, we explain our interpretation of FirstProof and disclose details about our experiments as well as",
       "url_abs": "https://arxiv.org/abs/2602.21201",
       "url_pdf": "https://arxiv.org/pdf/2602.21201",
       "arxiv_id": "2602.21201",
-      "github_stars": 2,
+      "github_stars": 3,
       "published": "2026-02-24T18:56:10.000Z",
       "authors": [
         "Tony Feng",
@@ -772,16 +770,116 @@
       "bucket": "ai-agents"
     },
     {
-      "id": "2602.19626",
-      "title": "Nacrith: Neural Lossless Compression via Ensemble Context Modeling and High-Precision CDF Coding",
-      "abstract": "We present Nacrith, a lossless compression system that combines a 135M-parameter transformer language model (SmolLM2-135M) with an ensemble of lightweight online predictors and a 32-bit arithmetic coder. Beyond the base LLM-plus-arithmetic-coding paradigm, Nacrith introduces several contributions: (1) a CDF precision upgrade from 2^16 to 2^24 that eliminates ~75% of quantization overhead caused by minimum-probability floors in large vocabularies; (2) a token-level N-gram model for fast local pre",
-      "url_abs": "https://arxiv.org/abs/2602.19626",
-      "url_pdf": "https://arxiv.org/pdf/2602.19626",
-      "arxiv_id": "2602.19626",
-      "github_stars": 2,
-      "published": "2026-02-23T09:14:05.000Z",
+      "id": "2602.20424",
+      "title": "Implicit Intelligence -- Evaluating Agents on What Users Don't Say",
+      "abstract": "Real-world requests to AI agents are fundamentally underspecified. Natural human communication relies on shared context and unstated constraints that speakers expect listeners to infer. Current agentic benchmarks test explicit instruction-following but fail to evaluate whether agents can reason about implicit requirements spanning accessibility needs, privacy boundaries, catastrophic risks, and contextual constraints. We present Implicit Intelligence, an evaluation framework testing whether AI a",
+      "url_abs": "https://arxiv.org/abs/2602.20424",
+      "url_pdf": "https://arxiv.org/pdf/2602.20424",
+      "arxiv_id": "2602.20424",
+      "github_stars": 3,
+      "published": "2026-02-23T23:46:55.000Z",
       "authors": [
-        "Roberto Tacconelli"
+        "Ved Sirdeshmukh",
+        "Marc Wetter"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.14878",
+      "title": "Model Context Protocol (MCP) Tool Descriptions Are Smelly! Towards Improving AI Agent Efficiency with Augmented MCP Tool Descriptions",
+      "abstract": "The Model Context Protocol (MCP) introduces a standard specification that defines how Foundation Model (FM)-based agents should interact with external systems by invoking tools. However, to understand a tool's purpose and features, FMs rely on natural-language tool descriptions, making these descriptions a critical component in guiding FMs to select the optimal tool for a given (sub)task and to pass the right arguments to the tool. While defects or smells in these descriptions can misguide FM-ba",
+      "url_abs": "https://arxiv.org/abs/2602.14878",
+      "url_pdf": "https://arxiv.org/pdf/2602.14878",
+      "arxiv_id": "2602.14878",
+      "github_stars": 2,
+      "published": "2026-02-16T16:10:11.000Z",
+      "authors": [
+        "Mohammed Mehedi Hasan",
+        "Hao Li",
+        "Gopi Krishnan Rajbahadur",
+        "Bram Adams",
+        "Ahmed E. Hassan"
+      ],
+      "tasks": [],
+      "bucket": "ai-agents"
+    },
+    {
+      "id": "2602.20792",
+      "title": "SIMSPINE: A Biomechanics-Aware Simulation Framework for 3D Spine Motion Annotation and Benchmarking",
+      "abstract": "Modeling spinal motion is fundamental to understanding human biomechanics, yet remains underexplored in computer vision due to the spine's complex multi-joint kinematics and the lack of large-scale 3D annotations. We present a biomechanics-aware keypoint simulation framework that augments existing human pose datasets with anatomically consistent 3D spinal keypoints derived from musculoskeletal modeling. Using this framework, we create the first open dataset, named SIMSPINE, which provides sparse",
+      "url_abs": "https://arxiv.org/abs/2602.20792",
+      "url_pdf": "https://arxiv.org/pdf/2602.20792",
+      "arxiv_id": "2602.20792",
+      "github_stars": 2,
+      "published": "2026-02-24T11:31:20.000Z",
+      "authors": [
+        "Muhammad Saif Ullah Khan",
+        "Didier Stricker"
+      ],
+      "tasks": [],
+      "bucket": "open-source-ai"
+    },
+    {
+      "id": "2602.18993",
+      "title": "SeaCache: Spectral-Evolution-Aware Cache for Accelerating Diffusion Models",
+      "abstract": "Diffusion models are a strong backbone for visual generation, but their inherently sequential denoising process leads to slow inference. Previous methods accelerate sampling by caching and reusing intermediate outputs based on feature distances between adjacent timesteps. However, existing caching strategies typically rely on raw feature differences that entangle content and noise. This design overlooks spectral evolution, where low-frequency structure appears early and high-frequency detail is ",
+      "url_abs": "https://arxiv.org/abs/2602.18993",
+      "url_pdf": "https://arxiv.org/pdf/2602.18993",
+      "arxiv_id": "2602.18993",
+      "github_stars": 1,
+      "published": "2026-02-22T00:48:03.000Z",
+      "authors": [
+        "Jiwoo Chung",
+        "Sangeek Hyun",
+        "MinKyu Lee",
+        "Byeongju Han",
+        "Geonho Cha",
+        "Dongyoon Wee",
+        "Youngjun Hong",
+        "Jae-Pil Heo"
+      ],
+      "tasks": [],
+      "bucket": "ai-image-generation"
+    },
+    {
+      "id": "2602.22144",
+      "title": "NoLan: Mitigating Object Hallucinations in Large Vision-Language Models via Dynamic Suppression of Language Priors",
+      "abstract": "Object hallucination is a critical issue in Large Vision-Language Models (LVLMs), where outputs include objects that do not appear in the input image. A natural question arises from this phenomenon: Which component of the LVLM pipeline primarily contributes to object hallucinations? The vision encoder to perceive visual information, or the language decoder to generate text responses? In this work, we strive to answer this question through designing a systematic experiment to analyze the roles of",
+      "url_abs": "https://arxiv.org/abs/2602.22144",
+      "url_pdf": "https://arxiv.org/pdf/2602.22144",
+      "arxiv_id": "2602.22144",
+      "github_stars": 1,
+      "published": "2026-02-25T17:50:41.000Z",
+      "authors": [
+        "Lingfeng Ren",
+        "Weihao Yu",
+        "Runpeng Yu",
+        "Xinchao Wang"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.18527",
+      "title": "JAEGER: Joint 3D Audio-Visual Grounding and Reasoning in Simulated Physical Environments",
+      "abstract": "Current audio-visual large language models (AV-LLMs) are predominantly restricted to 2D perception, relying on RGB video and monaural audio. This design choice introduces a fundamental dimensionality mismatch that precludes reliable source localization and spatial reasoning in complex 3D environments. We address this limitation by presenting JAEGER, a framework that extends AV-LLMs to 3D space, to enable joint spatial grounding and reasoning through the integration of RGB-D observations and mult",
+      "url_abs": "https://arxiv.org/abs/2602.18527",
+      "url_pdf": "https://arxiv.org/pdf/2602.18527",
+      "arxiv_id": "2602.18527",
+      "github_stars": 1,
+      "published": "2026-02-20T04:06:07.000Z",
+      "authors": [
+        "Zhan Liu",
+        "Changli Tang",
+        "Yuxin Wang",
+        "Zhiyuan Zhu",
+        "Youjun Chen",
+        "Yiwen Shao",
+        "Tianzi Wang",
+        "Lei Ke",
+        "Zengrui Jin",
+        "Chao Zhang"
       ],
       "tasks": [],
       "bucket": "llm-foundation"
@@ -910,59 +1008,82 @@
       "bucket": "llm-foundation"
     },
     {
-      "id": "2602.17393",
-      "title": "Contact-Anchored Proprioceptive Odometry for Quadruped Robots",
-      "abstract": "Reliable odometry for legged robots without cameras or LiDAR remains challenging due to IMU drift and noisy joint velocity sensing. This paper presents a purely proprioceptive state estimator that uses only IMU and motor measurements to jointly estimate body pose and velocity, with a unified formulation applicable to biped, quadruped, and wheel-legged robots. The key idea is to treat each contacting leg as a kinematic anchor: joint-torque--based foot wrench estimation selects reliable contacts, ",
-      "url_abs": "https://arxiv.org/abs/2602.17393",
-      "url_pdf": "https://arxiv.org/pdf/2602.17393",
-      "arxiv_id": "2602.17393",
-      "github_stars": 1,
-      "published": "2026-02-19T14:18:26.000Z",
+      "id": "2602.19004",
+      "title": "MoBind: Motion Binding for Fine-Grained IMU-Video Pose Alignment",
+      "abstract": "We aim to learn a joint representation between inertial measurement unit (IMU) signals and 2D pose sequences extracted from video, enabling accurate cross-modal retrieval, temporal synchronization, subject and body-part localization, and action recognition. To this end, we introduce MoBind, a hierarchical contrastive learning framework designed to address three challenges: (1) filtering out irrelevant visual background, (2) modeling structured multi-sensor IMU configurations, and (3) achieving f",
+      "url_abs": "https://arxiv.org/abs/2602.19004",
+      "url_pdf": "https://arxiv.org/pdf/2602.19004",
+      "arxiv_id": "2602.19004",
+      "github_stars": 0,
+      "published": "2026-02-22T01:54:29.000Z",
       "authors": [
-        "Minxing Sun",
-        "Yao Mao"
+        "Duc Duy Nguyen",
+        "Tat-Jun Chin",
+        "Minh Hoai"
       ],
       "tasks": [],
       "bucket": "ai-coding"
     },
     {
-      "id": "2602.12100",
-      "title": "AssetFormer: Modular 3D Assets Generation with Autoregressive Transformer",
-      "abstract": "The digital industry demands high-quality, diverse modular 3D assets, especially for user-generated content~(UGC). In this work, we introduce AssetFormer, an autoregressive Transformer-based model designed to generate modular 3D assets from textual descriptions. Our pilot study leverages real-world modular assets collected from online platforms. AssetFormer tackles the challenge of creating assets composed of primitives that adhere to constrained design parameters for various applications. By in",
-      "url_abs": "https://arxiv.org/abs/2602.12100",
-      "url_pdf": "https://arxiv.org/pdf/2602.12100",
-      "arxiv_id": "2602.12100",
-      "github_stars": 1,
-      "published": "2026-02-12T15:55:21.000Z",
+      "id": "2602.21472",
+      "title": "The Design Space of Tri-Modal Masked Diffusion Models",
+      "abstract": "Discrete diffusion models have emerged as strong alternatives to autoregressive language models, with recent work initializing and fine-tuning a base unimodal model for bimodal generation. Diverging from previous approaches, we introduce the first tri-modal masked diffusion model pretrained from scratch on text, image-text, and audio-text data. We systematically analyze multimodal scaling laws, modality mixing ratios, noise schedules, and batch-size effects, and we provide optimized inference sa",
+      "url_abs": "https://arxiv.org/abs/2602.21472",
+      "url_pdf": "https://arxiv.org/pdf/2602.21472",
+      "arxiv_id": "2602.21472",
+      "github_stars": 0,
+      "published": "2026-02-25T01:02:11.000Z",
       "authors": [
-        "Lingting Zhu",
-        "Shengju Qian",
-        "Haidi Fan",
-        "Jiayu Dong",
-        "Zhenchao Jin",
-        "Siwei Zhou",
-        "Gen Dong",
-        "Xin Wang",
-        "Lequan Yu"
+        "Louis Bethune",
+        "Victor Turrisi",
+        "Bruno Kacper Mlodozeniec",
+        "Pau Rodriguez Lopez",
+        "Lokesh Boominathan",
+        "Nikhil Bhendawade",
+        "Amitis Shidani",
+        "Joris Pelemans",
+        "Theo X. Olausson",
+        "Devon Hjelm",
+        "Paul Dixon",
+        "Joao Monteiro",
+        "Pierre Ablin",
+        "Vishnu Banna",
+        "Arno Blaas",
+        "Nick Henderson",
+        "Kari Noriy",
+        "Dan Busbridge",
+        "Josh Susskind",
+        "Marco Cuturi",
+        "Irina Belousova",
+        "Luca Zappella",
+        "Russ Webb",
+        "Jason Ramapuram"
       ],
       "tasks": [],
       "bucket": "llm-foundation"
     },
     {
-      "id": "2602.18915",
-      "title": "AAVGen: Precision Engineering of Adeno-associated Viral Capsids for Renal Selective Targeting",
-      "abstract": "Adeno-associated viruses (AAVs) are promising vectors for gene therapy, but their native serotypes face limitations in tissue tropism, immune evasion, and production efficiency. Engineering capsids to overcome these hurdles is challenging due to the vast sequence space and the difficulty of simultaneously optimizing multiple functional properties. The complexity also adds when it comes to the kidney, which presents unique anatomical barriers and cellular targets that require precise and efficien",
-      "url_abs": "https://arxiv.org/abs/2602.18915",
-      "url_pdf": "https://arxiv.org/pdf/2602.18915",
-      "arxiv_id": "2602.18915",
-      "github_stars": 1,
-      "published": "2026-02-21T17:46:34.000Z",
+      "id": "2602.21835",
+      "title": "UniVBench: Towards Unified Evaluation for Video Foundation Models",
+      "abstract": "Video foundation models aim to integrate video understanding, generation, editing, and instruction following within a single framework, making them a central direction for next-generation multimodal systems. However, existing evaluation benchmarks remain fragmented and limited in scope, as they each target a single task, rely on task-specific metrics, and typically use short or simple video clips. As a result, they do not capture the unified capabilities that these models are designed to deliver",
+      "url_abs": "https://arxiv.org/abs/2602.21835",
+      "url_pdf": "https://arxiv.org/pdf/2602.21835",
+      "arxiv_id": "2602.21835",
+      "github_stars": 0,
+      "published": "2026-02-25T12:08:53.000Z",
       "authors": [
-        "Mohammadreza Ghaffarzadeh-Esfahani",
-        "Yousof Gheisari"
+        "Jianhui Wei",
+        "Xiaotian Zhang",
+        "Yichen Li",
+        "Yuan Wang",
+        "Yan Zhang",
+        "Ziyi Chen",
+        "Zhihang Tang",
+        "Wei Xu",
+        "Zuozhu Liu"
       ],
       "tasks": [],
-      "bucket": "llm-foundation"
+      "bucket": "ai-agents"
     },
     {
       "id": "2602.20903",
@@ -989,25 +1110,6 @@
       "bucket": "llm-foundation"
     },
     {
-      "id": "2602.20540",
-      "title": "Generative AI and Machine Learning Collaboration for Container Dwell Time Prediction via Data Standardization",
-      "abstract": "Import container dwell time (ICDT) prediction is a key task for improving productivity in container terminals, as accurate predictions enable the reduction of container re-handling operations by yard cranes. Achieving this objective requires accurately predicting the dwell time of individual containers. However, the primary determinants of dwell time-owner information and cargo information-are recorded as unstructured text, which limits their effective use in machine learning models. This study ",
-      "url_abs": "https://arxiv.org/abs/2602.20540",
-      "url_pdf": "https://arxiv.org/pdf/2602.20540",
-      "arxiv_id": "2602.20540",
-      "github_stars": 0,
-      "published": "2026-02-24T04:38:31.000Z",
-      "authors": [
-        "Minseop Kim",
-        "Takhyeong Kim",
-        "Taekhyun Park",
-        "Hanbyeol Park",
-        "Hyerim Bae"
-      ],
-      "tasks": [],
-      "bucket": "ai-coding"
-    },
-    {
       "id": "2602.19089",
       "title": "Ani3DHuman: Photorealistic 3D Human Animation with Self-guided Stochastic Sampling",
       "abstract": "Current 3D human animation methods struggle to achieve photorealism: kinematics-based approaches lack non-rigid dynamics (e.g., clothing dynamics), while methods that leverage video diffusion priors can synthesize non-rigid motion but suffer from quality artifacts and identity loss. To overcome these limitations, we present Ani3DHuman, a framework that marries kinematics-based animation with video diffusion priors. We first introduce a layered motion representation that disentangles rigid motion",
@@ -1025,42 +1127,21 @@
       ],
       "tasks": [],
       "bucket": "ai-image-generation"
-    },
-    {
-      "id": "2602.18662",
-      "title": "Large Causal Models for Temporal Causal Discovery",
-      "abstract": "Causal discovery for both cross-sectional and temporal data has traditionally followed a dataset-specific paradigm, where a new model is fitted for each individual dataset. Such an approach limits the potential of multi-dataset pretraining. The concept of large causal models (LCMs) envisions a class of pre-trained neural architectures specifically designed for temporal causal discovery. Prior approaches are constrained to small variable counts, degrade with larger inputs, and rely heavily on syn",
-      "url_abs": "https://arxiv.org/abs/2602.18662",
-      "url_pdf": "https://arxiv.org/pdf/2602.18662",
-      "arxiv_id": "2602.18662",
-      "github_stars": 0,
-      "published": "2026-02-20T23:47:55.000Z",
-      "authors": [
-        "Nikolaos Kougioulis",
-        "Nikolaos Gkorgkolis",
-        "MingXue Wang",
-        "Bora Caglayan",
-        "Dario Simionato",
-        "Andrea Tonon",
-        "Ioannis Tsamardinos"
-      ],
-      "tasks": [],
-      "bucket": "ai-general"
     }
   ],
   "bucket_signals": {
     "llm-foundation": {
-      "paper_count": 30,
-      "total_stars": 229,
+      "paper_count": 29,
+      "total_stars": 263,
       "top_papers": [
         {
           "title": "On Data Engineering for Scaling LLM Terminal Capabilities",
-          "stars": 64,
+          "stars": 75,
           "url": "https://arxiv.org/abs/2602.21193"
         },
         {
           "title": "Query-focused and Memory-aware Reranker for Long Context Processing",
-          "stars": 35,
+          "stars": 40,
           "url": "https://arxiv.org/abs/2602.12192"
         },
         {
@@ -1069,62 +1150,85 @@
           "url": "https://arxiv.org/abs/2602.21015"
         },
         {
+          "title": "DreamID-Omni: Unified Framework for Controllable Human-Centric Audio-Video Generation",
+          "stars": 19,
+          "url": "https://arxiv.org/abs/2602.12160"
+        },
+        {
           "title": "See and Fix the Flaws: Enabling VLMs and Diffusion Models to Comprehend Visual Artifacts via Agentic Data Synthesis",
           "stars": 12,
           "url": "https://arxiv.org/abs/2602.20951"
-        },
-        {
-          "title": "LongCLI-Bench: A Preliminary Benchmark and Study for Long-horizon Agentic Programming in Command-Line Interfaces",
-          "stars": 10,
-          "url": "https://arxiv.org/abs/2602.14337"
         }
       ],
-      "star_share": 0.49782608695652175,
-      "avg_stars": 7.633333333333334,
+      "star_share": 0.6743589743589744,
+      "avg_stars": 9.068965517241379,
       "signal_interpretation": "Hot research area with high implementation interest"
     },
     "ai-research": {
-      "paper_count": 4,
-      "total_stars": 124,
+      "paper_count": 1,
+      "total_stars": 24,
       "top_papers": [
-        {
-          "title": "VLANeXt: Recipes for Building Strong VLA Models",
-          "stars": 44,
-          "url": "https://arxiv.org/abs/2602.18532"
-        },
-        {
-          "title": "SkillOrchestra: Learning to Route Agents via Skill Transfer",
-          "stars": 44,
-          "url": "https://arxiv.org/abs/2602.19672"
-        },
         {
           "title": "PyVision-RL: Forging Open Agentic Vision Models via RL",
-          "stars": 22,
+          "stars": 24,
           "url": "https://arxiv.org/abs/2602.20739"
-        },
-        {
-          "title": "SimToolReal: An Object-Centric Policy for Zero-Shot Dexterous Tool Manipulation",
-          "stars": 14,
-          "url": "https://arxiv.org/abs/2602.16863"
         }
       ],
-      "star_share": 0.26956521739130435,
-      "avg_stars": 31.0,
-      "signal_interpretation": "Hot research area with high implementation interest"
+      "star_share": 0.06153846153846154,
+      "avg_stars": 24.0,
+      "signal_interpretation": "Growing interest in implementations"
     },
-    "ai-agents": {
-      "paper_count": 5,
-      "total_stars": 45,
+    "ai-general": {
+      "paper_count": 2,
+      "total_stars": 27,
       "top_papers": [
         {
-          "title": "ManCAR: Manifold-Constrained Latent Reasoning with Adaptive Test-Time Computation for Sequential Recommendation",
+          "title": "Test-Time Training with KV Binding Is Secretly Linear Attention",
           "stars": 23,
-          "url": "https://arxiv.org/abs/2602.20093"
+          "url": "https://arxiv.org/abs/2602.21204"
         },
         {
+          "title": "World Guidance: World Modeling in Condition Space for Action Generation",
+          "stars": 4,
+          "url": "https://arxiv.org/abs/2602.22010"
+        }
+      ],
+      "star_share": 0.06923076923076923,
+      "avg_stars": 13.5,
+      "signal_interpretation": "Growing interest in implementations"
+    },
+    "ai-audio": {
+      "paper_count": 1,
+      "total_stars": 20,
+      "top_papers": [
+        {
+          "title": "Multi-Vector Index Compression in Any Modality",
+          "stars": 20,
+          "url": "https://arxiv.org/abs/2602.21202"
+        }
+      ],
+      "star_share": 0.05128205128205128,
+      "avg_stars": 20.0,
+      "signal_interpretation": "Growing interest in implementations"
+    },
+    "ai-agents": {
+      "paper_count": 7,
+      "total_stars": 32,
+      "top_papers": [
+        {
           "title": "DREAM: Deep Research Evaluation with Agentic Metrics",
-          "stars": 10,
+          "stars": 11,
           "url": "https://arxiv.org/abs/2602.18940"
+        },
+        {
+          "title": "Solaris: Building a Multiplayer Video World Model in Minecraft",
+          "stars": 6,
+          "url": "https://arxiv.org/abs/2602.22208"
+        },
+        {
+          "title": "GUI-Libra: Training Native GUI Agents to Reason and Act with Action-aware Supervision and Partially Verifiable RL",
+          "stars": 5,
+          "url": "https://arxiv.org/abs/2602.22190"
         },
         {
           "title": "PETS: A Principled Framework Towards Optimal Trajectory Allocation for Efficient Test-Time Self-Consistency",
@@ -1132,70 +1236,76 @@
           "url": "https://arxiv.org/abs/2602.16745"
         },
         {
-          "title": "Decoding ML Decision: An Agentic Reasoning Framework for Large-Scale Ranking System",
-          "stars": 5,
-          "url": "https://arxiv.org/abs/2602.18640"
-        },
-        {
           "title": "Aletheia tackles FirstProof autonomously",
-          "stars": 2,
+          "stars": 3,
           "url": "https://arxiv.org/abs/2602.21201"
         }
       ],
-      "star_share": 0.09782608695652174,
-      "avg_stars": 9.0,
+      "star_share": 0.08205128205128205,
+      "avg_stars": 4.571428571428571,
       "signal_interpretation": "Growing interest in implementations"
     },
-    "ai-general": {
-      "paper_count": 3,
-      "total_stars": 25,
+    "ai-image-generation": {
+      "paper_count": 5,
+      "total_stars": 16,
       "top_papers": [
         {
-          "title": "Test-Time Training with KV Binding Is Secretly Linear Attention",
-          "stars": 21,
-          "url": "https://arxiv.org/abs/2602.21204"
+          "title": "HyTRec: A Hybrid Temporal-Aware Attention Architecture for Long Behavior Sequential Recommendation",
+          "stars": 7,
+          "url": "https://arxiv.org/abs/2602.18283"
         },
         {
-          "title": "SimVLA: A Simple VLA Baseline for Robotic Manipulation",
-          "stars": 4,
-          "url": "https://arxiv.org/abs/2602.18224"
+          "title": "JavisDiT++: Unified Modeling and Optimization for Joint Audio-Video Generation",
+          "stars": 5,
+          "url": "https://arxiv.org/abs/2602.19163"
         },
         {
-          "title": "Large Causal Models for Temporal Causal Discovery",
+          "title": "Image Generation with a Sphere Encoder",
+          "stars": 3,
+          "url": "https://arxiv.org/abs/2602.15030"
+        },
+        {
+          "title": "SeaCache: Spectral-Evolution-Aware Cache for Accelerating Diffusion Models",
+          "stars": 1,
+          "url": "https://arxiv.org/abs/2602.18993"
+        },
+        {
+          "title": "Ani3DHuman: Photorealistic 3D Human Animation with Self-guided Stochastic Sampling",
           "stars": 0,
-          "url": "https://arxiv.org/abs/2602.18662"
+          "url": "https://arxiv.org/abs/2602.19089"
         }
       ],
-      "star_share": 0.05434782608695652,
-      "avg_stars": 8.333333333333334,
-      "signal_interpretation": "Growing interest in implementations"
-    },
-    "ai-audio": {
-      "paper_count": 1,
-      "total_stars": 18,
-      "top_papers": [
-        {
-          "title": "Multi-Vector Index Compression in Any Modality",
-          "stars": 18,
-          "url": "https://arxiv.org/abs/2602.21202"
-        }
-      ],
-      "star_share": 0.0391304347826087,
-      "avg_stars": 18.0,
+      "star_share": 0.041025641025641026,
+      "avg_stars": 3.2,
       "signal_interpretation": "Research-focused with limited code adoption"
     },
-    "computer-vision": {
-      "paper_count": 1,
-      "total_stars": 14,
+    "ai-coding": {
+      "paper_count": 4,
+      "total_stars": 6,
       "top_papers": [
         {
-          "title": "Learning Cross-View Object Correspondence via Cycle-Consistent Mask Prediction",
-          "stars": 14,
-          "url": "https://arxiv.org/abs/2602.18996"
+          "title": "Generative AI and Machine Learning Collaboration for Container Dwell Time Prediction via Data Standardization",
+          "stars": 4,
+          "url": "https://arxiv.org/abs/2602.20540"
+        },
+        {
+          "title": "LaS-Comp: Zero-shot 3D Completion with Latent-Spatial Consistency",
+          "stars": 1,
+          "url": "https://arxiv.org/abs/2602.18735"
+        },
+        {
+          "title": "OmniOCR: Generalist OCR for Ethnic Minority Languages",
+          "stars": 1,
+          "url": "https://arxiv.org/abs/2602.21042"
+        },
+        {
+          "title": "MoBind: Motion Binding for Fine-Grained IMU-Video Pose Alignment",
+          "stars": 0,
+          "url": "https://arxiv.org/abs/2602.19004"
         }
       ],
-      "star_share": 0.030434782608695653,
-      "avg_stars": 14.0,
+      "star_share": 0.015384615384615385,
+      "avg_stars": 1.5,
       "signal_interpretation": "Research-focused with limited code adoption"
     },
     "open-source-ai": {
@@ -1208,51 +1318,8 @@
           "url": "https://arxiv.org/abs/2602.20792"
         }
       ],
-      "star_share": 0.004347826086956522,
+      "star_share": 0.005128205128205128,
       "avg_stars": 2.0,
-      "signal_interpretation": "Research-focused with limited code adoption"
-    },
-    "ai-coding": {
-      "paper_count": 4,
-      "total_stars": 3,
-      "top_papers": [
-        {
-          "title": "LaS-Comp: Zero-shot 3D Completion with Latent-Spatial Consistency",
-          "stars": 1,
-          "url": "https://arxiv.org/abs/2602.18735"
-        },
-        {
-          "title": "OmniOCR: Generalist OCR for Ethnic Minority Languages",
-          "stars": 1,
-          "url": "https://arxiv.org/abs/2602.21042"
-        },
-        {
-          "title": "Contact-Anchored Proprioceptive Odometry for Quadruped Robots",
-          "stars": 1,
-          "url": "https://arxiv.org/abs/2602.17393"
-        },
-        {
-          "title": "Generative AI and Machine Learning Collaboration for Container Dwell Time Prediction via Data Standardization",
-          "stars": 0,
-          "url": "https://arxiv.org/abs/2602.20540"
-        }
-      ],
-      "star_share": 0.006521739130434782,
-      "avg_stars": 0.75,
-      "signal_interpretation": "Research-focused with limited code adoption"
-    },
-    "ai-image-generation": {
-      "paper_count": 1,
-      "total_stars": 0,
-      "top_papers": [
-        {
-          "title": "Ani3DHuman: Photorealistic 3D Human Animation with Self-guided Stochastic Sampling",
-          "stars": 0,
-          "url": "https://arxiv.org/abs/2602.19089"
-        }
-      ],
-      "star_share": 0.0,
-      "avg_stars": 0.0,
       "signal_interpretation": "Research-focused with limited code adoption"
     }
   },

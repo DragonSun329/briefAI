@@ -1,23 +1,34 @@
 {
-  "scraped_at": "2026-02-26T10:18:10.148634",
+  "scraped_at": "2026-02-26T16:02:22.039980",
   "source": "news_search_v2",
   "description": "AI news via Tavily + SearXNG cascade",
   "source_stats": {
     "tavily": 100,
     "searxng": 0
   },
-  "article_count": 97,
+  "article_count": 96,
   "articles": [
     {
-      "title": "Google and Apple bring AI music creation to mainstream consumers - Los Angeles Times",
-      "url": "https://www.latimes.com/business/story/2026-02-18/google-apple-bring-ai-music-creation-to-mainstream-consumers",
-      "content": "# Google and Apple bring AI music creation to mainstream consumers. Alphabet Inc.’s Google and Apple Inc. are adding music-focused generative artificial intelligence features to their core consumer apps, underscoring how advanced AI tools are moving into mainstream use. Google’s Gemini AI assistant can now create 30-second music tracks based on text, photos or video uploaded by users using Google DeepMind’s latest Lyria 3 model, the company said in a blog post on Wednesday. Its popular image-cre",
-      "published_date": "Thu, 19 Feb 2026 03:13:52 GMT",
-      "source": "latimes.com",
-      "score": 0.6711479,
+      "title": "‘Training A Human Takes 20 Years Of Food’: Sam Altman On How Much Power AI Consumes - News18",
+      "url": "https://www.news18.com/world/training-a-human-takes-20-years-of-food-sam-altman-on-how-much-power-ai-consumes-ws-kl-9922309.html",
+      "content": "# ‘Training A Human Takes 20 Years Of Food’: Sam Altman On How Much Power AI Consumes. ## Altman says debates on AI power use overlook that human intelligence also requires years of life, education and resources to develop. Sam Altman compares AI training energy to human development. OpenAI CEO Sam Altman this week compared human development to artificial intelligence training, arguing that discussions around the energy consumed by AI models often overlook the resources required to educate and n",
+      "published_date": "Sat, 21 Feb 2026 19:40:29 GMT",
+      "source": "news18.com",
+      "score": 0.8056322,
       "api_source": "tavily",
       "ai_relevance_score": 1.0,
-      "id": "news_268f65b4aca2"
+      "id": "news_d40b63ecc9f7"
+    },
+    {
+      "title": "Small Business Technology News: How Will ChatGPT Ads Actually Work? - Forbes",
+      "url": "https://www.forbes.com/sites/quickerbettertech/2026/02/21/small-business-technology-news-how-will-chatgpt-ads-actually-work/",
+      "content": "Small Business Technology News #1 – OpenAI exec envisions brands running ads by prompting ChatGPT. In a recent interview, Asad Awan – OpenAI’s head of monetization – outlined a future where businesses could run and manage advertising campaigns through ChatGPT simply by talking to it (just like you currently ask it questions.) Rather than relying on complex ad platforms or hiring agencies, a business would tell ChatGPT what they want to achieve – e.g., sell more products in a region, stay within ",
+      "published_date": "Sat, 21 Feb 2026 12:00:00 GMT",
+      "source": "forbes.com",
+      "score": 0.6619229,
+      "api_source": "tavily",
+      "ai_relevance_score": 1.0,
+      "id": "news_56c00fce737c"
     },
     {
       "title": "Infosec community panics as Anthropic rolls out Claude code security checker - theregister.com",
@@ -25,7 +36,7 @@
       "content": "ai-pocalypse Anthropic sent the infosec community into a tizzy on Friday when it rolled out Claude Code Security, a new feature that scans codebases for vulnerabilities and suggests patches to fix the issues. But Claude's security feature is simply the latest and buzziest AI-enabled bug-fixing tool, meaning Anthropic is now doing what other companies at the forefront of agentic AI are also doing. Google, back in November 2024, said its LLM-based bug-hunting tool Big Sleep was the \"first\" AI to s",
       "published_date": "Mon, 23 Feb 2026 19:50:00 GMT",
       "source": "theregister.com",
-      "score": 0.74251556,
+      "score": 0.9933589,
       "api_source": "tavily",
       "ai_relevance_score": 1.0,
       "id": "news_880e88df6ece"
@@ -36,21 +47,21 @@
       "content": "# Anthropic’s Claude Cowork is plugging AI into more boring enterprise stuff. On Tuesday, Anthropic announced updates to its Claude Cowork platform that allow the AI to help with a wider range of office tasks. Claude Cowork can now connect with several popular office apps, including Google Workspace, Docusign, and WordPress. The update is Anthropic’s latest push into AI agents, following the initial launch of Claude Cowork last month. Anthropic’s coding agent, Claude Code, has been growing in po",
       "published_date": "Tue, 24 Feb 2026 16:43:56 GMT",
       "source": "theverge.com",
-      "score": 0.6191726,
+      "score": 0.992597,
       "api_source": "tavily",
       "ai_relevance_score": 1.0,
       "id": "news_a245a3452b19"
     },
     {
-      "title": "AI agent invasion has people trying to pick winners - Digital Journal",
-      "url": "https://www.digitaljournal.com/business/ai-agent-invasion-has-people-trying-to-pick-winners/article",
-      "content": "Makers of leading AI models have embraced “agentic” capabilities that provide software assistants capable of independently tending to tasks, such as creating software applications, based on simple descriptions. The turning point has been marked by rapid-fire releases of ever-improving AI models, including recent new versions from OpenAI and Anthropic. Investors quickly saw AI agents as a threat to software publishers, particularly those serving businesses. “There’s paranoia around AI in every in",
-      "published_date": "Sun, 22 Feb 2026 04:52:00 GMT",
-      "source": "digitaljournal.com",
-      "score": 0.55912215,
+      "title": "Premium: The Hater's Guide to Anthropic - Ed Zitron's Where's Your Ed At",
+      "url": "https://www.wheresyoured.at/premium-the-haters-guide-to-anthropic/",
+      "content": "In May 2021, Dario Amodei and a crew of other former OpenAI researchers formed Anthropic and dedicated themselves to building the single-most-annoying Large Language Model company of all time. A couple of months later in October 2023, Amodei joined The Logan Bartlett show, saying that he “didn’t like the term AGI” because, and I shit you not, “...because we’re closer to the kinds of things that AGI is pointing at,” making it “no longer a useful term.” He said that there was a “future point” wher",
+      "published_date": "Fri, 20 Feb 2026 18:26:41 GMT",
+      "source": "wheresyoured.at",
+      "score": 0.9885804,
       "api_source": "tavily",
       "ai_relevance_score": 1.0,
-      "id": "news_2d8f113d2087"
+      "id": "news_a914b38bddd0"
     },
     {
       "title": "Google launches Gemini 3.1 Pro, retaking AI crown with 2X+ reasoning performance boost - Venturebeat",
@@ -58,7 +69,7 @@
       "content": "# Google launches Gemini 3.1 Pro, retaking AI crown with 2X+ reasoning performance boost. Late last year, Google briefly took the crown for most powerful AI model in the world with the launch of Gemini 3 Pro — only to be surpassed within weeks by OpenAI and Anthropic releasing new models, s is common in the fiercely competitive AI race. Already, evaluations by third-party firm Artificial Analysis show that Google's Gemini 3.1 Pro has leapt to the front of the pack and is once more the most power",
       "published_date": "Thu, 19 Feb 2026 17:30:00 GMT",
       "source": "venturebeat.com",
-      "score": 0.53531766,
+      "score": 0.9757624,
       "api_source": "tavily",
       "ai_relevance_score": 1.0,
       "id": "news_9e2bceacc7e8"
@@ -69,10 +80,21 @@
       "content": "Anthropic, OpenAI use AI to build tools, shifting engineers to oversight roles as AI self-improves. Krieger, Anthropic’s CPO, said, “The majority of Anthropic’s products, including Claude Workbench, are essentially all written by Claude,” adding, “Engineers regularly produce 2,000 to 3,000 lines of code through Claude.” Last year, Dario Amodei, Anthropic’s CEO, sparked controversy in the tech industry by stating, “90% of code will be written by AI by the end of the year,” but it now appears that",
       "published_date": "Wed, 25 Feb 2026 15:37:38 GMT",
       "source": "chosun.com",
-      "score": 0.5128152,
+      "score": 0.96124375,
       "api_source": "tavily",
       "ai_relevance_score": 1.0,
       "id": "news_2b05e72d9e04"
+    },
+    {
+      "title": "Anthropic exposes how Chinese AI firms try to steal LLM tech - Mashable",
+      "url": "https://mashable.com/article/anthropic-details-chinese-ai-companies-distillation-attacks",
+      "content": "# Anthropic: Chinese AI firms created 24,000 fraudulent accounts for 'distillation attacks'. Anthropic is accusing three Chinese artificial intelligence companies of \"industrial-scale campaigns\" to \"illicitly extract\" its technology using distillation attacks. In a blog post detailing the attacks\"), Anthropic named three AI firms, including DeepSeek, the maker of the popular DeepSeek AI models. At the time, many people reacted not with sympathy, but with mocking\"), as OpenAI and other AI compani",
+      "published_date": "Mon, 23 Feb 2026 22:52:43 GMT",
+      "source": "mashable.com",
+      "score": 0.9549844,
+      "api_source": "tavily",
+      "ai_relevance_score": 1.0,
+      "id": "news_3eeda52db6e9"
     },
     {
       "title": "Tensions between the Pentagon and AI giant Anthropic reach a boiling point - NBC News",
@@ -80,21 +102,21 @@
       "content": "Citing the classified nature of military operations, an Anthropic spokesperson would neither confirm nor deny that its Claude chatbot systems had been used in the Maduro operation: “We cannot comment on whether Claude, or any other AI model, was used for any specific operation, classified or otherwise,” the spokesperson told NBC News in a statement. Anthropic, along with other leading American AI companies such as OpenAI and Google, signed individual two-year contracts with the Defense Departmen",
       "published_date": "Fri, 20 Feb 2026 17:43:20 GMT",
       "source": "nbcnews.com",
-      "score": 0.45973158,
+      "score": 0.9390248,
       "api_source": "tavily",
       "ai_relevance_score": 1.0,
       "id": "news_2eb321ed8666"
     },
     {
-      "title": "Prompt Engineering Finally Proves That Prompt Repetition Gives Better Answers But Only If You Do So These Ways - Forbes",
-      "url": "https://www.forbes.com/sites/lanceeliot/2026/02/21/prompt-engineering-finally-proves-that-prompt-repetition-gives-better-answers-but-only-if-you-do-so-these-ways/",
-      "content": "Seasoned prompt engineers realize that learning a wide array of researched and proven prompting techniques is the best way to get the most out of generative AI and large language models (LLMs). Since no one was quite sure whether prompt repetition got you any handy benefit when it comes to the answers generated, you had to take a leap of faith that the doubling of the input number of words (tokens) was going to be worth whatever added dollar charge there might be. *   “Without reasoning, prompt ",
-      "published_date": "Sat, 21 Feb 2026 08:15:00 GMT",
-      "source": "forbes.com",
-      "score": 0.23792991,
+      "title": "A Map To Donors: Digital Search In The AI Age - The NonProfit Times",
+      "url": "https://thenonprofittimes.com/npt_articles/a-map-to-donors-digital-search-in-the-ai-age/",
+      "content": "At the same time, organic search is shifting away from traditional search engines like Google and Bing at breakneck speed toward large language model (LLM) tools such as ChatGPT and Claude. At its simplest, Answer Engine Optimization means structuring your content so that AI-driven tools, whether Google’s AI Overviews, voice assistants, or large language models like ChatGPT, can clearly understand what you’re saying, trust it, and, in some cases, use it when generating answers. Pages that answer",
+      "published_date": "Tue, 24 Feb 2026 15:48:21 GMT",
+      "source": "thenonprofittimes.com",
+      "score": 0.61251885,
       "api_source": "tavily",
       "ai_relevance_score": 1.0,
-      "id": "news_631625ad7b60"
+      "id": "news_06f872abe7ec"
     },
     {
       "title": "Is GenAI good at creating passwords? - GovTech",
@@ -102,10 +124,21 @@
       "content": "The 2026 GovTech 100 is now live. # Is GenAI good at creating passwords? Research from cybersecurity firm Irregular found that passwords created by GenAI models are too easy to crack. Irregular went to three popular large language models (LLMs), ChatGPT, Claude and Gemini, and asked them to create unique passwords. The models had to follow all the best practices of strong passwords in this day and age — they needed to be 16 characters long and use special characters, numbers and letters. The res",
       "published_date": "Thu, 19 Feb 2026 22:09:48 GMT",
       "source": "govtech.com",
-      "score": 0.22541662,
+      "score": 0.50944775,
       "api_source": "tavily",
       "ai_relevance_score": 1.0,
       "id": "news_5408e6477dc2"
+    },
+    {
+      "title": "Regulation of clinical Artificial Intelligence (AI) in the Age of Agents: Unconfined Non-Deterministic Clinical Software (UNDCS) systems for healthcare - Nature",
+      "url": "https://www.nature.com/articles/s41746-026-02420-z",
+      "content": "*et al.* Regulation of clinical Artificial Intelligence (AI) in the Age of Agents: Unconfined Non-Deterministic Clinical Software (UNDCS) systems for healthcare. # Regulation of clinical Artificial Intelligence (AI) in the Age of Agents: Unconfined Non-Deterministic Clinical Software (UNDCS) systems for healthcare. In a recent article, Weissman et al.1.\") examined the extent to which artificial intelligence (AI)-based large language models (LLMs) generate clinical decision support (CDS) outputs ",
+      "published_date": "Mon, 23 Feb 2026 13:00:57 GMT",
+      "source": "nature.com",
+      "score": 0.47489962,
+      "api_source": "tavily",
+      "ai_relevance_score": 1.0,
+      "id": "news_77a6d3c40bcf"
     },
     {
       "title": "AI-Generated Passwords Are Apparently Quite Easy to Crack - Gizmodo",
@@ -113,21 +146,21 @@
       "content": "# AI-Generated Passwords Are Apparently Quite Easy to Crack. New research from cybersecurity firm Irregular found that passwords generated by large language models appear strong but are “fundamentally insecure” and shockingly easy to guess. To determine the capability of popular AI models to act as your password generator, Irregular asked Claude, ChatGPT, and Gemini to generate 16-character, secure passwords that include special characters, numbers, and letters—and in some cases, passphrases. A ",
       "published_date": "Thu, 19 Feb 2026 12:00:23 GMT",
       "source": "gizmodo.com",
-      "score": 0.15203224,
+      "score": 0.46424627,
       "api_source": "tavily",
       "ai_relevance_score": 1.0,
       "id": "news_e9dbf1a40cce"
     },
     {
-      "title": "AI Medical Advice May Pose ‘Dangerous’ Risk—What To Know - Newsweek",
-      "url": "https://www.newsweek.com/ai-medical-advice-may-pose-dangerous-risk-11541992",
-      "content": "Using large-language models to get medical advice and make medical decisions is a risky practice, a new study has warned. The participants were then split into two groups—one asked for medical advice from LLMs like OpenAI's ChatGPT, while the other collected information from traditional sources. Even though LLMs excel at understanding medicine and standard practices, helping users with their medical issues required a level of communication that LLMs struggled to perform. The results of the study",
-      "published_date": "Thu, 19 Feb 2026 03:00:00 GMT",
-      "source": "newsweek.com",
-      "score": 0.109705776,
+      "title": "Prompt Engineering Finally Proves That Prompt Repetition Gives Better Answers But Only If You Do So These Ways - Forbes",
+      "url": "https://www.forbes.com/sites/lanceeliot/2026/02/21/prompt-engineering-finally-proves-that-prompt-repetition-gives-better-answers-but-only-if-you-do-so-these-ways/",
+      "content": "Seasoned prompt engineers realize that learning a wide array of researched and proven prompting techniques is the best way to get the most out of generative AI and large language models (LLMs). Since no one was quite sure whether prompt repetition got you any handy benefit when it comes to the answers generated, you had to take a leap of faith that the doubling of the input number of words (tokens) was going to be worth whatever added dollar charge there might be. *   “Without reasoning, prompt ",
+      "published_date": "Sat, 21 Feb 2026 08:15:00 GMT",
+      "source": "forbes.com",
+      "score": 0.40683898,
       "api_source": "tavily",
       "ai_relevance_score": 1.0,
-      "id": "news_3325a384bd1f"
+      "id": "news_631625ad7b60"
     },
     {
       "title": "Racing to Catch up With Nvidia, AMD Signs Chips-for-Stock Deal With Meta - The New York Times",
@@ -185,15 +218,15 @@
       "id": "news_090e7d84cf5e"
     },
     {
-      "title": "AIs can’t stop recommending nuclear strikes in war game simulations - New Scientist",
-      "url": "https://www.newscientist.com/article/2516885-ais-cant-stop-recommending-nuclear-strikes-in-war-game-simulations/",
-      "content": "# AIs can’t stop recommending nuclear strikes in war game simulations. Leading AIs from OpenAI, Anthropic and Google opted to use nuclear weapons in simulated war games in 95 per cent of cases. Advanced AI models appear willing to deploy nuclear weapons without the same reservations humans have when put into simulated geopolitical crises. In 95 per cent of the simulated games, at least one tactical nuclear weapon was deployed by the AI models. “Major powers are already using AI in war gaming, bu",
-      "published_date": "Wed, 25 Feb 2026 10:02:17 GMT",
-      "source": "newscientist.com",
-      "score": 0.46395484,
+      "title": "Anthropic Says Chinese AI Companies Improved Models By ‘Illicitly’ Copying Its Capabilities - Gizmodo",
+      "url": "https://gizmodo.com/anthropic-says-chinese-ai-companies-made-models-by-illicitly-copying-its-capabilities-2000725717",
+      "content": "# Anthropic Says Chinese AI Companies Improved Models By ‘Illicitly’ Copying Its Capabilities. In a blog post on Monday, Anthropic said that the China-based AI companies DeepSeek, Moonshot, and MiniMax broke Anthropic’s rules in order to “illicitly extract” the capabilities of its signature AI model, Claude. For example, Anthropic writes, “frontier AI labs routinely distill their own models to create smaller, cheaper versions for their customers.” So to distinguish the actions Anthropic is compl",
+      "published_date": "Tue, 24 Feb 2026 01:54:36 GMT",
+      "source": "gizmodo.com",
+      "score": 0.9433476,
       "api_source": "tavily",
       "ai_relevance_score": 0.9,
-      "id": "news_016d5428ddcf"
+      "id": "news_656b557413d9"
     },
     {
       "title": "This AI can improve your peer review — and make it more polite - Nature",
@@ -201,10 +234,21 @@
       "content": "# This AI can improve your peer review — and make it more polite. Scientists doing peer reviews are increasingly turning to AI for a variety of tasks, including searching for relevant literature, sharpening prose and more. James Zou, a computer scientist at Stanford University in California, and his colleagues set out to assess whether large language models (LLM) could help to address a common complaint about peer reviews: feedback often lacks thoroughness or strikes the wrong tone. AI, peer rev",
       "published_date": "Mon, 23 Feb 2026 15:28:26 GMT",
       "source": "nature.com",
-      "score": 0.20946968,
+      "score": 0.52670854,
       "api_source": "tavily",
       "ai_relevance_score": 0.9,
       "id": "news_440b7d5ed2f4"
+    },
+    {
+      "title": "Mark Cuban says there are 2 types of people who use AI: the learners and the lazy - Business Insider",
+      "url": "https://www.businessinsider.com/mark-cuban-two-types-of-people-using-ai-learning-lazy-2026-2",
+      "content": "# Mark Cuban on 2 types of AI users: you're either using it to 'learn everything' or 'so you don't have to learn anything'. * Cuban has previously said companies need to embrace AI, but that it's not perfect. Mark Cuban says there are two types of people who use AI. \"There are generally 2 types of LLM users, those that use it to learn everything , and those that use it so they don't have to learn anything,\" Cuban said of large language models in an X post on Tuesday. Cuban has said there will be",
+      "published_date": "Fri, 20 Feb 2026 00:07:49 GMT",
+      "source": "businessinsider.com",
+      "score": 0.37910303,
+      "api_source": "tavily",
+      "ai_relevance_score": 0.9,
+      "id": "news_2be0844ad863"
     },
     {
       "title": "Nvidia is in talks to invest up to $30 billion in OpenAI, source says - CNBC",
@@ -240,26 +284,26 @@
       "id": "news_d97c61e90631"
     },
     {
-      "title": "“The World Is Not Prepared,” Says OpenAI CEO Sam Altman as AGI Timeline Speeds Up - TipRanks",
-      "url": "https://www.tipranks.com/news/the-world-is-not-prepared-says-openai-ceo-sam-altman-as-agi-timeline-speeds-up",
-      "content": "Microsoft or Amazon: Billionaire Steve Cohen Pulls the Trigger on One Top AI Stock. AMZNMSFT](/news/microsoft-or-amazon-billionaire-steve-cohen-pulls-the-trigger-on-one-top-ai-stock \"AMZN | MSFT\"). IKTWVE](/news/bank-of-america-predicts-up-to-240-jump-for-these-2-strong-buy-stocks \"IKT | WVE | NASDAQ\"). It’s an excellent tool to gain a broader perspective on each stock and the AI industry as a whole. GOOG](/news/weekend-updates/alphabet-class-c-rallies-behind-powerful-gemini-ai \"GOOG\"). GEVVRT](",
-      "published_date": "Sun, 22 Feb 2026 13:21:35 GMT",
-      "source": "tipranks.com",
-      "score": 0.6164054,
+      "title": "NIST agentic AI initiative looks to get handle on security - Federal News Network",
+      "url": "https://federalnewsnetwork.com/cybersecurity/2026/02/nist-agentic-ai-initiative-looks-to-get-handle-on-security/",
+      "content": "The National Institutes of Standards and Technology is launching a new project around standards for artificial intelligence agents, with NIST positioning the project as key to advancing agentic AI innovation. NIST’s Center for AI Standards and Innovation (CAISI) announced the “AI Agent Standards Initiative” this week. The project aims to foster “industry-led technical standards and protocols that build public trust in AI agents, catalyze an interoperable agent ecosystem, and diffuse their benefi",
+      "published_date": "Fri, 20 Feb 2026 23:44:36 GMT",
+      "source": "federalnewsnetwork.com",
+      "score": 0.96182173,
       "api_source": "tavily",
       "ai_relevance_score": 0.75,
-      "id": "news_232784fc2839"
+      "id": "news_ddb6ccd74bbc"
     },
     {
-      "title": "Artificial Intelligence will undeniably reshape workforce: Google CEO Sundar Pichai at AI Summit. - Devdiscourse",
-      "url": "https://www.devdiscourse.com/article/Newsalert/3810087-artificial-intelligence-will-undeniably-reshape-workforce-google-ceo-sundar-pichai-at-ai-summit",
-      "content": "# Artificial Intelligence will undeniably reshape workforce: Google CEO Sundar Pichai at AI Summit. Artificial Intelligence will undeniably reshape workforce: Google CEO Sundar Pichai at AI Summit. (This story has not been edited by Devdiscourse staff and is auto-generated from a syndicated feed.). * ### Electrifying Innovations: IEEMA's BuildELEC and CompELEC Set to Spark Industry Growth. * ### Energy to build here in India is palpable, unlike anywhere else: Dario Amodei, CEO of Anthropic, at I",
-      "published_date": "Thu, 19 Feb 2026 04:47:17 GMT",
-      "source": "devdiscourse.com",
-      "score": 0.5631623,
+      "title": "Exclusive: Anthropic Drops Flagship Safety Pledge - Time Magazine",
+      "url": "https://time.com/7380854/exclusive-anthropic-drops-flagship-safety-pledge/",
+      "content": "Anthropic, the wildly successful AI company that has cast itself as the most safety-conscious of the top research labs, is dropping the central pledge of its flagship safety policy, company officials tell TIME. In 2023, Anthropic committed to never train an AI system unless it could guarantee in advance that the company’s safety measures were adequate. “We felt that it wouldn't actually help anyone for us to stop training AI models,” Anthropic’s chief science officer Jared Kaplan told TIME in an",
+      "published_date": "Tue, 24 Feb 2026 20:02:41 GMT",
+      "source": "time.com",
+      "score": 0.97068775,
       "api_source": "tavily",
       "ai_relevance_score": 0.75,
-      "id": "news_228f3e194461"
+      "id": "news_60ba5b52ba8e"
     },
     {
       "title": "Anthropic touts new AI tools weeks after legal plug-in spurred market rout - Reuters",
@@ -267,32 +311,10 @@
       "content": "Anthropic touts new AI tools weeks after legal plug-in spurred market rout | Reuters. SAN FRANCISCO, Feb 24 (Reuters) - Artificial intelligence lab Anthropic on Tuesday unveiled 10 new ways for business customers to plug in its technology to key areas of their work, weeks after other releases sparked an aggressive selloff in traditional software company shares. Anthropic said its new plug-ins were developed with partners, including LSEG (LSEG.L), opens new tab, FactSet (FDS.N), opens new tab, Sa",
       "published_date": "Tue, 24 Feb 2026 14:35:38 GMT",
       "source": "reuters.com",
-      "score": 0.5923135,
+      "score": 0.95759624,
       "api_source": "tavily",
       "ai_relevance_score": 0.75,
       "id": "news_117a99c9ebce"
-    },
-    {
-      "title": "Anthropic Warned to Let Military Use the Company's AI Tech as It Sees Fit - Manufacturing Business Technology",
-      "url": "https://www.mbtmag.com/artificial-intelligence/news/22961381/anthropic-warned-to-let-military-use-the-companys-ai-tech-as-it-sees-fit",
-      "content": "# Anthropic Warned to Let Military Use the Company's AI Tech as It Sees Fit. Anthropic is the last of its peers to not supply its technology to a new U.S. military internal network. WASHINGTON (AP) — Defense Secretary Pete Hegseth gave Anthropic's CEO a Friday deadline to open the company's artificial intelligence technology for unrestricted military use or risk losing its government contract, according to a person familiar with their meeting Tuesday. ### Anthropic will no longer be the only AI ",
-      "published_date": "Wed, 25 Feb 2026 22:03:37 GMT",
-      "source": "mbtmag.com",
-      "score": 0.44420364,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.75,
-      "id": "news_37ccfcc26fbb"
-    },
-    {
-      "title": "Guide Labs debuts a new kind of interpretable LLM - TechCrunch",
-      "url": "https://techcrunch.com/2026/02/23/guide-labs-debuts-a-new-kind-of-interpretable-llm/",
-      "content": "On Monday, the company open-sourced an 8 billion parameter LLM, Steerling-8B, trained with a new architecture designed to make its actions easily interpretable: Every token produced by the model can be traced back to its origins in the LLM’s training data. “The kind of interpretability people do is…neuroscience on a model, and we flip that,” Adebayo said. “This model demonstrates is that training interpretable models is no longer a sort of science; it’s now an engineering problem,” Adebayo said.",
-      "published_date": "Mon, 23 Feb 2026 17:53:28 GMT",
-      "source": "techcrunch.com",
-      "score": 0.79565805,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.75,
-      "id": "news_c6f5f8475c6e"
     },
     {
       "title": "Systematic benchmarking demonstrates large language models have not reached the diagnostic accuracy of traditional rare-disease decision support tools - Nature",
@@ -300,10 +322,21 @@
       "content": "Large language models (LLMs) show promise in supporting differential diagnosis, but their performance is challenging to evaluate due to the unstructured nature of their responses, and their accuracy compared to existing diagnostic tools is not well characterized. Therefore, the practical utility of LLM analysis may be limited by the varying ability of human users to interpret the responses, and manual curation that may influence the measured performance of LLMs. For this reason, we concluded tha",
       "published_date": "Tue, 24 Feb 2026 17:46:30 GMT",
       "source": "nature.com",
-      "score": 0.5117166,
+      "score": 0.62523276,
       "api_source": "tavily",
       "ai_relevance_score": 0.75,
       "id": "news_88bb0d888d0f"
+    },
+    {
+      "title": "Guide Labs debuts a new kind of interpretable LLM - TechCrunch",
+      "url": "https://techcrunch.com/2026/02/23/guide-labs-debuts-a-new-kind-of-interpretable-llm/",
+      "content": "On Monday, the company open-sourced an 8 billion parameter LLM, Steerling-8B, trained with a new architecture designed to make its actions easily interpretable: Every token produced by the model can be traced back to its origins in the LLM’s training data. “The kind of interpretability people do is…neuroscience on a model, and we flip that,” Adebayo said. “This model demonstrates is that training interpretable models is no longer a sort of science; it’s now an engineering problem,” Adebayo said.",
+      "published_date": "Mon, 23 Feb 2026 17:53:28 GMT",
+      "source": "techcrunch.com",
+      "score": 0.52203226,
+      "api_source": "tavily",
+      "ai_relevance_score": 0.75,
+      "id": "news_c6f5f8475c6e"
     },
     {
       "title": "AI’s Biggest Builders Are Now Its Biggest Lobbyists - Forbes Africa",
@@ -311,7 +344,7 @@
       "content": "erhaps the most visible break between OpenAI’s and Anthropic’s policy efforts came over California’s AI safety bill, which went into effect in January. Michael Kleinman, head of U.S. policy at the pro-AI regulation Future of Life Institute, is even more direct:  “Until we see the companies actually support meaningful legislation, then what they say about their desire for regulation is empty talk …  the industry as a whole is hellbent on avoiding regulation.”. For both Anthropic and OpenAI, 2025 ",
       "published_date": "Sat, 21 Feb 2026 13:42:00 GMT",
       "source": "forbesafrica.com",
-      "score": 0.560566,
+      "score": 0.9437636,
       "api_source": "tavily",
       "ai_relevance_score": 0.75,
       "id": "news_61933e88e647"
@@ -322,7 +355,7 @@
       "content": "# Autonomous AI Agents Provide New Class of Supply Chain Attack. It’s ironic that new technology often defies the fundamental security rule of zero trust – but that’s the basis of agentic AI. Straiker, a firm that focuses on the security of AI applications and agents, has analyzed the 3,505 Claude Skills available on Clawhub. “The critical finding,” says researcher Dan Regalado, “was an active agent-to-agent attack chain operated by threat actor ‘26medias’ (in Clawhub) and ‘BobVonNeumann’ (in Mo",
       "published_date": "Mon, 23 Feb 2026 12:30:00 GMT",
       "source": "securityweek.com",
-      "score": 0.9992792,
+      "score": 0.70823324,
       "api_source": "tavily",
       "ai_relevance_score": 0.75,
       "id": "news_cf8e010ab5bd"
@@ -333,10 +366,21 @@
       "content": "# Ericsson, Mistral AI target AI for network ops. ## Ericsson and Mistral AI will jointly research and develop AI agents for use in telecom networks. **Broader industry shift** – The announcement comes as a broader shift from generative AI to agentic AI is taking hold, where autonomous agents can take action across networks, IT systems, and customer operations. Mistral AI and Ericsson are collaborating to apply generative AI (gen AI) tools to telecom network development and operations. The colla",
       "published_date": "Fri, 20 Feb 2026 15:05:19 GMT",
       "source": "rcrwireless.com",
-      "score": 0.98951083,
+      "score": 0.6044228,
       "api_source": "tavily",
       "ai_relevance_score": 0.75,
       "id": "news_101694393604"
+    },
+    {
+      "title": "Why OpenAI’s new consulting alliances are an HR story - HR Executive",
+      "url": "https://hrexecutive.com/why-openais-new-consulting-alliances-are-an-hr-story/",
+      "content": "The partnerships are designed to help enterprises deploy Frontier, OpenAI’s new platform for building and managing AI agents across company-wide operations. OpenAI describes Frontier as a “semantic layer for the enterprise,” a unified platform that lets AI agents navigate business software, execute workflows and make decisions across an organization’s entire technology stack. If consultancy teams are advising the C-suite to migrate workflows off those platforms and onto an AI agent orchestration",
+      "published_date": "Wed, 25 Feb 2026 13:30:48 GMT",
+      "source": "hrexecutive.com",
+      "score": 0.5157425,
+      "api_source": "tavily",
+      "ai_relevance_score": 0.75,
+      "id": "news_d2aad7dbbf88"
     },
     {
       "title": "NIST Launches AI Agent Standards Initiative and Seeks Industry Input - Pillsbury Winthrop Shaw Pittman",
@@ -344,7 +388,7 @@
       "content": "In January and February 2026, the National Institute of Standards and Technology (NIST), through its Center for AI Standards and Innovation (CAISI), launched a new AI Agent Standards Initiative to support the development of interoperable and secure AI agent systems, issued a Request for Information (RFI) on securing AI agent systems, and announced a series of virtual listening sessions to identify barriers to artificial intelligence adoption, including in the financial sector. NIST’s recent acti",
       "published_date": "Wed, 25 Feb 2026 19:51:33 GMT",
       "source": "pillsburylaw.com",
-      "score": 0.9666631,
+      "score": 0.4627892,
       "api_source": "tavily",
       "ai_relevance_score": 0.75,
       "id": "news_edf47abf0eac"
@@ -394,17 +438,6 @@
       "id": "news_0450f5a7cf32"
     },
     {
-      "title": "Exclusive: Anthropic Drops Flagship Safety Pledge - Time Magazine",
-      "url": "https://time.com/7380854/exclusive-anthropic-drops-flagship-safety-pledge/",
-      "content": "Anthropic, the wildly successful AI company that has cast itself as the most safety-conscious of the top research labs, is dropping the central pledge of its flagship safety policy, company officials tell TIME. In 2023, Anthropic committed to never train an AI system unless it could guarantee in advance that the company’s safety measures were adequate. “We felt that it wouldn't actually help anyone for us to stop training AI models,” Anthropic’s chief science officer Jared Kaplan told TIME in an",
-      "published_date": "Tue, 24 Feb 2026 20:02:41 GMT",
-      "source": "time.com",
-      "score": 0.31188828,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.75,
-      "id": "news_60ba5b52ba8e"
-    },
-    {
       "title": "Is The Pentagon Handing China Its Biggest AI Advantage? - Forbes",
       "url": "https://www.forbes.com/sites/amirhusain/2026/02/24/is-the-pentagon-handing-china-its-biggest-ai-advantage/",
       "content": "This week, the Department of Defense threatened to cut ties with Anthropic over the company's refusal to let its AI participate in certain lethal operations. Grok, which Musk himself built partly as a rebellion against what he called excessive AI caution. I've spent years building AI systems for defense and industrial applications. The truth is Anthropic have been thoughtful about building Claude with what they call Constitutional AI. CNN’s headline screams, “Pentagon threatens to make Anthropic",
@@ -421,7 +454,7 @@
       "content": "Wall St Week Ahead Nvidia, software reports pose next tests for AI-sensitive stock market | Reuters. *   Ukraine and Russia at War. Wall St Week Ahead Nvidia, software reports pose next tests for AI-sensitive stock market. NEW YORK, Feb 20 (Reuters) - Investors turn to financial results from artificial intelligence bellwether Nvidia Corp (NVDA.O), opens new tab in the coming week to steady a U.S. stock market that has been rocked by AI-related worries and is digesting a Supreme Court overturn of",
       "published_date": "Fri, 20 Feb 2026 11:10:27 GMT",
       "source": "reuters.com",
-      "score": 0.5689194,
+      "score": 0.96432143,
       "api_source": "tavily",
       "ai_relevance_score": 0.6,
       "id": "news_2635068de830"
@@ -432,21 +465,10 @@
       "content": "Home / **Boeing demonstrates large language model for space-grade hardware**. # Boeing demonstrates large language model for space-grade hardware. SAN FRANCISCO – Before uploading a large language model to space-grade hardware, Boeing Space Mission Systems engineers sought guidance from the hardware manufacturer. “They told us it wasn’t possible, but we are skilled engineers who were going to figure out a pathway to make it happen,” Arvel Chappell III, Boeing Space Mission Systems AI Lab directo",
       "published_date": "Tue, 24 Feb 2026 01:47:12 GMT",
       "source": "spacenews.com",
-      "score": 0.37022537,
+      "score": 0.462061,
       "api_source": "tavily",
       "ai_relevance_score": 0.6,
       "id": "news_6b3dd4bdcede"
-    },
-    {
-      "title": "What AI Can't Do: Humanity’s Last Exam - Science 2.0",
-      "url": "https://www.science20.com/hank_campbell/what_ai_cant_do_humanitys_last_exam-257706",
-      "content": "For now, while AI is still a long way off, tasks that academics considered challenging for LLMs, like the 2020 Multitask Language Understanding (MMLU) benchmark designed to evaluate ability using 57 topics, are now easy for the private sector to master. So academics are trying again, this time with Humanity’s Last Exam - a 2,500‑question evaluation-tool that covers math, humanities topics, science, ancient languages and various subfields. Making an imagery LLM with code that says 'don't create h",
-      "published_date": "Wed, 25 Feb 2026 19:12:32 GMT",
-      "source": "science20.com",
-      "score": 0.17217186,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.6,
-      "id": "news_1ac7e2add81b"
     },
     {
       "title": "Autodesk invests $200M in AI startup - Construction Dive",
@@ -460,17 +482,6 @@
       "id": "news_e9803b9e532c"
     },
     {
-      "title": "Google VP warns that two types of AI startups may not survive - TechCrunch",
-      "url": "https://techcrunch.com/2026/02/21/google-vp-warns-that-two-types-of-ai-startups-may-not-survive/",
-      "content": "An example would be a startup that uses AI to helps students study. AI aggregators are a subset of wrappers — they’re startups that aggregate multiple LLMs into one interface or API layer to route queries across models and give users access to multiple models. Think: AI search startup Perplexity or developer platform OpenRouter, which provides access to multiple AI models via a single API. For his part, Mowry is bullish on vibe coding and developer platforms, which had a record-breaking year in ",
-      "published_date": "Sat, 21 Feb 2026 16:00:00 GMT",
-      "source": "techcrunch.com",
-      "score": 0.99490017,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.6,
-      "id": "news_2fe7e9d25cca"
-    },
-    {
       "title": "AI self-driving startup Wayve worth $8.6 billion after fresh funding - The Economic Times",
       "url": "https://m.economictimes.com/tech/funding/ai-self-driving-startup-wayve-worth-8-6-billion-after-fresh-funding/articleshow/128767609.cms",
       "content": "Business NewsTechFundingAI self-driving startup Wayve worth $8.6 billion after fresh funding. # AI self-driving startup Wayve worth $8.6 billion after fresh funding. Wayve, a British startup specialised in artificial intelligence for self-driving vehicles, revealed Wednesday a valuation of $8.6 billion thanks to new investment from big companies including Uber, Microsoft and Nvidia. Wayve, a British startup specialised in artificial intelligence for self-driving vehicles, revealed Wednesday a va",
@@ -480,28 +491,6 @@
       "api_source": "tavily",
       "ai_relevance_score": 0.6,
       "id": "news_acefd5aff1b9"
-    },
-    {
-      "title": "Anthropic Is Dropping Its Signature Safety Pledge Amid a Heated AI Race - Business Insider",
-      "url": "https://www.businessinsider.com/anthropic-changing-safety-policy-2026-2",
-      "content": "In a statement on Tuesday, Anthropic said that amid heightened competition and a lack of government regulation, it will no longer abide by its commitment \"to pause the scaling and/or delay the deployment of new models\" when such advancements would have outpaced its own safety measures. As part of the changes, Anthropic now has separate safety recommendations, called its Responsible Scaling Policy, for itself and the AI industry as a whole. Anthropic's chief science officer, Jared Kaplan, told Ti",
-      "published_date": "Wed, 25 Feb 2026 17:20:36 GMT",
-      "source": "businessinsider.com",
-      "score": 0.39229083,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.6,
-      "id": "news_35a76a0823ed"
-    },
-    {
-      "title": "Let’s Talk: Agentic AI - with Sabina Blaukopf: By Rupert Fallows - Finextra Research",
-      "url": "https://www.finextra.com/blogposting/30983/lets-talk-agentic-ai---with-sabina-blaukopf",
-      "content": "Image 5: Let's Talk: Agentic AI. Let’s Talk: Agentic AI with Sabrina Blaukopf. Unlike traditional AI, which often just responds to commands or processes data in the background, agentic AI can perceive its environment and make informed decisions on its own. We asked Sabrina Blaukopf, Director New Technologies to share her thoughts on Agentic AI. **Sabrina Blaukopf**: Yes, in fact, our latest no-code innovation for business experts, our solution Converse, already leverages large language models an",
-      "published_date": "Wed, 25 Feb 2026 15:33:26 GMT",
-      "source": "finextra.com",
-      "score": 0.9224824,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.6,
-      "id": "news_69b615748dbf"
     },
     {
       "title": "VIEW AMD secures Meta as next big AI chip customer - Reuters",
@@ -520,7 +509,7 @@
       "content": "Over the past 12 months Google stock (NASDAQ: GOOGL) experienced a 71% increase driven by strong revenue and profit margin growth, partly fueled by AI-driven expansion and cloud profitability. The 71% increase in stock price reflects strong revenue growth (+15%) and a better net income margin (+15%), further enhanced by a 28% increase in the P/E multiple, indicating increased investor confidence. * **Tangible AI Monetization**: Revenues from products developed on Alphabet’s generative AI models ",
       "published_date": "Mon, 23 Feb 2026 16:12:22 GMT",
       "source": "forbes.com",
-      "score": 0.6654328,
+      "score": 0.9761292,
       "api_source": "tavily",
       "ai_relevance_score": 0.6,
       "id": "news_7e7fe0ff7cc2"
@@ -531,21 +520,10 @@
       "content": "# Plato closes $14.5M to bring AI automation to wholesale trade. Plato, a Berlin-based startup, has raised $14.5 million in seed funding to bring generative AI into wholesale distribution, a massive industry that rarely makes tech headlines but quietly moves a significant share of the world’s goods. While AI has flooded marketing, customer support, and coding, distribution sales teams are often still copy-pasting numbers between systems. Plato’s thesis is simple: instead of adding another dashbo",
       "published_date": "Thu, 19 Feb 2026 09:41:45 GMT",
       "source": "thenextweb.com",
-      "score": 0.55420566,
+      "score": 0.9207897,
       "api_source": "tavily",
       "ai_relevance_score": 0.6,
       "id": "news_1efed1304549"
-    },
-    {
-      "title": "How AI is driving the 4th Agricultural Revolution in farming - Farm Progress",
-      "url": "https://www.farmprogress.com/technology/artificial-intelligence-powering-4th-agricultural-revolution",
-      "content": "AI ADVANCEMENTS: During the 2026 USDA Ag Outlook Forum, agricultural experts discussed how artificial intelligence and automation are transforming modern farming practices, moving beyond traditional yield-focused approaches toward optimized decision-making systems. “I think we’ve entered the fourth Agricultural Revolution,” declared William Aderholdt, co-founder and executive director of the Fargo, N.D.-based nonprofit Grand Farm, during a session focused on bridging the gap between AI and adopt",
-      "published_date": "Mon, 23 Feb 2026 07:31:54 GMT",
-      "source": "farmprogress.com",
-      "score": 0.5440511,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.6,
-      "id": "news_b9d3089cf472"
     },
     {
       "title": "Opinion | The Race to Dominate A.I. Is Brutally Competitive. That’s Good for Everyone. - The New York Times",
@@ -559,37 +537,15 @@
       "id": "news_0156a12bfda1"
     },
     {
-      "title": "“Essential, Not Optional”: FedEx CEO Elevates AI to Strategic Imperative - Inbound Logistics",
-      "url": "https://www.inboundlogistics.com/articles/essential-not-optional-fedex-ceo-elevates-ai-to-strategic-imperative/",
-      "content": "**Tags:** Artificial Intelligence, FedEx, Global Logistics. In remarks delivered at the AI Impact Summit 2026 this week, Rajesh Subramanian, president and CEO of FedEx Corporation, positioned artificial intelligence as a cornerstone of modern logistics — not a nice-to-have, but an essential infrastructure for the future of global commerce and supply chain resilience. For logistics professionals, FedEx’s evolving AI strategy offers a glimpse at how shipping and supply chain operations could trans",
-      "published_date": "Thu, 19 Feb 2026 16:51:07 GMT",
-      "source": "inboundlogistics.com",
-      "score": 0.7515939,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.45,
-      "id": "news_ad747f576ec6"
-    },
-    {
       "title": "AI Impact: Can You Be Right About AI—and Still Lose? - Newsweek",
       "url": "https://www.newsweek.com/nw-ai/ai-impact-can-you-be-right-about-ai-and-still-lose-11545298",
       "content": "*Editor's note: This is AI Impact, Newsweek's weekly newsletter where each week, we will explore how business leaders are unlocking real value through artificial intelligence.*. The winners in 2026 won’t be the retailers who talk most loudly about AI or personalization, they will be the ones who have built the data foundations, real-time signal flows and organizational processes that let AI act at human decision speed. **Kathleen Grace**, most recently chief strategy officer at AI platform Vermi",
       "published_date": "Thu, 19 Feb 2026 14:39:00 GMT",
       "source": "newsweek.com",
-      "score": 0.694241,
+      "score": 0.9849274,
       "api_source": "tavily",
       "ai_relevance_score": 0.45,
       "id": "news_6d4a08208fb9"
-    },
-    {
-      "title": "Anthropic’s Pentagon Problems; Cleaning Up Cloud Storage | Technology for Feb. 22 - The Wall Street Journal",
-      "url": "https://www.wsj.com/tech/ai/anthropics-pentagon-problems-751b229a?gaa_at=eafs&gaa_n=AWEtsqevXvyuMBE54xzFzXBjN_hfoNxDDQOd2LOKyNcPB0iTdUHX5toxjRqy&gaa_ts=699b2254&gaa_sig=uaNonoA-39eV_0uvrfjoLMGeRwCARWWOLtp5Bc8gBUGmaB7ywXi5B8YMBq1tZa1ulzzHTWWDnTmJUgprnkp5Cg%3D%3D",
-      "content": "Anthropic’s Pentagon Problems; Cleaning Up Cloud Storage | Technology for Feb. 22 - WSJ. https://www.wsj.com/tech/ai/anthropics-pentagon-problems-751b229a. Image 1: Dario Amodei, co-founder and chief executive officer of Anthropic, speaking into a microphone at the company’s Builder Summit. _This is an edition of the WSJ Technology newsletter, a weekly digest of tech columns, big stories and personal tech advice. Tensions between the Pentagon and Anthropic escalated in a big way this week. A wee",
-      "published_date": "Sun, 22 Feb 2026 15:15:00 GMT",
-      "source": "wsj.com",
-      "score": 0.61972505,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.45,
-      "id": "news_e96bdc710554"
     },
     {
       "title": "Ransomware Report Finds AI Accelerating, Not Replacing Human-Led Attacks - Industrial Equipment News",
@@ -597,54 +553,21 @@
       "content": "Securin, a leading provider of AI-based Adversarial Exposure Validation (AEV) solutions, has released its _2025 Ransomware Report,_ finding that generative AI is rapidly accelerating ransomware operations by lowering barriers to entry, increasing scale, and intensifying psychological pressure across leadership, risk functions and frontline staff, without fully automating attacks. ##### Security Breach: Hybrid Warfare is Upon You. Image 23: Workers follow an AI-operated driverless tractor harvest",
       "published_date": "Thu, 19 Feb 2026 14:57:47 GMT",
       "source": "ien.com",
-      "score": 0.6016175,
+      "score": 0.9334308,
       "api_source": "tavily",
       "ai_relevance_score": 0.45,
       "id": "news_e0048055ef28"
     },
     {
-      "title": "Exclusive | Google Is Exploring Ways to Use Its Financial Might to Take On Nvidia - The Wall Street Journal",
-      "url": "https://www.wsj.com/tech/ai/google-is-exploring-ways-to-use-its-financial-might-to-take-on-nvidia-0fbadc84?gaa_at=eafs&gaa_n=AWEtsqfvHZXDP-VdhcL-6KfDBO7RAR_6uJxNQCY7avON8WNdbQ6HP7jYb241&gaa_ts=6998a304&gaa_sig=nP2aEoSiyGly9JSUDO4rx7p3CkOqa1jBEqGjvPGs0QINLlmsBFtqmZRXy0Fj5ef6-9L4SH77b8WBB4uWJR-SLQ%3D%3D",
-      "content": "Exclusive | Google Using Financial Might to Take On Nvidia’s AI Chip Dominance - WSJ. Google Is Exploring Ways to Use Its Financial Might to Take On Nvidia. https://www.wsj.com/tech/ai/google-is-exploring-ways-to-use-its-financial-might-to-take-on-nvidia-0fbadc84. Google Is Exploring Ways to Use Its Financial Might to Take On Nvidia. As more AI companies consider Google’s chips, the company wants to use deals with external partners to expand the potential market. Google is exploring new ways to ",
-      "published_date": "Fri, 20 Feb 2026 17:35:00 GMT",
+      "title": "Anthropic’s Pentagon Problems; Cleaning Up Cloud Storage | Technology for Feb. 22 - The Wall Street Journal",
+      "url": "https://www.wsj.com/tech/ai/anthropics-pentagon-problems-751b229a?gaa_at=eafs&gaa_n=AWEtsqevXvyuMBE54xzFzXBjN_hfoNxDDQOd2LOKyNcPB0iTdUHX5toxjRqy&gaa_ts=699b2254&gaa_sig=uaNonoA-39eV_0uvrfjoLMGeRwCARWWOLtp5Bc8gBUGmaB7ywXi5B8YMBq1tZa1ulzzHTWWDnTmJUgprnkp5Cg%3D%3D",
+      "content": "Anthropic’s Pentagon Problems; Cleaning Up Cloud Storage | Technology for Feb. 22 - WSJ. https://www.wsj.com/tech/ai/anthropics-pentagon-problems-751b229a. Image 1: Dario Amodei, co-founder and chief executive officer of Anthropic, speaking into a microphone at the company’s Builder Summit. _This is an edition of the WSJ Technology newsletter, a weekly digest of tech columns, big stories and personal tech advice. Tensions between the Pentagon and Anthropic escalated in a big way this week. A wee",
+      "published_date": "Sun, 22 Feb 2026 15:15:00 GMT",
       "source": "wsj.com",
-      "score": 0.50285697,
+      "score": 0.8679338,
       "api_source": "tavily",
       "ai_relevance_score": 0.45,
-      "id": "news_2e7064d4a525"
-    },
-    {
-      "title": "A large-scale randomized study of large language model feedback in peer review - Nature",
-      "url": "https://www.nature.com/articles/s42256-026-01188-x",
-      "content": "# A large-scale randomized study of large language model feedback in peer review. Here, to address these issues, we developed Review Feedback Agent, a system leveraging multiple large language models to improve review clarity, specificity and actionability by providing automated feedback on vague comments, content misunderstandings and unprofessional remarks to reviewers. This work demonstrates that carefully designed large language model-generated feedback can enhance peer review quality by mak",
-      "published_date": "Mon, 23 Feb 2026 16:35:27 GMT",
-      "source": "nature.com",
-      "score": 0.39420095,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.45,
-      "id": "news_a96d0c6a5f27"
-    },
-    {
-      "title": "Danger was flagged, but not reported: What the Tumbler Ridge tragedy reveals about Canada’s AI governance vacuum - The Conversation",
-      "url": "https://theconversation.com/danger-was-flagged-but-not-reported-what-the-tumbler-ridge-tragedy-reveals-about-canadas-ai-governance-vacuum-276718",
-      "content": "Federal AI Minister Evan Solomon, who intends to meet with OpenAI representatives today on Feb. 24 about this issue, said on Feb. 21 that he was “deeply disturbed” by the revelations, adding the federal government is reviewing “a suite of measures” and that “all options are on the table.” But those options remain undefined because the legislative tools that would have enabled them no longer exist. Canada’s next attempt at digital governance must recognize that human-to-AI interactions are fundam",
-      "published_date": "Tue, 24 Feb 2026 19:19:08 GMT",
-      "source": "theconversation.com",
-      "score": 0.56920683,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.45,
-      "id": "news_b4c2e2d95731"
-    },
-    {
-      "title": "When should AI chatbots call the cops? - Politico",
-      "url": "https://www.politico.com/newsletters/digital-future-daily/2026/02/25/the-harrowing-dilemma-of-violent-chatbot-users-00798369",
-      "content": "After the meeting, Canada’s AI minister described the decision by OpenAI employees as a “failure,” and warned that the government would impose more regulations on chatbots if companies don’t have appropriate public safety guardrails. However, deciding whether to report someone is a tough call even for humans, and policy concerns about privacy, false flags and public safety are likely to be even more complex with chatbots. **There aren’t many laws** in the U.S. to guide AI companies if they suspe",
-      "published_date": "Wed, 25 Feb 2026 21:24:03 GMT",
-      "source": "politico.com",
-      "score": 0.4485476,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.45,
-      "id": "news_c1b6e4408c42"
+      "id": "news_e96bdc710554"
     },
     {
       "title": "AI and Governance in UK Local Authorities Webinar - Public Sector Executive",
@@ -652,21 +575,21 @@
       "content": "# AI and Governance in UK Local Authorities Webinar. ## Artificial intelligence has become a significant player across all aspects of life and technology, especially within local government.In the *AI and Governance in UK Local Authorities* webinar, experts delved into the complexities of this technology, as well as discussing its implications, risks, and opportunities for local authorities. Kurt Frary, Head of IT at Norfolk County Council, emphasised that AI governance is not just about complia",
       "published_date": "Wed, 25 Feb 2026 00:00:00 GMT",
       "source": "publicsectorexecutive.com",
-      "score": 0.4434805,
+      "score": 0.93991333,
       "api_source": "tavily",
       "ai_relevance_score": 0.45,
       "id": "news_9ff300191aa7"
     },
     {
-      "title": "AI agents are fast, loose and out of control, MIT study finds - ZDNET",
-      "url": "https://www.zdnet.com/article/ai-agents-are-fast-loose-and-out-of-control-mit-study-find/",
-      "content": "The vast majority of agentic AI systems disclose nothing about what safety testing, if any, has been conducted, and many systems have no documented way to shut down a rogue bot, a study by MIT and collaborators found. The results make clear that agentic AI is something of a security nightmare at the moment, a discipline marked by lack of disclosure, lack of transparency, and a striking lack of basic protocols about how agents should operate. The 39-page report, \"The 2025 AI Index: Documenting So",
-      "published_date": "Fri, 20 Feb 2026 01:00:00 GMT",
-      "source": "zdnet.com",
-      "score": 0.9979652,
+      "title": "Urgent research needed to tackle AI threats, says Google AI boss - BBC",
+      "url": "https://www.bbc.com/news/articles/c0q3g0ln274o",
+      "content": "In an exclusive interview at the AI Impact Summit in Delhi, Sir Demis Hassabis said the industry wanted \"smart regulation\" for \"the real risks\" posed by the tech. Many tech leaders and politicians at the Summit have called for more global governance of AI, ahead of an expected joint statement as the event draws to a close. Sam Altman, the boss of OpenAI, also called for \"urgent regulation\" in a speech at the AI Summit, while Indian Prime Minster Narendra Modi said countries had to work together ",
+      "published_date": "Fri, 20 Feb 2026 10:32:40 GMT",
+      "source": "bbc.com",
+      "score": 0.92788786,
       "api_source": "tavily",
       "ai_relevance_score": 0.45,
-      "id": "news_dfad0d107e59"
+      "id": "news_84fd75954155"
     },
     {
       "title": "AI's \"centaur phase\" consumes Silicon Valley - Axios",
@@ -674,21 +597,10 @@
       "content": "A manic new phase of the AI boom is sweeping through Silicon Valley, powered by autonomous \"agents\" capable of liquefying weeks of manual labor into minutes. * Just as a chess player aided by a computer could once beat any standalone machine, an engineer paired with an AI agent may now be the most powerful unit in tech. * That vision snapped into focus last month with the explosive rise of OpenClaw, an open-source tool that lets developers spin up AI agents to plan, code and ship software end to",
       "published_date": "Mon, 23 Feb 2026 10:00:05 GMT",
       "source": "axios.com",
-      "score": 0.9977482,
+      "score": 0.7018975,
       "api_source": "tavily",
       "ai_relevance_score": 0.45,
       "id": "news_8fdd5bdfd0ad"
-    },
-    {
-      "title": "AI Agents Are Getting Better. Their Safety Disclosures Aren't - CNET",
-      "url": "https://www.cnet.com/tech/services-and-software/ai-agents-are-getting-smarter-mit-finds-their-safety-disclosures-arent/",
-      "content": "A study led by MIT researchers found that agentic AI developers seldom publish detailed information about how these tools were tested for safety. But when researchers behind the MIT AI Agent Index\") cataloged 67 deployed agentic systems, they found something unsettling. \"Leading AI developers and startups are increasingly deploying agentic AI systems that can plan and execute complex tasks with limited human involvement,\" the researchers wrote in the paper\"). The research underscores that while ",
-      "published_date": "Thu, 19 Feb 2026 23:43:00 GMT",
-      "source": "cnet.com",
-      "score": 0.99477994,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.45,
-      "id": "news_8cbf5fdd6b64"
     },
     {
       "title": "OpenClaw is only the beginning - Axios",
@@ -696,21 +608,32 @@
       "content": "A new population explosion is loading the internet with AI-powered software agents — chatbots that can take their own actions inside digital systems. **Moment 1 — Gas Town:** Veteran coder-blogger Steve Yegge lit a fire in the software-development trenches at the start of the year with a project that demonstrated an elaborate method for orchestrating the work of dozens of coding agents. **Moment 2 — OpenClaw:** Developers also began embracing a new open-source AI agent known originally as Clawdb",
       "published_date": "Tue, 24 Feb 2026 10:20:04 GMT",
       "source": "axios.com",
-      "score": 0.9904406,
+      "score": 0.5942929,
       "api_source": "tavily",
       "ai_relevance_score": 0.45,
       "id": "news_2bc7a3e81aa1"
     },
     {
-      "title": "Anand Mahindra Announces 50 Billion Investment for Autonomous AI Driverless Car - THE PHILOX",
-      "url": "https://thephilox.com/anand-mahindra-announces-50-billion-investment-for-autonomous-ai-driverless-car/",
-      "content": "# Anand Mahindra Announces 50 Billion Investment for Autonomous AI Driverless Car. ## Mahindra Group Portends Big Autonomous AI Mobility Press. Mahindra Group Chairman Anand Mahindra is known to have indicated a radical change in the Indian automobile giant by indicating a high priority on autonomous AI technology. Mahindra, according to the reports published at the India AI Impact Summit 2026, has its vision in making artificial intelligence a part of the very design, production, and self-drivi",
-      "published_date": "Sat, 21 Feb 2026 05:15:30 GMT",
-      "source": "thephilox.com",
-      "score": 0.96538115,
+      "title": "AI Agents Are Getting Better. Their Safety Disclosures Aren't - CNET",
+      "url": "https://www.cnet.com/tech/services-and-software/ai-agents-are-getting-smarter-mit-finds-their-safety-disclosures-arent/",
+      "content": "A study led by MIT researchers found that agentic AI developers seldom publish detailed information about how these tools were tested for safety. But when researchers behind the MIT AI Agent Index\") cataloged 67 deployed agentic systems, they found something unsettling. \"Leading AI developers and startups are increasingly deploying agentic AI systems that can plan and execute complex tasks with limited human involvement,\" the researchers wrote in the paper\"). The research underscores that while ",
+      "published_date": "Thu, 19 Feb 2026 23:43:00 GMT",
+      "source": "cnet.com",
+      "score": 0.5775198,
       "api_source": "tavily",
       "ai_relevance_score": 0.45,
-      "id": "news_26693909c61a"
+      "id": "news_8cbf5fdd6b64"
+    },
+    {
+      "title": "AI agents are fast, loose and out of control, MIT study finds - ZDNET",
+      "url": "https://www.zdnet.com/article/ai-agents-are-fast-loose-and-out-of-control-mit-study-find/",
+      "content": "The vast majority of agentic AI systems disclose nothing about what safety testing, if any, has been conducted, and many systems have no documented way to shut down a rogue bot, a study by MIT and collaborators found. The results make clear that agentic AI is something of a security nightmare at the moment, a discipline marked by lack of disclosure, lack of transparency, and a striking lack of basic protocols about how agents should operate. The 39-page report, \"The 2025 AI Index: Documenting So",
+      "published_date": "Fri, 20 Feb 2026 01:00:00 GMT",
+      "source": "zdnet.com",
+      "score": 0.52173984,
+      "api_source": "tavily",
+      "ai_relevance_score": 0.45,
+      "id": "news_dfad0d107e59"
     },
     {
       "title": "Meta inks deal with AMD for chips—and equity - PitchBook",
@@ -735,15 +658,48 @@
       "id": "news_a84d3ae08df3"
     },
     {
+      "title": "OpenAI COO says ‘we have not yet really seen AI penetrate enterprise business processes’ - TechCrunch",
+      "url": "https://techcrunch.com/2026/02/24/openai-coo-says-we-have-not-yet-really-seen-ai-penetrate-enterprise-business-processes/",
+      "content": "Earlier this month, OpenAI launched a new platform called OpenAI Frontier for enterprises to build and manage agents, but OpenAI COO Brad Lightcap said that businesses haven’t yet seen AI adoption at scale. “One of the interesting things and some of the inspiration for the work we’ve been doing lately around OpenAI Frontier is we have not yet really seen enterprise AI penetrate enterprise business process,” the AI exec said on the sidelines of the India AI summit held last week in New Delhi. In ",
+      "published_date": "Tue, 24 Feb 2026 17:44:34 GMT",
+      "source": "techcrunch.com",
+      "score": 0.9932025,
+      "api_source": "tavily",
+      "ai_relevance_score": 0.45,
+      "id": "news_a67e37390ef5"
+    },
+    {
+      "title": "Suno Hires Former Merlin CEO Jeremy Sirota as Chief Commercial Officer - Billboard",
+      "url": "https://www.billboard.com/pro/suno-hires-jeremy-sirota-chief-commercial-officer/",
+      "content": "# Suno Hires Former Merlin CEO Jeremy Sirota as Chief Commercial Officer. Sirota will lead Suno's commercial strategy, music industry relationships, platform partnerships and enterprise solutions. Suno, a generative AI music company, has hired **Jeremy Sirota** as its new chief commercial officer. In this new role, Sirota will lead Suno’s commercial strategy, music industry relationships, platform partnerships and enterprise solutions. ### Outgoing Merlin CEO Jeremy Sirota Talks Indie Label Cons",
+      "published_date": "Mon, 23 Feb 2026 14:38:23 GMT",
+      "source": "billboard.com",
+      "score": 0.98549646,
+      "api_source": "tavily",
+      "ai_relevance_score": 0.45,
+      "id": "news_72499118e126"
+    },
+    {
       "title": "One Million Professionals Turn to CoCounsel as Thomson Reuters Scales AI for Regulated Industries - Thomson Reuters",
       "url": "https://www.thomsonreuters.com/en/press-releases/2026/february/one-million-professionals-turn-to-cocounsel-as-thomson-reuters-scales-ai-for-regulated-industries",
       "content": "Law firm Zarwin Baum’s embrace of generative AI as the natural next step in the evolution of legal work and their adoption of CoCounsel Legal has helped them achieve remarkable efficiency gains and improved client relationships. # **One Million Professionals Turn to CoCounsel as Thomson Reuters Scales AI for Regulated Industries**. **TORONTO, February 24, 2026 —** Thomson Reuters (TSX/Nasdaq: TRI), a global content and technology company, today announced one million professionals have chosen CoC",
       "published_date": "Tue, 24 Feb 2026 14:38:25 GMT",
       "source": "thomsonreuters.com",
-      "score": 0.6682966,
+      "score": 0.97684664,
       "api_source": "tavily",
       "ai_relevance_score": 0.45,
       "id": "news_459008d58a78"
+    },
+    {
+      "title": "OpenAI deepens partnerships with consulting giants to push enterprise AI beyond pilot - Reuters",
+      "url": "https://www.reuters.com/business/openai-deepens-partnerships-with-consulting-giants-push-enterprise-ai-beyond-2026-02-23/",
+      "content": "Feb 23 (Reuters) - OpenAI is expanding its push into the enterprise market by teaming up with four of the world’s largest consulting firms, betting that a more hands-on approach will help corporate clients move beyond pilot projects to full-scale AI deployments. While OpenAI has previously worked with consulting firms to sell its technology, Dresser said the new partnership is designed to help companies embed AI into core workflows rather than run isolated experiments. In the enterprise race, Op",
+      "published_date": "Mon, 23 Feb 2026 13:35:24 GMT",
+      "source": "reuters.com",
+      "score": 0.9518632,
+      "api_source": "tavily",
+      "ai_relevance_score": 0.45,
+      "id": "news_3ac0eda0f55e"
     },
     {
       "title": "Excitement remains for GenAI, but revenue impact remains minimal - Consultancy.uk",
@@ -751,21 +707,10 @@
       "content": "***Entering into the fourth year of AI hype, experimentation, and adoption, a new study from Eden McCallum has consulted business leaders about their perceived impacts of the technology. The majority of executives to have sanctioned expensive generative AI transformations suggest a positive impact, but promised booms in productivity and profit still seem some way off – with just one-in-ten respondents noting changes to revenue resulting from their investments.***. However, when it comes to expan",
       "published_date": "Wed, 25 Feb 2026 05:05:00 GMT",
       "source": "consultancy.uk",
-      "score": 0.6097339,
+      "score": 0.94122344,
       "api_source": "tavily",
       "ai_relevance_score": 0.45,
       "id": "news_aadc01dde38f"
-    },
-    {
-      "title": "Beyond Generative AI: Why Healthcare’s Next Leap Depends on Agentic Systems That Can Actually Do the Work - HIT Consultant",
-      "url": "https://hitconsultant.net/2026/02/23/agentic-ai-healthcare-workflow-automation-prior-authorization/",
-      "content": "# Beyond Generative AI: Why Healthcare’s Next Leap Depends on Agentic Systems That Can Actually Do the Work. Over the past year, healthcare organizations have widely adopted generative AI for an array of  documentation-related activities such as drafting appeal letters, producing patient-friendly summaries, and even assisting with administrative writing. While these tools have improved how information is created, they do little to address the underlying issue: a fragmented, manual, and procedura",
-      "published_date": "Mon, 23 Feb 2026 00:13:08 GMT",
-      "source": "hitconsultant.net",
-      "score": 0.5441965,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.45,
-      "id": "news_5e7af53d1325"
     },
     {
       "title": "The AI Derby: Generative AI Is Moving More Quickly Than Agentic 02/23/2026 - MediaPost",
@@ -773,21 +718,10 @@
       "content": "# The AI Derby: Generative AI Is Moving More Quickly Than Agentic. early wins with generative AI and making ambitious plans for agentic AI. In particular, agentic AI suffers from “organizational assumptions that do not always align with customer comfort or readiness.\". Here are the improvements brands have seen with generative AI:. Generative AI is also at the front when it comes to best practices in compliance:. AI—Generative AI (65%), Agentic AI (37%). * Tools for connecting different systems ",
       "published_date": "Mon, 23 Feb 2026 20:28:35 GMT",
       "source": "mediapost.com",
-      "score": 0.451448,
+      "score": 0.9314625,
       "api_source": "tavily",
       "ai_relevance_score": 0.45,
       "id": "news_8e929f78bb96"
-    },
-    {
-      "title": "OpenAI COO says ‘we have not yet really seen AI penetrate enterprise business processes’ - TechCrunch",
-      "url": "https://techcrunch.com/2026/02/24/openai-coo-says-we-have-not-yet-really-seen-ai-penetrate-enterprise-business-processes/",
-      "content": "Earlier this month, OpenAI launched a new platform called OpenAI Frontier for enterprises to build and manage agents, but OpenAI COO Brad Lightcap said that businesses haven’t yet seen AI adoption at scale. “One of the interesting things and some of the inspiration for the work we’ve been doing lately around OpenAI Frontier is we have not yet really seen enterprise AI penetrate enterprise business process,” the AI exec said on the sidelines of the India AI summit held last week in New Delhi. In ",
-      "published_date": "Tue, 24 Feb 2026 17:44:34 GMT",
-      "source": "techcrunch.com",
-      "score": 0.4186262,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.45,
-      "id": "news_a67e37390ef5"
     },
     {
       "title": "OpenAI and Microsoft sign up to UK’s AI ‘Alignment Project’ - Telecoms",
@@ -834,12 +768,23 @@
       "id": "news_c5b36801d8a0"
     },
     {
+      "title": "In Other News: Ransomware Shuts US Clinics, ICS Vulnerability Surge, European Parliament Bans AI - SecurityWeek",
+      "url": "https://www.securityweek.com/in-other-news-ransomware-shuts-us-clinics-ics-vulnerability-surge-european-parliament-bans-ai/",
+      "content": "# In Other News: Ransomware Shuts US Clinics, ICS Vulnerability Surge, European Parliament Bans AI. Other noteworthy stories that might have slipped under the radar: Axonius lays off employees, Abu Dhabi conference data leak, HackerOne addresses AI concerns. Bug bounty hunters raised questions on social media about whether HackerOne was using their submitted vulnerability reports to train AI models, particularly in connection with the company’s recent Agentic PTaaS platform and its AI system cal",
+      "published_date": "Fri, 20 Feb 2026 15:30:00 GMT",
+      "source": "securityweek.com",
+      "score": 0.75635755,
+      "api_source": "tavily",
+      "ai_relevance_score": 0.3,
+      "id": "news_a3ec2f46504b"
+    },
+    {
       "title": "State Politics Affecting Trump’s Push to Limit AI Regulation - GovTech",
       "url": "https://www.govtech.com/artificial-intelligence/state-politics-affecting-trumps-push-to-limit-ai-regulation",
       "content": "The 2026 GovTech 100 is now live. ## IE 11 Not Supported. Last week, the White House Office of Intergovernmental Affairs sent a memo, obtained by CQ Roll Call, in opposition to a Utah bill that would require developers of large frontier AI models to publish public safety and child protection plans. The thing that’s probably more impactful is the fact that the tech CEOs . He said that parts of Texas’ law appear to line up with the intentions of the executive order and its carve-outs to preserve s",
       "published_date": "Fri, 20 Feb 2026 17:16:55 GMT",
       "source": "govtech.com",
-      "score": 0.57666177,
+      "score": 0.9603612,
       "api_source": "tavily",
       "ai_relevance_score": 0.3,
       "id": "news_831cbfd340c1"
@@ -850,7 +795,7 @@
       "content": "# 95% of AI pilots flop — General Assembly has a solution. General Assembly's AI Academy offers a proven path forward: Building systems and training the leadership needed to scale AI with impact. **What you need to know:** AI adoption often breaks down at the enterprise level. * Many companies treat AI training as a one-off event — not as a sustained capability journey. ## A new system for scaling AI across the enterprise. For organizations to succeed, they need to treat AI capability like core ",
       "published_date": "Mon, 23 Feb 2026 21:36:55 GMT",
       "source": "axios.com",
-      "score": 0.42907107,
+      "score": 0.90665317,
       "api_source": "tavily",
       "ai_relevance_score": 0.3,
       "id": "news_cc9bc0d6ea35"
@@ -878,15 +823,15 @@
       "id": "news_c6d1ca0c1bd4"
     },
     {
-      "title": "China AI Companies Drive The Future Of Global Robotaxi Deployment - Forbes",
-      "url": "https://www.forbes.com/sites/viviantoh/2026/02/24/china-startups-is-driving-the-future-of-global-robotaxi-deployment/",
-      "content": "China AI Companies Drive The Future Of Global Robotaxi Deployment. *   2026 Top Women Wealth Advisors Best in State List. Image 2: AI Is Making Us Less Creative, But There’s A Fix. Feb 24, 2026, 02:30pm ESTAI Is Making Us Less Creative, But There’s A Fix. Image 3: Panasonic’s TV Division Forges Strategic Partnership With Chinese Brand Skyworth. China AI Companies Drive The Future Of Global Robotaxi Deployment. Image 9: Ai.R is operated by Grab in partnership with WeRide in Singapore. In a world ",
-      "published_date": "Wed, 25 Feb 2026 04:14:28 GMT",
-      "source": "forbes.com",
-      "score": 0.6122407,
+      "title": "Emerging technology trends brands and agencies need to know about - Ad Age",
+      "url": "https://adage.com/technology/ai/aa-emerging-tech-news-and-trends-seedance-ai-wpp-perplexity/",
+      "content": "# Emerging technology trends brands and agencies need to know about. *Welcome back to Ad Age’s Emerging Tech roundup. This week, we’re looking at how AI video sensation Seedance creates intellectual property risks for brands; also, WPP helps advertisers choose AI partners; and more. And sign up for our* *Emerging Tech newsletter here.*. The top 5 AI marketing activations to know about right now. Ad Age’s top 5 AI marketing activations to know right now, including Paris Hilton in a Carl’s Jr. spo",
+      "published_date": "Thu, 19 Feb 2026 10:00:00 GMT",
+      "source": "adage.com",
+      "score": 0.9801293,
       "api_source": "tavily",
       "ai_relevance_score": 0.15,
-      "id": "news_b521b6b12fb9"
+      "id": "news_0af8a584aa8e"
     },
     {
       "title": "AI ad of the week: Samsung shows varying degrees of AI-generated material in social campaign - Ad Age",
@@ -894,7 +839,7 @@
       "content": "Your Shortcut to Smarter Insights. # AI ad of the week: Samsung shows varying degrees of AI-generated material in social campaign. February 20, 2026 05:00 AM EST. ## Featured Stories. Marketing winners and losers of the week. American Girl gave some of its historical dolls a makeover that is not going over well with loyalists. Behind the mystery of Liquid Death’s Olympics ad—why brands embrace AI skepticism. NBA 2K hires Goodby Silverstein & Partners—behind the gaming franchise’s evolving creati",
       "published_date": "Fri, 20 Feb 2026 10:00:00 GMT",
       "source": "adage.com",
-      "score": 0.58721006,
+      "score": 0.9161096,
       "api_source": "tavily",
       "ai_relevance_score": 0.15,
       "id": "news_dfee957ce7cd"
@@ -966,37 +911,15 @@
       "id": "news_04f2df73cb08"
     },
     {
-      "title": "US tells diplomats to lobby against foreign data sovereignty laws - TechCrunch",
-      "url": "https://techcrunch.com/2026/02/25/us-tells-diplomats-to-lobby-against-foreign-data-sovereignty-laws/",
-      "content": "The Trump administration has ordered U.S. diplomats to lobby against countries’ attempts to regulate how American tech companies handle foreigners’ data, arguing that data sovereignty laws threaten the advancement of AI services and technology, Reuters reported, citing an internal diplomatic cable. The cable, signed by U.S. Secretary of State Marco Rubio, says such laws would “disrupt global data flows, increase costs and cybersecurity risks, limit AI and cloud services, and expand government co",
-      "published_date": "Wed, 25 Feb 2026 14:56:52 GMT",
-      "source": "techcrunch.com",
-      "score": 0.55478466,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.15,
-      "id": "news_0f37b2e4059e"
-    },
-    {
       "title": "Red and blue states want to lLimit AI in insurance; Trump wants to limit states - Bozeman Daily Chronicle",
       "url": "https://www.bozemandailychronicle.com/health_and_wellness/red-and-blue-states-want-to-llimit-ai-in-insurance-trump-wants-to-limit-states/article_9d4179e3-6e9a-4c3f-b022-8ce764118ec5.html",
       "content": "It’s the rare policy question that unites Republican Gov. Ron DeSantis of Florida and the Democratic-led Maryland government against President Donald Trump and Gov. Gavin Newsom of California: How should health insurers use AI? “To win, United States AI companies must be free to innovate without cumbersome regulation,” Trump’s order said. The American Medical Association “supports state regulations seeking greater accountability and transparency from commercial health insurers that use AI and ma",
       "published_date": "Wed, 25 Feb 2026 17:00:00 GMT",
       "source": "bozemandailychronicle.com",
-      "score": 0.5473921,
+      "score": 0.98959166,
       "api_source": "tavily",
       "ai_relevance_score": 0.15,
       "id": "news_c0fede58bb60"
-    },
-    {
-      "title": "New data reveals AI governance gap between policy and practice, creating ESG risks - Thomson Reuters",
-      "url": "https://www.thomsonreuters.com/en-us/posts/sustainability/ai-governance-gap-esg-risks/",
-      "content": "The rapid adoption of AI without robust governance frameworks is creating ESG risks, and companies must prioritize transparent and ethical AI practices to meet evolving investor expectations. - #### ***AI governance is now a material investor risk*** — AI disclosure among S&P 500 companies jumped to 72% in 2025 from 12% in 2023, and investors are treating AI governance as a critical factor in overall corporate governance. - ***Governance on paper and not in practice*** — While 76% of companies w",
-      "published_date": "Mon, 23 Feb 2026 17:03:55 GMT",
-      "source": "thomsonreuters.com",
-      "score": 0.5264164,
-      "api_source": "tavily",
-      "ai_relevance_score": 0.15,
-      "id": "news_2819b718e757"
     },
     {
       "title": "Cox pushes back on Trump over gambling and AI regulation - Politico",
@@ -1004,10 +927,43 @@
       "content": "Cox pushes back on Trump over gambling and AI regulation - POLITICO. Cox pushes back on Trump over gambling and AI regulation. During an interview at POLITICO’s 2026 Governors Summit, the Republican governor and occasional critic of President Donald Trump pushed back on the Trump administration’s recent efforts to limit states’ abilities to regulate gambling and AI, saying the federal government “coming in and trying to tell us” to back off state-level fixes is “preposterous.”. “Look, this is a ",
       "published_date": "Thu, 19 Feb 2026 16:01:00 GMT",
       "source": "politico.com",
-      "score": 0.49011418,
+      "score": 0.93674946,
       "api_source": "tavily",
       "ai_relevance_score": 0.15,
       "id": "news_fee0472813e3"
+    },
+    {
+      "title": "US tells diplomats to lobby against foreign data sovereignty laws - TechCrunch",
+      "url": "https://techcrunch.com/2026/02/25/us-tells-diplomats-to-lobby-against-foreign-data-sovereignty-laws/",
+      "content": "The Trump administration has ordered U.S. diplomats to lobby against countries’ attempts to regulate how American tech companies handle foreigners’ data, arguing that data sovereignty laws threaten the advancement of AI services and technology, Reuters reported, citing an internal diplomatic cable. The cable, signed by U.S. Secretary of State Marco Rubio, says such laws would “disrupt global data flows, increase costs and cybersecurity risks, limit AI and cloud services, and expand government co",
+      "published_date": "Wed, 25 Feb 2026 14:56:52 GMT",
+      "source": "techcrunch.com",
+      "score": 0.929951,
+      "api_source": "tavily",
+      "ai_relevance_score": 0.15,
+      "id": "news_0f37b2e4059e"
+    },
+    {
+      "title": "Tisa calls for ‘careful and considered’ regulation of AI in financial services - FT Adviser",
+      "url": "https://www.ftadviser.com/content/85e58f03-490e-4e81-a11a-8394feb9891c",
+      "content": "# Tisa calls for ‘careful and considered’ regulation of AI in financial services. Proper regulation of AI in financial services is key to protecting consumers, The Investing and Savings Alliance has warned. * Read without interruption - full access to our reporting on the financial intermediary market. * Bank CPD while you read. ## Related articles. Number of advice firms using AI doubles in a year. How BlackRock used AI to turn around performance of investment trust. ## Most Read. ## Related To",
+      "published_date": "Wed, 25 Feb 2026 22:08:30 GMT",
+      "source": "ftadviser.com",
+      "score": 0.92892635,
+      "api_source": "tavily",
+      "ai_relevance_score": 0.15,
+      "id": "news_a8edce9dd2e0"
+    },
+    {
+      "title": "New data reveals AI governance gap between policy and practice, creating ESG risks - Thomson Reuters",
+      "url": "https://www.thomsonreuters.com/en-us/posts/sustainability/ai-governance-gap-esg-risks/",
+      "content": "The rapid adoption of AI without robust governance frameworks is creating ESG risks, and companies must prioritize transparent and ethical AI practices to meet evolving investor expectations. - #### ***AI governance is now a material investor risk*** — AI disclosure among S&P 500 companies jumped to 72% in 2025 from 12% in 2023, and investors are treating AI governance as a critical factor in overall corporate governance. - ***Governance on paper and not in practice*** — While 76% of companies w",
+      "published_date": "Mon, 23 Feb 2026 17:03:55 GMT",
+      "source": "thomsonreuters.com",
+      "score": 0.9026096,
+      "api_source": "tavily",
+      "ai_relevance_score": 0.15,
+      "id": "news_2819b718e757"
     },
     {
       "title": "‘A feedback loop with no brake’: how an AI doomsday report shook US markets - The Guardian",
@@ -1015,10 +971,21 @@
       "content": "# ‘A feedback loop with no brake’: how an AI doomsday report shook US markets. US stock markets have been hit by a further wave of AI jitters, this time from yet another viral – and completely speculative – warning about the impact of the technology on the world’s largest economy. Its post on Substack, which it called a “scenario, not a prediction”, rattled investors by portraying a near future in which autonomous AI systems – or agents – upend the entire US economy, from jobs to markets and mor",
       "published_date": "Tue, 24 Feb 2026 15:17:15 GMT",
       "source": "theguardian.com",
-      "score": 0.966156,
+      "score": 0.62824833,
       "api_source": "tavily",
       "ai_relevance_score": 0.15,
       "id": "news_83d2adf52e91"
+    },
+    {
+      "title": "The Blast Radius Problem: Stolen Credentials are Weaponizing Agentic AI - SecurityWeek",
+      "url": "https://www.securityweek.com/the-blast-radius-problem-stolen-credentials-are-weaponizing-agentic-ai/",
+      "content": "Once largely confined to nation state actors, these supply chain attack techniques are now being adopted by financially motivated and other criminal threat groups, reflecting a clear trickle down of advanced tactics.”. Each organization has a role in identifying their own critical infrastructure and being able to protect that.” Knowing yourself means understanding what you have that the enemy wants, your brand exposure, any credentials being sold on the dark web, your attack surface, what your a",
+      "published_date": "Wed, 25 Feb 2026 16:16:40 GMT",
+      "source": "securityweek.com",
+      "score": 0.49113917,
+      "api_source": "tavily",
+      "ai_relevance_score": 0.15,
+      "id": "news_2d65ba1a4920"
     },
     {
       "title": "Enterprise hits and misses - AI adoption sparks an employee well-being debate, as agentic use cases gain traction - Diginomica",
@@ -1026,7 +993,7 @@
       "content": "# Enterprise hits and misses - AI adoption sparks an employee well-being debate, as agentic use cases gain traction. :   This week - AI adoption is inevitable, but employee well-being is another matter. But too often, AI comes off as a hamster wheel accelerator, where we ~~KPI our way to extinction~~ do the \"AI first\" thing to keep pace, while hoping our employers don't roll the dice on our expendability via the same tools that were supposed to make work better. To paraphrase Alyx, we need to st",
       "published_date": "Mon, 23 Feb 2026 20:21:12 GMT",
       "source": "diginomica.com",
-      "score": 0.47563025,
+      "score": 0.9856076,
       "api_source": "tavily",
       "ai_relevance_score": 0.15,
       "id": "news_53f7b76824bf"
@@ -1054,6 +1021,17 @@
       "id": "news_8a44ea46a6e6"
     },
     {
+      "title": "China AI Companies Drive The Future Of Global Robotaxi Deployment - Forbes",
+      "url": "https://www.forbes.com/sites/viviantoh/2026/02/24/china-startups-is-driving-the-future-of-global-robotaxi-deployment/",
+      "content": "China AI Companies Drive The Future Of Global Robotaxi Deployment. *   2026 Top Women Wealth Advisors Best in State List. Image 2: AI Is Making Us Less Creative, But There’s A Fix. Feb 24, 2026, 02:30pm ESTAI Is Making Us Less Creative, But There’s A Fix. Image 3: Panasonic’s TV Division Forges Strategic Partnership With Chinese Brand Skyworth. China AI Companies Drive The Future Of Global Robotaxi Deployment. Image 9: Ai.R is operated by Grab in partnership with WeRide in Singapore. In a world ",
+      "published_date": "Wed, 25 Feb 2026 04:14:28 GMT",
+      "source": "forbes.com",
+      "score": 0.9492946,
+      "api_source": "tavily",
+      "ai_relevance_score": 0.15,
+      "id": "news_b521b6b12fb9"
+    },
+    {
       "title": "AI Disruption Prompts Australia's WiseTech to Cut a Third of Global Workforce - Asharq Al-awsat - English",
       "url": "https://english.aawsat.com/technology/5244623-ai-disruption-prompts-australias-wisetech-cut-third-global-workforce",
       "content": "ByteDance's AI Chatbot Doubao Wins China Holiday Battle with 100 Million Users https://english.aawsat.com/technology/5244628-bytedances-ai-chatbot-doubao-wins-china-holiday-battle-100-million-users. ByteDance's Doubao chatbot attracted over 100 million daily active users during China's Lunar New Year holiday, winning an AI battle that saw the country's largest tech companies spend billions to acquire new users, a private survey showed. The Doubao app surpassed 100 million ‌daily ⁠active users (D",
@@ -1074,6 +1052,17 @@
       "api_source": "tavily",
       "ai_relevance_score": 0.15,
       "id": "news_94e74b906371"
+    },
+    {
+      "title": "General Catalyst pledges $5 billion to India within the next five years - Bitget",
+      "url": "https://www.bitget.com/asia/amp/news/detail/12560605209806",
+      "content": "General Catalyst pledges $5 billion to India within the next five years | Bitget News. General Catalyst pledges $5 billion to India within the next five years. General Catalyst pledges $5 billion to India within the next five years. General Catalyst Unveils $5 Billion Investment Plan for India. General Catalyst, a prominent venture capital firm headquartered in Silicon Valley and managing assets exceeding $43 billion, has revealed plans to inject $5 billion into India's startup landscape over th",
+      "published_date": "Fri, 20 Feb 2026 07:09:42 GMT",
+      "source": "bitget.com",
+      "score": 0.99135584,
+      "api_source": "tavily",
+      "ai_relevance_score": 0.0,
+      "id": "news_e4fea99bec59"
     }
   ]
 }

@@ -1,18 +1,18 @@
 # AI Intelligence Daily Brief
 
-**2026-02-26** | Generated 2026-02-26 10:05 | Experiment: `v2_2_forward_test`
+**2026-02-26** | Generated 2026-02-26 16:44 | Experiment: `v2_2_forward_test`
 
 ---
 
 ## 📊 Executive Summary
 
-**Emerging Trends:** 4 cross-source trends detected.
+**Emerging Trends:** 5 cross-source trends detected.
 
-Top emerging: **Big Tech AI Infrastructure Consolidation** (score 94, accelerating).
+Top emerging: **Big Tech Earnings Wave & AI Infrastructure Spend** (score 94, accelerating).
 
-**Accelerating Narratives:** AI Infrastructure Arms Race, OpenAI's Mainstream Inflection
+**Accelerating Narratives:** Big Tech Earnings & AI Infrastructure Investment, AI Infrastructure Arms Race, Data Cloud Consolidation
 
-**10 top stories** selected from today's scrape.
+**15 top stories** selected from today's scrape.
 
 ---
 
@@ -20,118 +20,147 @@ Top emerging: **Big Tech AI Infrastructure Consolidation** (score 94, accelerati
 ## 🔥 Emerging Trends
 
 
-### 1. Big Tech AI Infrastructure Consolidation
+### 1. Big Tech Earnings Wave & AI Infrastructure Spend
 
-**Emergence Score**: 94/100 | **Velocity**: accelerating | **Sources**: 6 types
+**Emergence Score**: 94/100 | **Velocity**: accelerating | **Sources**: 4 types
 
-Cross-pollination of academic research and product strategy: Amazon fixing visual artifacts, Apple applying physics-informed methods to battery/prognostics, Oracle hardening alignment. Signals coordinated push toward domain-specific, reliable AI systems rather than general-purpose models.
+SEC filings from chip and cloud providers are converging with newsletter intelligence on a coordinated infrastructure buildout. The novelty flags on AMD/Oracle suggest this isn't routine coverage—it's a capacity race narrative forming.
 
 
 Evidence chain:
 
 
-- **[arxiv]** Amazon VLMs/diffusion flaw detection paper; Apple PINEAPPLE physics-informed neural evolution; Oracle robust online LLM alignment _(2026-02-20)_
+- **[sec_edgar]** NVIDIA 10-K/10-Q filings showing datacenter revenue acceleration _(2026-02-24)_
 
 
 
-- **[news]** Yahoo Finance coverage of AI capex and cloud infrastructure investments _(2026-02-24)_
+- **[sec_edgar]** AMD earnings guidance revision with AI chip ramp _(2026-02-25)_
 
 
 
-- **[newsletters]** Industry analyst coverage of vertical AI integration strategies _(2026-02-25)_
+- **[newsletters]** Oracle cloud infrastructure capacity expansion announcements _(2026-02-25)_
 
 
 
 
 
-> 🔮 **Prediction**: Major cloud providers announce unified AI infrastructure stacks combining proprietary silicon, optimized models, and vertical-specific tooling within 30 days
+> 🔮 **Prediction**: Q1 2026 earnings season will reveal massive AI capex concentration among hyperscalers, with Oracle gaining share against AWS/Azure in GPU cloud. AMD MI350 benchmarks leak, triggering supply chain stock moves.
 
 
 ---
 
-### 2. Stealth Hardware-Software Co-Design Race
+### 2. Meta-Learning for Content Authenticity
 
-**Emergence Score**: 78/100 | **Velocity**: steady | **Sources**: 4 types
+**Emergence Score**: 88/100 | **Velocity**: accelerating | **Sources**: 5 types
 
-Traditional GPU dominance narrative fragmenting. AMD and IBM gaining technical mindshare in hacker communities despite lower news volume. Suggests infrastructure buyers diversifying, creating opening for alternative architectures.
+Academic preprint → technical community validation → corporate comms pipeline suggests Meta is weaponizing watermarking research for regulatory positioning. The 63% velocity spike indicates coordinated messaging rollout.
 
 
 Evidence chain:
 
 
-- **[hackernews]** Technical discussions of memory bandwidth bottlenecks and new interconnect standards _(2026-02-22)_
+- **[arxiv]** Meta-FC paper: meta-learning with feature consistency for robust watermarking _(2026-02-20)_
 
 
 
-- **[news_search]** Supply chain reporting on custom silicon ramp-ups _(2026-02-23)_
+- **[hackernews]** Technical discussion on watermark robustness against paraphrasing attacks _(2026-02-22)_
 
 
 
-- **[blogs]** Engineering deep-dives on compiler optimizations for heterogeneous compute _(2026-02-24)_
+- **[news]** Company newsroom amplification of trust & safety initiatives _(2026-02-24)_
 
 
 
 
 
-> 🔮 **Prediction**: Leaked benchmark comparisons of next-gen training clusters trigger vendor positioning war; one major player announces open hardware specification
+> 🔮 **Prediction**: Meta will announce platform-wide synthetic content labeling using Meta-FC derived techniques within 2 weeks, preempting EU AI Act enforcement. Other platforms forced to follow with inferior implementations.
 
 
 ---
 
-### 3. Enterprise AI Deployment Friction
+### 3. Apple On-Device Physics ML
 
-**Emergence Score**: 71/100 | **Velocity**: accelerating | **Sources**: 5 types
+**Emergence Score**: 85/100 | **Velocity**: accelerating | **Sources**: 5 types
 
-Signal shift from 'can build' to 'can deploy safely.' High news volume with accelerating velocity suggests market frustration boiling over. Gap between consumer AI excitement and enterprise execution becoming visible.
+Unusual cross-domain signal: physics-informed ML paper with Apple-affiliated authors, SEC R&D signals, and hardware leaks converging. The 68% velocity with NEW novelty flag suggests a stealth productization of academic research.
 
 
 Evidence chain:
 
 
-- **[news]** Company newsroom announcements of enterprise AI partnerships and 'responsible AI' frameworks _(2026-02-25)_
+- **[arxiv]** PINEAPPLE: Physics-Informed Neuro-Evolution for battery prognostics _(2026-02-18)_
 
 
 
-- **[newsletters]** Analyst reports on gap between pilot deployments and production scale _(2026-02-24)_
+- **[sec_edgar]** R&D capitalization changes hinting at automotive/energy pivot _(2026-02-24)_
 
 
 
-- **[blogs]** Practitioner posts on governance, cost control, and hallucination mitigation in enterprise settings _(2026-02-23)_
+- **[blogs]** Supply chain leaks on new battery management silicon _(2026-02-25)_
 
 
 
 
 
-> 🔮 **Prediction**: At least one major platform launches 'AI operations' managed service targeting Fortune 500 deployment failures; industry consortium forms around evaluation standards
+> 🔮 **Prediction**: Apple will preview 'Apple Intelligence for Energy' at spring event—on-device battery optimization extending to HomePod, Watch, and rumored Apple Car development platform. Differentiation play against cloud-dependent Android.
 
 
 ---
 
-### 4. Anthropic Strategy Recalibration
+### 4. Microsoft Enterprise AI Agent Deployment
 
-**Emergence Score**: 65/100 | **Velocity**: decelerating | **Sources**: 6 types
+**Emergence Score**: 82/100 | **Velocity**: accelerating | **Sources**: 4 types
 
-Highest source diversity but fading velocity is distinctive pattern. Established player showing stress signals across community and press simultaneously. Technical differentiation (constitutional AI) not converting to sustained attention suggests inflection point.
+VentureBeat technical scoop → practitioner blog validation → pricing intelligence shows go-to-market readiness. The 69% velocity with NEW novelty indicates this isn't Copilot iteration—it's a platform shift narrative.
 
 
 Evidence chain:
 
 
-- **[reddit]** Community speculation on model release delays and competitive positioning _(2026-02-20)_
+- **[news]** VentureBeat: Copilot agent orchestration platform details _(2026-02-23)_
 
 
 
-- **[news]** The Register, TechCrunch, CNBC coverage of leadership changes and partnership discussions _(2026-02-22)_
+- **[blogs]** Enterprise architect guides on multi-agent workflows _(2026-02-24)_
 
 
 
-- **[hackernews]** Technical debate on constitutional AI vs. RLHF approaches losing mindshare _(2026-02-21)_
+- **[newsletters]** Pricing leak for autonomous agent seat licenses _(2026-02-25)_
 
 
 
 
 
-> 🔮 **Prediction**: Major strategic pivot announced within 14 days: either enterprise pivot, acquisition talks, or flagship model release acceleration; one of these leaks prematurely
+> 🔮 **Prediction**: Microsoft Build 2026 will center on 'Agent Mesh' architecture; Satya Nadella memo reframes company as 'agent infrastructure' provider. Salesforce/ServiceNow forced into defensive acquisition mode.
+
+
+---
+
+### 5. OpenAI Regulatory Arbitrage & Open-Source Pressure
+
+**Emergence Score**: 78/100 | **Velocity**: steady | **Sources**: 6 types
+
+Regulatory pressure + competitive response + community sentiment divergence across 6 source types. The steady 37% velocity is deceptive—it's sustained tension rather than hype cycle, suggesting structural pressure not momentary news.
+
+
+Evidence chain:
+
+
+- **[news]** The Register: EU AI Act compliance struggles, potential service restrictions _(2026-02-22)_
+
+
+
+- **[news]** Ars Technica: DeepSeek-R1 competitive response, o3-mini pricing cuts _(2026-02-24)_
+
+
+
+- **[reddit]** Developer migration threads to open-weight alternatives _(2026-02-25)_
+
+
+
+
+
+> 🔮 **Prediction**: OpenAI will announce 'open-weight' model release (not full open source) within 6 weeks to stem developer churn, paired with lobbying push for US federal preemption of state AI laws. GPT-5 timing accelerated.
 
 
 ---
@@ -145,113 +174,162 @@ Evidence chain:
 ## 📰 Top Stories
 
 
-### Product Launch
-
-
-**1. [Gemini 3.1 Pro](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/)**
-
-
-
-
-
-_hackernews [hackernews] · Feb 19, 2026_
-
-
-**2. [Taalas serves Llama 3.1 8B at 17,000 tokens/second](https://simonwillison.net/2026/Feb/20/taalas/#atom-everything)**
-
-
-
-
-
-_Simon Willison [blogs] · Feb 20, 2026_
-
-
-**3. [Claude Cowork: Scheduled Tasks](https://twitter.com/claudeai/status/2026720870631354429)**
-
-
-
-
-
-_hackernews [hackernews] · Feb 25, 2026_
-
-
-
-### Regulation
-
-
-**1. [Anthropic Dials Back AI Safety Commitments](https://www.wsj.com/tech/ai/anthropic-dials-back-ai-safety-commitments-38257540)**
-
-
-
-
-
-_hackernews [hackernews] · Feb 25, 2026_
-
-
-
 ### Research
 
 
-**1. [Intelligence with Everyone: RL @ MiniMax, with Olive Song, from AIE NYC & Inference by Turing Post](https://www.youtube.com/watch?v=P-1MJCX9TEM)**
+**1. [A study finds GPT-5.2, Claude Sonnet 4, and Gemini 3 Flash deployed tactical nuclear weapons in 95% of 21 simulated war game scenarios, and never surrendered](https://www.newscientist.com/article/2516885-ais-cant-stop-recommending-nuclear-strikes-in-war-game-simulations/)**
 
 
 
 
 
-_Cognitive Revolution "How AI Changes Everything" [podcasts] · _
+_Newscientist [techmeme] · Feb 26, 2026_
 
 
-**2. [Large-scale online deanonymization with LLMs](https://arxiv.org/abs/2602.16800)**
-
-
-
-
-
-_hackernews [hackernews] · Feb 25, 2026_
-
-
-**3. [Some Simple Economics of AGI](https://arxiv.org/abs/2602.20946)**
+**2. [AI Is Acing Math Exams Faster Than Scientists Write Them](https://spectrum.ieee.org/ai-math-benchmarks)**
 
 
 
 
 
-_hackernews [hackernews] · Feb 25, 2026_
-
-
-
-### Other
-
-
-**1. [SWE-bench February 2026 leaderboard update](https://simonwillison.net/2026/Feb/19/swe-bench/#atom-everything)**
-
-
-
-
-
-_Simon Willison [blogs] · Feb 19, 2026_
-
-
-**2. [Writing about Agentic Engineering Patterns](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/#atom-everything)**
-
-
-
-
-
-_Simon Willison [blogs] · Feb 23, 2026_
+_IEEE Spectrum AI [tech_rss] · Feb 25, 2026_
 
 
 
 ### Partnership
 
 
-**1. [ggml.ai joins Hugging Face to ensure the long-term progress of Local AI](https://simonwillison.net/2026/Feb/20/ggmlai-joins-hugging-face/#atom-everything)**
+**1. [Anthropic acquires Vercept, whose Vy desktop agent lets users control a Mac or PC with natural language, to “advance Claude's computer use capabilities”](https://www.geekwire.com/2026/anthropic-acquires-vercept-in-early-exit-for-one-of-seattles-standout-ai-startups/)**
 
 
 
 
 
-_Simon Willison [blogs] · Feb 20, 2026_
+_Geekwire [techmeme] · Feb 26, 2026_
+
+
+**2. [Alphabet's Intrinsic, which builds AI models and software for industrial robots, joins Google; it will remain a distinct entity and work with Google DeepMind](https://techcrunch.com/2026/02/25/alphabet-owned-robotics-software-company-intrinsic-joins-google/)**
+
+
+
+
+
+_Techcrunch [techmeme] · Feb 26, 2026_
+
+
+**3. [AMD will buy $150M in Nutanix stock and provide up to $100M to fund joint initiatives to develop an infrastructure platform for powering AI applications](https://www.bloomberg.com/news/articles/2026-02-25/amd-to-buy-150-million-of-nutanix-stock-in-new-partnership)**
+
+
+
+
+
+_Bloomberg [techmeme] · Feb 26, 2026_
+
+
+
+### Product Launch
+
+
+**1. [Perplexity launches Perplexity Computer, “a general-purpose digital worker” that can route work across 19 AI models, available initially for Max subscribers](https://www.thedeepview.com/articles/perplexity-may-have-built-a-better-openclaw)**
+
+
+
+
+
+_Thedeepview [techmeme] · Feb 26, 2026_
+
+
+**2. [Google launches task automation for Gemini on Pixel 10 and Samsung Galaxy S26, enabling Gemini to autonomously perform tasks using apps like Uber and DoorDash](https://www.theverge.com/tech/884210/google-gemini-samsung-s26-pixel-10-uber)**
+
+
+
+
+
+_Theverge [techmeme] · Feb 26, 2026_
+
+
+**3. [Samsung unveils the $1,299+ Galaxy S26 Ultra with a Privacy Display that limits side-angle screen legibility, a new agentic AI, improved night mode, and more](https://www.zdnet.com/article/samsung-galaxy-s26-ultra-hands-on-unpacked-2026/)**
+
+
+
+
+
+_Zdnet [techmeme] · Feb 26, 2026_
+
+
+**4. [The UK's Virgin Media O2 launches Europe's first satellite-to-mobile service, powered by Starlink and initially available for £3/month on select Samsung devices](https://www.reuters.com/business/media-telecom/uks-o2-launches-europes-first-smartphone-satellite-service-2026-02-26/)**
+
+
+
+
+
+_Reuters [techmeme] · Feb 26, 2026_
+
+
+
+### Funding
+
+
+**1. [Sources: Saronic, which is building autonomous warships, is raising up to $1.5B at a ~$7.5B pre-money valuation; Saronic was last valued at $3.4B a year ago](https://www.theinformation.com/articles/autonomous-warship-startup-saronic-raising-7-5-billion-valuation)**
+
+
+
+
+
+_Theinformation [techmeme] · Feb 26, 2026_
+
+
+**2. [Sources: Thrive invested $1B in OpenAI in 2025 at a $285B valuation in a transaction akin to a call option; OpenAI was separately raising at a $830B valuation](https://www.wsj.com/articles/thrive-capital-bought-shares-in-openai-at-a-fraction-of-current-valuation-talks-cfdeccf4?st=Y5GkqY&reflink=desktopwebshare_permalink)**
+
+
+
+
+
+_Wsj [techmeme] · Feb 26, 2026_
+
+
+
+### Regulation
+
+
+**1. [Source: Amazon, Google, Meta, Microsoft, xAI, Oracle, and OpenAI will sign White House's initiative to build their own electricity supply for AI data centers](https://www.foxnews.com/politics/scoop-trump-brings-big-tech-white-house-curb-power-costs-amid-ai-boom)**
+
+
+
+
+
+_Foxnews [techmeme] · Feb 26, 2026_
+
+
+**2. [Sources: DOD asked Boeing and Lockheed Martin to assess their reliance on Claude, a first step toward blacklisting Anthropic; Lockheed confirms it was contacted](https://www.axios.com/2026/02/25/anthropic-pentagon-blacklist-claude)**
+
+
+
+
+
+_Axios [techmeme] · Feb 26, 2026_
+
+
+**3. [A top US export control official says Nvidia has yet to sell any H200 chips to China, two months after President Trump's decision to allow AI chip shipments](https://www.bloomberg.com/news/articles/2026-02-24/nvidia-has-sold-zero-h200s-to-china-top-us-export-enforcer-says)**
+
+
+
+
+
+_Bloomberg [techmeme] · Feb 26, 2026_
+
+
+
+### Other
+
+
+**1. [Gambit Security: an unknown hacker used Claude to steal 150GB of Mexican government data, including 195M taxpayer records, in December 2025 and January 2026](https://www.bloomberg.com/news/articles/2026-02-25/hacker-used-anthropic-s-claude-to-steal-sensitive-mexican-data?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc3MjAyOTAxMSwiZXhwIjoxNzcyNjMzODExLCJhcnRpY2xlSWQiOiJUQVhKSU9LSzNOWUEwMCIsImJjb25uZWN0SWQiOiJBNUNGNjk1RTU1RUM0MTg4OUQxRkNENkU1MTQ5M0YzRCJ9.CvIsV1KtX04gJ2xHSDWdIuYvCCKVs8-tE8sqcLvqAc0)**
+
+
+
+
+
+_Bloomberg [techmeme] · Feb 26, 2026_
 
 
 
@@ -262,107 +340,101 @@ _Simon Willison [blogs] · Feb 20, 2026_
 ## 📖 Active Narratives
 
 
-### Big Tech Earnings Season — peak
+### Big Tech Earnings & AI Infrastructure Investment — peak
 
-**Momentum**: steady | **Mentions**: 672 (7d) / 5102 (30d)
+**Momentum**: accelerating | **Mentions**: 81 (7d) / 634 (30d)
 
-Narrative transitions from disclosure to competitive positioning analysis; expect divergence as analysts parse relative AI infrastructure investments and cloud revenue trajectories
+Peak concentration risk—narrative likely fragments into company-specific winners/losers within 7-14 days as guidance differentials emerge. Watch for capex guidance revisions.
 
 
 Key inflection points:
 
-- 2026-02-25 coordinated disclosure wave
+- Synchronous earnings window (Feb 25)
 
-- OpenAI's Reddit-to-mainstream pipeline activation
-
-
+- SEC disclosure cascade (Feb 26)
 
 
-> 📈 **Outlook**: Narrative transitions from disclosure to competitive positioning analysis; expect divergence as analysts parse relative AI infrastructure investments and cloud revenue trajectories
+
+
+> 📈 **Outlook**: Peak concentration risk—narrative likely fragments into company-specific winners/losers within 7-14 days as guidance differentials emerge. Watch for capex guidance revisions.
 
 
 ---
 
-### AI Infrastructure Arms Race — developing
+### AI Infrastructure Arms Race — peak
 
-**Momentum**: accelerating | **Mentions**: 197 (7d) / 1534 (30d)
+**Momentum**: accelerating | **Mentions**: 88 (7d) / 712 (30d)
 
-Consolidation around inference-cost narratives; NVIDIA's dominance faces challenge from Microsoft's vertical integration story and OpenAI's model-efficiency claims
+Supply chain narrative will dominate next phase. Risk of 'build-out complete' anxiety if Q2 guidance shows deceleration. Databricks IPO speculation likely intensifies.
 
 
 Key inflection points:
 
-- NVIDIA's sustained 30d volume leadership despite lower 7d recency
+- NVIDIA supply confirmation via SEC
 
-- Microsoft-OpenAI narrative coupling via divergent source patterns
-
-
+- Databricks emerging as narrative proxy for enterprise AI platform demand
 
 
-> 📈 **Outlook**: Consolidation around inference-cost narratives; NVIDIA's dominance faces challenge from Microsoft's vertical integration story and OpenAI's model-efficiency claims
+
+
+> 📈 **Outlook**: Supply chain narrative will dominate next phase. Risk of 'build-out complete' anxiety if Q2 guidance shows deceleration. Databricks IPO speculation likely intensifies.
 
 
 ---
 
-### Enterprise Data Platform Consolidation — developing
+### OpenAI Competitive Pressure & Market Positioning — developing
 
-**Momentum**: decelerating | **Mentions**: 92 (7d) / 787 (30d)
+**Momentum**: steady | **Mentions**: 19 (7d) / 164 (30d)
 
-Narrative bifurcation accelerates: Databricks captures 'innovation' frame while Snowflake defends 'incumbent reliability'; expect acquisition speculation or partnership announcements
+Critical inflection: OpenAI's 'developing' phase amid peer 'peak' suggests market testing its dominance narrative. Next 2 weeks critical—GPT-5 rumors or enterprise deal announcements needed to reaccelerate. Risk of 'falling behind' narrative crystallizing.
 
 
 Key inflection points:
 
-- Snowflake's 64% higher 30d volume but 55% lower 7d momentum than Databricks
-
-- Source-channel divergence: Google Tech vs Yahoo Finance
+- Feb 26 coordinated critical press cycle suggests organized narrative challenge
 
 
 
 
-> 📈 **Outlook**: Narrative bifurcation accelerates: Databricks captures 'innovation' frame while Snowflake defends 'incumbent reliability'; expect acquisition speculation or partnership announcements
+> 📈 **Outlook**: Critical inflection: OpenAI's 'developing' phase amid peer 'peak' suggests market testing its dominance narrative. Next 2 weeks critical—GPT-5 rumors or enterprise deal announcements needed to reaccelerate. Risk of 'falling behind' narrative crystallizing.
 
 
 ---
 
-### OpenAI's Mainstream Inflection — emerging
+### Data Cloud Consolidation — peak
 
-**Momentum**: accelerating | **Mentions**: 14 (7d) / 159 (30d)
+**Momentum**: accelerating | **Mentions**: 57 (7d) / 491 (30d)
 
-Narrative velocity will spike with next model release or partnership announcement; current trajectory suggests preparation for significant disclosure
+IPO window test for Databricks. Snowflake's response to competitive pressure will drive narrative. Risk of 'AI data platform' category redefinition making both legacy positioning obsolete.
 
 
 Key inflection points:
 
-- Reddit-to-CNBC pipeline activation on 2026-02-25
-
-- 12-day latency between grassroots and institutional coverage
+- Parallel peak of Snowflake (public) and Databricks (private) signals market sizing moment
 
 
 
 
-> 📈 **Outlook**: Narrative velocity will spike with next model release or partnership announcement; current trajectory suggests preparation for significant disclosure
+> 📈 **Outlook**: IPO window test for Databricks. Snowflake's response to competitive pressure will drive narrative. Risk of 'AI data platform' category redefinition making both legacy positioning obsolete.
 
 
 ---
 
-### Cloud Wars 2026 — developing
+### Enterprise AI Productivity Software — peak
 
-**Momentum**: steady | **Mentions**: 305 (7d) / 2250 (30d)
+**Momentum**: accelerating | **Mentions**: 61 (7d) / 470 (30d)
 
-Segmentation accelerates: infrastructure cloud (Microsoft-Amazon-Oracle) vs application cloud (Adobe); expect vertical-specific AI integration announcements
+ARPU expansion narrative will be tested. Adobe's Firefly integration metrics and Oracle's autonomous database claims face scrutiny. First to show margin expansion from AI wins narrative dominance.
 
 
 Key inflection points:
 
-- Oracle's dual-channel IR strategy divergence from pure newsroom or pure finance placement
-
-- Adobe's narrative isolation despite same-day disclosure
+- Adobe (creative AI) and Oracle (enterprise apps) peaks suggest vertical AI monetization validation
 
 
 
 
-> 📈 **Outlook**: Segmentation accelerates: infrastructure cloud (Microsoft-Amazon-Oracle) vs application cloud (Adobe); expect vertical-specific AI integration announcements
+> 📈 **Outlook**: ARPU expansion narrative will be tested. Adobe's Firefly integration metrics and Oracle's autonomous database claims face scrutiny. First to show margin expansion from AI wins narrative dominance.
 
 
 ---
@@ -391,9 +463,9 @@ _AI stock price moves matched to today's news. Source: Finnhub + briefAI correla
 
 - **Semis**: 1.44%
 
-- **AI Pure-play**: 3.15%
+- **AI Pure-play**: 2.85%
 
-- **Enterprise**: 2.18%
+- **Enterprise**: 2.19%
 
 
 
@@ -419,7 +491,7 @@ _AI stock price moves matched to today's news. Source: Finnhub + briefAI correla
 - **CRM** up 3.4% ($191.75) — unexplained | RSI 41.2 [macd_bullish]
 
 
-- **MRVL** up 3.2% ($80.92) — unexplained | RSI 51.9 [macd_bullish]
+- **MRVL** up 3.2% ($80.92) — unexplained
 
 
 - **MSFT** up 3.0% ($400.6) — unexplained
@@ -479,23 +551,23 @@ _AI stock price moves matched to today's news. Source: Finnhub + briefAI correla
 
 | Amazon | 84.2 | — | 77 | 1 | 📈 rising |
 
-| Microsoft | 84.0 | — | 97 | 1 | 📈 hot |
+| Microsoft | 84.0 | — | 98 | 1 | 📈 hot |
 
-| OpenAI | 82.9 | — | 14 | 3 | 📉 cooling |
+| OpenAI | 82.9 | — | 19 | 3 | 📉 cooling |
 
-| NVIDIA | 82.7 | 65.7 | 86 | 2 | 📈 hot |
+| NVIDIA | 82.7 | 65.7 | 88 | 2 | 📈 hot |
 
-| Snowflake | 70.8 | 66.5 | 56 | 1 | 📉 cooling |
+| Snowflake | 70.8 | 66.5 | 57 | 1 | 📉 cooling |
 
-| Apple | 70.5 | 66.0 | 73 | 2 | ➡️ steady |
+| Apple | 70.5 | 66.0 | 74 | 2 | 📈 rising |
 
 | Oracle | 70.5 | 65.9 | 71 | 1 | ➡️ steady |
 
 | Adobe | 70.5 | 65.9 | 61 | 1 | 📉 cooling |
 
-| AMD | 70.5 | 65.9 | 66 | 1 | ➡️ steady |
+| AMD | 70.5 | 65.9 | 67 | 1 | ➡️ steady |
 
-| Salesforce | 70.5 | 65.8 | 72 | 1 | ➡️ steady |
+| Salesforce | 70.5 | 65.8 | 73 | 1 | ➡️ steady |
 
 | Google/Alphabet | 70.5 | 65.8 | 76 | 1 | 📈 rising |
 
@@ -506,4 +578,4 @@ _AI stock price moves matched to today's news. Source: Finnhub + briefAI correla
 
 ---
 
-_1695 articles scraped → 10 selected. (579 novel, 1116 repeats) Powered by briefAI._
+_1737 articles scraped → 15 selected. (735 novel, 1002 repeats) Powered by briefAI._
