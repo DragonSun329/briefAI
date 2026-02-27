@@ -153,23 +153,32 @@ class PredictionAccumulator:
         media_score = signal.get("media_score", 5.0)
         conviction = signal.get("conviction_score", 5.0)
         
-        # Determine prediction based on sentiment
+        # Normalize scores to 0-10 scale if they appear to be on 0-100 scale
+        if media_score > 10:
+            media_score = media_score / 10.0
+        if conviction > 10:
+            conviction = conviction / 10.0
+        
+        # Determine prediction based on sentiment (0-10 scale, 5.0 = neutral)
         if media_score >= 7.0:
             predicted_outcome = "bullish"
-            confidence = min(0.9, 0.5 + (media_score - 5) * 0.1)
+            confidence = min(0.85, 0.5 + (media_score - 5) * 0.05)
         elif media_score <= 3.0:
             predicted_outcome = "bearish"
-            confidence = min(0.9, 0.5 + (5 - media_score) * 0.1)
+            confidence = min(0.85, 0.5 + (5 - media_score) * 0.05)
         else:
             # Neutral - skip weak signals
             if abs(media_score - 5.0) < 1.0:
                 return None
             predicted_outcome = "bullish" if media_score > 5.0 else "bearish"
-            confidence = 0.5 + abs(media_score - 5.0) * 0.05
+            confidence = 0.5 + abs(media_score - 5.0) * 0.03
         
-        # Boost confidence with conviction score
+        # Modest boost with conviction score (max +0.05)
         if conviction > 7.0:
-            confidence = confidence + 0.1
+            confidence = confidence + 0.05
+        
+        # Hard cap - never exceed 0.85 on sentiment alone
+        confidence = min(confidence, 0.85)
         
         now = datetime.now()
         horizon_date = now + timedelta(days=horizon_days)
