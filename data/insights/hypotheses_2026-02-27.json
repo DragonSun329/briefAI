@@ -1,0 +1,1006 @@
+{
+  "date": "2026-02-27",
+  "generated_at": "2026-02-27T09:54:50.472279",
+  "version": "2.1",
+  "summary": {
+    "total_metas": 2,
+    "total_bundles": 2,
+    "total_hypotheses": 4,
+    "top_mechanisms": {
+      "distribution_shift": 1,
+      "media_attention_spike": 1
+    },
+    "metas_requiring_review": 2
+  },
+  "bundles": [
+    {
+      "meta_id": "e35ec2956ff7",
+      "concept_slug": "047492ccc58e",
+      "concept_name": "Mixed Signals Review",
+      "maturity_stage": "trending",
+      "hypotheses": [
+        {
+          "hypothesis_id": "83b5fc95e6c67fb2",
+          "title": "Distribution Channel Shifting",
+          "mechanism": "distribution_shift",
+          "claim": "Mixed Signals Review indicates changing distribution channels reshaping market access.",
+          "why_now": "Signal is accelerating, now trending.",
+          "evidence_used": {
+            "supporting_signals": [
+              "18914f8be318",
+              "79f88a9ab05a",
+              "406761560557",
+              "709bc63a75a5",
+              "0e6c2bfe5040",
+              "6a420d39ba65",
+              "6b7fcb81a801",
+              "399bf415e1ce"
+            ],
+            "source_categories": [
+              "media"
+            ],
+            "key_entities": [
+              "threads",
+              "claude",
+              "arr",
+              "ai",
+              "api",
+              "mistral",
+              "meta",
+              "opus",
+              "algo”",
+              "ceo"
+            ],
+            "key_quotes": [
+              "Arthur mensch says cost dynamics shifting in ai market",
+              "Rolls fast mode cost dynamics shifting in ai market"
+            ]
+          },
+          "predicted_next_signals": [
+            {
+              "category": "financial",
+              "description": "Partnership announcements or revenue share changes",
+              "example_sources": [
+                "sec",
+                "press_release",
+                "earnings_call"
+              ],
+              "expected_timeframe_days": 14,
+              "metric": "announcement",
+              "speculative": true,
+              "canonical_metric": "custom_metric",
+              "observable_query": {
+                "source": "sec",
+                "query": "(api) AND (ceo)",
+                "aggregation": "count",
+                "window_days": 14,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "ceo",
+                    "",
+                    "anthropic"
+                  ],
+                  "primary_entity": "ceo",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "api"
+                  ],
+                  "query_hints": [],
+                  "bucket_terms": [],
+                  "canonical_metric": "custom_metric",
+                  "template_used": "filings:{entity} type:{filing_type}"
+                }
+              },
+              "measurable": false,
+              "measurable_reason": "no_canonical_metric_match"
+            },
+            {
+              "category": "technical",
+              "description": "New API integrations or platform releases",
+              "example_sources": [
+                "github",
+                "company_blog",
+                "docs"
+              ],
+              "expected_timeframe_days": 14,
+              "metric": "api",
+              "speculative": true,
+              "canonical_metric": "api_release",
+              "observable_query": {
+                "source": "github",
+                "query": "repo:ceo metric:api_release",
+                "aggregation": "count",
+                "window_days": 14,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "ceo",
+                    "",
+                    "anthropic"
+                  ],
+                  "primary_entity": "ceo",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "api"
+                  ],
+                  "query_hints": [],
+                  "bucket_terms": [],
+                  "canonical_metric": "api_release",
+                  "template_used": "repo:{entity} metric:{metric}"
+                }
+              },
+              "measurable": true
+            }
+          ],
+          "falsifiers": [
+            "Direct channels outperform partnerships",
+            "Platform terms become unfavorable",
+            "User preference for standalone products"
+          ],
+          "confidence": 0.278,
+          "confidence_breakdown": {
+            "base_from_meta_confidence": 0.248,
+            "diversity_bonus": 0.05,
+            "persistence_bonus": 0.02,
+            "independence_bonus": 0.04,
+            "specificity_bonus": 0.02,
+            "penalties_applied": [
+              "weak_mechanism:-0.1"
+            ],
+            "final": 0.278
+          },
+          "review_required": true,
+          "debug": {
+            "rules_fired": [
+              "base_from_meta:0.45",
+              "category_diversity:1",
+              "persistence_days:1",
+              "independence:0.40",
+              "mechanism_hits:1",
+              "penalty:weak_mechanism"
+            ],
+            "scoring_terms": {
+              "meta_confidence": 0.45,
+              "category_count": 1,
+              "persistence_days": 1,
+              "independence_score": 0.4,
+              "evidence_strength": 0.33
+            },
+            "mechanism_keyword_hits": 1,
+            "mechanism_keywords_matched": [
+              "api"
+            ]
+          },
+          "mechanism_trace": {
+            "candidate_scores": {
+              "distribution_shift": 1,
+              "open_source_acceleration": 1
+            },
+            "matched_terms": [
+              "api"
+            ],
+            "evidence_sources": [
+              "entity_tags",
+              "signal_name"
+            ],
+            "selection_reason": "best_available",
+            "evidence_sources_primary": [
+              "entity_tags",
+              "signal_name"
+            ]
+          },
+          "confidence_inputs": {
+            "meta_confidence_raw": 0.45,
+            "meta_to_hypothesis_scaling": 0.55
+          },
+          "confidence_debug": {
+            "base_scaled": 0.2475,
+            "base_raw": 0.45,
+            "scaling_factor": 0.55
+          },
+          "falsifiers_v2": [
+            {
+              "text": "Direct channels outperform partnerships",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            },
+            {
+              "text": "Platform terms become unfavorable",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            },
+            {
+              "text": "User preference for standalone products",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            }
+          ]
+        },
+        {
+          "hypothesis_id": "fb951f222191e4e8",
+          "title": "Alternative: Media Attention Spike",
+          "mechanism": "media_attention_spike",
+          "claim": "Mixed Signals Review shows elevated media attention without clear underlying mechanism.",
+          "why_now": "Signal is accelerating, now trending.",
+          "evidence_used": {
+            "supporting_signals": [
+              "18914f8be318",
+              "79f88a9ab05a",
+              "406761560557",
+              "709bc63a75a5",
+              "0e6c2bfe5040",
+              "6a420d39ba65",
+              "6b7fcb81a801",
+              "399bf415e1ce"
+            ],
+            "source_categories": [
+              "media"
+            ],
+            "key_entities": [
+              "threads",
+              "claude",
+              "arr",
+              "ai",
+              "api",
+              "mistral",
+              "meta",
+              "opus",
+              "algo”",
+              "ceo"
+            ],
+            "key_quotes": [
+              "Arthur mensch says cost dynamics shifting in ai market",
+              "Rolls fast mode cost dynamics shifting in ai market"
+            ]
+          },
+          "predicted_next_signals": [
+            {
+              "category": "media",
+              "description": "Article count for related coverage continues to increase",
+              "example_sources": [
+                "techmeme",
+                "twitter",
+                "reddit"
+              ],
+              "expected_timeframe_days": 7,
+              "metric": "article_count",
+              "direction": "up",
+              "speculative": true,
+              "canonical_metric": "article_count",
+              "observable_query": {
+                "source": "techmeme",
+                "query": "search:(coverage OR news OR story OR update OR media)",
+                "aggregation": "count",
+                "window_days": 7,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "ceo",
+                    "",
+                    "anthropic"
+                  ],
+                  "primary_entity": "ceo",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "media"
+                  ],
+                  "query_hints": [
+                    "coverage",
+                    "news",
+                    "story",
+                    "update"
+                  ],
+                  "bucket_terms": [],
+                  "canonical_metric": "article_count",
+                  "template_used": "search:{keyword}"
+                }
+              },
+              "measurable": true
+            },
+            {
+              "category": "social",
+              "description": "Discussion volume and engagement rate increase",
+              "example_sources": [
+                "twitter",
+                "reddit",
+                "hackernews"
+              ],
+              "expected_timeframe_days": 7,
+              "metric": "discussion_volume",
+              "direction": "up",
+              "speculative": true,
+              "canonical_metric": "discussion_volume",
+              "observable_query": {
+                "source": "twitter",
+                "query": "keyword:(discussion OR reaction OR comment OR thread OR media) from:ceo",
+                "aggregation": "count",
+                "window_days": 7,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "ceo",
+                    "",
+                    "anthropic"
+                  ],
+                  "primary_entity": "ceo",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "media"
+                  ],
+                  "query_hints": [
+                    "discussion",
+                    "reaction",
+                    "comment",
+                    "thread"
+                  ],
+                  "bucket_terms": [],
+                  "canonical_metric": "keyword_frequency",
+                  "template_used": "keyword:{keyword} from:{entity}"
+                }
+              },
+              "measurable": true
+            }
+          ],
+          "falsifiers": [
+            "Attention fades without substantive developments",
+            "Story debunked or corrected",
+            "Other events dominate news cycle"
+          ],
+          "confidence": 0.278,
+          "confidence_breakdown": {
+            "base_from_meta_confidence": 0.248,
+            "diversity_bonus": 0.05,
+            "persistence_bonus": 0.02,
+            "independence_bonus": 0.04,
+            "specificity_bonus": 0.02,
+            "penalties_applied": [
+              "weak_mechanism:-0.1"
+            ],
+            "final": 0.278
+          },
+          "review_required": true,
+          "debug": {
+            "rules_fired": [
+              "base_from_meta:0.45",
+              "category_diversity:1",
+              "persistence_days:1",
+              "independence:0.40",
+              "mechanism_hits:1",
+              "penalty:weak_mechanism"
+            ],
+            "scoring_terms": {
+              "meta_confidence": 0.45,
+              "category_count": 1,
+              "persistence_days": 1,
+              "independence_score": 0.4,
+              "evidence_strength": 0.33
+            },
+            "mechanism_keyword_hits": 1,
+            "mechanism_keywords_matched": [
+              "media"
+            ]
+          },
+          "mechanism_trace": {
+            "candidate_scores": {
+              "media_attention_spike": 1
+            },
+            "matched_terms": [
+              "media-only",
+              "weak-mechanism"
+            ],
+            "evidence_sources": [
+              "structural_analysis"
+            ],
+            "selection_reason": "competing_null_hypothesis:weak_evidence",
+            "evidence_sources_secondary": [
+              "structural_analysis"
+            ]
+          },
+          "confidence_inputs": {
+            "meta_confidence_raw": 0.45,
+            "meta_to_hypothesis_scaling": 0.55
+          },
+          "confidence_debug": {
+            "base_scaled": 0.2475,
+            "base_raw": 0.45,
+            "scaling_factor": 0.55
+          },
+          "falsifiers_v2": [
+            {
+              "text": "Attention fades without substantive developments",
+              "observable": {
+                "metric": "keyword_frequency",
+                "direction": "down",
+                "window_days": 7,
+                "available": true
+              }
+            },
+            {
+              "text": "Story debunked or corrected",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            },
+            {
+              "text": "Other events dominate news cycle",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            }
+          ]
+        }
+      ],
+      "selected_hypothesis_id": "83b5fc95e6c67fb2",
+      "bundle_confidence": 0.278,
+      "generated_at": "2026-02-27T09:54:50.392755",
+      "version": "2.1",
+      "what_to_watch_next": [
+        "Article count for related coverage continues to increase",
+        "Discussion volume and engagement rate increase",
+        "New API integrations or platform releases"
+      ],
+      "watch_items": [
+        {
+          "description": "Article count for related coverage continues to increase",
+          "watch_priority_score": 0.6388,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.28",
+            "measurable:True",
+            "timeframe:7d"
+          ],
+          "timeframe_bucket": "7d",
+          "timeframe_days": 7,
+          "measurable": true
+        },
+        {
+          "description": "Discussion volume and engagement rate increase",
+          "watch_priority_score": 0.6388,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.28",
+            "measurable:True",
+            "timeframe:7d"
+          ],
+          "timeframe_bucket": "7d",
+          "timeframe_days": 7,
+          "measurable": true
+        },
+        {
+          "description": "New API integrations or platform releases",
+          "watch_priority_score": 0.5388,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.28",
+            "measurable:True",
+            "timeframe:14d"
+          ],
+          "timeframe_bucket": "14d",
+          "timeframe_days": 14,
+          "measurable": true
+        }
+      ]
+    },
+    {
+      "meta_id": "2f11d348e320",
+      "concept_slug": "a597f5adf4e1",
+      "concept_name": "Mixed Signals Review",
+      "maturity_stage": "trending",
+      "hypotheses": [
+        {
+          "hypothesis_id": "bde53c20ee1abcd3",
+          "title": "Alternative: Media Attention Spike",
+          "mechanism": "media_attention_spike",
+          "claim": "Mixed Signals Review shows elevated media attention without clear underlying mechanism.",
+          "why_now": "Signal is accelerating, now trending, from independent sources.",
+          "evidence_used": {
+            "supporting_signals": [
+              "825cbeb814c9",
+              "ab662e303358",
+              "aa6175183361",
+              "5ea6131d17bb",
+              "93edcce77570",
+              "b9adcb79e600",
+              "be2c71395cd0",
+              "039573f1dce2",
+              "568daf7c9ddd",
+              "ade953ae7376"
+            ],
+            "source_categories": [
+              "financial",
+              "media"
+            ],
+            "key_entities": [
+              "musk",
+              "lte",
+              "anthropic's",
+              "layer",
+              "section",
+              "apple's",
+              "openai",
+              "pro",
+              "elon",
+              "ethereum"
+            ],
+            "key_quotes": [
+              "Ai ecosystem dynamics shifting"
+            ]
+          },
+          "predicted_next_signals": [
+            {
+              "category": "media",
+              "description": "Article count for related coverage continues to increase",
+              "example_sources": [
+                "techmeme",
+                "twitter",
+                "reddit"
+              ],
+              "expected_timeframe_days": 7,
+              "metric": "article_count",
+              "direction": "up",
+              "speculative": true,
+              "canonical_metric": "article_count",
+              "observable_query": {
+                "source": "techmeme",
+                "query": "search:(coverage OR news OR story OR update OR media)",
+                "aggregation": "count",
+                "window_days": 7,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "",
+                    "meta",
+                    "us"
+                  ],
+                  "primary_entity": "",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "media"
+                  ],
+                  "query_hints": [
+                    "coverage",
+                    "news",
+                    "story",
+                    "update"
+                  ],
+                  "bucket_terms": [],
+                  "canonical_metric": "article_count",
+                  "template_used": "search:{keyword}"
+                }
+              },
+              "measurable": true
+            },
+            {
+              "category": "social",
+              "description": "Discussion volume and engagement rate increase",
+              "example_sources": [
+                "twitter",
+                "reddit",
+                "hackernews"
+              ],
+              "expected_timeframe_days": 7,
+              "metric": "discussion_volume",
+              "direction": "up",
+              "speculative": true,
+              "canonical_metric": "discussion_volume",
+              "observable_query": {
+                "source": "twitter",
+                "query": "keyword:(discussion OR reaction OR comment OR thread OR media) from:",
+                "aggregation": "count",
+                "window_days": 7,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "",
+                    "meta",
+                    "us"
+                  ],
+                  "primary_entity": "",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "media"
+                  ],
+                  "query_hints": [
+                    "discussion",
+                    "reaction",
+                    "comment",
+                    "thread"
+                  ],
+                  "bucket_terms": [],
+                  "canonical_metric": "keyword_frequency",
+                  "template_used": "keyword:{keyword} from:{entity}"
+                }
+              },
+              "measurable": true
+            }
+          ],
+          "falsifiers": [
+            "Attention fades without substantive developments",
+            "Story debunked or corrected",
+            "Other events dominate news cycle"
+          ],
+          "confidence": 0.363,
+          "confidence_breakdown": {
+            "base_from_meta_confidence": 0.248,
+            "diversity_bonus": 0.1,
+            "persistence_bonus": 0.02,
+            "independence_bonus": 0.075,
+            "specificity_bonus": 0.02,
+            "penalties_applied": [
+              "weak_mechanism:-0.1"
+            ],
+            "final": 0.363
+          },
+          "review_required": true,
+          "debug": {
+            "rules_fired": [
+              "base_from_meta:0.45",
+              "category_diversity:2",
+              "persistence_days:1",
+              "independence:0.75",
+              "mechanism_hits:1",
+              "penalty:weak_mechanism"
+            ],
+            "scoring_terms": {
+              "meta_confidence": 0.45,
+              "category_count": 2,
+              "persistence_days": 1,
+              "independence_score": 0.753,
+              "evidence_strength": 0.33
+            },
+            "mechanism_keyword_hits": 1,
+            "mechanism_keywords_matched": [
+              "media"
+            ]
+          },
+          "mechanism_trace": {
+            "candidate_scores": {
+              "media_attention_spike": 1
+            },
+            "matched_terms": [
+              "media-only",
+              "weak-mechanism"
+            ],
+            "evidence_sources": [
+              "structural_analysis"
+            ],
+            "selection_reason": "competing_null_hypothesis:weak_evidence",
+            "evidence_sources_secondary": [
+              "structural_analysis"
+            ]
+          },
+          "confidence_inputs": {
+            "meta_confidence_raw": 0.45,
+            "meta_to_hypothesis_scaling": 0.55
+          },
+          "confidence_debug": {
+            "base_scaled": 0.2475,
+            "base_raw": 0.45,
+            "scaling_factor": 0.55
+          },
+          "falsifiers_v2": [
+            {
+              "text": "Attention fades without substantive developments",
+              "observable": {
+                "metric": "keyword_frequency",
+                "direction": "down",
+                "window_days": 7,
+                "available": true
+              }
+            },
+            {
+              "text": "Story debunked or corrected",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            },
+            {
+              "text": "Other events dominate news cycle",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            }
+          ]
+        },
+        {
+          "hypothesis_id": "638bd75659ad7df0",
+          "title": "Regulatory Pressure Increasing",
+          "mechanism": "regulation_enforcement",
+          "claim": "Mixed Signals Review points to increasing regulatory scrutiny, which may reshape market dynamics.",
+          "why_now": "Signal is accelerating, now trending, from independent sources.",
+          "evidence_used": {
+            "supporting_signals": [
+              "825cbeb814c9",
+              "ab662e303358",
+              "aa6175183361",
+              "5ea6131d17bb",
+              "93edcce77570",
+              "b9adcb79e600",
+              "be2c71395cd0",
+              "039573f1dce2",
+              "568daf7c9ddd",
+              "ade953ae7376"
+            ],
+            "source_categories": [
+              "financial",
+              "media"
+            ],
+            "key_entities": [
+              "musk",
+              "lte",
+              "anthropic's",
+              "layer",
+              "section",
+              "apple's",
+              "openai",
+              "pro",
+              "elon",
+              "ethereum"
+            ],
+            "key_quotes": [
+              "Ai ecosystem dynamics shifting"
+            ]
+          },
+          "predicted_next_signals": [
+            {
+              "category": "financial",
+              "description": "Compliance cost disclosures or legal reserve increases",
+              "example_sources": [
+                "sec",
+                "10k",
+                "10q"
+              ],
+              "expected_timeframe_days": 14,
+              "metric": "compliance",
+              "direction": "increase",
+              "speculative": true,
+              "canonical_metric": "custom_metric",
+              "observable_query": {
+                "source": "sec",
+                "query": "ban",
+                "aggregation": "count",
+                "window_days": 14,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "",
+                    "meta",
+                    "us"
+                  ],
+                  "primary_entity": "",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "ban"
+                  ],
+                  "query_hints": [],
+                  "bucket_terms": [],
+                  "canonical_metric": "custom_metric",
+                  "template_used": "filings:{entity} type:{filing_type}"
+                }
+              },
+              "measurable": false,
+              "measurable_reason": "no_canonical_metric_match"
+            },
+            {
+              "category": "media",
+              "description": "Coverage of regulatory actions or policy proposals",
+              "example_sources": [
+                "reuters",
+                "politico",
+                "techmeme"
+              ],
+              "expected_timeframe_days": 7,
+              "speculative": true,
+              "canonical_metric": "custom_metric",
+              "observable_query": {
+                "source": "reuters",
+                "query": "search:ban",
+                "aggregation": "count",
+                "window_days": 7,
+                "expected_direction": "up",
+                "available": true,
+                "query_terms": {
+                  "entities": [
+                    "",
+                    "meta",
+                    "us"
+                  ],
+                  "primary_entity": "",
+                  "concept_entity": null,
+                  "mechanism_terms": [
+                    "ban"
+                  ],
+                  "query_hints": [],
+                  "bucket_terms": [],
+                  "canonical_metric": "custom_metric",
+                  "template_used": "search:{keyword}"
+                }
+              },
+              "measurable": false,
+              "measurable_reason": "no_canonical_metric_match"
+            }
+          ],
+          "falsifiers": [
+            "Regulatory proposals fail to advance",
+            "Industry self-regulation satisfies concerns",
+            "Enforcement actions limited in scope"
+          ],
+          "confidence": 0.263,
+          "confidence_breakdown": {
+            "base_from_meta_confidence": 0.248,
+            "diversity_bonus": 0.1,
+            "persistence_bonus": 0.02,
+            "independence_bonus": 0.075,
+            "specificity_bonus": 0.02,
+            "penalties_applied": [
+              "generic_predictions:-0.1",
+              "weak_mechanism:-0.1"
+            ],
+            "final": 0.263
+          },
+          "review_required": true,
+          "debug": {
+            "rules_fired": [
+              "base_from_meta:0.45",
+              "category_diversity:2",
+              "persistence_days:1",
+              "independence:0.75",
+              "mechanism_hits:1",
+              "penalty:generic_predictions",
+              "penalty:weak_mechanism"
+            ],
+            "scoring_terms": {
+              "meta_confidence": 0.45,
+              "category_count": 2,
+              "persistence_days": 1,
+              "independence_score": 0.753,
+              "evidence_strength": 0.33
+            },
+            "mechanism_keyword_hits": 1,
+            "mechanism_keywords_matched": [
+              "ban"
+            ]
+          },
+          "mechanism_trace": {
+            "candidate_scores": {
+              "regulation_enforcement": 1,
+              "model_capability_jump": 1,
+              "open_source_acceleration": 1
+            },
+            "matched_terms": [
+              "ban"
+            ],
+            "evidence_sources": [
+              "naming_reason",
+              "entity_tags",
+              "signal_name"
+            ],
+            "selection_reason": "best_available",
+            "evidence_sources_primary": [
+              "entity_tags",
+              "signal_name"
+            ],
+            "evidence_sources_secondary": [
+              "naming_reason"
+            ]
+          },
+          "confidence_inputs": {
+            "meta_confidence_raw": 0.45,
+            "meta_to_hypothesis_scaling": 0.55
+          },
+          "confidence_debug": {
+            "base_scaled": 0.2475,
+            "base_raw": 0.45,
+            "scaling_factor": 0.55
+          },
+          "falsifiers_v2": [
+            {
+              "text": "Regulatory proposals fail to advance",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            },
+            {
+              "text": "Industry self-regulation satisfies concerns",
+              "observable": {
+                "metric": "article_count",
+                "direction": "down",
+                "window_days": 30,
+                "available": true
+              }
+            },
+            {
+              "text": "Enforcement actions limited in scope",
+              "observable": {
+                "metric": "custom_metric",
+                "direction": "down",
+                "window_days": 30,
+                "available": false
+              }
+            }
+          ]
+        }
+      ],
+      "selected_hypothesis_id": "bde53c20ee1abcd3",
+      "bundle_confidence": 0.363,
+      "generated_at": "2026-02-27T09:54:50.472055",
+      "version": "2.1",
+      "what_to_watch_next": [
+        "Article count for related coverage continues to increase",
+        "Discussion volume and engagement rate increase",
+        "Coverage of regulatory actions or policy proposals"
+      ],
+      "watch_items": [
+        {
+          "description": "Article count for related coverage continues to increase",
+          "watch_priority_score": 0.6814,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.36",
+            "measurable:True",
+            "timeframe:7d"
+          ],
+          "timeframe_bucket": "7d",
+          "timeframe_days": 7,
+          "measurable": true
+        },
+        {
+          "description": "Discussion volume and engagement rate increase",
+          "watch_priority_score": 0.6814,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.36",
+            "measurable:True",
+            "timeframe:7d"
+          ],
+          "timeframe_bucket": "7d",
+          "timeframe_days": 7,
+          "measurable": true
+        },
+        {
+          "description": "Coverage of regulatory actions or policy proposals",
+          "watch_priority_score": 0.4814,
+          "watch_priority_reason": [
+            "hypothesis_confidence:0.26",
+            "measurable:False",
+            "reason:no_canonical_metric_match",
+            "timeframe:7d"
+          ],
+          "timeframe_bucket": "7d",
+          "timeframe_days": 7,
+          "measurable": false
+        }
+      ]
+    }
+  ]
+}

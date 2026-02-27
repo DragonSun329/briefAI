@@ -1,0 +1,599 @@
+{
+  "source": "stackoverflow",
+  "scraped_at": "2026-02-27T09:45:48.578763",
+  "total_tags": 25,
+  "tags": [
+    {
+      "tag": "machine-learning",
+      "total_questions": 56635,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 7,
+      "questions_prev_week": 6,
+      "wow_growth_rate": 0.1667,
+      "bucket": "ai-general"
+    },
+    {
+      "tag": "artificial-intelligence",
+      "total_questions": 9668,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 7,
+      "questions_prev_week": 6,
+      "wow_growth_rate": 0.1667,
+      "bucket": "ai-general"
+    },
+    {
+      "tag": "langchain",
+      "total_questions": 2192,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 3,
+      "questions_prev_week": 1,
+      "wow_growth_rate": 2.0,
+      "bucket": "ai-agents"
+    },
+    {
+      "tag": "reinforcement-learning",
+      "total_questions": 2674,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 3,
+      "questions_prev_week": 0,
+      "wow_growth_rate": 1.0,
+      "bucket": "ai-general"
+    },
+    {
+      "tag": "deep-learning",
+      "total_questions": 27692,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 2,
+      "questions_prev_week": 2,
+      "wow_growth_rate": 0.0,
+      "bucket": "ai-general"
+    },
+    {
+      "tag": "pytorch",
+      "total_questions": 24383,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 2,
+      "questions_prev_week": 5,
+      "wow_growth_rate": -0.6,
+      "bucket": "llm-foundation"
+    },
+    {
+      "tag": "openai-api",
+      "total_questions": 2903,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 2,
+      "questions_prev_week": 3,
+      "wow_growth_rate": -0.3333,
+      "bucket": "llm-foundation"
+    },
+    {
+      "tag": "tensorflow",
+      "total_questions": 82621,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 1,
+      "questions_prev_week": 2,
+      "wow_growth_rate": -0.5,
+      "bucket": "llm-foundation"
+    },
+    {
+      "tag": "opencv",
+      "total_questions": 73338,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 1,
+      "questions_prev_week": 3,
+      "wow_growth_rate": -0.6667,
+      "bucket": "computer-vision"
+    },
+    {
+      "tag": "keras",
+      "total_questions": 42308,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 1,
+      "questions_prev_week": 0,
+      "wow_growth_rate": 1.0,
+      "bucket": "llm-foundation"
+    },
+    {
+      "tag": "scikit-learn",
+      "total_questions": 28322,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 1,
+      "questions_prev_week": 0,
+      "wow_growth_rate": 1.0,
+      "bucket": "ai-general"
+    },
+    {
+      "tag": "nlp",
+      "total_questions": 20472,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 1,
+      "questions_prev_week": 2,
+      "wow_growth_rate": -0.5,
+      "bucket": "llm-foundation"
+    },
+    {
+      "tag": "neural-network",
+      "total_questions": 20150,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 1,
+      "questions_prev_week": 1,
+      "wow_growth_rate": 0.0,
+      "bucket": "ai-general"
+    },
+    {
+      "tag": "computer-vision",
+      "total_questions": 16189,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 1,
+      "questions_prev_week": 2,
+      "wow_growth_rate": -0.5,
+      "bucket": "computer-vision"
+    },
+    {
+      "tag": "large-language-model",
+      "total_questions": 2033,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 1,
+      "questions_prev_week": 4,
+      "wow_growth_rate": -0.75,
+      "bucket": "llm-foundation"
+    },
+    {
+      "tag": "langchain-agents",
+      "total_questions": 73,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 1,
+      "questions_prev_week": 0,
+      "wow_growth_rate": 1.0,
+      "bucket": "ai-agents"
+    },
+    {
+      "tag": "huggingface-transformers",
+      "total_questions": 3508,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 0,
+      "questions_prev_week": 1,
+      "wow_growth_rate": -1.0,
+      "bucket": "llm-foundation"
+    },
+    {
+      "tag": "gpt-3",
+      "total_questions": 291,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 0,
+      "questions_prev_week": 0,
+      "wow_growth_rate": 0,
+      "bucket": "llm-foundation"
+    },
+    {
+      "tag": "gpt-4",
+      "total_questions": 150,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 0,
+      "questions_prev_week": 0,
+      "wow_growth_rate": 0,
+      "bucket": "llm-foundation"
+    },
+    {
+      "tag": "vector-database",
+      "total_questions": 315,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 0,
+      "questions_prev_week": 0,
+      "wow_growth_rate": 0,
+      "bucket": "ai-infrastructure"
+    },
+    {
+      "tag": "chromadb",
+      "total_questions": 311,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 0,
+      "questions_prev_week": 1,
+      "wow_growth_rate": -1.0,
+      "bucket": "ai-infrastructure"
+    },
+    {
+      "tag": "stable-diffusion",
+      "total_questions": 266,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 0,
+      "questions_prev_week": 0,
+      "wow_growth_rate": 0,
+      "bucket": "ai-image-generation"
+    },
+    {
+      "tag": "sentence-transformers",
+      "total_questions": 245,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 0,
+      "questions_prev_week": 0,
+      "wow_growth_rate": 0,
+      "bucket": "llm-foundation"
+    },
+    {
+      "tag": "pinecone",
+      "total_questions": 132,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 0,
+      "questions_prev_week": 0,
+      "wow_growth_rate": 0,
+      "bucket": "ai-infrastructure"
+    },
+    {
+      "tag": "autogpt",
+      "total_questions": 18,
+      "is_moderator_only": false,
+      "is_required": false,
+      "questions_last_week": 0,
+      "questions_prev_week": 0,
+      "wow_growth_rate": 0,
+      "bucket": "ai-agents"
+    }
+  ],
+  "signals": {
+    "bucket_signals": {
+      "ai-general": {
+        "total_weekly_questions": 21,
+        "tag_count": 6,
+        "avg_growth_rate": 0.3889,
+        "top_tags": [
+          {
+            "tag": "machine-learning",
+            "weekly_questions": 7,
+            "total_questions": 56635,
+            "growth_rate": 0.1667
+          },
+          {
+            "tag": "artificial-intelligence",
+            "weekly_questions": 7,
+            "total_questions": 9668,
+            "growth_rate": 0.1667
+          },
+          {
+            "tag": "reinforcement-learning",
+            "weekly_questions": 3,
+            "total_questions": 2674,
+            "growth_rate": 1.0
+          },
+          {
+            "tag": "deep-learning",
+            "weekly_questions": 2,
+            "total_questions": 27692,
+            "growth_rate": 0.0
+          },
+          {
+            "tag": "scikit-learn",
+            "weekly_questions": 1,
+            "total_questions": 28322,
+            "growth_rate": 1.0
+          }
+        ],
+        "weighted_sentiment": 0.5,
+        "signal_interpretation": "Growing topic - strong momentum"
+      },
+      "ai-agents": {
+        "total_weekly_questions": 4,
+        "tag_count": 3,
+        "avg_growth_rate": 1.0,
+        "top_tags": [
+          {
+            "tag": "langchain",
+            "weekly_questions": 3,
+            "total_questions": 2192,
+            "growth_rate": 2.0
+          },
+          {
+            "tag": "langchain-agents",
+            "weekly_questions": 1,
+            "total_questions": 73,
+            "growth_rate": 1.0
+          },
+          {
+            "tag": "autogpt",
+            "weekly_questions": 0,
+            "total_questions": 18,
+            "growth_rate": 0
+          }
+        ],
+        "weighted_sentiment": 0.5,
+        "signal_interpretation": "Growing topic - strong momentum"
+      },
+      "llm-foundation": {
+        "total_weekly_questions": 8,
+        "tag_count": 10,
+        "avg_growth_rate": -0.26833,
+        "top_tags": [
+          {
+            "tag": "pytorch",
+            "weekly_questions": 2,
+            "total_questions": 24383,
+            "growth_rate": -0.6
+          },
+          {
+            "tag": "openai-api",
+            "weekly_questions": 2,
+            "total_questions": 2903,
+            "growth_rate": -0.3333
+          },
+          {
+            "tag": "tensorflow",
+            "weekly_questions": 1,
+            "total_questions": 82621,
+            "growth_rate": -0.5
+          },
+          {
+            "tag": "keras",
+            "weekly_questions": 1,
+            "total_questions": 42308,
+            "growth_rate": 1.0
+          },
+          {
+            "tag": "nlp",
+            "weekly_questions": 1,
+            "total_questions": 20472,
+            "growth_rate": -0.5
+          }
+        ],
+        "weighted_sentiment": -0.3,
+        "signal_interpretation": "Declining topic - waning interest"
+      },
+      "computer-vision": {
+        "total_weekly_questions": 2,
+        "tag_count": 2,
+        "avg_growth_rate": -0.58335,
+        "top_tags": [
+          {
+            "tag": "opencv",
+            "weekly_questions": 1,
+            "total_questions": 73338,
+            "growth_rate": -0.6667
+          },
+          {
+            "tag": "computer-vision",
+            "weekly_questions": 1,
+            "total_questions": 16189,
+            "growth_rate": -0.5
+          }
+        ],
+        "weighted_sentiment": -0.3,
+        "signal_interpretation": "Declining topic - waning interest"
+      },
+      "ai-infrastructure": {
+        "total_weekly_questions": 0,
+        "tag_count": 3,
+        "avg_growth_rate": -0.3333333333333333,
+        "top_tags": [
+          {
+            "tag": "vector-database",
+            "weekly_questions": 0,
+            "total_questions": 315,
+            "growth_rate": 0
+          },
+          {
+            "tag": "chromadb",
+            "weekly_questions": 0,
+            "total_questions": 311,
+            "growth_rate": -1.0
+          },
+          {
+            "tag": "pinecone",
+            "weekly_questions": 0,
+            "total_questions": 132,
+            "growth_rate": 0
+          }
+        ],
+        "weighted_sentiment": -0.3,
+        "signal_interpretation": "Declining topic - waning interest"
+      },
+      "ai-image-generation": {
+        "total_weekly_questions": 0,
+        "tag_count": 1,
+        "avg_growth_rate": 0.0,
+        "top_tags": [
+          {
+            "tag": "stable-diffusion",
+            "weekly_questions": 0,
+            "total_questions": 266,
+            "growth_rate": 0
+          }
+        ],
+        "weighted_sentiment": 0,
+        "signal_interpretation": "Stable topic - mature adoption"
+      }
+    }
+  },
+  "bucket_signals": {
+    "ai-general": {
+      "total_weekly_questions": 21,
+      "tag_count": 6,
+      "avg_growth_rate": 0.3889,
+      "top_tags": [
+        {
+          "tag": "machine-learning",
+          "weekly_questions": 7,
+          "total_questions": 56635,
+          "growth_rate": 0.1667
+        },
+        {
+          "tag": "artificial-intelligence",
+          "weekly_questions": 7,
+          "total_questions": 9668,
+          "growth_rate": 0.1667
+        },
+        {
+          "tag": "reinforcement-learning",
+          "weekly_questions": 3,
+          "total_questions": 2674,
+          "growth_rate": 1.0
+        },
+        {
+          "tag": "deep-learning",
+          "weekly_questions": 2,
+          "total_questions": 27692,
+          "growth_rate": 0.0
+        },
+        {
+          "tag": "scikit-learn",
+          "weekly_questions": 1,
+          "total_questions": 28322,
+          "growth_rate": 1.0
+        }
+      ],
+      "weighted_sentiment": 0.5,
+      "signal_interpretation": "Growing topic - strong momentum"
+    },
+    "ai-agents": {
+      "total_weekly_questions": 4,
+      "tag_count": 3,
+      "avg_growth_rate": 1.0,
+      "top_tags": [
+        {
+          "tag": "langchain",
+          "weekly_questions": 3,
+          "total_questions": 2192,
+          "growth_rate": 2.0
+        },
+        {
+          "tag": "langchain-agents",
+          "weekly_questions": 1,
+          "total_questions": 73,
+          "growth_rate": 1.0
+        },
+        {
+          "tag": "autogpt",
+          "weekly_questions": 0,
+          "total_questions": 18,
+          "growth_rate": 0
+        }
+      ],
+      "weighted_sentiment": 0.5,
+      "signal_interpretation": "Growing topic - strong momentum"
+    },
+    "llm-foundation": {
+      "total_weekly_questions": 8,
+      "tag_count": 10,
+      "avg_growth_rate": -0.26833,
+      "top_tags": [
+        {
+          "tag": "pytorch",
+          "weekly_questions": 2,
+          "total_questions": 24383,
+          "growth_rate": -0.6
+        },
+        {
+          "tag": "openai-api",
+          "weekly_questions": 2,
+          "total_questions": 2903,
+          "growth_rate": -0.3333
+        },
+        {
+          "tag": "tensorflow",
+          "weekly_questions": 1,
+          "total_questions": 82621,
+          "growth_rate": -0.5
+        },
+        {
+          "tag": "keras",
+          "weekly_questions": 1,
+          "total_questions": 42308,
+          "growth_rate": 1.0
+        },
+        {
+          "tag": "nlp",
+          "weekly_questions": 1,
+          "total_questions": 20472,
+          "growth_rate": -0.5
+        }
+      ],
+      "weighted_sentiment": -0.3,
+      "signal_interpretation": "Declining topic - waning interest"
+    },
+    "computer-vision": {
+      "total_weekly_questions": 2,
+      "tag_count": 2,
+      "avg_growth_rate": -0.58335,
+      "top_tags": [
+        {
+          "tag": "opencv",
+          "weekly_questions": 1,
+          "total_questions": 73338,
+          "growth_rate": -0.6667
+        },
+        {
+          "tag": "computer-vision",
+          "weekly_questions": 1,
+          "total_questions": 16189,
+          "growth_rate": -0.5
+        }
+      ],
+      "weighted_sentiment": -0.3,
+      "signal_interpretation": "Declining topic - waning interest"
+    },
+    "ai-infrastructure": {
+      "total_weekly_questions": 0,
+      "tag_count": 3,
+      "avg_growth_rate": -0.3333333333333333,
+      "top_tags": [
+        {
+          "tag": "vector-database",
+          "weekly_questions": 0,
+          "total_questions": 315,
+          "growth_rate": 0
+        },
+        {
+          "tag": "chromadb",
+          "weekly_questions": 0,
+          "total_questions": 311,
+          "growth_rate": -1.0
+        },
+        {
+          "tag": "pinecone",
+          "weekly_questions": 0,
+          "total_questions": 132,
+          "growth_rate": 0
+        }
+      ],
+      "weighted_sentiment": -0.3,
+      "signal_interpretation": "Declining topic - waning interest"
+    },
+    "ai-image-generation": {
+      "total_weekly_questions": 0,
+      "tag_count": 1,
+      "avg_growth_rate": 0.0,
+      "top_tags": [
+        {
+          "tag": "stable-diffusion",
+          "weekly_questions": 0,
+          "total_questions": 266,
+          "growth_rate": 0
+        }
+      ],
+      "weighted_sentiment": 0,
+      "signal_interpretation": "Stable topic - mature adoption"
+    }
+  }
+}

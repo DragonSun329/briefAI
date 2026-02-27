@@ -60,6 +60,21 @@ Enter WORKBRIEF MODE:
 
 ---
 
+## REPORTER MODE
+**Trigger:** `news brief` or `reporter mode`
+
+Enter REPORTER MODE:
+- Produce a concise, punchy news roundup from today's brief
+- Written like a morning newsletter — scannable, opinionated, no fluff
+- Lead with the biggest story, then 3-5 bullet items
+- Each item: one-line headline + one-line "so what"
+- End with one "sleeper story" most people will miss
+- Tone: informed insider, not news anchor
+
+**Output:** 中文为主，English if requested. 10-15 lines max. Newsletter energy.
+
+---
+
 ## Storage
 
 Each mode output saves to memU:
@@ -67,3 +82,4 @@ Each mode output saves to memU:
 - `analyst/YYYY-MM-DD`
 - `researcher/YYYY-MM-DD`
 - `workbrief/YYYY-MM-DD`
+- `reporter/YYYY-MM-DD`

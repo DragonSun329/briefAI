@@ -147,9 +147,99 @@ class PredictionAccumulator:
         
         return mappings
     
-    def generate_prediction(self, signal: Dict, horizon_days: int = 60) -> Optional[Dict]:
-        """Generate a prediction from a signal."""
+    def load_market_signals(self) -> Dict[str, Dict]:
+        """Load latest Finnhub market data for momentum analysis."""
+        market_data = {}
+        signal_dir = Path("data/market_signals")
         
+        if not signal_dir.exists():
+            return market_data
+        
+        # Find the latest Finnhub file
+        finnhub_files = list(signal_dir.glob("finnhub_*.json"))
+        if not finnhub_files:
+            return market_data
+        
+        latest_file = max(finnhub_files, key=lambda f: f.stat().st_mtime)
+        
+        try:
+            with open(latest_file, encoding="utf-8") as f:
+                data = json.load(f)
+            
+            # Extract price momentum data by ticker (work with actual Finnhub structure)
+            for stock in data.get("stocks", []):
+                ticker = stock.get("ticker")
+                if ticker:
+                    change_pct = stock.get("change_pct", 0)
+                    signal = stock.get("signal", "neutral")
+                    score = stock.get("score", 0)
+                    
+                    market_data[ticker] = {
+                        "current_price": stock.get("current_price"),
+                        "change_pct": change_pct,
+                        "volume_signal": signal,
+                        "score": score,
+                        # Estimate momentum from available data
+                        "momentum_strength": abs(score) if score else abs(change_pct) / 5.0
+                    }
+        except Exception as e:
+            print(f"Error loading market signals: {e}")
+        
+        return market_data
+    
+    def load_insider_signals(self) -> Dict[str, float]:
+        """Load latest insider trading signals."""
+        insider_signals = {}
+        signal_dir = Path("data/insider_signals")
+        
+        if not signal_dir.exists():
+            return insider_signals
+        
+        # Find the latest insider file
+        insider_files = list(signal_dir.glob("insider_trades_*.json"))
+        if not insider_files:
+            return insider_signals
+        
+        latest_file = max(insider_files, key=lambda f: f.stat().st_mtime)
+        
+        try:
+            with open(latest_file, encoding="utf-8") as f:
+                data = json.load(f)
+            
+            # Aggregate insider signals by entity
+            for signal in data.get("signals", []):
+                entity = signal.get("entity", "").upper()
+                if not entity:
+                    continue
+                
+                # Insider signal strength: +1 for buy, -1 for sell, weighted by value
+                trade_type = signal.get("trade_type", "").lower()
+                trade_value = signal.get("trade_value", 0)
+                
+                if trade_type in ["purchase", "buy"]:
+                    signal_value = min(trade_value / 1000000, 5.0)  # Cap at $5M for scaling
+                elif trade_type in ["sale", "sell"]:
+                    signal_value = -min(trade_value / 1000000, 5.0)
+                else:
+                    continue
+                
+                if entity not in insider_signals:
+                    insider_signals[entity] = 0
+                insider_signals[entity] += signal_value
+            
+            # Normalize to -1 to +1 range
+            for entity in insider_signals:
+                insider_signals[entity] = max(-1.0, min(1.0, insider_signals[entity] / 3.0))
+                
+        except Exception as e:
+            print(f"Error loading insider signals: {e}")
+        
+        return insider_signals
+
+    def generate_prediction(self, signal: Dict, horizon_days: int = 60) -> Optional[Dict]:
+        """Generate a prediction from multiple signal sources with proper confidence limits."""
+        
+        entity_name = signal.get("entity_name", "")
         media_score = signal.get("media_score", 5.0)
         conviction = signal.get("conviction_score", 5.0)
         
@@ -159,46 +249,132 @@ class PredictionAccumulator:
         if conviction > 10:
             conviction = conviction / 10.0
         
-        # Determine prediction based on sentiment (0-10 scale, 5.0 = neutral)
-        if media_score >= 7.0:
+        # Widen the neutral dead zone - skip if media_score is within 1.5 of center
+        if abs(media_score - 5.0) < 1.5:
+            return None
+        
+        # Get ticker for market data lookup
+        ticker_map = self.load_asset_mappings()
+        ticker = ticker_map.get(entity_name.lower())
+        
+        # Load additional signals
+        market_data = self.load_market_signals()
+        insider_signals = self.load_insider_signals()
+        
+        # Start with media sentiment
+        media_bias = (media_score - 5.0) / 5.0  # -1 to +1 scale
+        
+        # Initialize signal components
+        signals_present = ["media"]
+        signal_strength = abs(media_bias)
+        
+        # Price momentum analysis (contrarian signals based on available data)
+        momentum_bias = 0
+        if ticker and ticker in market_data:
+            mdata = market_data[ticker]
+            change_pct = mdata.get("change_pct", 0)
+            volume_signal = mdata.get("volume_signal", "neutral")
+            score = mdata.get("score", 0)
+            
+            # Strong single-day moves suggest potential mean reversion
+            if change_pct > 5:  # Strong up day - contrarian bearish bias
+                momentum_bias -= 0.2
+                signals_present.append("strong_up_day")
+            elif change_pct < -5:  # Strong down day - contrarian bullish bias
+                momentum_bias += 0.2
+                signals_present.append("strong_down_day")
+            
+            # Volume signal provides momentum confirmation/contradiction
+            if volume_signal == "bullish" or volume_signal == "slightly_bullish":
+                if score > 0.3:  # Strong bullish volume signal
+                    momentum_bias += 0.25
+                    signals_present.append("volume_bullish")
+                elif score > 0.1:  # Mild bullish volume
+                    momentum_bias += 0.15
+                    signals_present.append("volume_mild_bullish")
+            elif volume_signal == "bearish" or volume_signal == "slightly_bearish":
+                if score < -0.3:  # Strong bearish volume signal
+                    momentum_bias -= 0.25
+                    signals_present.append("volume_bearish")
+                elif score < -0.1:  # Mild bearish volume
+                    momentum_bias -= 0.15
+                    signals_present.append("volume_mild_bearish")
+        
+        # Insider trading signals
+        insider_bias = 0
+        if ticker and ticker.upper() in insider_signals:
+            insider_bias = insider_signals[ticker.upper()]
+            if abs(insider_bias) > 0.1:  # Only count meaningful insider activity
+                signals_present.append("insider")
+        
+        # Combine all signals
+        total_bias = media_bias + momentum_bias + insider_bias
+        
+        # Determine prediction outcome
+        if total_bias > 0.15:
             predicted_outcome = "bullish"
-            confidence = min(0.85, 0.5 + (media_score - 5) * 0.05)
-        elif media_score <= 3.0:
+        elif total_bias < -0.15:
             predicted_outcome = "bearish"
-            confidence = min(0.85, 0.5 + (5 - media_score) * 0.05)
         else:
-            # Neutral - skip weak signals
-            if abs(media_score - 5.0) < 1.0:
-                return None
-            predicted_outcome = "bullish" if media_score > 5.0 else "bearish"
-            confidence = 0.5 + abs(media_score - 5.0) * 0.03
+            # Mixed/weak signals - skip prediction (neutral dead zone)
+            return None
         
-        # Modest boost with conviction score (max +0.05)
-        if conviction > 7.0:
-            confidence = confidence + 0.05
+        # Calculate confidence based on signal count and agreement
+        base_confidence = 0.45 + (abs(total_bias) * 0.25)
         
-        # Hard cap - never exceed 0.85 on sentiment alone
-        confidence = min(confidence, 0.85)
+        # Confidence caps based on signal diversity
+        if len(signals_present) == 1:
+            # Single signal (media only) - max 70%
+            confidence = min(base_confidence, 0.70)
+        elif len(signals_present) >= 3:
+            # Multiple independent signals - max 85%
+            confidence = min(base_confidence, 0.85)
+        else:
+            # Two signals - max 78%
+            confidence = min(base_confidence, 0.78)
+        
+        # Reduce confidence if media and momentum conflict
+        if len(signals_present) > 1:
+            media_momentum_conflict = (media_bias > 0 and momentum_bias < -0.1) or \
+                                    (media_bias < 0 and momentum_bias > 0.1)
+            if media_momentum_conflict:
+                confidence *= 0.8  # 20% confidence penalty for conflicting signals
+        
+        # Ensure minimum confidence threshold
+        confidence = max(confidence, 0.51)
         
         now = datetime.now()
         horizon_date = now + timedelta(days=horizon_days)
         
+        # Enhanced metadata with all signal sources
+        metadata = {
+            "media_score": media_score,
+            "media_bias": media_bias,
+            "momentum_bias": momentum_bias,
+            "insider_bias": insider_bias,
+            "total_bias": total_bias,
+            "signals_present": signals_present,
+            "technical_score": signal.get("technical_score"),
+            "conviction_score": conviction,
+            "source_timestamp": signal.get("timestamp"),
+            "ticker": ticker
+        }
+        
+        # Add market data to metadata if available
+        if ticker and ticker in market_data:
+            metadata["market_data"] = market_data[ticker]
+        
         return {
             "entity_id": signal.get("entity_id"),
-            "entity_name": signal.get("entity_name"),
-            "signal_type": "media_sentiment",
+            "entity_name": entity_name,
+            "signal_type": "multi_source",  # Changed from media_sentiment
             "prediction_type": "direction",
             "predicted_outcome": predicted_outcome,
             "confidence": confidence,
             "horizon_days": horizon_days,
             "created_at": now.isoformat(),
             "horizon_date": horizon_date.isoformat(),
-            "metadata": json.dumps({
-                "media_score": media_score,
-                "technical_score": signal.get("technical_score"),
-                "conviction_score": conviction,
-                "source_timestamp": signal.get("timestamp")
-            })
+            "metadata": json.dumps(metadata)
         }
     
     def prediction_exists(self, entity_name: str, horizon_days: int, lookback_days: int = 7) -> bool:
@@ -502,7 +678,10 @@ class PredictionAccumulator:
         
         # Generate predictions
         new_predictions = 0
-        skipped = 0
+        skipped_recent = 0
+        skipped_neutral = 0
+        bullish_count = 0
+        bearish_count = 0
         
         for signal in signals:
             entity_name = signal.get("entity_name", "")
@@ -511,16 +690,27 @@ class PredictionAccumulator:
             for horizon in horizons:
                 # Skip if recent prediction exists
                 if self.prediction_exists(entity_name, horizon):
-                    skipped += 1
+                    skipped_recent += 1
                     continue
                 
                 prediction = self.generate_prediction(signal, horizon)
                 if prediction:
                     self.save_prediction(prediction, ticker)
                     new_predictions += 1
+                    
+                    # Track prediction types
+                    if prediction["predicted_outcome"] == "bullish":
+                        bullish_count += 1
+                    elif prediction["predicted_outcome"] == "bearish":
+                        bearish_count += 1
+                else:
+                    skipped_neutral += 1
         
-        print(f"\nGenerated {new_predictions} new predictions")
-        print(f"Skipped {skipped} (recent predictions exist)")
+        print(f"\nGenerated {new_predictions} new predictions:")
+        print(f"  Bullish: {bullish_count}")
+        print(f"  Bearish: {bearish_count}")
+        print(f"Skipped {skipped_recent} (recent predictions exist)")
+        print(f"Skipped {skipped_neutral} (neutral/weak signals)")
         
         # Resolve due predictions
         print("\n--- Resolving Due Predictions ---")
