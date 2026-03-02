@@ -87,7 +87,7 @@ class RedditScraper:
         except requests.exceptions.HTTPError as e:
             if e.response is not None and e.response.status_code in (403, 429):
                 # Try Bright Data fallback
-                from scrapers.bright_data_fetcher import fetch_url as bd_fetch
+                from bright_data_fetcher import fetch_url as bd_fetch
                 import json as _json
                 full_url = f"{url}?{'&'.join(f'{k}={v}' for k,v in params.items())}"
                 print(f"    Trying Bright Data fallback for r/{subreddit}...")

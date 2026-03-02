@@ -573,7 +573,7 @@ class NewsroomScraper:
         except requests.exceptions.HTTPError as e:
             if e.response is not None and e.response.status_code in (403, 429):
                 # Try Bright Data fallback
-                from scrapers.bright_data_fetcher import fetch_url as bd_fetch
+                from bright_data_fetcher import fetch_url as bd_fetch
                 print(f"    Trying Bright Data fallback for {company_config['name']} newsroom...")
                 html = bd_fetch(newsroom_url)
                 if html:

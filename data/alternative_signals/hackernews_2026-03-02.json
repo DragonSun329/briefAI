@@ -1,6 +1,6 @@
 {
   "source": "hackernews",
-  "scraped_at": "2026-03-02T10:19:39.848267",
+  "scraped_at": "2026-03-02T14:27:46.065846",
   "period_days": 7,
   "total_stories": 333,
   "stories": [
@@ -9,7 +9,7 @@
       "title": "OpenAI \u2013 How to delete your account",
       "url": "https://help.openai.com/en/articles/6378407-how-to-delete-your-account",
       "hn_url": "https://news.ycombinator.com/item?id=47193478",
-      "points": 1891,
+      "points": 1901,
       "num_comments": 356,
       "author": "carlosrg",
       "created_at": "2026-02-28T10:41:55Z",
@@ -22,7 +22,7 @@
       "title": "OpenAI agrees with Dept. of War to deploy models in their classified network",
       "url": "https://twitter.com/sama/status/2027578652477821175",
       "hn_url": "https://news.ycombinator.com/item?id=47189650",
-      "points": 1385,
+      "points": 1388,
       "num_comments": 644,
       "author": "eoskx",
       "created_at": "2026-02-28T02:59:02Z",
@@ -36,7 +36,7 @@
       "url": "https://twitter.com/secwar/status/2027507717469049070",
       "hn_url": "https://news.ycombinator.com/item?id=47186677",
       "points": 1349,
-      "num_comments": 1069,
+      "num_comments": 1072,
       "author": "jacobedawson",
       "created_at": "2026-02-27T22:31:18Z",
       "created_at_i": 1772231478,
@@ -48,7 +48,7 @@
       "title": "How do I cancel my ChatGPT subscription?",
       "url": "https://help.openai.com/en/articles/7232927-how-do-i-cancel-my-chatgpt-subscription",
       "hn_url": "https://news.ycombinator.com/item?id=47190997",
-      "points": 1051,
+      "points": 1058,
       "num_comments": 249,
       "author": "tobr",
       "created_at": "2026-02-28T05:55:01Z",
@@ -61,8 +61,8 @@
       "title": "We do not think Anthropic should be designated as a supply chain risk",
       "url": "https://twitter.com/OpenAI/status/2027846016423321831",
       "hn_url": "https://news.ycombinator.com/item?id=47200420",
-      "points": 783,
-      "num_comments": 426,
+      "points": 796,
+      "num_comments": 429,
       "author": "golfer",
       "created_at": "2026-02-28T21:24:16Z",
       "created_at_i": 1772313856,
@@ -101,7 +101,7 @@
       "url": "https://techcrunch.com/2026/02/27/openai-raises-110b-in-one-of-the-largest-private-funding-rounds-in-history/",
       "hn_url": "https://news.ycombinator.com/item?id=47181211",
       "points": 558,
-      "num_comments": 589,
+      "num_comments": 591,
       "author": "zlatkov",
       "created_at": "2026-02-27T14:56:05Z",
       "created_at_i": 1772204165,
@@ -217,8 +217,8 @@
       "title": "OpenAI fires an employee for prediction market insider trading",
       "url": "https://www.wired.com/story/openai-fires-employee-insider-trading-polymarket-kalshi/",
       "hn_url": "https://news.ycombinator.com/item?id=47195317",
-      "points": 291,
-      "num_comments": 146,
+      "points": 292,
+      "num_comments": 148,
       "author": "bookofjoe",
       "created_at": "2026-02-28T13:46:20Z",
       "created_at_i": 1772286380,
@@ -257,7 +257,7 @@
       "url": "https://www.cnn.com/2026/02/25/politics/chatgpt-china-intimidation-operation",
       "hn_url": "https://news.ycombinator.com/item?id=47181944",
       "points": 257,
-      "num_comments": 170,
+      "num_comments": 171,
       "author": "cwwc",
       "created_at": "2026-02-27T15:52:27Z",
       "created_at_i": 1772207547,
@@ -270,12 +270,25 @@
       "url": "https://www.understandingai.org/p/the-pentagon-is-making-a-mistake",
       "hn_url": "https://news.ycombinator.com/item?id=47181380",
       "points": 256,
-      "num_comments": 231,
+      "num_comments": 232,
       "author": "speckx",
       "created_at": "2026-02-27T15:08:29Z",
       "created_at_i": 1772204909,
       "bucket": "llm-foundation",
       "sentiment": "negative"
+    },
+    {
+      "id": "47181801",
+      "title": "We gave terabytes of CI logs to an LLM",
+      "url": "https://www.mendral.com/blog/llms-are-good-at-sql",
+      "hn_url": "https://news.ycombinator.com/item?id=47181801",
+      "points": 226,
+      "num_comments": 109,
+      "author": "shad42",
+      "created_at": "2026-02-27T15:41:13Z",
+      "created_at_i": 1772206873,
+      "bucket": "ai-general",
+      "sentiment": "neutral"
     },
     {
       "id": "47140623",
@@ -288,19 +301,6 @@
       "created_at": "2026-02-24T18:22:31Z",
       "created_at_i": 1771957351,
       "bucket": "llm-foundation",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "47181801",
-      "title": "We gave terabytes of CI logs to an LLM",
-      "url": "https://www.mendral.com/blog/llms-are-good-at-sql",
-      "hn_url": "https://news.ycombinator.com/item?id=47181801",
-      "points": 225,
-      "num_comments": 108,
-      "author": "shad42",
-      "created_at": "2026-02-27T15:41:13Z",
-      "created_at_i": 1772206873,
-      "bucket": "ai-general",
       "sentiment": "neutral"
     },
     {
@@ -413,7 +413,7 @@
       "url": "https://www.reuters.com/business/openai-reaches-deal-deploy-ai-models-us-department-war-classified-network-2026-02-28/",
       "hn_url": "https://news.ycombinator.com/item?id=47189853",
       "points": 146,
-      "num_comments": 45,
+      "num_comments": 46,
       "author": "erhuve",
       "created_at": "2026-02-28T03:23:16Z",
       "created_at_i": 1772248996,
@@ -473,6 +473,19 @@
       "sentiment": "neutral"
     },
     {
+      "id": "47213124",
+      "title": "Claude hits #1 on the App Store as users rally behind Anthropic",
+      "url": "https://9to5mac.com/2026/03/01/claude-hits-1-on-the-app-store-as-users-rally-behind-anthropics-government-standoff/",
+      "hn_url": "https://news.ycombinator.com/item?id=47213124",
+      "points": 97,
+      "num_comments": 2,
+      "author": "doctoboggan",
+      "created_at": "2026-03-02T02:23:50Z",
+      "created_at_i": 1772418230,
+      "bucket": "llm-foundation",
+      "sentiment": "neutral"
+    },
+    {
       "id": "47140734",
       "title": "Hegseth gives Anthropic until Friday to back down on AI safeguards",
       "url": "https://www.axios.com/2026/02/24/anthropic-pentagon-claude-hegseth-dario",
@@ -512,6 +525,19 @@
       "sentiment": "positive"
     },
     {
+      "id": "47211830",
+      "title": "Right-sizes LLM models to your system's RAM, CPU, and GPU",
+      "url": "https://github.com/AlexsJones/llmfit",
+      "hn_url": "https://news.ycombinator.com/item?id=47211830",
+      "points": 87,
+      "num_comments": 18,
+      "author": "bilsbie",
+      "created_at": "2026-03-01T23:15:16Z",
+      "created_at_i": 1772406916,
+      "bucket": "ai-chips",
+      "sentiment": "neutral"
+    },
+    {
       "id": "47181471",
       "title": "Show HN: Badge that shows how well your codebase fits in an LLM's context window",
       "url": "https://github.com/qwibitai/nanoclaw/tree/main/repo-tokens",
@@ -522,6 +548,19 @@
       "created_at": "2026-02-27T15:14:42Z",
       "created_at_i": 1772205282,
       "bucket": "ai-general",
+      "sentiment": "neutral"
+    },
+    {
+      "id": "47209443",
+      "title": "Claude dethrones ChatGPT as top U.S. app after Pentagon saga",
+      "url": "https://www.axios.com/2026/03/01/anthropic-claude-chatgpt-app-downloads-pentagon",
+      "hn_url": "https://news.ycombinator.com/item?id=47209443",
+      "points": 84,
+      "num_comments": 7,
+      "author": "doener",
+      "created_at": "2026-03-01T18:41:03Z",
+      "created_at_i": 1772390463,
+      "bucket": "llm-foundation",
       "sentiment": "neutral"
     },
     {
@@ -538,6 +577,19 @@
       "sentiment": "neutral"
     },
     {
+      "id": "47173559",
+      "title": "Anthropic says company 'cannot in good conscience accede' to Pentagon's demands",
+      "url": "https://apnews.com/article/anthropic-ai-pentagon-hegseth-dario-amodei-9b28dda41bdb52b6a378fa9fc80b8fda",
+      "hn_url": "https://news.ycombinator.com/item?id=47173559",
+      "points": 81,
+      "num_comments": 3,
+      "author": "geox",
+      "created_at": "2026-02-26T23:14:44Z",
+      "created_at_i": 1772147684,
+      "bucket": "llm-foundation",
+      "sentiment": "neutral"
+    },
+    {
       "id": "47152355",
       "title": "Ask HN: Have top AI research institutions just given up on the idea of safety?",
       "url": null,
@@ -548,19 +600,6 @@
       "created_at": "2026-02-25T14:55:20Z",
       "created_at_i": 1772031320,
       "bucket": "ai-safety",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "47173559",
-      "title": "Anthropic says company 'cannot in good conscience accede' to Pentagon's demands",
-      "url": "https://apnews.com/article/anthropic-ai-pentagon-hegseth-dario-amodei-9b28dda41bdb52b6a378fa9fc80b8fda",
-      "hn_url": "https://news.ycombinator.com/item?id=47173559",
-      "points": 80,
-      "num_comments": 3,
-      "author": "geox",
-      "created_at": "2026-02-26T23:14:44Z",
-      "created_at_i": 1772147684,
-      "bucket": "llm-foundation",
       "sentiment": "neutral"
     },
     {
@@ -607,7 +646,7 @@
       "title": "Running a One Trillion-Parameter LLM Locally on AMD Ryzen AI Max+ Cluster",
       "url": "https://www.amd.com/en/developer/resources/technical-articles/2026/how-to-run-a-one-trillion-parameter-llm-locally-an-amd.html",
       "hn_url": "https://news.ycombinator.com/item?id=47202614",
-      "points": 71,
+      "points": 72,
       "num_comments": 24,
       "author": "mindcrime",
       "created_at": "2026-03-01T01:24:54Z",
@@ -620,7 +659,7 @@
       "title": "Deterministic Programming with LLMs",
       "url": "https://www.mcherm.com/deterministic-programming-with-llms.html",
       "hn_url": "https://news.ycombinator.com/item?id=47158834",
-      "points": 66,
+      "points": 67,
       "num_comments": 29,
       "author": "todsacerdoti",
       "created_at": "2026-02-25T22:17:29Z",
@@ -720,19 +759,6 @@
       "sentiment": "neutral"
     },
     {
-      "id": "47209443",
-      "title": "Claude dethrones ChatGPT as top U.S. app after Pentagon saga",
-      "url": "https://www.axios.com/2026/03/01/anthropic-claude-chatgpt-app-downloads-pentagon",
-      "hn_url": "https://news.ycombinator.com/item?id=47209443",
-      "points": 48,
-      "num_comments": 3,
-      "author": "doener",
-      "created_at": "2026-03-01T18:41:03Z",
-      "created_at_i": 1772390463,
-      "bucket": "llm-foundation",
-      "sentiment": "neutral"
-    },
-    {
       "id": "47143931",
       "title": "Anthropic digs in heels in dispute with Pentagon",
       "url": "https://www.reuters.com/world/anthropic-digs-heels-dispute-with-pentagon-source-says-2026-02-24/",
@@ -815,7 +841,7 @@
       "title": "Anthropic's Claude rises to No. 2 in the App Store following Pentagon dispute",
       "url": "https://techcrunch.com/2026/02/28/anthropics-claude-rises-to-no-2-in-the-app-store-following-pentagon-dispute/",
       "hn_url": "https://news.ycombinator.com/item?id=47201028",
-      "points": 40,
+      "points": 41,
       "num_comments": 2,
       "author": "Philpax",
       "created_at": "2026-02-28T22:33:09Z",
@@ -899,19 +925,6 @@
       "created_at": "2026-02-26T02:25:43Z",
       "created_at_i": 1772072743,
       "bucket": "open-source-ai",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "47145523",
-      "title": "Pentagon Gives Anthropic an Ultimatum",
-      "url": "https://www.nytimes.com/2026/02/24/us/politics/pentagon-anthropic.html",
-      "hn_url": "https://news.ycombinator.com/item?id=47145523",
-      "points": 32,
-      "num_comments": 3,
-      "author": "egonschiele",
-      "created_at": "2026-02-25T00:18:31Z",
-      "created_at_i": 1771978711,
-      "bucket": "llm-foundation",
       "sentiment": "neutral"
     },
     {
@@ -1032,6 +1045,19 @@
       "sentiment": "neutral"
     },
     {
+      "id": "47208471",
+      "title": "6 Practices that turned AI from prototyper to workhorse (106 PRs in 14 days)",
+      "url": null,
+      "hn_url": "https://news.ycombinator.com/item?id=47208471",
+      "points": 15,
+      "num_comments": 10,
+      "author": "waleedk",
+      "created_at": "2026-03-01T17:02:15Z",
+      "created_at_i": 1772384535,
+      "bucket": "ai-general",
+      "sentiment": "neutral"
+    },
+    {
       "id": "47175374",
       "title": "Drivers reeling after passengers caught out by AI-powered safety cameras",
       "url": "https://www.abc.net.au/news/2026-02-27/seat-belt-cameras-catch-drivers-in-costly-mistake/106395672",
@@ -1058,19 +1084,6 @@
       "sentiment": "neutral"
     },
     {
-      "id": "47208471",
-      "title": "6 Practices that turned AI from prototyper to workhorse (106 PRs in 14 days)",
-      "url": null,
-      "hn_url": "https://news.ycombinator.com/item?id=47208471",
-      "points": 14,
-      "num_comments": 10,
-      "author": "waleedk",
-      "created_at": "2026-03-01T17:02:15Z",
-      "created_at_i": 1772384535,
-      "bucket": "ai-general",
-      "sentiment": "neutral"
-    },
-    {
       "id": "47200708",
       "title": "Ask HN: My YC company is hiring one engineer/day but there's not enough work",
       "url": null,
@@ -1082,6 +1095,19 @@
       "created_at_i": 1772315769,
       "bucket": "ai-general",
       "sentiment": "neutral"
+    },
+    {
+      "id": "47142003",
+      "title": "Show HN: Off Grid: On-device AI-web browsing, tools vision,image,voice\u20133x faster",
+      "url": null,
+      "hn_url": "https://news.ycombinator.com/item?id=47142003",
+      "points": 12,
+      "num_comments": 5,
+      "author": "ali_chherawalla",
+      "created_at": "2026-02-24T19:57:36Z",
+      "created_at_i": 1771963056,
+      "bucket": "ai-general",
+      "sentiment": "positive"
     },
     {
       "id": "47185029",
@@ -1121,19 +1147,6 @@
       "created_at_i": 1772214204,
       "bucket": "ai-governance",
       "sentiment": "negative"
-    },
-    {
-      "id": "47142003",
-      "title": "Show HN: Off Grid: On-device AI-web browsing, tools vision,image,voice\u20133x faster",
-      "url": null,
-      "hn_url": "https://news.ycombinator.com/item?id=47142003",
-      "points": 11,
-      "num_comments": 5,
-      "author": "ali_chherawalla",
-      "created_at": "2026-02-24T19:57:36Z",
-      "created_at_i": 1771963056,
-      "bucket": "ai-general",
-      "sentiment": "positive"
     },
     {
       "id": "47161350",
@@ -1448,6 +1461,45 @@
       "sentiment": "neutral"
     },
     {
+      "id": "47196746",
+      "title": "Garbage In, Garbage Out: The Degradation of Human Requirements in the LLM Era",
+      "url": null,
+      "hn_url": "https://news.ycombinator.com/item?id=47196746",
+      "points": 7,
+      "num_comments": 5,
+      "author": "waylake",
+      "created_at": "2026-02-28T15:51:27Z",
+      "created_at_i": 1772293887,
+      "bucket": "ai-general",
+      "sentiment": "neutral"
+    },
+    {
+      "id": "47206424",
+      "title": "Simple Made Inevitable: The Economics of Language Choice in the LLM Era",
+      "url": "https://felixbarbalet.com/simple-made-inevitable-the-economics-of-language-choice-in-the-llm-era/",
+      "hn_url": "https://news.ycombinator.com/item?id=47206424",
+      "points": 7,
+      "num_comments": 0,
+      "author": "magoghm",
+      "created_at": "2026-03-01T13:14:33Z",
+      "created_at_i": 1772370873,
+      "bucket": "ai-general",
+      "sentiment": "neutral"
+    },
+    {
+      "id": "47205971",
+      "title": "I used 2D Base64 to bypass Gemini and expose Google's moderation flaws",
+      "url": null,
+      "hn_url": "https://news.ycombinator.com/item?id=47205971",
+      "points": 7,
+      "num_comments": 1,
+      "author": "MissMajordazure",
+      "created_at": "2026-03-01T12:05:44Z",
+      "created_at_i": 1772366744,
+      "bucket": "llm-foundation",
+      "sentiment": "neutral"
+    },
+    {
       "id": "47144811",
       "title": "Hegseth threatens to blacklist Anthropic over 'woke AI' concerns",
       "url": "https://www.npr.org/2026/02/24/nx-s1-5725327/pentagon-anthropic-hegseth-safety",
@@ -1484,19 +1536,6 @@
       "created_at": "2026-02-24T07:25:49Z",
       "created_at_i": 1771917949,
       "bucket": "llm-foundation",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "47196746",
-      "title": "Garbage In, Garbage Out: The Degradation of Human Requirements in the LLM Era",
-      "url": null,
-      "hn_url": "https://news.ycombinator.com/item?id=47196746",
-      "points": 6,
-      "num_comments": 5,
-      "author": "waylake",
-      "created_at": "2026-02-28T15:51:27Z",
-      "created_at_i": 1772293887,
-      "bucket": "ai-general",
       "sentiment": "neutral"
     },
     {
@@ -1578,16 +1617,29 @@
       "sentiment": "neutral"
     },
     {
-      "id": "47205971",
-      "title": "I used 2D Base64 to bypass Gemini and expose Google's moderation flaws",
-      "url": null,
-      "hn_url": "https://news.ycombinator.com/item?id=47205971",
+      "id": "47213362",
+      "title": "DeepSeek to release long-awaited AI model in new challenge to US rivals",
+      "url": "https://www.ft.com/content/e3366881-0622-40a7-9c34-a0d82e3d573e",
+      "hn_url": "https://news.ycombinator.com/item?id=47213362",
+      "points": 6,
+      "num_comments": 1,
+      "author": "freely0085",
+      "created_at": "2026-03-02T03:01:13Z",
+      "created_at_i": 1772420473,
+      "bucket": "open-source-ai",
+      "sentiment": "positive"
+    },
+    {
+      "id": "47208957",
+      "title": "A cellular atlas of aging comes into focus",
+      "url": "https://longevity.technology/news/a-cellular-atlas-of-aging-comes-into-focus/",
+      "hn_url": "https://news.ycombinator.com/item?id=47208957",
       "points": 6,
       "num_comments": 0,
-      "author": "MissMajordazure",
-      "created_at": "2026-03-01T12:05:44Z",
-      "created_at_i": 1772366744,
-      "bucket": "llm-foundation",
+      "author": "Bender",
+      "created_at": "2026-03-01T17:52:42Z",
+      "created_at_i": 1772387562,
+      "bucket": "ai-safety",
       "sentiment": "neutral"
     },
     {
@@ -1656,6 +1708,19 @@
       "sentiment": "neutral"
     },
     {
+      "id": "47213310",
+      "title": "Ask HN: When do you expect ChatGPT moment in robotics?",
+      "url": null,
+      "hn_url": "https://news.ycombinator.com/item?id=47213310",
+      "points": 5,
+      "num_comments": 5,
+      "author": "p1esk",
+      "created_at": "2026-03-02T02:53:02Z",
+      "created_at_i": 1772419982,
+      "bucket": "llm-foundation",
+      "sentiment": "neutral"
+    },
+    {
       "id": "47149684",
       "title": "OpenAI finds global Chinese intimidation operation by official's use of ChatGPT",
       "url": "https://www.cnn.com/2026/02/25/politics/chatgpt-china-intimidation-operation",
@@ -1695,41 +1760,15 @@
       "sentiment": "neutral"
     },
     {
-      "id": "47143857",
-      "title": "Show HN: Mnemosyne \u2013 Cognitive memory OS for AI agents (zero LLM calls)",
-      "url": "https://github.com/28naem-del/mnemosyne",
-      "hn_url": "https://news.ycombinator.com/item?id=47143857",
+      "id": "47213682",
+      "title": "Show HN: HN Bot Detector - Detects LLM-Generated Comments on Hacker News",
+      "url": "https://github.com/umairnadeem/hn-bot-detector",
+      "hn_url": "https://news.ycombinator.com/item?id=47213682",
       "points": 5,
-      "num_comments": 1,
-      "author": "mnemosy",
-      "created_at": "2026-02-24T22:02:47Z",
-      "created_at_i": 1771970567,
-      "bucket": "ai-general",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "47211830",
-      "title": "Right-sizes LLM models to your system's RAM, CPU, and GPU",
-      "url": "https://github.com/AlexsJones/llmfit",
-      "hn_url": "https://news.ycombinator.com/item?id=47211830",
-      "points": 5,
-      "num_comments": 0,
-      "author": "bilsbie",
-      "created_at": "2026-03-01T23:15:16Z",
-      "created_at_i": 1772406916,
-      "bucket": "ai-chips",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "47206424",
-      "title": "Simple Made Inevitable: The Economics of Language Choice in the LLM Era",
-      "url": "https://felixbarbalet.com/simple-made-inevitable-the-economics-of-language-choice-in-the-llm-era/",
-      "hn_url": "https://news.ycombinator.com/item?id=47206424",
-      "points": 5,
-      "num_comments": 0,
-      "author": "magoghm",
-      "created_at": "2026-03-01T13:14:33Z",
-      "created_at_i": 1772370873,
+      "num_comments": 2,
+      "author": "umairnadeem123",
+      "created_at": "2026-03-02T03:53:02Z",
+      "created_at_i": 1772423582,
       "bucket": "ai-general",
       "sentiment": "neutral"
     },
@@ -1795,19 +1834,6 @@
       "author": "PaulHoule",
       "created_at": "2026-02-25T17:48:16Z",
       "created_at_i": 1772041696,
-      "bucket": "ai-general",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "47206476",
-      "title": "Show HN: Geostorm.ai \u2013 Monitor what AI chatbots say about your software",
-      "url": "https://github.com/geostorm-ai/geostorm",
-      "hn_url": "https://news.ycombinator.com/item?id=47206476",
-      "points": 4,
-      "num_comments": 2,
-      "author": "barticz",
-      "created_at": "2026-03-01T13:22:26Z",
-      "created_at_i": 1772371346,
       "bucket": "ai-general",
       "sentiment": "neutral"
     },
@@ -1916,6 +1942,19 @@
       "sentiment": "neutral"
     },
     {
+      "id": "47206476",
+      "title": "Show HN: Geostorm.ai \u2013 Monitor what AI chatbots say about your software",
+      "url": "https://github.com/geostorm-ai/geostorm",
+      "hn_url": "https://news.ycombinator.com/item?id=47206476",
+      "points": 4,
+      "num_comments": 2,
+      "author": "barticz",
+      "created_at": "2026-03-01T13:22:26Z",
+      "created_at_i": 1772371346,
+      "bucket": "ai-general",
+      "sentiment": "neutral"
+    },
+    {
       "id": "47182798",
       "title": "Show HN: SVG Weave. A node graph editor that animates SVGs with AI",
       "url": "https://svgweave.com",
@@ -1977,19 +2016,6 @@
       "author": "mustaphah",
       "created_at": "2026-02-26T21:22:54Z",
       "created_at_i": 1772140974,
-      "bucket": "ai-safety",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "47208957",
-      "title": "A cellular atlas of aging comes into focus",
-      "url": "https://longevity.technology/news/a-cellular-atlas-of-aging-comes-into-focus/",
-      "hn_url": "https://news.ycombinator.com/item?id=47208957",
-      "points": 4,
-      "num_comments": 0,
-      "author": "Bender",
-      "created_at": "2026-03-01T17:52:42Z",
-      "created_at_i": 1772387562,
       "bucket": "ai-safety",
       "sentiment": "neutral"
     },
@@ -2449,6 +2475,19 @@
       "sentiment": "neutral"
     },
     {
+      "id": "47213965",
+      "title": "Is anyone compressing AI models for the 4B people without GPUs or internet?",
+      "url": null,
+      "hn_url": "https://news.ycombinator.com/item?id=47213965",
+      "points": 3,
+      "num_comments": 0,
+      "author": "yashpxl",
+      "created_at": "2026-03-02T04:42:24Z",
+      "created_at_i": 1772426544,
+      "bucket": "ai-chips",
+      "sentiment": "neutral"
+    },
+    {
       "id": "47209207",
       "title": "DEF Con 33 \u2013 Exploiting Shadow Data from AI Models and Embeddings [video]",
       "url": "https://www.youtube.com/watch?v=O7BI4jfEFwA",
@@ -2499,6 +2538,19 @@
       "created_at_i": 1772123429,
       "bucket": "open-source-ai",
       "sentiment": "neutral"
+    },
+    {
+      "id": "47203396",
+      "title": "Why Is Your Operating System Debugging Hackers for Free?",
+      "url": null,
+      "hn_url": "https://news.ycombinator.com/item?id=47203396",
+      "points": 3,
+      "num_comments": 0,
+      "author": "agarmte",
+      "created_at": "2026-03-01T03:30:36Z",
+      "created_at_i": 1772335836,
+      "bucket": "ai-general",
+      "sentiment": "positive"
     },
     {
       "id": "47150964",
@@ -2995,6 +3047,19 @@
       "sentiment": "neutral"
     },
     {
+      "id": "47213778",
+      "title": "Show HN: PrivacyShield \u2013 Mask your PII before it reaches ChatGPT/Claude",
+      "url": "https://www.piiblock.com",
+      "hn_url": "https://news.ycombinator.com/item?id=47213778",
+      "points": 2,
+      "num_comments": 0,
+      "author": "BuddhikaR",
+      "created_at": "2026-03-02T04:08:18Z",
+      "created_at_i": 1772424498,
+      "bucket": "llm-foundation",
+      "sentiment": "neutral"
+    },
+    {
       "id": "47205545",
       "title": "ChatGPT Recommends Claude",
       "url": "https://xcancel.com/deedydas/status/2028030521973125617?s=20",
@@ -3043,32 +3108,6 @@
       "author": "bioneisme",
       "created_at": "2026-02-26T08:58:41Z",
       "created_at_i": 1772096321,
-      "bucket": "llm-foundation",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "47153342",
-      "title": "Trump made tax day more complicated. ChatGPT and Claude can make it easier",
-      "url": "https://www.vox.com/life/480317/trump-taxes-chatgpt-claude-turbotax",
-      "hn_url": "https://news.ycombinator.com/item?id=47153342",
-      "points": 2,
-      "num_comments": 0,
-      "author": "speckx",
-      "created_at": "2026-02-25T16:01:25Z",
-      "created_at_i": 1772035285,
-      "bucket": "llm-foundation",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "47151344",
-      "title": "Show HN: I scanned 35 SaaS products across ChatGPT, Claude, Perplexity, Gemini",
-      "url": "https://www.bersyn.com/",
-      "hn_url": "https://news.ycombinator.com/item?id=47151344",
-      "points": 2,
-      "num_comments": 0,
-      "author": "gissurthor",
-      "created_at": "2026-02-25T13:43:00Z",
-      "created_at_i": 1772026980,
       "bucket": "llm-foundation",
       "sentiment": "neutral"
     },
@@ -3173,6 +3212,32 @@
       "author": "aegismind_app",
       "created_at": "2026-02-25T12:15:31Z",
       "created_at_i": 1772021731,
+      "bucket": "ai-general",
+      "sentiment": "neutral"
+    },
+    {
+      "id": "47214150",
+      "title": "AI \u2013 Factory Model",
+      "url": "https://addyosmani.com/blog/factory-model/",
+      "hn_url": "https://news.ycombinator.com/item?id=47214150",
+      "points": 2,
+      "num_comments": 0,
+      "author": "georgecalm",
+      "created_at": "2026-03-02T05:20:12Z",
+      "created_at_i": 1772428812,
+      "bucket": "ai-general",
+      "sentiment": "neutral"
+    },
+    {
+      "id": "47214026",
+      "title": "Track what AI models say about candidates and races",
+      "url": "https://caucus-ai.com/",
+      "hn_url": "https://news.ycombinator.com/item?id=47214026",
+      "points": 2,
+      "num_comments": 0,
+      "author": "m-hodges",
+      "created_at": "2026-03-02T04:52:33Z",
+      "created_at_i": 1772427153,
       "bucket": "ai-general",
       "sentiment": "neutral"
     },
@@ -3292,19 +3357,6 @@
       "created_at_i": 1772292296,
       "bucket": "ai-general",
       "sentiment": "neutral"
-    },
-    {
-      "id": "47203396",
-      "title": "Why Is Your Operating System Debugging Hackers for Free?",
-      "url": null,
-      "hn_url": "https://news.ycombinator.com/item?id=47203396",
-      "points": 2,
-      "num_comments": 0,
-      "author": "agarmte",
-      "created_at": "2026-03-01T03:30:36Z",
-      "created_at_i": 1772335836,
-      "bucket": "ai-general",
-      "sentiment": "positive"
     },
     {
       "id": "47202447",
@@ -3615,6 +3667,19 @@
       "author": "Tanjim",
       "created_at": "2026-02-23T14:56:42Z",
       "created_at_i": 1771858602,
+      "bucket": "llm-foundation",
+      "sentiment": "neutral"
+    },
+    {
+      "id": "47213477",
+      "title": "Show HN: Ralphex \u2013 autonomous GPT Codex agent loop for ChatGPT Pro users",
+      "url": "https://github.com/SmolNero/ralphex",
+      "hn_url": "https://news.ycombinator.com/item?id=47213477",
+      "points": 1,
+      "num_comments": 0,
+      "author": "edgar_ortega",
+      "created_at": "2026-03-02T03:23:05Z",
+      "created_at_i": 1772421785,
       "bucket": "llm-foundation",
       "sentiment": "neutral"
     },
@@ -3944,58 +4009,6 @@
       "sentiment": "neutral"
     },
     {
-      "id": "47210446",
-      "title": "Securing AI Model Weights",
-      "url": "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
-      "hn_url": "https://news.ycombinator.com/item?id=47210446",
-      "points": 1,
-      "num_comments": 0,
-      "author": "fi-le",
-      "created_at": "2026-03-01T20:41:07Z",
-      "created_at_i": 1772397667,
-      "bucket": "ai-general",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "47192061",
-      "title": "Packaging AI/ML Models as Conda Packages",
-      "url": "https://prefix.dev/blog/packaging-ai-ml-models-as-conda-packages",
-      "hn_url": "https://news.ycombinator.com/item?id=47192061",
-      "points": 1,
-      "num_comments": 0,
-      "author": "droelf",
-      "created_at": "2026-02-28T08:07:56Z",
-      "created_at_i": 1772266076,
-      "bucket": "ai-safety",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "47185269",
-      "title": "Show HN: Ore \u2013 a Rust-Based Kernel for Managing Local Models/AI Agents",
-      "url": null,
-      "hn_url": "https://news.ycombinator.com/item?id=47185269",
-      "points": 1,
-      "num_comments": 0,
-      "author": "alpha_mike",
-      "created_at": "2026-02-27T20:38:28Z",
-      "created_at_i": 1772224708,
-      "bucket": "ai-safety",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "47166914",
-      "title": "AI models are being prepared for the physical world",
-      "url": "https://www.economist.com/science-and-technology/2026/02/25/ai-models-are-being-prepared-for-the-physical-world",
-      "hn_url": "https://news.ycombinator.com/item?id=47166914",
-      "points": 1,
-      "num_comments": 0,
-      "author": "Brajeshwar",
-      "created_at": "2026-02-26T14:52:42Z",
-      "created_at_i": 1772117562,
-      "bucket": "ai-general",
-      "sentiment": "neutral"
-    },
-    {
       "id": "47139092",
       "title": "Paper Reviews of 22 Seminal Deep Learning Papers",
       "url": "https://12gramsofcarbon.com/p/ilyas-30-papers-to-carmack-table",
@@ -4230,19 +4243,6 @@
       "sentiment": "neutral"
     },
     {
-      "id": "47184314",
-      "title": "Show HN: Open\u2011Source Capital Formation OS (Postgres and AI Agents)",
-      "url": "https://github.com/agio711/Riserva-Fly",
-      "hn_url": "https://news.ycombinator.com/item?id=47184314",
-      "points": 1,
-      "num_comments": 0,
-      "author": "tgiordano",
-      "created_at": "2026-02-27T19:10:26Z",
-      "created_at_i": 1772219426,
-      "bucket": "ai-general",
-      "sentiment": "neutral"
-    },
-    {
       "id": "47211270",
       "title": "TSArena \u2013 Independent blind pairwise testing for AI safety",
       "url": "https://tsarena.ai/",
@@ -4336,60 +4336,60 @@
   ],
   "bucket_signals": {
     "llm-foundation": {
-      "story_count": 138,
-      "total_points": 14363,
-      "total_comments": 7237,
-      "total_engagement": 28837,
+      "story_count": 139,
+      "total_points": 14505,
+      "total_comments": 7259,
+      "total_engagement": 29023,
       "sentiment_counts": {
         "positive": 6,
         "negative": 17,
-        "neutral": 115
+        "neutral": 116
       },
       "top_stories": [
         {
           "title": "OpenAI \u2013 How to delete your account",
-          "points": 1891,
+          "points": 1901,
           "comments": 356,
           "hn_url": "https://news.ycombinator.com/item?id=47193478"
         },
         {
           "title": "OpenAI agrees with Dept. of War to deploy models in their classified network",
-          "points": 1385,
+          "points": 1388,
           "comments": 644,
           "hn_url": "https://news.ycombinator.com/item?id=47189650"
         },
         {
           "title": "I am directing the Department of War to designate Anthropic a supply-chain risk",
           "points": 1349,
-          "comments": 1069,
+          "comments": 1072,
           "hn_url": "https://news.ycombinator.com/item?id=47186677"
         },
         {
           "title": "How do I cancel my ChatGPT subscription?",
-          "points": 1051,
+          "points": 1058,
           "comments": 249,
           "hn_url": "https://news.ycombinator.com/item?id=47190997"
         },
         {
           "title": "We do not think Anthropic should be designated as a supply chain risk",
-          "points": 783,
-          "comments": 426,
+          "points": 796,
+          "comments": 429,
           "hn_url": "https://news.ycombinator.com/item?id=47200420"
         }
       ],
-      "sentiment_score": -0.07971014492753623,
-      "avg_engagement": 208.96376811594203,
+      "sentiment_score": -0.07913669064748201,
+      "avg_engagement": 208.79856115107913,
       "signal_interpretation": "Neutral/mixed sentiment"
     },
     "ai-general": {
-      "story_count": 137,
-      "total_points": 3552,
-      "total_comments": 2257,
-      "total_engagement": 8066,
+      "story_count": 136,
+      "total_points": 3561,
+      "total_comments": 2259,
+      "total_engagement": 8079,
       "sentiment_counts": {
         "positive": 10,
         "negative": 3,
-        "neutral": 124
+        "neutral": 123
       },
       "top_stories": [
         {
@@ -4423,19 +4423,19 @@
           "hn_url": "https://news.ycombinator.com/item?id=47129727"
         }
       ],
-      "sentiment_score": 0.051094890510948905,
-      "avg_engagement": 58.87591240875913,
+      "sentiment_score": 0.051470588235294115,
+      "avg_engagement": 59.404411764705884,
       "signal_interpretation": "Neutral/mixed sentiment"
     },
     "ai-safety": {
-      "story_count": 39,
+      "story_count": 37,
       "total_points": 300,
       "total_comments": 244,
       "total_engagement": 788,
       "sentiment_counts": {
         "positive": 2,
         "negative": 1,
-        "neutral": 36
+        "neutral": 34
       },
       "top_stories": [
         {
@@ -4469,15 +4469,61 @@
           "hn_url": "https://news.ycombinator.com/item?id=47175374"
         }
       ],
-      "sentiment_score": 0.02564102564102564,
-      "avg_engagement": 20.205128205128204,
+      "sentiment_score": 0.02702702702702703,
+      "avg_engagement": 21.2972972972973,
+      "signal_interpretation": "Neutral/mixed sentiment"
+    },
+    "ai-chips": {
+      "story_count": 5,
+      "total_points": 94,
+      "total_comments": 18,
+      "total_engagement": 130,
+      "sentiment_counts": {
+        "positive": 0,
+        "negative": 0,
+        "neutral": 5
+      },
+      "top_stories": [
+        {
+          "title": "Right-sizes LLM models to your system's RAM, CPU, and GPU",
+          "points": 87,
+          "comments": 18,
+          "hn_url": "https://news.ycombinator.com/item?id=47211830"
+        },
+        {
+          "title": "Is anyone compressing AI models for the 4B people without GPUs or internet?",
+          "points": 3,
+          "comments": 0,
+          "hn_url": "https://news.ycombinator.com/item?id=47213965"
+        },
+        {
+          "title": "GPT-OSS Optimizations on Nvidia Blackwell: Pushing the Pareto Frontier",
+          "points": 2,
+          "comments": 0,
+          "hn_url": "https://news.ycombinator.com/item?id=47147853"
+        },
+        {
+          "title": "Show HN: WaveGuard \u2013 Anomaly detection using wave physics simulation (GPU, MCP)",
+          "points": 1,
+          "comments": 0,
+          "hn_url": "https://news.ycombinator.com/item?id=47144914"
+        },
+        {
+          "title": "Show HN: Train a 230KB text classifier from 50 examples \u2013 no API keys, no GPU",
+          "points": 1,
+          "comments": 0,
+          "hn_url": "https://news.ycombinator.com/item?id=47137506"
+        }
+      ],
+      "sentiment_score": 0.0,
+      "avg_engagement": 26.0,
       "signal_interpretation": "Neutral/mixed sentiment"
     },
     "ai-coding": {
       "story_count": 3,
-      "total_points": 72,
+      "total_points": 73,
       "total_comments": 30,
-      "total_engagement": 132,
+      "total_engagement": 133,
       "sentiment_counts": {
         "positive": 0,
         "negative": 0,
@@ -4486,7 +4532,7 @@
       "top_stories": [
         {
           "title": "Deterministic Programming with LLMs",
-          "points": 66,
+          "points": 67,
           "comments": 29,
           "hn_url": "https://news.ycombinator.com/item?id=47158834"
         },
@@ -4504,16 +4550,16 @@
         }
       ],
       "sentiment_score": 0.0,
-      "avg_engagement": 44.0,
+      "avg_engagement": 44.333333333333336,
       "signal_interpretation": "Neutral/mixed sentiment"
     },
     "open-source-ai": {
-      "story_count": 6,
-      "total_points": 51,
-      "total_comments": 9,
-      "total_engagement": 69,
+      "story_count": 7,
+      "total_points": 57,
+      "total_comments": 10,
+      "total_engagement": 77,
       "sentiment_counts": {
-        "positive": 1,
+        "positive": 2,
         "negative": 2,
         "neutral": 3
       },
@@ -4523,6 +4569,12 @@
           "points": 34,
           "comments": 8,
           "hn_url": "https://news.ycombinator.com/item?id=47161026"
+        },
+        {
+          "title": "DeepSeek to release long-awaited AI model in new challenge to US rivals",
+          "points": 6,
+          "comments": 1,
+          "hn_url": "https://news.ycombinator.com/item?id=47213362"
         },
         {
           "title": "DeepSeek trained AI model on Nvidia's best chip despite US ban",
@@ -4541,17 +4593,11 @@
           "points": 3,
           "comments": 0,
           "hn_url": "https://news.ycombinator.com/item?id=47181301"
-        },
-        {
-          "title": "DeepSeek withholds latest AI model V4 from US chipmakers including Nvidia",
-          "points": 3,
-          "comments": 0,
-          "hn_url": "https://news.ycombinator.com/item?id=47168274"
         }
       ],
-      "sentiment_score": -0.16666666666666666,
-      "avg_engagement": 11.5,
-      "signal_interpretation": "Mildly negative sentiment"
+      "sentiment_score": 0.0,
+      "avg_engagement": 11.0,
+      "signal_interpretation": "Neutral/mixed sentiment"
     },
     "ai-governance": {
       "story_count": 3,
@@ -4586,46 +4632,6 @@
       "sentiment_score": -1.0,
       "avg_engagement": 8.0,
       "signal_interpretation": "Strong negative sentiment"
-    },
-    "ai-chips": {
-      "story_count": 4,
-      "total_points": 9,
-      "total_comments": 0,
-      "total_engagement": 9,
-      "sentiment_counts": {
-        "positive": 0,
-        "negative": 0,
-        "neutral": 4
-      },
-      "top_stories": [
-        {
-          "title": "Right-sizes LLM models to your system's RAM, CPU, and GPU",
-          "points": 5,
-          "comments": 0,
-          "hn_url": "https://news.ycombinator.com/item?id=47211830"
-        },
-        {
-          "title": "GPT-OSS Optimizations on Nvidia Blackwell: Pushing the Pareto Frontier",
-          "points": 2,
-          "comments": 0,
-          "hn_url": "https://news.ycombinator.com/item?id=47147853"
-        },
-        {
-          "title": "Show HN: WaveGuard \u2013 Anomaly detection using wave physics simulation (GPU, MCP)",
-          "points": 1,
-          "comments": 0,
-          "hn_url": "https://news.ycombinator.com/item?id=47144914"
-        },
-        {
-          "title": "Show HN: Train a 230KB text classifier from 50 examples \u2013 no API keys, no GPU",
-          "points": 1,
-          "comments": 0,
-          "hn_url": "https://news.ycombinator.com/item?id=47137506"
-        }
-      ],
-      "sentiment_score": 0.0,
-      "avg_engagement": 2.25,
-      "signal_interpretation": "Neutral/mixed sentiment"
     },
     "robotics-embodied": {
       "story_count": 1,

@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-02T10:17:41.237969",
+  "scraped_at": "2026-03-02T14:26:40.224299",
   "total_markets": 500,
   "ai_markets": 61,
   "markets": [
@@ -254,17 +254,17 @@
         "No"
       ],
       "outcome_probabilities": {
-        "Yes": 39.5,
-        "No": 60.5
+        "Yes": 40.5,
+        "No": 59.5
       },
       "volume": 133727.54296,
       "volume_24h": 1106.8673589999999,
-      "liquidity": 9378.0569,
+      "liquidity": 9689.0851,
       "start_date": "2025-11-12T21:28:49.336026Z",
       "end_date": "2026-12-31T00:00:00Z",
       "slug": "openai-ipo-before-2027",
       "active": true,
-      "spread": 0.01,
+      "spread": 0.03,
       "bucket": "llm-foundation"
     },
     {
@@ -281,7 +281,7 @@
       },
       "volume": 119586.621045,
       "volume_24h": 13.33333,
-      "liquidity": 4568.5209,
+      "liquidity": 5568.1272,
       "start_date": "2025-11-12T21:28:47.034102Z",
       "end_date": "2026-12-31T00:00:00Z",
       "slug": "mistral-ai-ipo-before-2027",
@@ -298,17 +298,17 @@
         "No"
       ],
       "outcome_probabilities": {
-        "Yes": 50.5,
-        "No": 49.5
+        "Yes": 51.0,
+        "No": 49.0
       },
-      "volume": 116464.328678,
+      "volume": 116738.558678,
       "volume_24h": 1766.640102,
-      "liquidity": 8530.6307,
+      "liquidity": 8720.159,
       "start_date": "2025-11-12T21:28:41.148275Z",
       "end_date": "2026-12-31T00:00:00Z",
       "slug": "anthropic-ipo-before-2027",
       "active": true,
-      "spread": 0.03,
+      "spread": 0.02,
       "bucket": "llm-foundation"
     },
     {
@@ -320,17 +320,17 @@
         "No"
       ],
       "outcome_probabilities": {
-        "Yes": 3.1,
-        "No": 96.89999999999999
+        "Yes": 3.4000000000000004,
+        "No": 96.6
       },
-      "volume": 71387.849416,
+      "volume": 71654.362423,
       "volume_24h": 251.380596,
-      "liquidity": 14698.85099,
+      "liquidity": 14421.38647,
       "start_date": "2025-05-22T14:50:07.243348Z",
       "end_date": null,
       "slug": "will-openai-launch-a-new-consumer-hardware-product-by-march-31-2026",
       "active": true,
-      "spread": 0.014,
+      "spread": 0.004,
       "bucket": "llm-foundation"
     },
     {
@@ -646,7 +646,7 @@
     "ai-general": {
       "market_count": 21,
       "total_volume": 21846550.024226997,
-      "total_liquidity": 4568.5209,
+      "total_liquidity": 5568.1272,
       "total_confidence": 21820240.967597097,
       "bullish_confidence": 0,
       "bearish_confidence": 21820240.967597097,
@@ -972,11 +972,11 @@
     },
     "llm-foundation": {
       "market_count": 7,
-      "total_volume": 6250415.276031,
-      "total_liquidity": 32607.538589999996,
-      "total_confidence": 6025044.785037588,
-      "bullish_confidence": 1701958.72397478,
-      "bearish_confidence": 4323086.061062808,
+      "total_volume": 6250956.019038,
+      "total_liquidity": 32830.63057,
+      "total_confidence": 6023360.425091196,
+      "bullish_confidence": 1703128.85186156,
+      "bearish_confidence": 4320231.573229636,
       "markets": [
         {
           "question": "Will Google have the best AI model at the end of January 2026?",
@@ -1042,49 +1042,49 @@
           "question": "OpenAI IPO before 2027?",
           "volume": 133727.54296,
           "outcome_probabilities": {
-            "Yes": 39.5,
-            "No": 60.5
+            "Yes": 40.5,
+            "No": 59.5
           },
           "sentiment": {
-            "yes_probability": 39.5,
+            "yes_probability": 40.5,
             "direction": "bearish",
-            "sentiment_score": 0.21,
-            "confidence_score": 28082.784021599997,
+            "sentiment_score": 0.19,
+            "confidence_score": 25408.2331624,
             "volume": 133727.54296
           }
         },
         {
           "question": "Anthropic IPO before 2027?",
-          "volume": 116464.328678,
+          "volume": 116738.558678,
           "outcome_probabilities": {
-            "Yes": 50.5,
-            "No": 49.5
+            "Yes": 51.0,
+            "No": 49.0
           },
           "sentiment": {
-            "yes_probability": 50.5,
+            "yes_probability": 51.0,
             "direction": "bullish",
-            "sentiment_score": 0.01,
-            "confidence_score": 1164.6432867800002,
-            "volume": 116464.328678
+            "sentiment_score": 0.02,
+            "confidence_score": 2334.77117356,
+            "volume": 116738.558678
           }
         },
         {
           "question": "Will OpenAI launch a new consumer hardware product by March 31, 2026?",
-          "volume": 71387.849416,
+          "volume": 71654.362423,
           "outcome_probabilities": {
-            "Yes": 3.1,
-            "No": 96.89999999999999
+            "Yes": 3.4000000000000004,
+            "No": 96.6
           },
           "sentiment": {
-            "yes_probability": 3.1,
+            "yes_probability": 3.4000000000000004,
             "direction": "bearish",
-            "sentiment_score": 0.938,
-            "confidence_score": 66961.802752208,
-            "volume": 71387.849416
+            "sentiment_score": 0.932,
+            "confidence_score": 66781.86577823601,
+            "volume": 71654.362423
           }
         }
       ],
-      "weighted_sentiment": -0.43503864794453573,
+      "weighted_sentiment": -0.4344921334054906,
       "signal_interpretation": "Strong bearish consensus"
     },
     "open-source-ai": {
