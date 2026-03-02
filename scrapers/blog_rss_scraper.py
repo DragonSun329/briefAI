@@ -642,7 +642,7 @@ class BlogRSSScraper:
         except (ValueError, TypeError):
             return True
 
-    def run(self) -> Dict[str, Any]:
+    def run(self, save: bool = True) -> Dict[str, Any]:
         """Run the blog scraper."""
         print(f"\nScraping {len(self.BLOG_FEEDS)} independent blogs...")
 

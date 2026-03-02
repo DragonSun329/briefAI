@@ -60,6 +60,19 @@ Enter WORKBRIEF MODE:
 
 ---
 
+## WEEKLY MODE
+**Trigger:** `weekly review` or `周报`
+
+Enter WEEKLY MODE:
+- Aggregate last 7 days of briefAI signals
+- Find patterns obscured by daily view: recurring themes, signal clusters, hypothesis drift
+- Compare predicted vs actual outcomes where available
+- Identify what the daily view missed
+
+**Output:** 周线级pattern分析, saved to `memory/weekly/YYYY-WXX.md`
+
+---
+
 ## REPORTER MODE
 **Trigger:** `news brief` or `reporter mode`
 
