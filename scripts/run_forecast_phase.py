@@ -340,6 +340,7 @@ def main():
     parser.add_argument('--experiment', type=str, help='Experiment ID')
     parser.add_argument('--verbose', '-v', action='store_true', help='Verbose output')
     parser.add_argument('--dry-run', action='store_true', help='Generate forecasts but do not write to ledger')
+    parser.add_argument('--force', action='store_true', help='Force overwrite even if snapshot already exists')
     
     args = parser.parse_args()
     
@@ -406,6 +407,15 @@ def main():
         print("\n[DRY-RUN] Skipping ledger writes")
         print(f"Would write {len(records)} records to ledger")
         return 0
+    
+    # Check if already run today (idempotent re-runs)
+    if not args.force:
+        from utils.experiment_manager import get_ledger_path
+        snapshot_path = get_ledger_path(experiment_id) / f"daily_snapshot_{target_date}.json"
+        if snapshot_path.exists():
+            print(f"\n[SKIP] Snapshot already exists for {target_date}: {snapshot_path.name}")
+            print("[SKIP] Forecasts already written. Use --force to overwrite.")
+            return 0
     
     print("[4/5] Writing to ledger...")
     success, written = write_forecasts_to_ledger(records, experiment_id)

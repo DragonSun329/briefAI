@@ -7,6 +7,8 @@ Uses Reddit's public JSON API (no OAuth required).
 
 import requests
 import json
+import time
+import random
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Dict, Any, Optional
@@ -64,7 +66,7 @@ class RedditScraper:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.session = requests.Session()
         self.session.headers.update({
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) BriefAI/1.0"
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
         })
 
     def fetch_subreddit_posts(self, subreddit: str, sort: str = "hot",
@@ -91,7 +93,9 @@ class RedditScraper:
         all_posts = []
         seen_ids = set()
 
-        for subreddit in self.AI_SUBREDDITS:
+        for i, subreddit in enumerate(self.AI_SUBREDDITS):
+            if i > 0:
+                time.sleep(random.uniform(1, 3))
             print(f"  Fetching r/{subreddit}...")
             posts = self.fetch_subreddit_posts(subreddit, limit=limit_per_sub)
 

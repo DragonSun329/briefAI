@@ -9,6 +9,8 @@ Metaculus is known for well-calibrated forecasters and detailed reasoning.
 
 import requests
 import json
+import time
+import random
 from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Any, Optional
@@ -30,9 +32,15 @@ class MetaculusScraper:
         'ai safety', 'alignment', 'superintelligence',
     ]
 
+    HEADERS = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+    }
+
     def __init__(self, output_dir: Optional[Path] = None):
         self.output_dir = output_dir or Path(__file__).parent.parent / "data" / "alternative_signals"
         self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.session = requests.Session()
+        self.session.headers.update(self.HEADERS)
 
     def fetch_questions(self, search: str = None, limit: int = 100, offset: int = 0) -> List[Dict[str, Any]]:
         """Fetch questions from Metaculus API."""
@@ -47,7 +55,7 @@ class MetaculusScraper:
             params["search"] = search
 
         try:
-            resp = requests.get(url, params=params, timeout=30)
+            resp = self.session.get(url, params=params, timeout=30)
             resp.raise_for_status()
             data = resp.json()
             return data.get("results", [])
@@ -72,7 +80,9 @@ class MetaculusScraper:
             "language model",
         ]
 
-        for term in search_terms:
+        for i, term in enumerate(search_terms):
+            if i > 0:
+                time.sleep(random.uniform(1, 3))
             print(f"  Searching: {term}")
             questions = self.fetch_questions(search=term, limit=50)
             for q in questions:

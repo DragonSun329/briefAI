@@ -207,10 +207,11 @@ if ($LASTEXITCODE -ne 0) {
 Log-Message "STEP 4: Generating forecasts and writing to ledger..."
 
 $ForecastResult = python scripts/run_forecast_phase.py --experiment $ExperimentId 2>&1
+$ForecastExitCode = $LASTEXITCODE
 $ForecastOutput = $ForecastResult | Out-String
 Add-Content -Path $LogFile -Value $ForecastOutput -Encoding UTF8
 
-if ($LASTEXITCODE -ne 0) {
+if ($ForecastExitCode -ne 0) {
     Fail-Step -StepNum 4 -StepName "Forecast Generation" `
         -ErrorMsg "Forecast phase failed. Ledger may be incomplete." `
         -NextAction "Check forecast phase output and fix signal/hypothesis generation"
@@ -224,15 +225,16 @@ Log-Success "Forecasts generated and written to ledger"
 Log-Message "STEP 5: Verifying ledger integrity..."
 
 $VerifyResult = python scripts/verify_ledger_integrity.py --experiment $ExperimentId 2>&1
+$VerifyExitCode = $LASTEXITCODE
 $VerifyOutput = $VerifyResult | Out-String
 Add-Content -Path $LogFile -Value $VerifyOutput -Encoding UTF8
 
-if ($LASTEXITCODE -eq 2) {
+if ($VerifyExitCode -eq 2) {
     Fail-Step -StepNum 5 -StepName "Ledger Verification" `
         -ErrorMsg "Ledger file not found" `
         -NextAction "Check that forecast phase created forecast_history.jsonl in experiment folder"
 }
-elseif ($LASTEXITCODE -ne 0) {
+elseif ($VerifyExitCode -ne 0) {
     Fail-Step -StepNum 5 -StepName "Ledger Verification" `
         -ErrorMsg "Ledger integrity check FAILED. Hash chain may be broken." `
         -NextAction "Run: python scripts/verify_ledger_integrity.py --experiment $ExperimentId --repair"
@@ -245,21 +247,12 @@ Log-Success "Ledger integrity verified"
 # ============================================================================
 Log-Message "STEP 6: Generating daily brief..."
 
-$BriefResult = python -c "
-import asyncio
-from modules.daily_brief import DailyBriefGenerator
-
-async def main():
-    gen = DailyBriefGenerator()
-    report_path = await gen.generate()
-    print(f'Generated: {report_path}')
-
-asyncio.run(main())
-" 2>&1
+$BriefResult = python scripts/generate_daily_brief.py 2>&1
+$BriefExitCode = $LASTEXITCODE
 $BriefOutput = $BriefResult | Out-String
 Add-Content -Path $LogFile -Value $BriefOutput -Encoding UTF8
 
-if ($LASTEXITCODE -ne 0) {
+if ($BriefExitCode -ne 0) {
     Fail-Step -StepNum 6 -StepName "Daily Brief" `
         -ErrorMsg "Daily brief generation failed" `
         -NextAction "Check modules/daily_brief.py and LLM provider status"

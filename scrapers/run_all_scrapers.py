@@ -18,6 +18,11 @@ from scraper_timeout import run_with_timeout  # noqa: E402 - also sets socket de
 # Per-scraper hard timeout in seconds
 SCRAPER_TIMEOUT = 120
 
+# Per-scraper timeout overrides (seconds)
+SCRAPER_TIMEOUT_OVERRIDES = {
+    "us_tech_news": 300,  # Scrapes 15 companies sequentially
+}
+
 # Import all scrapers
 from polymarket_scraper import PolymarketScraper
 from metaculus_scraper import MetaculusScraper
@@ -94,7 +99,8 @@ class AlternativeDataRunner:
                 raise e
 
         try:
-            result = run_with_timeout(_execute, timeout=SCRAPER_TIMEOUT, name=name)
+            timeout = SCRAPER_TIMEOUT_OVERRIDES.get(name, SCRAPER_TIMEOUT)
+            result = run_with_timeout(_execute, timeout=timeout, name=name)
             print(f"  SUCCESS: {name} completed")
             return {
                 "status": "success",
