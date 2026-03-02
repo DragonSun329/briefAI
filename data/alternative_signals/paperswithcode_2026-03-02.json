@@ -1,6 +1,6 @@
 {
   "source": "paperswithcode",
-  "scraped_at": "2026-03-02T14:38:15.304985",
+  "scraped_at": "2026-03-02T14:56:10.462351",
   "total_papers": 50,
   "papers": [
     {
@@ -135,7 +135,7 @@
       "url_abs": "https://arxiv.org/abs/2602.22661",
       "url_pdf": "https://arxiv.org/pdf/2602.22661",
       "arxiv_id": "2602.22661",
-      "github_stars": 32,
+      "github_stars": 33,
       "published": "2026-02-26T06:26:02.000Z",
       "authors": [
         "Zhanhui Zhou",
@@ -161,33 +161,6 @@
         "Xufang Luo",
         "Dongsheng Li",
         "Yuqing Yang"
-      ],
-      "tasks": [],
-      "bucket": "llm-foundation"
-    },
-    {
-      "id": "2602.21548",
-      "title": "DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference",
-      "abstract": "The performance of multi-turn, agentic LLM inference is increasingly dominated by KV-Cache storage I/O rather than computation. In prevalent disaggregated architectures, loading the massive KV-Cache from external storage creates a fundamental imbalance: storage NICs on prefill engines become bandwidth-saturated, while those on decoding engines remain idle. This asymmetry severely constrains overall system throughput.\n  We present DualPath, an inference system that breaks this bottleneck by intro",
-      "url_abs": "https://arxiv.org/abs/2602.21548",
-      "url_pdf": "https://arxiv.org/pdf/2602.21548",
-      "arxiv_id": "2602.21548",
-      "github_stars": 30,
-      "published": "2026-02-25T04:10:58.000Z",
-      "authors": [
-        "Yongtong Wu",
-        "Shaoyuan Chen",
-        "Yinmin Zhong",
-        "Rilin Huang",
-        "Yixuan Tan",
-        "Wentao Zhang",
-        "Liyue Zhang",
-        "Shangyan Zhou",
-        "Yuxuan Liu",
-        "Shunfeng Zhou",
-        "Mingxing Zhang",
-        "Xin Jin",
-        "Panpan Huang"
       ],
       "tasks": [],
       "bucket": "llm-foundation"
@@ -237,7 +210,7 @@
       "url_abs": "https://arxiv.org/abs/2602.24233",
       "url_pdf": "https://arxiv.org/pdf/2602.24233",
       "arxiv_id": "2602.24233",
-      "github_stars": 22,
+      "github_stars": 23,
       "published": "2026-02-27T17:59:57.000Z",
       "authors": [
         "Zhenyu Tang",
@@ -334,6 +307,31 @@
       "bucket": "ai-general"
     },
     {
+      "id": "2602.24289",
+      "title": "Mode Seeking meets Mean Seeking for Fast Long Video Generation",
+      "abstract": "Scaling video generation from seconds to minutes faces a critical bottleneck: while short-video data is abundant and high-fidelity, coherent long-form data is scarce and limited to narrow domains. To address this, we propose a training paradigm where Mode Seeking meets Mean Seeking, decoupling local fidelity from long-term coherence based on a unified representation via a Decoupled Diffusion Transformer. Our approach utilizes a global Flow Matching head trained via supervised learning on long vi",
+      "url_abs": "https://arxiv.org/abs/2602.24289",
+      "url_pdf": "https://arxiv.org/pdf/2602.24289",
+      "arxiv_id": "2602.24289",
+      "github_stars": 12,
+      "published": "2026-02-27T18:59:02.000Z",
+      "authors": [
+        "Shengqu Cai",
+        "Weili Nie",
+        "Chao Liu",
+        "Julius Berner",
+        "Lvmin Zhang",
+        "Nanye Ma",
+        "Hansheng Chen",
+        "Maneesh Agrawala",
+        "Leonidas Guibas",
+        "Gordon Wetzstein",
+        "Arash Vahdat"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
       "id": "2602.21760",
       "title": "Accelerating Diffusion via Hybrid Data-Pipeline Parallelism Based on Conditional Guidance Scheduling",
       "abstract": "Diffusion models have achieved remarkable progress in high-fidelity image, video, and audio generation, yet inference remains computationally expensive. Nevertheless, current diffusion acceleration methods based on distributed parallelism suffer from noticeable generation artifacts and fail to achieve substantial acceleration proportional to the number of GPUs. Therefore, we propose a hybrid parallelism framework that combines a novel data parallel strategy, condition-based partitioning, with an",
@@ -351,31 +349,6 @@
       ],
       "tasks": [],
       "bucket": "ai-image-generation"
-    },
-    {
-      "id": "2602.24289",
-      "title": "Mode Seeking meets Mean Seeking for Fast Long Video Generation",
-      "abstract": "Scaling video generation from seconds to minutes faces a critical bottleneck: while short-video data is abundant and high-fidelity, coherent long-form data is scarce and limited to narrow domains. To address this, we propose a training paradigm where Mode Seeking meets Mean Seeking, decoupling local fidelity from long-term coherence based on a unified representation via a Decoupled Diffusion Transformer. Our approach utilizes a global Flow Matching head trained via supervised learning on long vi",
-      "url_abs": "https://arxiv.org/abs/2602.24289",
-      "url_pdf": "https://arxiv.org/pdf/2602.24289",
-      "arxiv_id": "2602.24289",
-      "github_stars": 11,
-      "published": "2026-02-27T18:59:02.000Z",
-      "authors": [
-        "Shengqu Cai",
-        "Weili Nie",
-        "Chao Liu",
-        "Julius Berner",
-        "Lvmin Zhang",
-        "Nanye Ma",
-        "Hansheng Chen",
-        "Maneesh Agrawala",
-        "Leonidas Guibas",
-        "Gordon Wetzstein",
-        "Arash Vahdat"
-      ],
-      "tasks": [],
-      "bucket": "llm-foundation"
     },
     {
       "id": "2602.23205",
@@ -1029,6 +1002,24 @@
       "bucket": "ai-image-generation"
     },
     {
+      "id": "2602.24012",
+      "title": "InfoNCE Induces Gaussian Distribution",
+      "abstract": "Contrastive learning has become a cornerstone of modern representation learning, allowing training with massive unlabeled data for both task-specific and general (foundation) models. A prototypical loss in contrastive training is InfoNCE and its variants. In this work, we show that the InfoNCE objective induces Gaussian structure in representations that emerge from contrastive training. We establish this result in two complementary regimes. First, we show that under certain alignment and concent",
+      "url_abs": "https://arxiv.org/abs/2602.24012",
+      "url_pdf": "https://arxiv.org/pdf/2602.24012",
+      "arxiv_id": "2602.24012",
+      "github_stars": 0,
+      "published": "2026-02-27T13:35:58.000Z",
+      "authors": [
+        "Roy Betser",
+        "Eyal Gofer",
+        "Meir Yossef Levi",
+        "Guy Gilboa"
+      ],
+      "tasks": [],
+      "bucket": "ai-coding"
+    },
+    {
       "id": "2602.23622",
       "title": "DLEBench: Evaluating Small-scale Object Editing Ability for Instruction-based Image Editing Model",
       "abstract": "Significant progress has been made in the field of Instruction-based Image Editing Models (IIEMs). However, while these models demonstrate plausible adherence to instructions and strong reasoning ability on current benchmarks, their ability to edit small objects remains underexplored, despite its importance for precise local editing and refining details in both real and generated images. In this paper, we introduce DeepLookEditBench (DLEBench), the first benchmark dedicated to assessing the abil",
@@ -1119,13 +1110,13 @@
           "url": "https://arxiv.org/abs/2602.23622"
         }
       ],
-      "star_share": 0.23042505592841164,
+      "star_share": 0.23760092272202998,
       "avg_stars": 51.5,
       "signal_interpretation": "Hot research area with high implementation interest"
     },
     "ai-image-generation": {
       "paper_count": 8,
-      "total_stars": 204,
+      "total_stars": 205,
       "top_papers": [
         {
           "title": "From Blind Spots to Gains: Diagnostic-Driven Iterative Training for Large Multimodal Models",
@@ -1134,7 +1125,7 @@
         },
         {
           "title": "Enhancing Spatial Understanding in Image Generation via Reward Modeling",
-          "stars": 22,
+          "stars": 23,
           "url": "https://arxiv.org/abs/2602.24233"
         },
         {
@@ -1153,13 +1144,13 @@
           "url": "https://arxiv.org/abs/2602.23996"
         }
       ],
-      "star_share": 0.22818791946308725,
-      "avg_stars": 25.5,
+      "star_share": 0.2364475201845444,
+      "avg_stars": 25.625,
       "signal_interpretation": "Hot research area with high implementation interest"
     },
     "llm-foundation": {
-      "paper_count": 29,
-      "total_stars": 407,
+      "paper_count": 28,
+      "total_stars": 379,
       "top_papers": [
         {
           "title": "MobilityBench: A Benchmark for Evaluating Route-Planning Agents in Real-World Mobility Scenarios",
@@ -1178,7 +1169,7 @@
         },
         {
           "title": "dLLM: Simple Diffusion Language Modeling",
-          "stars": 32,
+          "stars": 33,
           "url": "https://arxiv.org/abs/2602.22661"
         },
         {
@@ -1187,8 +1178,8 @@
           "url": "https://arxiv.org/abs/2602.23008"
         }
       ],
-      "star_share": 0.4552572706935123,
-      "avg_stars": 14.03448275862069,
+      "star_share": 0.4371395617070358,
+      "avg_stars": 13.535714285714286,
       "signal_interpretation": "Hot research area with high implementation interest"
     },
     "open-source-ai": {
@@ -1216,7 +1207,7 @@
           "url": "https://arxiv.org/abs/2602.18253"
         }
       ],
-      "star_share": 0.06263982102908278,
+      "star_share": 0.06459054209919261,
       "avg_stars": 14.0,
       "signal_interpretation": "Growing interest in implementations"
     },
@@ -1245,7 +1236,7 @@
           "url": "https://arxiv.org/abs/2602.16729"
         }
       ],
-      "star_share": 0.02237136465324385,
+      "star_share": 0.02306805074971165,
       "avg_stars": 5.0,
       "signal_interpretation": "Research-focused with limited code adoption"
     },
@@ -1259,8 +1250,22 @@
           "url": "https://arxiv.org/abs/2602.20981"
         }
       ],
-      "star_share": 0.0011185682326621924,
+      "star_share": 0.0011534025374855825,
       "avg_stars": 1.0,
+      "signal_interpretation": "Research-focused with limited code adoption"
+    },
+    "ai-coding": {
+      "paper_count": 1,
+      "total_stars": 0,
+      "top_papers": [
+        {
+          "title": "InfoNCE Induces Gaussian Distribution",
+          "stars": 0,
+          "url": "https://arxiv.org/abs/2602.24012"
+        }
+      ],
+      "star_share": 0.0,
+      "avg_stars": 0.0,
       "signal_interpretation": "Research-focused with limited code adoption"
     }
   },

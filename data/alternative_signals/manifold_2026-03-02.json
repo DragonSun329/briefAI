@@ -1,6 +1,6 @@
 {
   "source": "manifold",
-  "scraped_at": "2026-03-02T14:34:24.444618",
+  "scraped_at": "2026-03-02T14:53:02.886623",
   "total_markets": 381,
   "markets": [
     {
@@ -8,8 +8,8 @@
       "question": "In early 2028, will an AI be able to generate a full high-quality movie to a prompt?",
       "description": "",
       "url": "https://manifold.markets/ScottAlexander/in-2028-will-an-ai-be-able-to-gener",
-      "probability": 0.3042470531124389,
-      "volume": 11600229.800954783,
+      "probability": 0.30576116407874765,
+      "volume": 11600279.800954783,
       "volume_24h": 10152.496175233002,
       "liquidity": 20916,
       "unique_bettors": 4280,
@@ -163,7 +163,7 @@
       "url": "https://manifold.markets/Bayesian/outcomes-of-the-anthropic-vs-us-gov",
       "probability": null,
       "volume": 277493.13511389453,
-      "volume_24h": 13353.116185442084,
+      "volume_24h": 13509.806242830196,
       "liquidity": 33900,
       "unique_bettors": 512,
       "created_at": 1771963439908,
@@ -248,7 +248,7 @@
       "url": "https://manifold.markets/Bayesian/perfect-score-achieved-by-an-ai-mod",
       "probability": 0.5940858092656498,
       "volume": 116564.14264164599,
-      "volume_24h": 749.6125315723643,
+      "volume_24h": 680,
       "liquidity": 10000,
       "unique_bettors": 202,
       "created_at": 1752935359157,
@@ -469,7 +469,7 @@
       "url": "https://manifold.markets/Bayesian/will-an-ai-achieve-85-performance-o-hyPtIE98qZ",
       "probability": 0.3033714408713822,
       "volume": 39689.87930408949,
-      "volume_24h": 85,
+      "volume_24h": 35,
       "liquidity": 1000,
       "unique_bettors": 97,
       "created_at": 1731109978061,
@@ -588,7 +588,7 @@
       "url": "https://manifold.markets/ScottAlexander/will-anthropic-escape-the-supply-ch",
       "probability": 0.7019987478198162,
       "volume": 28968.009674635472,
-      "volume_24h": 3371.874984086548,
+      "volume_24h": 3071.874984086548,
       "liquidity": 10200,
       "unique_bettors": 195,
       "created_at": 1772235535564,
@@ -1744,7 +1744,7 @@
       "url": "https://manifold.markets/Bayesian/gpt-54-openai-release-date",
       "probability": null,
       "volume": 5339.768774736092,
-      "volume_24h": 1800.5858423189507,
+      "volume_24h": 1895.6771479027325,
       "liquidity": 1000,
       "unique_bettors": 30,
       "created_at": 1771566333335,
@@ -1846,7 +1846,7 @@
       "url": "https://manifold.markets/prismatic/march-2026-ai-model-releases",
       "probability": null,
       "volume": 4977.806763511974,
-      "volume_24h": 2974.375418987068,
+      "volume_24h": 3004.692161643859,
       "liquidity": 1300,
       "unique_bettors": 30,
       "created_at": 1772339903968,
@@ -2135,7 +2135,7 @@
       "url": "https://manifold.markets/MalachiteEagle/openai-discovers-the-first-proof-of",
       "probability": 0.03557020158820381,
       "volume": 3944.6040867899687,
-      "volume_24h": 524.5893133880926,
+      "volume_24h": 724.5893133880926,
       "liquidity": 100,
       "unique_bettors": 35,
       "created_at": 1743570184834,
@@ -2696,7 +2696,7 @@
       "url": "https://manifold.markets/Bayesian/gemini-40-google-release-date",
       "probability": null,
       "volume": 2755.492200681519,
-      "volume_24h": 268.39278715518134,
+      "volume_24h": 248.39278715518137,
       "liquidity": 1000,
       "unique_bettors": 19,
       "created_at": 1770060965719,
@@ -3659,6 +3659,23 @@
       "bucket": "ai-general"
     },
     {
+      "id": "OQd6hd69AI",
+      "question": "GPT-5.3 released by EOD March 31?",
+      "description": "",
+      "url": "https://manifold.markets/Jack1/gpt53-released-by-eod-march-31",
+      "probability": 0.8072635563180474,
+      "volume": 1149.805046229979,
+      "volume_24h": 836.5781250987419,
+      "liquidity": 150,
+      "unique_bettors": 19,
+      "created_at": 1771738626094,
+      "close_time": 1775001540000,
+      "is_resolved": false,
+      "outcome_type": "BINARY",
+      "creator": "Jack1",
+      "bucket": "llm-foundation"
+    },
+    {
       "id": "S8UzU6yARQ",
       "question": "Serrano and Google DeepMind publish Navier-Stokes result by 2027?",
       "description": "",
@@ -3775,23 +3792,6 @@
       "is_resolved": false,
       "outcome_type": "BINARY",
       "creator": "bessarabov",
-      "bucket": "llm-foundation"
-    },
-    {
-      "id": "OQd6hd69AI",
-      "question": "GPT-5.3 released by EOD March 31?",
-      "description": "",
-      "url": "https://manifold.markets/Jack1/gpt53-released-by-eod-march-31",
-      "probability": 0.7000000000000001,
-      "volume": 1043.6744540614459,
-      "volume_24h": 724.4475329302087,
-      "liquidity": 150,
-      "unique_bettors": 18,
-      "created_at": 1771738626094,
-      "close_time": 1775001540000,
-      "is_resolved": false,
-      "outcome_type": "BINARY",
-      "creator": "Jack1",
       "bucket": "llm-foundation"
     },
     {
@@ -4747,6 +4747,23 @@
       "bucket": "llm-foundation"
     },
     {
+      "id": "QzANU92I2I",
+      "question": "When will a single AI system demonstrate autonomous expert-level performance across 3+ fundamentally different domains?",
+      "description": "",
+      "url": "https://manifold.markets/NicholasZinner/when-will-a-single-ai-system-demons",
+      "probability": null,
+      "volume": 450.1169010091039,
+      "volume_24h": 56.750463727456186,
+      "liquidity": 225,
+      "unique_bettors": 9,
+      "created_at": 1772243584395,
+      "close_time": 2240636340000,
+      "is_resolved": false,
+      "outcome_type": "DATE",
+      "creator": "NicholasZinner",
+      "bucket": "autonomous-vehicles"
+    },
+    {
       "id": "ynC9tgCzPL",
       "question": "Will AI be officially recognized as \u2018AGI\u2019 (Artificial General Intelligence) before the end of 2027?",
       "description": "",
@@ -5136,23 +5153,6 @@
       "outcome_type": "BINARY",
       "creator": "EmanuelR",
       "bucket": "ai-safety"
-    },
-    {
-      "id": "PQsR0OPhlt",
-      "question": "What will AI score on TheAgentCompany benchmark in early 2026?",
-      "description": "",
-      "url": "https://manifold.markets/dreev/what-will-ai-score-on-theagentcompa",
-      "probability": 0.456982698599313,
-      "volume": 304,
-      "volume_24h": 0,
-      "liquidity": 600,
-      "unique_bettors": 6,
-      "created_at": 1746414877626,
-      "close_time": 1775001540000,
-      "is_resolved": false,
-      "outcome_type": "BINARY",
-      "creator": "dreev",
-      "bucket": "ai-general"
     },
     {
       "id": "llVGczFtiXU4aJY8DDjF",
@@ -5886,23 +5886,6 @@
       "bucket": "llm-foundation"
     },
     {
-      "id": "gQUt6928OI",
-      "question": "Will I get a job at an AI lab within before April 2026?",
-      "description": "",
-      "url": "https://manifold.markets/lily/will-i-get-a-job-at-an-ai-lab-withi",
-      "probability": 0.3798947344779407,
-      "volume": 96.72833720993319,
-      "volume_24h": 0,
-      "liquidity": 100,
-      "unique_bettors": 6,
-      "created_at": 1766127397973,
-      "close_time": 1775001540000,
-      "is_resolved": false,
-      "outcome_type": "BINARY",
-      "creator": "lily",
-      "bucket": "ai-general"
-    },
-    {
       "id": "SRCsI8h0hC",
       "question": "Will Time POTY 2026 be \"Artificial Intelligence\"?",
       "description": "",
@@ -6020,6 +6003,23 @@
       "outcome_type": "BINARY",
       "creator": "MatthewBarnett",
       "bucket": "ai-general"
+    },
+    {
+      "id": "PQlEcONPz6",
+      "question": "When will an AI system autonomously build and operate a production software platform serving 1,000+ active users?",
+      "description": "",
+      "url": "https://manifold.markets/NicholasZinner/when-will-an-ai-system-autonomously",
+      "probability": null,
+      "volume": 81.44019243068394,
+      "volume_24h": 39,
+      "liquidity": 225,
+      "unique_bettors": 3,
+      "created_at": 1772243043115,
+      "close_time": 1803778980000,
+      "is_resolved": false,
+      "outcome_type": "DATE",
+      "creator": "NicholasZinner",
+      "bucket": "autonomous-vehicles"
     },
     {
       "id": "qYPHryHTNi",
@@ -6483,17 +6483,17 @@
   ],
   "bucket_signals": {
     "ai-general": {
-      "market_count": 91,
-      "total_volume": 17177007.46265988,
-      "total_bettors": 12921,
-      "total_confidence": 6773809.714182358,
+      "market_count": 89,
+      "total_volume": 17176656.73432267,
+      "total_bettors": 12909,
+      "total_confidence": 6738651.678074796,
       "bullish_confidence": 1587690.9246803664,
-      "bearish_confidence": 5186118.789501995,
+      "bearish_confidence": 5150960.753394432,
       "markets": [
         {
           "question": "In early 2028, will an AI be able to generate a full high-quality movie to a prompt?",
-          "probability": 0.3042470531124389,
-          "volume": 11600229.800954783,
+          "probability": 0.30576116407874765,
+          "volume": 11600279.800954783,
           "url": "https://manifold.markets/ScottAlexander/in-2028-will-an-ai-be-able-to-gener"
         },
         {
@@ -6881,12 +6881,6 @@
           "url": "https://manifold.markets/MatthewBarnett/will-a-machine-learning-training-ru-fd15e23b3b5a"
         },
         {
-          "question": "What will AI score on TheAgentCompany benchmark in early 2026?",
-          "probability": 0.456982698599313,
-          "volume": 304,
-          "url": "https://manifold.markets/dreev/what-will-ai-score-on-theagentcompa"
-        },
-        {
           "question": "Will an LLM improve its own ability along some important metric well beyond the best trained LLMs before 2026?",
           "probability": 0.13830705182866473,
           "volume": 241.88325551002083,
@@ -6951,12 +6945,6 @@
           "probability": 0.7191011235955058,
           "volume": 100.00000000000007,
           "url": "https://manifold.markets/StewartAlsop/will-the-highestscoring-llm-on-dec"
-        },
-        {
-          "question": "Will I get a job at an AI lab within before April 2026?",
-          "probability": 0.3798947344779407,
-          "volume": 96.72833720993319,
-          "url": "https://manifold.markets/lily/will-i-get-a-job-at-an-ai-lab-withi"
         },
         {
           "question": "Will Time POTY 2026 be \"Artificial Intelligence\"?",
@@ -7037,7 +7025,7 @@
           "url": "https://manifold.markets/Thib/will-at-least-one-major-llm-publicl"
         }
       ],
-      "weighted_sentiment": -0.5312265942882305,
+      "weighted_sentiment": -0.5287808301930328,
       "signal_interpretation": "Strong bearish consensus"
     },
     "ai-chips": {
@@ -7072,10 +7060,10 @@
     },
     "llm-foundation": {
       "market_count": 122,
-      "total_volume": 905301.4450822711,
-      "total_bettors": 3437,
-      "total_confidence": 573540.1038593603,
-      "bullish_confidence": 121989.72641181006,
+      "total_volume": 905407.5756744397,
+      "total_bettors": 3438,
+      "total_confidence": 573829.2204528898,
+      "bullish_confidence": 122278.84300533962,
       "bearish_confidence": 451550.3774475498,
       "markets": [
         {
@@ -7481,6 +7469,12 @@
           "url": "https://manifold.markets/duck_master/anthropic-flips-openai-before-2027"
         },
         {
+          "question": "GPT-5.3 released by EOD March 31?",
+          "probability": 0.8072635563180474,
+          "volume": 1149.805046229979,
+          "url": "https://manifold.markets/Jack1/gpt53-released-by-eod-march-31"
+        },
+        {
           "question": "Serrano and Google DeepMind publish Navier-Stokes result by 2027?",
           "probability": 0.12886597938144329,
           "volume": 1104.2165185802373,
@@ -7503,12 +7497,6 @@
           "probability": 0.62,
           "volume": 1060.3444142274848,
           "url": "https://manifold.markets/bessarabov/will-claude-code-support-agentsmd-i"
-        },
-        {
-          "question": "GPT-5.3 released by EOD March 31?",
-          "probability": 0.7000000000000001,
-          "volume": 1043.6744540614459,
-          "url": "https://manifold.markets/Jack1/gpt53-released-by-eod-march-31"
         },
         {
           "question": "Will Claude Code support the .agents/skills/ standard before July?",
@@ -7811,7 +7799,7 @@
           "url": "https://manifold.markets/AutopoieticErgodicity/claude-mcp-for-genome-variant-calli"
         }
       ],
-      "weighted_sentiment": -0.5746078588369338,
+      "weighted_sentiment": -0.5738145125867506,
       "signal_interpretation": "Strong bearish consensus"
     },
     "ai-safety": {

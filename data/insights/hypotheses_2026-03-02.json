@@ -1,6 +1,6 @@
 {
   "date": "2026-03-02",
-  "generated_at": "2026-03-02T11:53:03.159474",
+  "generated_at": "2026-03-02T15:07:30.980035",
   "version": "2.1",
   "summary": {
     "total_metas": 2,
@@ -40,15 +40,15 @@
               "media"
             ],
             "key_entities": [
-              "arr",
-              "algo”",
-              "ai",
-              "ceo",
-              "china",
+              "mistral",
               "haijun",
+              "algo”",
+              "threads",
+              "ceo",
+              "arr",
               "anthropic",
               "mensch",
-              "meta",
+              "china",
               "claude"
             ],
             "key_quotes": [
@@ -104,12 +104,12 @@
                 "docs"
               ],
               "expected_timeframe_days": 14,
-              "metric": "integration",
+              "metric": "api",
               "speculative": true,
-              "canonical_metric": "custom_metric",
+              "canonical_metric": "api_release",
               "observable_query": {
                 "source": "github",
-                "query": "repo:ceo metric:custom_metric",
+                "query": "repo:ceo metric:api_release",
                 "aggregation": "count",
                 "window_days": 14,
                 "expected_direction": "up",
@@ -127,12 +127,11 @@
                   ],
                   "query_hints": [],
                   "bucket_terms": [],
-                  "canonical_metric": "custom_metric",
+                  "canonical_metric": "api_release",
                   "template_used": "repo:{entity} metric:{metric}"
                 }
               },
-              "measurable": false,
-              "measurable_reason": "no_canonical_metric_match"
+              "measurable": true
             }
           ],
           "falsifiers": [
@@ -252,15 +251,15 @@
               "media"
             ],
             "key_entities": [
-              "arr",
-              "algo”",
-              "ai",
-              "ceo",
-              "china",
+              "mistral",
               "haijun",
+              "algo”",
+              "threads",
+              "ceo",
+              "arr",
               "anthropic",
               "mensch",
-              "meta",
+              "china",
               "claude"
             ],
             "key_quotes": [
@@ -455,7 +454,7 @@
       ],
       "selected_hypothesis_id": "83b5fc95e6c67fb2",
       "bundle_confidence": 0.278,
-      "generated_at": "2026-03-02T11:53:03.097279",
+      "generated_at": "2026-03-02T15:07:30.916096",
       "version": "2.1",
       "what_to_watch_next": [
         "Article count for related coverage continues to increase",
@@ -531,16 +530,16 @@
               "media"
             ],
             "key_entities": [
-              "china",
+              "section",
               "chatgpt",
               "samsung",
-              "smith",
-              "openai",
               "cco",
-              "meta",
-              "layer",
-              "grok's",
-              "ai-based"
+              "alphabet",
+              "bowl",
+              "red",
+              "live",
+              "translation",
+              "smith"
             ],
             "key_quotes": [
               "Ai ecosystem dynamics shifting"
@@ -754,16 +753,16 @@
               "media"
             ],
             "key_entities": [
-              "china",
+              "section",
               "chatgpt",
               "samsung",
-              "smith",
-              "openai",
               "cco",
-              "meta",
-              "layer",
-              "grok's",
-              "ai-based"
+              "alphabet",
+              "bowl",
+              "red",
+              "live",
+              "translation",
+              "smith"
             ],
             "key_quotes": [
               "Ai ecosystem dynamics shifting"
@@ -955,7 +954,7 @@
       ],
       "selected_hypothesis_id": "bde53c20ee1abcd3",
       "bundle_confidence": 0.363,
-      "generated_at": "2026-03-02T11:53:03.159262",
+      "generated_at": "2026-03-02T15:07:30.979846",
       "version": "2.1",
       "what_to_watch_next": [
         "Article count for related coverage continues to increase",

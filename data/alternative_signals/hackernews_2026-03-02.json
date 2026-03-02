@@ -1,6 +1,6 @@
 {
   "source": "hackernews",
-  "scraped_at": "2026-03-02T14:35:17.260908",
+  "scraped_at": "2026-03-02T14:53:32.194083",
   "period_days": 7,
   "total_stories": 333,
   "stories": [
@@ -9,8 +9,8 @@
       "title": "OpenAI \u2013 How to delete your account",
       "url": "https://help.openai.com/en/articles/6378407-how-to-delete-your-account",
       "hn_url": "https://news.ycombinator.com/item?id=47193478",
-      "points": 1902,
-      "num_comments": 356,
+      "points": 1903,
+      "num_comments": 357,
       "author": "carlosrg",
       "created_at": "2026-02-28T10:41:55Z",
       "created_at_i": 1772275315,
@@ -61,8 +61,8 @@
       "title": "We do not think Anthropic should be designated as a supply chain risk",
       "url": "https://twitter.com/OpenAI/status/2027846016423321831",
       "hn_url": "https://news.ycombinator.com/item?id=47200420",
-      "points": 796,
-      "num_comments": 429,
+      "points": 797,
+      "num_comments": 431,
       "author": "golfer",
       "created_at": "2026-02-28T21:24:16Z",
       "created_at_i": 1772313856,
@@ -373,7 +373,7 @@
       "title": "\"Cancel ChatGPT\" movement goes mainstream after OpenAI closes deal with U.S. Dow",
       "url": "https://www.windowscentral.com/artificial-intelligence/cancel-chatgpt-movement-goes-mainstream-after-openai-closes-deal-with-u-s-department-of-war-as-anthropic-refuses-to-surveil-american-citizens",
       "hn_url": "https://news.ycombinator.com/item?id=47198973",
-      "points": 156,
+      "points": 157,
       "num_comments": 47,
       "author": "AndrewKemendo",
       "created_at": "2026-02-28T19:03:47Z",
@@ -477,7 +477,7 @@
       "title": "Claude hits #1 on the App Store as users rally behind Anthropic",
       "url": "https://9to5mac.com/2026/03/01/claude-hits-1-on-the-app-store-as-users-rally-behind-anthropics-government-standoff/",
       "hn_url": "https://news.ycombinator.com/item?id=47213124",
-      "points": 97,
+      "points": 98,
       "num_comments": 2,
       "author": "doctoboggan",
       "created_at": "2026-03-02T02:23:50Z",
@@ -499,6 +499,19 @@
       "sentiment": "neutral"
     },
     {
+      "id": "47211830",
+      "title": "Right-sizes LLM models to your system's RAM, CPU, and GPU",
+      "url": "https://github.com/AlexsJones/llmfit",
+      "hn_url": "https://news.ycombinator.com/item?id=47211830",
+      "points": 93,
+      "num_comments": 22,
+      "author": "bilsbie",
+      "created_at": "2026-03-01T23:15:16Z",
+      "created_at_i": 1772406916,
+      "bucket": "ai-chips",
+      "sentiment": "neutral"
+    },
+    {
       "id": "47195085",
       "title": "Timeline: Anthropic, OpenAI, and U.S. Government",
       "url": "https://anthropic-timeline.vercel.app",
@@ -509,19 +522,6 @@
       "created_at": "2026-02-28T13:25:38Z",
       "created_at_i": 1772285138,
       "bucket": "llm-foundation",
-      "sentiment": "neutral"
-    },
-    {
-      "id": "47211830",
-      "title": "Right-sizes LLM models to your system's RAM, CPU, and GPU",
-      "url": "https://github.com/AlexsJones/llmfit",
-      "hn_url": "https://news.ycombinator.com/item?id=47211830",
-      "points": 88,
-      "num_comments": 18,
-      "author": "bilsbie",
-      "created_at": "2026-03-01T23:15:16Z",
-      "created_at_i": 1772406916,
-      "bucket": "ai-chips",
       "sentiment": "neutral"
     },
     {
@@ -555,7 +555,7 @@
       "title": "Claude dethrones ChatGPT as top U.S. app after Pentagon saga",
       "url": "https://www.axios.com/2026/03/01/anthropic-claude-chatgpt-app-downloads-pentagon",
       "hn_url": "https://news.ycombinator.com/item?id=47209443",
-      "points": 84,
+      "points": 85,
       "num_comments": 7,
       "author": "doener",
       "created_at": "2026-03-01T18:41:03Z",
@@ -659,7 +659,7 @@
       "title": "Deterministic Programming with LLMs",
       "url": "https://www.mcherm.com/deterministic-programming-with-llms.html",
       "hn_url": "https://news.ycombinator.com/item?id=47158834",
-      "points": 67,
+      "points": 68,
       "num_comments": 29,
       "author": "todsacerdoti",
       "created_at": "2026-02-25T22:17:29Z",
@@ -4337,9 +4337,9 @@
   "bucket_signals": {
     "llm-foundation": {
       "story_count": 139,
-      "total_points": 14506,
-      "total_comments": 7259,
-      "total_engagement": 29024,
+      "total_points": 14511,
+      "total_comments": 7262,
+      "total_engagement": 29035,
       "sentiment_counts": {
         "positive": 6,
         "negative": 17,
@@ -4348,8 +4348,8 @@
       "top_stories": [
         {
           "title": "OpenAI \u2013 How to delete your account",
-          "points": 1902,
-          "comments": 356,
+          "points": 1903,
+          "comments": 357,
           "hn_url": "https://news.ycombinator.com/item?id=47193478"
         },
         {
@@ -4372,13 +4372,13 @@
         },
         {
           "title": "We do not think Anthropic should be designated as a supply chain risk",
-          "points": 796,
-          "comments": 429,
+          "points": 797,
+          "comments": 431,
           "hn_url": "https://news.ycombinator.com/item?id=47200420"
         }
       ],
       "sentiment_score": -0.07913669064748201,
-      "avg_engagement": 208.80575539568346,
+      "avg_engagement": 208.88489208633092,
       "signal_interpretation": "Neutral/mixed sentiment"
     },
     "ai-general": {
@@ -4429,9 +4429,9 @@
     },
     "ai-chips": {
       "story_count": 5,
-      "total_points": 95,
-      "total_comments": 18,
-      "total_engagement": 131,
+      "total_points": 100,
+      "total_comments": 22,
+      "total_engagement": 144,
       "sentiment_counts": {
         "positive": 0,
         "negative": 0,
@@ -4440,8 +4440,8 @@
       "top_stories": [
         {
           "title": "Right-sizes LLM models to your system's RAM, CPU, and GPU",
-          "points": 88,
-          "comments": 18,
+          "points": 93,
+          "comments": 22,
           "hn_url": "https://news.ycombinator.com/item?id=47211830"
         },
         {
@@ -4470,7 +4470,7 @@
         }
       ],
       "sentiment_score": 0.0,
-      "avg_engagement": 26.2,
+      "avg_engagement": 28.8,
       "signal_interpretation": "Neutral/mixed sentiment"
     },
     "ai-safety": {
@@ -4521,9 +4521,9 @@
     },
     "ai-coding": {
       "story_count": 3,
-      "total_points": 73,
+      "total_points": 74,
       "total_comments": 30,
-      "total_engagement": 133,
+      "total_engagement": 134,
       "sentiment_counts": {
         "positive": 0,
         "negative": 0,
@@ -4532,7 +4532,7 @@
       "top_stories": [
         {
           "title": "Deterministic Programming with LLMs",
-          "points": 67,
+          "points": 68,
           "comments": 29,
           "hn_url": "https://news.ycombinator.com/item?id=47158834"
         },
@@ -4550,7 +4550,7 @@
         }
       ],
       "sentiment_score": 0.0,
-      "avg_engagement": 44.333333333333336,
+      "avg_engagement": 44.666666666666664,
       "signal_interpretation": "Neutral/mixed sentiment"
     },
     "open-source-ai": {
