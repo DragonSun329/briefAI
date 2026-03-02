@@ -570,7 +570,25 @@ class NewsroomScraper:
             response = self.session.get(newsroom_url, timeout=30)
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
-            
+        except requests.exceptions.HTTPError as e:
+            if e.response is not None and e.response.status_code in (403, 429):
+                # Try Bright Data fallback
+                from scrapers.bright_data_fetcher import fetch_url as bd_fetch
+                print(f"    Trying Bright Data fallback for {company_config['name']} newsroom...")
+                html = bd_fetch(newsroom_url)
+                if html:
+                    soup = BeautifulSoup(html, 'html.parser')
+                else:
+                    print(f"    Error scraping newsroom for {company_config['name']}: {e}")
+                    return articles
+            else:
+                print(f"    Error scraping newsroom for {company_config['name']}: {e}")
+                return articles
+        except Exception as e:
+            print(f"    Error scraping newsroom for {company_config['name']}: {e}")
+            return articles
+        
+        try:
             # Generic article extraction patterns
             article_selectors = [
                 'article',

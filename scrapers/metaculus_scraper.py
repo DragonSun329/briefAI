@@ -59,6 +59,19 @@ class MetaculusScraper:
             resp.raise_for_status()
             data = resp.json()
             return data.get("results", [])
+        except requests.exceptions.HTTPError as e:
+            if e.response is not None and e.response.status_code in (403, 429):
+                # Try Bright Data fallback
+                from scrapers.bright_data_fetcher import fetch_json as bd_fetch_json
+                full_url = f"{url}?{'&'.join(f'{k}={v}' for k,v in params.items())}"
+                print(f"    Trying Bright Data fallback for Metaculus...")
+                data = bd_fetch_json(full_url)
+                if data:
+                    results = data.get("results", [])
+                    print(f"    Bright Data: got {len(results)} questions")
+                    return results
+            print(f"Error fetching questions: {e}")
+            return []
         except Exception as e:
             print(f"Error fetching questions: {e}")
             return []

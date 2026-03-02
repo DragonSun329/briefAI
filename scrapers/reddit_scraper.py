@@ -84,6 +84,24 @@ class RedditScraper:
             data = resp.json()
             posts = data.get("data", {}).get("children", [])
             return [p.get("data", {}) for p in posts]
+        except requests.exceptions.HTTPError as e:
+            if e.response is not None and e.response.status_code in (403, 429):
+                # Try Bright Data fallback
+                from scrapers.bright_data_fetcher import fetch_url as bd_fetch
+                import json as _json
+                full_url = f"{url}?{'&'.join(f'{k}={v}' for k,v in params.items())}"
+                print(f"    Trying Bright Data fallback for r/{subreddit}...")
+                html = bd_fetch(full_url)
+                if html:
+                    try:
+                        data = _json.loads(html)
+                        posts = data.get("data", {}).get("children", [])
+                        print(f"    Bright Data: got {len(posts)} posts")
+                        return [p.get("data", {}) for p in posts]
+                    except _json.JSONDecodeError:
+                        pass
+            print(f"  Error fetching r/{subreddit}: {e}")
+            return []
         except Exception as e:
             print(f"  Error fetching r/{subreddit}: {e}")
             return []

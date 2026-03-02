@@ -271,6 +271,24 @@ def run_blog_rss_scraper():
     return 0
 
 
+def run_techmeme_scraper():
+    """Run TechMeme scraper."""
+    print("\n" + "=" * 60)
+    print("TECHMEME SCRAPER")
+    print("=" * 60)
+
+    try:
+        from scrapers.techmeme_scraper import main as techmeme_main
+
+        result = techmeme_main()
+        count = result.get("total_stories", 0) if result else 0
+        print(f"  Scraped {count} stories from TechMeme")
+        return count
+    except Exception as e:
+        print(f"  Error: {e}")
+    return 0
+
+
 def main():
     """Run all expanded scrapers."""
     print("=" * 60)
@@ -301,6 +319,7 @@ def main():
         "newsletters": _safe_run("newsletters", run_newsletter_scraper),
         "reddit": _safe_run("reddit", run_reddit_scraper),
         "financial": _safe_run("financial", run_financial_scraper),
+        "techmeme": _safe_run("techmeme", run_techmeme_scraper),
     }
     
     print("\n" + "=" * 60)
