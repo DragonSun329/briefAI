@@ -1,6 +1,6 @@
 {
   "source": "paperswithcode",
-  "scraped_at": "2026-03-02T10:22:41.019709",
+  "scraped_at": "2026-03-02T14:38:15.304985",
   "total_papers": 50,
   "papers": [
     {
@@ -10,7 +10,7 @@
       "url_abs": "https://arxiv.org/abs/2602.23152",
       "url_pdf": "https://arxiv.org/pdf/2602.23152",
       "arxiv_id": "2602.23152",
-      "github_stars": 189,
+      "github_stars": 190,
       "published": "2026-02-26T16:15:55.000Z",
       "authors": [
         "Jingxuan Wei",
@@ -66,7 +66,7 @@
       "url_abs": "https://arxiv.org/abs/2602.22638",
       "url_pdf": "https://arxiv.org/pdf/2602.22638",
       "arxiv_id": "2602.22638",
-      "github_stars": 100,
+      "github_stars": 101,
       "published": "2026-02-26T05:39:38.000Z",
       "authors": [
         "Zhiheng Song",
@@ -83,55 +83,13 @@
       "bucket": "llm-foundation"
     },
     {
-      "id": "2602.17602",
-      "title": "MolHIT: Advancing Molecular-Graph Generation with Hierarchical Discrete Diffusion Models",
-      "abstract": "Molecular generation with diffusion models has emerged as a promising direction for AI-driven drug discovery and materials science. While graph diffusion models have been widely adopted due to the discrete nature of 2D molecular graphs, existing models suffer from low chemical validity and struggle to meet the desired properties compared to 1D modeling. In this work, we introduce MolHIT, a powerful molecular graph generation framework that overcomes long-standing performance limitations in exist",
-      "url_abs": "https://arxiv.org/abs/2602.17602",
-      "url_pdf": "https://arxiv.org/pdf/2602.17602",
-      "arxiv_id": "2602.17602",
-      "github_stars": 54,
-      "published": "2026-02-19T18:27:11.000Z",
-      "authors": [
-        "Hojung Jung",
-        "Rodrigo Hormazabal",
-        "Jaehyeong Jo",
-        "Youngrok Park",
-        "Kyunggeun Roh",
-        "Se-Young Yun",
-        "Sehui Han",
-        "Dae-Woong Jeong"
-      ],
-      "tasks": [],
-      "bucket": "ai-image-generation"
-    },
-    {
-      "id": "2602.18283",
-      "title": "HyTRec: A Hybrid Temporal-Aware Attention Architecture for Long Behavior Sequential Recommendation",
-      "abstract": "Modeling long sequences of user behaviors has emerged as a critical frontier in generative recommendation. However, existing solutions face a dilemma: linear attention mechanisms achieve efficiency at the cost of retrieval precision due to limited state capacity, while softmax attention suffers from prohibitive computational overhead. To address this challenge, we propose HyTRec, a model featuring a Hybrid Attention architecture that explicitly decouples long-term stable preferences from short-t",
-      "url_abs": "https://arxiv.org/abs/2602.18283",
-      "url_pdf": "https://arxiv.org/pdf/2602.18283",
-      "arxiv_id": "2602.18283",
-      "github_stars": 53,
-      "published": "2026-02-20T15:11:40.000Z",
-      "authors": [
-        "Lei Xin",
-        "Yuhao Zheng",
-        "Ke Cheng",
-        "Changjiang Jiang",
-        "Zifan Zhang",
-        "Fanhu Zeng"
-      ],
-      "tasks": [],
-      "bucket": "ai-image-generation"
-    },
-    {
       "id": "2602.22897",
       "title": "OmniGAIA: Towards Native Omni-Modal AI Agents",
       "abstract": "Human intelligence naturally intertwines omni-modal perception -- spanning vision, audio, and language -- with complex reasoning and tool usage to interact with the world. However, current multi-modal LLMs are primarily confined to bi-modal interactions (e.g., vision-language), lacking the unified cognitive capabilities required for general AI assistants. To bridge this gap, we introduce OmniGAIA, a comprehensive benchmark designed to evaluate omni-modal agents on tasks necessitating deep reason",
       "url_abs": "https://arxiv.org/abs/2602.22897",
       "url_pdf": "https://arxiv.org/pdf/2602.22897",
       "arxiv_id": "2602.22897",
-      "github_stars": 49,
+      "github_stars": 50,
       "published": "2026-02-26T11:35:04.000Z",
       "authors": [
         "Xiaoxi Li",
@@ -156,7 +114,7 @@
       "url_abs": "https://arxiv.org/abs/2602.22766",
       "url_pdf": "https://arxiv.org/pdf/2602.22766",
       "arxiv_id": "2602.22766",
-      "github_stars": 37,
+      "github_stars": 38,
       "published": "2026-02-26T08:56:23.000Z",
       "authors": [
         "You Li",
@@ -171,25 +129,19 @@
       "bucket": "llm-foundation"
     },
     {
-      "id": "2602.12160",
-      "title": "DreamID-Omni: Unified Framework for Controllable Human-Centric Audio-Video Generation",
-      "abstract": "Recent advancements in foundation models have revolutionized joint audio-video generation. However, existing approaches typically treat human-centric tasks including reference-based audio-video generation (R2AV), video editing (RV2AV) and audio-driven video animation (RA2V) as isolated objectives. Furthermore, achieving precise, disentangled control over multiple character identities and voice timbres within a single framework remains an open challenge. In this paper, we propose DreamID-Omni, a ",
-      "url_abs": "https://arxiv.org/abs/2602.12160",
-      "url_pdf": "https://arxiv.org/pdf/2602.12160",
-      "arxiv_id": "2602.12160",
-      "github_stars": 37,
-      "published": "2026-02-12T16:41:52.000Z",
+      "id": "2602.22661",
+      "title": "dLLM: Simple Diffusion Language Modeling",
+      "abstract": "Although diffusion language models (DLMs) are evolving quickly, many recent models converge on a set of shared components. These components, however, are distributed across ad-hoc research codebases or lack transparent implementations, making them difficult to reproduce or extend. As the field accelerates, there is a clear need for a unified framework that standardizes these common components while remaining flexible enough to support new methods and architectures.\n  To address this gap, we intr",
+      "url_abs": "https://arxiv.org/abs/2602.22661",
+      "url_pdf": "https://arxiv.org/pdf/2602.22661",
+      "arxiv_id": "2602.22661",
+      "github_stars": 32,
+      "published": "2026-02-26T06:26:02.000Z",
       "authors": [
-        "Xu Guo",
-        "Fulong Ye",
-        "Qichao Sun",
-        "Liyang Chen",
-        "Bingchuan Li",
-        "Pengze Zhang",
-        "Jiawei Liu",
-        "Songtao Zhao",
-        "Qian He",
-        "Xiangwang Hou"
+        "Zhanhui Zhou",
+        "Lingjie Chen",
+        "Hanghang Tong",
+        "Dawn Song"
       ],
       "tasks": [],
       "bucket": "llm-foundation"
@@ -241,6 +193,23 @@
       "bucket": "llm-foundation"
     },
     {
+      "id": "2602.22207",
+      "title": "Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets",
+      "abstract": "The reliability of multilingual Large Language Model (LLM) evaluation is currently compromised by the inconsistent quality of translated benchmarks. Existing resources often suffer from semantic drift and context loss, which can lead to misleading performance metrics. In this work, we present a fully automated framework designed to address these challenges by enabling scalable, high-quality translation of datasets and benchmarks. We demonstrate that adapting test-time compute scaling strategies,",
+      "url_abs": "https://arxiv.org/abs/2602.22207",
+      "url_pdf": "https://arxiv.org/pdf/2602.22207",
+      "arxiv_id": "2602.22207",
+      "github_stars": 28,
+      "published": "2026-02-25T18:58:25.000Z",
+      "authors": [
+        "Hanna Yukhymenko",
+        "Anton Alexandrov",
+        "Martin Vechev"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
       "id": "2602.23258",
       "title": "AgentDropoutV2: Optimizing Information Flow in Multi-Agent Systems via Test-Time Rectify-or-Reject Pruning",
       "abstract": "While Multi-Agent Systems (MAS) excel in complex reasoning, they suffer from the cascading impact of erroneous information generated by individual participants. Current solutions often resort to rigid structural engineering or expensive fine-tuning, limiting their deployability and adaptability. We propose AgentDropoutV2, a test-time rectify-or-reject pruning framework designed to dynamically optimize MAS information flow without retraining. Our approach acts as an active firewall, intercepting ",
@@ -262,13 +231,35 @@
       "bucket": "open-source-ai"
     },
     {
+      "id": "2602.24233",
+      "title": "Enhancing Spatial Understanding in Image Generation via Reward Modeling",
+      "abstract": "Recent progress in text-to-image generation has greatly advanced visual fidelity and creativity, but it has also imposed higher demands on prompt complexity-particularly in encoding intricate spatial relationships. In such cases, achieving satisfactory results often requires multiple sampling attempts. To address this challenge, we introduce a novel method that strengthens the spatial understanding of current image generation models. We first construct the SpatialReward-Dataset with over 80k pre",
+      "url_abs": "https://arxiv.org/abs/2602.24233",
+      "url_pdf": "https://arxiv.org/pdf/2602.24233",
+      "arxiv_id": "2602.24233",
+      "github_stars": 22,
+      "published": "2026-02-27T17:59:57.000Z",
+      "authors": [
+        "Zhenyu Tang",
+        "Chaoran Feng",
+        "Yufan Deng",
+        "Jie Wu",
+        "Xiaojie Li",
+        "Rui Wang",
+        "Yunpeng Chen",
+        "Daquan Zhou"
+      ],
+      "tasks": [],
+      "bucket": "ai-image-generation"
+    },
+    {
       "id": "2602.23363",
       "title": "MediX-R1: Open Ended Medical Reinforcement Learning",
       "abstract": "We introduce MediX-R1, an open-ended Reinforcement Learning (RL) framework for medical multimodal large language models (MLLMs) that enables clinically grounded, free-form answers beyond multiple-choice formats. MediX-R1 fine-tunes a baseline vision-language backbone with Group Based RL and a composite reward tailored for medical reasoning: an LLM-based accuracy reward that judges semantic correctness with a strict YES/NO decision, a medical embedding-based semantic reward to capture paraphrases",
       "url_abs": "https://arxiv.org/abs/2602.23363",
       "url_pdf": "https://arxiv.org/pdf/2602.23363",
       "arxiv_id": "2602.23363",
-      "github_stars": 18,
+      "github_stars": 19,
       "published": "2026-02-26T18:59:46.000Z",
       "authors": [
         "Sahal Shaji Mullappilly",
@@ -322,56 +313,13 @@
       "bucket": "open-source-ai"
     },
     {
-      "id": "2602.22190",
-      "title": "GUI-Libra: Training Native GUI Agents to Reason and Act with Action-aware Supervision and Partially Verifiable RL",
-      "abstract": "Open-source native GUI agents still lag behind closed-source systems on long-horizon navigation tasks. This gap stems from two limitations: a shortage of high-quality, action-aligned reasoning data, and the direct adoption of generic post-training pipelines that overlook the unique challenges of GUI agents. We identify two fundamental issues in these pipelines: (i) standard SFT with CoT reasoning often hurts grounding, and (ii) step-wise RLVR-tyle training faces partial verifiability, where mult",
-      "url_abs": "https://arxiv.org/abs/2602.22190",
-      "url_pdf": "https://arxiv.org/pdf/2602.22190",
-      "arxiv_id": "2602.22190",
-      "github_stars": 15,
-      "published": "2026-02-25T18:34:57.000Z",
-      "authors": [
-        "Rui Yang",
-        "Qianhui Wu",
-        "Zhaoyang Wang",
-        "Hanyang Chen",
-        "Ke Yang",
-        "Hao Cheng",
-        "Huaxiu Yao",
-        "Baoling Peng",
-        "Huan Zhang",
-        "Jianfeng Gao",
-        "Tong Zhang"
-      ],
-      "tasks": [],
-      "bucket": "ai-agents"
-    },
-    {
-      "id": "2602.15030",
-      "title": "Image Generation with a Sphere Encoder",
-      "abstract": "We introduce the Sphere Encoder, an efficient generative framework capable of producing images in a single forward pass and competing with many-step diffusion models using fewer than five steps. Our approach works by learning an encoder that maps natural images uniformly onto a spherical latent space, and a decoder that maps random latent vectors back to the image space. Trained solely through image reconstruction losses, the model generates an image by simply decoding a random point on the sphe",
-      "url_abs": "https://arxiv.org/abs/2602.15030",
-      "url_pdf": "https://arxiv.org/pdf/2602.15030",
-      "arxiv_id": "2602.15030",
-      "github_stars": 13,
-      "published": "2026-02-16T18:59:57.000Z",
-      "authors": [
-        "Kaiyu Yue",
-        "Menglin Jia",
-        "Ji Hou",
-        "Tom Goldstein"
-      ],
-      "tasks": [],
-      "bucket": "ai-image-generation"
-    },
-    {
       "id": "2602.23361",
       "title": "VGG-T^3: Offline Feed-Forward 3D Reconstruction at Scale",
       "abstract": "We present a scalable 3D reconstruction model that addresses a critical limitation in offline feed-forward methods: their computational and memory requirements grow quadratically w.r.t. the number of input images. Our approach is built on the key insight that this bottleneck stems from the varying-length Key-Value (KV) space representation of scene geometry, which we distill into a fixed-size Multi-Layer Perceptron (MLP) via test-time training. VGG-T^3 (Visual Geometry Grounded Test Time Trainin",
       "url_abs": "https://arxiv.org/abs/2602.23361",
       "url_pdf": "https://arxiv.org/pdf/2602.23361",
       "arxiv_id": "2602.23361",
-      "github_stars": 12,
+      "github_stars": 13,
       "published": "2026-02-26T18:59:33.000Z",
       "authors": [
         "Sven Elflein",
@@ -405,6 +353,31 @@
       "bucket": "ai-image-generation"
     },
     {
+      "id": "2602.24289",
+      "title": "Mode Seeking meets Mean Seeking for Fast Long Video Generation",
+      "abstract": "Scaling video generation from seconds to minutes faces a critical bottleneck: while short-video data is abundant and high-fidelity, coherent long-form data is scarce and limited to narrow domains. To address this, we propose a training paradigm where Mode Seeking meets Mean Seeking, decoupling local fidelity from long-term coherence based on a unified representation via a Decoupled Diffusion Transformer. Our approach utilizes a global Flow Matching head trained via supervised learning on long vi",
+      "url_abs": "https://arxiv.org/abs/2602.24289",
+      "url_pdf": "https://arxiv.org/pdf/2602.24289",
+      "arxiv_id": "2602.24289",
+      "github_stars": 11,
+      "published": "2026-02-27T18:59:02.000Z",
+      "authors": [
+        "Shengqu Cai",
+        "Weili Nie",
+        "Chao Liu",
+        "Julius Berner",
+        "Lvmin Zhang",
+        "Nanye Ma",
+        "Hansheng Chen",
+        "Maneesh Agrawala",
+        "Leonidas Guibas",
+        "Gordon Wetzstein",
+        "Arash Vahdat"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
       "id": "2602.23205",
       "title": "EmbodMocap: In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents",
       "abstract": "Human behaviors in the real world naturally encode rich, long-term contextual information that can be leveraged to train embodied agents for perception, understanding, and acting. However, existing capture systems typically rely on costly studio setups and wearable devices, limiting the large-scale collection of scene-conditioned human motion data in the wild. To address this, we propose EmbodMocap, a portable and affordable data collection pipeline using two moving iPhones. Our key idea is to j",
@@ -428,35 +401,6 @@
       ],
       "tasks": [],
       "bucket": "open-source-ai"
-    },
-    {
-      "id": "2602.21461",
-      "title": "VecGlypher: Unified Vector Glyph Generation with Language Models",
-      "abstract": "Vector glyphs are the atomic units of digital typography, yet most learning-based pipelines still depend on carefully curated exemplar sheets and raster-to-vector postprocessing, which limits accessibility and editability. We introduce VecGlypher, a single multimodal language model that generates high-fidelity vector glyphs directly from text descriptions or image exemplars. Given a style prompt, optional reference glyph images, and a target character, VecGlypher autoregressively emits SVG path ",
-      "url_abs": "https://arxiv.org/abs/2602.21461",
-      "url_pdf": "https://arxiv.org/pdf/2602.21461",
-      "arxiv_id": "2602.21461",
-      "github_stars": 11,
-      "published": "2026-02-25T00:27:23.000Z",
-      "authors": [
-        "Xiaoke Huang",
-        "Bhavul Gauri",
-        "Kam Woh Ng",
-        "Tony Ng",
-        "Mengmeng Xu",
-        "Zhiheng Liu",
-        "Weiming Ren",
-        "Zhaochong An",
-        "Zijian Zhou",
-        "Haonan Qiu",
-        "Yuyin Zhou",
-        "Sen He",
-        "Ziheng Wang",
-        "Tao Xiang",
-        "Xiao Han"
-      ],
-      "tasks": [],
-      "bucket": "llm-foundation"
     },
     {
       "id": "2602.22953",
@@ -548,6 +492,51 @@
       ],
       "tasks": [],
       "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.23452",
+      "title": "CiteAudit: You Cited It, But Did You Read It? A Benchmark for Verifying Scientific References in the LLM Era",
+      "abstract": "Scientific research relies on accurate citation for attribution and integrity, yet large language models (LLMs) introduce a new risk: fabricated references that appear plausible but correspond to no real publications. Such hallucinated citations have already been observed in submissions and accepted papers at major machine learning venues, exposing vulnerabilities in peer review. Meanwhile, rapidly growing reference lists make manual verification impractical, and existing automated tools remain ",
+      "url_abs": "https://arxiv.org/abs/2602.23452",
+      "url_pdf": "https://arxiv.org/pdf/2602.23452",
+      "arxiv_id": "2602.23452",
+      "github_stars": 6,
+      "published": "2026-02-26T19:17:39.000Z",
+      "authors": [
+        "Zhengqing Yuan",
+        "Kaiwen Shi",
+        "Zheyuan Zhang",
+        "Lichao Sun",
+        "Nitesh V. Chawla",
+        "Yanfang Ye"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.23996",
+      "title": "Accelerating Masked Image Generation by Learning Latent Controlled Dynamics",
+      "abstract": "Masked Image Generation Models (MIGMs) have achieved great success, yet their efficiency is hampered by the multiple steps of bi-directional attention. In fact, there exists notable redundancy in their computation: when sampling discrete tokens, the rich semantics contained in the continuous features are lost. Some existing works attempt to cache the features to approximate future features. However, they exhibit considerable approximation error under aggressive acceleration rates. We attribute t",
+      "url_abs": "https://arxiv.org/abs/2602.23996",
+      "url_pdf": "https://arxiv.org/pdf/2602.23996",
+      "arxiv_id": "2602.23996",
+      "github_stars": 6,
+      "published": "2026-02-27T13:16:58.000Z",
+      "authors": [
+        "Kaiwen Zhu",
+        "Quansheng Zeng",
+        "Yuandong Pu",
+        "Shuo Cao",
+        "Xiaohui Li",
+        "Yi Xin",
+        "Qi Qin",
+        "Jiayang Li",
+        "Yu Qiao",
+        "Jinjin Gu",
+        "Yihao Liu"
+      ],
+      "tasks": [],
+      "bucket": "ai-image-generation"
     },
     {
       "id": "2602.22437",
@@ -655,6 +644,49 @@
       "bucket": "llm-foundation"
     },
     {
+      "id": "2602.23898",
+      "title": "Ref-Adv: Exploring MLLM Visual Reasoning in Referring Expression Tasks",
+      "abstract": "Referring Expression Comprehension (REC) links language to region level visual perception. Standard benchmarks (RefCOCO, RefCOCO+, RefCOCOg) have progressed rapidly with multimodal LLMs but remain weak tests of visual reasoning and grounding: (i) many expressions are very short, leaving little reasoning demand; (ii) images often contain few distractors, making the target easy to find; and (iii) redundant descriptors enable shortcut solutions that bypass genuine text understanding and visual reas",
+      "url_abs": "https://arxiv.org/abs/2602.23898",
+      "url_pdf": "https://arxiv.org/pdf/2602.23898",
+      "arxiv_id": "2602.23898",
+      "github_stars": 4,
+      "published": "2026-02-27T10:47:26.000Z",
+      "authors": [
+        "Qihua Dong",
+        "Kuo Yang",
+        "Lin Ju",
+        "Handong Zhao",
+        "Yitian Zhang",
+        "Yizhou Wang",
+        "Huimin Zeng",
+        "Jianglin Lu",
+        "Yun Fu"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.24281",
+      "title": "Memory Caching: RNNs with Growing Memory",
+      "abstract": "Transformers have been established as the de-facto backbones for most recent advances in sequence modeling, mainly due to their growing memory capacity that scales with the context length. While plausible for retrieval tasks, it causes quadratic complexity and so has motivated recent studies to explore viable subquadratic recurrent alternatives. Despite showing promising preliminary results in diverse domains, such recurrent architectures underperform Transformers in recall-intensive tasks, ofte",
+      "url_abs": "https://arxiv.org/abs/2602.24281",
+      "url_pdf": "https://arxiv.org/pdf/2602.24281",
+      "arxiv_id": "2602.24281",
+      "github_stars": 4,
+      "published": "2026-02-27T18:53:41.000Z",
+      "authors": [
+        "Ali Behrouz",
+        "Zeman Li",
+        "Yuan Deng",
+        "Peilin Zhong",
+        "Meisam Razaviyayn",
+        "Vahab Mirrokni"
+      ],
+      "tasks": [],
+      "bucket": "llm-foundation"
+    },
+    {
       "id": "2602.20933",
       "title": "Dropping Anchor and Spherical Harmonics for Sparse-view Gaussian Splatting",
       "abstract": "Recent 3D Gaussian Splatting (3DGS) Dropout methods address overfitting under sparse-view conditions by randomly nullifying Gaussian opacities. However, we identify a neighbor compensation effect in these approaches: dropped Gaussians are often compensated by their neighbors, weakening the intended regularization. Moreover, these methods overlook the contribution of high-degree spherical harmonic coefficients (SH) to overfitting. To address these issues, we propose DropAnSH-GS, a novel anchor-ba",
@@ -695,40 +727,31 @@
       "bucket": "llm-foundation"
     },
     {
-      "id": "2602.18993",
-      "title": "SeaCache: Spectral-Evolution-Aware Cache for Accelerating Diffusion Models",
-      "abstract": "Diffusion models are a strong backbone for visual generation, but their inherently sequential denoising process leads to slow inference. Previous methods accelerate sampling by caching and reusing intermediate outputs based on feature distances between adjacent timesteps. However, existing caching strategies typically rely on raw feature differences that entangle content and noise. This design overlooks spectral evolution, where low-frequency structure appears early and high-frequency detail is ",
-      "url_abs": "https://arxiv.org/abs/2602.18993",
-      "url_pdf": "https://arxiv.org/pdf/2602.18993",
-      "arxiv_id": "2602.18993",
-      "github_stars": 4,
-      "published": "2026-02-22T00:48:03.000Z",
+      "id": "2602.24286",
+      "title": "CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation",
+      "abstract": "GPU kernel optimization is fundamental to modern deep learning but remains a highly specialized task requiring deep hardware expertise. Despite strong performance in general programming, large language models (LLMs) remain uncompetitive with compiler-based systems such as torch.compile for CUDA kernel generation. Existing CUDA code generation approaches either rely on training-free refinement or fine-tune models within fixed multi-turn execution-feedback loops, but both paradigms fail to fundame",
+      "url_abs": "https://arxiv.org/abs/2602.24286",
+      "url_pdf": "https://arxiv.org/pdf/2602.24286",
+      "arxiv_id": "2602.24286",
+      "github_stars": 3,
+      "published": "2026-02-27T18:58:05.000Z",
       "authors": [
-        "Jiwoo Chung",
-        "Sangeek Hyun",
-        "MinKyu Lee",
-        "Byeongju Han",
-        "Geonho Cha",
-        "Dongyoon Wee",
-        "Youngjun Hong",
-        "Jae-Pil Heo"
-      ],
-      "tasks": [],
-      "bucket": "ai-image-generation"
-    },
-    {
-      "id": "2602.20122",
-      "title": "NanoKnow: How to Know What Your Language Model Knows",
-      "abstract": "How do large language models (LLMs) know what they know? Answering this question has been difficult because pre-training data is often a \"black box\" -- unknown or inaccessible. The recent release of nanochat -- a family of small LLMs with fully open pre-training data -- addresses this as it provides a transparent view into where a model's parametric knowledge comes from. Towards the goal of understanding how knowledge is encoded by LLMs, we release NanoKnow, a benchmark dataset that partitions q",
-      "url_abs": "https://arxiv.org/abs/2602.20122",
-      "url_pdf": "https://arxiv.org/pdf/2602.20122",
-      "arxiv_id": "2602.20122",
-      "github_stars": 4,
-      "published": "2026-02-23T18:37:49.000Z",
-      "authors": [
-        "Lingwei Gu",
-        "Nour Jedidi",
-        "Jimmy Lin"
+        "Weinan Dai",
+        "Hanlin Wu",
+        "Qiying Yu",
+        "Huan-ang Gao",
+        "Jiahao Li",
+        "Chengquan Jiang",
+        "Weiqiang Lou",
+        "Yufan Song",
+        "Hongli Yu",
+        "Jiaze Chen",
+        "Wei-Ying Ma",
+        "Ya-Qin Zhang",
+        "Jingjing Liu",
+        "Mingxuan Wang",
+        "Xin Liu",
+        "Hao Zhou"
       ],
       "tasks": [],
       "bucket": "llm-foundation"
@@ -769,6 +792,22 @@
       ],
       "tasks": [],
       "bucket": "llm-foundation"
+    },
+    {
+      "id": "2602.24208",
+      "title": "SenCache: Accelerating Diffusion Model Inference via Sensitivity-Aware Caching",
+      "abstract": "Diffusion models achieve state-of-the-art video generation quality, but their inference remains expensive due to the large number of sequential denoising steps. This has motivated a growing line of research on accelerating diffusion inference. Among training-free acceleration methods, caching reduces computation by reusing previously computed model outputs across timesteps. Existing caching methods rely on heuristic criteria to choose cache/reuse timesteps and require extensive tuning. We addres",
+      "url_abs": "https://arxiv.org/abs/2602.24208",
+      "url_pdf": "https://arxiv.org/pdf/2602.24208",
+      "arxiv_id": "2602.24208",
+      "github_stars": 2,
+      "published": "2026-02-27T17:36:09.000Z",
+      "authors": [
+        "Yasaman Haghighi",
+        "Alexandre Alahi"
+      ],
+      "tasks": [],
+      "bucket": "ai-image-generation"
     },
     {
       "id": "2602.20423",
@@ -990,68 +1029,50 @@
       "bucket": "ai-image-generation"
     },
     {
-      "id": "2602.18964",
-      "title": "Yor-Sarc: A gold-standard dataset for sarcasm detection in a low-resource African language",
-      "abstract": "Sarcasm detection poses a fundamental challenge in computational semantics, requiring models to resolve disparities between literal and intended meaning. The challenge is amplified in low-resource languages where annotated datasets are scarce or nonexistent. We present Yor-Sarc, the first gold-standard dataset for sarcasm detection in Yor\u00f9b\u00e1, a tonal Niger-Congo language spoken by over 50 million people. The dataset comprises 436 instances annotated by three native speakers from diverse dialecta",
-      "url_abs": "https://arxiv.org/abs/2602.18964",
-      "url_pdf": "https://arxiv.org/pdf/2602.18964",
-      "arxiv_id": "2602.18964",
-      "github_stars": 1,
-      "published": "2026-02-21T22:10:18.000Z",
+      "id": "2602.23622",
+      "title": "DLEBench: Evaluating Small-scale Object Editing Ability for Instruction-based Image Editing Model",
+      "abstract": "Significant progress has been made in the field of Instruction-based Image Editing Models (IIEMs). However, while these models demonstrate plausible adherence to instructions and strong reasoning ability on current benchmarks, their ability to edit small objects remains underexplored, despite its importance for precise local editing and refining details in both real and generated images. In this paper, we introduce DeepLookEditBench (DLEBench), the first benchmark dedicated to assessing the abil",
+      "url_abs": "https://arxiv.org/abs/2602.23622",
+      "url_pdf": "https://arxiv.org/pdf/2602.23622",
+      "arxiv_id": "2602.23622",
+      "github_stars": 0,
+      "published": "2026-02-27T02:59:34.000Z",
       "authors": [
-        "Toheeb Aduramomi Jimoh",
-        "Tabea De Wille",
-        "Nikola S. Nikolov"
+        "Shibo Hong",
+        "Boxian Ai",
+        "Jun Kuang",
+        "Wei Wang",
+        "FengJiao Chen",
+        "Zhongyuan Peng",
+        "Chenhao Huang",
+        "Yixin Cao"
       ],
       "tasks": [],
-      "bucket": "ai-general"
+      "bucket": "ai-agents"
     },
     {
-      "id": "2602.20857",
-      "title": "Functional Continuous Decomposition",
-      "abstract": "The analysis of non-stationary time-series data requires insight into its local and global patterns with physical interpretability. However, traditional smoothing algorithms, such as B-splines, Savitzky-Golay filtering, and Empirical Mode Decomposition (EMD), lack the ability to perform parametric optimization with guaranteed continuity. In this paper, we propose Functional Continuous Decomposition (FCD), a JAX-accelerated framework that performs parametric, continuous optimization on a wide ran",
-      "url_abs": "https://arxiv.org/abs/2602.20857",
-      "url_pdf": "https://arxiv.org/pdf/2602.20857",
-      "arxiv_id": "2602.20857",
-      "github_stars": 1,
-      "published": "2026-02-24T12:58:21.000Z",
+      "id": "2602.22647",
+      "title": "Vectorizing the Trie: Efficient Constrained Decoding for LLM-based Generative Retrieval on Accelerators",
+      "abstract": "Generative retrieval has emerged as a powerful paradigm for LLM-based recommendation. However, industrial recommender systems often benefit from restricting the output space to a constrained subset of items based on business logic (e.g. enforcing content freshness or product category), which standard autoregressive decoding cannot natively support. Moreover, existing constrained decoding methods that make use of prefix trees (Tries) incur severe latency penalties on hardware accelerators (TPUs/G",
+      "url_abs": "https://arxiv.org/abs/2602.22647",
+      "url_pdf": "https://arxiv.org/pdf/2602.22647",
+      "arxiv_id": "2602.22647",
+      "github_stars": 0,
+      "published": "2026-02-26T06:00:56.000Z",
       "authors": [
-        "Teymur Aghayev"
-      ],
-      "tasks": [],
-      "bucket": "ai-general"
-    },
-    {
-      "id": "2602.19004",
-      "title": "MoBind: Motion Binding for Fine-Grained IMU-Video Pose Alignment",
-      "abstract": "We aim to learn a joint representation between inertial measurement unit (IMU) signals and 2D pose sequences extracted from video, enabling accurate cross-modal retrieval, temporal synchronization, subject and body-part localization, and action recognition. To this end, we introduce MoBind, a hierarchical contrastive learning framework designed to address three challenges: (1) filtering out irrelevant visual background, (2) modeling structured multi-sensor IMU configurations, and (3) achieving f",
-      "url_abs": "https://arxiv.org/abs/2602.19004",
-      "url_pdf": "https://arxiv.org/pdf/2602.19004",
-      "arxiv_id": "2602.19004",
-      "github_stars": 1,
-      "published": "2026-02-22T01:54:29.000Z",
-      "authors": [
-        "Duc Duy Nguyen",
-        "Tat-Jun Chin",
-        "Minh Hoai"
-      ],
-      "tasks": [],
-      "bucket": "ai-coding"
-    },
-    {
-      "id": "2602.22144",
-      "title": "NoLan: Mitigating Object Hallucinations in Large Vision-Language Models via Dynamic Suppression of Language Priors",
-      "abstract": "Object hallucination is a critical issue in Large Vision-Language Models (LVLMs), where outputs include objects that do not appear in the input image. A natural question arises from this phenomenon: Which component of the LVLM pipeline primarily contributes to object hallucinations? The vision encoder to perceive visual information, or the language decoder to generate text responses? In this work, we strive to answer this question through designing a systematic experiment to analyze the roles of",
-      "url_abs": "https://arxiv.org/abs/2602.22144",
-      "url_pdf": "https://arxiv.org/pdf/2602.22144",
-      "arxiv_id": "2602.22144",
-      "github_stars": 1,
-      "published": "2026-02-25T17:50:41.000Z",
-      "authors": [
-        "Lingfeng Ren",
-        "Weihao Yu",
-        "Runpeng Yu",
-        "Xinchao Wang"
+        "Zhengyang Su",
+        "Isay Katsman",
+        "Yueqi Wang",
+        "Ruining He",
+        "Lukasz Heldt",
+        "Raghunandan Keshavan",
+        "Shao-Chuan Wang",
+        "Xinyang Yi",
+        "Mingyan Gao",
+        "Onkar Dalal",
+        "Lichan Hong",
+        "Ed Chi",
+        "Ningren Han"
       ],
       "tasks": [],
       "bucket": "llm-foundation"
@@ -1075,17 +1096,12 @@
   "bucket_signals": {
     "ai-agents": {
       "paper_count": 4,
-      "total_stars": 220,
+      "total_stars": 206,
       "top_papers": [
         {
           "title": "The Trinity of Consistency as a Defining Principle for General World Models",
-          "stars": 189,
+          "stars": 190,
           "url": "https://arxiv.org/abs/2602.23152"
-        },
-        {
-          "title": "GUI-Libra: Training Native GUI Agents to Reason and Act with Action-aware Supervision and Partially Verifiable RL",
-          "stars": 15,
-          "url": "https://arxiv.org/abs/2602.22190"
         },
         {
           "title": "General Agent Evaluation",
@@ -1096,15 +1112,20 @@
           "title": "veScale-FSDP: Flexible and High-Performance FSDP at Scale",
           "stars": 6,
           "url": "https://arxiv.org/abs/2602.22437"
+        },
+        {
+          "title": "DLEBench: Evaluating Small-scale Object Editing Ability for Instruction-based Image Editing Model",
+          "stars": 0,
+          "url": "https://arxiv.org/abs/2602.23622"
         }
       ],
-      "star_share": 0.22797927461139897,
-      "avg_stars": 55.0,
+      "star_share": 0.23042505592841164,
+      "avg_stars": 51.5,
       "signal_interpretation": "Hot research area with high implementation interest"
     },
     "ai-image-generation": {
-      "paper_count": 9,
-      "total_stars": 298,
+      "paper_count": 8,
+      "total_stars": 204,
       "top_papers": [
         {
           "title": "From Blind Spots to Gains: Diagnostic-Driven Iterative Training for Large Multimodal Models",
@@ -1112,53 +1133,53 @@
           "url": "https://arxiv.org/abs/2602.22859"
         },
         {
-          "title": "MolHIT: Advancing Molecular-Graph Generation with Hierarchical Discrete Diffusion Models",
-          "stars": 54,
-          "url": "https://arxiv.org/abs/2602.17602"
-        },
-        {
-          "title": "HyTRec: A Hybrid Temporal-Aware Attention Architecture for Long Behavior Sequential Recommendation",
-          "stars": 53,
-          "url": "https://arxiv.org/abs/2602.18283"
-        },
-        {
-          "title": "Image Generation with a Sphere Encoder",
-          "stars": 13,
-          "url": "https://arxiv.org/abs/2602.15030"
+          "title": "Enhancing Spatial Understanding in Image Generation via Reward Modeling",
+          "stars": 22,
+          "url": "https://arxiv.org/abs/2602.24233"
         },
         {
           "title": "Accelerating Diffusion via Hybrid Data-Pipeline Parallelism Based on Conditional Guidance Scheduling",
           "stars": 12,
           "url": "https://arxiv.org/abs/2602.21760"
+        },
+        {
+          "title": "From Statics to Dynamics: Physics-Aware Image Editing with Latent Transition Priors",
+          "stars": 9,
+          "url": "https://arxiv.org/abs/2602.21778"
+        },
+        {
+          "title": "Accelerating Masked Image Generation by Learning Latent Controlled Dynamics",
+          "stars": 6,
+          "url": "https://arxiv.org/abs/2602.23996"
         }
       ],
-      "star_share": 0.3088082901554404,
-      "avg_stars": 33.111111111111114,
+      "star_share": 0.22818791946308725,
+      "avg_stars": 25.5,
       "signal_interpretation": "Hot research area with high implementation interest"
     },
     "llm-foundation": {
-      "paper_count": 25,
-      "total_stars": 368,
+      "paper_count": 29,
+      "total_stars": 407,
       "top_papers": [
         {
           "title": "MobilityBench: A Benchmark for Evaluating Route-Planning Agents in Real-World Mobility Scenarios",
-          "stars": 100,
+          "stars": 101,
           "url": "https://arxiv.org/abs/2602.22638"
         },
         {
           "title": "OmniGAIA: Towards Native Omni-Modal AI Agents",
-          "stars": 49,
+          "stars": 50,
           "url": "https://arxiv.org/abs/2602.22897"
         },
         {
           "title": "Imagination Helps Visual Reasoning, But Not Yet in Latent Space",
-          "stars": 37,
+          "stars": 38,
           "url": "https://arxiv.org/abs/2602.22766"
         },
         {
-          "title": "DreamID-Omni: Unified Framework for Controllable Human-Centric Audio-Video Generation",
-          "stars": 37,
-          "url": "https://arxiv.org/abs/2602.12160"
+          "title": "dLLM: Simple Diffusion Language Modeling",
+          "stars": 32,
+          "url": "https://arxiv.org/abs/2602.22661"
         },
         {
           "title": "Exploratory Memory-Augmented LLM Agent via Hybrid On- and Off-Policy Optimization",
@@ -1166,8 +1187,8 @@
           "url": "https://arxiv.org/abs/2602.23008"
         }
       ],
-      "star_share": 0.38134715025906735,
-      "avg_stars": 14.72,
+      "star_share": 0.4552572706935123,
+      "avg_stars": 14.03448275862069,
       "signal_interpretation": "Hot research area with high implementation interest"
     },
     "open-source-ai": {
@@ -1195,17 +1216,17 @@
           "url": "https://arxiv.org/abs/2602.18253"
         }
       ],
-      "star_share": 0.058031088082901555,
+      "star_share": 0.06263982102908278,
       "avg_stars": 14.0,
       "signal_interpretation": "Growing interest in implementations"
     },
     "ai-general": {
-      "paper_count": 6,
-      "total_stars": 21,
+      "paper_count": 4,
+      "total_stars": 20,
       "top_papers": [
         {
           "title": "VGG-T^3: Offline Feed-Forward 3D Reconstruction at Scale",
-          "stars": 12,
+          "stars": 13,
           "url": "https://arxiv.org/abs/2602.23361"
         },
         {
@@ -1222,15 +1243,10 @@
           "title": "Intent Laundering: AI Safety Datasets Are Not What They Seem",
           "stars": 1,
           "url": "https://arxiv.org/abs/2602.16729"
-        },
-        {
-          "title": "Yor-Sarc: A gold-standard dataset for sarcasm detection in a low-resource African language",
-          "stars": 1,
-          "url": "https://arxiv.org/abs/2602.18964"
         }
       ],
-      "star_share": 0.021761658031088083,
-      "avg_stars": 3.5,
+      "star_share": 0.02237136465324385,
+      "avg_stars": 5.0,
       "signal_interpretation": "Research-focused with limited code adoption"
     },
     "ai-audio": {
@@ -1243,21 +1259,7 @@
           "url": "https://arxiv.org/abs/2602.20981"
         }
       ],
-      "star_share": 0.0010362694300518134,
-      "avg_stars": 1.0,
-      "signal_interpretation": "Research-focused with limited code adoption"
-    },
-    "ai-coding": {
-      "paper_count": 1,
-      "total_stars": 1,
-      "top_papers": [
-        {
-          "title": "MoBind: Motion Binding for Fine-Grained IMU-Video Pose Alignment",
-          "stars": 1,
-          "url": "https://arxiv.org/abs/2602.19004"
-        }
-      ],
-      "star_share": 0.0010362694300518134,
+      "star_share": 0.0011185682326621924,
       "avg_stars": 1.0,
       "signal_interpretation": "Research-focused with limited code adoption"
     }

@@ -1,6 +1,6 @@
 {
   "source": "manifold",
-  "scraped_at": "2026-03-02T14:27:08.667338",
+  "scraped_at": "2026-03-02T14:34:24.444618",
   "total_markets": 381,
   "markets": [
     {
@@ -8,11 +8,11 @@
       "question": "In early 2028, will an AI be able to generate a full high-quality movie to a prompt?",
       "description": "",
       "url": "https://manifold.markets/ScottAlexander/in-2028-will-an-ai-be-able-to-gener",
-      "probability": 0.3049102059019767,
-      "volume": 11600179.800954783,
+      "probability": 0.3042470531124389,
+      "volume": 11600229.800954783,
       "volume_24h": 10152.496175233002,
       "liquidity": 20916,
-      "unique_bettors": 4279,
+      "unique_bettors": 4280,
       "created_at": 1676933242898,
       "close_time": 1830412740000,
       "is_resolved": false,
@@ -162,7 +162,7 @@
       "description": "",
       "url": "https://manifold.markets/Bayesian/outcomes-of-the-anthropic-vs-us-gov",
       "probability": null,
-      "volume": 277336.44505650643,
+      "volume": 277493.13511389453,
       "volume_24h": 13353.116185442084,
       "liquidity": 33900,
       "unique_bettors": 512,
@@ -1845,7 +1845,7 @@
       "description": "",
       "url": "https://manifold.markets/prismatic/march-2026-ai-model-releases",
       "probability": null,
-      "volume": 4961.272516293958,
+      "volume": 4977.806763511974,
       "volume_24h": 2974.375418987068,
       "liquidity": 1300,
       "unique_bettors": 30,
@@ -6484,16 +6484,16 @@
   "bucket_signals": {
     "ai-general": {
       "market_count": 91,
-      "total_volume": 17176957.46265988,
-      "total_bettors": 12920,
-      "total_confidence": 6758404.755699383,
+      "total_volume": 17177007.46265988,
+      "total_bettors": 12921,
+      "total_confidence": 6773809.714182358,
       "bullish_confidence": 1587690.9246803664,
-      "bearish_confidence": 5170713.83101902,
+      "bearish_confidence": 5186118.789501995,
       "markets": [
         {
           "question": "In early 2028, will an AI be able to generate a full high-quality movie to a prompt?",
-          "probability": 0.3049102059019767,
-          "volume": 11600179.800954783,
+          "probability": 0.3042470531124389,
+          "volume": 11600229.800954783,
           "url": "https://manifold.markets/ScottAlexander/in-2028-will-an-ai-be-able-to-gener"
         },
         {
@@ -7037,7 +7037,7 @@
           "url": "https://manifold.markets/Thib/will-at-least-one-major-llm-publicl"
         }
       ],
-      "weighted_sentiment": -0.5301580825441206,
+      "weighted_sentiment": -0.5312265942882305,
       "signal_interpretation": "Strong bearish consensus"
     },
     "ai-chips": {

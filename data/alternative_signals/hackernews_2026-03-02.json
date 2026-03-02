@@ -1,6 +1,6 @@
 {
   "source": "hackernews",
-  "scraped_at": "2026-03-02T14:27:46.065846",
+  "scraped_at": "2026-03-02T14:35:17.260908",
   "period_days": 7,
   "total_stories": 333,
   "stories": [
@@ -9,7 +9,7 @@
       "title": "OpenAI \u2013 How to delete your account",
       "url": "https://help.openai.com/en/articles/6378407-how-to-delete-your-account",
       "hn_url": "https://news.ycombinator.com/item?id=47193478",
-      "points": 1901,
+      "points": 1902,
       "num_comments": 356,
       "author": "carlosrg",
       "created_at": "2026-02-28T10:41:55Z",
@@ -512,6 +512,19 @@
       "sentiment": "neutral"
     },
     {
+      "id": "47211830",
+      "title": "Right-sizes LLM models to your system's RAM, CPU, and GPU",
+      "url": "https://github.com/AlexsJones/llmfit",
+      "hn_url": "https://news.ycombinator.com/item?id=47211830",
+      "points": 88,
+      "num_comments": 18,
+      "author": "bilsbie",
+      "created_at": "2026-03-01T23:15:16Z",
+      "created_at_i": 1772406916,
+      "bucket": "ai-chips",
+      "sentiment": "neutral"
+    },
+    {
       "id": "47164892",
       "title": "Men in their 50s may be aging faster due to toxic 'forever chemicals'",
       "url": "https://www.cnn.com/2026/02/26/health/forever-chemicals-aging-men-wellness",
@@ -523,19 +536,6 @@
       "created_at_i": 1772107093,
       "bucket": "ai-safety",
       "sentiment": "positive"
-    },
-    {
-      "id": "47211830",
-      "title": "Right-sizes LLM models to your system's RAM, CPU, and GPU",
-      "url": "https://github.com/AlexsJones/llmfit",
-      "hn_url": "https://news.ycombinator.com/item?id=47211830",
-      "points": 87,
-      "num_comments": 18,
-      "author": "bilsbie",
-      "created_at": "2026-03-01T23:15:16Z",
-      "created_at_i": 1772406916,
-      "bucket": "ai-chips",
-      "sentiment": "neutral"
     },
     {
       "id": "47181471",
@@ -4337,9 +4337,9 @@
   "bucket_signals": {
     "llm-foundation": {
       "story_count": 139,
-      "total_points": 14505,
+      "total_points": 14506,
       "total_comments": 7259,
-      "total_engagement": 29023,
+      "total_engagement": 29024,
       "sentiment_counts": {
         "positive": 6,
         "negative": 17,
@@ -4348,7 +4348,7 @@
       "top_stories": [
         {
           "title": "OpenAI \u2013 How to delete your account",
-          "points": 1901,
+          "points": 1902,
           "comments": 356,
           "hn_url": "https://news.ycombinator.com/item?id=47193478"
         },
@@ -4378,7 +4378,7 @@
         }
       ],
       "sentiment_score": -0.07913669064748201,
-      "avg_engagement": 208.79856115107913,
+      "avg_engagement": 208.80575539568346,
       "signal_interpretation": "Neutral/mixed sentiment"
     },
     "ai-general": {
@@ -4427,6 +4427,52 @@
       "avg_engagement": 59.404411764705884,
       "signal_interpretation": "Neutral/mixed sentiment"
     },
+    "ai-chips": {
+      "story_count": 5,
+      "total_points": 95,
+      "total_comments": 18,
+      "total_engagement": 131,
+      "sentiment_counts": {
+        "positive": 0,
+        "negative": 0,
+        "neutral": 5
+      },
+      "top_stories": [
+        {
+          "title": "Right-sizes LLM models to your system's RAM, CPU, and GPU",
+          "points": 88,
+          "comments": 18,
+          "hn_url": "https://news.ycombinator.com/item?id=47211830"
+        },
+        {
+          "title": "Is anyone compressing AI models for the 4B people without GPUs or internet?",
+          "points": 3,
+          "comments": 0,
+          "hn_url": "https://news.ycombinator.com/item?id=47213965"
+        },
+        {
+          "title": "GPT-OSS Optimizations on Nvidia Blackwell: Pushing the Pareto Frontier",
+          "points": 2,
+          "comments": 0,
+          "hn_url": "https://news.ycombinator.com/item?id=47147853"
+        },
+        {
+          "title": "Show HN: WaveGuard \u2013 Anomaly detection using wave physics simulation (GPU, MCP)",
+          "points": 1,
+          "comments": 0,
+          "hn_url": "https://news.ycombinator.com/item?id=47144914"
+        },
+        {
+          "title": "Show HN: Train a 230KB text classifier from 50 examples \u2013 no API keys, no GPU",
+          "points": 1,
+          "comments": 0,
+          "hn_url": "https://news.ycombinator.com/item?id=47137506"
+        }
+      ],
+      "sentiment_score": 0.0,
+      "avg_engagement": 26.2,
+      "signal_interpretation": "Neutral/mixed sentiment"
+    },
     "ai-safety": {
       "story_count": 37,
       "total_points": 300,
@@ -4471,52 +4517,6 @@
       ],
       "sentiment_score": 0.02702702702702703,
       "avg_engagement": 21.2972972972973,
-      "signal_interpretation": "Neutral/mixed sentiment"
-    },
-    "ai-chips": {
-      "story_count": 5,
-      "total_points": 94,
-      "total_comments": 18,
-      "total_engagement": 130,
-      "sentiment_counts": {
-        "positive": 0,
-        "negative": 0,
-        "neutral": 5
-      },
-      "top_stories": [
-        {
-          "title": "Right-sizes LLM models to your system's RAM, CPU, and GPU",
-          "points": 87,
-          "comments": 18,
-          "hn_url": "https://news.ycombinator.com/item?id=47211830"
-        },
-        {
-          "title": "Is anyone compressing AI models for the 4B people without GPUs or internet?",
-          "points": 3,
-          "comments": 0,
-          "hn_url": "https://news.ycombinator.com/item?id=47213965"
-        },
-        {
-          "title": "GPT-OSS Optimizations on Nvidia Blackwell: Pushing the Pareto Frontier",
-          "points": 2,
-          "comments": 0,
-          "hn_url": "https://news.ycombinator.com/item?id=47147853"
-        },
-        {
-          "title": "Show HN: WaveGuard \u2013 Anomaly detection using wave physics simulation (GPU, MCP)",
-          "points": 1,
-          "comments": 0,
-          "hn_url": "https://news.ycombinator.com/item?id=47144914"
-        },
-        {
-          "title": "Show HN: Train a 230KB text classifier from 50 examples \u2013 no API keys, no GPU",
-          "points": 1,
-          "comments": 0,
-          "hn_url": "https://news.ycombinator.com/item?id=47137506"
-        }
-      ],
-      "sentiment_score": 0.0,
-      "avg_engagement": 26.0,
       "signal_interpretation": "Neutral/mixed sentiment"
     },
     "ai-coding": {

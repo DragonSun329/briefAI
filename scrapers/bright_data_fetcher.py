@@ -8,7 +8,7 @@ from typing import Optional
 from loguru import logger
 
 # API token from environment
-BRIGHTDATA_API_TOKEN = os.environ.get("BRIGHTDATA_API_TOKEN", "")
+BRIGHTDATA_API_TOKEN = os.environ.get("BRIGHT_DATA_API_TOKEN", "") or os.environ.get("BRIGHTDATA_API_TOKEN", "")
 
 def is_available() -> bool:
     """Check if Bright Data is configured."""
@@ -25,7 +25,7 @@ def fetch_url(url: str, timeout: int = 60) -> Optional[str]:
     
     try:
         from brightdata import SyncBrightDataClient
-        with SyncBrightDataClient(api_token=BRIGHTDATA_API_TOKEN) as client:
+        with SyncBrightDataClient(token=BRIGHTDATA_API_TOKEN) as client:
             result = client.scrape_url(url)
             if result and result.data:
                 return result.data if isinstance(result.data, str) else str(result.data)
