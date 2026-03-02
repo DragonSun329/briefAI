@@ -4,8 +4,16 @@ Bright Data Web Unlocker fallback for blocked sites.
 Uses Bright Data's Web Unlocker when direct requests fail with 403/429.
 """
 import os
+from pathlib import Path
 from typing import Optional
 from loguru import logger
+
+# Try loading .env if python-dotenv is available
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).parent.parent / ".env")
+except ImportError:
+    pass
 
 # API token from environment
 BRIGHTDATA_API_TOKEN = os.environ.get("BRIGHT_DATA_API_TOKEN", "") or os.environ.get("BRIGHTDATA_API_TOKEN", "")
