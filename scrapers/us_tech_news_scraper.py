@@ -950,7 +950,7 @@ class USTechNewsScraper:
         save: bool = True,
         companies: Optional[List[str]] = None,
         priority: Optional[int] = None,
-        days_back: int = 30
+        days_back: int = 7
     ) -> Dict[str, Any]:
         """Main entry point - scrape and optionally save."""
         print("=" * 60)
