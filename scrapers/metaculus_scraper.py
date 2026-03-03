@@ -41,6 +41,13 @@ class MetaculusScraper:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.session = requests.Session()
         self.session.headers.update(self.HEADERS)
+        # Load API token from environment
+        import os
+        from dotenv import load_dotenv
+        load_dotenv(Path(__file__).parent.parent / ".env")
+        token = os.environ.get("METACULUS_API_TOKEN")
+        if token:
+            self.session.headers["Authorization"] = f"Token {token}"
 
     def fetch_questions(self, search: str = None, limit: int = 100, offset: int = 0) -> List[Dict[str, Any]]:
         """Fetch questions from Metaculus API."""

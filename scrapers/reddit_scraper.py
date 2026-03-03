@@ -106,8 +106,17 @@ class RedditScraper:
             print(f"  Error fetching r/{subreddit}: {e}")
             return []
 
-    def fetch_all_ai_subreddits(self, limit_per_sub: int = 25) -> List[Dict[str, Any]]:
-        """Fetch posts from all AI subreddits."""
+    def fetch_all_ai_subreddits(self, limit_per_sub: int = 25, use_rss: bool = True) -> List[Dict[str, Any]]:
+        """Fetch posts from all AI subreddits.
+        
+        Args:
+            use_rss: If True (default), use RSS feeds since JSON API returns 403.
+                     Set to False to try JSON API (likely broken as of March 2026).
+        """
+        if use_rss:
+            return self._fetch_via_rss()
+
+        # Legacy JSON path (kept for reference, but JSON API is dead as of ~Feb 2026)
         all_posts = []
         seen_ids = set()
 
@@ -126,8 +135,27 @@ class RedditScraper:
 
         return all_posts
 
+    def _fetch_via_rss(self) -> List[Dict[str, Any]]:
+        """Fetch all subreddits via RSS feeds (primary method since March 2026)."""
+        from reddit_rss_fetcher import RedditRSSFetcher
+        fetcher = RedditRSSFetcher()
+        rss_posts = fetcher.fetch_multiple_subreddits(self.AI_SUBREDDITS, include_top=True)
+        
+        # Convert RSS format to match what extract_post_data expects
+        # RSS posts already have our standard fields, but the JSON path expects
+        # raw Reddit API fields. RSS posts are already extracted, so we tag them.
+        for post in rss_posts:
+            post["_from_rss"] = True
+        
+        print(f"  RSS: Retrieved {len(rss_posts)} posts from {len(self.AI_SUBREDDITS)} subreddits")
+        return rss_posts
+
     def extract_post_data(self, post: Dict[str, Any]) -> Dict[str, Any]:
         """Extract relevant fields from a post."""
+        # RSS posts are already in extracted format
+        if post.get("_from_rss"):
+            return {k: v for k, v in post.items() if k != "_from_rss"}
+        
         return {
             "id": post.get("id"),
             "title": post.get("title"),
