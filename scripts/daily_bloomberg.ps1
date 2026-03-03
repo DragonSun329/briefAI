@@ -169,6 +169,7 @@ if (-not $SkipScrapers) {
     Run-ScraperStep "high-value scrapers" "python -u scrapers/run_high_value_scrapers.py"
     Run-ScraperStep "insider trading" "python -u scrapers/insider_trading_scraper.py"
     Run-ScraperStep "market-news correlator" "python -u scrapers/market_news_correlator.py"
+    Run-ScraperStep "finnhub market data" "python -u scrapers/finnhub_scraper.py"
     
     Log-Success "Scrapers phase complete (individual failures are non-fatal)"
 }
