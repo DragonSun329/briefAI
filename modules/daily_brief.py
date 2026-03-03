@@ -529,7 +529,7 @@ class DailyBriefGenerator:
                 relevance = article.get("_raw_score", 0.5)
                 quality = article.get("_source_quality", 0.5)
 
-                # Recency
+                # Recency — strongly penalize old news
                 pub_date = article.get("published_at", "")
                 try:
                     if pub_date:
@@ -537,14 +537,32 @@ class DailyBriefGenerator:
                             # Unix timestamp (Reddit)
                             parsed = dt.fromtimestamp(pub_date)
                         else:
-                            parsed = dt.fromisoformat(str(pub_date).replace("Z", "+00:00").replace("+00:00", ""))
+                            # Handle RFC 2822 dates (e.g., "Wed, 26 Feb 2026 ...")
+                            date_str = str(pub_date)
+                            try:
+                                parsed = dt.fromisoformat(date_str.replace("Z", "+00:00").replace("+00:00", ""))
+                            except ValueError:
+                                from email.utils import parsedate_to_datetime
+                                try:
+                                    parsed = parsedate_to_datetime(date_str)
+                                except Exception:
+                                    from dateutil.parser import parse as _dp
+                                    parsed = _dp(date_str)
                             parsed = parsed.replace(tzinfo=None)
                         hours_old = max(0, (now - parsed).total_seconds() / 3600)
-                        recency = max(0, 1 - (hours_old / 72))
+                        # Aggressive decay: <24h=1.0, 24-48h=0.5, 48-72h=0.2, >72h=0.0
+                        if hours_old <= 24:
+                            recency = 1.0
+                        elif hours_old <= 48:
+                            recency = 0.5
+                        elif hours_old <= 72:
+                            recency = 0.2
+                        else:
+                            recency = 0.0
                     else:
-                        recency = 0.3
+                        recency = 0.2
                 except Exception:
-                    recency = 0.3
+                    recency = 0.2
 
                 novelty = 0.15 if article.get("_is_novel", False) else 0.0
                 cross = cross_boost.get(i, 0.0)
@@ -573,9 +591,10 @@ class DailyBriefGenerator:
 
                 # Combined score: weighted blend
                 # relevance*quality gives high-quality sources more weight
-                combined = (relevance * quality * 0.4
-                            + recency * 0.2
-                            + quality * 0.15
+                # Recency is heavily weighted — stale news kills the brief
+                combined = (relevance * quality * 0.3
+                            + recency * 0.35
+                            + quality * 0.10
                             + novelty
                             + cross
                             + social_proof
@@ -588,17 +607,40 @@ class DailyBriefGenerator:
             # Sort and take top candidates
             scored_articles.sort(key=lambda x: x.get("_combined_score", 0), reverse=True)
 
+            # Cross-day dedup: load previous brief titles to avoid repeating stories
+            import re
+            prev_titles = set()
+            try:
+                from datetime import timedelta
+                for days_back in range(1, 4):
+                    prev_date = (date.today() - timedelta(days=days_back)).isoformat()
+                    prev_file = reports_dir / f"daily_brief_{prev_date}.md"
+                    if prev_file.exists():
+                        content = prev_file.read_text(encoding="utf-8")
+                        # Extract titles from markdown links: [Title](url)
+                        for m in re.finditer(r'\[([^\]]{10,})\]\(http', content):
+                            words = re.sub(r'[^\w\s]', '', m.group(1).lower()).split()
+                            prev_titles.add(' '.join(words[:6]))
+                if prev_titles:
+                    logger.info(f"Cross-day dedup: loaded {len(prev_titles)} titles from previous briefs")
+            except Exception as e:
+                logger.warning(f"Cross-day dedup failed: {e}")
+
             # Deduplicate by similar titles (keep highest scored)
             seen_titles = set()
             deduped = []
             for art in scored_articles:
-                import re
-                # Simple dedup key: first 8 significant words lowercase
+                # Dedup key: first 8 significant words lowercase
                 words = re.sub(r'[^\w\s]', '', art.get("title", "").lower()).split()
                 key = ' '.join(words[:8])
-                if key not in seen_titles:
-                    seen_titles.add(key)
-                    deduped.append(art)
+                short_key = ' '.join(words[:6])
+                # Skip if seen in this batch OR in previous briefs
+                if key in seen_titles:
+                    continue
+                if short_key in prev_titles:
+                    continue
+                seen_titles.add(key)
+                deduped.append(art)
             scored_articles = deduped
 
             # Log top 5 for debugging
